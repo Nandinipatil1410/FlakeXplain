@@ -151,6 +151,26 @@ class PipelineTests(unittest.TestCase):
             self.assertIn("pytest==8.4.1", specs)
             self.assertFalse(any(x.startswith(("mkdocs", "ruff", "twine")) for x in specs))
 
+    def test_poetry_lock_versions_become_pip_constraints(self):
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder)
+            (repo / "poetry.lock").write_text(
+                """[[package]]
+name = "Pygments"
+version = "2.19.2"
+
+[[package]]
+name = "markdown-it-py"
+version = "3.0.0"
+""",
+                encoding="utf-8",
+            )
+            constraints = setup_repos.lockfile_constraints(repo, "poetry.lock")
+            self.assertEqual(
+                constraints.read_text(encoding="utf-8").splitlines(),
+                ["markdown-it-py==3.0.0", "pygments==2.19.2"],
+            )
+
     def test_urllib3_is_pinned_and_uses_upstream_test_controls(self):
         config = setup_repos.REPOS["urllib3"]
         self.assertEqual(
@@ -182,11 +202,14 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(runtime.pytest_args("werkzeug"), ["tests/"])
         self.assertEqual(runtime.pytest_args("rich"), ["tests/"])
         self.assertEqual(runtime.pytest_args("pytest"), ["testing/"])
-        self.assertEqual(setup_repos.REPOS["rich"]["installer"], "poetry")
-        self.assertEqual(setup_repos.REPOS["rich"]["poetry_version"], "2.1.3")
         self.assertEqual(
+            setup_repos.REPOS["rich"]["constraint_lock"],
+            "poetry.lock",
+        )
+        self.assertNotIn("installer", setup_repos.REPOS["rich"])
+        self.assertIn(
+            "pytest-randomly==3.15.0",
             setup_repos.REPOS["rich"]["extra_pkgs"],
-            ["pytest-randomly==3.15.0"],
         )
         self.assertEqual(set(runtime.REPOS), set(parse_results.REPOS))
         self.assertIn("--group", setup_repos.REPOS["werkzeug"]["uv_sync_args"])

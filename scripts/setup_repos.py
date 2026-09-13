@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import re
 import sys
+import tomllib
 from datetime import datetime, timezone
 
 from runtime import (
@@ -97,9 +98,11 @@ REPOS = {
         "url": "https://github.com/Textualize/rich",
         "commit": "9d8f9a372cc5916fd4781fec207ced7ddac2f08f",
         "supported_platforms": ["linux"],
-        "installer": "poetry",
-        "poetry_version": "2.1.3",
-        "extra_pkgs": ["pytest-randomly==3.15.0"],
+        "constraint_lock": "poetry.lock",
+        "extra_pkgs": [
+            "pytest", "pytest-cov", "attrs", "typing-extensions",
+            "pytest-randomly==3.15.0",
+        ],
         "verify_pkgs": [
             "rich", "pytest", "pytest-randomly", "pytest-cov", "attrs",
             "typing-extensions", "pygments", "markdown-it-py",
@@ -135,6 +138,32 @@ def dependency_specs(repo_name, repo, config):
                 pins[match[1].lower().replace("_", "-")] = match.group(0)
         specs = [pins.get(name.lower().replace("_", "-"), name) for name in specs]
     return specs
+
+
+def lockfile_constraints(repo, lock_name):
+    """Convert a committed Poetry lock into pip constraints without changing upstream."""
+    lock_path = repo / lock_name
+    data = tomllib.loads(lock_path.read_text(encoding="utf-8"))
+    pins = {}
+    for package in data.get("package", []):
+        name = package["name"]
+        normalized = name.lower().replace("_", "-")
+        version = package["version"]
+        previous = pins.get(normalized)
+        if previous and previous != version:
+            raise RuntimeError(
+                f"{lock_path} contains multiple versions for {name}: "
+                f"{previous} and {version}."
+            )
+        pins[normalized] = version
+    if not pins:
+        raise RuntimeError(f"No package versions found in {lock_path}.")
+    constraints = repo / "poetry_lock_constraints.txt"
+    constraints.write_text(
+        "".join(f"{name}=={pins[name]}\n" for name in sorted(pins)),
+        encoding="utf-8",
+    )
+    return constraints
 
 
 def setup_repo(repo_name, config, refresh=False):
@@ -196,6 +225,8 @@ def setup_repo(repo_name, config, refresh=False):
         str(python), "-m", "pip", "install", "--disable-pip-version-check",
         "-e", install_target,
     ] + specs
+    if config.get("constraint_lock"):
+        cmd += ["-c", str(lockfile_constraints(repo, config["constraint_lock"]))]
     # Reuse pinned versions from an existing completed environment when available.
     # HTTPX's requirements supply explicit test pins; constraints do not replace them.
     lock = BASE_DIR / "environment-locks" / f"{repo_name}.txt"
@@ -242,38 +273,7 @@ def setup_repo(repo_name, config, refresh=False):
                 cwd=repo,
                 log_path=repo / "logs" / "setup-randomly.log",
             )
-    elif config.get("installer") == "poetry":
-        # Rich's rendering snapshots depend on versions in its committed poetry.lock.
-        poetry_version = config["poetry_version"]
-        _, _, code = run_command(
-            [
-                str(python), "-m", "pip", "install", "--disable-pip-version-check",
-                f"poetry=={poetry_version}",
-            ],
-            cwd=repo,
-            log_path=install_log,
-        )
-        if code == 0:
-            poetry = python.parent / ("poetry.exe" if os.name == "nt" else "poetry")
-            poetry_env = os.environ.copy()
-            poetry_env["VIRTUAL_ENV"] = str(repo / ".venv")
-            poetry_env["POETRY_VIRTUALENVS_CREATE"] = "false"
-            poetry_env["PATH"] = str(python.parent) + os.pathsep + poetry_env["PATH"]
-            _, _, code = run_command(
-                [str(poetry), "install", "--no-interaction"],
-                cwd=repo,
-                env=poetry_env,
-                log_path=repo / "logs" / "setup-poetry-install.log",
-            )
-        if code == 0:
-            _, _, code = run_command(
-                [
-                    str(python), "-m", "pip", "install",
-                    "--disable-pip-version-check",
-                ] + specs,
-                cwd=repo,
-                log_path=repo / "logs" / "setup-randomly.log",
-            )
+
     else:
         _, _, code = run_command(cmd, cwd=repo, log_path=install_log)
     if code:
