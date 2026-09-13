@@ -1,0 +1,56 @@
+name: FlakeXplain urllib3 detection
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: flakexplain-urllib3-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  detect:
+    name: urllib3 (Ubuntu, Python 3.11.9)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+
+    steps:
+      - name: Check out FlakeXplain
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.11.9"
+          cache: pip
+          cache-dependency-path: scripts/setup_repos.py
+
+      - name: Verify pipeline
+        run: python -m unittest discover -s tests -v
+
+      - name: Run baseline and 25 serial rounds
+        timeout-minutes: 330
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py urllib3 --work-dir "$FLAKEXPLAIN_WORK"
+
+      - name: Upload evidence and report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: flakexplain-urllib3-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/flakexplain/repos/urllib3/results/
+            ${{ runner.temp }}/flakexplain/repos/urllib3/logs/
+            ${{ runner.temp }}/flakexplain/repos/urllib3/env_snapshot.txt
+            ${{ runner.temp }}/flakexplain/repos/urllib3/environment.json
+            ${{ runner.temp }}/flakexplain/repos/urllib3/setup_state.json
+            ${{ runner.temp }}/flakexplain/repos/urllib3/baseline_state.json
+            ${{ runner.temp }}/flakexplain/repos/urllib3/setup_log.md
+            FlakeXplain_Flaky_Report.md

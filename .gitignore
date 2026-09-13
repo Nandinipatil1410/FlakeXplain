@@ -1,0 +1,10 @@
+repos/
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+.pytest_cache/
+**/.pytest_cache/
+*.pyc
+*.log
+.tmp-urllib3-inspect/
