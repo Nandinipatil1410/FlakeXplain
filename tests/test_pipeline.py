@@ -182,6 +182,12 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(runtime.pytest_args("werkzeug"), ["tests/"])
         self.assertEqual(runtime.pytest_args("rich"), ["tests/"])
         self.assertEqual(runtime.pytest_args("pytest"), ["testing/"])
+        self.assertEqual(setup_repos.REPOS["rich"]["installer"], "poetry")
+        self.assertEqual(setup_repos.REPOS["rich"]["poetry_version"], "2.1.3")
+        self.assertEqual(
+            setup_repos.REPOS["rich"]["extra_pkgs"],
+            ["pytest-randomly==3.15.0"],
+        )
         self.assertEqual(set(runtime.REPOS), set(parse_results.REPOS))
         self.assertIn("--group", setup_repos.REPOS["werkzeug"]["uv_sync_args"])
         self.assertIn("--group", setup_repos.REPOS["pytest"]["uv_sync_args"])

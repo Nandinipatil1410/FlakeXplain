@@ -97,9 +97,12 @@ REPOS = {
         "url": "https://github.com/Textualize/rich",
         "commit": "9d8f9a372cc5916fd4781fec207ced7ddac2f08f",
         "supported_platforms": ["linux"],
-        "extra_pkgs": [
-            "pytest>=7,<8", "pytest-randomly==3.15.0", "pytest-cov>=3,<4",
-            "attrs>=21.4", "typing-extensions>=4,<5",
+        "installer": "poetry",
+        "poetry_version": "2.1.3",
+        "extra_pkgs": ["pytest-randomly==3.15.0"],
+        "verify_pkgs": [
+            "rich", "pytest", "pytest-randomly", "pytest-cov", "attrs",
+            "typing-extensions", "pygments", "markdown-it-py",
         ],
     },
     "pytest": {
@@ -229,6 +232,38 @@ def setup_repo(repo_name, config, refresh=False):
                 cwd=repo,
                 env=uv_env,
                 log_path=repo / "logs" / "setup-uv-sync.log",
+            )
+        if code == 0:
+            _, _, code = run_command(
+                [
+                    str(python), "-m", "pip", "install",
+                    "--disable-pip-version-check",
+                ] + specs,
+                cwd=repo,
+                log_path=repo / "logs" / "setup-randomly.log",
+            )
+    elif config.get("installer") == "poetry":
+        # Rich's rendering snapshots depend on versions in its committed poetry.lock.
+        poetry_version = config["poetry_version"]
+        _, _, code = run_command(
+            [
+                str(python), "-m", "pip", "install", "--disable-pip-version-check",
+                f"poetry=={poetry_version}",
+            ],
+            cwd=repo,
+            log_path=install_log,
+        )
+        if code == 0:
+            poetry = python.parent / ("poetry.exe" if os.name == "nt" else "poetry")
+            poetry_env = os.environ.copy()
+            poetry_env["VIRTUAL_ENV"] = str(repo / ".venv")
+            poetry_env["POETRY_VIRTUALENVS_CREATE"] = "false"
+            poetry_env["PATH"] = str(python.parent) + os.pathsep + poetry_env["PATH"]
+            _, _, code = run_command(
+                [str(poetry), "install", "--no-interaction"],
+                cwd=repo,
+                env=poetry_env,
+                log_path=repo / "logs" / "setup-poetry-install.log",
             )
         if code == 0:
             _, _, code = run_command(
