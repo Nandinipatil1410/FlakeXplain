@@ -165,6 +165,39 @@ class PipelineTests(unittest.TestCase):
         self.assertIn("test/", args)
         self.assertEqual(len(list(runner.round_plan("urllib3"))), 25)
 
+    def test_additional_repositories_are_pinned_and_use_upstream_test_paths(self):
+        expected = {
+            "werkzeug": "f97c305673ba121a1dae6764c37e8be48907a1d1",
+            "rich": "9d8f9a372cc5916fd4781fec207ced7ddac2f08f",
+            "pytest": "a315b97ce61f158bef9957152c8415fe743aa553",
+        }
+        for name, commit in expected.items():
+            with self.subTest(repo=name):
+                config = setup_repos.REPOS[name]
+                self.assertEqual(config["commit"], commit)
+                self.assertEqual(config["supported_platforms"], ["linux"])
+                self.assertEqual(len(list(runner.round_plan(name))), 25)
+                self.assertIn(name, runtime.REPOS)
+                self.assertIn(name, parse_results.REPOS)
+        self.assertEqual(runtime.pytest_args("werkzeug"), ["tests/"])
+        self.assertEqual(runtime.pytest_args("rich"), ["tests/"])
+        self.assertEqual(runtime.pytest_args("pytest"), ["testing/"])
+        self.assertEqual(set(runtime.REPOS), set(parse_results.REPOS))
+        self.assertIn("--group", setup_repos.REPOS["werkzeug"]["uv_sync_args"])
+        self.assertIn("--group", setup_repos.REPOS["pytest"]["uv_sync_args"])
+
+    def test_each_additional_repository_has_an_isolated_ubuntu_workflow(self):
+        workflows = Path(__file__).resolve().parents[1] / ".github" / "workflows"
+        for name in ("werkzeug", "rich", "pytest"):
+            with self.subTest(repo=name):
+                workflow = (workflows / f"flakexplain-{name}.yml").read_text(
+                    encoding="utf-8"
+                )
+                self.assertIn("workflow_dispatch:", workflow)
+                self.assertIn("runs-on: ubuntu-24.04", workflow)
+                self.assertIn(f"python run_all.py {name}", workflow)
+                self.assertIn(f"repos/{name}/results/", workflow)
+                self.assertIn("FlakeXplain_Flaky_Report.md", workflow)
     def test_workflow_targets_only_urllib3_on_ubuntu(self):
         workflow = (
             Path(__file__).resolve().parents[1]

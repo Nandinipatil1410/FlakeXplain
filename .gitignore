@@ -8,3 +8,6 @@ __pycache__/
 *.pyc
 *.log
 .tmp-urllib3-inspect/
+.tmp-werkzeug-inspect/
+.tmp-rich-inspect/
+.tmp-pytest-inspect/

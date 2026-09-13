@@ -12,7 +12,10 @@ import time
 import xml.etree.ElementTree as ET
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-REPOS = ["click", "flask", "filelock", "fsspec", "httpx", "urllib3"]
+REPOS = [
+    "click", "flask", "filelock", "fsspec", "httpx", "urllib3",
+    "werkzeug", "rich", "pytest",
+]
 def default_work_dir():
     if os.name == "nt":
         project_id = hashlib.sha256(str(BASE_DIR).encode()).hexdigest()[:8]
@@ -82,6 +85,10 @@ def pytest_args(repo_name):
             "--allow-hosts=localhost,127.0.0.1,::1,127.0.0.0,240.0.0.0",
             "test/",
         ]
+    if repo_name == "pytest":
+        return ["testing/"]
+    if repo_name in {"werkzeug", "rich"}:
+        return ["tests/"]
     return []
 
 

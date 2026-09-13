@@ -8,36 +8,114 @@ import re
 import sys
 from datetime import datetime, timezone
 
-from runtime import (BASE_DIR, REPOS_DIR, REPOS as REPO_NAMES, atomic_json, checked_output,
-                     fingerprint, python_for, read_json, run_command)
+from runtime import (
+    BASE_DIR,
+    REPOS_DIR,
+    REPOS as REPO_NAMES,
+    atomic_json,
+    checked_output,
+    fingerprint,
+    python_for,
+    read_json,
+    run_command,
+)
 
 REPOS = {
-    "click": {"url": "https://github.com/pallets/click", "commit": "6aabf099",
-              "extra_pkgs": ["pytest", "pytest-randomly"]},
-    "flask": {"url": "https://github.com/pallets/flask", "commit": "d318b683",
-              "extra_pkgs": ["pytest", "pytest-randomly", "blinker", "asgiref", "python-dotenv",
-                             "pytest-asyncio", "watchdog"]},
-    "filelock": {"url": "https://github.com/tox-dev/filelock", "commit": "82f66d7b0aaa83755f8d71d0b0da88408b58ec4a",
-                 "extra_pkgs": ["pytest", "pytest-randomly", "pytest-asyncio", "pytest-mock",
-                                "pytest-cov", "pytest-timeout", "virtualenv"]},
-    "fsspec": {"url": "https://github.com/fsspec/filesystem_spec", "commit": "13b0bce8",
-               "extra_pkgs": ["pytest", "pytest-randomly", "pytest-asyncio", "pytest-mock",
-                              "requests", "numpy"]},
-    "httpx": {"url": "https://github.com/encode/httpx", "commit": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
-              "extra_pkgs": ["pytest", "pytest-randomly", "pytest-asyncio", "pytest-trio", "trio",
-                             "anyio", "httpcore", "cryptography", "trustme", "uvicorn", "brotli",
-                             "zstandard", "chardet", "h2", "socksio", "rich", "pygments"]},
+    "click": {
+        "url": "https://github.com/pallets/click",
+        "commit": "6aabf099",
+        "extra_pkgs": ["pytest", "pytest-randomly"],
+    },
+    "flask": {
+        "url": "https://github.com/pallets/flask",
+        "commit": "d318b683",
+        "extra_pkgs": [
+            "pytest", "pytest-randomly", "blinker", "asgiref", "python-dotenv",
+            "pytest-asyncio", "watchdog",
+        ],
+    },
+    "filelock": {
+        "url": "https://github.com/tox-dev/filelock",
+        "commit": "82f66d7b0aaa83755f8d71d0b0da88408b58ec4a",
+        "extra_pkgs": [
+            "pytest", "pytest-randomly", "pytest-asyncio", "pytest-mock",
+            "pytest-cov", "pytest-timeout", "virtualenv",
+        ],
+    },
+    "fsspec": {
+        "url": "https://github.com/fsspec/filesystem_spec",
+        "commit": "13b0bce8",
+        "extra_pkgs": [
+            "pytest", "pytest-randomly", "pytest-asyncio", "pytest-mock",
+            "requests", "numpy",
+        ],
+    },
+    "httpx": {
+        "url": "https://github.com/encode/httpx",
+        "commit": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+        "extra_pkgs": [
+            "pytest", "pytest-randomly", "pytest-asyncio", "pytest-trio", "trio",
+            "anyio", "httpcore", "cryptography", "trustme", "uvicorn", "brotli",
+            "zstandard", "chardet", "h2", "socksio", "rich", "pygments",
+        ],
+    },
     "urllib3": {
         "url": "https://github.com/urllib3/urllib3",
         "commit": "a5d70ebfd6a30ceba0e9cc322089a6497dcd643e",
         "supported_platforms": ["linux"],
         "installer": "uv",
+        "uv_version": "0.11.7",
+        "uv_sync_args": [
+            "--frozen", "--inexact", "--group", "dev",
+            "--extra", "socks", "--extra", "brotli", "--extra", "zstd",
+            "--extra", "h2",
+        ],
         "extra_pkgs": ["pytest-randomly==5.0.0"],
         "verify_pkgs": [
             "urllib3", "anyio", "h2", "httpx", "hypercorn", "PySocks",
             "pytest", "pytest-randomly", "pytest-socket", "pytest-timeout",
             "quart", "quart-trio", "trio", "cryptography", "idna",
             "pyOpenSSL", "trustme",
+        ],
+    },
+    "werkzeug": {
+        "url": "https://github.com/pallets/werkzeug",
+        "commit": "f97c305673ba121a1dae6764c37e8be48907a1d1",
+        "supported_platforms": ["linux"],
+        "installer": "uv",
+        "uv_version": "0.11.7",
+        "uv_sync_args": [
+            "--frozen", "--inexact", "--no-default-groups", "--group", "tests",
+        ],
+        "extra_pkgs": ["pytest-randomly==5.0.0"],
+        "verify_pkgs": [
+            "Werkzeug", "cffi", "cryptography", "ephemeral-port-reserve",
+            "pytest", "pytest-randomly", "pytest-timeout", "watchdog",
+        ],
+    },
+    "rich": {
+        "url": "https://github.com/Textualize/rich",
+        "commit": "9d8f9a372cc5916fd4781fec207ced7ddac2f08f",
+        "supported_platforms": ["linux"],
+        "extra_pkgs": [
+            "pytest>=7,<8", "pytest-randomly==3.15.0", "pytest-cov>=3,<4",
+            "attrs>=21.4", "typing-extensions>=4,<5",
+        ],
+    },
+    "pytest": {
+        "url": "https://github.com/pytest-dev/pytest",
+        "commit": "a315b97ce61f158bef9957152c8415fe743aa553",
+        "supported_platforms": ["linux"],
+        "installer": "uv",
+        "uv_version": "0.11.7",
+        "uv_sync_args": [
+            "--frozen", "--inexact", "--no-default-groups", "--group", "dev",
+        ],
+        "extra_pkgs": ["pytest-randomly==5.0.0"],
+        "verify_pkgs": [
+            "pytest", "pytest-randomly", "attrs", "coverage", "hypothesis",
+            "mock", "numpy", "pexpect", "pytest-xdist", "PyYAML", "requests",
+            "setuptools", "xmlschema",
         ],
     },
 }
@@ -71,16 +149,22 @@ def setup_repo(repo_name, config, refresh=False):
         if source.exists() and source.resolve() != repo.resolve():
             dirty = checked_output(["git", "diff", "HEAD", "--"], source)
             if dirty:
-                raise RuntimeError(f"{source} has tracked edits; preserve/review them before local migration.")
+                raise RuntimeError(
+                    f"{source} has tracked edits; preserve/review them before local migration."
+                )
             pinned = checked_output(["git", "rev-parse", "HEAD"], source)
-            checked_output(["git", "clone", "--no-hardlinks", "--no-checkout", str(source), str(repo)])
+            checked_output(
+                ["git", "clone", "--no-hardlinks", "--no-checkout", str(source), str(repo)]
+            )
             checked_output(["git", "checkout", "--detach", pinned], repo)
         else:
             checked_output(["git", "clone", config["url"], str(repo)])
             checked_output(["git", "checkout", "--detach", config["commit"]], repo)
     commit = checked_output(["git", "rev-parse", "HEAD"], repo)
     if not commit.startswith(config["commit"]):
-        raise RuntimeError(f"{repo_name}: expected commit {config['commit']}, found {commit}.")
+        raise RuntimeError(
+            f"{repo_name}: expected commit {config['commit']}, found {commit}."
+        )
     python = python_for(repo)
     state_path = repo / "setup_state.json"
     state = read_json(state_path)
@@ -92,30 +176,46 @@ def setup_repo(repo_name, config, refresh=False):
 
     # Do not mutate an environment that already has detection evidence.
     if any((repo / "results").glob("*_run_*.xml")):
-        raise RuntimeError("Environment is unverified/changed with existing results. Use a fresh --work-dir; old evidence is preserved.")
+        raise RuntimeError(
+            "Environment is unverified/changed with existing results. "
+            "Use a fresh --work-dir; old evidence is preserved."
+        )
 
     if not python.exists():
         checked_output([sys.executable, "-m", "venv", str(repo / ".venv")])
 
     specs = dependency_specs(repo_name, repo, config)
-    install_target = ".[brotli,cli,http2,socks,zstd]" if repo_name == "httpx" else "."
-    cmd = [str(python), "-m", "pip", "install", "--disable-pip-version-check", "-e", install_target] + specs
+    install_target = config.get(
+        "install_target",
+        ".[brotli,cli,http2,socks,zstd]" if repo_name == "httpx" else ".",
+    )
+    cmd = [
+        str(python), "-m", "pip", "install", "--disable-pip-version-check",
+        "-e", install_target,
+    ] + specs
     # Reuse pinned versions from an existing completed environment when available.
     # HTTPX's requirements supply explicit test pins; constraints do not replace them.
     lock = BASE_DIR / "environment-locks" / f"{repo_name}.txt"
     snapshot = lock if lock.exists() else source / "env_snapshot.txt"
     if snapshot.exists() and (lock.exists() or source.resolve() != repo.resolve()):
-        pins = [line for line in snapshot.read_text(encoding="utf-8").splitlines()
-                if re.match(r"^[A-Za-z0-9_.-]+==[^ ]+$", line) and
-                not line.lower().startswith(("pip==", "setuptools==", "wheel=="))]
+        pins = [
+            line
+            for line in snapshot.read_text(encoding="utf-8").splitlines()
+            if re.match(r"^[A-Za-z0-9_.-]+==[^ ]+$", line)
+            and not line.lower().startswith(("pip==", "setuptools==", "wheel=="))
+        ]
         constraints = repo / "migration_constraints.txt"
         constraints.write_text("\n".join(pins) + "\n", encoding="utf-8")
         cmd += ["-c", str(constraints)]
     install_log = repo / "logs" / "setup-install.log"
     if config.get("installer") == "uv":
-        # Match urllib3's upstream nox session and committed uv.lock.
+        # Use each upstream project's committed uv.lock and test dependency group.
+        uv_version = config.get("uv_version", "0.11.7")
         _, _, code = run_command(
-            [str(python), "-m", "pip", "install", "--disable-pip-version-check", "uv==0.11.7"],
+            [
+                str(python), "-m", "pip", "install", "--disable-pip-version-check",
+                f"uv=={uv_version}",
+            ],
             cwd=repo,
             log_path=install_log,
         )
@@ -123,17 +223,19 @@ def setup_repo(repo_name, config, refresh=False):
             uv = python.parent / ("uv.exe" if os.name == "nt" else "uv")
             uv_env = os.environ.copy()
             uv_env["UV_PROJECT_ENVIRONMENT"] = str(repo / ".venv")
+            sync_args = config.get("uv_sync_args", [])
             _, _, code = run_command(
-                [str(uv), "sync", "--frozen", "--inexact", "--group", "dev",
-                 "--extra", "socks", "--extra", "brotli", "--extra", "zstd",
-                 "--extra", "h2"],
+                [str(uv), "sync"] + sync_args,
                 cwd=repo,
                 env=uv_env,
                 log_path=repo / "logs" / "setup-uv-sync.log",
             )
         if code == 0:
             _, _, code = run_command(
-                [str(python), "-m", "pip", "install", "--disable-pip-version-check"] + specs,
+                [
+                    str(python), "-m", "pip", "install",
+                    "--disable-pip-version-check",
+                ] + specs,
                 cwd=repo,
                 log_path=repo / "logs" / "setup-randomly.log",
             )
@@ -145,31 +247,51 @@ def setup_repo(repo_name, config, refresh=False):
     # Require the package itself plus the repository's test distributions.
     packages = config.get("verify_pkgs", [repo_name] + config["extra_pkgs"])
     packages = [re.split(r"[<>=!~;\[]", name, maxsplit=1)[0] for name in packages]
-    checked_output([python, "-c",
-                    "from importlib.metadata import version; "
-                    + "print({name: version(name) for name in " + repr(packages) + "})"], repo)
+    checked_output(
+        [
+            python,
+            "-c",
+            "from importlib.metadata import version; "
+            + "print({name: version(name) for name in "
+            + repr(packages)
+            + "})",
+        ],
+        repo,
+    )
     current = fingerprint(repo)
-    (repo / "env_snapshot.txt").write_text("\n".join(current["packages"]) + "\n", encoding="utf-8")
-    (repo / "environment.json").write_text(__import__("json").dumps(current, indent=2), encoding="utf-8")
+    (repo / "env_snapshot.txt").write_text(
+        "\n".join(current["packages"]) + "\n", encoding="utf-8"
+    )
+    (repo / "environment.json").write_text(
+        __import__("json").dumps(current, indent=2), encoding="utf-8"
+    )
     setup_log = repo / "setup_log.md"
     if setup_log.exists():
-        archive = repo / "logs" / ("setup-before-" + datetime.now().strftime("%Y%m%dT%H%M%S") + ".md")
+        archive = (
+            repo
+            / "logs"
+            / ("setup-before-" + datetime.now().strftime("%Y%m%dT%H%M%S") + ".md")
+        )
         archive.parent.mkdir(parents=True, exist_ok=True)
         archive.write_bytes(setup_log.read_bytes())
     setup_log.write_text(
         f"# Setup Log: {repo_name}\n\n"
-        f"- **Repository**: `{config['url']}`\n"
-        f"- **Pinned Commit Hash**: `{commit}`\n"
-        f"- **Python Version**: `{current['python']}`\n"
-        f"- **Execution Directory**: `{repo}`\n"
-        f"- **OS**: `{current['platform']}`\n"
-        f"- **Environment ID**: `{current['id']}`\n"
+        f"- **Repository**: {config['url']}\n"
+        f"- **Pinned Commit Hash**: {commit}\n"
+        f"- **Python Version**: {current['python']}\n"
+        f"- **Execution Directory**: {repo}\n"
+        f"- **OS**: {current['platform']}\n"
+        f"- **Environment ID**: {current['id']}\n"
         f"- **Setup Date**: {datetime.now(timezone.utc).isoformat()}\n"
         "- **Source modifications**: No compatibility patches applied by setup.\n"
         "- **Installation log**: logs/setup-install.log\n"
         "- **Environment Snapshot**: env_snapshot.txt and environment.json\n",
-        encoding="utf-8")
-    atomic_json(repo / "baseline_state.json", {"status": "NEEDS_BASELINE", "environment_id": current["id"]})
+        encoding="utf-8",
+    )
+    atomic_json(
+        repo / "baseline_state.json",
+        {"status": "NEEDS_BASELINE", "environment_id": current["id"]},
+    )
     atomic_json(state_path, {"environment_id": current["id"], "commit": commit})
     print("Environment verified and saved.", flush=True)
     return current
@@ -178,7 +300,11 @@ def setup_repo(repo_name, config, refresh=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("repo", nargs="?", choices=REPO_NAMES)
-    parser.add_argument("--refresh", action="store_true", help="Reinstall test dependencies (only before detection).")
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="Reinstall test dependencies (only before detection).",
+    )
     args = parser.parse_args()
     for name in [args.repo] if args.repo else REPO_NAMES:
         setup_repo(name, REPOS[name], refresh=args.refresh)
