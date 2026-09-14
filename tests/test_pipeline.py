@@ -278,6 +278,10 @@ version = "3.0.0"
         self.assertIn("matplotlib", setup_repos.REPOS["ipython"]["verify_pkgs"])
         self.assertIn("jedi==0.17.0", setup_repos.REPOS["ipython"]["extra_pkgs"])
         self.assertIn("parso==0.8.2", setup_repos.REPOS["ipython"]["extra_pkgs"])
+        self.assertEqual(
+            setup_repos.REPOS["reframe"]["bootstrap_pkgs"],
+            ["jsonschema==3.2.0"],
+        )
         self.assertEqual(set(runtime.REPOS), set(parse_results.REPOS))
     def test_workflow_targets_only_urllib3_on_ubuntu(self):
         workflow = (

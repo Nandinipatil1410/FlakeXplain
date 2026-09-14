@@ -148,6 +148,9 @@ REPOS = {
         "commit": "576eb3f1dcc015d1e6d7a10602c748d4f810da68",
         "supported_platforms": ["linux"],
         "python_version": "3.8.18",
+        # setup.py imports reframe, whose import chain requires jsonschema
+        # before pip can generate editable-install metadata.
+        "bootstrap_pkgs": ["jsonschema==3.2.0"],
         "extra_pkgs": [
             "pytest==6.2.4", "pytest-randomly==3.15.0",
             "jsonschema==3.2.0", "coverage==5.5",
@@ -277,6 +280,21 @@ def setup_repo(repo_name, config, refresh=False):
 
     if not python.exists():
         checked_output([sys.executable, "-m", "venv", str(repo / ".venv")])
+
+    bootstrap = config.get("bootstrap_pkgs", [])
+    if bootstrap:
+        _, _, code = run_command(
+            [
+                str(python), "-m", "pip", "install",
+                "--disable-pip-version-check",
+            ] + bootstrap,
+            cwd=repo,
+            log_path=repo / "logs" / "setup-bootstrap.log",
+        )
+        if code:
+            raise RuntimeError(
+                f"Bootstrap dependency installation failed. See {repo / 'logs'}"
+            )
 
     specs = dependency_specs(repo_name, repo, config)
     install_target = config.get(

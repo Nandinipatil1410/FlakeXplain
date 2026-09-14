@@ -23,8 +23,8 @@ FlakeXplain labels, classifier features, or the authoritative consolidated repor
 
 | Priority | Project | Pinned commit | Historical selection evidence | FlakeXplain status |
 |---:|---|---|---|---|
-| 1 | IPython | `95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d` | FLAKE16 reports a suite of 846 tests with 6 NOD and 304 OD records. | Two baseline runs rejected for deterministic setup incompatibilities (`matplotlib` absent, then incompatible Jedi API); dependency configuration corrected and rerun pending. No detection result. |
-| 2 | ReFrame | `576eb3f1dcc015d1e6d7a10602c748d4f810da68` | FlaPy contains 189 OD records; iPFlakies yields 136 unique flaky-test IDs after filtering non-flaky statuses and deduplication; Python IDoFT contains 137 records. | Candidate workflow configured; no baseline or detection result yet. |
+| 1 | IPython | `95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d` | FLAKE16 reports a suite of 846 tests with 6 NOD and 304 OD records. | Clean baseline empirically passed on attempt 1: 847 tests collected in 35.23 seconds. Full detection not run. |
+| 2 | ReFrame | `576eb3f1dcc015d1e6d7a10602c748d4f810da68` | FlaPy contains 189 OD records; iPFlakies yields 136 unique flaky-test IDs after filtering non-flaky statuses and deduplication; Python IDoFT contains 137 records. | Setup rejected before baseline because editable metadata imported missing `jsonschema`; bootstrap configuration corrected and rerun pending. No baseline or detection result. |
 | 3 | Loguru | `f31e97142adc1156693a26ecaf47208d3765a6e3` | FLAKE16 reports a suite of 1,255 tests with 4 NOD and 21 OD records. | Candidate workflow configured; no baseline or detection result yet. |
 | 4 | Freezegun | `b46da782a7a051081fd51577749cfc0074db0cc6` | At this commit, FlaPy contains 17 OD records and iPFlakies yields 15 unique victim tests. Python IDoFT contains 16 records at this commit plus 1 at another commit. | Candidate workflow configured; no baseline or detection result yet. |
 
@@ -42,6 +42,19 @@ The second baseline run reached the tests but all three gate attempts stopped at
 `line` and `column` arguments. This is also deterministic environment incompatibility,
 not flaky-test evidence. The corrected environment pins FLAKE16's recorded
 `jedi==0.17.0` and `parso==0.8.2` pair.
+
+After both corrections, the next IPython baseline empirically passed on its first
+attempt, collecting 847 tests in 35.23 seconds. This is baseline evidence only; no
+reordered detection rounds or new flaky labels have been produced yet. The difference
+from FLAKE16's historical 846-test count is retained as an environment/provenance fact,
+not reconciled by altering collection.
+
+The first ReFrame workflow stopped during setup, before the baseline gate. Its
+`setup.py` imports `reframe` to obtain the version, and that import chain imports
+`jsonschema` while pip is still generating editable-install metadata. The workflow
+therefore records a setup rejection, not `BASELINE_REJECTED`. The corrected setup
+preinstalls the already pinned `jsonschema==3.2.0` dependency without modifying the
+upstream checkout, then performs the normal editable installation and verification.
 
 ## Reserves and deferred projects
 

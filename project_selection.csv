@@ -1,6 +1,6 @@
 selection_status,priority,repository,upstream_url,pinned_commit,provenance_sources,historical_selection_signal,workflow,flakexplain_result_status
-selected,1,ipython,https://github.com/ipython/ipython,95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d,FLAKE16,"846 suite tests; 6 NOD and 304 OD records",flakexplain-ipython.yml,BASELINE_REJECTED_JEDI_API_MISMATCH_RERUN_PENDING
-selected,2,reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,"FlaPy;iPFlakies;Python IDoFT","189 FlaPy OD records; 136 filtered and deduplicated iPFlakies flaky-test IDs; 137 IDoFT records",flakexplain-reframe.yml,NOT_RUN
+selected,1,ipython,https://github.com/ipython/ipython,95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d,FLAKE16,"846 suite tests; 6 NOD and 304 OD records",flakexplain-ipython.yml,BASELINE_PASSED_847_COLLECTED_FULL_NOT_RUN
+selected,2,reframe,https://github.com/eth-cscs/reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,"FlaPy;iPFlakies;Python IDoFT","189 FlaPy OD records; 136 filtered and deduplicated iPFlakies flaky-test IDs; 137 IDoFT records",flakexplain-reframe.yml,SETUP_REJECTED_JSONSCHEMA_BOOTSTRAP_RERUN_PENDING
 selected,3,loguru,https://github.com/Delgan/loguru,f31e97142adc1156693a26ecaf47208d3765a6e3,FLAKE16,"1255 suite tests; 4 NOD and 21 OD records",flakexplain-loguru.yml,NOT_RUN
 selected,4,freezegun,https://github.com/spulec/freezegun,b46da782a7a051081fd51577749cfc0074db0cc6,"FlaPy;iPFlakies;Python IDoFT","At selected commit: 17 FlaPy OD records; 15 deduplicated iPFlakies victim tests; 16 IDoFT records (plus 1 at another commit)",flakexplain-freezegun.yml,NOT_RUN
 reserve,,requests,https://github.com/psf/requests,a1a6a549089bd85f25c98cf2cb52bdc0c1f01c27,FLAKE16,"537 suite tests; 5 NOD and 0 OD records",,NOT_CONFIGURED
