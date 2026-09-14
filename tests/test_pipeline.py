@@ -274,6 +274,8 @@ version = "3.0.0"
         self.assertEqual(runtime.pytest_args("loguru"), ["tests/"])
         self.assertEqual(runtime.pytest_args("freezegun"), ["tests/"])
         self.assertEqual(runtime.pytest_args("ipython"), [])
+        self.assertIn("matplotlib==3.4.2", setup_repos.REPOS["ipython"]["extra_pkgs"])
+        self.assertIn("matplotlib", setup_repos.REPOS["ipython"]["verify_pkgs"])
         self.assertEqual(set(runtime.REPOS), set(parse_results.REPOS))
     def test_workflow_targets_only_urllib3_on_ubuntu(self):
         workflow = (

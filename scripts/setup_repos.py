@@ -133,10 +133,12 @@ REPOS = {
         "supported_platforms": ["linux"],
         "python_version": "3.8.18",
         "install_target": ".[test]",
-        "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0"],
+        "extra_pkgs": [
+            "pytest==6.2.4", "pytest-randomly==3.15.0", "matplotlib==3.4.2",
+        ],
         "verify_pkgs": [
             "ipython", "pytest", "pytest-randomly", "nose", "numpy",
-            "ipykernel", "nbformat", "requests", "testpath",
+            "ipykernel", "nbformat", "requests", "testpath", "matplotlib",
         ],
     },
     "reframe": {
