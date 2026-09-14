@@ -7,7 +7,7 @@ import time
 import xml.etree.ElementTree as ET
 
 from runtime import (REPOS, REPOS_DIR, atomic_json, baseline_state, complete_xml, fingerprint,
-                     python_for, pytest_args, pytest_env, run_command)
+                     pytest_args, pytest_command, pytest_env, run_command)
 
 
 def verify_baseline(repo_name, force=False):
@@ -31,8 +31,10 @@ def verify_baseline(repo_name, force=False):
         xml = log_dir / f"attempt_{attempt}.xml"
         # A failed suite cannot pass the gate; stop at its first failure.
         # Every successful attempt must still execute the complete collected suite.
-        cmd = [python_for(repo), "-u", "-m", "pytest", "-p", "no:randomly", "-p", "no:cov",
-               "--tb=short", "-q", "-x", "--durations=15", f"--junitxml={xml}"]
+        cmd = pytest_command(repo_name, repo) + [
+            "-p", "no:randomly", "-p", "no:cov", "--tb=short", "-q", "-x",
+            "--durations=15", f"--junitxml={xml}",
+        ]
         cmd += pytest_args(repo_name)
         start = time.monotonic()
         _, _, code = run_command(cmd, cwd=repo, env=pytest_env(repo),

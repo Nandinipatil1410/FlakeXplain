@@ -8,7 +8,8 @@ import time
 from datetime import datetime, timezone
 
 from runtime import (BASE_DIR, REPOS, REPOS_DIR, atomic_json, baseline_state, complete_xml,
-                     fingerprint, python_for, pytest_args, pytest_env, read_json, run_command)
+                     fingerprint, pytest_args, pytest_command, pytest_env, read_json,
+                     run_command)
 
 DEFAULT_ORIGINAL_ROUNDS = 12
 DEFAULT_RANDOM_ROUNDS = 12
@@ -77,8 +78,10 @@ def run_idflakies_suite(
             archive = results / "incomplete"
             archive.mkdir(exist_ok=True)
             xml.replace(archive / (datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ-") + filename))
-        cmd = [python_for(repo), "-u", "-m", "pytest", "-p", "no:cov", "--tb=short", "-q",
-               "--durations=15", f"--junitxml={xml}"]
+        cmd = pytest_command(repo_name, repo) + [
+            "-p", "no:cov", "--tb=short", "-q", "--durations=15",
+            f"--junitxml={xml}",
+        ]
         if config == "random-order":
             cmd += [f"--randomly-seed={seed}"]
         else:

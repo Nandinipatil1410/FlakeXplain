@@ -62,6 +62,14 @@ def python_for(repo):
     return repo / ".venv" / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
 
 
+def pytest_command(repo_name, repo):
+    """Return the upstream-compatible test entry point for a repository."""
+    if repo_name == "reframe":
+        # ReFrame's wrapper initializes the generic runtime before pytest starts.
+        return [python_for(repo), "-u", repo / "test_reframe.py"]
+    return [python_for(repo), "-u", "-m", "pytest"]
+
+
 def pytest_env(repo):
     env = os.environ.copy()
     env["PYTHONUNBUFFERED"] = "1"

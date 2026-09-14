@@ -368,6 +368,14 @@ version = "3.0.0"
         for part in ("tasks", "tests", "src"):
             self.assertIn(str(Path("example") / part), env["PYTHONPATH"])
 
+    def test_reframe_uses_upstream_runtime_initializing_wrapper(self):
+        repo = Path("reframe")
+        command = runtime.pytest_command("reframe", repo)
+        self.assertEqual(command[-1], repo / "test_reframe.py")
+        self.assertNotIn("pytest", command)
+        ordinary = runtime.pytest_command("ipython", Path("ipython"))
+        self.assertEqual(ordinary[-2:], ["-m", "pytest"])
+
 
 if __name__ == "__main__":
     unittest.main()
