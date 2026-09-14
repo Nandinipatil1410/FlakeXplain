@@ -23,7 +23,7 @@ FlakeXplain labels, classifier features, or the authoritative consolidated repor
 
 | Priority | Project | Pinned commit | Historical selection evidence | FlakeXplain status |
 |---:|---|---|---|---|
-| 1 | IPython | `95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d` | FLAKE16 reports a suite of 846 tests with 6 NOD and 304 OD records. | First baseline rejected during collection because `matplotlib` was absent; dependency configuration corrected and rerun pending. No detection result. |
+| 1 | IPython | `95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d` | FLAKE16 reports a suite of 846 tests with 6 NOD and 304 OD records. | Two baseline runs rejected for deterministic setup incompatibilities (`matplotlib` absent, then incompatible Jedi API); dependency configuration corrected and rerun pending. No detection result. |
 | 2 | ReFrame | `576eb3f1dcc015d1e6d7a10602c748d4f810da68` | FlaPy contains 189 OD records; iPFlakies yields 136 unique flaky-test IDs after filtering non-flaky statuses and deduplication; Python IDoFT contains 137 records. | Candidate workflow configured; no baseline or detection result yet. |
 | 3 | Loguru | `f31e97142adc1156693a26ecaf47208d3765a6e3` | FLAKE16 reports a suite of 1,255 tests with 4 NOD and 21 OD records. | Candidate workflow configured; no baseline or detection result yet. |
 | 4 | Freezegun | `b46da782a7a051081fd51577749cfc0074db0cc6` | At this commit, FlaPy contains 17 OD records and iPFlakies yields 15 unique victim tests. Python IDoFT contains 16 records at this commit plus 1 at another commit. | Candidate workflow configured; no baseline or detection result yet. |
@@ -36,6 +36,12 @@ attempts stopped at collection with `ModuleNotFoundError: matplotlib`. This is a
 dependency failure, not flaky-test evidence. The pinned source imports matplotlib
 unconditionally in `IPython/core/tests/test_pylabtools.py`; the corrected configuration
 adds the `matplotlib==3.4.2` version recorded by FLAKE16 before a clean rerun.
+
+The second baseline run reached the tests but all three gate attempts stopped at
+`TestCompleter.test_abspath_file_completions`: a newer Jedi rejected IPython's
+`line` and `column` arguments. This is also deterministic environment incompatibility,
+not flaky-test evidence. The corrected environment pins FLAKE16's recorded
+`jedi==0.17.0` and `parso==0.8.2` pair.
 
 ## Reserves and deferred projects
 

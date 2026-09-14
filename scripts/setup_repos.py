@@ -135,10 +135,12 @@ REPOS = {
         "install_target": ".[test]",
         "extra_pkgs": [
             "pytest==6.2.4", "pytest-randomly==3.15.0", "matplotlib==3.4.2",
+            "jedi==0.17.0", "parso==0.8.2",
         ],
         "verify_pkgs": [
             "ipython", "pytest", "pytest-randomly", "nose", "numpy",
             "ipykernel", "nbformat", "requests", "testpath", "matplotlib",
+            "jedi", "parso",
         ],
     },
     "reframe": {
