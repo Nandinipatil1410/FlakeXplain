@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 BASE_DIR = Path(__file__).resolve().parent.parent
 REPOS = [
     "click", "flask", "filelock", "fsspec", "httpx", "urllib3",
-    "werkzeug", "rich", "pytest",
+    "werkzeug", "rich", "pytest", "ipython", "reframe", "loguru", "freezegun",
 ]
 def default_work_dir():
     if os.name == "nt":
@@ -87,6 +87,10 @@ def pytest_args(repo_name):
         ]
     if repo_name == "pytest":
         return ["testing/"]
+    if repo_name == "reframe":
+        return ["unittests/"]
+    if repo_name in {"loguru", "freezegun"}:
+        return ["tests/"]
     if repo_name in {"werkzeug", "rich"}:
         return ["tests/"]
     return []

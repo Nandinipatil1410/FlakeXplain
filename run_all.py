@@ -22,7 +22,11 @@ def main():
     parser.add_argument("--force-baseline", action="store_true")
     parser.add_argument("--baseline-only", action="store_true",
                         help="Prepare and verify the baseline without starting the 25 rounds.")
+    parser.add_argument("--reverse-rounds", type=int, default=1,
+                        help="Reverse-order rounds for detection (default: 1).")
     args = parser.parse_args()
+    if args.reverse_rounds < 1:
+        parser.error("--reverse-rounds must be at least 1")
     work = args.work_dir.resolve()
     work.mkdir(parents=True, exist_ok=True)
     env = os.environ.copy()
@@ -36,7 +40,9 @@ def main():
             stages = [("setup_repos.py", ["--refresh"] if args.refresh_setup else []),
                       ("baseline_gate.py", ["--force"] if args.force_baseline else [])]
             if not args.baseline_only:
-                stages.append(("idflakies_runner.py", []))
+                stages.append(
+                    ("idflakies_runner.py", ["--reverse-rounds", str(args.reverse_rounds)])
+                )
             for script, extra in stages:
                 print(f"\nRUNNING {script} [{repo}]", flush=True)
                 cmd = [sys.executable, "-u", str(BASE_DIR / "scripts" / script), repo] + extra

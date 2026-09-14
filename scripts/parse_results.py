@@ -16,7 +16,10 @@ from collections import defaultdict
 
 from runtime import BASE_DIR, REPOS_DIR, complete_xml, read_json
 
-REPOS = ["click", "flask", "filelock", "fsspec", "httpx", "urllib3", "werkzeug", "rich", "pytest"]
+REPOS = [
+    "click", "flask", "filelock", "fsspec", "httpx", "urllib3", "werkzeug",
+    "rich", "pytest", "ipython", "reframe", "loguru", "freezegun",
+]
 
 def parse_xml_file(xml_path):
     outcomes = {}
@@ -69,10 +72,14 @@ def analyze_repo_results(repo_name):
         with open(setup_log_path, "r", encoding="utf-8") as f:
             content = f.read()
             for line in content.splitlines():
-                if "Pinned Commit Hash" in line and "`" in line:
-                    commit_hash = line.split("`")[1]
+                if "Pinned Commit Hash" in line and ":" in line:
+                    commit_hash = line.split(":", 1)[1].strip().strip("`")
                 if "Baseline Gate Status" in line:
-                    gate_status = line.split(":")[1].strip()
+                    gate_status = line.split(":", 1)[1].strip().strip("`")
+
+    environment = read_json(repo_dir / "environment.json")
+    if commit_hash == "UNKNOWN" and environment.get("commit"):
+        commit_hash = environment["commit"]
 
     manifest = {}
     if manifest_path.exists():
@@ -86,8 +93,12 @@ def analyze_repo_results(repo_name):
     if manifest.get("environment_id"):
         state = read_json(repo_dir / "baseline_state.json")
         records = manifest.get("original_rounds", []) + manifest.get("random_rounds", [])
-        if manifest.get("reverse_round"):
-            records.append(manifest["reverse_round"])
+        reverse_records = manifest.get("reverse_rounds")
+        if reverse_records is None:
+            reverse_records = (
+                [manifest["reverse_round"]] if manifest.get("reverse_round") else []
+            )
+        records.extend(reverse_records)
         valid_gate = (state.get("status") == "PASSED" and
                       state.get("environment_id") == manifest["environment_id"])
         xml_files = [results_dir / r["xml_file"] for r in records
@@ -114,6 +125,7 @@ def analyze_repo_results(repo_name):
             "not_observed_flaky_count": 0,
             "unlabelled_count": 0,
             "flaky_ratio": "DISCARDED" if "FAILED" in gate_status else "NOT RUN",
+            "observed_flaky_percentage": None,
             "observed_flaky_details": {}
         }
 
@@ -190,6 +202,8 @@ def analyze_repo_results(repo_name):
     flaky_count = len(observed_flaky)
     non_flaky_count = len(not_observed_flaky)
     ratio = f"{flaky_count}:{non_flaky_count}"
+    labelled_count = flaky_count + non_flaky_count
+    flaky_percentage = (100.0 * flaky_count / labelled_count) if labelled_count else None
 
     summary = {
         "repo_name": repo_name,
@@ -209,6 +223,7 @@ def analyze_repo_results(repo_name):
         "not_observed_flaky_count": non_flaky_count,
         "unlabelled_count": len(unlabelled),
         "flaky_ratio": ratio,
+        "observed_flaky_percentage": flaky_percentage,
         "observed_flaky_details": observed_flaky
     }
 
@@ -224,19 +239,38 @@ def generate_report(summaries):
     md.append("> **Non-Flaky Label Caveat**: Tests categorized as `not observed flaky` were not observed flipping outcome in the executed $N$ rounds under the pinned environment. This is **not** mathematical proof of permanent non-flakiness.\n")
 
     md.append("## Summary Table\n")
-    md.append("| Repository | Commit Hash | Total Tests Collected | Rounds (Orig / Rand / Rev) | Wall-Clock Time | Observed Flaky (Total) | OD | NOD | Unclassified | Not Observed Flaky (in N runs) | Observed Flaky Ratio | Baseline Status |")
-    md.append("|---|---|---|---|---|---|---|---|---|---|---|---|")
+    md.append("Observed flaky percentage is calculated over labelled tests: `observed flaky / (observed flaky + not observed flaky) x 100`. Skip-only and failure-only tests are excluded from this denominator.\n")
+    md.append("| Repository | Commit Hash | Total Tests Collected | Rounds (Orig / Rand / Rev) | Wall-Clock Time | Observed Flaky (Total) | OD | NOD | Unclassified | Not Observed Flaky (in N runs) | Observed Flaky Ratio | Observed Flaky % | Baseline Status |")
+    md.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
 
     for s in summaries:
         if s is None:
             continue
         rounds_str = f"{s['orig_rounds']} / {s['rand_rounds']} / {s['rev_rounds']}"
         time_str = f"{s['wall_clock_seconds']:.2f}s" if s['wall_clock_seconds'] > 0 else "N/A"
+        percentage_str = (f"{s['observed_flaky_percentage']:.2f}%"
+                          if s['observed_flaky_percentage'] is not None else "N/A")
         md.append(
             f"| `{s['repo_name']}` | `{s['commit_hash'][:8]}` | {s['total_tests_collected']} | {rounds_str} | {time_str} | "
             f"**{s['observed_flaky_count']}** | {s['od_count']} | {s['nod_count']} | {s['unclassified_count']} | "
-            f"{s['not_observed_flaky_count']} | **{s['flaky_ratio']}** | `{s['gate_status']}` |"
+            f"{s['not_observed_flaky_count']} | **{s['flaky_ratio']}** | **{percentage_str}** | `{s['gate_status']}` |"
         )
+
+    completed = [s for s in summaries if s and s["total_rounds"] > 0]
+    if completed:
+        total_flaky = sum(s["observed_flaky_count"] for s in completed)
+        total_not_observed = sum(s["not_observed_flaky_count"] for s in completed)
+        total_labelled = total_flaky + total_not_observed
+        total_percentage = 100.0 * total_flaky / total_labelled if total_labelled else 0.0
+        md.append("\n## Combined Completed-Run Totals\n")
+        md.append(f"- **Repositories with completed detection rounds**: {len(completed)}")
+        md.append(f"- **Tests collected**: {sum(s['total_tests_collected'] for s in completed)}")
+        md.append(f"- **Observed flaky tests**: {total_flaky}")
+        md.append(f"- **OD / NOD / Unclassified**: {sum(s['od_count'] for s in completed)} / {sum(s['nod_count'] for s in completed)} / {sum(s['unclassified_count'] for s in completed)}")
+        md.append(f"- **Not observed flaky**: {total_not_observed}")
+        md.append(f"- **Unlabelled** (skip-only or failure-only): {sum(s['unlabelled_count'] for s in completed)}")
+        md.append(f"- **Observed flaky ratio**: `{total_flaky}:{total_not_observed}`")
+        md.append(f"- **Observed flaky percentage among labelled tests**: **{total_percentage:.2f}%**")
 
     md.append("\n## Per-Repository Breakdown & Empirical Logs\n")
     for s in summaries:
@@ -250,7 +284,10 @@ def generate_report(summaries):
         md.append(f"- **Unlabelled Tests** (skip-only or failure-only): {s['unlabelled_count']}")
         md.append(f"- **Total Rounds Run**: {s['total_rounds']} ({s['orig_rounds']} original, {s['rand_rounds']} random, {s['rev_rounds']} reverse)")
         md.append(f"- **Total Wall-Clock Time**: {s['wall_clock_seconds']:.2f} seconds")
-        md.append(f"- **Observed Flaky Ratio**: `{s['flaky_ratio']}`\n")
+        md.append(f"- **Observed Flaky Ratio**: `{s['flaky_ratio']}`")
+        percentage_str = (f"{s['observed_flaky_percentage']:.2f}%"
+                          if s['observed_flaky_percentage'] is not None else "N/A")
+        md.append(f"- **Observed Flaky Percentage Among Labelled Tests**: `{percentage_str}`\n")
 
         if s['observed_flaky_count'] > 0:
             md.append("#### Observed Flaky Test Details:\n")

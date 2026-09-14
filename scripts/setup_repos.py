@@ -6,7 +6,10 @@ import os
 from pathlib import Path
 import re
 import sys
-import tomllib
+try:
+    import tomllib
+except ModuleNotFoundError:  # Python 3.8 historical-subject workflows.
+    import tomli as tomllib
 from datetime import datetime, timezone
 
 from runtime import (
@@ -124,6 +127,54 @@ REPOS = {
             "setuptools", "xmlschema",
         ],
     },
+    "ipython": {
+        "url": "https://github.com/ipython/ipython.git",
+        "commit": "95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "install_target": ".[test]",
+        "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0"],
+        "verify_pkgs": [
+            "ipython", "pytest", "pytest-randomly", "nose", "numpy",
+            "ipykernel", "nbformat", "requests", "testpath",
+        ],
+    },
+    "reframe": {
+        "url": "https://github.com/eth-cscs/reframe.git",
+        "commit": "576eb3f1dcc015d1e6d7a10602c748d4f810da68",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "extra_pkgs": [
+            "pytest==6.2.4", "pytest-randomly==3.15.0",
+            "jsonschema==3.2.0", "coverage==5.5",
+        ],
+        "verify_pkgs": [
+            "ReFrame-HPC", "pytest", "pytest-randomly", "jsonschema", "coverage",
+        ],
+    },
+    "loguru": {
+        "url": "https://github.com/Delgan/loguru.git",
+        "commit": "f31e97142adc1156693a26ecaf47208d3765a6e3",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "extra_pkgs": [
+            "pytest==6.2.4", "pytest-randomly==3.15.0", "colorama==0.4.4",
+        ],
+        "verify_pkgs": ["loguru", "pytest", "pytest-randomly", "colorama"],
+    },
+    "freezegun": {
+        "url": "https://github.com/spulec/freezegun.git",
+        "commit": "b46da782a7a051081fd51577749cfc0074db0cc6",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "extra_pkgs": [
+            "pytest==6.2.4", "pytest-randomly==3.15.0",
+            "python-dateutil==2.8.2", "maya==0.6.1",
+        ],
+        "verify_pkgs": [
+            "freezegun", "pytest", "pytest-randomly", "python-dateutil", "maya",
+        ],
+    },
 }
 
 
@@ -172,6 +223,13 @@ def setup_repo(repo_name, config, refresh=False):
         raise RuntimeError(
             f"{repo_name} is configured for {', '.join(supported)}. Use the prepared "
             "Ubuntu GitHub Actions workflow; no upstream tests will be patched or skipped."
+        )
+    expected_python = config.get("python_version")
+    actual_python = ".".join(str(part) for part in sys.version_info[:3])
+    if expected_python and actual_python != expected_python:
+        raise RuntimeError(
+            f"{repo_name} requires Python {expected_python}; current interpreter is "
+            f"Python {actual_python}."
         )
     repo = REPOS_DIR / repo_name
     source = BASE_DIR / "repos" / repo_name

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Serial 12 original + 12 random + 1 reverse rounds, with validated checkpoints."""
+"""Serial original, random and reverse rounds with validated checkpoints."""
 from __future__ import annotations
 import argparse
 import random
@@ -12,15 +12,24 @@ from runtime import (BASE_DIR, REPOS, REPOS_DIR, atomic_json, baseline_state, co
 
 DEFAULT_ORIGINAL_ROUNDS = 12
 DEFAULT_RANDOM_ROUNDS = 12
+DEFAULT_REVERSE_ROUNDS = 1
 
 
-def round_plan(repo_name, orig_rounds=12, rand_rounds=12):
+def round_plan(repo_name, orig_rounds=12, rand_rounds=12, reverse_rounds=1):
     for number in range(1, orig_rounds + 1):
         yield "original-order", number, None, f"original_run_{number}.xml"
     rng = random.Random(42 + len(repo_name))
     for number in range(1, rand_rounds + 1):
         yield "random-order", number, rng.randint(100000, 999999), f"random_run_{number}.xml"
-    yield "reverse-order", 1, None, "reverse_run_1.xml"
+    for number in range(1, reverse_rounds + 1):
+        yield "reverse-order", number, None, f"reverse_run_{number}.xml"
+
+
+def manifest_reverse_rounds(manifest):
+    """Read new plural records while remaining compatible with old manifests."""
+    if "reverse_rounds" in manifest:
+        return manifest["reverse_rounds"]
+    return [manifest["reverse_round"]] if manifest.get("reverse_round") else []
 
 
 def reusable(record, xml, config, number, seed, count):
@@ -30,7 +39,9 @@ def reusable(record, xml, config, number, seed, count):
                 and complete_xml(xml, count))
 
 
-def run_idflakies_suite(repo_name, orig_rounds=12, rand_rounds=12):
+def run_idflakies_suite(
+    repo_name, orig_rounds=12, rand_rounds=12, reverse_rounds=1
+):
     repo = REPOS_DIR / repo_name
     current = fingerprint(repo)
     baseline = baseline_state(repo, current)
@@ -47,14 +58,15 @@ def run_idflakies_suite(repo_name, orig_rounds=12, rand_rounds=12):
     if not manifest:
         manifest = dict(repo_name=repo_name, environment_id=current["id"], environment=current,
                         baseline_xml=baseline["xml_file"], collected_count=baseline["collected_count"],
-                        original_rounds=[], random_rounds=[], reverse_round=None,
+                        original_rounds=[], random_rounds=[], reverse_rounds=[],
+                        reverse_round=None,
                         total_wall_clock_seconds=0.0)
         atomic_json(manifest_path, manifest)
     shutil.copyfile(BASE_DIR / "scripts" / "reverse_plugin.py", repo / "conftest_reverse.py")
     records = {item["xml_file"]: item for item in
                manifest["original_rounds"] + manifest["random_rounds"]
-               + ([manifest["reverse_round"]] if manifest["reverse_round"] else [])}
-    plan = list(round_plan(repo_name, orig_rounds, rand_rounds))
+               + manifest_reverse_rounds(manifest)}
+    plan = list(round_plan(repo_name, orig_rounds, rand_rounds, reverse_rounds))
     for index, (config, number, seed, filename) in enumerate(plan, 1):
         xml = results / filename
         if reusable(records.get(filename), xml, config, number, seed, baseline["collected_count"]):
@@ -86,7 +98,14 @@ def run_idflakies_suite(repo_name, orig_rounds=12, rand_rounds=12):
         records[filename] = record
         manifest["original_rounds"] = [r for r in records.values() if r["config"] == "original-order"]
         manifest["random_rounds"] = [r for r in records.values() if r["config"] == "random-order"]
-        manifest["reverse_round"] = next((r for r in records.values() if r["config"] == "reverse-order"), None)
+        manifest["reverse_rounds"] = sorted(
+            (r for r in records.values() if r["config"] == "reverse-order"),
+            key=lambda r: r["round"],
+        )
+        # Retain the legacy field so older report readers still see round 1.
+        manifest["reverse_round"] = (
+            manifest["reverse_rounds"][0] if manifest["reverse_rounds"] else None
+        )
         manifest["total_wall_clock_seconds"] = round(sum(r["duration_seconds"] for r in records.values()), 2)
         atomic_json(manifest_path, manifest)
         print(f"Completed in {elapsed:.2f}s; checkpoint saved.", flush=True)
@@ -96,9 +115,17 @@ def run_idflakies_suite(repo_name, orig_rounds=12, rand_rounds=12):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("repo", nargs="?", choices=REPOS)
+    parser.add_argument(
+        "--reverse-rounds",
+        type=int,
+        default=DEFAULT_REVERSE_ROUNDS,
+        help="Number of reverse-order rounds (default: 1).",
+    )
     args = parser.parse_args()
+    if args.reverse_rounds < 1:
+        parser.error("--reverse-rounds must be at least 1")
     for name in [args.repo] if args.repo else REPOS:
-        run_idflakies_suite(name)
+        run_idflakies_suite(name, reverse_rounds=args.reverse_rounds)
 
 
 if __name__ == "__main__":

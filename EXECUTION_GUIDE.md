@@ -23,7 +23,7 @@ Run from the project directory:
 ```powershell
 python run_all.py filelock --baseline-only
 python run_all.py filelock
-# HTTPX remains discarded on Windows; urllib3 runs in GitHub Actions.
+# HTTPX remains discarded on Windows. urllib3, werkzeug, rich, and pytest have dedicated GitHub Actions workflows.
 ```
 
 The second command reuses the verified environment and passing baseline, then runs
@@ -88,14 +88,31 @@ verified that setup and the passing baseline are reused.
 
 The two Windows test dependency snapshots in environment-locks/ are used as pip
 constraints for new environments, including the cloud workflow. Sources remain
-pinned separately. Cloud validation has not been performed.
+pinned separately. Cloud validation has completed for urllib3, rich, and pytest; their downloaded evidence has been imported under `repos/`.
 
-## GitHub Actions: urllib3
+## GitHub Actions
 
-The workflow follows the official [setup-python](https://github.com/actions/setup-python)
-and [upload-artifact](https://github.com/actions/upload-artifact) interfaces. It
-runs only urllib3 on Ubuntu 24.04 with Python 3.11.9. The source is pinned at
-`a5d70ebfd6a30ceba0e9cc322089a6497dcd643e`.
+The workflows follow the official [setup-python](https://github.com/actions/setup-python)
+and [upload-artifact](https://github.com/actions/upload-artifact) interfaces.
+Dedicated Ubuntu 24.04 / Python 3.11.9 workflows are available for urllib3,
+werkzeug, rich, and pytest. Verified imported runs currently exist for urllib3,
+rich, and pytest.
+
+### Historically selected candidate projects (Step 5)
+
+Four additional, isolated workflows are implemented for IPython, ReFrame, Loguru,
+and Freezegun. Their exact historical provenance and selection counts are recorded
+in `PROJECT_SELECTION.md` and `project_selection.csv`. Those historical records are
+selection evidence only: they are not FlakeXplain labels, features, or new empirical
+results.
+
+These historical checkouts use Ubuntu 24.04 with Python 3.8.18. Each manual workflow
+defaults to `baseline-only`. Review and retain that artifact first. Select `full` only
+after the clean baseline passes; the full mode executes 12 original-order, 12 seeded
+random-order, and 3 reverse-order rounds. A fresh full job repeats its own baseline
+because GitHub-hosted runners do not share the baseline-only environment.
+
+### urllib3 dependency details
 
 The dependency setup mirrors urllib3's own CI: `uv==0.11.7`, the repository's
 committed `uv.lock`, its `dev` dependency group, and its socks, Brotli, Zstandard,
@@ -104,17 +121,19 @@ invocation uses urllib3's upstream strict-marker and socket restrictions; public
 network access is disabled while localhost and Unix sockets remain available.
 
 Before pushing, ensure `.gitignore` excludes `repos/`, virtual environments,
-Python caches, logs, and the temporary inspection checkout. The project root is
-not currently a Git repository.
+Python caches, logs, and temporary inspection checkouts. The project root is a Git
+repository; use `git status --short` to confirm that execution artifacts are not staged.
 
 After pushing the project files to a GitHub repository:
 
 1. Open the repository's **Actions** tab.
-2. Select **FlakeXplain urllib3 detection**.
+2. Select the dedicated FlakeXplain workflow for the target repository.
 3. Choose **Run workflow**, then **Run workflow** again.
 4. The laptop can be shut down after GitHub shows the job as queued or running.
-5. When the run finishes, download the `flakexplain-urllib3-...` artifact from
-   the run summary.
+5. When the run finishes, download the `flakexplain-<repository>-...` artifact.
+6. Copy its repository evidence into `repos/<repository>/` without mixing
+   evidence from different environments.
+7. Regenerate the combined report with `python scripts/parse_results.py`.
 
 The artifact contains environment provenance, baseline evidence, per-round logs,
 25 JUnit XML files and the generated report. It is uploaded even after a failed
@@ -126,3 +145,22 @@ HTTPX was empirically discarded on Windows after three baseline attempts. The
 first two reached 1,342 passing tests before the same multipart test failed due
 to Windows `TemporaryFile` wrapper behavior. Its upstream source and tests were
 not changed or skipped.
+
+## Imported GitHub Actions evidence
+
+The current workspace contains complete environment, baseline, manifest, log,
+and JUnit evidence for these cloud runs:
+
+| Repository | Commit | Observed flaky | OD | NOD |
+|---|---|---:|---:|---:|
+| `urllib3` | `a5d70ebf` | 4 | 3 | 1 |
+| `rich` | `9d8f9a37` | 5 | 5 | 0 |
+| `pytest` | `a315b97c` | 37 | 37 | 0 |
+
+The combined authoritative output is `FlakeXplain_Flaky_Report.md`. Individual
+downloaded reports contain placeholder rows for repositories that were not part
+of their workflow and must not be concatenated directly. `scripts/parse_results.py`
+recomputes the consolidated report from the imported manifests and XML files.
+
+The observed-flaky percentage excludes skip-only and failure-only tests and uses:
+`observed flaky / (observed flaky + not observed flaky) x 100`.

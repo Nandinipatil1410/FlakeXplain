@@ -1,0 +1,10 @@
+# Selected transitive pins from FLAKE16's Loguru environment snapshot.
+# This is an installation constraint, not FlakeXplain outcome evidence.
+attrs==21.2.0
+colorama==0.4.4
+iniconfig==1.1.1
+packaging==21.0
+pluggy==0.13.1
+py==1.10.0
+pytest==6.2.4
+six==1.16.0

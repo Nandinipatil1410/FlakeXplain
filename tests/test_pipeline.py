@@ -141,7 +141,25 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(plan), 25)
         self.assertEqual(sum(row[0] == "original-order" for row in plan), 12)
         self.assertEqual(sum(row[0] == "random-order" for row in plan), 12)
+        self.assertEqual(sum(row[0] == "reverse-order" for row in plan), 1)
         self.assertEqual(plan, list(runner.round_plan("filelock")))
+
+    def test_candidate_plan_supports_three_reverse_rounds(self):
+        plan = list(runner.round_plan("ipython", reverse_rounds=3))
+        self.assertEqual(len(plan), 27)
+        self.assertEqual(
+            [row[3] for row in plan if row[0] == "reverse-order"],
+            ["reverse_run_1.xml", "reverse_run_2.xml", "reverse_run_3.xml"],
+        )
+
+    def test_reverse_manifest_reader_is_backward_compatible(self):
+        old = {"reverse_round": {"xml_file": "reverse_run_1.xml"}}
+        new = {
+            "reverse_round": old["reverse_round"],
+            "reverse_rounds": [old["reverse_round"], {"xml_file": "reverse_run_2.xml"}],
+        }
+        self.assertEqual(runner.manifest_reverse_rounds(old), [old["reverse_round"]])
+        self.assertEqual(len(runner.manifest_reverse_rounds(new)), 2)
 
     def test_httpx_setup_keeps_test_pins_and_excludes_documentation_tools(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -227,6 +245,36 @@ version = "3.0.0"
                 self.assertIn(f"python run_all.py {name}", workflow)
                 self.assertIn(f"repos/{name}/results/", workflow)
                 self.assertIn("FlakeXplain_Flaky_Report.md", workflow)
+
+    def test_selected_candidates_are_pinned_and_have_baseline_first_workflows(self):
+        expected = {
+            "ipython": "95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d",
+            "reframe": "576eb3f1dcc015d1e6d7a10602c748d4f810da68",
+            "loguru": "f31e97142adc1156693a26ecaf47208d3765a6e3",
+            "freezegun": "b46da782a7a051081fd51577749cfc0074db0cc6",
+        }
+        workflows = Path(__file__).resolve().parents[1] / ".github" / "workflows"
+        for name, commit in expected.items():
+            with self.subTest(repo=name):
+                config = setup_repos.REPOS[name]
+                self.assertEqual(config["commit"], commit)
+                self.assertEqual(config["supported_platforms"], ["linux"])
+                self.assertEqual(config["python_version"], "3.8.18")
+                self.assertIn(name, runtime.REPOS)
+                self.assertIn(name, parse_results.REPOS)
+                workflow = (workflows / f"flakexplain-{name}.yml").read_text(
+                    encoding="utf-8"
+                )
+                self.assertIn("default: baseline-only", workflow)
+                self.assertIn(f"python run_all.py {name} --baseline-only", workflow)
+                self.assertIn(f"python run_all.py {name} --reverse-rounds 3", workflow)
+                self.assertIn('python-version: "3.8.18"', workflow)
+                self.assertIn(f"repos/{name}/results/", workflow)
+        self.assertEqual(runtime.pytest_args("reframe"), ["unittests/"])
+        self.assertEqual(runtime.pytest_args("loguru"), ["tests/"])
+        self.assertEqual(runtime.pytest_args("freezegun"), ["tests/"])
+        self.assertEqual(runtime.pytest_args("ipython"), [])
+        self.assertEqual(set(runtime.REPOS), set(parse_results.REPOS))
     def test_workflow_targets_only_urllib3_on_ubuntu(self):
         workflow = (
             Path(__file__).resolve().parents[1]
@@ -265,6 +313,37 @@ version = "3.0.0"
             self.assertEqual(summary["not_observed_flaky_count"], 1)
             self.assertEqual(summary["unlabelled_count"], 2)
             self.assertEqual(summary["observed_flaky_count"], 0)
+
+    def test_report_reads_all_plural_reverse_round_records(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            repo = root / "ipython"
+            results = repo / "results"
+            for number in range(1, 4):
+                write_xml(results / f"reverse_run_{number}.xml", count=2)
+            runtime.atomic_json(
+                repo / "baseline_state.json",
+                dict(status="PASSED", environment_id="same", collected_count=2),
+            )
+            runtime.atomic_json(
+                results / "execution_manifest.json",
+                dict(
+                    environment_id="same",
+                    collected_count=2,
+                    original_rounds=[],
+                    random_rounds=[],
+                    reverse_rounds=[
+                        dict(xml_file=f"reverse_run_{number}.xml", exit_code=0)
+                        for number in range(1, 4)
+                    ],
+                    reverse_round=None,
+                ),
+            )
+            with patch.object(parse_results, "REPOS_DIR", root):
+                summary = parse_results.analyze_repo_results("ipython")
+            self.assertEqual(summary["rev_rounds"], 3)
+            self.assertEqual(summary["total_rounds"], 3)
+            self.assertEqual(summary["not_observed_flaky_count"], 2)
 
     def test_pipeline_lock_rejects_duplicate_and_releases(self):
         with tempfile.TemporaryDirectory() as folder:

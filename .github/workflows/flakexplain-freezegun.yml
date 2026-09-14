@@ -1,0 +1,67 @@
+name: FlakeXplain Freezegun candidate
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Run the clean baseline gate first; select full only after it passes
+        required: true
+        default: baseline-only
+        type: choice
+        options: [baseline-only, full]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: flakexplain-freezegun-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  detect:
+    name: Freezegun (Ubuntu, Python 3.8.18)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - name: Check out FlakeXplain
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.8.18"
+          cache: pip
+          cache-dependency-path: scripts/setup_repos.py
+      - name: Install pipeline compatibility dependency
+        run: python -m pip install tomli==2.0.1
+      - name: Verify pipeline
+        run: python -m unittest discover -s tests -v
+      - name: Run clean baseline gate only
+        if: ${{ inputs.mode == 'baseline-only' }}
+        timeout-minutes: 330
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py freezegun --baseline-only --work-dir "$FLAKEXPLAIN_WORK"
+      - name: Run baseline and 27 serial rounds
+        if: ${{ inputs.mode == 'full' }}
+        timeout-minutes: 330
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py freezegun --reverse-rounds 3 --work-dir "$FLAKEXPLAIN_WORK"
+      - name: Upload evidence and report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: flakexplain-freezegun-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/flakexplain/repos/freezegun/results/
+            ${{ runner.temp }}/flakexplain/repos/freezegun/logs/
+            ${{ runner.temp }}/flakexplain/repos/freezegun/env_snapshot.txt
+            ${{ runner.temp }}/flakexplain/repos/freezegun/environment.json
+            ${{ runner.temp }}/flakexplain/repos/freezegun/setup_state.json
+            ${{ runner.temp }}/flakexplain/repos/freezegun/baseline_state.json
+            ${{ runner.temp }}/flakexplain/repos/freezegun/setup_log.md
+            FlakeXplain_Flaky_Report.md

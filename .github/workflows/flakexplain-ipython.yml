@@ -1,0 +1,71 @@
+name: FlakeXplain IPython candidate
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Run the clean baseline gate first; select full only after it passes
+        required: true
+        default: baseline-only
+        type: choice
+        options:
+          - baseline-only
+          - full
+
+permissions:
+  contents: read
+
+concurrency:
+  group: flakexplain-ipython-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  detect:
+    name: IPython (Ubuntu, Python 3.8.18)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - name: Check out FlakeXplain
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.8.18"
+          cache: pip
+          cache-dependency-path: |
+            scripts/setup_repos.py
+            environment-locks/ipython.txt
+      - name: Install pipeline compatibility dependency
+        run: python -m pip install tomli==2.0.1
+      - name: Verify pipeline
+        run: python -m unittest discover -s tests -v
+      - name: Run clean baseline gate only
+        if: ${{ inputs.mode == 'baseline-only' }}
+        timeout-minutes: 330
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py ipython --baseline-only --work-dir "$FLAKEXPLAIN_WORK"
+      - name: Run baseline and 27 serial rounds
+        if: ${{ inputs.mode == 'full' }}
+        timeout-minutes: 330
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py ipython --reverse-rounds 3 --work-dir "$FLAKEXPLAIN_WORK"
+      - name: Upload evidence and report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: flakexplain-ipython-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/flakexplain/repos/ipython/results/
+            ${{ runner.temp }}/flakexplain/repos/ipython/logs/
+            ${{ runner.temp }}/flakexplain/repos/ipython/env_snapshot.txt
+            ${{ runner.temp }}/flakexplain/repos/ipython/environment.json
+            ${{ runner.temp }}/flakexplain/repos/ipython/setup_state.json
+            ${{ runner.temp }}/flakexplain/repos/ipython/baseline_state.json
+            ${{ runner.temp }}/flakexplain/repos/ipython/setup_log.md
+            FlakeXplain_Flaky_Report.md
