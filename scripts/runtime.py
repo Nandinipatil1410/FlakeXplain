@@ -97,7 +97,11 @@ def pytest_args(repo_name):
         return ["testing/"]
     if repo_name == "reframe":
         return ["unittests/"]
-    if repo_name in {"loguru", "freezegun"}:
+    if repo_name == "loguru":
+        # This historical suite asserts Python's native thread traceback on stderr.
+        # Pytest 6.2's hook redirects it into PytestUnhandledThreadExceptionWarning.
+        return ["-p", "no:threadexception", "tests/"]
+    if repo_name == "freezegun":
         return ["tests/"]
     if repo_name in {"werkzeug", "rich"}:
         return ["tests/"]

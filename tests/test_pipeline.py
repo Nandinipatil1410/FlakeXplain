@@ -271,7 +271,10 @@ version = "3.0.0"
                 self.assertIn('python-version: "3.8.18"', workflow)
                 self.assertIn(f"repos/{name}/results/", workflow)
         self.assertEqual(runtime.pytest_args("reframe"), ["unittests/"])
-        self.assertEqual(runtime.pytest_args("loguru"), ["tests/"])
+        self.assertEqual(
+            runtime.pytest_args("loguru"),
+            ["-p", "no:threadexception", "tests/"],
+        )
         self.assertEqual(runtime.pytest_args("freezegun"), ["tests/"])
         self.assertEqual(runtime.pytest_args("ipython"), [])
         self.assertIn("matplotlib==3.4.2", setup_repos.REPOS["ipython"]["extra_pkgs"])

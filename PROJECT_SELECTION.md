@@ -24,8 +24,8 @@ FlakeXplain labels, classifier features, or the authoritative consolidated repor
 | Priority | Project | Pinned commit | Historical selection evidence | FlakeXplain status |
 |---:|---|---|---|---|
 | 1 | IPython | `95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d` | FLAKE16 reports a suite of 846 tests with 6 NOD and 304 OD records. | Clean baseline empirically passed on attempt 1: 847 tests collected in 35.23 seconds. Full detection not run. |
-| 2 | ReFrame | `576eb3f1dcc015d1e6d7a10602c748d4f810da68` | FlaPy contains 189 OD records; iPFlakies yields 136 unique flaky-test IDs after filtering non-flaky statuses and deduplication; Python IDoFT contains 137 records. | Setup bootstrap succeeded; subsequent baseline rejected because direct pytest bypassed ReFrame's runtime-initializing wrapper. Invocation corrected and rerun pending. No detection result. |
-| 3 | Loguru | `f31e97142adc1156693a26ecaf47208d3765a6e3` | FLAKE16 reports a suite of 1,255 tests with 4 NOD and 21 OD records. | Candidate workflow configured; no baseline or detection result yet. |
+| 2 | ReFrame | `576eb3f1dcc015d1e6d7a10602c748d4f810da68` | FlaPy contains 189 OD records; iPFlakies yields 136 unique flaky-test IDs after filtering non-flaky statuses and deduplication; Python IDoFT contains 137 records. | Clean baseline empirically passed on attempt 1: 736 tests collected in 38.51 seconds. Full detection not run. |
+| 3 | Loguru | `f31e97142adc1156693a26ecaf47208d3765a6e3` | FLAKE16 reports a suite of 1,255 tests with 4 NOD and 21 OD records. | Baseline rejected because pytest's thread-exception hook intercepted stderr required by an unchanged upstream assertion; repository-scoped compatibility option added and rerun pending. No detection result. |
 | 4 | Freezegun | `b46da782a7a051081fd51577749cfc0074db0cc6` | At this commit, FlaPy contains 17 OD records and iPFlakies yields 15 unique victim tests. Python IDoFT contains 16 records at this commit plus 1 at another commit. | Candidate workflow configured; no baseline or detection result yet. |
 
 The historical counts above retain each source's own unit and terminology. They are
@@ -64,6 +64,19 @@ cleans ReFrame environment variables, initializes the generic test runtime from
 `unittests/resources/settings.py`, and invokes pytest. FlakeXplain now uses that wrapper
 for ReFrame baseline and reordered rounds; no upstream source or test is patched or
 skipped.
+
+After using the official wrapper, the next ReFrame baseline empirically passed on its
+first attempt, collecting 736 tests in 38.51 seconds. This is baseline evidence only;
+no reordered detection rounds or new flaky labels have been produced yet.
+
+The first Loguru baseline completed setup, then all three attempts failed
+deterministically at `test_not_caught_exception_queue_get`. The test expects Python's
+native unhandled-thread traceback on captured stderr, but pytest 6.2's built-in
+`threadexception` plugin replaced that output with a
+`PytestUnhandledThreadExceptionWarning`. Pytest officially supports disabling this
+hook with `-p no:threadexception`. FlakeXplain now applies that option to Loguru only,
+for baseline and every reordered round. The upstream test still runs unchanged, and
+the native exception traceback is not suppressed.
 
 ## Reserves and deferred projects
 
