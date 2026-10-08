@@ -208,6 +208,28 @@ REPOS = {
         "install_target": ".[testing]",
         "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0", "pytest-cov==2.12.1"],
     },
+
+    "kombu": {
+        "url": "https://github.com/celery/kombu.git",
+        "commit": "2aeb73248b4a0bf8ad3de81a0f40733e7cd42255",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "bootstrap_pkgs": ["setuptools==57.5.0", "wheel==0.37.1"],
+        # Upstream requirements/test.txt requires pytest <= 5.3.5.
+        "extra_pkgs": [
+            "pytest==5.3.5", "pytest-randomly==3.5.0", "case==1.5.3",
+            "pytz==2021.1", "Pyro4==4.80", "pytest-sugar==0.9.4",
+            "amqp==5.0.6", "vine==5.0.0",
+        ],
+    },
+    "tornado": {
+        "url": "https://github.com/tornadoweb/tornado.git",
+        "commit": "2047e7ae3c825bf52dad10cc8402d09e11091bc1",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        # Basic upstream profile: optional curl/twisted/cares tests may skip.
+        "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0"],
+    },
 }
 
 

@@ -82,3 +82,31 @@ against the base features on fixed project-disjoint splits. The existing OD/NOD 
 is observational; confirm suspected dependencies with targeted reruns before cause claims.
 Label passing tests as not observed flaky after N runs. New observed outcomes need not match
 CANNIER because dependency versions, operating systems and execution budgets differ.
+
+
+## Two additional subjects: Kombu and Tornado
+
+Implemented separate workflows:
+- Actions > FlakeXplain CANNIER Kombu
+- Actions > FlakeXplain CANNIER Tornado
+
+Each has mode=baseline-only (default) and mode=full. Run baseline-only first,
+then full after a clean pass. Each full run checks its baseline afresh and
+runs 12 original, 12 random, and 1 reverse round. Download the tarball artifact
+and follow the same staging/import instructions above using kombu or tornado.
+Both subjects are registered with the consolidated parser.
+
+Pinned CANNIER commits:
+- celery/kombu: 2aeb73248b4a0bf8ad3de81a0f40733e7cd42255
+- tornadoweb/tornado: 2047e7ae3c825bf52dad10cc8402d09e11091bc1
+
+Kombu preserves upstream setup.cfg collection of t/unit and the historical
+pytest<=5.3.5 requirement, using pytest-randomly 3.5.0. It does not claim to
+cover broker-dependent integration suites. Tornado uses its basic dependency
+profile; upstream tests requiring optional pycurl, Twisted or pycares may skip.
+Skips remain unlabelled unless the same test has sufficient pass/fail evidence.
+Neither baseline nor detection results have been empirically verified yet.
+Keep snapshots and report this dependency/collection scope in the paper.
+
+These two additions bring the newly configured subjects to five: FontTools,
+Graphene, Pyramid, Kombu and Tornado. IPython and Loguru are existing subjects.

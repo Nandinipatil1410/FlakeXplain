@@ -1,0 +1,88 @@
+name: FlakeXplain CANNIER Kombu
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Baseline only or baseline followed by 25 detection rounds
+        required: true
+        default: baseline-only
+        type: choice
+        options: [baseline-only, full]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cannier-kombu-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  detect:
+    strategy:
+      fail-fast: false
+      matrix:
+        subject: [kombu]
+    name: CANNIER / ${{ matrix.subject }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      SUBJECT: ${{ matrix.subject }}
+    steps:
+      - name: Check out FlakeXplain
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up historical Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.8.18"
+      - name: Verify pipeline
+        run: |
+          python -m pip install tomli==2.0.1
+          python -m unittest discover -s tests -v
+      - name: Run clean baseline gate
+        if: inputs.mode == 'baseline-only'
+        timeout-minutes: 320
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py "$SUBJECT" --baseline-only --work-dir "$FLAKEXPLAIN_WORK"
+      - name: Run baseline and 12 original / 12 random / 1 reverse rounds
+        if: inputs.mode == 'full'
+        timeout-minutes: 320
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py "$SUBJECT" --reverse-rounds 1 --work-dir "$FLAKEXPLAIN_WORK"
+      - name: Package raw evidence and pinned source
+        if: always()
+        shell: bash
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: |
+          mkdir -p evidence/repos/"$SUBJECT"
+          repo="$FLAKEXPLAIN_WORK/repos/$SUBJECT"
+          if [ -d "$repo" ]; then
+            for entry in results logs env_snapshot.txt environment.json setup_state.json baseline_state.json setup_log.md; do
+              if [ -e "$repo/$entry" ]; then
+                cp -a "$repo/$entry" "evidence/repos/$SUBJECT/"
+              fi
+            done
+            if git -C "$repo" rev-parse HEAD; then
+              git -C "$repo" archive --format=tar.gz HEAD > "evidence/repos/$SUBJECT/source.tar.gz"
+            fi
+          fi
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          keys = ['GITHUB_REPOSITORY', 'GITHUB_SHA', 'GITHUB_RUN_ID', 'GITHUB_RUN_ATTEMPT', 'SUBJECT']
+          Path('evidence/provenance.json').write_text(json.dumps({k: os.environ.get(k) for k in keys}, indent=2))
+          PY
+          tar -czf "cannier-$SUBJECT-evidence.tar.gz" -C evidence .
+      - name: Upload evidence even after failure
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: cannier-${{ matrix.subject }}-${{ inputs.mode }}-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 30
+          if-no-files-found: error
+          path: cannier-${{ matrix.subject }}-evidence.tar.gz
