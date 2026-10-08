@@ -250,6 +250,24 @@ REPOS = {
             "cryptography", "requests", "urllib3", "PyJWT", "PyNaCl", "Deprecated",
         ],
     },
+    "djangorestframework": {
+        "url": "https://github.com/encode/django-rest-framework.git",
+        "commit": "0323d6f8955f987771269506ca5da461e2e7a248",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "extra_pkgs": [
+            "Django==3.1.14", "pytest==6.1.2", "pytest-django==4.1.0",
+            "pytest-randomly==3.5.0", "pytest-cov==2.12.1",
+            "psycopg2-binary==2.8.6", "Markdown==3.3", "Pygments==2.4.2",
+            "django-guardian==2.2.0", "django-filter==2.2.0",
+            "coreapi==2.3.1", "coreschema==0.0.4", "PyYAML==6.0.1",
+            "uritemplate==3.0.1", "Pillow==8.4.0",
+        ],
+        "verify_pkgs": [
+            "djangorestframework", "Django", "pytest", "pytest-django",
+            "pytest-randomly", "pytest-cov", "coreapi", "coreschema",
+        ],
+    },
 }
 
 

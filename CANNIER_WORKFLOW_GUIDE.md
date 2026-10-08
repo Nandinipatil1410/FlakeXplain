@@ -139,3 +139,19 @@ excluded. The successful baseline and detection outcomes remain unverified.
 
 Import repos/pygithub from its full-run artifact using the same instructions
 above, then regenerate the consolidated report. The parser includes PyGithub.
+
+
+## Additional candidate: Django REST framework
+
+Actions > FlakeXplain CANNIER Django REST framework. Run baseline-only first,
+then full if it passes. Pinned CANNIER commit:
+0323d6f8955f987771269506ca5da461e2e7a248. Upstream tests configure in-memory
+SQLite databases. Historical Django/pytest and optional test packages are
+installed without patching or excluding upstream tests. Outcomes remain unverified.
+
+This workflow uploads results, logs and environment/provenance metadata without
+source.tar.gz. Its tarball retains the same repos/djangorestframework import
+layout. Import one complete full-run attempt, then regenerate the report as above.
+A configured workflow does not count as completed evidence. Graphene remains
+completed but not imported until its evidence is accessible; do not invent its
+counts or discard its run merely because a browser blocked the download.

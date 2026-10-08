@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 BASE_DIR = Path(__file__).resolve().parent.parent
 REPOS = [
     "click", "flask", "filelock", "fsspec", "httpx", "urllib3",
-    "werkzeug", "rich", "pytest", "ipython", "reframe", "loguru", "freezegun", "fonttools", "graphene", "pyramid", "kombu", "tornado", "pygithub",
+    "werkzeug", "rich", "pytest", "ipython", "reframe", "loguru", "freezegun", "fonttools", "graphene", "pyramid", "kombu", "tornado", "pygithub", "djangorestframework",
 ]
 def default_work_dir():
     if os.name == "nt":
