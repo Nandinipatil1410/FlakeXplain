@@ -182,6 +182,32 @@ REPOS = {
             "freezegun", "pytest", "pytest-randomly", "python-dateutil", "maya",
         ],
     },
+
+    "fonttools": {
+        "url": "https://github.com/fonttools/fonttools.git",
+        "commit": "f3a903093a4600f3d757bf9b22f387a561fcb584",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "install_target": ".[all]",
+        "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0", "pytest-cov==2.12.1"],
+    },
+    "graphene": {
+        "url": "https://github.com/graphql-python/graphene.git",
+        "commit": "7d2af3104e3c01ce4f9a1580faf40d8179079008",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "install_target": ".[test]",
+        "bootstrap_pkgs": ["setuptools==57.5.0", "wheel==0.37.1"],
+        "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0", "pytest-cov==2.12.1", "pytest-mock==3.6.1"],
+    },
+    "pyramid": {
+        "url": "https://github.com/Pylons/pyramid.git",
+        "commit": "7b182045ee77cdfb38fda5e55ccbdcd8ed1c9468",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "install_target": ".[testing]",
+        "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0", "pytest-cov==2.12.1"],
+    },
 }
 
 

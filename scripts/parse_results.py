@@ -18,7 +18,7 @@ from runtime import BASE_DIR, REPOS_DIR, complete_xml, read_json
 
 REPOS = [
     "click", "flask", "filelock", "fsspec", "httpx", "urllib3", "werkzeug",
-    "rich", "pytest", "ipython", "reframe", "loguru", "freezegun",
+    "rich", "pytest", "ipython", "reframe", "loguru", "freezegun", "fonttools", "graphene", "pyramid",
 ]
 
 def parse_xml_file(xml_path):
