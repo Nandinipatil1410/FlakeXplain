@@ -34,7 +34,6 @@ jobs:
     timeout-minutes: 360
     env:
       SUBJECT: ${{ matrix.subject }}
-      FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
     steps:
       - name: Check out FlakeXplain
         if: inputs.subject == 'all' || inputs.subject == matrix.subject
@@ -54,14 +53,20 @@ jobs:
       - name: Run clean baseline gate
         if: (inputs.subject == 'all' || inputs.subject == matrix.subject) && inputs.mode == 'baseline-only'
         timeout-minutes: 320
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
         run: python run_all.py "$SUBJECT" --baseline-only --work-dir "$FLAKEXPLAIN_WORK"
       - name: Run baseline and 12 original / 12 random / 1 reverse rounds
         if: (inputs.subject == 'all' || inputs.subject == matrix.subject) && inputs.mode == 'full'
         timeout-minutes: 320
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
         run: python run_all.py "$SUBJECT" --reverse-rounds 1 --work-dir "$FLAKEXPLAIN_WORK"
       - name: Package raw evidence and pinned source
         if: always() && (inputs.subject == 'all' || inputs.subject == matrix.subject)
         shell: bash
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
         run: |
           mkdir -p evidence/repos/"$SUBJECT"
           repo="$FLAKEXPLAIN_WORK/repos/$SUBJECT"
