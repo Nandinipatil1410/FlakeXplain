@@ -122,3 +122,20 @@ Tornado root collection includes maint/test/cython; setup now installs Cython
 baseline. No tests are excluded and upstream sources remain unpatched.
 Retry both baseline-only workflows in fresh GitHub jobs after pushing this
 setup change. Successful baselines remain unverified until those jobs pass.
+
+
+## Tornado replacement: PyGithub
+
+Use Actions > FlakeXplain CANNIER PyGithub, mode=baseline-only, then mode=full
+once the baseline passes. This replaces Tornado in the five-new-project cohort:
+FontTools, Graphene, Pyramid, Kombu and PyGithub. Tornado's failed artifacts are
+retained as discarded-candidate evidence; do not rerun its root collection.
+
+PyGithub is pinned to CANNIER commit 31538337faaa61e104afede75a5fac802c9a1ab3.
+Its upstream pytest.ini defines collection and its tests/Framework.py defaults
+to recorded HTTP response replay. No record/auth mode is enabled. Setup installs
+historical runtime and test dependency pins; no upstream tests are patched or
+excluded. The successful baseline and detection outcomes remain unverified.
+
+Import repos/pygithub from its full-run artifact using the same instructions
+above, then regenerate the consolidated report. The parser includes PyGithub.

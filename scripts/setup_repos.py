@@ -233,6 +233,23 @@ REPOS = {
         "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0", "Cython==0.29.24"],
         "post_install_targets": ["maint/test/cython"],
     },
+
+    "pygithub": {
+        "url": "https://github.com/PyGithub/PyGithub.git",
+        "commit": "31538337faaa61e104afede75a5fac802c9a1ab3",
+        "supported_platforms": ["linux"],
+        "python_version": "3.8.18",
+        "extra_pkgs": [
+            "pytest==6.2.4", "pytest-randomly==3.15.0", "pytest-cov==2.12.1",
+            "httpretty==1.1.4", "cryptography==3.4.7", "requests==2.25.1",
+            "urllib3==1.26.5", "PyJWT==2.1.0", "PyNaCl==1.4.0",
+            "Deprecated==1.2.12",
+        ],
+        "verify_pkgs": [
+            "PyGithub", "pytest", "pytest-randomly", "pytest-cov", "httpretty",
+            "cryptography", "requests", "urllib3", "PyJWT", "PyNaCl", "Deprecated",
+        ],
+    },
 }
 
 
