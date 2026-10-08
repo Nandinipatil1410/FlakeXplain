@@ -220,6 +220,8 @@ REPOS = {
             "pytest==5.3.5", "pytest-randomly==3.5.0", "case==1.5.3",
             "pytz==2021.1", "Pyro4==4.80", "pytest-sugar==0.9.4",
             "amqp==5.0.6", "vine==5.0.0",
+            "azure-servicebus==7.0.0", "azure-storage-queue==12.1.6",
+            "azure-core==1.14.0",
         ],
     },
     "tornado": {
@@ -228,7 +230,8 @@ REPOS = {
         "supported_platforms": ["linux"],
         "python_version": "3.8.18",
         # Basic upstream profile: optional curl/twisted/cares tests may skip.
-        "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0"],
+        "extra_pkgs": ["pytest==6.2.4", "pytest-randomly==3.15.0", "Cython==0.29.24"],
+        "post_install_targets": ["maint/test/cython"],
     },
 }
 
@@ -406,6 +409,16 @@ def setup_repo(repo_name, config, refresh=False):
         _, _, code = run_command(cmd, cwd=repo, log_path=install_log)
     if code:
         raise RuntimeError(f"Dependency installation failed. See {repo / 'logs'}")
+    # Build upstream auxiliary test packages before opening the baseline gate.
+    # Tornado's root collection includes a Cython integration package.
+    for target in config.get("post_install_targets", []):
+        _, _, code = run_command(
+            [str(python), "-m", "pip", "install", "--no-build-isolation", "./" + target],
+            cwd=repo,
+            log_path=repo / "logs" / ("setup-" + target.replace("/", "-") + ".log"),
+        )
+        if code:
+            raise RuntimeError(f"Auxiliary test package installation failed: {target}. See {repo / 'logs'}")
     checked_output([python, "-m", "pip", "check"], repo)
     # Require the package itself plus the repository's test distributions.
     packages = config.get("verify_pkgs", [repo_name] + config["extra_pkgs"])

@@ -110,3 +110,15 @@ Keep snapshots and report this dependency/collection scope in the paper.
 
 These two additions bring the newly configured subjects to five: FontTools,
 Graphene, Pyramid, Kombu and Tornado. IPython and Loguru are existing subjects.
+
+
+### Collection setup corrections
+
+Kombu's Azure transport unit modules require the Azure SDK at import time.
+Setup now installs azure-servicebus 7.0.0, azure-storage-queue 12.1.6 and
+azure-core 1.14.0, in addition to the previously configured test dependencies.
+Tornado root collection includes maint/test/cython; setup now installs Cython
+0.29.24 and builds/installs that upstream auxiliary test package before the
+baseline. No tests are excluded and upstream sources remain unpatched.
+Retry both baseline-only workflows in fresh GitHub jobs after pushing this
+setup change. Successful baselines remain unverified until those jobs pass.
