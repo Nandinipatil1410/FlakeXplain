@@ -73,6 +73,11 @@ def pytest_command(repo_name, repo):
 def pytest_env(repo):
     env = os.environ.copy()
     env["PYTHONUNBUFFERED"] = "1"
+    # Tests may launch installed console scripts (e.g. fonttools) by name.
+    # Using the venv Python alone does not make those scripts discoverable.
+    env["PATH"] = os.pathsep.join(
+        [str(python_for(repo).parent.resolve()), env.get("PATH", "")]
+    )
     env["PYTHONPATH"] = os.pathsep.join(
         [str(repo / part) for part in ("tasks", "tests", "src", ".")]
         + [env.get("PYTHONPATH", "")]

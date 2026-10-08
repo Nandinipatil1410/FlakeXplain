@@ -371,6 +371,17 @@ version = "3.0.0"
         for part in ("tasks", "tests", "src"):
             self.assertIn(str(Path("example") / part), env["PYTHONPATH"])
 
+    def test_pytest_environment_prioritizes_venv_console_scripts(self):
+        import os
+        with patch.dict(os.environ, {"PATH": "existing-tools"}):
+            repo = Path("example")
+            env = runtime.pytest_env(repo)
+            self.assertEqual(
+                env["PATH"].split(os.pathsep),
+                [str(runtime.python_for(repo).parent.resolve()), "existing-tools"],
+            )
+            self.assertEqual(os.environ["PATH"], "existing-tools")
+
     def test_reframe_uses_upstream_runtime_initializing_wrapper(self):
         repo = Path("reframe")
         command = runtime.pytest_command("reframe", repo)
