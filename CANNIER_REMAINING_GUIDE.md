@@ -338,6 +338,23 @@ provenance and evidence; it would not repair the untouched historical experiment
 
 ### Implemented setup corrections
 
+- Prefect: the supplied setup fails strict `pip check` because its snapshot
+  contains incompatible AWS, AzureML/Great Expectations and Soda SQL pins.
+  Implemented: align boto3/botocore/s3transfer to 1.17.106/1.20.106/0.4.2,
+  satisfying aiobotocore 1.3.3; use Great Expectations 0.12.9 and ruamel.yaml
+  0.15.89 to satisfy AzureML's YAML ceiling. Align requests/chardet/urllib3 to
+  2.23.0/3.0.4/1.25.11 for Great Expectations' requests ceiling. Replace the
+  `soda-sql==2.0.0b27` distribution, whose exact transitive pins conflict with
+  the other integrations, with `soda-sql-core==2.1.0b1`. Its wheel retains the
+  `sodasql.scan.scan_builder.ScanBuilder` API used by the pinned Prefect tests;
+  this does not establish live database integration compatibility.
+  All nine substitutions are explicit `snapshot_overrides`, included in the
+  fingerprinted recipe and archived effective requirements. The original
+  snapshot is unchanged. Available PyPI metadata was checked for Python 3.8
+  dependency conflicts; packages without published dependency metadata were
+  not fully verified. This is a dependency-corrected experiment. A complete
+  installation, strict `pip check` and full baseline still require fresh Linux
+  CI verification. No upstream tests or baseline criteria are changed.
 - Pillow: the supplied baseline fails `Tests/test_imageshow.py::test_show`
   because `ImageShow.show()` returns 0. The pinned Unix implementation registers
   viewers only when supported executables are available; the container had none.

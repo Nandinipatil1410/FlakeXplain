@@ -424,6 +424,17 @@
       "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/prefect/requirements.txt",
+    "snapshot_overrides": {
+      "boto3": "boto3==1.17.106",
+      "botocore": "botocore==1.20.106",
+      "s3transfer": "s3transfer==0.4.2",
+      "great-expectations": "great-expectations==0.12.9",
+      "ruamel.yaml": "ruamel.yaml==0.15.89",
+      "requests": "requests==2.23.0",
+      "chardet": "chardet==3.0.4",
+      "urllib3": "urllib3==1.25.11",
+      "soda-sql": "soda-sql-core==2.1.0b1"
+    },
     "verify_pkgs": [
       "prefect",
       "pytest",

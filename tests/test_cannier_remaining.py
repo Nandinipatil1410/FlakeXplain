@@ -203,6 +203,30 @@ class RemainingSubjectTests(unittest.TestCase):
                              effective.read_bytes())
             self.assertEqual(json.loads((archived / "cannier_setup_recipe.json").read_text()), config)
 
+    def test_prefect_dependency_corrections_preserve_snapshot_and_evidence(self):
+        config = NEW_CANNIER_REPOS["prefect"]
+        original = setup_repos.BASE_DIR / config["snapshot_path"]
+        before = original.read_bytes()
+        overrides = config["snapshot_overrides"]
+        self.assertEqual(set(overrides), {
+            "boto3", "botocore", "s3transfer", "great-expectations", "ruamel.yaml",
+            "requests", "chardet", "urllib3", "soda-sql"})
+        self.assertEqual(overrides["soda-sql"], "soda-sql-core==2.1.0b1")
+        self.assertFalse(config.get("snapshot_exclusions"))
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder) / "repos/prefect"
+            effective = setup_repos.cannier_requirements(repo, config)
+            expected = [overrides.get(line.split("==", 1)[0].lower().replace("_", "-"), line)
+                        for line in original.read_text().splitlines()]
+            self.assertEqual(effective.read_text().splitlines(), expected)
+            self.assertEqual(original.read_bytes(), before)
+            with patch("package_cannier_evidence.subprocess.check_output", return_value="packages"):
+                package("prefect", Path(folder), Path(folder) / "evidence")
+            archived = Path(folder) / "evidence/repos/prefect"
+            self.assertEqual((archived / "logs/effective-cannier-requirements.txt").read_bytes(),
+                             effective.read_bytes())
+            self.assertEqual(json.loads((archived / "cannier_setup_recipe.json").read_text()), config)
+
     def test_invalid_snapshot_exclusions_are_rejected(self):
         config = NEW_CANNIER_REPOS["libcloud"]
         with tempfile.TemporaryDirectory() as folder:
