@@ -320,6 +320,9 @@
       "Cython==0.29.24"
     ],
     "snapshot_path": "cannier-replication/subjects/libcloud/requirements.txt",
+    "snapshot_additions": [
+      "toml==0.10.2"
+    ],
     "snapshot_exclusions": {
       "codecov": "The pinned codecov==2.1.10 is unavailable from the package index; this coverage uploader is not used by the direct pytest experiment."
     },

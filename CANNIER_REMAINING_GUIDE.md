@@ -347,6 +347,14 @@ provenance and evidence; it would not repair the untouched historical experiment
   effective requirements are archived. This is a tooling-corrected environment;
   successful installation and a complete passing baseline await fresh CI
   verification. No upstream tests or baseline criteria are changed.
+- Libcloud follow-up: the next supplied log installs the snapshot and source,
+  then fails strict `pip check` because `pep517==0.8.2` requires `toml`.
+  Implemented: add `toml==0.10.2` through `snapshot_additions`, retaining
+  `pytoml==0.1.21` (a different distribution) and the original snapshot.
+  PyPI metadata confirms pep517's `toml` dependency and this TOML release's
+  Python 3.8 compatibility. Effective requirements and the fingerprinted
+  recipe record the addition. Complete setup and baseline await a fresh CI run;
+  strict dependency validation remains enabled.
 - FlexGet: the 2026-10-09 baseline failed at
   `flexget/tests/test_urlrewriting.py::TestURLRewriters::test_rutracker`
   because `api.t-ru.org` did not resolve and its cassette is absent at the pinned

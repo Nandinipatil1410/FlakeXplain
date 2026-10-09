@@ -168,12 +168,14 @@ class RemainingSubjectTests(unittest.TestCase):
         original = setup_repos.BASE_DIR / config["snapshot_path"]
         before = original.read_bytes()
         self.assertEqual(set(config["snapshot_exclusions"]), {"codecov"})
+        self.assertEqual(config["snapshot_additions"], ["toml==0.10.2"])
         self.assertIn("codecov==2.1.10", original.read_text().splitlines())
         with tempfile.TemporaryDirectory() as folder:
             repo = Path(folder) / "repos/libcloud"
             effective = setup_repos.cannier_requirements(repo, config)
             expected = [line for line in original.read_text().splitlines()
                         if line != "codecov==2.1.10"]
+            expected.append("toml==0.10.2")
             self.assertEqual(effective.read_text().splitlines(), expected)
             self.assertEqual(original.read_bytes(), before)
             self.assertEqual(json.loads((repo / "cannier_setup_recipe.json").read_text()), config)
