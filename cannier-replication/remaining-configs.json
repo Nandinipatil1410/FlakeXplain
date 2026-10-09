@@ -94,7 +94,8 @@
     "snapshot_overrides": {
       "typing-extensions": "typing-extensions==3.10.0.2",
       "typed-ast": "typed-ast==1.4.3",
-      "filelock": "filelock==3.4.1"
+      "filelock": "filelock==3.4.1",
+      "matplotlib": "matplotlib==3.5.2"
     },
     "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
   },
@@ -117,6 +118,9 @@
       "Cython==0.29.24"
     ],
     "snapshot_path": "cannier-replication/subjects/conan/requirements.txt",
+    "snapshot_additions": [
+      "cmake==3.15.3"
+    ],
     "verify_pkgs": [
       "conan",
       "pytest",

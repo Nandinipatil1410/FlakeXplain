@@ -86,6 +86,15 @@ changes, not claims of matching the paper's labels.
 
 ## Artifact import
 
+### Conan CMake prerequisite
+
+Implemented: add `cmake==3.15.3` to Conan's effective requirements, preserving the
+original author snapshot. The pytest environment prepends the subject virtualenv
+bin directory to PATH, so the pinned CMake takes precedence over system CMake
+3.16.3. The supplied CI baseline log verifies that `test_default_cmake` expects
+the 3.15 series and rejects 3.16.3. The test and strict gate remain unchanged;
+the corrected Conan baseline awaits CI verification.
+
 ### Cirq dependency snapshot corrections
 
 Implemented: explicit overrides set typing-extensions to 3.10.0.2 (codeowners
@@ -95,6 +104,15 @@ snapshot fails `pip check` on these three conflicts before baseline execution.
 The author snapshot remains unchanged; effective requirements and the recipe are
 packaged as evidence. These corrections await CI dependency and baseline
 verification. Keep `pip check` enabled and rerun baseline-only.
+
+The subsequent supplied Cirq baseline reaches 1,293 passing tests before
+`test_plot_does_not_raise_error` fails: Matplotlib's `_check_1d` applies
+`x[:, None]` to a pandas DataFrame and propagates `pandas.errors.InvalidIndexError`.
+Implemented: override Matplotlib 3.5.1 with 3.5.2, whose upstream `_check_1d`
+unpacks pandas input to NumPy before inspecting dimensions. This is an explicit
+dependency correction, with no changes to Cirq source, tests, or labels. The
+original snapshot remains preserved. The affected test and full baseline await
+CI verification in the corrected environment.
 
 ### Airflow localhost SFTP prerequisite
 
