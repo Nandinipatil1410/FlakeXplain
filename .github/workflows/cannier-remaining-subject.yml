@@ -59,6 +59,42 @@ jobs:
           mkdir -p "$FLAKEXPLAIN_WORK"
           chown -R cannier:cannier "$GITHUB_WORKSPACE" "$FLAKEXPLAIN_WORK"
           runuser -u cannier -- id
+      - name: Verify Dask permission-test environment
+        if: inputs.subject == 'dask'
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: |
+          runuser -u cannier -- env HOME=/home/cannier USER=cannier LOGNAME=cannier python - "$FLAKEXPLAIN_WORK" <<'PY'
+          import os
+          import pathlib
+          import stat
+          import sys
+          import tempfile
+
+          if os.geteuid() == 0:
+              raise SystemExit("Dask permission tests require an unprivileged user")
+          with tempfile.TemporaryDirectory(dir=sys.argv[1]) as folder:
+              directory = pathlib.Path(folder)
+              sample = directory / "sample.yaml"
+              sample.write_text("x: 1\n")
+              for path in (directory, sample):
+                  original = stat.S_IMODE(path.stat().st_mode)
+                  try:
+                      # Match the pinned Dask test's owner-read-bit toggle.
+                      path.chmod(original ^ stat.S_IREAD)
+                      try:
+                          if path.is_dir():
+                              os.listdir(path)
+                          else:
+                              path.read_text()
+                      except PermissionError:
+                          pass
+                      else:
+                          raise SystemExit("Read permissions are bypassed: " + str(path))
+                  finally:
+                      path.chmod(original)
+          print("Verified unprivileged directory and file permission enforcement")
+          PY
       - name: Prepare localhost SSH and SFTP for historical Airflow tests
         if: inputs.subject == 'airflow'
         run: |
