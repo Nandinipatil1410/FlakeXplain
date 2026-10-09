@@ -86,6 +86,16 @@ changes, not claims of matching the paper's labels.
 
 ## Artifact import
 
+### Cirq dependency snapshot corrections
+
+Implemented: explicit overrides set typing-extensions to 3.10.0.2 (codeowners
+requires >=3.7,<4), typed-ast to 1.4.3 (mypy requires >=1.4,<1.5), and filelock
+to 3.4.1 (virtualenv requires >=3.2,<4). The supplied CI log verifies the original
+snapshot fails `pip check` on these three conflicts before baseline execution.
+The author snapshot remains unchanged; effective requirements and the recipe are
+packaged as evidence. These corrections await CI dependency and baseline
+verification. Keep `pip check` enabled and rerun baseline-only.
+
 ### Airflow localhost SFTP prerequisite
 
 Implemented: the shared executor starts a loopback-only OpenSSH server for Airflow,

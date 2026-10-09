@@ -40,7 +40,9 @@ class RemainingSubjectTests(unittest.TestCase):
         self.assertIn("--no-deps", run.call_args.args[0])
 
     def test_explicit_snapshot_corrections_preserve_original_and_are_packaged(self):
-        for subject, expected in [("celery", "argparse==1.4.0"), ("airflow", "argparse==1.4.0"), ("conan", "six==1.15.0")]:
+        for subject, expected in [("celery", "argparse==1.4.0"), ("airflow", "argparse==1.4.0"), ("conan", "six==1.15.0"),
+                                  ("cirq", "typing-extensions==3.10.0.2"),
+                                  ("cirq", "typed-ast==1.4.3"), ("cirq", "filelock==3.4.1")]:
             config = NEW_CANNIER_REPOS[subject]
             original = setup_repos.BASE_DIR / config["snapshot_path"]
             before = original.read_bytes()

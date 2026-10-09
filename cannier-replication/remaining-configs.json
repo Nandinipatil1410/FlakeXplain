@@ -91,6 +91,11 @@
     "pytest_args": [
       "cirq-core"
     ],
+    "snapshot_overrides": {
+      "typing-extensions": "typing-extensions==3.10.0.2",
+      "typed-ast": "typed-ast==1.4.3",
+      "filelock": "filelock==3.4.1"
+    },
     "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
   },
   "conan": {
