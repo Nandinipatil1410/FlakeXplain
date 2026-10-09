@@ -163,6 +163,37 @@ class RemainingSubjectTests(unittest.TestCase):
     def test_airflow_requests_upstream_database_reset_for_each_pytest_process(self):
         self.assertEqual(runtime.pytest_args("airflow"), ["tests", "--with-db-init"])
 
+    def test_libcloud_excludes_only_uploader_and_preserves_snapshot_and_provenance(self):
+        config = NEW_CANNIER_REPOS["libcloud"]
+        original = setup_repos.BASE_DIR / config["snapshot_path"]
+        before = original.read_bytes()
+        self.assertEqual(set(config["snapshot_exclusions"]), {"codecov"})
+        self.assertIn("codecov==2.1.10", original.read_text().splitlines())
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder) / "repos/libcloud"
+            effective = setup_repos.cannier_requirements(repo, config)
+            expected = [line for line in original.read_text().splitlines()
+                        if line != "codecov==2.1.10"]
+            self.assertEqual(effective.read_text().splitlines(), expected)
+            self.assertEqual(original.read_bytes(), before)
+            self.assertEqual(json.loads((repo / "cannier_setup_recipe.json").read_text()), config)
+            with patch("package_cannier_evidence.subprocess.check_output", return_value="packages"):
+                package("libcloud", Path(folder), Path(folder) / "evidence")
+            archived = Path(folder) / "evidence/repos/libcloud"
+            self.assertEqual((archived / "logs/effective-cannier-requirements.txt").read_bytes(),
+                             effective.read_bytes())
+            self.assertEqual(json.loads((archived / "cannier_setup_recipe.json").read_text()), config)
+
+    def test_invalid_snapshot_exclusions_are_rejected(self):
+        config = NEW_CANNIER_REPOS["libcloud"]
+        with tempfile.TemporaryDirectory() as folder:
+            with self.assertRaisesRegex(RuntimeError, "exclusion does not match"):
+                setup_repos.cannier_requirements(Path(folder), dict(
+                    config, snapshot_exclusions={"nonexistent-package": "unused"}))
+            with self.assertRaisesRegex(RuntimeError, "both overridden and excluded"):
+                setup_repos.cannier_requirements(Path(folder), dict(
+                    config, snapshot_overrides={"codecov": "codecov==2.1.13"}))
+
     def test_missing_snapshot_override_is_rejected(self):
         config = dict(NEW_CANNIER_REPOS["conan"], snapshot_overrides={"nonexistent-package": "nonexistent-package==1"})
         with tempfile.TemporaryDirectory() as folder:

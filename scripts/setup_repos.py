@@ -319,19 +319,27 @@ def cannier_requirements(repo, config):
     original = BASE_DIR / config["snapshot_path"]
     overrides = config.get("snapshot_overrides", {})
     additions = config.get("snapshot_additions", [])
-    if not overrides and not additions:
+    exclusions = config.get("snapshot_exclusions", {})
+    if set(overrides) & set(exclusions):
+        raise RuntimeError("Snapshot pin cannot be both overridden and excluded")
+    if not overrides and not additions and not exclusions:
         return original
     effective = []
     seen = set()
+    excluded = set()
     for line in original.read_text(encoding="utf-8").splitlines():
         name = line.split("==", 1)[0].lower().replace("_", "-")
-        if name in overrides:
+        if name in exclusions:
+            excluded.add(name)
+        elif name in overrides:
             effective.append(overrides[name])
             seen.add(name)
         else:
             effective.append(line)
     if seen != set(overrides):
         raise RuntimeError("Snapshot override does not match an original pin")
+    if excluded != set(exclusions):
+        raise RuntimeError("Snapshot exclusion does not match an original pin")
     effective.extend(additions)
     target = repo / "logs" / "effective-cannier-requirements.txt"
     target.parent.mkdir(parents=True, exist_ok=True)

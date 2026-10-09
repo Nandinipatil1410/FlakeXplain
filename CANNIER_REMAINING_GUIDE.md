@@ -338,6 +338,15 @@ provenance and evidence; it would not repair the untouched historical experiment
 
 ### Implemented setup corrections
 
+- Libcloud: the supplied setup log cannot install `codecov==2.1.10` from the
+  package index. The pinned upstream `tox.ini` invokes this coverage uploader
+  only after coverage execution; FlakeXplain invokes pytest directly.
+  Explicitly exclude `codecov` from the effective snapshot, preserving all
+  other pins and the original author snapshot. The exclusion and reason are
+  recorded in `snapshot_exclusions` in the fingerprinted setup recipe, and
+  effective requirements are archived. This is a tooling-corrected environment;
+  successful installation and a complete passing baseline await fresh CI
+  verification. No upstream tests or baseline criteria are changed.
 - FlexGet: the 2026-10-09 baseline failed at
   `flexget/tests/test_urlrewriting.py::TestURLRewriters::test_rutracker`
   because `api.t-ru.org` did not resolve and its cassette is absent at the pinned
