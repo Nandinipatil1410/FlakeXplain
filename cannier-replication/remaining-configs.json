@@ -363,6 +363,9 @@
       "Cython==0.29.24"
     ],
     "snapshot_path": "cannier-replication/subjects/mitmproxy/requirements.txt",
+    "pytest_env": {
+      "PYTHONINTMAXSTRDIGITS": "0"
+    },
     "verify_pkgs": [
       "mitmproxy",
       "pytest",

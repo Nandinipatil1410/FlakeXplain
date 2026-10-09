@@ -160,6 +160,23 @@ class RemainingSubjectTests(unittest.TestCase):
             self.assertEqual(runtime.pytest_env(Path("cirq"))["PKG_CONFIG_PATH"],
                              "/runner/python/lib/pkgconfig")
 
+    def test_mitmproxy_large_integer_conversion_is_enabled_only_for_subject(self):
+        if not hasattr(sys, "get_int_max_str_digits"):
+            self.skipTest("Interpreter predates the integer-string conversion limit")
+        probe = [sys.executable, "-c",
+                 "import math; n = math.factorial(30000); s = str(n).encode(); "
+                 "assert int(s) == n; print(len(s))"]
+        with patch.dict(os.environ, {"PYTHONINTMAXSTRDIGITS": "4300"}):
+            broken = subprocess.run(probe, env=os.environ.copy(), capture_output=True, text=True)
+            self.assertNotEqual(broken.returncode, 0)
+            self.assertIn("integer string conversion", broken.stderr)
+            fixed = subprocess.run(probe, env=runtime.pytest_env(Path("mitmproxy")),
+                                   capture_output=True, text=True)
+            self.assertEqual(fixed.returncode, 0, fixed.stderr)
+            self.assertGreater(int(fixed.stdout.strip()), 4300)
+            self.assertEqual(os.environ["PYTHONINTMAXSTRDIGITS"], "4300")
+            self.assertEqual(runtime.pytest_env(Path("cirq"))["PYTHONINTMAXSTRDIGITS"], "4300")
+
     def test_airflow_requests_upstream_database_reset_for_each_pytest_process(self):
         self.assertEqual(runtime.pytest_args("airflow"), ["tests", "--with-db-init"])
 

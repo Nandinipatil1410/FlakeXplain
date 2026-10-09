@@ -338,6 +338,17 @@ provenance and evidence; it would not repair the untouched historical experiment
 
 ### Implemented setup corrections
 
+- Mitmproxy: the supplied baseline fails `Test_Format.test_roundtrip_big_integer`
+  when converting `math.factorial(30000)` to decimal bytes. Python 3.8.18
+  enforces an integer-string conversion limit of 4300 digits by default, unlike
+  the older environment targeted by this test. Implemented: set
+  `PYTHONINTMAXSTRDIGITS=0` only for mitmproxy's baseline and detection
+  subprocesses, restoring the earlier unlimited conversion behavior for this
+  experiment. The setting is recorded in the fingerprinted recipe. The original
+  source and tests remain unchanged. A subprocess regression checks failure
+  with the default limit, successful large-integer roundtrip with the correction,
+  and isolation from the parent environment and other subjects. Full historical
+  baseline verification still requires a fresh CI job.
 - Libcloud: the supplied setup log cannot install `codecov==2.1.10` from the
   package index. The pinned upstream `tox.ini` invokes this coverage uploader
   only after coverage execution; FlakeXplain invokes pytest directly.
