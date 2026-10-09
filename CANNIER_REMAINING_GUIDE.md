@@ -373,6 +373,23 @@ provenance and evidence; it would not repair the untouched historical experiment
   leaves that hook undiscoverable. The installation is logged and included in
   the recipe/environment fingerprint. No upstream tests are changed or excluded.
   Full baseline validation requires a fresh GitHub Actions job.
+- Hypothesis lazy-import follow-up: the upstream test starts a nested pytest
+  process. The outer `-p no:randomly` flag is not inherited, so the nested
+  process autoloads `pytest-randomly==3.5.0`, which imports NumPy and breaks
+  `test_no_numpy_import`. Implemented: the Hypothesis recipe sets
+  `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1` and explicitly retains its historical
+  plugin through `PYTEST_PLUGINS=hypothesis.extra.pytestplugin`. Both settings
+  reach nested pytest processes; `PYTEST_ADDOPTS` would not work because the
+  pytester fixture clears it. Detection explicitly loads `-p randomly` for
+  outer random-order rounds, preserving seeded reordering while nested pytest
+  stays isolated. Original and reverse rounds retain their existing flags.
+  No upstream tests are edited or excluded, and these environment settings are
+  recorded in the fingerprinted recipe. Empirically verified locally: the
+  exact pinned upstream lazy-import test fails before this correction and
+  passes afterward, including with a randomized outer run, using pytest 6.2.4,
+  pytest-randomly 3.5.0 and Hypothesis 6.14.5 on Windows/Python 3.11.9 with
+  NumPy 1.24.4. The complete Linux/Python 3.8 baseline with snapshot NumPy 1.21.1
+  still requires fresh CI verification.
 - Celery: add argparse==1.4.0 to satisfy unittest2's declared dependency.
 - Conan: replace six==1.16.0 with six==1.15.0 to satisfy the pinned Conan release.
 - Subjects whose snapshots include Black: bootstrap setuptools-scm==5.0.2,

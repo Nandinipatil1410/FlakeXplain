@@ -83,7 +83,9 @@ def run_idflakies_suite(
             f"--junitxml={xml}",
         ]
         if config == "random-order":
-            cmd += [f"--randomly-seed={seed}"]
+            # Explicitly load the reordering plugin for the outer round only.
+            # Nested pytest processes must not inherit its NumPy-importing plugin.
+            cmd += ["-p", "randomly", f"--randomly-seed={seed}"]
         else:
             cmd += ["-p", "no:randomly"]
         if config == "reverse-order":

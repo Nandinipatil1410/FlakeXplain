@@ -291,6 +291,10 @@
       "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/hypothesis/requirements.txt",
+    "pytest_env": {
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "PYTEST_PLUGINS": "hypothesis.extra.pytestplugin"
+    },
     "verify_pkgs": [
       "hypothesis",
       "pytest",

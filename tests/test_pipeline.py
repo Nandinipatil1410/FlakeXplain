@@ -2,6 +2,7 @@
 from __future__ import annotations
 import contextlib
 import io
+import subprocess
 from pathlib import Path
 import sys
 import tempfile
@@ -143,6 +144,42 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(sum(row[0] == "random-order" for row in plan), 12)
         self.assertEqual(sum(row[0] == "reverse-order" for row in plan), 1)
         self.assertEqual(plan, list(runner.round_plan("filelock")))
+
+    def test_hypothesis_nested_pytest_stays_isolated_while_outer_round_is_randomized(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            repo = root / "hypothesis"
+            repo.mkdir()
+            calls = []
+
+            def fake(cmd, **kwargs):
+                calls.append((cmd, kwargs["env"]))
+                xml = Path(next(str(x).split("=", 1)[1] for x in cmd
+                                if str(x).startswith("--junitxml=")))
+                write_xml(xml)
+                return "", "", 0
+
+            state = dict(collected_count=2, xml_file="logs/baseline.xml")
+            with patch.object(runner, "REPOS_DIR", root), \
+                 patch.object(runner, "fingerprint", return_value={"id": "same"}), \
+                 patch.object(runner, "baseline_state", return_value=state), \
+                 patch.object(runner, "run_command", side_effect=fake), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                runner.run_idflakies_suite("hypothesis", orig_rounds=1, rand_rounds=1,
+                                          reverse_rounds=1)
+            self.assertEqual(len(calls), 3)
+            for index, (cmd, env) in enumerate(calls):
+                self.assertEqual(env["PYTEST_DISABLE_PLUGIN_AUTOLOAD"], "1")
+                self.assertEqual(env["PYTEST_PLUGINS"], "hypothesis.extra.pytestplugin")
+                plugins = [cmd[i + 1] for i, arg in enumerate(cmd[:-1]) if arg == "-p"]
+                self.assertIn("no:cov", plugins)
+                self.assertIn("randomly" if index == 1 else "no:randomly", plugins)
+                if index == 1:
+                    self.assertTrue(any(str(arg).startswith("--randomly-seed=") for arg in cmd))
+            child = subprocess.run(
+                [sys.executable, "-c", "import os; print(os.environ['PYTEST_DISABLE_PLUGIN_AUTOLOAD']); print(os.environ['PYTEST_PLUGINS'])"],
+                env=calls[1][1], capture_output=True, text=True, check=True)
+            self.assertEqual(child.stdout.splitlines(), ["1", "hypothesis.extra.pytestplugin"])
 
     def test_candidate_plan_supports_three_reverse_rounds(self):
         plan = list(runner.round_plan("ipython", reverse_rounds=3))
