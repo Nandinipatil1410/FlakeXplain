@@ -95,6 +95,20 @@ jobs:
           runuser -u cannier -- ssh -o BatchMode=yes -o StrictHostKeyChecking=yes root@localhost true
           runuser -u cannier -- ssh -o BatchMode=yes -o StrictHostKeyChecking=yes cannier@localhost true
           printf 'pwd\nquit\n' | runuser -u cannier -- sftp -b - root@localhost
+      - name: Prepare historical Conan CMake tool locations
+        if: inputs.subject == 'conan'
+        run: |
+          # These exact paths are selected by conans/test/conftest.py.
+          for version in 3.15.7 3.16.9 3.17.5 3.19.7; do
+            archive="cmake-${version}-Linux-x86_64.tar.gz"
+            download_dir=$(mktemp -d)
+            curl --fail --location --retry 3 "https://github.com/Kitware/CMake/releases/download/v${version}/${archive}" -o "$download_dir/$archive"
+            curl --fail --location --retry 3 "https://github.com/Kitware/CMake/releases/download/v${version}/cmake-${version}-SHA-256.txt" -o "$download_dir/checksums.txt"
+            (cd "$download_dir" && sha256sum --check --ignore-missing checksums.txt)
+            tar -xzf "$download_dir/$archive" -C /usr/share
+            ln -s "/usr/share/cmake-${version}-Linux-x86_64" "/usr/share/cmake-${version}"
+            runuser -u cannier -- "/usr/share/cmake-${version}/bin/cmake" --version
+          done
       - name: Run strict baseline gate
         if: inputs.mode == 'baseline-only'
         timeout-minutes: 300

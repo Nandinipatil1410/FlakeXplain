@@ -144,6 +144,17 @@ the environment fingerprint and evidence. This restores upstream CI fixture
 settings without changing subject tests or bypassing the gate; the corrected
 configuration test and complete baseline await CI verification.
 
+### Conan version-selected CMake tools
+
+Implemented: the shared executor also installs official Kitware CMake releases
+3.15.7, 3.16.9, 3.17.5, and 3.19.7 into the exact `/usr/share/cmake-<version>/bin`
+locations in the pinned `conans/test/conftest.py`. Downloads are checked against
+the release SHA-256 manifests, and each executable is checked as `cannier` before
+baseline execution. Conan's fixture prepends these locations for tests marked
+with the respective CMake series. This supplies all four versions requested by
+`tools_versions_test.py`; the earlier virtualenv-only 3.15.3 addition did not
+provision the explicit 3.16/3.17/3.19 locations. CI execution remains unverified.
+
 New artifacts are regular GitHub ZIP downloads containing repos/<pipeline-key>,
 provenance.json, system_packages.txt and checksums.json. There is no nested source
 archive. The packager includes only XML/JSON/Markdown/text/log evidence and metadata;
