@@ -132,6 +132,18 @@ login, so the executor now authorizes the job key for `cannier` as well as `root
 and preflights both logins. This additional correction is implemented but awaits
 CI verification; the complete Airflow baseline has not passed.
 
+The later supplied CI log reaches 1,924 passing tests, including the SSH tests,
+then fails `ConfTest.test_broker_transport_options` with missing
+`visibility_timeout`. Implemented: the subject recipe now supplies the four
+broker fixture values from the pinned upstream
+`scripts/in_container/airflow_ci.cfg` through pytest environment variables:
+visibility_timeout=21600, _test_only_bool=True, _test_only_float=12.0, and
+_test_only_string="this is a test". The shared environment builder applies these
+only to Airflow baseline and detection subprocesses. The recipe is included in
+the environment fingerprint and evidence. This restores upstream CI fixture
+settings without changing subject tests or bypassing the gate; the corrected
+configuration test and complete baseline await CI verification.
+
 New artifacts are regular GitHub ZIP downloads containing repos/<pipeline-key>,
 provenance.json, system_packages.txt and checksums.json. There is no nested source
 archive. The packager includes only XML/JSON/Markdown/text/log evidence and metadata;

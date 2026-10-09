@@ -87,6 +87,21 @@ class RemainingSubjectTests(unittest.TestCase):
             for part in ("tasks", "tests", "src", "."):
                 self.assertIn(str(repo / part), env["PYTHONPATH"].split(os.pathsep))
 
+    def test_airflow_broker_fixture_is_passed_to_child_only_for_airflow(self):
+        prefix = "AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS__"
+        expected = {"VISIBILITY_TIMEOUT": "21600", "_TEST_ONLY_BOOL": "True",
+                    "_TEST_ONLY_FLOAT": "12.0", "_TEST_ONLY_STRING": "this is a test"}
+        with patch.dict(os.environ, {}, clear=True), patch.object(runtime, "checked_output", return_value="[]"):
+            env = runtime.pytest_env(Path("airflow"))
+            probe = subprocess.run(
+                [sys.executable, "-c", "import os,json; print(json.dumps(dict(os.environ)))"],
+                env=env, capture_output=True, text=True, check=True)
+            child = json.loads(probe.stdout)
+            for name, value in expected.items():
+                self.assertEqual(child[prefix + name], value)
+                self.assertNotIn(prefix + name, os.environ)
+                self.assertNotIn(prefix + name, runtime.pytest_env(Path("cirq")))
+
     def test_missing_snapshot_override_is_rejected(self):
         config = dict(NEW_CANNIER_REPOS["conan"], snapshot_overrides={"nonexistent-package": "nonexistent-package==1"})
         with tempfile.TemporaryDirectory() as folder:
