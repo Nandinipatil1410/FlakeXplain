@@ -44,7 +44,8 @@ class RemainingSubjectTests(unittest.TestCase):
                                   ("cirq", "typing-extensions==3.10.0.2"),
                                   ("cirq", "typed-ast==1.4.3"), ("cirq", "filelock==3.4.1"),
                                   ("cirq", "matplotlib==3.5.2"),
-                                  ("conan", "cmake==3.15.3")]:
+                                  ("conan", "cmake==3.15.3"),
+                                  ("electrum", "pycryptodomex==3.10.1")]:
             config = NEW_CANNIER_REPOS[subject]
             original = setup_repos.BASE_DIR / config["snapshot_path"]
             before = original.read_bytes()

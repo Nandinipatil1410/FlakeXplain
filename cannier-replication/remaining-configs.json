@@ -184,8 +184,12 @@
       "Cython==0.29.24"
     ],
     "snapshot_path": "cannier-replication/subjects/electrum/requirements.txt",
+    "snapshot_additions": [
+      "pycryptodomex==3.10.1"
+    ],
     "verify_pkgs": [
       "electrum",
+      "pycryptodomex",
       "pytest",
       "pytest-randomly"
     ],

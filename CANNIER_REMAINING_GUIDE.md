@@ -86,6 +86,17 @@ changes, not claims of matching the paper's labels.
 
 ## Artifact import
 
+### Electrum crypto test prerequisite
+
+Implemented: add `pycryptodomex==3.10.1` to Electrum's effective requirements
+and required setup distributions, preserving the original author snapshot.
+The supplied CI log fails `test_pycryptodomex_is_available`; the pinned
+`electrum/crypto.py` imports `Cryptodome` and requires version 3.7 or newer.
+The snapshot includes `cryptography` but omits `pycryptodomex`. The selected pin
+also occurs in the vendored Prefect snapshot; it is an explicit environment
+correction, not a recovered Electrum author pin. Tests and the strict baseline
+gate remain unchanged. The corrected Electrum baseline awaits CI verification.
+
 ### Conan CMake prerequisite
 
 Implemented: add `cmake==3.15.3` to Conan's effective requirements, preserving the
