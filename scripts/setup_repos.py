@@ -396,6 +396,9 @@ def install_cannier_snapshot(python, repo, config):
         import shutil
         shutil.copyfile(repo / source, repo / destination)
     prepare_test_fixtures(repo, config)
+    if config.get("git_test_fixtures"):
+        from git_test_fixtures import prepare_git_test_fixtures
+        prepare_git_test_fixtures(repo, config)
     if config.get("dataset_revision"):
         from prepare_skimage_data import prepare_skimage_data
         prepare_skimage_data(repo, config)
@@ -447,6 +450,9 @@ def setup_repo(repo_name, config, refresh=False):
     if python.exists() and not refresh:
         current = fingerprint(repo)
         if state.get("environment_id") == current["id"]:
+            if config.get("git_test_fixtures"):
+                from git_test_fixtures import prepare_git_test_fixtures
+                prepare_git_test_fixtures(repo, config)
             if config.get("dataset_revision"):
                 from prepare_skimage_data import prepare_skimage_data
                 prepare_skimage_data(repo, config)

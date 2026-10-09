@@ -602,12 +602,20 @@
       "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/setuptools/requirements.txt",
+    "git_test_fixtures": [
+      {
+        "name": "sampleproject",
+        "url": "https://github.com/pypa/sampleproject",
+        "commit": "90d44abe361688aba5a189e661423863b34f5208",
+        "note": "Historical sample project for unmodified test_editable_prefix; current upstream uses incompatible modern packaging metadata."
+      }
+    ],
     "verify_pkgs": [
       "setuptools",
       "pytest",
       "pytest-randomly"
     ],
-    "pytest_args": [],
+    "pytest_args": ["-n", "0"],
     "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
   },
   "sunpy": {

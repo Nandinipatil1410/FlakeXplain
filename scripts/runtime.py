@@ -79,6 +79,9 @@ def pytest_env(repo):
         env.pop(name, None)
     # Explicit subject CI fixture values are recorded in the fingerprinted recipe.
     env.update(NEW_CANNIER_REPOS.get(repo.name, {}).get("pytest_env", {}))
+    if NEW_CANNIER_REPOS.get(repo.name, {}).get("git_test_fixtures"):
+        from git_test_fixtures import git_test_fixture_env
+        git_test_fixture_env(repo, NEW_CANNIER_REPOS[repo.name], env)
     env["PYTHONUNBUFFERED"] = "1"
     # Tests may launch installed console scripts (e.g. fonttools) by name.
     # Using the venv Python alone does not make those scripts discoverable.

@@ -20,9 +20,42 @@ import parse_results
 from cannier_subjects import NEW_CANNIER_REPOS
 from package_cannier_evidence import package
 import prepare_skimage_data
+from git_test_fixtures import prepare_git_test_fixtures, git_test_fixture_env
 
 
 class RemainingSubjectTests(unittest.TestCase):
+    def test_external_git_fixture_clones_pinned_revision_without_global_changes(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            source = root / "upstream"
+            source.mkdir()
+            def git(*args, cwd=source, env=None):
+                return subprocess.check_output(["git", *args], cwd=cwd, env=env,
+                                               text=True, stderr=subprocess.STDOUT).strip()
+            git("init")
+            (source / "setup.py").write_text("historical version")
+            git("add", "setup.py")
+            git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                "commit", "-m", "Historical fixture")
+            historical = git("rev-parse", "HEAD")
+            (source / "setup.py").write_text("changed version")
+            git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                "commit", "-am", "Changed upstream")
+            repo = root / "subject"
+            repo.mkdir()
+            fixture = dict(name="sampleproject", url=source.as_uri(), commit=historical)
+            config = dict(git_test_fixtures=[fixture])
+            prepare_git_test_fixtures(repo, config)
+            prepare_git_test_fixtures(repo, config)
+            env = git_test_fixture_env(repo, config, os.environ.copy())
+            git("clone", source.as_uri(), str(root / "clone"), cwd=root, env=env)
+            self.assertEqual(git("rev-parse", "HEAD", cwd=root / "clone"), historical)
+            self.assertEqual((root / "clone/setup.py").read_text(), "historical version")
+            self.assertNotEqual(git("rev-parse", "HEAD"), historical)
+            self.assertEqual(json.loads((repo / "logs/git_test_fixture_provenance.json").read_text()),
+                             [fixture])
+        self.assertEqual(runtime.pytest_args("setuptools"), ["-n", "0"])
+
     def test_skimage_data_is_pinned_verified_and_reusable_offline(self):
         config = NEW_CANNIER_REPOS["scikit_image"]
         payload = b"authentic dataset bytes"
