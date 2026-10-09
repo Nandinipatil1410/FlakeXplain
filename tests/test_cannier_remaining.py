@@ -1,5 +1,6 @@
 """Checks for pinned setup failures and evidence packaging; no subject experiments."""
 import hashlib
+import io
 import json
 import os
 import runpy
@@ -18,9 +19,53 @@ import runtime
 import parse_results
 from cannier_subjects import NEW_CANNIER_REPOS
 from package_cannier_evidence import package
+import prepare_skimage_data
 
 
 class RemainingSubjectTests(unittest.TestCase):
+    def test_skimage_data_is_pinned_verified_and_reusable_offline(self):
+        config = NEW_CANNIER_REPOS["scikit_image"]
+        payload = b"authentic dataset bytes"
+        expected = hashlib.sha256(payload).hexdigest()
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder)
+            registry = repo / "skimage/data/_registry.py"
+            registry.parent.mkdir(parents=True)
+            registry.write_text("registry = " + repr({"data/eagle.png": expected})
+                                + "\nregistry_urls = " + repr({"data/eagle.png":
+                                "https://gitlab.com/scikit-image/data/-/raw/master/eagle.png"}))
+            with patch.object(prepare_skimage_data, "urlopen", return_value=io.BytesIO(payload)) as fetch:
+                prepare_skimage_data.prepare_skimage_data(repo, config)
+                self.assertIn("/repository/files/eagle.png/raw?ref=" + config["dataset_revision"],
+                              fetch.call_args.args[0])
+            with patch.object(prepare_skimage_data, "urlopen", side_effect=AssertionError("network")):
+                prepare_skimage_data.prepare_skimage_data(repo, config)
+            target = repo / "skimage/data/eagle.png"
+            self.assertEqual(target.read_bytes(), payload)
+            evidence = json.loads((repo / "logs/dataset_provenance.json").read_text())
+            self.assertEqual(evidence["files"][0]["sha256"], expected)
+            target.unlink()
+            with patch.object(prepare_skimage_data, "urlopen", side_effect=lambda *a, **kw: io.BytesIO(b"wrong")), \
+                    patch.object(prepare_skimage_data.time, "sleep"):
+                with self.assertRaisesRegex(RuntimeError, "Downloaded dataset checksum mismatch"):
+                    prepare_skimage_data.prepare_skimage_data(repo, config)
+            self.assertFalse(target.exists())
+            self.assertEqual(list(target.parent.iterdir()), [registry])
+
+    def test_skimage_setup_prepares_all_datasets_before_success(self):
+        config = NEW_CANNIER_REPOS["scikit_image"]
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder)
+            with patch.object(setup_repos, "run_command", return_value=("", "", 0)), \
+                    patch.object(prepare_skimage_data, "prepare_skimage_data") as prepare:
+                self.assertEqual(setup_repos.install_cannier_snapshot(Path("python"), repo, config), 0)
+                prepare.assert_called_once_with(repo, config)
+            with patch.object(setup_repos, "run_command", return_value=("", "", 0)), \
+                    patch.object(prepare_skimage_data, "prepare_skimage_data",
+                                 side_effect=RuntimeError("dataset unavailable")):
+                with self.assertRaisesRegex(RuntimeError, "dataset unavailable"):
+                    setup_repos.install_cannier_snapshot(Path("python"), repo, config)
+
     def test_remaining_coverage_matches_the_published_inventory(self):
         root = Path(__file__).resolve().parents[1]
         inventory = json.loads((root / "cannier-replication/inventory.json").read_text(encoding="utf-8-sig"))

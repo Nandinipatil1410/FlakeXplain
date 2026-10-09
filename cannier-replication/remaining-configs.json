@@ -542,6 +542,7 @@
       "Cython==0.29.24"
     ],
     "snapshot_path": "cannier-replication/subjects/scikit-image/requirements.txt",
+    "dataset_revision": "f7d93a21a2642aa9ea3b6e40d3c2638fc2e40cf1",
     "verify_pkgs": [
       "scikit-image",
       "pytest",
