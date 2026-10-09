@@ -97,6 +97,13 @@ baseline gate rules are unchanged. The supplied failed baseline logs show
 `localhost:22` connection refusal; this service setup has not yet been verified
 in a new GitHub Actions Airflow baseline. Rerun baseline-only before full mode.
 
+The subsequent supplied CI log empirically verifies that the SFTP tests pass,
+but stops at `SSHHookTest.test_ssh_connection` with public-key authentication
+failure. The pinned SSHHook uses `getpass.getuser()` when `ssh_default` has no
+login, so the executor now authorizes the job key for `cannier` as well as `root`
+and preflights both logins. This additional correction is implemented but awaits
+CI verification; the complete Airflow baseline has not passed.
+
 New artifacts are regular GitHub ZIP downloads containing repos/<pipeline-key>,
 provenance.json, system_packages.txt and checksums.json. There is no nested source
 archive. The packager includes only XML/JSON/Markdown/text/log evidence and metadata;

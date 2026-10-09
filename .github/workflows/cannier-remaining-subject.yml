@@ -68,6 +68,8 @@ jobs:
           # The pinned tests explicitly set sftp_default.login to root.
           # Give only this disposable job's experiment user a root test key.
           runuser -u cannier -- ssh-keygen -t rsa -b 2048 -m PEM -N '' -f /home/cannier/.ssh/id_rsa
+          # ssh_default has no login; SSHHook falls back to getpass.getuser().
+          install -m 0600 -o cannier -g cannier /home/cannier/.ssh/id_rsa.pub /home/cannier/.ssh/authorized_keys
           install -d -m 0700 /root/.ssh
           install -m 0600 /home/cannier/.ssh/id_rsa.pub /root/.ssh/authorized_keys
           ssh-keygen -A
@@ -91,6 +93,7 @@ jobs:
           chown cannier:cannier /home/cannier/.ssh/known_hosts
           chmod 0600 /home/cannier/.ssh/known_hosts
           runuser -u cannier -- ssh -o BatchMode=yes -o StrictHostKeyChecking=yes root@localhost true
+          runuser -u cannier -- ssh -o BatchMode=yes -o StrictHostKeyChecking=yes cannier@localhost true
           printf 'pwd\nquit\n' | runuser -u cannier -- sftp -b - root@localhost
       - name: Run strict baseline gate
         if: inputs.mode == 'baseline-only'
