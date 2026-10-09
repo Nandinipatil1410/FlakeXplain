@@ -36,6 +36,31 @@ class RemainingSubjectTests(unittest.TestCase):
         self.assertEqual(run.call_count, 1)
         self.assertIn("--no-deps", run.call_args.args[0])
 
+    def test_explicit_snapshot_corrections_preserve_original_and_are_packaged(self):
+        for subject, expected in [("celery", "argparse==1.4.0"), ("conan", "six==1.15.0")]:
+            config = NEW_CANNIER_REPOS[subject]
+            original = setup_repos.BASE_DIR / config["snapshot_path"]
+            before = original.read_bytes()
+            with tempfile.TemporaryDirectory() as folder:
+                repo = Path(folder) / "repos" / subject
+                effective = setup_repos.cannier_requirements(repo, config)
+                text = effective.read_text()
+                self.assertIn(expected, text.splitlines())
+                if subject == "conan":
+                    self.assertNotIn("six==1.16.0", text.splitlines())
+                self.assertEqual(original.read_bytes(), before)
+                self.assertEqual(json.loads((repo / "cannier_setup_recipe.json").read_text()), config)
+                with patch("package_cannier_evidence.subprocess.check_output", return_value="packages"):
+                    package(subject, Path(folder), Path(folder) / "output")
+                self.assertTrue((Path(folder) / "output" / "repos" / subject / "logs" /
+                                 "effective-cannier-requirements.txt").exists())
+
+    def test_missing_snapshot_override_is_rejected(self):
+        config = dict(NEW_CANNIER_REPOS["conan"], snapshot_overrides={"nonexistent-package": "nonexistent-package==1"})
+        with tempfile.TemporaryDirectory() as folder:
+            with self.assertRaisesRegex(RuntimeError, "does not match"):
+                setup_repos.cannier_requirements(Path(folder), config)
+
     def test_packaging_preserves_evidence_but_excludes_source_and_binaries(self):
         with tempfile.TemporaryDirectory() as folder:
             work = Path(folder) / "work"

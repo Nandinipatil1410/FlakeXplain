@@ -15,7 +15,8 @@
       "pip==23.3.2",
       "setuptools==57.5.0",
       "wheel==0.37.1",
-      "Cython==0.29.24"
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/airflow/requirements.txt",
     "verify_pkgs": [
@@ -53,7 +54,10 @@
       "pytest-randomly"
     ],
     "pytest_args": [],
-    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
+    "snapshot_additions": [
+      "argparse==1.4.0"
+    ]
   },
   "cirq": {
     "url": "https://github.com/quantumlib/Cirq.git",
@@ -71,7 +75,8 @@
       "pip==23.3.2",
       "setuptools==57.5.0",
       "wheel==0.37.1",
-      "Cython==0.29.24"
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/Cirq/requirements.txt",
     "verify_pkgs": [
@@ -109,7 +114,10 @@
       "pytest-randomly"
     ],
     "pytest_args": [],
-    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
+    "snapshot_overrides": {
+      "six": "six==1.15.0"
+    }
   },
   "dask": {
     "url": "https://github.com/dask/dask.git",
@@ -181,7 +189,8 @@
       "pip==23.3.2",
       "setuptools==57.5.0",
       "wheel==0.37.1",
-      "Cython==0.29.24"
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/Flexget/requirements.txt",
     "verify_pkgs": [
@@ -208,7 +217,8 @@
       "pip==23.3.2",
       "setuptools==57.5.0",
       "wheel==0.37.1",
-      "Cython==0.29.24"
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/hydra/requirements.txt",
     "verify_pkgs": [
@@ -235,7 +245,8 @@
       "pip==23.3.2",
       "setuptools==57.5.0",
       "wheel==0.37.1",
-      "Cython==0.29.24"
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/hypothesis/requirements.txt",
     "verify_pkgs": [
@@ -351,7 +362,8 @@
       "pip==23.3.2",
       "setuptools==57.5.0",
       "wheel==0.37.1",
-      "Cython==0.29.24"
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/prefect/requirements.txt",
     "verify_pkgs": [
@@ -492,7 +504,8 @@
       "pip==23.3.2",
       "setuptools==57.5.0",
       "wheel==0.37.1",
-      "Cython==0.29.24"
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/setuptools/requirements.txt",
     "verify_pkgs": [
@@ -546,7 +559,8 @@
       "pip==23.3.2",
       "setuptools==57.5.0",
       "wheel==0.37.1",
-      "Cython==0.29.24"
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/xonsh/requirements.txt",
     "verify_pkgs": [

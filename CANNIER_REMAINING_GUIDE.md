@@ -184,3 +184,20 @@ plumbing. Develop using designated training projects while remaining baselines r
 keep evaluation projects unseen. More eligible, diverse projects improve the test
 of generalization, but running every candidate does not guarantee usable labels or
 publication. Improvements must be demonstrated by controlled experiments.
+
+
+## Explicit setup corrections after the first historical runs
+
+- Celery: add argparse==1.4.0 to satisfy unittest2's declared dependency.
+- Conan: replace six==1.16.0 with six==1.15.0 to satisfy the pinned Conan release.
+- Subjects whose snapshots include Black: bootstrap setuptools-scm==5.0.2,
+  required by Black's version metadata generation when build isolation is disabled.
+  Keep the original Black version. This addresses a missing build prerequisite;
+  verification on the GitHub runner is still required.
+
+Original author snapshots remain unchanged. Runtime corrections are explicit in
+remaining-configs.json, and effective requirements are recorded under each
+corrected project's logs/effective-cannier-requirements.txt and copied into its
+artifact. Recipes/snapshot digest remain bound to the environment identity.
+The strict pip check and baseline gate remain in force. Retry the failed subjects
+with baseline-only in new jobs after pushing these changes. Do not mix attempts.

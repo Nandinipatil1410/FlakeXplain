@@ -313,9 +313,35 @@ def lockfile_constraints(repo, lock_name):
     return constraints
 
 
+def cannier_requirements(repo, config):
+    """Apply explicit environment corrections while preserving the author snapshot."""
+    original = BASE_DIR / config["snapshot_path"]
+    overrides = config.get("snapshot_overrides", {})
+    additions = config.get("snapshot_additions", [])
+    if not overrides and not additions:
+        return original
+    effective = []
+    seen = set()
+    for line in original.read_text(encoding="utf-8").splitlines():
+        name = line.split("==", 1)[0].lower().replace("_", "-")
+        if name in overrides:
+            effective.append(overrides[name])
+            seen.add(name)
+        else:
+            effective.append(line)
+    if seen != set(overrides):
+        raise RuntimeError("Snapshot override does not match an original pin")
+    effective.extend(additions)
+    target = repo / "logs" / "effective-cannier-requirements.txt"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text("\n".join(effective) + "\n", encoding="utf-8")
+    atomic_json(repo / "cannier_setup_recipe.json", config)
+    return target
+
+
 def install_cannier_snapshot(python, repo, config):
     """Restore recorded pins without silently resolving newer transitive versions."""
-    requirements = BASE_DIR / config["snapshot_path"]
+    requirements = cannier_requirements(repo, config)
     commands = [
         ([str(python), "-m", "pip", "install", "--no-deps", "--no-build-isolation",
           "-r", str(requirements)], "setup-snapshot.log"),
