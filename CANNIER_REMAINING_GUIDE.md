@@ -166,6 +166,14 @@ with the respective CMake series. This supplies all four versions requested by
 `tools_versions_test.py`; the earlier virtualenv-only 3.15.3 addition did not
 provision the explicit 3.16/3.17/3.19 locations. CI execution remains unverified.
 
+The subsequent supplied Conan CI log fails `AutoToolsConfigureTest.test_pkg_config_paths`
+because GitHub's Python setup exports `PKG_CONFIG_PATH` pointing to its Python
+installation. Implemented: Conan's recipe explicitly removes this inherited
+variable from baseline and detection subprocesses. The test expects no
+PKG_CONFIG_PATH when no package configuration paths were provided. The parent
+environment and other subjects are unaffected; the removal is recorded in the
+fingerprinted recipe. This correction awaits a new Conan CI baseline.
+
 New artifacts are regular GitHub ZIP downloads containing repos/<pipeline-key>,
 provenance.json, system_packages.txt and checksums.json. There is no nested source
 archive. The packager includes only XML/JSON/Markdown/text/log evidence and metadata;

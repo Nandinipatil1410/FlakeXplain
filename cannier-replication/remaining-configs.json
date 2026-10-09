@@ -124,6 +124,9 @@
       "Cython==0.29.24"
     ],
     "snapshot_path": "cannier-replication/subjects/conan/requirements.txt",
+    "pytest_unset_env": [
+      "PKG_CONFIG_PATH"
+    ],
     "snapshot_additions": [
       "cmake==3.15.3"
     ],

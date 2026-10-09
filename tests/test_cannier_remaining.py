@@ -103,6 +103,17 @@ class RemainingSubjectTests(unittest.TestCase):
                 self.assertNotIn(prefix + name, os.environ)
                 self.assertNotIn(prefix + name, runtime.pytest_env(Path("cirq")))
 
+    def test_conan_does_not_inherit_runner_pkg_config_path(self):
+        with patch.dict(os.environ, {"PKG_CONFIG_PATH": "/runner/python/lib/pkgconfig"}):
+            env = runtime.pytest_env(Path("conan"))
+            probe = subprocess.run(
+                [sys.executable, "-c", "import os; print('PKG_CONFIG_PATH' in os.environ)"],
+                env=env, capture_output=True, text=True, check=True)
+            self.assertEqual(probe.stdout.strip(), "False")
+            self.assertEqual(os.environ["PKG_CONFIG_PATH"], "/runner/python/lib/pkgconfig")
+            self.assertEqual(runtime.pytest_env(Path("cirq"))["PKG_CONFIG_PATH"],
+                             "/runner/python/lib/pkgconfig")
+
     def test_missing_snapshot_override_is_rejected(self):
         config = dict(NEW_CANNIER_REPOS["conan"], snapshot_overrides={"nonexistent-package": "nonexistent-package==1"})
         with tempfile.TemporaryDirectory() as folder:
