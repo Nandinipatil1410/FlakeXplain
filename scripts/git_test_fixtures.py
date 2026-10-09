@@ -1,5 +1,6 @@
 """Pin external repositories cloned by unmodified historical subject tests."""
 from pathlib import Path
+import shlex
 
 from runtime import atomic_json, checked_output
 
@@ -27,12 +28,13 @@ def prepare_git_test_fixtures(repo, config):
 
 def git_test_fixture_env(repo, config, env):
     """Redirect only configured clone URLs, without changing global Git config."""
-    index = int(env.get("GIT_CONFIG_COUNT", "0"))
+    parameters = env.get("GIT_CONFIG_PARAMETERS", "")
     for fixture in config.get("git_test_fixtures", []):
         target = fixture_path(repo, fixture).resolve()
-        env["GIT_CONFIG_KEY_" + str(index)] = "url." + target.as_uri() + ".insteadOf"
-        env["GIT_CONFIG_VALUE_" + str(index)] = fixture["url"]
-        index += 1
+        # Git 2.25 in Ubuntu 20.04 predates GIT_CONFIG_COUNT. This is the
+        # inherited configuration format used by `git -c` in that version.
+        parameter = "url." + target.as_uri() + ".insteadOf=" + fixture["url"]
+        parameters += " " + shlex.quote(parameter)
     if config.get("git_test_fixtures"):
-        env["GIT_CONFIG_COUNT"] = str(index)
+        env["GIT_CONFIG_PARAMETERS"] = parameters.strip()
     return env
