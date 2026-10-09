@@ -1,6 +1,8 @@
 """Checks for pinned setup failures and evidence packaging; no subject experiments."""
 import hashlib
 import json
+import os
+import subprocess
 from pathlib import Path
 import sys
 import tempfile
@@ -54,6 +56,30 @@ class RemainingSubjectTests(unittest.TestCase):
                     package(subject, Path(folder), Path(folder) / "output")
                 self.assertTrue((Path(folder) / "output" / "repos" / subject / "logs" /
                                  "effective-cannier-requirements.txt").exists())
+
+    def test_airflow_imports_installed_sdk_instead_of_test_package(self):
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder) / "airflow"
+            test_package = repo / "tests/kubernetes"
+            sdk = repo / "installed/kubernetes"
+            test_package.mkdir(parents=True)
+            sdk.mkdir(parents=True)
+            (test_package / "__init__.py").write_text("")
+            (sdk / "__init__.py").write_text("")
+            (sdk / "client.py").write_text("MARKER = 'installed-sdk'")
+            probe = [sys.executable, "-c", "import kubernetes.client; print(kubernetes.client.MARKER)"]
+            env = os.environ.copy()
+            env["PYTHONPATH"] = os.pathsep.join([str(repo / "tests"), str(sdk.parent)])
+            broken = subprocess.run(probe, cwd=repo, env=env, capture_output=True, text=True)
+            self.assertNotEqual(broken.returncode, 0)
+            self.assertIn("No module named 'kubernetes.client'", broken.stderr)
+            with patch.object(runtime, "checked_output", return_value=json.dumps([str(sdk.parent)])):
+                env = runtime.pytest_env(repo)
+            fixed = subprocess.run(probe, cwd=repo, env=env, capture_output=True, text=True)
+            self.assertEqual(fixed.returncode, 0, fixed.stderr)
+            self.assertEqual(fixed.stdout.strip(), "installed-sdk")
+            for part in ("tasks", "tests", "src", "."):
+                self.assertIn(str(repo / part), env["PYTHONPATH"].split(os.pathsep))
 
     def test_missing_snapshot_override_is_rejected(self):
         config = dict(NEW_CANNIER_REPOS["conan"], snapshot_overrides={"nonexistent-package": "nonexistent-package==1"})

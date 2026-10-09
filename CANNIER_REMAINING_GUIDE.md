@@ -217,3 +217,5 @@ skipped. Retry failed baselines in fresh jobs; never mix root/non-root evidence.
 Airflow also adds argparse==1.4.0 to satisfy snakebite-py3 3.0.5 metadata.
 Its original snapshot is preserved and its effective requirements are archived
 with the artifact. Retry baseline-only in a fresh job; the baseline remains unverified.
+
+Airflow import precedence: its `tests/kubernetes` package shadows the installed Kubernetes SDK when `tests` leads `PYTHONPATH`. The Airflow recipe now puts its virtual environment site-packages first, retaining tasks/tests/src/root paths. This applies consistently to baseline and reordered execution and is recorded in the recipe fingerprint. No tests are excluded. A subprocess regression check reproduces the collision and verifies SDK resolution; full Airflow execution still requires GitHub Actions validation.

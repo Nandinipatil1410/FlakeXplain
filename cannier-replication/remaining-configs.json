@@ -30,7 +30,8 @@
     "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
     "snapshot_additions": [
       "argparse==1.4.0"
-    ]
+    ],
+    "pytest_site_packages_first": true
   },
   "celery": {
     "url": "https://github.com/celery/celery.git",

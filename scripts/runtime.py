@@ -81,10 +81,17 @@ def pytest_env(repo):
     env["PATH"] = os.pathsep.join(
         [str(python_for(repo).parent.resolve()), env.get("PATH", "")]
     )
-    env["PYTHONPATH"] = os.pathsep.join(
-        [str(repo / part) for part in ("tasks", "tests", "src", ".")]
-        + [env.get("PYTHONPATH", "")]
-    )
+    import_paths = [str(repo / part) for part in ("tasks", "tests", "src", ".")]
+    if NEW_CANNIER_REPOS.get(repo.name, {}).get("pytest_site_packages_first"):
+        # Airflow tests/kubernetes is a test package, not the installed SDK.
+        # Keep the required source paths while resolving installed packages first.
+        site_paths = json.loads(checked_output([
+            python_for(repo), "-c",
+            "import json, sysconfig; p = sysconfig.get_paths(); "
+            "print(json.dumps(list(dict.fromkeys([p['purelib'], p['platlib']]))))",
+        ], repo))
+        import_paths = site_paths + import_paths
+    env["PYTHONPATH"] = os.pathsep.join(import_paths + [env.get("PYTHONPATH", "")])
     if repo.name == "urllib3":
         env["PYTHONWARNINGS"] = "always::FutureWarning"
     return env
