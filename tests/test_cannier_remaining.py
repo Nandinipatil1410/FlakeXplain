@@ -115,6 +115,9 @@ class RemainingSubjectTests(unittest.TestCase):
             self.assertEqual(runtime.pytest_env(Path("cirq"))["PKG_CONFIG_PATH"],
                              "/runner/python/lib/pkgconfig")
 
+    def test_airflow_requests_upstream_database_reset_for_each_pytest_process(self):
+        self.assertEqual(runtime.pytest_args("airflow"), ["tests", "--with-db-init"])
+
     def test_missing_snapshot_override_is_rejected(self):
         config = dict(NEW_CANNIER_REPOS["conan"], snapshot_overrides={"nonexistent-package": "nonexistent-package==1"})
         with tempfile.TemporaryDirectory() as folder:

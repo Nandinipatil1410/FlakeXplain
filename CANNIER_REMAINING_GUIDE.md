@@ -163,6 +163,17 @@ the environment fingerprint and evidence. This restores upstream CI fixture
 settings without changing subject tests or bypassing the gate; the corrected
 configuration test and complete baseline await CI verification.
 
+The latest supplied Airflow retry fails `TestLocalClient.test_trigger_dag`:
+`example_bash_operator` loads from source but is absent from DagModel. The pinned
+session fixture skips resetting the database when `~/.airflow_db_initialised`
+exists, so failed attempts can leave database changes for later processes.
+Implemented: pass the upstream `--with-db-init` option on each baseline attempt
+and detection round. This requests the existing upstream reset procedure before
+each complete suite; it does not reset state between individual tests, so
+within-suite order dependence remains observable. The missing record is verified
+by the supplied traceback; attribution to retained database state and resolution
+by this correction await CI verification. Retain all earlier attempt logs.
+
 ### Conan version-selected CMake tools
 
 Implemented: the shared executor also installs official Kitware CMake releases

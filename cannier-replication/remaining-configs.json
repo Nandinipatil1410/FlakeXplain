@@ -25,7 +25,8 @@
       "pytest-randomly"
     ],
     "pytest_args": [
-      "tests"
+      "tests",
+      "--with-db-init"
     ],
     "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
     "snapshot_additions": [
