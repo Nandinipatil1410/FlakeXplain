@@ -134,6 +134,9 @@ jobs:
       - name: Prepare historical Conan CMake tool locations
         if: inputs.subject == 'conan'
         run: |
+          # The editable CMake layout tests explicitly use the Ninja generator.
+          apt-get install -y ninja-build
+          runuser -u cannier -- ninja --version
           # These exact paths are selected by conans/test/conftest.py.
           for version in 3.15.7 3.16.9 3.17.5 3.19.7; do
             archive="cmake-${version}-Linux-x86_64.tar.gz"
