@@ -602,6 +602,7 @@
       "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/setuptools/requirements.txt",
+    "prepare_egg_info": true,
     "git_test_fixtures": [
       {
         "name": "sampleproject",

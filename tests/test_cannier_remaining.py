@@ -24,6 +24,16 @@ from git_test_fixtures import prepare_git_test_fixtures, git_test_fixture_env
 
 
 class RemainingSubjectTests(unittest.TestCase):
+    def test_setuptools_prepares_metadata_before_replacing_itself(self):
+        config = NEW_CANNIER_REPOS["setuptools"]
+        with tempfile.TemporaryDirectory() as folder, \
+                patch.object(setup_repos, "run_command", return_value=("", "", 0)) as run, \
+                patch("git_test_fixtures.prepare_git_test_fixtures"):
+            setup_repos.install_cannier_snapshot(Path("python"), Path(folder), config)
+        commands = [call.args[0] for call in run.call_args_list]
+        self.assertEqual(commands[1], ["python", "setup.py", "egg_info"])
+        self.assertEqual(commands[2][-2:], ["-e", "."])
+
     def test_external_git_fixture_clones_pinned_revision_without_global_changes(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

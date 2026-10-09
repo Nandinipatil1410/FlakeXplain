@@ -379,6 +379,10 @@ def install_cannier_snapshot(python, repo, config):
          "setup-randomly.log"),
     ]
     # Some upstream tests rely on entry points from auxiliary source packages.
+    if config.get("prepare_egg_info"):
+        # Setuptools installs itself: keep checkout metadata available while
+        # pip temporarily removes the bootstrap distribution's metadata.
+        commands.insert(1, ([str(python), "setup.py", "egg_info"], "setup-egg-info.log"))
     # Editable installs also expose example modules omitted from wheel metadata.
     for target in config.get("editable_test_targets", []):
         commands.append((
