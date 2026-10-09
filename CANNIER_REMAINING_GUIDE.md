@@ -86,6 +86,17 @@ changes, not claims of matching the paper's labels.
 
 ## Artifact import
 
+### Airflow localhost SFTP prerequisite
+
+Implemented: the shared executor starts a loopback-only OpenSSH server for Airflow,
+with a temporary job-local RSA key for the unprivileged `cannier` test process to
+authenticate as `root`, as required by the pinned SFTP tests. Password authentication
+is disabled; the server host key is recorded in `cannier`'s known_hosts. SSH and
+SFTP authentication are checked before the pipeline starts. Subject source and
+baseline gate rules are unchanged. The supplied failed baseline logs show
+`localhost:22` connection refusal; this service setup has not yet been verified
+in a new GitHub Actions Airflow baseline. Rerun baseline-only before full mode.
+
 New artifacts are regular GitHub ZIP downloads containing repos/<pipeline-key>,
 provenance.json, system_packages.txt and checksums.json. There is no nested source
 archive. The packager includes only XML/JSON/Markdown/text/log evidence and metadata;

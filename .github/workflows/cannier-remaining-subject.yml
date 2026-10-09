@@ -59,6 +59,39 @@ jobs:
           mkdir -p "$FLAKEXPLAIN_WORK"
           chown -R cannier:cannier "$GITHUB_WORKSPACE" "$FLAKEXPLAIN_WORK"
           runuser -u cannier -- id
+      - name: Prepare localhost SSH and SFTP for historical Airflow tests
+        if: inputs.subject == 'airflow'
+        run: |
+          apt-get install -y openssh-server openssh-client
+          install -d -m 0755 /run/sshd
+          install -d -m 0700 -o cannier -g cannier /home/cannier/.ssh
+          # The pinned tests explicitly set sftp_default.login to root.
+          # Give only this disposable job's experiment user a root test key.
+          runuser -u cannier -- ssh-keygen -t rsa -b 2048 -m PEM -N '' -f /home/cannier/.ssh/id_rsa
+          install -d -m 0700 /root/.ssh
+          install -m 0600 /home/cannier/.ssh/id_rsa.pub /root/.ssh/authorized_keys
+          ssh-keygen -A
+          cat > /etc/ssh/sshd_config_flakexplain <<'EOF'
+          Port 22
+          ListenAddress 127.0.0.1
+          ListenAddress ::1
+          HostKey /etc/ssh/ssh_host_rsa_key
+          PermitRootLogin prohibit-password
+          PubkeyAuthentication yes
+          PasswordAuthentication no
+          KbdInteractiveAuthentication no
+          UsePAM yes
+          AuthorizedKeysFile .ssh/authorized_keys
+          Subsystem sftp internal-sftp
+          PidFile /run/sshd-flakexplain.pid
+          EOF
+          /usr/sbin/sshd -t -f /etc/ssh/sshd_config_flakexplain
+          /usr/sbin/sshd -f /etc/ssh/sshd_config_flakexplain
+          awk '{print "localhost,127.0.0.1,::1 " $1 " " $2}' /etc/ssh/ssh_host_rsa_key.pub > /home/cannier/.ssh/known_hosts
+          chown cannier:cannier /home/cannier/.ssh/known_hosts
+          chmod 0600 /home/cannier/.ssh/known_hosts
+          runuser -u cannier -- ssh -o BatchMode=yes -o StrictHostKeyChecking=yes root@localhost true
+          printf 'pwd\nquit\n' | runuser -u cannier -- sftp -b - root@localhost
       - name: Run strict baseline gate
         if: inputs.mode == 'baseline-only'
         timeout-minutes: 300
