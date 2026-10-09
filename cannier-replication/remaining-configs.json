@@ -27,7 +27,10 @@
     "pytest_args": [
       "tests"
     ],
-    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
+    "snapshot_additions": [
+      "argparse==1.4.0"
+    ]
   },
   "celery": {
     "url": "https://github.com/celery/celery.git",

@@ -213,3 +213,7 @@ baseline and detection as that user with its own HOME. System package installati
 and artifact packaging stay in the workflow's administrative context. New-subject
 environment identities include execution UID/GID. No source test is patched or
 skipped. Retry failed baselines in fresh jobs; never mix root/non-root evidence.
+
+Airflow also adds argparse==1.4.0 to satisfy snakebite-py3 3.0.5 metadata.
+Its original snapshot is preserved and its effective requirements are archived
+with the artifact. Retry baseline-only in a fresh job; the baseline remains unverified.
