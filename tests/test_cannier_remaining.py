@@ -2,11 +2,13 @@
 import hashlib
 import json
 import os
+import runpy
 import subprocess
 import sysconfig
 from pathlib import Path
 import sys
 import tempfile
+import types
 import unittest
 from unittest.mock import patch
 
@@ -226,6 +228,29 @@ class RemainingSubjectTests(unittest.TestCase):
             self.assertEqual((archived / "logs/effective-cannier-requirements.txt").read_bytes(),
                              effective.read_bytes())
             self.assertEqual(json.loads((archived / "cannier_setup_recipe.json").read_text()), config)
+
+    def test_salt_login_preflight_preserves_pipeline_arguments_and_rejects_bad_sessions(self):
+        fake_pwd = types.SimpleNamespace(getpwuid=lambda uid: types.SimpleNamespace(pw_name="cannier"))
+        script = setup_repos.BASE_DIR / "scripts/run_salt_session.py"
+        with patch.dict(sys.modules, {"pwd": fake_pwd}):
+            main = runpy.run_path(str(script))["main"]
+        self.assertEqual(runtime.pytest_args("salt"), ["tests/pytests/unit", "--capture=sys"])
+        for tty, login in [(False, "cannier"), (True, "root"), (True, "cannier")]:
+            with self.subTest(tty=tty, login=login), \
+                    patch.object(os, "geteuid", return_value=1001, create=True), \
+                    patch.object(os, "isatty", return_value=tty), \
+                    patch.object(os, "getlogin", return_value=login), \
+                    patch.object(os, "execv") as execute, \
+                    patch.object(sys, "argv", [str(script), "salt", "--baseline-only", "--work-dir", "/tmp/work space"]):
+                if tty and login == "cannier":
+                    main()
+                    self.assertEqual(execute.call_args.args, (sys.executable, [
+                        sys.executable, str(setup_repos.BASE_DIR / "run_all.py"),
+                        "salt", "--baseline-only", "--work-dir", "/tmp/work space"]))
+                else:
+                    with self.assertRaisesRegex(SystemExit, "terminal login"):
+                        main()
+                    execute.assert_not_called()
 
     def test_invalid_snapshot_exclusions_are_rejected(self):
         config = NEW_CANNIER_REPOS["libcloud"]

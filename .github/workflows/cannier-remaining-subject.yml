@@ -150,6 +150,38 @@ jobs:
           runuser -u cannier -- ssh -o BatchMode=yes -o StrictHostKeyChecking=yes root@localhost true
           runuser -u cannier -- ssh -o BatchMode=yes -o StrictHostKeyChecking=yes cannier@localhost true
           printf 'pwd\nquit\n' | runuser -u cannier -- sftp -b - root@localhost
+      - name: Prepare Salt terminal login service
+        if: inputs.subject == 'salt'
+        run: |
+          apt-get install -y openssh-server openssh-client
+          install -d -m 0755 /run/sshd
+          # Minimal containers may omit the login accounting file.
+          touch /run/utmp
+          chmod 0664 /run/utmp
+          install -d -m 0700 -o cannier -g cannier /home/cannier/.ssh
+          runuser -u cannier -- ssh-keygen -t rsa -b 2048 -N '' -f /home/cannier/.ssh/salt_ci
+          install -m 0600 -o cannier -g cannier /home/cannier/.ssh/salt_ci.pub /home/cannier/.ssh/authorized_keys
+          ssh-keygen -A
+          cat > /etc/ssh/sshd_config_salt <<'EOF'
+          Port 2222
+          ListenAddress 127.0.0.1
+          HostKey /etc/ssh/ssh_host_rsa_key
+          PermitRootLogin no
+          AllowUsers cannier
+          PubkeyAuthentication yes
+          PasswordAuthentication no
+          KbdInteractiveAuthentication no
+          UsePAM yes
+          PermitTTY yes
+          AllowTcpForwarding no
+          X11Forwarding no
+          AuthorizedKeysFile .ssh/authorized_keys
+          PidFile /run/sshd-salt.pid
+          EOF
+          /usr/sbin/sshd -t -f /etc/ssh/sshd_config_salt
+          /usr/sbin/sshd -f /etc/ssh/sshd_config_salt
+          awk '{print "[127.0.0.1]:2222 " $1 " " $2}' /etc/ssh/ssh_host_rsa_key.pub > /home/cannier/.ssh/salt_known_hosts
+          chmod 0600 /home/cannier/.ssh/salt_known_hosts
       - name: Prepare historical Conan CMake tool locations
         if: inputs.subject == 'conan'
         run: |
@@ -172,13 +204,13 @@ jobs:
         timeout-minutes: 300
         env:
           FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
-        run: runuser -u cannier -- env HOME=/home/cannier USER=cannier LOGNAME=cannier python run_all.py "$SUBJECT" --baseline-only --work-dir "$FLAKEXPLAIN_WORK"
+        run: bash scripts/run_cannier_subject.sh baseline-only
       - name: Run baseline and 25 detection rounds
         if: inputs.mode == 'full'
         timeout-minutes: 300
         env:
           FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
-        run: runuser -u cannier -- env HOME=/home/cannier USER=cannier LOGNAME=cannier python run_all.py "$SUBJECT" --reverse-rounds 1 --work-dir "$FLAKEXPLAIN_WORK"
+        run: bash scripts/run_cannier_subject.sh full
       - name: Package evidence without source or executable files
         if: always()
         env:

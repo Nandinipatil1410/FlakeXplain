@@ -338,6 +338,18 @@ provenance and evidence; it would not repair the untouched historical experiment
 
 ### Implemented setup corrections
 
+- Salt: the supplied baseline fails `test_run_cwd_in_combination_with_runas`
+  at `os.getlogin()` because the CI process has no controlling terminal.
+  Implemented: launch Salt's entire pipeline through key-authenticated localhost
+  SSH with a forced terminal and utmp accounting. The service listens only on
+  loopback port 2222 and allows only the unprivileged experiment user. A session
+  preflight verifies terminal stdin, effective user and `os.getlogin()` before
+  setup/baseline begins. Salt's fingerprinted pytest recipe uses `--capture=sys`
+  so pytest does not replace terminal file descriptor 0; Python output remains
+  captured, while native file-descriptor output goes to the process log.
+  Both baseline-only and all detection rounds use the same launcher. No Salt
+  source, tests, selected test paths or baseline criteria change. The complete
+  Linux login session and historical baseline still require fresh CI verification.
 - Prefect: the supplied setup fails strict `pip check` because its snapshot
   contains incompatible AWS, AzureML/Great Expectations and Soda SQL pins.
   Implemented: align boto3/botocore/s3transfer to 1.17.106/1.20.106/0.4.2,
