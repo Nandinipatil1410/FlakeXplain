@@ -338,6 +338,16 @@ provenance and evidence; it would not repair the untouched historical experiment
 
 ### Implemented setup corrections
 
+- Pillow: the supplied baseline fails `Tests/test_imageshow.py::test_show`
+  because `ImageShow.show()` returns 0. The pinned Unix implementation registers
+  viewers only when supported executables are available; the container had none.
+  Implemented: Pillow jobs install ImageMagick (`display`), Xvfb and x11-utils,
+  start a virtual X display as the unprivileged experiment user, and require
+  successful `xdpyinfo` access before running the pipeline. The Pillow recipe
+  supplies `DISPLAY=:99` to baseline and detection subprocesses, recording it
+  in the environment fingerprint. Viewer installation is checked with
+  `display -version`. No upstream tests are edited, skipped or mocked. The full
+  viewer test and historical baseline require fresh Linux CI verification.
 - Mitmproxy: the supplied baseline fails `Test_Format.test_roundtrip_big_integer`
   when converting `math.factorial(30000)` to decimal bytes. Python 3.8.18
   enforces an integer-string conversion limit of 4300 digits by default, unlike

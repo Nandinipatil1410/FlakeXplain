@@ -59,6 +59,25 @@ jobs:
           mkdir -p "$FLAKEXPLAIN_WORK"
           chown -R cannier:cannier "$GITHUB_WORKSPACE" "$FLAKEXPLAIN_WORK"
           runuser -u cannier -- id
+      - name: Prepare Pillow image viewer and virtual display
+        if: inputs.subject == 'pillow'
+        run: |
+          # The pinned ImageShow test requires a real supported Unix viewer.
+          apt-get install -y imagemagick xvfb x11-utils
+          runuser -u cannier -- display -version
+          runuser -u cannier -- Xvfb :99 -screen 0 1280x1024x24 -nolisten tcp > "$RUNNER_TEMP/pillow-xvfb.log" 2>&1 &
+          ready=0
+          for attempt in {1..20}; do
+            if runuser -u cannier -- env DISPLAY=:99 xdpyinfo >/dev/null 2>&1; then
+              ready=1
+              break
+            fi
+            sleep 0.5
+          done
+          if [ "$ready" != 1 ]; then
+            cat "$RUNNER_TEMP/pillow-xvfb.log"
+            exit 1
+          fi
       - name: Verify Dask permission-test environment
         if: inputs.subject == 'dask'
         env:

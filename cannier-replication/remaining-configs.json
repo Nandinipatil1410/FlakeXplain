@@ -393,6 +393,9 @@
       "Cython==0.29.24"
     ],
     "snapshot_path": "cannier-replication/subjects/Pillow/requirements.txt",
+    "pytest_env": {
+      "DISPLAY": ":99"
+    },
     "verify_pkgs": [
       "Pillow",
       "pytest",
