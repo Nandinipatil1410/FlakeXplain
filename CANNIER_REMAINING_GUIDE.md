@@ -205,6 +205,15 @@ PKG_CONFIG_PATH when no package configuration paths were provided. The parent
 environment and other subjects are unaffected; the removal is recorded in the
 fingerprinted recipe. This correction awaits a new Conan CI baseline.
 
+The latest supplied Conan log fails
+`test_editable_cmake_linux[Ninja]` because CMake cannot find the Ninja build
+program. Implemented: the Conan setup step installs Ubuntu's `ninja-build`
+package and checks `ninja --version` as `cannier` before either baseline-only
+or full execution. The shared prerequisites already install `build-essential`.
+This supplies the requested generator without changing the upstream tests or
+baseline gate. Resolution of the failure and the complete baseline await CI
+verification; retain the earlier failed-attempt logs.
+
 New artifacts are regular GitHub ZIP downloads containing repos/<pipeline-key>,
 provenance.json, system_packages.txt and checksums.json. There is no nested source
 archive. The packager includes only XML/JSON/Markdown/text/log evidence and metadata;
@@ -306,6 +315,28 @@ publication. Improvements must be demonstrated by controlled experiments.
 
 
 ## Explicit setup corrections after the first historical runs
+
+### Dask scheduler import failure: upstream blocker
+
+The supplied 2026-10-09 baseline log fails at
+`dask/tests/test_layers.py::test_scheduler_highlevel_graph_unpack_import[True-_dataframe_shuffle-pandas.]`:
+pandas submodules appear in the scheduler after its initial module snapshot.
+This matches upstream issue https://github.com/dask/dask/issues/8480.
+An upstream comment links the import behavior to Distributed's shuffle extension:
+https://github.com/dask/distributed/pull/5695#issuecomment-1035371765.
+Upstream's temporary response was to mark the test as expected to fail:
+https://github.com/dask/dask/pull/8724.
+
+The current recipe pins Dask `d5bbad0b` and Distributed `2022.2.0`.
+No verified environment-only repair has been established for these pins.
+The missing `jupyter-server-proxy` message is informational, not the failed assertion.
+Keep the baseline discarded if all three permitted attempts fail. Do not apply
+the upstream xfail, exclude the test, change dependencies speculatively, or count
+this failure as a flaky label without both passing and failing execution evidence.
+A patched or differently pinned experiment would need separate configuration,
+provenance and evidence; it would not repair the untouched historical experiment.
+
+### Implemented setup corrections
 
 - FlexGet: the 2026-10-09 baseline failed at
   `flexget/tests/test_urlrewriting.py::TestURLRewriters::test_rutracker`
