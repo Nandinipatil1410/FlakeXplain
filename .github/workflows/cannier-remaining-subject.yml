@@ -39,6 +39,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Set up Python
+        id: pipeline-python
         uses: actions/setup-python@v7
         with:
           python-version: "3.8.18"
@@ -203,12 +204,14 @@ jobs:
         if: inputs.mode == 'baseline-only'
         timeout-minutes: 300
         env:
+          FLAKEXPLAIN_PYTHON: ${{ steps.pipeline-python.outputs.python-path }}
           FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
         run: bash scripts/run_cannier_subject.sh baseline-only
       - name: Run baseline and 25 detection rounds
         if: inputs.mode == 'full'
         timeout-minutes: 300
         env:
+          FLAKEXPLAIN_PYTHON: ${{ steps.pipeline-python.outputs.python-path }}
           FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
         run: bash scripts/run_cannier_subject.sh full
       - name: Package evidence without source or executable files
