@@ -219,3 +219,5 @@ Its original snapshot is preserved and its effective requirements are archived
 with the artifact. Retry baseline-only in a fresh job; the baseline remains unverified.
 
 Airflow import precedence: its `tests/kubernetes` package shadows the installed Kubernetes SDK when `tests` leads `PYTHONPATH`. The Airflow recipe now puts its virtual environment site-packages first, retaining tasks/tests/src/root paths. This applies consistently to baseline and reordered execution and is recorded in the recipe fingerprint. No tests are excluded. A subprocess regression check reproduces the collision and verifies SDK resolution; full Airflow execution still requires GitHub Actions validation.
+
+Airflow follow-up: dependency path priority now preserves standard-library paths (including extension modules) before site-packages, followed by required source paths. This prevents the legacy argparse distribution required by snakebite-py3 from overriding Python 3.8 argparse and breaking pytest allow_abbrev. The subprocess regression verifies both Kubernetes SDK and standard-library argparse imports.

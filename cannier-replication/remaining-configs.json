@@ -31,7 +31,7 @@
     "snapshot_additions": [
       "argparse==1.4.0"
     ],
-    "pytest_site_packages_first": true
+    "pytest_dependency_paths_first": true
   },
   "celery": {
     "url": "https://github.com/celery/celery.git",
