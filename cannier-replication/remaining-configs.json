@@ -393,6 +393,29 @@
       "Cython==0.29.24"
     ],
     "snapshot_path": "cannier-replication/subjects/Pillow/requirements.txt",
+    "test_fixtures": [
+      {
+        "source": "cannier-replication/fixtures/pillow/crash_1.tif",
+        "destination": "Tests/images/crash_1.tif",
+        "sha256": "c7753a4ba2e83f87f26fc7485b668645c8f19b9abf10f5a919f75ce00dd01152",
+        "upstream_url": "https://raw.githubusercontent.com/python-pillow/pillow-depends/1c6d24bde58dda66cdc2e37ffbad50ab267ab732/test_images/crash_1.tif",
+        "note": "Historical extra TIFF fixture installed separately by upstream CI; test code unchanged."
+      },
+      {
+        "source": "cannier-replication/fixtures/pillow/crash_2.tif",
+        "destination": "Tests/images/crash_2.tif",
+        "sha256": "da410dc3b7631619f5915e176af0683650d66e3f756f37e0a7528030e4080c70",
+        "upstream_url": "https://raw.githubusercontent.com/python-pillow/pillow-depends/1c6d24bde58dda66cdc2e37ffbad50ab267ab732/test_images/crash_2.tif",
+        "note": "Historical extra TIFF fixture installed separately by upstream CI; test code unchanged."
+      },
+      {
+        "source": "cannier-replication/fixtures/pillow/string_dimension.tiff",
+        "destination": "Tests/images/string_dimension.tiff",
+        "sha256": "8b28fc4501318b960ada06b2fff15b3fd1b198b4d99ae9c9c3daa5a3c6a01453",
+        "upstream_url": "https://raw.githubusercontent.com/python-pillow/pillow-depends/1c6d24bde58dda66cdc2e37ffbad50ab267ab732/test_images/string_dimension.tiff",
+        "note": "Historical extra TIFF fixture installed separately by upstream CI; test code unchanged."
+      }
+    ],
     "pytest_env": {
       "DISPLAY": ":99"
     },

@@ -67,6 +67,30 @@ class RemainingSubjectTests(unittest.TestCase):
                 setup_repos.prepare_test_fixtures(repo, config)
             self.assertEqual(target.read_bytes(), b"different recording")
 
+    def test_pillow_tiff_fixtures_are_verified_installed_and_packaged(self):
+        config = NEW_CANNIER_REPOS["pillow"]
+        self.assertEqual({item["destination"] for item in config["test_fixtures"]}, {
+            "Tests/images/crash_1.tif", "Tests/images/crash_2.tif",
+            "Tests/images/string_dimension.tiff",
+        })
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder) / "repos/pillow"
+            with patch.object(setup_repos, "run_command", return_value=("", "", 0)):
+                self.assertEqual(setup_repos.install_cannier_snapshot(Path("python"), repo, config), 0)
+            setup_repos.prepare_test_fixtures(repo, config)
+            with patch("package_cannier_evidence.subprocess.check_output", return_value="packages"):
+                package("pillow", Path(folder), Path(folder) / "evidence")
+            logs = Path(folder) / "evidence/repos/pillow/logs"
+            for fixture in config["test_fixtures"]:
+                data = (setup_repos.BASE_DIR / fixture["source"]).read_bytes()
+                self.assertEqual(hashlib.sha256(data).hexdigest(), fixture["sha256"])
+                self.assertTrue(data.startswith((b"II", b"MM")))
+                target = repo / fixture["destination"]
+                self.assertEqual(target.read_bytes(), data)
+                self.assertEqual((logs / (target.name + ".txt")).read_bytes(), data)
+            self.assertEqual(json.loads((logs / "test_fixture_provenance.json").read_text()),
+                             config["test_fixtures"])
+
     def test_hypothesis_entrypoint_install_is_required_and_preserves_pins(self):
         config = NEW_CANNIER_REPOS["hypothesis"]
         target = "hypothesis-python/examples/example_hypothesis_entrypoint"
