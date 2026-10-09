@@ -86,6 +86,14 @@ changes, not claims of matching the paper's labels.
 
 ## Artifact import
 
+### FlexGet six dependency correction
+
+Implemented: override `six==1.16.0` with `six==1.15.0` in FlexGet's effective
+requirements, preserving the original author snapshot. The supplied CI `pip check`
+output verifies that the pinned FlexGet 3.1.134 requires exactly six 1.15.0.
+Dependency checks and the strict baseline gate remain enabled. The corrected
+FlexGet setup and baseline await CI verification.
+
 ### Electrum crypto test prerequisite
 
 Implemented: add `pycryptodomex==3.10.1` to Electrum's effective requirements

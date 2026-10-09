@@ -45,7 +45,8 @@ class RemainingSubjectTests(unittest.TestCase):
                                   ("cirq", "typed-ast==1.4.3"), ("cirq", "filelock==3.4.1"),
                                   ("cirq", "matplotlib==3.5.2"),
                                   ("conan", "cmake==3.15.3"),
-                                  ("electrum", "pycryptodomex==3.10.1")]:
+                                  ("electrum", "pycryptodomex==3.10.1"),
+                                  ("flexget", "six==1.15.0")]:
             config = NEW_CANNIER_REPOS[subject]
             original = setup_repos.BASE_DIR / config["snapshot_path"]
             before = original.read_bytes()
@@ -54,7 +55,7 @@ class RemainingSubjectTests(unittest.TestCase):
                 effective = setup_repos.cannier_requirements(repo, config)
                 text = effective.read_text()
                 self.assertIn(expected, text.splitlines())
-                if subject == "conan":
+                if subject in ("conan", "flexget"):
                     self.assertNotIn("six==1.16.0", text.splitlines())
                 self.assertEqual(original.read_bytes(), before)
                 self.assertEqual(json.loads((repo / "cannier_setup_recipe.json").read_text()), config)

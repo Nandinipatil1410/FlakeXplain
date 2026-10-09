@@ -219,6 +219,9 @@
       "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/Flexget/requirements.txt",
+    "snapshot_overrides": {
+      "six": "six==1.15.0"
+    },
     "verify_pkgs": [
       "FlexGet",
       "pytest",
