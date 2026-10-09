@@ -1,6 +1,5 @@
 """Pin external repositories cloned by unmodified historical subject tests."""
 from pathlib import Path
-import shlex
 
 from runtime import atomic_json, checked_output
 
@@ -34,7 +33,7 @@ def git_test_fixture_env(repo, config, env):
         # Git 2.25 in Ubuntu 20.04 predates GIT_CONFIG_COUNT. This is the
         # inherited configuration format used by `git -c` in that version.
         parameter = "url." + target.as_uri() + ".insteadOf=" + fixture["url"]
-        parameters += " " + shlex.quote(parameter)
+        parameters += " '" + parameter.replace("'", "'\\''") + "'"
     if config.get("git_test_fixtures"):
         env["GIT_CONFIG_PARAMETERS"] = parameters.strip()
     return env
