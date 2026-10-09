@@ -86,6 +86,18 @@ changes, not claims of matching the paper's labels.
 
 ## Artifact import
 
+### Hydra Black build prerequisite
+
+Implemented: Hydra's bootstrap installs `setuptools-scm==5.0.2` before the
+snapshot is installed with build isolation disabled. Black 20.8b1 uses
+`use_scm_version` in setup.py; missing version-generation tooling can produce
+the reported 0.0.0 metadata. Keep Black's original pin. Locally verified:
+Black 20.8b1 builds with pip 23.3.2, setuptools 57.5.0, wheel 0.37.1 and
+setuptools-scm 5.0.2 in a temporary Windows Python 3.11 environment, both
+with and without toml. This does not verify Hydra's Ubuntu Python 3.8
+setup or baseline. Rerun the current branch in CI; if metadata still fails,
+inspect setup-bootstrap.log for the installed version-generation tooling.
+
 ### FlexGet six dependency correction
 
 Implemented: override `six==1.16.0` with `six==1.15.0` in FlexGet's effective
@@ -295,6 +307,13 @@ publication. Improvements must be demonstrated by controlled experiments.
 
 ## Explicit setup corrections after the first historical runs
 
+- Hypothesis: install `hypothesis-python/examples/example_hypothesis_entrypoint`
+  as an editable test package, with dependency resolution and build isolation
+  disabled. Its setuptools entry point registers the non-negative strategy used
+  by `test_registered_from_entrypoint`; installing only `hypothesis-python`
+  leaves that hook undiscoverable. The installation is logged and included in
+  the recipe/environment fingerprint. No upstream tests are changed or excluded.
+  Full baseline validation requires a fresh GitHub Actions job.
 - Celery: add argparse==1.4.0 to satisfy unittest2's declared dependency.
 - Conan: replace six==1.16.0 with six==1.15.0 to satisfy the pinned Conan release.
 - Subjects whose snapshots include Black: bootstrap setuptools-scm==5.0.2,

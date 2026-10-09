@@ -39,6 +39,25 @@ class RemainingSubjectTests(unittest.TestCase):
         self.assertEqual(run.call_count, 1)
         self.assertIn("--no-deps", run.call_args.args[0])
 
+    def test_hypothesis_entrypoint_install_is_required_and_preserves_pins(self):
+        config = NEW_CANNIER_REPOS["hypothesis"]
+        target = "hypothesis-python/examples/example_hypothesis_entrypoint"
+        for exit_code in (0, 9):
+            with self.subTest(exit_code=exit_code), tempfile.TemporaryDirectory() as folder:
+                repo = Path(folder)
+                with patch.object(setup_repos, "run_command", side_effect=[
+                    ("", "", 0), ("", "", 0), ("", "", 0), ("", "", exit_code)
+                ]) as run:
+                    code = setup_repos.install_cannier_snapshot(Path("python"), repo, config)
+                self.assertEqual(code, exit_code)
+                self.assertEqual(run.call_count, 4)
+                command = run.call_args.args[0]
+                self.assertEqual(command[-2:], ["-e", target])
+                self.assertIn("--no-deps", command)
+                self.assertIn("--no-build-isolation", command)
+                self.assertEqual(run.call_args.kwargs["cwd"], repo)
+                self.assertIn("example_hypothesis_entrypoint", str(run.call_args.kwargs["log_path"]))
+
     def test_explicit_snapshot_corrections_preserve_original_and_are_packaged(self):
         for subject, expected in [("celery", "argparse==1.4.0"), ("airflow", "argparse==1.4.0"), ("conan", "six==1.15.0"),
                                   ("cirq", "typing-extensions==3.10.0.2"),

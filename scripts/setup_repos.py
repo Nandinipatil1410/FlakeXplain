@@ -350,6 +350,14 @@ def install_cannier_snapshot(python, repo, config):
         ([str(python), "-m", "pip", "install", "--no-deps"] + config["extra_pkgs"],
          "setup-randomly.log"),
     ]
+    # Some upstream tests rely on entry points from auxiliary source packages.
+    # Editable installs also expose example modules omitted from wheel metadata.
+    for target in config.get("editable_test_targets", []):
+        commands.append((
+            [str(python), "-m", "pip", "install", "--no-deps", "--no-build-isolation",
+             "-e", target],
+            "setup-" + target.replace("/", "-") + ".log",
+        ))
     for command, logfile in commands:
         _, _, code = run_command(command, cwd=repo, log_path=repo / "logs" / logfile)
         if code:
