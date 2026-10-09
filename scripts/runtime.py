@@ -16,6 +16,9 @@ REPOS = [
     "click", "flask", "filelock", "fsspec", "httpx", "urllib3",
     "werkzeug", "rich", "pytest", "ipython", "reframe", "loguru", "freezegun", "fonttools", "graphene", "pyramid", "kombu", "tornado", "pygithub", "djangorestframework",
 ]
+from cannier_subjects import NEW_CANNIER_REPOS
+REPOS.extend(NEW_CANNIER_REPOS)
+
 def default_work_dir():
     if os.name == "nt":
         project_id = hashlib.sha256(str(BASE_DIR).encode()).hexdigest()[:8]
@@ -89,6 +92,8 @@ def pytest_env(repo):
 
 def pytest_args(repo_name):
     """Repository-owned pytest arguments required for a comparable full suite."""
+    if repo_name in NEW_CANNIER_REPOS:
+        return list(NEW_CANNIER_REPOS[repo_name]["pytest_args"])
     if repo_name == "urllib3":
         return [
             "--strict-config",
@@ -218,6 +223,10 @@ def fingerprint(repo):
                  untracked_source=source_files, packages=sorted(freeze.splitlines()), python=version,
                  platform=platform.platform(), machine=platform.machine(),
                  host=platform.node(), repo_path=str(repo))
+    if repo.name in NEW_CANNIER_REPOS:
+        config = NEW_CANNIER_REPOS[repo.name]
+        value["cannier_recipe"] = config
+        value["snapshot_sha256"] = hashlib.sha256((BASE_DIR / config["snapshot_path"]).read_bytes()).hexdigest()
     value["id"] = hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()
     return value
 

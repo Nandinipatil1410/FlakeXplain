@@ -155,3 +155,6 @@ layout. Import one complete full-run attempt, then regenerate the report as abov
 A configured workflow does not count as completed evidence. Graphene remains
 completed but not imported until its evidence is accessible; do not invent its
 counts or discard its run merely because a browser blocked the download.
+
+
+For all 20 previously unconfigured subjects, see CANNIER_REMAINING_GUIDE.md.

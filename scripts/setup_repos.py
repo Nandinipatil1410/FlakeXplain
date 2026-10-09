@@ -270,6 +270,9 @@ REPOS = {
     },
 }
 
+from cannier_subjects import NEW_CANNIER_REPOS
+REPOS.update(NEW_CANNIER_REPOS)
+
 
 def dependency_specs(repo_name, repo, config):
     specs = list(config["extra_pkgs"])
@@ -308,6 +311,30 @@ def lockfile_constraints(repo, lock_name):
         encoding="utf-8",
     )
     return constraints
+
+
+def install_cannier_snapshot(python, repo, config):
+    """Restore recorded pins without silently resolving newer transitive versions."""
+    requirements = BASE_DIR / config["snapshot_path"]
+    commands = [
+        ([str(python), "-m", "pip", "install", "--no-deps", "--no-build-isolation",
+          "-r", str(requirements)], "setup-snapshot.log"),
+        ([str(python), "-m", "pip", "install", "--no-deps", "--no-build-isolation",
+          "-e", config["install_target"]], "setup-install.log"),
+        ([str(python), "-m", "pip", "install", "--no-deps"] + config["extra_pkgs"],
+         "setup-randomly.log"),
+    ]
+    for command, logfile in commands:
+        _, _, code = run_command(command, cwd=repo, log_path=repo / "logs" / logfile)
+        if code:
+            return code
+    if config.get("prepare_copy"):
+        source, destination = config["prepare_copy"]
+        # Libcloud's published subject recipe copies placeholder test credentials.
+        import shutil
+        shutil.copyfile(repo / source, repo / destination)
+    atomic_json(repo / "cannier_setup_recipe.json", config)
+    return 0
 
 
 def setup_repo(repo_name, config, refresh=False):
@@ -408,7 +435,9 @@ def setup_repo(repo_name, config, refresh=False):
         constraints.write_text("\n".join(pins) + "\n", encoding="utf-8")
         cmd += ["-c", str(constraints)]
     install_log = repo / "logs" / "setup-install.log"
-    if config.get("installer") == "uv":
+    if config.get("installer") == "cannier_snapshot":
+        code = install_cannier_snapshot(python, repo, config)
+    elif config.get("installer") == "uv":
         # Use each upstream project's committed uv.lock and test dependency group.
         uv_version = config.get("uv_version", "0.11.7")
         _, _, code = run_command(

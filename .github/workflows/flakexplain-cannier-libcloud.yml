@@ -1,0 +1,21 @@
+name: FlakeXplain CANNIER libcloud
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Strict baseline only, or baseline followed by 25 rounds
+        required: true
+        default: baseline-only
+        type: choice
+        options: [baseline-only, full]
+permissions:
+  contents: read
+concurrency:
+  group: cannier-libcloud-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  subject:
+    uses: ./.github/workflows/cannier-remaining-subject.yml
+    with:
+      subject: libcloud
+      mode: ${{ inputs.mode }}

@@ -1,0 +1,53 @@
+name: FlakeXplain CANNIER remaining subjects
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Run baseline-only first; full also enforces a fresh baseline
+        required: true
+        default: baseline-only
+        type: choice
+        options: [baseline-only, full]
+      subject:
+        description: All remaining subjects, or a single subject
+        required: true
+        default: all
+        type: choice
+        options: [all, airflow, celery, cirq, conan, dask, electrum, flexget, hydra, hypothesis, libcloud, mitmproxy, pillow, prefect, requests, salt, scikit_image, seaborn, setuptools, sunpy, xonsh]
+permissions:
+  contents: read
+concurrency:
+  group: cannier-remaining-${{ github.ref }}-${{ inputs.subject }}
+  cancel-in-progress: false
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      subjects: ${{ steps.plan.outputs.subjects }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - id: plan
+        env:
+          SELECTED: ${{ inputs.subject }}
+        run: |
+          python - <<'PY'
+          import json, os
+          choices = list(json.load(open('cannier-replication/remaining-configs.json')))
+          selected = os.environ['SELECTED']
+          assert selected == 'all' or selected in choices
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
+              stream.write('subjects=' + json.dumps(choices if selected == 'all' else [selected]) + '\n')
+          PY
+  run:
+    needs: plan
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        subject: ${{ fromJSON(needs.plan.outputs.subjects) }}
+    uses: ./.github/workflows/cannier-remaining-subject.yml
+    with:
+      subject: ${{ matrix.subject }}
+      mode: ${{ inputs.mode }}

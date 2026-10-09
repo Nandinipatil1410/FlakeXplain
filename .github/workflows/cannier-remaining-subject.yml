@@ -1,0 +1,78 @@
+name: CANNIER historical subject executor
+on:
+  workflow_call:
+    inputs:
+      subject:
+        required: true
+        type: string
+      mode:
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  detect:
+    runs-on: ubuntu-24.04
+    container: ubuntu:20.04
+    timeout-minutes: 360
+    defaults:
+      run:
+        shell: bash
+    env:
+      SUBJECT: ${{ inputs.subject }}
+      DEBIAN_FRONTEND: noninteractive
+    steps:
+      - name: Install historical system prerequisites
+        run: |
+          apt-get update
+          apt-get install -y ca-certificates curl git build-essential cmake default-jdk pkg-config \
+            python3.8 python3.8-dev python3.8-venv python3.8-tk \
+            libcurl4-openssl-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev \
+            libjpeg-dev libkrb5-dev liblapack-dev liblcms2-dev libldap2-dev \
+            default-libmysqlclient-dev libopenblas-dev libopenjp2-7-dev libpq-dev \
+            libsasl2-dev libsecp256k1-dev libsndfile1-dev libssl-dev libtiff-dev \
+            libwebp-dev libxcb1-dev libgit2-dev tcl8.6-dev tk8.6-dev unixodbc-dev \
+            zlib1g-dev ghostscript fonts-dejavu-core locales
+          locale-gen en_US.UTF-8
+      - name: Check out FlakeXplain
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.8.18"
+      - name: Verify pipeline and subject selection
+        env:
+          MODE: ${{ inputs.mode }}
+        run: |
+          python -m pip install tomli==2.0.1
+          python -c 'import json,os; c=json.load(open("cannier-replication/remaining-configs.json")); assert os.environ["SUBJECT"] in c; assert os.environ["MODE"] in ("baseline-only","full")'
+          python -m unittest discover -s tests -v
+      - name: Run strict baseline gate
+        if: inputs.mode == 'baseline-only'
+        timeout-minutes: 300
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py "$SUBJECT" --baseline-only --work-dir "$FLAKEXPLAIN_WORK"
+      - name: Run baseline and 25 detection rounds
+        if: inputs.mode == 'full'
+        timeout-minutes: 300
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py "$SUBJECT" --reverse-rounds 1 --work-dir "$FLAKEXPLAIN_WORK"
+      - name: Package evidence without source or executable files
+        if: always()
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+          MODE: ${{ inputs.mode }}
+        run: |
+          python scripts/package_cannier_evidence.py --subject "$SUBJECT" --work-dir "$FLAKEXPLAIN_WORK" --output evidence
+      - name: Upload raw evidence even after failure
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: cannier-${{ inputs.subject }}-${{ inputs.mode }}-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 90
+          if-no-files-found: error
+          path: evidence/

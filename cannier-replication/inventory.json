@@ -1,0 +1,185 @@
+﻿{
+    "source_revision":  "b96d6ed02e98d514eb6a92ca264a082234cb9728",
+    "subjects":  [
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "c743b95a02ba1ec04013635a56ad042ce98823d2",
+                         "slug":  "airflow",
+                         "repository":  "apache/airflow"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "552e067b40198429cd7c866a397069366ac8e530",
+                         "slug":  "celery",
+                         "repository":  "celery/celery"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "782c14e0cc821794d21e82f30df8e6998f4b9992",
+                         "slug":  "Cirq",
+                         "repository":  "quantumlib/Cirq"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "d524074945e840f9c9f1d4d6eba462bf6a1dc608",
+                         "slug":  "conan",
+                         "repository":  "conan-io/conan"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "d5bbad0b1f32b3c904abc4fd020bef9c5092d2a3",
+                         "slug":  "dask",
+                         "repository":  "dask/dask"
+                     },
+                     {
+                         "status":  "already-configured",
+                         "commit":  "0323d6f8955f987771269506ca5da461e2e7a248",
+                         "slug":  "django-rest-framework",
+                         "repository":  "encode/django-rest-framework"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "d8d2c180aafaec1ae9bc68c27a7d780df8de4348",
+                         "slug":  "electrum",
+                         "repository":  "spesmilo/electrum"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "4fb250844d59e73304b7d306457ad61e070e1261",
+                         "slug":  "Flexget",
+                         "repository":  "Flexget/Flexget"
+                     },
+                     {
+                         "status":  "already-configured",
+                         "commit":  "f3a903093a4600f3d757bf9b22f387a561fcb584",
+                         "slug":  "fonttools",
+                         "repository":  "fonttools/fonttools"
+                     },
+                     {
+                         "status":  "already-configured",
+                         "commit":  "7d2af3104e3c01ce4f9a1580faf40d8179079008",
+                         "slug":  "graphene",
+                         "repository":  "graphql-python/graphene"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "69d31ebf79a93f0a8378d896a359fb47b09f5074",
+                         "slug":  "hydra",
+                         "repository":  "facebookresearch/hydra"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "ccac4364979effc2b22e2f943176b2b1f025c448",
+                         "slug":  "hypothesis",
+                         "repository":  "HypothesisWorks/hypothesis"
+                     },
+                     {
+                         "status":  "already-configured",
+                         "commit":  "95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d",
+                         "slug":  "ipython",
+                         "repository":  "ipython/ipython"
+                     },
+                     {
+                         "status":  "already-configured",
+                         "commit":  "2aeb73248b4a0bf8ad3de81a0f40733e7cd42255",
+                         "slug":  "kombu",
+                         "repository":  "celery/kombu"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "449b315ea47ba85f79b4062b1d398e94e545d273",
+                         "slug":  "libcloud",
+                         "repository":  "apache/libcloud"
+                     },
+                     {
+                         "status":  "already-configured",
+                         "commit":  "f31e97142adc1156693a26ecaf47208d3765a6e3",
+                         "slug":  "loguru",
+                         "repository":  "Delgan/loguru"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "4511ea7c24a3d62373d6fa6d221ac96212ce11e4",
+                         "slug":  "mitmproxy",
+                         "repository":  "mitmproxy/mitmproxy"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "92933b86574b9c80764bf52c357ed29e1ef53382",
+                         "slug":  "Pillow",
+                         "repository":  "python-pillow/Pillow"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "6b59d989dec33aad8c62ea2476fee519c32f5c63",
+                         "slug":  "prefect",
+                         "repository":  "PrefectHQ/prefect"
+                     },
+                     {
+                         "status":  "already-configured",
+                         "commit":  "31538337faaa61e104afede75a5fac802c9a1ab3",
+                         "slug":  "PyGithub",
+                         "repository":  "PyGithub/PyGithub"
+                     },
+                     {
+                         "status":  "already-configured",
+                         "commit":  "7b182045ee77cdfb38fda5e55ccbdcd8ed1c9468",
+                         "slug":  "pyramid",
+                         "repository":  "Pylons/pyramid"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "a1a6a549a0143d9b32717dbe3d75cd543ae5a4f6",
+                         "slug":  "requests",
+                         "repository":  "psf/requests"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "bac2d1e6aeea8f12dd1712207b87ea2695f35b7c",
+                         "slug":  "salt",
+                         "repository":  "saltstack/salt"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "8fbbb5169b8da6fb26b107a0a8c6de46a93f37cc",
+                         "slug":  "scikit-image",
+                         "repository":  "scikit-image/scikit-image"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "703259f2dca711205f81d2d8f9e3fa45774eb0da",
+                         "slug":  "seaborn",
+                         "repository":  "mwaskom/seaborn"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "4d64156de17596dae33f2b12aaaea1d6c9327fd9",
+                         "slug":  "setuptools",
+                         "repository":  "pypa/setuptools"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "7c6e51e85410f3647af81e601a4bb4c9073a50c8",
+                         "slug":  "sunpy",
+                         "repository":  "sunpy/sunpy"
+                     },
+                     {
+                         "status":  "discarded-baseline",
+                         "commit":  "2047e7ae3c825bf52dad10cc8402d09e11091bc1",
+                         "slug":  "tornado",
+                         "repository":  "tornadoweb/tornado"
+                     },
+                     {
+                         "status":  "already-configured",
+                         "commit":  "ba95e9eac73452d3bccfb5413b00d9a4fe3e4c31",
+                         "slug":  "urllib3",
+                         "repository":  "urllib3/urllib3"
+                     },
+                     {
+                         "status":  "new-workflow",
+                         "commit":  "e9b12c8b701a75b5ecb8d20f3aad7d3e5aca64bf",
+                         "slug":  "xonsh",
+                         "repository":  "xonsh/xonsh"
+                     }
+                 ]
+}
