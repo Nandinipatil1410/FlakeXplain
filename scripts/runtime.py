@@ -226,6 +226,8 @@ def fingerprint(repo):
     if repo.name in NEW_CANNIER_REPOS:
         config = NEW_CANNIER_REPOS[repo.name]
         value["cannier_recipe"] = config
+        value["execution_uid"] = os.getuid() if hasattr(os, "getuid") else None
+        value["execution_gid"] = os.getgid() if hasattr(os, "getgid") else None
         value["snapshot_sha256"] = hashlib.sha256((BASE_DIR / config["snapshot_path"]).read_bytes()).hexdigest()
     value["id"] = hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()
     return value

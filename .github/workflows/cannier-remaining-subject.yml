@@ -49,18 +49,28 @@ jobs:
           python -m pip install tomli==2.0.1
           python -c 'import json,os; c=json.load(open("cannier-replication/remaining-configs.json")); assert os.environ["SUBJECT"] in c; assert os.environ["MODE"] in ("baseline-only","full")'
           python -m unittest discover -s tests -v
+      - name: Prepare unprivileged experiment user
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: |
+          id cannier >/dev/null 2>&1 || useradd --create-home --shell /bin/bash cannier
+          test -n "$GITHUB_WORKSPACE" && test "$GITHUB_WORKSPACE" != /
+          test -n "$FLAKEXPLAIN_WORK" && test "$FLAKEXPLAIN_WORK" != /
+          mkdir -p "$FLAKEXPLAIN_WORK"
+          chown -R cannier:cannier "$GITHUB_WORKSPACE" "$FLAKEXPLAIN_WORK"
+          runuser -u cannier -- id
       - name: Run strict baseline gate
         if: inputs.mode == 'baseline-only'
         timeout-minutes: 300
         env:
           FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
-        run: python run_all.py "$SUBJECT" --baseline-only --work-dir "$FLAKEXPLAIN_WORK"
+        run: runuser -u cannier -- env HOME=/home/cannier USER=cannier LOGNAME=cannier python run_all.py "$SUBJECT" --baseline-only --work-dir "$FLAKEXPLAIN_WORK"
       - name: Run baseline and 25 detection rounds
         if: inputs.mode == 'full'
         timeout-minutes: 300
         env:
           FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
-        run: python run_all.py "$SUBJECT" --reverse-rounds 1 --work-dir "$FLAKEXPLAIN_WORK"
+        run: runuser -u cannier -- env HOME=/home/cannier USER=cannier LOGNAME=cannier python run_all.py "$SUBJECT" --reverse-rounds 1 --work-dir "$FLAKEXPLAIN_WORK"
       - name: Package evidence without source or executable files
         if: always()
         env:

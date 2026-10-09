@@ -201,3 +201,15 @@ corrected project's logs/effective-cannier-requirements.txt and copied into its
 artifact. Recipes/snapshot digest remain bound to the environment identity.
 The strict pip check and baseline gate remain in force. Retry the failed subjects
 with baseline-only in new jobs after pushing these changes. Do not mix attempts.
+
+
+### Experiment user correction
+
+The initial shared container ran the pipeline as root. Celery's mocked privilege
+change test still sees real root UID/GID and fails its security check. The authors'
+Dockerfile uses a non-root user. Shared jobs now create a cannier user, grant it
+ownership of the checked-out workspace and isolated execution root, and run setup,
+baseline and detection as that user with its own HOME. System package installation
+and artifact packaging stay in the workflow's administrative context. New-subject
+environment identities include execution UID/GID. No source test is patched or
+skipped. Retry failed baselines in fresh jobs; never mix root/non-root evidence.
