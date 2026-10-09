@@ -220,6 +220,15 @@
       "setuptools-scm==5.0.2"
     ],
     "snapshot_path": "cannier-replication/subjects/Flexget/requirements.txt",
+    "test_fixtures": [
+      {
+        "source": "cannier-replication/subjects/Flexget/test_urlrewriting.TestURLRewriters.test_rutracker",
+        "destination": "flexget/tests/cassettes/test_urlrewriting.TestURLRewriters.test_rutracker",
+        "sha256": "47013c4c5ad1a5c37a31449c622da9b80efef8e7d8996ef7f547200f512f5f8f",
+        "upstream_url": "https://raw.githubusercontent.com/Flexget/Flexget/dabf5803ff8863b6be0f387d4ed54629230cd24a/flexget/tests/cassettes/test_urlrewriting.TestURLRewriters.test_rutracker",
+        "note": "Authentic upstream recording restored in 2022; supplements the historical fixture set. Not an untouched-checkout replication."
+      }
+    ],
     "snapshot_overrides": {
       "six": "six==1.15.0"
     },

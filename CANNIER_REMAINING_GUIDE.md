@@ -307,6 +307,17 @@ publication. Improvements must be demonstrated by controlled experiments.
 
 ## Explicit setup corrections after the first historical runs
 
+- FlexGet: the 2026-10-09 baseline failed at
+  `flexget/tests/test_urlrewriting.py::TestURLRewriters::test_rutracker`
+  because `api.t-ru.org` did not resolve and its cassette is absent at the pinned
+  commit. Restore the authentic recording from upstream commit
+  `dabf5803ff8863b6be0f387d4ed54629230cd24a` (November 2022).
+  The bundled bytes are checksum-verified before installation; the recording and
+  provenance are archived in experiment logs. Existing differing recordings are
+  rejected. This supplements the historical fixture set and must be disclosed
+  as a fixture-corrected experiment, not an untouched-checkout replication.
+  No test code or expected result is changed. Full baseline validation still
+  requires a fresh GitHub Actions job; this fix does not establish a passing suite.
 - Hypothesis: install `hypothesis-python/examples/example_hypothesis_entrypoint`
   as an editable test package, with dependency resolution and build isolation
   disabled. Its setuptools entry point registers the non-negative strategy used

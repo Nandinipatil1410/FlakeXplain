@@ -39,6 +39,32 @@ class RemainingSubjectTests(unittest.TestCase):
         self.assertEqual(run.call_count, 1)
         self.assertIn("--no-deps", run.call_args.args[0])
 
+    def test_flexget_recording_is_verified_preserved_and_packaged(self):
+        config = NEW_CANNIER_REPOS["flexget"]
+        fixture = config["test_fixtures"][0]
+        data = (setup_repos.BASE_DIR / fixture["source"]).read_bytes()
+        self.assertIn(b"https://api.t-ru.org/v1/get_tor_topic_data?by=topic_id&val=2455223", data)
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder) / "repos/flexget"
+            with patch.object(setup_repos, "run_command", return_value=("", "", 0)):
+                self.assertEqual(setup_repos.install_cannier_snapshot(Path("python"), repo, config), 0)
+            target = repo / fixture["destination"]
+            self.assertEqual(target.read_bytes(), data)
+            setup_repos.prepare_test_fixtures(repo, config)  # Reinstallation is idempotent.
+            with patch("package_cannier_evidence.subprocess.check_output", return_value="packages"):
+                package("flexget", Path(folder), Path(folder) / "evidence")
+            logs = Path(folder) / "evidence/repos/flexget/logs"
+            self.assertEqual((logs / (target.name + ".txt")).read_bytes(), data)
+            self.assertEqual(json.loads((logs / "test_fixture_provenance.json").read_text()), [fixture])
+            bad_config = dict(config, test_fixtures=[dict(fixture, sha256="0" * 64)])
+            with self.assertRaisesRegex(RuntimeError, "checksum mismatch"):
+                setup_repos.prepare_test_fixtures(repo, bad_config)
+            self.assertEqual(target.read_bytes(), data)
+            target.write_bytes(b"different recording")
+            with self.assertRaisesRegex(RuntimeError, "Refusing to overwrite"):
+                setup_repos.prepare_test_fixtures(repo, config)
+            self.assertEqual(target.read_bytes(), b"different recording")
+
     def test_hypothesis_entrypoint_install_is_required_and_preserves_pins(self):
         config = NEW_CANNIER_REPOS["hypothesis"]
         target = "hypothesis-python/examples/example_hypothesis_entrypoint"

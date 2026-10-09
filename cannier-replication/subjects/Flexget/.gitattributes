@@ -1,0 +1,2 @@
+# Preserve upstream recording bytes for SHA-256 verification on every platform.
+test_urlrewriting.TestURLRewriters.test_rutracker -text

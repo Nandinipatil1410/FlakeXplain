@@ -2,6 +2,7 @@
 """Prepare pinned checkouts; reuse verified environments; install test dependencies only."""
 from __future__ import annotations
 import argparse
+import hashlib
 import os
 from pathlib import Path
 import re
@@ -339,6 +340,25 @@ def cannier_requirements(repo, config):
     return target
 
 
+def prepare_test_fixtures(repo, config):
+    """Restore explicitly pinned upstream recordings without fabricating responses."""
+    for fixture in config.get("test_fixtures", []):
+        data = (BASE_DIR / fixture["source"]).read_bytes()
+        if hashlib.sha256(data).hexdigest() != fixture["sha256"]:
+            raise RuntimeError("Test fixture checksum mismatch: " + fixture["source"])
+        destination = repo / fixture["destination"]
+        if destination.exists() and destination.read_bytes() != data:
+            raise RuntimeError("Refusing to overwrite different test fixture: " + str(destination))
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(data)
+        # Preserve the exact recording and provenance in packaged experiment logs.
+        log_dir = repo / "logs"
+        log_dir.mkdir(parents=True, exist_ok=True)
+        (log_dir / (destination.name + ".txt")).write_bytes(data)
+    if config.get("test_fixtures"):
+        atomic_json(repo / "logs" / "test_fixture_provenance.json", config["test_fixtures"])
+
+
 def install_cannier_snapshot(python, repo, config):
     """Restore recorded pins without silently resolving newer transitive versions."""
     requirements = cannier_requirements(repo, config)
@@ -367,6 +387,7 @@ def install_cannier_snapshot(python, repo, config):
         # Libcloud's published subject recipe copies placeholder test credentials.
         import shutil
         shutil.copyfile(repo / source, repo / destination)
+    prepare_test_fixtures(repo, config)
     atomic_json(repo / "cannier_setup_recipe.json", config)
     return 0
 
@@ -557,8 +578,10 @@ def setup_repo(repo_name, config, refresh=False):
         f"- **OS**: {current['platform']}\n"
         f"- **Environment ID**: {current['id']}\n"
         f"- **Setup Date**: {datetime.now(timezone.utc).isoformat()}\n"
-        "- **Source modifications**: No compatibility patches applied by setup.\n"
-        "- **Installation log**: logs/setup-install.log\n"
+        + ("- **Test fixture supplements**: Pinned upstream recordings restored; see logs/test_fixture_provenance.json. Test code is unchanged.\n"
+           if config.get("test_fixtures") else
+           "- **Source modifications**: No compatibility patches applied by setup.\n")
+        + "- **Installation log**: logs/setup-install.log\n"
         "- **Environment Snapshot**: env_snapshot.txt and environment.json\n",
         encoding="utf-8",
     )
