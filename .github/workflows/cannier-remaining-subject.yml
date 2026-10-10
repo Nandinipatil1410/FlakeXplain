@@ -13,7 +13,9 @@ permissions:
 jobs:
   detect:
     runs-on: ubuntu-24.04
-    container: ubuntu:20.04
+    container:
+      image: ubuntu:20.04
+      options: ${{ inputs.subject == 'airflow' && '--init' || '' }}
     timeout-minutes: 360
     defaults:
       run:
@@ -42,7 +44,7 @@ jobs:
         id: pipeline-python
         uses: actions/setup-python@v7
         with:
-          python-version: "3.8.18"
+          python-version: ${{ inputs.subject == 'airflow' && '3.8.7' || '3.8.18' }}
       - name: Verify pipeline and subject selection
         env:
           MODE: ${{ inputs.mode }}
@@ -165,7 +167,8 @@ jobs:
       - name: Prepare localhost SSH and SFTP for historical Airflow tests
         if: inputs.subject == 'airflow'
         run: |
-          apt-get install -y openssh-server openssh-client
+          apt-get install -y openssh-server openssh-client python2 python2-dev
+          runuser -u cannier -- python2 --version
           install -d -m 0755 /run/sshd
           install -d -m 0700 -o cannier -g cannier /home/cannier/.ssh
           # The pinned tests explicitly set sftp_default.login to root.
@@ -247,6 +250,15 @@ jobs:
             ln -s "/usr/share/cmake-${version}-Linux-x86_64" "/usr/share/cmake-${version}"
             runuser -u cannier -- "/usr/share/cmake-${version}/bin/cmake" --version
           done
+      - name: Prepare Airflow child-interpreter fixtures
+        if: inputs.subject == 'airflow'
+        env:
+          FLAKEXPLAIN_REPOS_DIR: ${{ runner.temp }}/flakexplain/repos
+        run: |
+          runuser -u cannier -- env HOME=/home/cannier USER=cannier LOGNAME=cannier python scripts/setup_repos.py airflow
+          python scripts/prepare_airflow_runtime.py --repo "$FLAKEXPLAIN_REPOS_DIR/airflow"
+          chown -R cannier:cannier "$FLAKEXPLAIN_REPOS_DIR/airflow/logs"
+          runuser -u cannier -- env HOME=/home/cannier USER=cannier LOGNAME=cannier python scripts/prepare_airflow_runtime.py --repo "$FLAKEXPLAIN_REPOS_DIR/airflow" --check-tests
       - name: Run strict baseline gate
         if: inputs.mode == 'baseline-only'
         timeout-minutes: 300

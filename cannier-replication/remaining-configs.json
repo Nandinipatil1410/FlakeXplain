@@ -5,7 +5,7 @@
     "supported_platforms": [
       "linux"
     ],
-    "python_version": "3.8.18",
+    "python_version": "3.8.7",
     "installer": "cannier_snapshot",
     "install_target": ".",
     "extra_pkgs": [
@@ -33,6 +33,11 @@
       "argparse==1.4.0"
     ],
     "pytest_dependency_paths_first": true,
+    "runtime_fixtures": {
+      "system_site_packages_bridge": true,
+      "python2": "2.7",
+      "container_init": true
+    },
     "pytest_env": {
       "AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS__VISIBILITY_TIMEOUT": "21600",
       "AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS___TEST_ONLY_BOOL": "True",
