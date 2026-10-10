@@ -400,6 +400,9 @@ def install_cannier_snapshot(python, repo, config):
         import shutil
         shutil.copyfile(repo / source, repo / destination)
     prepare_test_fixtures(repo, config)
+    if config.get("package_test_fixtures"):
+        from package_test_fixtures import prepare_package_test_fixtures
+        prepare_package_test_fixtures(python, repo, config)
     if config.get("git_test_fixtures"):
         from git_test_fixtures import prepare_git_test_fixtures
         prepare_git_test_fixtures(repo, config)
@@ -454,6 +457,9 @@ def setup_repo(repo_name, config, refresh=False):
     if python.exists() and not refresh:
         current = fingerprint(repo)
         if state.get("environment_id") == current["id"]:
+            if config.get("package_test_fixtures"):
+                from package_test_fixtures import prepare_package_test_fixtures
+                prepare_package_test_fixtures(python, repo, config)
             if config.get("git_test_fixtures"):
                 from git_test_fixtures import prepare_git_test_fixtures
                 prepare_git_test_fixtures(repo, config)

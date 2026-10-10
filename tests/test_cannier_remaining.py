@@ -21,6 +21,7 @@ from cannier_subjects import NEW_CANNIER_REPOS
 from package_cannier_evidence import package
 import prepare_skimage_data
 from git_test_fixtures import prepare_git_test_fixtures, git_test_fixture_env
+import package_test_fixtures
 
 
 class RemainingSubjectTests(unittest.TestCase):
@@ -28,11 +29,33 @@ class RemainingSubjectTests(unittest.TestCase):
         config = NEW_CANNIER_REPOS["setuptools"]
         with tempfile.TemporaryDirectory() as folder, \
                 patch.object(setup_repos, "run_command", return_value=("", "", 0)) as run, \
-                patch("git_test_fixtures.prepare_git_test_fixtures"):
+                patch("git_test_fixtures.prepare_git_test_fixtures"), \
+                patch("package_test_fixtures.prepare_package_test_fixtures"):
             setup_repos.install_cannier_snapshot(Path("python"), Path(folder), config)
         commands = [call.args[0] for call in run.call_args_list]
         self.assertEqual(commands[1], ["python", "setup.py", "egg_info"])
         self.assertEqual(commands[2][-2:], ["-e", "."])
+
+    def test_easy_install_fixture_checksums_and_subject_import_path(self):
+        payload = b"verified wheel bytes"
+        fixture = dict(filename="example.whl", egg_name="example-1.0.egg",
+                       url="https://example.invalid/example.whl",
+                       sha256=hashlib.sha256(payload).hexdigest())
+        config = dict(package_test_fixtures=[fixture])
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder)
+            with patch.object(package_test_fixtures, "urlopen", return_value=io.BytesIO(payload)), \
+                    patch.object(package_test_fixtures, "checked_output") as convert:
+                package_test_fixtures.prepare_package_test_fixtures(Path("python"), repo, config)
+                self.assertIn("install_as_egg", convert.call_args.args[0][2])
+            wheel = package_test_fixtures.package_fixture_dir(repo) / "downloads/example.whl"
+            wheel.write_bytes(b"corrupt")
+            with self.assertRaisesRegex(RuntimeError, "checksum mismatch"):
+                package_test_fixtures.prepare_package_test_fixtures(Path("python"), repo, config)
+        repo = Path("/tmp/setuptools")
+        env = runtime.pytest_env(repo)
+        self.assertIn(str(package_test_fixtures.package_fixture_dir(repo)),
+                      env["PYTHONPATH"].split(os.pathsep))
 
     def test_external_git_fixture_clones_pinned_revision_without_global_changes(self):
         with tempfile.TemporaryDirectory() as folder:
