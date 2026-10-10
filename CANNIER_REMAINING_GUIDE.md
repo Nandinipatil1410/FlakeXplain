@@ -86,6 +86,32 @@ changes, not claims of matching the paper's labels.
 
 ## Artifact import
 
+### SunPy build prerequisites
+
+Implemented: SunPy's bootstrap pins `setuptools-scm==5.0.2` and
+`extension-helpers==0.1` alongside setuptools and wheel. The recorded
+requirements are installed with `--no-build-isolation`; pip therefore does not
+install the build requirements declared in the pinned upstream pyproject.toml.
+ASDF 2.8.1 requires setuptools-scm to generate its version, and SunPy's setup.py
+imports extension_helpers before generating metadata. Both must be present
+before their respective build steps.
+
+The other upstream build requirement, oldest-supported-numpy, selects NumPy
+for isolated builds. This recipe instead builds against the snapshot's explicit
+`numpy==1.21.1`, installed before SunPy. Do not install that selector into the
+experiment environment or change the recorded runtime NumPy pin.
+
+The supplied second CI log verifies that ASDF and the complete snapshot now
+install successfully. It fails at SunPy metadata generation because
+extension_helpers is absent. Regression checks cover the complete build-tool
+configuration. Locally verified: `setup.py egg_info` succeeds from a real Git
+checkout of the pinned SunPy commit in a temporary Windows Python 3.11
+environment using pip 23.3.2, setuptools 57.5.0, wheel 0.37.1,
+setuptools-scm 5.0.2 and extension-helpers 0.1. That metadata-only check uses
+NumPy 1.23.5 for Python 3.11 compatibility; the experiment retains NumPy 1.21.1.
+The Ubuntu Python 3.8 installation and strict baseline still require
+verification by rerunning the SunPy workflow in baseline-only mode.
+
 ### Hydra Black build prerequisite
 
 Implemented: Hydra's bootstrap installs `setuptools-scm==5.0.2` before the
