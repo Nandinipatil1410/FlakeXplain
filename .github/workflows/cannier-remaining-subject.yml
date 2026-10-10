@@ -66,8 +66,16 @@ jobs:
           # test_man_completion renders the repository's yes.1 fixture using
           # man and col. These commands are absent from the minimal image.
           apt-get install -y man-db bsdmainutils
+          # Ubuntu's minimized image diverts man to a message-printing stub;
+          # installing man-db alone leaves that stub in place.
+          real_man=$(dpkg-divert --truename /usr/bin/man)
+          if [ "$real_man" != /usr/bin/man ]; then
+            test -x "$real_man"
+            mv /usr/bin/man /usr/bin/man.minimized
+            dpkg-divert --quiet --remove --rename /usr/bin/man
+          fi
           runuser -u cannier -- man --version
-          runuser -u cannier -- col --version
+          printf 'manual renderer ready\n' | runuser -u cannier -- col -b
           # The pinned builtins tests search HOME with ~/\w\w.* and ~/.*.
           # A minimal container home contains only dotfiles; an unmatched
           # shell-mode search intentionally returns the literal pattern.
