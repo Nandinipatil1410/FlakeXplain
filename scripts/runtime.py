@@ -129,6 +129,10 @@ def pytest_args(repo_name):
         return ["-p", "no:threadexception", "tests/"]
     if repo_name == "freezegun":
         return ["tests/"]
+    if repo_name == "tornado":
+        # Upstream's tornado.test runner owns this suite. Repository-root
+        # discovery also collects maint/test/redbot, a separate integration app.
+        return ["tornado/test/"]
     if repo_name in {"werkzeug", "rich"}:
         return ["tests/"]
     return []
