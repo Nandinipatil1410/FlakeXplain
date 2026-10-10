@@ -134,7 +134,9 @@ def pytest_args(repo_name):
         # discovery also collects maint/test/redbot, a separate integration app.
         # Tornado's native runner defaults to INFO; ExpectLog asserts INFO
         # messages which pytest's default WARNING threshold would discard.
-        return ["--log-level=INFO", "tornado/test/"]
+        # Native unittest discovery ignores helper mixins named Test*. Pytest's
+        # unittest collector still collects all concrete TestCase subclasses.
+        return ["--log-level=INFO", "-o", "python_classes=", "tornado/test/"]
     if repo_name in {"werkzeug", "rich"}:
         return ["tests/"]
     return []
