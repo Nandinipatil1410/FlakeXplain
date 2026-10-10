@@ -632,7 +632,8 @@
       "pytest",
       "pytest-randomly"
     ],
-    "pytest_args": ["-p", "no:xdist", "-p", "flakexplain_package_sources"],
+    "pytest_args": ["-p", "no:xdist", "-p", "flakexplain_package_sources", "--ignore=conftest_reverse.py"],
+    "pytest_collection_note": "The generated reverse-order runner plugin is loaded explicitly with -p; exclude it from upstream lint-test collection to keep baseline and detection test counts identical.",
     "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
   },
   "sunpy": {

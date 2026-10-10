@@ -115,7 +115,8 @@ class RemainingSubjectTests(unittest.TestCase):
             self.assertEqual(json.loads((repo / "logs/git_test_fixture_provenance.json").read_text()),
                              [fixture])
         self.assertEqual(runtime.pytest_args("setuptools"),
-                         ["-p", "no:xdist", "-p", "flakexplain_package_sources"])
+                         ["-p", "no:xdist", "-p", "flakexplain_package_sources",
+                          "--ignore=conftest_reverse.py"])
         self.assertFalse(any("setuptools-scm" in pin for pin in
                              NEW_CANNIER_REPOS["setuptools"]["bootstrap_pkgs"]))
 
