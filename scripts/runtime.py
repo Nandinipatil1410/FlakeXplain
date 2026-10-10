@@ -132,7 +132,9 @@ def pytest_args(repo_name):
     if repo_name == "tornado":
         # Upstream's tornado.test runner owns this suite. Repository-root
         # discovery also collects maint/test/redbot, a separate integration app.
-        return ["tornado/test/"]
+        # Tornado's native runner defaults to INFO; ExpectLog asserts INFO
+        # messages which pytest's default WARNING threshold would discard.
+        return ["--log-level=INFO", "tornado/test/"]
     if repo_name in {"werkzeug", "rich"}:
         return ["tests/"]
     return []
