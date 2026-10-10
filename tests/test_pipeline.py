@@ -26,6 +26,34 @@ def write_xml(path, failure=False, count=2):
 
 
 class PipelineTests(unittest.TestCase):
+    def test_airflow_finishes_full_baseline_then_checks_only_failures(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            repo = root / "airflow"
+            repo.mkdir()
+            calls = []
+            def fake(cmd, **kwargs):
+                calls.append(cmd)
+                self.assertNotIn("-x", cmd)
+                xml = Path(next(str(x).split("=", 1)[1] for x in cmd if str(x).startswith("--junitxml=")))
+                write_xml(xml, failure=True)
+                return "", "", 1
+            with patch.object(baseline_gate, "REPOS_DIR", root), \
+                 patch.object(baseline_gate, "fingerprint", return_value={"id": "same"}), \
+                 patch.object(baseline_gate, "run_command", side_effect=fake), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                self.assertFalse(baseline_gate.verify_baseline("airflow")[0])
+                self.assertEqual(len(calls), 2)
+                self.assertNotIn("--lf", calls[0])
+                self.assertIn("--lf", calls[1])
+                calls.clear()
+                self.assertFalse(baseline_gate.verify_baseline("airflow")[0])
+                self.assertEqual(len(calls), 1)
+                self.assertIn("--lf", calls[0])
+            state = runtime.read_json(repo / "baseline_state.json")
+            self.assertEqual(state["status"], "FAILED")
+            self.assertIn("attempt_1.xml", state["xml_file"])
+
     def test_live_output_is_saved_without_truncation(self):
         with tempfile.TemporaryDirectory() as folder:
             log = Path(folder) / "command.log"

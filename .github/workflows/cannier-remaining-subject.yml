@@ -60,6 +60,21 @@ jobs:
           mkdir -p "$FLAKEXPLAIN_WORK"
           chown -R cannier:cannier "$GITHUB_WORKSPACE" "$FLAKEXPLAIN_WORK"
           runuser -u cannier -- id
+      - name: Identify Airflow checkpoint recipe
+        if: inputs.subject == 'airflow'
+        run: |
+          echo "FLAKEXPLAIN_CHECKPOINT_SCOPE=airflow-v1-${{ hashFiles('scripts/**', 'run_all.py', 'cannier-replication/**', '.github/workflows/cannier-remaining-subject.yml') }}" >> "$GITHUB_ENV"
+      - name: Restore Airflow completed work
+        if: inputs.subject == 'airflow'
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ runner.temp }}/flakexplain
+          key: ${{ env.FLAKEXPLAIN_CHECKPOINT_SCOPE }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ${{ env.FLAKEXPLAIN_CHECKPOINT_SCOPE }}-
+      - name: Restore Airflow experiment ownership
+        if: inputs.subject == 'airflow'
+        run: chown -R cannier:cannier "$RUNNER_TEMP/flakexplain"
       - name: Prepare xonsh shell-test environment
         if: inputs.subject == 'xonsh'
         run: |
@@ -253,6 +268,12 @@ jobs:
           MODE: ${{ inputs.mode }}
         run: |
           python scripts/package_cannier_evidence.py --subject "$SUBJECT" --work-dir "$FLAKEXPLAIN_WORK" --output evidence
+      - name: Save Airflow progress even after failure
+        if: always() && inputs.subject == 'airflow' && env.FLAKEXPLAIN_CHECKPOINT_SCOPE != ''
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ runner.temp }}/flakexplain
+          key: ${{ env.FLAKEXPLAIN_CHECKPOINT_SCOPE }}-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Upload raw evidence even after failure
         if: always()
         uses: actions/upload-artifact@v7

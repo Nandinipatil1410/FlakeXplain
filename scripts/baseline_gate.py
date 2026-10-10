@@ -7,12 +7,13 @@ import time
 import xml.etree.ElementTree as ET
 
 from runtime import (REPOS, REPOS_DIR, atomic_json, baseline_state, complete_xml, fingerprint,
-                     pytest_args, pytest_command, pytest_env, run_command)
+                     pytest_args, pytest_command, pytest_env, read_json, run_command)
 
 
 def verify_baseline(repo_name, force=False):
     repo = REPOS_DIR / repo_name
     current = fingerprint(repo)
+    previous = read_json(repo / "baseline_state.json")
     state = baseline_state(repo, current)
     if state and not force:
         print(f"{repo_name}: reusing PASSED baseline for unchanged environment.", flush=True)
@@ -27,6 +28,22 @@ def verify_baseline(repo_name, force=False):
     elapsed = 0.0
     attempts = []
     for attempt in range(1, 4):
+        if repo_name == "airflow" and (attempt > 1 or (
+                previous.get("status") == "FAILED" and
+                previous.get("environment_id") == current["id"])) and not force:
+            # Diagnostic only: a focused pass never opens the baseline gate.
+            diagnostic = pytest_command(repo_name, repo) + [
+                "-p", "no:randomly", "-p", "no:cov", "--tb=short", "-q",
+                "--lf", "--last-failed-no-failures=none",
+                f"--junitxml={log_dir / ('failed_check_' + str(attempt) + '.xml')}",
+            ] + pytest_args(repo_name)
+            print("Checking previous Airflow failures before repeating the full baseline.", flush=True)
+            _, _, diagnostic_code = run_command(
+                diagnostic, cwd=repo, env=pytest_env(repo),
+                log_path=log_dir / f"failed_check_{attempt}.log")
+            if diagnostic_code not in (0, 5):
+                print("Failure persists; retaining full baseline evidence without rerunning passed tests.", flush=True)
+                break
         print(f"\n--- Baseline Attempt {attempt}/3 for {repo_name} ---", flush=True)
         xml = log_dir / f"attempt_{attempt}.xml"
         # A failed suite cannot pass the gate; stop at its first failure.
@@ -36,6 +53,9 @@ def verify_baseline(repo_name, force=False):
             "--durations=15", f"--junitxml={xml}",
         ]
         cmd += pytest_args(repo_name)
+        if repo_name == "airflow":
+            # Finish discovery/execution to expose every failure in one run.
+            cmd.remove("-x")
         start = time.monotonic()
         _, _, code = run_command(cmd, cwd=repo, env=pytest_env(repo),
                                  log_path=log_dir / f"attempt_{attempt}.log")
@@ -57,7 +77,8 @@ def verify_baseline(repo_name, force=False):
     passed = passing_attempt is not None
     state = dict(status="PASSED" if passed else "FAILED", environment_id=current["id"],
                  collected_count=count, passing_attempt=passing_attempt, duration=elapsed,
-                 attempts=attempts, xml_file=attempts[-1]["xml_file"])
+                 attempts=attempts or previous.get("attempts", []),
+                 xml_file=attempts[-1]["xml_file"] if attempts else previous.get("xml_file"))
     atomic_json(repo / "baseline_state.json", state)
     status = f"PASSED (Attempt {passing_attempt}, {elapsed:.2f}s)" if passed else "FAILED (Discarded)"
     with (repo / "setup_log.md").open("a", encoding="utf-8") as log:

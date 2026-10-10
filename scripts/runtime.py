@@ -72,6 +72,8 @@ def pytest_command(repo_name, repo):
         return [python_for(repo), "-u", repo / "test_reframe.py"]
     if repo_name == "tornado":
         return [python_for(repo), "-u", BASE_DIR / "scripts/run_tornado_tests.py"]
+    if repo_name == "airflow":
+        return [python_for(repo), "-u", BASE_DIR / "scripts/run_airflow_tests.py"]
     return [python_for(repo), "-u", "-m", "pytest"]
 
 
@@ -91,17 +93,8 @@ def pytest_env(repo):
         [str(python_for(repo).parent.resolve()), env.get("PATH", "")]
     )
     import_paths = [str(repo / part) for part in ("tasks", "tests", "src", ".")]
-    if NEW_CANNIER_REPOS.get(repo.name, {}).get("pytest_dependency_paths_first"):
-        # Airflow tests/kubernetes is a test package, not the installed SDK.
-        # Preserve stdlib priority too: the legacy argparse wheel must not hide it.
-        dependency_paths = json.loads(checked_output([
-            python_for(repo), "-c",
-            "import json, sysconfig; p = sysconfig.get_paths(); "
-            "paths = [p['stdlib'], p['platstdlib'], "
-            "sysconfig.get_config_var('DESTSHARED'), p['purelib'], p['platlib']]; "
-            "print(json.dumps(list(dict.fromkeys(x for x in paths if x))))",
-        ], repo))
-        import_paths = dependency_paths + import_paths
+    # SDK precedence belongs to run_airflow_tests.py, never PYTHONPATH:
+    # child virtualenvs must not inherit the outer interpreter's site-packages.
     env["PYTHONPATH"] = os.pathsep.join(import_paths + [env.get("PYTHONPATH", "")])
     if repo.name == "urllib3":
         env["PYTHONWARNINGS"] = "always::FutureWarning"
@@ -255,6 +248,14 @@ def fingerprint(repo):
         value["execution_uid"] = os.getuid() if hasattr(os, "getuid") else None
         value["execution_gid"] = os.getgid() if hasattr(os, "getgid") else None
         value["snapshot_sha256"] = hashlib.sha256((BASE_DIR / config["snapshot_path"]).read_bytes()).hexdigest()
+    scope = os.environ.get("FLAKEXPLAIN_CHECKPOINT_SCOPE")
+    if scope and repo.name == "airflow" and os.environ.get("GITHUB_ACTIONS") == "true":
+        # Explicit CI scope binds identical workflow/runner recipes across hosts.
+        # Keep installed packages, source, UID/GID, Python and paths in the ID.
+        value["host"] = scope
+        value["platform"] = platform.system()
+        value["ci_system_packages"] = checked_output(["dpkg-query", "-W"], repo)
+        value["ci_os_release"] = Path('/etc/os-release').read_text()
     value["id"] = hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()
     return value
 

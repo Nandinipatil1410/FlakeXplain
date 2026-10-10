@@ -301,11 +301,20 @@ class RemainingSubjectTests(unittest.TestCase):
             broken = subprocess.run(probe, cwd=repo, env=env, capture_output=True, text=True)
             self.assertNotEqual(broken.returncode, 0)
             self.assertIn("No module named 'kubernetes.client'", broken.stderr)
-            with patch.object(runtime, "checked_output", return_value=json.dumps([sysconfig.get_path("stdlib"), str(sdk.parent)])):
-                env = runtime.pytest_env(repo)
-            fixed = subprocess.run(probe, cwd=repo, env=env, capture_output=True, text=True)
+            env = runtime.pytest_env(repo)
+            launcher = str(Path(runtime.__file__).parent)
+            setup = (f"import sys; sys.path.insert(0, {launcher!r}); "
+                     "import run_airflow_tests as launcher; launcher.sysconfig.get_config_vars(); "
+                     f"launcher.sysconfig.get_paths = lambda: {{'stdlib': {sysconfig.get_path('stdlib')!r}, "
+                     f"'platstdlib': {sysconfig.get_path('platstdlib')!r}, 'purelib': {str(sdk.parent)!r}, 'platlib': {str(sdk.parent)!r}}}; "
+                     "launcher.prioritize_dependencies(); ")
+            fixed = subprocess.run([sys.executable, "-c", setup + probe[2]], cwd=repo, env=env, capture_output=True, text=True)
             self.assertEqual(fixed.returncode, 0, fixed.stderr)
             self.assertEqual(fixed.stdout.strip(), "installed-sdk")
+            self.assertNotIn(str(sdk.parent), env["PYTHONPATH"].split(os.pathsep))
+            child = subprocess.run([sys.executable, "-c", "import kubernetes.client"],
+                                   cwd=repo, env=env, capture_output=True, text=True)
+            self.assertNotEqual(child.returncode, 0)
             for part in ("tasks", "tests", "src", "."):
                 self.assertIn(str(repo / part), env["PYTHONPATH"].split(os.pathsep))
 

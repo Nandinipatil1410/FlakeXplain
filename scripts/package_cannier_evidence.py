@@ -39,6 +39,9 @@ def package(subject, work, output):
     except (OSError, subprocess.CalledProcessError):
         system_packages = "Unavailable on this platform"
     (output / "system_packages.txt").write_text(system_packages, encoding="utf-8")
+    report = root / "FlakeXplain_Flaky_Report.md"
+    if subject == "airflow" and os.environ.get("MODE") == "full" and report.is_file():
+        shutil.copyfile(report, output / report.name)
     hashes = {str(path.relative_to(output)).replace(chr(92), "/"):
               hashlib.sha256(path.read_bytes()).hexdigest()
               for path in sorted(output.rglob("*"))
