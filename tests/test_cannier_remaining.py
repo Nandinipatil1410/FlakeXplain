@@ -64,7 +64,9 @@ class RemainingSubjectTests(unittest.TestCase):
             self.assertNotEqual(git("rev-parse", "HEAD"), historical)
             self.assertEqual(json.loads((repo / "logs/git_test_fixture_provenance.json").read_text()),
                              [fixture])
-        self.assertEqual(runtime.pytest_args("setuptools"), ["-n", "0"])
+        self.assertEqual(runtime.pytest_args("setuptools"), ["-p", "no:xdist"])
+        self.assertFalse(any("setuptools-scm" in pin for pin in
+                             NEW_CANNIER_REPOS["setuptools"]["bootstrap_pkgs"]))
 
     def test_skimage_data_is_pinned_verified_and_reusable_offline(self):
         config = NEW_CANNIER_REPOS["scikit_image"]
