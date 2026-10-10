@@ -63,7 +63,7 @@ jobs:
       - name: Identify Airflow checkpoint recipe
         if: inputs.subject == 'airflow'
         run: |
-          echo "FLAKEXPLAIN_CHECKPOINT_SCOPE=airflow-v1-${{ hashFiles('scripts/**', 'run_all.py', 'cannier-replication/**', '.github/workflows/cannier-remaining-subject.yml') }}" >> "$GITHUB_ENV"
+          echo "FLAKEXPLAIN_CHECKPOINT_SCOPE=airflow-v1-${{ hashFiles('scripts/*.py', 'scripts/*.sh', 'run_all.py', 'cannier-replication/**', '.github/workflows/cannier-remaining-subject.yml') }}" >> "$GITHUB_ENV"
       - name: Restore Airflow completed work
         if: inputs.subject == 'airflow'
         uses: actions/cache/restore@v4
