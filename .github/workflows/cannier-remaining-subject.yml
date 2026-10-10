@@ -236,6 +236,10 @@ jobs:
           # The editable CMake layout tests explicitly use the Ninja generator.
           apt-get install -y ninja-build
           runuser -u cannier -- ninja --version
+          # Historical SCM fixtures recursively clone local temporary repositories.
+          # Scope their file transport to the disposable container experiment user.
+          runuser -u cannier -- env HOME=/home/cannier git config --global protocol.file.allow always
+          runuser -u cannier -- env HOME=/home/cannier git config --global --get protocol.file.allow
           # These exact paths are selected by conans/test/conftest.py.
           for version in 3.15.7 3.16.9 3.17.5 3.19.7; do
             archive="cmake-${version}-Linux-x86_64.tar.gz"
