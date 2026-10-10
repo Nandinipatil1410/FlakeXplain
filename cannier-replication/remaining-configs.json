@@ -129,7 +129,7 @@
       "PKG_CONFIG_PATH"
     ],
     "snapshot_additions": [
-      "cmake==3.19.7"
+      "cmake==3.18.4.post1"
     ],
     "verify_pkgs": [
       "conan",

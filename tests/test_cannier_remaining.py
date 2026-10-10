@@ -264,7 +264,7 @@ class RemainingSubjectTests(unittest.TestCase):
                                   ("cirq", "typing-extensions==3.10.0.2"),
                                   ("cirq", "typed-ast==1.4.3"), ("cirq", "filelock==3.4.1"),
                                   ("cirq", "matplotlib==3.5.2"),
-                                  ("conan", "cmake==3.19.7"),
+                                  ("conan", "cmake==3.18.4.post1"),
                                   ("electrum", "pycryptodomex==3.10.1"),
                                   ("flexget", "six==1.15.0")]:
             config = NEW_CANNIER_REPOS[subject]
