@@ -60,6 +60,23 @@ jobs:
           mkdir -p "$FLAKEXPLAIN_WORK"
           chown -R cannier:cannier "$GITHUB_WORKSPACE" "$FLAKEXPLAIN_WORK"
           runuser -u cannier -- id
+      - name: Prepare xonsh home-directory search environment
+        if: inputs.subject == 'xonsh'
+        run: |
+          # The pinned builtins tests search HOME with ~/\w\w.* and ~/.*.
+          # A minimal container home contains only dotfiles; an unmatched
+          # shell-mode search intentionally returns the literal pattern.
+          # Supply an ordinary home directory before baseline and all rounds.
+          install -d -m 0755 -o cannier -g cannier /home/cannier/Documents
+          runuser -u cannier -- env HOME=/home/cannier python - <<'PY'
+          import os
+          import re
+
+          home = os.path.expanduser("~")
+          assert home == "/home/cannier", home
+          assert any(re.fullmatch(r"\w\w.*", name) for name in os.listdir(home))
+          print("Verified xonsh HOME has ordinary regex-searchable entries:", home)
+          PY
       - name: Prepare Pillow image viewer and virtual display
         if: inputs.subject == 'pillow'
         run: |
