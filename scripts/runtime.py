@@ -136,7 +136,9 @@ def pytest_args(repo_name):
         # messages which pytest's default WARNING threshold would discard.
         # Native unittest discovery ignores helper mixins named Test*. Pytest's
         # unittest collector still collects all concrete TestCase subclasses.
-        return ["--log-level=INFO", "-o", "python_classes=", "tornado/test/"]
+        # tornado.test is a namespace package: preserve qualified module names
+        # used by config fixtures rather than importing options_test twice.
+        return ["--import-mode=importlib", "--log-level=INFO", "-o", "python_classes=", "tornado/test/"]
     if repo_name in {"werkzeug", "rich"}:
         return ["tests/"]
     return []

@@ -315,7 +315,7 @@ version = "3.0.0"
         self.assertEqual(runtime.pytest_args("freezegun"), ["tests/"])
         self.assertEqual(
             runtime.pytest_args("tornado"),
-            ["--log-level=INFO", "-o", "python_classes=", "tornado/test/"],
+            ["--import-mode=importlib", "--log-level=INFO", "-o", "python_classes=", "tornado/test/"],
         )
         self.assertEqual(runtime.pytest_args("ipython"), [])
         self.assertIn("matplotlib==3.4.2", setup_repos.REPOS["ipython"]["extra_pkgs"])
