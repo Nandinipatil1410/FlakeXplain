@@ -89,11 +89,6 @@ def pytest_env(repo):
         [str(python_for(repo).parent.resolve()), env.get("PATH", "")]
     )
     import_paths = [str(repo / part) for part in ("tasks", "tests", "src", ".")]
-    if NEW_CANNIER_REPOS.get(repo.name, {}).get("package_test_fixtures"):
-        from package_test_fixtures import package_fixture_dir
-        # Parent directory exposes eggs to easy_install's Environment scan,
-        # while keeping the packages unimportable until the tests install them.
-        import_paths.append(str(package_fixture_dir(repo)))
     if NEW_CANNIER_REPOS.get(repo.name, {}).get("pytest_dependency_paths_first"):
         # Airflow tests/kubernetes is a test package, not the installed SDK.
         # Preserve stdlib priority too: the legacy argparse wheel must not hide it.

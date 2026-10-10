@@ -604,10 +604,9 @@
     "package_test_fixtures": [
       {
         "filename": "pbr-5.6.0-py2.py3-none-any.whl",
-        "egg_name": "pbr-5.6.0-py3.8.egg",
         "url": "https://files.pythonhosted.org/packages/18/e0/1d4702dd81121d04a477c272d47ee5b6bc970d1a0990b11befa275c55cf2/pbr-5.6.0-py2.py3-none-any.whl",
         "sha256": "c68c661ac5cc81058ac94247278eeda6d2e6aecb3e227b0387c30d277e7ef8d4",
-        "note": "Authentic 2021 pbr wheel supplied as an egg for local easy_install discovery; not installed in the experiment environment."
+        "note": "Authentic 2021 pbr wheel supplied through easy_install find_links for integration tests; tests perform the installation and retain all assertions."
       }
     ],
     "prepare_egg_info": true,
@@ -624,7 +623,7 @@
       "pytest",
       "pytest-randomly"
     ],
-    "pytest_args": ["-p", "no:xdist"],
+    "pytest_args": ["-p", "no:xdist", "-p", "flakexplain_package_sources"],
     "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
   },
   "sunpy": {

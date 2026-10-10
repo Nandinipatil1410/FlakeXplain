@@ -1,9 +1,10 @@
-"""Supply authentic pinned eggs for historical easy_install integration tests."""
+"""Supply authentic pinned wheels for historical easy_install integration tests."""
 import hashlib
 from pathlib import Path
+import shutil
 from urllib.request import urlopen
 
-from runtime import atomic_json, checked_output
+from runtime import atomic_json
 
 
 def package_fixture_dir(repo):
@@ -25,11 +26,7 @@ def prepare_package_test_fixtures(python, repo, config):
             wheel.write_bytes(payload)
         if hashlib.sha256(wheel.read_bytes()).hexdigest() != fixture["sha256"]:
             raise RuntimeError("Package fixture checksum mismatch: " + fixture["filename"])
-        egg = root / fixture["egg_name"]
-        if not egg.exists():
-            checked_output([str(python), "-c",
-                            "from setuptools.wheel import Wheel; import sys; "
-                            "Wheel(sys.argv[1]).install_as_egg(sys.argv[2])",
-                            str(wheel), str(egg)], repo)
     if fixtures:
+        shutil.copyfile(Path(__file__).with_name("flakexplain_package_sources.py"),
+                        Path(repo) / "flakexplain_package_sources.py")
         atomic_json(Path(repo) / "logs/package_test_fixture_provenance.json", fixtures)

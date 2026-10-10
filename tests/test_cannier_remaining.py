@@ -38,24 +38,24 @@ class RemainingSubjectTests(unittest.TestCase):
 
     def test_easy_install_fixture_checksums_and_subject_import_path(self):
         payload = b"verified wheel bytes"
-        fixture = dict(filename="example.whl", egg_name="example-1.0.egg",
+        fixture = dict(filename="example.whl",
                        url="https://example.invalid/example.whl",
                        sha256=hashlib.sha256(payload).hexdigest())
         config = dict(package_test_fixtures=[fixture])
         with tempfile.TemporaryDirectory() as folder:
             repo = Path(folder)
-            with patch.object(package_test_fixtures, "urlopen", return_value=io.BytesIO(payload)), \
-                    patch.object(package_test_fixtures, "checked_output") as convert:
+            with patch.object(package_test_fixtures, "urlopen", return_value=io.BytesIO(payload)):
                 package_test_fixtures.prepare_package_test_fixtures(Path("python"), repo, config)
-                self.assertIn("install_as_egg", convert.call_args.args[0][2])
+                self.assertTrue((repo / "flakexplain_package_sources.py").is_file())
             wheel = package_test_fixtures.package_fixture_dir(repo) / "downloads/example.whl"
             wheel.write_bytes(b"corrupt")
             with self.assertRaisesRegex(RuntimeError, "checksum mismatch"):
                 package_test_fixtures.prepare_package_test_fixtures(Path("python"), repo, config)
         repo = Path("/tmp/setuptools")
         env = runtime.pytest_env(repo)
-        self.assertIn(str(package_test_fixtures.package_fixture_dir(repo)),
+        self.assertNotIn(str(package_test_fixtures.package_fixture_dir(repo)),
                       env["PYTHONPATH"].split(os.pathsep))
+        self.assertIn("flakexplain_package_sources", runtime.pytest_args("setuptools"))
 
     def test_external_git_fixture_clones_pinned_revision_without_global_changes(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -87,7 +87,8 @@ class RemainingSubjectTests(unittest.TestCase):
             self.assertNotEqual(git("rev-parse", "HEAD"), historical)
             self.assertEqual(json.loads((repo / "logs/git_test_fixture_provenance.json").read_text()),
                              [fixture])
-        self.assertEqual(runtime.pytest_args("setuptools"), ["-p", "no:xdist"])
+        self.assertEqual(runtime.pytest_args("setuptools"),
+                         ["-p", "no:xdist", "-p", "flakexplain_package_sources"])
         self.assertFalse(any("setuptools-scm" in pin for pin in
                              NEW_CANNIER_REPOS["setuptools"]["bootstrap_pkgs"]))
 
