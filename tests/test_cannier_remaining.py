@@ -25,6 +25,33 @@ import package_test_fixtures
 
 
 class RemainingSubjectTests(unittest.TestCase):
+    def test_moving_pip_source_is_pinned_without_removing_tests(self):
+        config = NEW_CANNIER_REPOS["setuptools"]
+        source = config["test_parameter_sources"][0]
+        with tempfile.TemporaryDirectory() as folder:
+            repo = Path(folder)
+            root = package_test_fixtures.package_fixture_dir(repo)
+            root.mkdir(parents=True)
+            (root / "parameter_sources.json").write_text(json.dumps([source]))
+            plugin = repo / "flakexplain_package_sources.py"
+            plugin.write_bytes((Path(package_test_fixtures.__file__).with_name(
+                plugin.name)).read_bytes())
+            fake_pytest = types.SimpleNamespace(fixture=lambda **kw: lambda f: f)
+            with patch.dict(sys.modules, pytest=fake_pytest):
+                hook = runpy.run_path(str(plugin))["pytest_collection_modifyitems"]
+            def item(module):
+                return types.SimpleNamespace(
+                    module=types.SimpleNamespace(__name__=module),
+                    callspec=types.SimpleNamespace(params={"pip_version": source["original"]}),
+                    user_properties=[])
+            target, other = item(source["module"]), item("another.test_module")
+            items = [target, other]
+            hook(items)
+            self.assertEqual(len(items), 2)
+            self.assertEqual(target.callspec.params["pip_version"], source["pinned"])
+            self.assertEqual(other.callspec.params["pip_version"], source["original"])
+            self.assertEqual(target.user_properties, [("pinned_pip_version", source["pinned"])])
+
     def test_setuptools_prepares_metadata_before_replacing_itself(self):
         config = NEW_CANNIER_REPOS["setuptools"]
         with tempfile.TemporaryDirectory() as folder, \

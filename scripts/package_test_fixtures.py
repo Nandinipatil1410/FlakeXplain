@@ -30,3 +30,6 @@ def prepare_package_test_fixtures(python, repo, config):
         shutil.copyfile(Path(__file__).with_name("flakexplain_package_sources.py"),
                         Path(repo) / "flakexplain_package_sources.py")
         atomic_json(Path(repo) / "logs/package_test_fixture_provenance.json", fixtures)
+        sources = config.get("test_parameter_sources", [])
+        atomic_json(root / "parameter_sources.json", sources)
+        atomic_json(Path(repo) / "logs/test_parameter_source_provenance.json", sources)

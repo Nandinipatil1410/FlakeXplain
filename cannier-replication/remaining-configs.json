@@ -609,6 +609,15 @@
         "note": "Authentic 2021 pbr wheel supplied through easy_install find_links for integration tests; tests perform the installation and retain all assertions."
       }
     ],
+    "test_parameter_sources": [
+      {
+        "module": "setuptools.tests.test_virtualenv",
+        "parameter": "pip_version",
+        "original": "https://github.com/pypa/pip/archive/main.zip",
+        "pinned": "https://github.com/pypa/pip/archive/76cd70ac42cbbe6a51d83bd100f500ac4c21f26b.zip",
+        "note": "Last pip commit before the pinned Setuptools snapshot (2021-07-19); pip main now requires Python >=3.10."
+      }
+    ],
     "prepare_egg_info": true,
     "git_test_fixtures": [
       {
