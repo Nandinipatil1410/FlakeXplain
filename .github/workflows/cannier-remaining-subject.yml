@@ -65,7 +65,9 @@ jobs:
         run: |
           # test_man_completion renders the repository's yes.1 fixture using
           # man and col. These commands are absent from the minimal image.
-          apt-get install -y man-db bsdmainutils
+          # The Bash completer tests also source the standard completion script.
+          apt-get install -y man-db bsdmainutils bash-completion
+          runuser -u cannier -- test -r /usr/share/bash-completion/bash_completion
           # Ubuntu's minimized image diverts man to a message-printing stub;
           # installing man-db alone leaves that stub in place.
           real_man=$(dpkg-divert --truename /usr/bin/man)
