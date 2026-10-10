@@ -26,6 +26,29 @@ def write_xml(path, failure=False, count=2):
 
 
 class PipelineTests(unittest.TestCase):
+    def test_conan_runs_complete_baselines_without_opening_failed_gate(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            repo = root / "conan"
+            repo.mkdir()
+
+            def fake(cmd, **kwargs):
+                self.assertNotIn("-x", cmd)
+                self.assertNotIn("--lf", cmd)
+                xml = Path(next(str(x).split("=", 1)[1] for x in cmd
+                                if str(x).startswith("--junitxml=")))
+                write_xml(xml, failure=True)
+                return "", "", 1
+
+            with patch.object(baseline_gate, "REPOS_DIR", root), \
+                 patch.object(baseline_gate, "fingerprint", return_value={"id": "same"}), \
+                 patch.object(baseline_gate, "run_command", side_effect=fake) as run, \
+                 contextlib.redirect_stdout(io.StringIO()):
+                self.assertFalse(baseline_gate.verify_baseline("conan")[0])
+                self.assertEqual(run.call_count, 3)
+            self.assertEqual(runtime.read_json(repo / "baseline_state.json")["status"], "FAILED")
+
+
     def test_airflow_finishes_full_baseline_then_checks_only_failures(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

@@ -234,8 +234,18 @@ jobs:
         if: inputs.subject == 'conan'
         run: |
           # The editable CMake layout tests explicitly use the Ninja generator.
-          apt-get install -y ninja-build
+          # SVN fixtures invoke both svn and svnadmin; Bazel's Linux test has
+          # no optional-tool skip, so provide its historical upstream release.
+          apt-get install -y ninja-build subversion autoconf automake libtool unzip zip
           runuser -u cannier -- ninja --version
+          runuser -u cannier -- svn --version --quiet
+          runuser -u cannier -- svnadmin --version --quiet
+          bazel_dir=$(mktemp -d)
+          curl --fail --location --retry 3 https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel-4.1.0-linux-x86_64 -o "$bazel_dir/bazel-4.1.0-linux-x86_64"
+          curl --fail --location --retry 3 https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel-4.1.0-linux-x86_64.sha256 -o "$bazel_dir/checksums.txt"
+          (cd "$bazel_dir" && sha256sum --check checksums.txt)
+          install -m 0755 "$bazel_dir/bazel-4.1.0-linux-x86_64" /usr/local/bin/bazel
+          runuser -u cannier -- bazel --version
           # Historical SCM fixtures recursively clone local temporary repositories.
           # Scope their file transport to the disposable container experiment user.
           runuser -u cannier -- env HOME=/home/cannier git config --global protocol.file.allow always
