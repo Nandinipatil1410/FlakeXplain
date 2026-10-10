@@ -160,6 +160,8 @@
                      {
                          "status":  "new-workflow",
                          "commit":  "7c6e51e85410f3647af81e601a4bb4c9073a50c8",
+                           "experiment_commit": "b071259098e9ff1dbd9e66071999f60fdf9b0fd7",
+                           "experiment_note": "Upstream v3.0.3 includes ASDF schema bug fixes; updated-source experiment, not exact CANNIER source replication.",
                          "slug":  "sunpy",
                          "repository":  "sunpy/sunpy"
                      },

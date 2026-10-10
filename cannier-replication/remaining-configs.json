@@ -638,7 +638,9 @@
   },
   "sunpy": {
     "url": "https://github.com/sunpy/sunpy.git",
-    "commit": "7c6e51e85410f3647af81e601a4bb4c9073a50c8",
+    "commit": "b071259098e9ff1dbd9e66071999f60fdf9b0fd7",
+    "original_cannier_commit": "7c6e51e85410f3647af81e601a4bb4c9073a50c8",
+    "source_revision_note": "Updated-source experiment using upstream v3.0.3. The original CANNIER commit deterministically fails ASDF coordinate-schema validation; upstream fixes include 61da21263b834b02642fbd5e66f4d8e9c2b4a21b. This is not an exact replication of the original source revision. No local test or schema patches are applied.",
     "supported_platforms": [
       "linux"
     ],

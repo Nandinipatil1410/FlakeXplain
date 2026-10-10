@@ -166,7 +166,14 @@ class RemainingSubjectTests(unittest.TestCase):
     def test_remaining_coverage_matches_the_published_inventory(self):
         root = Path(__file__).resolve().parents[1]
         inventory = json.loads((root / "cannier-replication/inventory.json").read_text(encoding="utf-8-sig"))
-        expected = {item["repository"]: item["commit"] for item in inventory["subjects"] if item["status"] == "new-workflow"}
+        expected = {item["repository"]: item.get("experiment_commit", item["commit"])
+                    for item in inventory["subjects"] if item["status"] == "new-workflow"}
+        for item in inventory["subjects"]:
+            if "experiment_commit" in item:
+                config = next(c for c in NEW_CANNIER_REPOS.values()
+                              if c["url"] == "https://github.com/" + item["repository"] + ".git")
+                self.assertEqual(config["original_cannier_commit"], item["commit"])
+                self.assertIn("not an exact replication", config["source_revision_note"])
         actual = {config["url"][len("https://github.com/"):-4]: config["commit"]
                   for config in NEW_CANNIER_REPOS.values()}
         self.assertEqual(actual, expected)
