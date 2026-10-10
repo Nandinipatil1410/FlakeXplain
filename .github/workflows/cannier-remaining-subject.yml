@@ -60,9 +60,14 @@ jobs:
           mkdir -p "$FLAKEXPLAIN_WORK"
           chown -R cannier:cannier "$GITHUB_WORKSPACE" "$FLAKEXPLAIN_WORK"
           runuser -u cannier -- id
-      - name: Prepare xonsh home-directory search environment
+      - name: Prepare xonsh shell-test environment
         if: inputs.subject == 'xonsh'
         run: |
+          # test_man_completion renders the repository's yes.1 fixture using
+          # man and col. These commands are absent from the minimal image.
+          apt-get install -y man-db bsdmainutils
+          runuser -u cannier -- man --version
+          runuser -u cannier -- col --version
           # The pinned builtins tests search HOME with ~/\w\w.* and ~/.*.
           # A minimal container home contains only dotfiles; an unmatched
           # shell-mode search intentionally returns the literal pattern.
