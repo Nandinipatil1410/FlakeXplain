@@ -70,6 +70,8 @@ def pytest_command(repo_name, repo):
     if repo_name == "reframe":
         # ReFrame's wrapper initializes the generic runtime before pytest starts.
         return [python_for(repo), "-u", repo / "test_reframe.py"]
+    if repo_name == "tornado":
+        return [python_for(repo), "-u", BASE_DIR / "scripts/run_tornado_tests.py"]
     return [python_for(repo), "-u", "-m", "pytest"]
 
 
@@ -136,9 +138,7 @@ def pytest_args(repo_name):
         # messages which pytest's default WARNING threshold would discard.
         # Native unittest discovery ignores helper mixins named Test*. Pytest's
         # unittest collector still collects all concrete TestCase subclasses.
-        # tornado.test is a namespace package: preserve qualified module names
-        # used by config fixtures rather than importing options_test twice.
-        return ["--import-mode=importlib", "--log-level=INFO", "-o", "python_classes=", "tornado/test/"]
+        return ["--log-level=INFO", "-o", "python_classes=", "tornado/test/"]
     if repo_name in {"werkzeug", "rich"}:
         return ["tests/"]
     return []
