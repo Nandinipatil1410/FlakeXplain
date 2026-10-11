@@ -25,6 +25,13 @@ import package_test_fixtures
 
 
 class RemainingSubjectTests(unittest.TestCase):
+    def test_dask_child_processes_preload_scientific_dependencies(self):
+        key = "DASK_DISTRIBUTED__WORKER__MULTIPROCESSING_METHOD"
+        with patch.dict(os.environ, {key: "spawn"}):
+            env = runtime.pytest_env(Path("dask"))
+        self.assertEqual(env[key], "forkserver")
+        self.assertEqual(runtime.pytest_args("dask"), [])
+
     def test_moving_pip_source_is_pinned_without_removing_tests(self):
         config = NEW_CANNIER_REPOS["setuptools"]
         source = config["test_parameter_sources"][0]
