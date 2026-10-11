@@ -220,17 +220,18 @@ class PipelineTests(unittest.TestCase):
                                           reverse_rounds=1)
             self.assertEqual(len(calls), 3)
             for index, (cmd, env) in enumerate(calls):
-                self.assertEqual(env["PYTEST_DISABLE_PLUGIN_AUTOLOAD"], "1")
-                self.assertEqual(env["PYTEST_PLUGINS"], "hypothesis.extra.pytestplugin")
+                self.assertNotIn("PYTEST_DISABLE_PLUGIN_AUTOLOAD", env)
+                self.assertNotIn("PYTEST_PLUGINS", env)
+                self.assertEqual(env["PYTEST_ADDOPTS"], "-p no:randomly -p no:cov")
                 plugins = [cmd[i + 1] for i, arg in enumerate(cmd[:-1]) if arg == "-p"]
                 self.assertIn("no:cov", plugins)
                 self.assertIn("randomly" if index == 1 else "no:randomly", plugins)
                 if index == 1:
                     self.assertTrue(any(str(arg).startswith("--randomly-seed=") for arg in cmd))
             child = subprocess.run(
-                [sys.executable, "-c", "import os; print(os.environ['PYTEST_DISABLE_PLUGIN_AUTOLOAD']); print(os.environ['PYTEST_PLUGINS'])"],
+                [sys.executable, "-c", "import os; print(os.environ['PYTEST_ADDOPTS']); print(os.environ.get('PYTEST_DISABLE_PLUGIN_AUTOLOAD', 'unset'))"],
                 env=calls[1][1], capture_output=True, text=True, check=True)
-            self.assertEqual(child.stdout.splitlines(), ["1", "hypothesis.extra.pytestplugin"])
+            self.assertEqual(child.stdout.splitlines(), ["-p no:randomly -p no:cov", "unset"])
 
     def test_candidate_plan_supports_three_reverse_rounds(self):
         plan = list(runner.round_plan("ipython", reverse_rounds=3))
