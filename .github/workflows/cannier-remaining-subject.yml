@@ -239,7 +239,7 @@ jobs:
           # The editable CMake layout tests explicitly use the Ninja generator.
           # SVN fixtures invoke both svn and svnadmin; Bazel's Linux test has
           # no optional-tool skip, so provide its historical upstream release.
-          apt-get install -y ninja-build subversion autoconf automake libtool unzip zip
+          apt-get install -y ninja-build subversion autoconf automake libtool unzip zip gcc-multilib g++-multilib sudo
           runuser -u cannier -- ninja --version
           runuser -u cannier -- svn --version --quiet
           runuser -u cannier -- svnadmin --version --quiet
@@ -264,6 +264,37 @@ jobs:
             ln -s "/usr/share/cmake-${version}-Linux-x86_64" "/usr/share/cmake-${version}"
             runuser -u cannier -- "/usr/share/cmake-${version}/bin/cmake" --version
           done
+      - name: Prepare historical Conan FTP service fixture
+        if: inputs.subject == 'conan'
+        run: |
+          # Fetch the authentic public demo file before routing its hostname.
+          fixture_root="$RUNNER_TEMP/conan-ftp-root"
+          install -d -m 0755 "$fixture_root/pub/example"
+          curl --fail --retry 3 --user demo:password ftp://test.rebex.net/pub/example/readme.txt -o "$fixture_root/pub/example/readme.txt"
+          sha256sum "$fixture_root/pub/example/readme.txt"
+          python -m venv "$RUNNER_TEMP/conan-ftp-venv"
+          "$RUNNER_TEMP/conan-ftp-venv/bin/python" -m pip install pyftpdlib==1.5.6
+          "$RUNNER_TEMP/conan-ftp-venv/bin/python" -m pip freeze > "$RUNNER_TEMP/conan-ftp-environment.txt"
+          "$RUNNER_TEMP/conan-ftp-venv/bin/python" scripts/conan_ftp_fixture.py --root "$fixture_root" > "$RUNNER_TEMP/conan-ftp.log" 2>&1 &
+          # Restore the historical service contract only inside this CI container.
+          echo '127.0.0.1 test.rebex.net' >> /etc/hosts
+          python - <<'PY'
+          import ftplib
+          import time
+          for attempt in range(20):
+              try:
+                  ftp = ftplib.FTP()
+                  ftp.connect("test.rebex.net", 21, timeout=5)
+                  ftp.login("demo", "password")
+                  ftp.retrbinary("RETR /pub/example/readme.txt", lambda block: None)
+                  ftp.quit()
+                  break
+              except OSError:
+                  if attempt == 19:
+                      raise
+                  time.sleep(0.5)
+          print("Verified real FTP login and readme transfer through local fixture")
+          PY
       - name: Prepare Airflow child-interpreter fixtures
         if: inputs.subject == 'airflow'
         env:
@@ -293,6 +324,17 @@ jobs:
           FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
           MODE: ${{ inputs.mode }}
         run: |
+          if [ "$SUBJECT" = conan ] && [ -d "$FLAKEXPLAIN_WORK/repos/conan" ]; then
+            mkdir -p "$FLAKEXPLAIN_WORK/repos/conan/logs"
+            for fixture_log in conan-ftp.log conan-ftp-environment.txt; do
+              if [ -f "$RUNNER_TEMP/$fixture_log" ]; then
+                cp "$RUNNER_TEMP/$fixture_log" "$FLAKEXPLAIN_WORK/repos/conan/logs/$fixture_log"
+              fi
+            done
+            if [ -f "$RUNNER_TEMP/conan-ftp-root/pub/example/readme.txt" ]; then
+              cp "$RUNNER_TEMP/conan-ftp-root/pub/example/readme.txt" "$FLAKEXPLAIN_WORK/repos/conan/logs/conan-ftp-readme.txt"
+            fi
+          fi
           python scripts/package_cannier_evidence.py --subject "$SUBJECT" --work-dir "$FLAKEXPLAIN_WORK" --output evidence
       - name: Save Airflow progress even after failure
         if: always() && inputs.subject == 'airflow' && env.FLAKEXPLAIN_CHECKPOINT_SCOPE != ''

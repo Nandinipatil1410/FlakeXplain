@@ -112,6 +112,7 @@
     "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
   },
   "conan": {
+    "external_service_fixture_note": "A real localhost FTP fixture using pyftpdlib==1.5.6 replaces the changing Rebex demo service, retaining its historical 530/550 reply text and an authentic downloaded readme. All pinned tests and assertions remain unchanged. Results describe a controlled-service environment, not an exact live-service replication.",
     "url": "https://github.com/conan-io/conan.git",
     "commit": "d524074945e840f9c9f1d4d6eba462bf6a1dc608",
     "supported_platforms": [
