@@ -53,7 +53,7 @@ def verify_baseline(repo_name, force=False):
             "--durations=15", f"--junitxml={xml}",
         ]
         cmd += pytest_args(repo_name)
-        if repo_name in ("airflow", "conan", "dask"):
+        if repo_name in ("airflow", "conan", "dask", "hypothesis"):
             # Finish discovery/execution to expose every failure in one run.
             cmd.remove("-x")
         start = time.monotonic()

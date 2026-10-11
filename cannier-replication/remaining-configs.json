@@ -286,6 +286,7 @@
     "python_version": "3.8.18",
     "installer": "cannier_snapshot",
     "install_target": "hypothesis-python",
+    "isolate_entrypoint_example": true,
     "editable_test_targets": [
       "hypothesis-python/examples/example_hypothesis_entrypoint"
     ],

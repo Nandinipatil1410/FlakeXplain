@@ -385,8 +385,26 @@ def install_cannier_snapshot(python, repo, config):
         commands.insert(1, ([str(python), "setup.py", "egg_info"], "setup-egg-info.log"))
     # Editable installs also expose example modules omitted from wheel metadata.
     for target in config.get("editable_test_targets", []):
+        target_python = python
+        if config.get("isolate_entrypoint_example"):
+            # The example's Hypothesis hook eagerly imports NumPy. Keep its
+            # distribution out of main-suite child processes (lazy-import tests).
+            companion = repo / ".entrypoint-venv"
+            _, _, code = run_command(
+                [str(python), "-m", "venv", "--without-pip", str(companion)],
+                cwd=repo, log_path=repo / "logs" / "setup-entrypoint-venv.log")
+            if code:
+                return code
+            target_python = companion / "bin" / "python"
+            main_site = checked_output(
+                [python, "-c", "import sysconfig; print(sysconfig.get_path('purelib'))"], repo)
+            companion_site = Path(checked_output(
+                [target_python, "-c", "import sysconfig; print(sysconfig.get_path('purelib'))"], repo))
+            # Reuse the exact main-suite pins, with only the example metadata
+            # installed in the companion. No second dependency resolution.
+            (companion_site / "main-subject-pins.pth").write_text(main_site + "\n", encoding="utf-8")
         commands.append((
-            [str(python), "-m", "pip", "install", "--no-deps", "--no-build-isolation",
+            [str(target_python), "-m", "pip", "install", "--no-deps", "--no-build-isolation",
              "-e", target],
             "setup-" + target.replace("/", "-") + ".log",
         ))

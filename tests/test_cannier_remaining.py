@@ -253,13 +253,20 @@ class RemainingSubjectTests(unittest.TestCase):
         for exit_code in (0, 9):
             with self.subTest(exit_code=exit_code), tempfile.TemporaryDirectory() as folder:
                 repo = Path(folder)
+                companion_site = repo / "companion-site"
+                companion_site.mkdir()
                 with patch.object(setup_repos, "run_command", side_effect=[
-                    ("", "", 0), ("", "", 0), ("", "", 0), ("", "", exit_code)
-                ]) as run:
+                    ("", "", 0), ("", "", 0), ("", "", 0), ("", "", 0), ("", "", exit_code)
+                ]) as run, patch.object(setup_repos, "checked_output", side_effect=[
+                    str(repo / "main-site"), str(companion_site)
+                ]):
                     code = setup_repos.install_cannier_snapshot(Path("python"), repo, config)
                 self.assertEqual(code, exit_code)
-                self.assertEqual(run.call_count, 4)
+                self.assertEqual(run.call_count, 5)
                 command = run.call_args.args[0]
+                self.assertEqual(command[0], str(repo / ".entrypoint-venv/bin/python"))
+                self.assertEqual((companion_site / "main-subject-pins.pth").read_text(),
+                                 str(repo / "main-site") + "\n")
                 self.assertEqual(command[-2:], ["-e", target])
                 self.assertIn("--no-deps", command)
                 self.assertIn("--no-build-isolation", command)

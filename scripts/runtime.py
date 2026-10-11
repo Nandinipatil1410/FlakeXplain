@@ -74,6 +74,8 @@ def pytest_command(repo_name, repo):
         return [python_for(repo), "-u", BASE_DIR / "scripts/run_tornado_tests.py"]
     if repo_name == "airflow":
         return [python_for(repo), "-u", BASE_DIR / "scripts/run_airflow_tests.py"]
+    if repo_name == "hypothesis":
+        return [python_for(repo), "-u", BASE_DIR / "scripts/run_hypothesis_tests.py"]
     return [python_for(repo), "-u", "-m", "pytest"]
 
 
@@ -242,6 +244,9 @@ def fingerprint(repo):
                  untracked_source=source_files, packages=sorted(freeze.splitlines()), python=version,
                  platform=platform.platform(), machine=platform.machine(),
                  host=platform.node(), repo_path=str(repo))
+    if repo.name == "hypothesis" and (repo / ".entrypoint-venv/bin/python").exists():
+        value["entrypoint_packages"] = checked_output(
+            [repo / ".entrypoint-venv/bin/python", "-m", "pip", "freeze", "--all"], repo).splitlines()
     if repo.name in NEW_CANNIER_REPOS:
         config = NEW_CANNIER_REPOS[repo.name]
         value["cannier_recipe"] = config
@@ -249,7 +254,7 @@ def fingerprint(repo):
         value["execution_gid"] = os.getgid() if hasattr(os, "getgid") else None
         value["snapshot_sha256"] = hashlib.sha256((BASE_DIR / config["snapshot_path"]).read_bytes()).hexdigest()
     scope = os.environ.get("FLAKEXPLAIN_CHECKPOINT_SCOPE")
-    if scope and repo.name == "airflow" and os.environ.get("GITHUB_ACTIONS") == "true":
+    if scope and repo.name in ("airflow", "hypothesis") and os.environ.get("GITHUB_ACTIONS") == "true":
         # Explicit CI scope binds identical workflow/runner recipes across hosts.
         # Keep installed packages, source, UID/GID, Python and paths in the ID.
         value["host"] = scope

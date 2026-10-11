@@ -63,11 +63,11 @@ jobs:
           chown -R cannier:cannier "$GITHUB_WORKSPACE" "$FLAKEXPLAIN_WORK"
           runuser -u cannier -- id
       - name: Identify Airflow checkpoint recipe
-        if: inputs.subject == 'airflow'
+        if: inputs.subject == 'airflow' || inputs.subject == 'hypothesis'
         run: |
-          echo "FLAKEXPLAIN_CHECKPOINT_SCOPE=airflow-v1-${{ hashFiles('scripts/*.py', 'scripts/*.sh', 'run_all.py', 'cannier-replication/**', '.github/workflows/cannier-remaining-subject.yml') }}" >> "$GITHUB_ENV"
+          echo "FLAKEXPLAIN_CHECKPOINT_SCOPE=${{ inputs.subject }}-v1-${{ hashFiles('scripts/*.py', 'scripts/*.sh', 'run_all.py', 'cannier-replication/**', '.github/workflows/cannier-remaining-subject.yml') }}" >> "$GITHUB_ENV"
       - name: Restore Airflow completed work
-        if: inputs.subject == 'airflow'
+        if: inputs.subject == 'airflow' || inputs.subject == 'hypothesis'
         uses: actions/cache/restore@v4
         with:
           path: ${{ runner.temp }}/flakexplain
@@ -75,7 +75,7 @@ jobs:
           restore-keys: |
             ${{ env.FLAKEXPLAIN_CHECKPOINT_SCOPE }}-
       - name: Restore Airflow experiment ownership
-        if: inputs.subject == 'airflow'
+        if: inputs.subject == 'airflow' || inputs.subject == 'hypothesis'
         run: chown -R cannier:cannier "$RUNNER_TEMP/flakexplain"
       - name: Prepare xonsh shell-test environment
         if: inputs.subject == 'xonsh'
@@ -306,14 +306,14 @@ jobs:
           runuser -u cannier -- env HOME=/home/cannier USER=cannier LOGNAME=cannier python scripts/prepare_airflow_runtime.py --repo "$FLAKEXPLAIN_REPOS_DIR/airflow" --check-tests
       - name: Run strict baseline gate
         if: inputs.mode == 'baseline-only'
-        timeout-minutes: 300
+        timeout-minutes: ${{ inputs.subject == 'hypothesis' && 330 || 300 }}
         env:
           FLAKEXPLAIN_PYTHON: ${{ steps.pipeline-python.outputs.python-path }}
           FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
         run: bash scripts/run_cannier_subject.sh baseline-only
       - name: Run baseline and 25 detection rounds
         if: inputs.mode == 'full'
-        timeout-minutes: 300
+        timeout-minutes: ${{ inputs.subject == 'hypothesis' && 330 || 300 }}
         env:
           FLAKEXPLAIN_PYTHON: ${{ steps.pipeline-python.outputs.python-path }}
           FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
@@ -337,7 +337,7 @@ jobs:
           fi
           python scripts/package_cannier_evidence.py --subject "$SUBJECT" --work-dir "$FLAKEXPLAIN_WORK" --output evidence
       - name: Save Airflow progress even after failure
-        if: always() && inputs.subject == 'airflow' && env.FLAKEXPLAIN_CHECKPOINT_SCOPE != ''
+        if: always() && (inputs.subject == 'airflow' || inputs.subject == 'hypothesis') && env.FLAKEXPLAIN_CHECKPOINT_SCOPE != ''
         uses: actions/cache/save@v4
         with:
           path: ${{ runner.temp }}/flakexplain
