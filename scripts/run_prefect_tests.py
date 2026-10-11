@@ -8,6 +8,22 @@ import sys
 
 import pendulum
 import pytest
+from zmq.utils import jsonapi
+
+
+def verify_notebook_serializer():
+    """Initialize the real JSON backend before docs' optional-import mocks.
+
+    docs/test_generate_docs.py loads Prefect's integrations under an import
+    hook that returns MagicMock for missing optional packages. PyZMQ 22.1.0
+    otherwise caches a mocked simplejson as its backend during collection.
+    Normal import here lets PyZMQ select its authentic installed JSON backend.
+    """
+    sample = {"flakexplain_serializer_probe": [1, True, None]}
+    packed = jsonapi.dumps(sample)
+    if not isinstance(packed, bytes) or jsonapi.loads(packed) != sample:
+        raise RuntimeError("Jupyter requires a real JSON serializer returning bytes")
+    print("Verified notebook JSON backend:", jsonapi.jsonmod.__name__, flush=True)
 
 
 class HistoricalExpiryClock:
@@ -22,5 +38,6 @@ class HistoricalExpiryClock:
 
 
 if __name__ == "__main__":
+    verify_notebook_serializer()
     print("Prefect expiry fixture: Pendulum 2021-07-01 UTC for test_create_key only", flush=True)
     raise SystemExit(pytest.main(sys.argv[1:], plugins=[HistoricalExpiryClock()]))

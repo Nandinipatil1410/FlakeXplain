@@ -255,6 +255,9 @@ def fingerprint(repo):
         value["execution_uid"] = os.getuid() if hasattr(os, "getuid") else None
         value["execution_gid"] = os.getgid() if hasattr(os, "getgid") else None
         value["snapshot_sha256"] = hashlib.sha256((BASE_DIR / config["snapshot_path"]).read_bytes()).hexdigest()
+    if repo.name == "prefect":
+        value["prefect_test_launcher_sha256"] = hashlib.sha256(
+            (BASE_DIR / "scripts/run_prefect_tests.py").read_bytes()).hexdigest()
     if repo.name == "dask":
         dask_config = Path.home() / ".config" / "dask" / "flakexplain.yaml"
         value["dask_runtime_config_sha256"] = (

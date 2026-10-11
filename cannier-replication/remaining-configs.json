@@ -488,6 +488,7 @@
       "pytest-randomly"
     ],
     "pytest_args": ["-o", "faulthandler_timeout=180"],
+    "preload_test_modules": ["zmq.utils.jsonapi"],
     "expiry_clock_fixture": {
       "node": "tests/cli/test_auth.py::test_create_key",
       "pendulum_now": "2021-07-01T00:00:00Z",
