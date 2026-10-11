@@ -450,10 +450,12 @@ class RemainingSubjectTests(unittest.TestCase):
                     patch.object(os, "geteuid", return_value=1001, create=True), \
                     patch.object(os, "isatty", return_value=tty), \
                     patch.object(os, "getlogin", return_value=login), \
+                    patch.object(os, "umask") as umask, \
                     patch.object(os, "execv") as execute, \
                     patch.object(sys, "argv", [str(script), "salt", "--baseline-only", "--work-dir", "/tmp/work space"]):
                 if tty and login == "cannier":
                     main()
+                    umask.assert_called_once_with(0o022)
                     self.assertEqual(execute.call_args.args, (sys.executable, [
                         sys.executable, str(setup_repos.BASE_DIR / "run_all.py"),
                         "salt", "--baseline-only", "--work-dir", "/tmp/work space"]))

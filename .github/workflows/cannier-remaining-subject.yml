@@ -204,10 +204,14 @@ jobs:
       - name: Prepare Salt terminal login service
         if: inputs.subject == 'salt'
         run: |
-          apt-get install -y openssh-server openssh-client
-          # Salt unit tests use the default cache as an unprivileged user.
-          install -d -m 0755 -o cannier -g cannier /var/cache/salt
+          apt-get install -y openssh-server openssh-client iproute2
+          # The pinned unit suite uses Salt's default cache directory.
+          # Keep the experiment unprivileged while providing writable state.
+          install -d -m 0755 -o cannier -g cannier /var/cache/salt /etc/salt
           runuser -u cannier -- test -w /var/cache/salt
+          runuser -u cannier -- test -w /etc/salt
+          # Salt discovers local interfaces through the system ip command.
+          runuser -u cannier -- ip -4 addr show scope global | grep 'inet '
           install -d -m 0755 /run/sshd
           # Minimal containers may omit the login accounting file.
           touch /run/utmp
