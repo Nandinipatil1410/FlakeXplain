@@ -205,6 +205,9 @@ jobs:
         if: inputs.subject == 'salt'
         run: |
           apt-get install -y openssh-server openssh-client
+          # Salt unit tests use the default cache as an unprivileged user.
+          install -d -m 0755 -o cannier -g cannier /var/cache/salt
+          runuser -u cannier -- test -w /var/cache/salt
           install -d -m 0755 /run/sshd
           # Minimal containers may omit the login accounting file.
           touch /run/utmp
