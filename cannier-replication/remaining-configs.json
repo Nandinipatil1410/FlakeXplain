@@ -303,11 +303,11 @@
     ],
     "snapshot_path": "cannier-replication/subjects/hypothesis/requirements.txt",
     "pytest_unset_env": [
-      "PYTEST_DISABLE_PLUGIN_AUTOLOAD",
-      "PYTEST_PLUGINS"
+      "PYTEST_ADDOPTS"
     ],
     "pytest_env": {
-      "PYTEST_ADDOPTS": "-p no:randomly -p no:cov"
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "PYTEST_PLUGINS": "flakexplain_hypothesis_plugins"
     },
     "verify_pkgs": [
       "hypothesis",

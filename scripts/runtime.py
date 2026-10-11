@@ -97,6 +97,8 @@ def pytest_env(repo):
         [str(python_for(repo).parent.resolve()), env.get("PATH", "")]
     )
     import_paths = [str(repo / part) for part in ("tasks", "tests", "src", ".")]
+    if repo.name == "hypothesis":
+        import_paths.append(str(BASE_DIR / "scripts"))
     # SDK precedence belongs to run_airflow_tests.py, never PYTHONPATH:
     # child virtualenvs must not inherit the outer interpreter's site-packages.
     env["PYTHONPATH"] = os.pathsep.join(import_paths + [env.get("PYTHONPATH", "")])
