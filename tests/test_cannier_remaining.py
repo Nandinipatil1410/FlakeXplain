@@ -266,7 +266,7 @@ class RemainingSubjectTests(unittest.TestCase):
                 command = run.call_args.args[0]
                 self.assertEqual(command[0], str(repo / ".entrypoint-venv/bin/python"))
                 self.assertEqual((companion_site / "main-subject-pins.pth").read_text(),
-                                 str(repo / "main-site") + "\n")
+                                 "import site; site.addsitedir(" + repr(str(repo / "main-site")) + ")\n")
                 self.assertEqual(command[-2:], ["-e", target])
                 self.assertIn("--no-deps", command)
                 self.assertIn("--no-build-isolation", command)

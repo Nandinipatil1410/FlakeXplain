@@ -402,7 +402,8 @@ def install_cannier_snapshot(python, repo, config):
                 [target_python, "-c", "import sysconfig; print(sysconfig.get_path('purelib'))"], repo))
             # Reuse the exact main-suite pins, with only the example metadata
             # installed in the companion. No second dependency resolution.
-            (companion_site / "main-subject-pins.pth").write_text(main_site + "\n", encoding="utf-8")
+            (companion_site / "main-subject-pins.pth").write_text(
+                "import site; site.addsitedir(" + repr(main_site) + ")\n", encoding="utf-8")
         commands.append((
             [str(target_python), "-m", "pip", "install", "--no-deps", "--no-build-isolation",
              "-e", target],
