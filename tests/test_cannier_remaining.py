@@ -26,10 +26,22 @@ import package_test_fixtures
 
 class RemainingSubjectTests(unittest.TestCase):
     def test_dask_child_processes_preload_scientific_dependencies(self):
-        key = "DASK_DISTRIBUTED__WORKER__MULTIPROCESSING_METHOD"
-        with patch.dict(os.environ, {key: "spawn"}):
-            env = runtime.pytest_env(Path("dask"))
-        self.assertEqual(env[key], "forkserver")
+        config = NEW_CANNIER_REPOS["dask"]
+        self.assertEqual(config["dask_multiprocessing_method"], "forkserver")
+        self.assertNotIn("pytest_env", config)
+        with tempfile.TemporaryDirectory() as folder:
+            home = Path(folder) / "home"
+            repo = Path(folder) / "repo"
+            with patch.object(Path, "home", return_value=home):
+                setup_repos.prepare_dask_config(repo, config)
+                target = home / ".config" / "dask" / "flakexplain.yaml"
+                expected = "distributed:\n  worker:\n    multiprocessing-method: forkserver\n"
+                self.assertEqual(target.read_text(), expected)
+                self.assertEqual((repo / "logs" / "dask-runtime-config.txt").read_text(), expected)
+                setup_repos.prepare_dask_config(repo, config)
+                target.write_text("different config")
+                with self.assertRaisesRegex(RuntimeError, "Refusing to overwrite"):
+                    setup_repos.prepare_dask_config(repo, config)
         self.assertEqual(runtime.pytest_args("dask"), [])
 
     def test_moving_pip_source_is_pinned_without_removing_tests(self):

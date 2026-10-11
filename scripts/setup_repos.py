@@ -367,9 +367,28 @@ def prepare_test_fixtures(repo, config):
         atomic_json(repo / "logs" / "test_fixture_provenance.json", config["test_fixtures"])
 
 
+def prepare_dask_config(repo, config):
+    """Configure scheduler children without polluting Dask's environment tests."""
+    method = config.get("dask_multiprocessing_method")
+    if method is None:
+        return
+    if method != "forkserver":
+        raise RuntimeError("Unsupported historical Dask multiprocessing method")
+    target = Path.home() / ".config" / "dask" / "flakexplain.yaml"
+    content = "distributed:\n  worker:\n    multiprocessing-method: forkserver\n"
+    if target.exists() and target.read_text(encoding="utf-8") != content:
+        raise RuntimeError("Refusing to overwrite different Dask runtime configuration")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(content, encoding="utf-8")
+    log = repo / "logs" / "dask-runtime-config.txt"
+    log.parent.mkdir(parents=True, exist_ok=True)
+    log.write_text(content, encoding="utf-8")
+
+
 def install_cannier_snapshot(python, repo, config):
     """Restore recorded pins without silently resolving newer transitive versions."""
     requirements = cannier_requirements(repo, config)
+    prepare_dask_config(repo, config)
     commands = [
         ([str(python), "-m", "pip", "install", "--no-deps", "--no-build-isolation",
           "-r", str(requirements)], "setup-snapshot.log"),

@@ -253,6 +253,12 @@ def fingerprint(repo):
         value["execution_uid"] = os.getuid() if hasattr(os, "getuid") else None
         value["execution_gid"] = os.getgid() if hasattr(os, "getgid") else None
         value["snapshot_sha256"] = hashlib.sha256((BASE_DIR / config["snapshot_path"]).read_bytes()).hexdigest()
+    if repo.name == "dask":
+        dask_config = Path.home() / ".config" / "dask" / "flakexplain.yaml"
+        value["dask_runtime_config_sha256"] = (
+            hashlib.sha256(dask_config.read_bytes()).hexdigest()
+            if dask_config.is_file() else None
+        )
     scope = os.environ.get("FLAKEXPLAIN_CHECKPOINT_SCOPE")
     if scope and repo.name in ("airflow", "hypothesis") and os.environ.get("GITHUB_ACTIONS") == "true":
         # Explicit CI scope binds identical workflow/runner recipes across hosts.

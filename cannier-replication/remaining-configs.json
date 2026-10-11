@@ -167,9 +167,7 @@
       "Cython==0.29.24"
     ],
     "snapshot_path": "cannier-replication/subjects/dask/requirements.txt",
-    "pytest_env": {
-      "DASK_DISTRIBUTED__WORKER__MULTIPROCESSING_METHOD": "forkserver"
-    },
+    "dask_multiprocessing_method": "forkserver",
     "verify_pkgs": [
       "dask",
       "pytest",
