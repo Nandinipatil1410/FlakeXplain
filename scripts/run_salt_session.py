@@ -6,10 +6,13 @@ import sys
 
 
 def main():
+    if sys.version_info[:3] != (3, 8, 18):
+        raise SystemExit("Salt requires Python 3.8.18 in the terminal login: " + sys.version)
     user = pwd.getpwuid(os.geteuid()).pw_name
     if user != "cannier" or not os.isatty(0) or os.getlogin() != user:
         raise SystemExit("Salt requires an unprivileged cannier terminal login")
     print("Verified Salt terminal login: " + user, flush=True)
+    print("Verified Salt pipeline interpreter: " + sys.executable, flush=True)
     pipeline = Path(__file__).resolve().parents[1] / "run_all.py"
     os.execv(sys.executable, [sys.executable, str(pipeline), *sys.argv[1:]])
 

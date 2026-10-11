@@ -445,6 +445,7 @@ class RemainingSubjectTests(unittest.TestCase):
         self.assertEqual(runtime.pytest_args("salt"), ["tests/pytests/unit", "--capture=sys"])
         for tty, login in [(False, "cannier"), (True, "root"), (True, "cannier")]:
             with self.subTest(tty=tty, login=login), \
+                    patch.object(sys, "version_info", (3, 8, 18)), \
                     patch.object(os, "geteuid", return_value=1001, create=True), \
                     patch.object(os, "isatty", return_value=tty), \
                     patch.object(os, "getlogin", return_value=login), \
@@ -459,6 +460,11 @@ class RemainingSubjectTests(unittest.TestCase):
                     with self.assertRaisesRegex(SystemExit, "terminal login"):
                         main()
                     execute.assert_not_called()
+
+        with patch.object(sys, "version_info", (3, 8, 10)), patch.object(os, "execv") as execute:
+            with self.assertRaisesRegex(SystemExit, "Python 3.8.18"):
+                main()
+            execute.assert_not_called()
 
     def test_invalid_snapshot_exclusions_are_rejected(self):
         config = NEW_CANNIER_REPOS["libcloud"]
