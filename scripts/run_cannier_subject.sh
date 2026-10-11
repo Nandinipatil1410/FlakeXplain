@@ -15,8 +15,11 @@ if [ "$SUBJECT" = salt ]; then
   "$python" -c 'import sys; assert sys.version_info[:3] == (3, 8, 18), sys.version'
   # SSH supplies both a controlling terminal and a real utmp login record.
   # Quote each argument independently for the remote login shell.
-  printf -v command 'cd %q && exec env HOME=/home/cannier USER=cannier LOGNAME=cannier PATH=%q %q %q' \
-    "$GITHUB_WORKSPACE" "$(dirname "$python"):$PATH" "$python" "$GITHUB_WORKSPACE/scripts/run_salt_session.py"
+  # setup-python's shared libpython must accompany its executable. sshd drops
+  # LD_LIBRARY_PATH; otherwise the loader uses Ubuntu's libpython 3.8.10.
+  library_path="$(dirname "$(dirname "$python")")/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+  printf -v command 'cd %q && exec env HOME=/home/cannier USER=cannier LOGNAME=cannier PATH=%q LD_LIBRARY_PATH=%q %q %q' \
+    "$GITHUB_WORKSPACE" "$(dirname "$python"):$PATH" "$library_path" "$python" "$GITHUB_WORKSPACE/scripts/run_salt_session.py"
   printf -v arguments ' %q' "${args[@]}"
   exec ssh -tt -p 2222 -i /home/cannier/.ssh/salt_ci \
     -o BatchMode=yes -o StrictHostKeyChecking=yes \
