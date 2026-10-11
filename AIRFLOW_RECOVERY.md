@@ -1,5 +1,23 @@
 # Airflow execution and recovery
 
+Runtime prerequisite correction (implemented, complete CI result pending):
+Airflow now uses Python 3.8.7, before the Python 3.8.8 query-separator change
+that breaks this pinned suite's semicolon URL assertion. Ubuntu's Python 2.7
+is installed for the operator tests that explicitly request python2/python2.7.
+The Airflow container runs with Docker's init process so orphaned children can
+be reaped after process-group termination.
+
+The disposable base Python's site-packages contains an explicit .pth bridge to
+Airflow's dependency environment. This recreates globally installed dependency
+visibility for upstream --system-site-packages child virtualenvs while isolated
+child virtualenvs cannot see those packages. Both modes are checked using real
+virtualenvs before execution; the bridge, checksum, Python 2 version and PID 1
+are recorded in logs/airflow-runtime-fixtures.json. The seven previous failure
+areas are checked first as diagnostic prerequisites with INFO logs, then the
+complete strict baseline still runs. Diagnostic tests never supply labels or
+replace a complete baseline. This is a new environment; previous failed-run
+evidence remains separate.
+
 Implemented: Airflow's outer pytest launcher prioritizes standard-library and
 installed SDK imports in its own sys.path. PYTHONPATH retains tasks/tests/src/root
 without exporting outer site-packages into isolated child virtual environments.
