@@ -27,6 +27,16 @@ def verify_notebook_serializer():
 
 
 class HistoricalExpiryClock:
+    @pytest.hookimpl(hookwrapper=True, tryfirst=True)
+    def pytest_runtest_makereport(self, item, call):
+        # Identify the case before pytest formats an exception. Historical
+        # daemon heartbeat threads can spin through a test's mocked sleep
+        # until its fixtures tear down; source introspection can exhaust RAM.
+        if call.excinfo is not None:
+            print("\nPrefect exception before report:", item.nodeid,
+                  "phase=" + call.when, call.excinfo.typename, flush=True)
+        yield
+
     @pytest.hookimpl(hookwrapper=True)
     def pytest_runtest_call(self, item):
         path = item.nodeid.split("::", 1)[0].replace("\\", "/")

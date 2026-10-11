@@ -487,7 +487,8 @@
       "pytest",
       "pytest-randomly"
     ],
-    "pytest_args": ["-o", "faulthandler_timeout=180"],
+    "pytest_args": ["--tb=line", "-o", "faulthandler_timeout=180"],
+    "failure_reporting": "Use one-line tracebacks so failure reporting does not inspect all imported modules while heartbeat threads spin through mocked time.sleep; preserve failed outcomes and normal fixture teardown.",
     "preload_test_modules": ["zmq.utils.jsonapi"],
     "expiry_clock_fixture": {
       "node": "tests/cli/test_auth.py::test_create_key",
