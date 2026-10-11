@@ -412,6 +412,13 @@
     "snapshot_path": "cannier-replication/subjects/Pillow/requirements.txt",
     "test_fixtures": [
       {
+        "source": "cannier-replication/fixtures/pillow/crash-81154a65438ba5aaeca73fd502fa4850fbde60f8.tif",
+        "destination": "Tests/images/crash-81154a65438ba5aaeca73fd502fa4850fbde60f8.tif",
+        "sha256": "13b76234bb194c93a9a94653b4dd850ba5498f66f5f64e48e4109e7120cedc71",
+        "upstream_url": "https://raw.githubusercontent.com/python-pillow/pillow-depends/1c6d24bde58dda66cdc2e37ffbad50ab267ab732/test_images/crash-81154a65438ba5aaeca73fd502fa4850fbde60f8.tif",
+        "note": "Historical extra TIFF fixture installed separately by upstream CI; test code unchanged."
+      },
+      {
         "source": "cannier-replication/fixtures/pillow/crash_1.tif",
         "destination": "Tests/images/crash_1.tif",
         "sha256": "c7753a4ba2e83f87f26fc7485b668645c8f19b9abf10f5a919f75ce00dd01152",

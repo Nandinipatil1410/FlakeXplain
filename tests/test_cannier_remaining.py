@@ -240,6 +240,7 @@ class RemainingSubjectTests(unittest.TestCase):
         self.assertEqual({item["destination"] for item in config["test_fixtures"]}, {
             "Tests/images/crash_1.tif", "Tests/images/crash_2.tif",
             "Tests/images/string_dimension.tiff",
+            "Tests/images/crash-81154a65438ba5aaeca73fd502fa4850fbde60f8.tif",
         })
         with tempfile.TemporaryDirectory() as folder:
             repo = Path(folder) / "repos/pillow"
