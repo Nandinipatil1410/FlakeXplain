@@ -74,6 +74,8 @@ def pytest_command(repo_name, repo):
         return [python_for(repo), "-u", BASE_DIR / "scripts/run_tornado_tests.py"]
     if repo_name == "airflow":
         return [python_for(repo), "-u", BASE_DIR / "scripts/run_airflow_tests.py"]
+    if repo_name == "prefect":
+        return [python_for(repo), "-u", BASE_DIR / "scripts/run_prefect_tests.py"]
     if repo_name == "hypothesis":
         return [python_for(repo), "-u", BASE_DIR / "scripts/run_hypothesis_tests.py"]
     return [python_for(repo), "-u", "-m", "pytest"]
