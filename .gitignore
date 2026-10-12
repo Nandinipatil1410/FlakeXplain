@@ -11,3 +11,10 @@ __pycache__/
 .tmp-werkzeug-inspect/
 .tmp-rich-inspect/
 .tmp-pytest-inspect/
+
+# Disposable debugging files and local research evidence (never blanket-ignore fixtures).
+/.tmp-*
+/local-evidence/
+/airflow-evidence/
+/dask-evidence/
+/*.backup.md

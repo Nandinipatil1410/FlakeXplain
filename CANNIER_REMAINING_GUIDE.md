@@ -12,8 +12,14 @@ Source manifest and snapshots are vendored from CANNIER replication revision
 b96d6ed02e98d514eb6a92ca264a082234cb9728, with its license and README.
 See cannier-replication/inventory.json for all 30 subjects and configured status.
 Existing IPython, Loguru, FontTools, Graphene, Pyramid, Kombu, PyGithub,
-Django REST framework and urllib3 are excluded from the new batch. Tornado remains
-a discarded historical candidate with its earlier workflow; it is not retried.
+Django REST framework and urllib3 are excluded from the new batch. Tornado uses
+its separate `FlakeXplain CANNIER Tornado` workflow. Its strict baseline passed
+on 2026-10-10 (run 38036790978: 1,103 passed, 51 skipped). Its pytest launcher
+collects the native `tornado/test` unittest suite, preserves qualified namespace
+module imports, and enables the native runner's INFO logging. Maintenance
+integration applications under `maint/test` are outside that suite. Upstream test
+code and assertions are unchanged. Its full run 38036878585 completed all 25
+detection rounds and uploaded evidence successfully.
 The existing urllib3 experiment uses a different commit from the CANNIER subject
 manifest. Project overlap does not establish exact replication.
 
@@ -37,8 +43,13 @@ manifest. Project overlap does not establish exact replication.
 | scikit_image | https://github.com/scikit-image/scikit-image | `8fbbb516` |
 | seaborn | https://github.com/mwaskom/seaborn | `703259f2` |
 | setuptools | https://github.com/pypa/setuptools | `4d64156d` |
-| sunpy | https://github.com/sunpy/sunpy | `7c6e51e8` |
+| sunpy | https://github.com/sunpy/sunpy | `b0712590` (upstream v3.0.3; updated-source experiment) |
 | xonsh | https://github.com/xonsh/xonsh | `e9b12c8b` |
+
+SunPy's original CANNIER pin deterministically fails ASDF observer-schema
+validation. Its executable pin is now upstream v3.0.3 with the upstream fixes;
+the original revision remains in the inventory and setup recipe. This is not an
+exact source replication. See [SunPy execution provenance](SUNPY_EXECUTION.md).
 
 ## Push and run
 

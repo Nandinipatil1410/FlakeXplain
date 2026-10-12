@@ -20,8 +20,8 @@ This document provides a comprehensive, single-source context for AI coding assi
 A **flaky test** passes or fails without any changes to the underlying program source code. Flaky tests erode developer confidence in CI/CD pipelines, waste compute and human time, and obscure real bugs.
 
 ### Goals
-1. **Realistic Dataset Creation**: Build a reproducible, evidence-backed dataset of flaky and non-flaky Python tests without artificial rebalancing or synthetic duplication.
-2. **Explainable Classifier**: Train lightweight, interpretable ML models (Logistic Regression, Decision Trees, Random Forest / XGBoost) using static code features and non-leaky baseline execution statistics.
+1. **Realistic Dataset Creation**: Build a reproducible, evidence-backed dataset of observed-flaky and not-observed-flaky Python tests without artificial rebalancing or synthetic duplication.
+2. **Explainable Classifier**: Train lightweight, interpretable ML models (Logistic Regression, Decision Trees, Random Forest / XGBoost) using static code features and permitted single-run baseline measurements.
 3. **LLM Comparison**: Benchmark LLM classifiers against traditional ML on identical project-separated test splits using structured outputs.
 4. **Explainability**: Output human-readable rule sets, feature importance rankings, and SHAP explanations for predicted flakiness.
 5. **Rigorous Evaluation**: Prevent data leakage across project boundaries, separate dynamic detection evidence from features, and evaluate using Precision, Recall, F1, PR-AUC, and per-project breakdowns.
@@ -56,52 +56,70 @@ Step 5: Empirical Reporting -> Exports FlakeXplain_Flaky_Report.md
 
 ---
 
-## 🛠️ Codebase Structure & Pipeline Architecture
+## Codebase Structure & Pipeline Architecture
 
 All project code resides in `g:/My Drive/Academics/Final Year Project`:
 
-```
+```text
 g:/My Drive/Academics/Final Year Project/
-├── AGENTS.md                      # This context & instructions document
-├── run_all.py                     # Master orchestrator (CLI: python run_all.py [repo_name])
-├── run_all.bat                    # Windows batch launcher
-├── FlakeXplain_Flaky_Report.md    # Main empirical report table & observed flaky logs
-├── implementation_plan.md         # Technical implementation design document
-├── walkthrough.md                 # System setup walkthrough & guide
-├── scripts/
-│   ├── setup_repos.py             # Step 1: Clone, pin git commit, venv & freeze env
-│   ├── baseline_gate.py           # Step 2: Collected count & baseline verification (<= 3 runs)
-│   ├── idflakies_runner.py        # Step 3: Original, Random, & Reverse reordering engine
-│   ├── parse_results.py           # Step 4 & 5: JUnit XML parser & OD/NOD categorizer
-│   ├── reverse_plugin.py          # Pytest plugin inverting item sequence in-memory
-│   └── diagnose_repo.py           # Diagnostic runner capturing stdout/stderr
-└── repos/                         # Isolated repository environments
-    ├── click/
-    ├── flask/
-    ├── fsspec/
-    ├── filelock/
-    ├── httpx/
-    └── urllib3/                    # Created in GitHub Actions execution storage
+|-- AGENTS.md
+|-- EXECUTION_GUIDE.md
+|-- run_all.py
+|-- run_all.bat
+|-- FlakeXplain_Flaky_Report.md
+|-- pytest_report.md.md
+|-- rich_report.md
+|-- urllib_report.md
+|-- .github/workflows/
+|   |-- flakexplain.yml
+|   |-- flakexplain-werkzeug.yml
+|   |-- flakexplain-rich.yml
+|   `-- flakexplain-pytest.yml
+|-- scripts/
+|   |-- setup_repos.py
+|   |-- baseline_gate.py
+|   |-- idflakies_runner.py
+|   |-- parse_results.py
+|   |-- reverse_plugin.py
+|   `-- diagnose_repo.py
+`-- repos/
+    |-- click/
+    |-- flask/
+    |-- fsspec/
+    |-- filelock/
+    |-- httpx/
+    |-- urllib3/
+    |-- rich/
+    `-- pytest/
 ```
 
 ---
 
-## 📊 Current Empirical Findings (Verified Baseline)
+## Current Empirical Findings
 
-From running `run_all.py` across 5 candidate repositories:
+The combined report is regenerated from the JUnit evidence currently present under `repos/<repository>/results`. Percentages use `observed flaky / (observed flaky + not observed flaky) x 100`; skip-only and failure-only tests are unlabelled and excluded.
 
-| Repository | Commit Hash | Total Tests | Rounds (Orig / Rand / Rev) | Observed Flaky | OD | NOD | Not Observed Flaky | Flaky Ratio | Baseline Status |
-|---|---|---|---|---|---|---|---|---|---|
-| `click` | `6aabf099` | 2,084 | 12 / 12 / 1 | **0** | 0 | 0 | 2,084 | `0:2084` | `PASSED` |
-| `flask` | `d318b683` | 494 | 12 / 12 / 1 | **0** | 0 | 0 | 494 | `0:494` | `PASSED` |
-| `fsspec` | `13b0bce8` | 1,779 | 12 / 12 / 1 | **2** | **2** | 0 | 1,777 | **`2:1777`** (0.11%) | `PASSED` |
-| `filelock`| `82f66d7b` | 950 | In Progress | — | — | — | — | — | Configured |
-| `httpx` | `b5addb64` | — | 0 | — | — | — | — | — | `FAILED` on Windows (upstream tempfile incompatibility) |
-| `urllib3` | `a5d70ebf` | — | Not started | — | — | — | — | — | Configured for Ubuntu GitHub Actions |
+| Repository | Commit | Tests | Rounds O/R/Rev | Flaky | OD | NOD | Not observed | Flaky % | Status |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| `click` | `6aabf099` | 2,084 | 12/12/1 | 0 | 0 | 0 | 1,975 | 0.00% | Passed |
+| `flask` | `d318b683` | 494 | 12/12/1 | 0 | 0 | 0 | 494 | 0.00% | Passed |
+| `filelock` | `82f66d7b` | 1,342 | 12/12/1 | 2 | 2 | 0 | 1,104 | 0.18% | Passed |
+| `fsspec` | `13b0bce8` | 1,779 | 12/12/1 | 2 | 2 | 0 | 1,492 | 0.13% | Passed |
+| `httpx` | `b5addb64` | 0 | 0/0/0 | 0 | 0 | 0 | 0 | N/A | Discarded after baseline failure |
+| `urllib3` | `a5d70ebf` | 2,633 | 12/12/1 | 4 | 3 | 1 | 2,337 | 0.17% | Passed |
+| `werkzeug` | Unknown | 0 | 0/0/0 | 0 | 0 | 0 | 0 | N/A | Result evidence not imported |
+| `rich` | `9d8f9a37` | 981 | 12/12/1 | 5 | 5 | 0 | 952 | 0.52% | Passed |
+| `pytest` | `a315b97c` | 4,654 | 12/12/1 | 37 | 37 | 0 | 4,556 | 0.81% | Passed |
 
-### Confirmed Flaky Tests (`fsspec` @ `13b0bce8`):
-1. `fsspec.tests.test_mapping::test_keys_view` (Order-Dependent / **OD**)
-2. `fsspec.tests.test_mapping::test_multi` (Order-Dependent / **OD**)
+Across the seven repositories with completed evidence, 13,967 tests were collected. There are **50 observed flaky tests** (49 OD, 1 NOD), 12,910 not-observed-flaky tests, and 1,007 unlabelled tests. The combined observed-flaky percentage among labelled tests is **0.39%**.
+
+The authoritative list of all observed flaky node IDs and their per-round outcomes is in `FlakeXplain_Flaky_Report.md`. The three downloaded workflow reports are retained as per-project source artifacts; their placeholder rows for repositories not run in that workflow are not empirical results.
+
+### Dataset Positioning
+
+The dataset novelty claim is the combined benchmark design, not the existence of Python flaky-test data. The planned release is a newly executed, pytest-specific benchmark combining fixture-aware source context, raw multi-order evidence, uncertainty-aware labels, manually validated cause annotations, and fixed project-disjoint splits. Until those proposed dataset fields and annotations are implemented, describe the present output as an empirical detection corpus.
+
+Repeated-run outcomes, order-specific failures, seeds, and flip counts are label evidence only. They must never be copied into classifier features. Consistently passing tests are labelled `not observed flaky after N runs`, never proven non-flaky.
 
 ---
 
@@ -117,8 +135,12 @@ python run_all.py flask
 python run_all.py fsspec
 python run_all.py filelock
 python run_all.py httpx
-# Ubuntu/GitHub Actions target
+
+# Ubuntu/GitHub Actions targets
 python run_all.py urllib3
+python run_all.py werkzeug
+python run_all.py rich
+python run_all.py pytest
 ```
 
 ---

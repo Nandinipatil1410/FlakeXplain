@@ -8,7 +8,8 @@
   random round 12; reverse execution had not started.
 - Evidence is preserved at
   https://github.com/Nandinipatil1410/FlakeXplain/actions/runs/38161059994/artifacts/11719070694
-  and locally in `.tmp-hypothesis-evidence.zip`.
+  and locally in `local-evidence/cleanup-2026-10-12/.tmp-hypothesis-evidence.zip`
+  (relocated during repository cleanup; archive bytes preserved).
 
 The randomized evidence from that run is **diagnostic, not a validated benchmark**.
 Its logs show widespread failures in the upstream `pytest_runtest_call` PRNG-leak

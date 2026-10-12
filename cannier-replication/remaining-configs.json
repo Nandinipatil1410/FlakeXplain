@@ -143,6 +143,7 @@
       "pytest-randomly"
     ],
     "pytest_args": [],
+    "external_service_fixture_note": "A real localhost FTP fixture using pyftpdlib==1.5.6 replaces the changing Rebex demo service, retaining its historical 530/550 reply text and an authentic downloaded readme. All pinned tests and assertions remain unchanged. Results describe a controlled-service environment, not an exact live-service replication.",
     "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
     "snapshot_overrides": {
       "six": "six==1.15.0"
