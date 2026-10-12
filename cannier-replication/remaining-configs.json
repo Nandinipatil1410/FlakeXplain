@@ -317,6 +317,9 @@
       "pytest-forked",
       "execnet"
     ],
+    "random_pytest_args": [
+      "--randomly-dont-reset-seed"
+    ],
     "pytest_args": [
       "hypothesis-python"
     ],

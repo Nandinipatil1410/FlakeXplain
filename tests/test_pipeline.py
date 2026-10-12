@@ -228,6 +228,7 @@ class PipelineTests(unittest.TestCase):
                 plugins = [cmd[i + 1] for i, arg in enumerate(cmd[:-1]) if arg == "-p"]
                 self.assertIn("no:cov", plugins)
                 self.assertIn("randomly" if index == 1 else "no:randomly", plugins)
+                self.assertEqual("--randomly-dont-reset-seed" in cmd, index == 1)
                 if index == 1:
                     self.assertTrue(any(str(arg).startswith("--randomly-seed=") for arg in cmd))
             child = subprocess.run(

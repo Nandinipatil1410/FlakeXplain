@@ -7,7 +7,7 @@ import shutil
 import time
 from datetime import datetime, timezone
 
-from runtime import (BASE_DIR, REPOS, REPOS_DIR, atomic_json, baseline_state, complete_xml,
+from runtime import (BASE_DIR, REPOS, REPOS_DIR, NEW_CANNIER_REPOS, atomic_json, baseline_state, complete_xml,
                      fingerprint, pytest_args, pytest_command, pytest_env, read_json,
                      run_command)
 
@@ -86,6 +86,8 @@ def run_idflakies_suite(
             # Explicitly load the reordering plugin for the outer round only.
             # Nested pytest processes must not inherit its NumPy-importing plugin.
             cmd += ["-p", "randomly", f"--randomly-seed={seed}"]
+            # Preserve the subject's own PRNG management while changing order.
+            cmd += NEW_CANNIER_REPOS.get(repo_name, {}).get("random_pytest_args", [])
         else:
             cmd += ["-p", "no:randomly"]
         if config == "reverse-order":
