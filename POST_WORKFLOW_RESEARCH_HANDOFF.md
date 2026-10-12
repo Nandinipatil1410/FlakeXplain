@@ -69,6 +69,21 @@ Additional projects are valuable evaluation data, but their presence alone does 
 
 ## Phase 4: implement static features and controlled baselines
 
+### Current pilot direction (12 October 2026)
+
+CANNIER is the selected base paper. The proposed primary model is Extra Trees,
+trained afresh on the audited corpus. Compare test-body static features with the
+same features plus bounded fixture/helper context, holding examples, project-disjoint
+splits, and training procedure constant. Logistic Regression is a secondary reference.
+This is the current proposal; no pilot results or performance gains are established.
+
+Separately inspect the released CANNIER classifier pipeline to establish a compatible
+baseline. The static-only ablation does not reproduce its static/dynamic feature set
+or establish improvement over the complete hybrid detector. Align label semantics
+before claiming a direct comparison. Assess improvement using matched experiments,
+including precision/recall, average precision, MCC, and false alarms; publication
+acceptance is not guaranteed by model choice or dataset expansion.
+
 Retrieve pinned sources without executing test suites for static analysis. Implement and validate bounded resolution of test bodies, explicit fixtures, applicable autouse fixtures, conftest.py, fixture dependencies, and selected helpers. Record unresolved references, extraction coverage, bounds, and limitations.
 
 Candidate context features: fixture scope/autouse, teardown/finalizer structure, fixture dependency structure, shared mutable-state operations, monkeypatch/mock usage, and filesystem/network/time/randomness operations. These indicate risk; they do not prove a failure cause. Validate resolution and extracted feature evidence on a declared manual sample.
@@ -125,6 +140,6 @@ Report: which artifacts are available; which projects meet the declared evidence
 - Authors' experiment artifact: https://github.com/flake-it/cannier-experiment
 - Authors' framework: https://github.com/flake-it/cannier-framework
 - pytest-randomly behavior: https://github.com/pytest-dev/pytest-randomly
-- Local context: AGENTS.md and BASE_PAPER_DECISION.md. PUBLICATION_RESEARCH_PLAN.md contains superseded journal/base-paper recommendations; do not revive those decisions without checking the latest user direction.
+- Local context: AGENTS.md and this handoff. Superseded publication plans and journal/base-paper assessments were removed on 12 October 2026; their history remains in Git. Use the current pilot direction above rather than historical recommendations.
 
 Review external sources and the actual run revisions when implementing. This handoff records the plan and inspected code behavior, not an audit of all finished workflow artifacts.

@@ -19,9 +19,11 @@ The old `iDFlakies_Report.md` deletion was already present before cleanup; its
 history remains available in Git. The current tracked report is
 `FlakeXplain_Flaky_Report.md`; historical counts are not a fresh corpus audit.
 
-`POST_WORKFLOW_RESEARCH_HANDOFF.md` contains the current research handoff.
-Earlier journal assessments and publication plans remain historical context;
-their superseded recommendations do not override the current handoff.
+`POST_WORKFLOW_RESEARCH_HANDOFF.md` contains the current research handoff and
+proposed Extra Trees pilot. The superseded publication plan, Q2/Q3 assessments,
+and earlier base-paper decision were removed on 12 October 2026; their history
+remains in Git. Execution guides, recovery/provenance notes, fixture documentation,
+and the existing empirical report remain available.
 
 Local verification: `python -m unittest discover -s tests -v`. These tests verify
 pipeline behavior and do not rerun upstream projects or establish model results.
