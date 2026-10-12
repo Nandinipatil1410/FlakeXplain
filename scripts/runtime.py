@@ -67,6 +67,8 @@ def python_for(repo):
 
 def pytest_command(repo_name, repo):
     """Return the upstream-compatible test entry point for a repository."""
+    if repo_name == "salt":
+        return [python_for(repo), "-u", BASE_DIR / "scripts/run_salt_tests.py"]
     if repo_name == "reframe":
         # ReFrame's wrapper initializes the generic runtime before pytest starts.
         return [python_for(repo), "-u", repo / "test_reframe.py"]
@@ -251,6 +253,9 @@ def fingerprint(repo):
     if repo.name == "hypothesis" and (repo / ".entrypoint-venv/bin/python").exists():
         value["entrypoint_packages"] = checked_output(
             [repo / ".entrypoint-venv/bin/python", "-m", "pip", "freeze", "--all"], repo).splitlines()
+    if repo.name == "salt":
+        value["salt_test_launcher_sha256"] = hashlib.sha256(
+            (BASE_DIR / "scripts/run_salt_tests.py").read_bytes()).hexdigest()
     if repo.name in NEW_CANNIER_REPOS:
         config = NEW_CANNIER_REPOS[repo.name]
         value["cannier_recipe"] = config
