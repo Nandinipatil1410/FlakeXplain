@@ -2,6 +2,9 @@ name: FlakeXplain independent confirmation
 
 on:
   workflow_dispatch:
+  push:
+    branches: [codex/independent-confirmation]
+    paths: [.github/workflows/flakexplain-confirmation.yml]
 
 permissions:
   contents: read
