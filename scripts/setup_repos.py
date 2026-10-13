@@ -273,6 +273,21 @@ REPOS = {
 
 from cannier_subjects import NEW_CANNIER_REPOS
 REPOS.update(NEW_CANNIER_REPOS)
+REPOS.update({
+    "attrs": {
+        "url": "https://github.com/python-attrs/attrs.git",
+        "commit": "ee66e7274852438cc23d4240a1a9cd632fda8b52",
+        "supported_platforms": ["linux"],
+        "extra_pkgs": ["pytest>9", "pytest-randomly==5.0.0", "hypothesis", "cloudpickle", "pympler", "pytest-xdist[psutil]"],
+    },
+    "tenacity": {
+        "url": "https://github.com/jd/tenacity.git",
+        "commit": "32ac68f0941319c0d2f4fb927f96e4ee29bb46c6",
+        "supported_platforms": ["linux"],
+        "install_target": ".[test]",
+        "extra_pkgs": ["pytest", "pytest-randomly==5.0.0", "tornado>=6", "trio"],
+    },
+})
 
 
 def dependency_specs(repo_name, repo, config):

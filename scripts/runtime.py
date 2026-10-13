@@ -18,6 +18,7 @@ REPOS = [
 ]
 from cannier_subjects import NEW_CANNIER_REPOS
 REPOS.extend(NEW_CANNIER_REPOS)
+REPOS.extend(["attrs", "tenacity"])
 
 def default_work_dir():
     if os.name == "nt":

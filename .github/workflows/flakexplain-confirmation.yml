@@ -1,0 +1,52 @@
+name: FlakeXplain independent confirmation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: flakexplain-confirmation-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  detect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 225
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [werkzeug, attrs, tenacity]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11.9"
+      - name: Verify detection pipeline
+        run: |
+          python -m unittest discover -s tests -p test_pipeline.py -v
+      - name: Full baseline gate and 25 serial rounds
+        timeout-minutes: 210
+        env:
+          FLAKEXPLAIN_WORK: ${{ runner.temp }}/flakexplain
+        run: python run_all.py ${{ matrix.project }} --work-dir "$FLAKEXPLAIN_WORK"
+      - name: Preserve complete and failed evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: confirmation-${{ matrix.project }}-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            ${{ runner.temp }}/flakexplain/repos/${{ matrix.project }}/results/
+            ${{ runner.temp }}/flakexplain/repos/${{ matrix.project }}/logs/
+            ${{ runner.temp }}/flakexplain/repos/${{ matrix.project }}/environment.json
+            ${{ runner.temp }}/flakexplain/repos/${{ matrix.project }}/env_snapshot.txt
+            ${{ runner.temp }}/flakexplain/repos/${{ matrix.project }}/setup_state.json
+            ${{ runner.temp }}/flakexplain/repos/${{ matrix.project }}/baseline_state.json
+            ${{ runner.temp }}/flakexplain/repos/${{ matrix.project }}/setup_log.md
+            ${{ runner.temp }}/flakexplain/repos/${{ matrix.project }}/uv.lock
+            FlakeXplain_Flaky_Report.md

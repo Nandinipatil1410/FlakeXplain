@@ -1,0 +1,83 @@
+{
+  "created_utc": "2026-10-13T16:17:02.940412+00:00",
+  "stage": "prospective external confirmation",
+  "confirmation_projects": {
+    "werkzeug": {
+      "repository": "pallets/werkzeug",
+      "commit": "f97c305673ba121a1dae6764c37e8be48907a1d1"
+    },
+    "attrs": {
+      "repository": "python-attrs/attrs",
+      "commit": "ee66e7274852438cc23d4240a1a9cd632fda8b52"
+    },
+    "tenacity": {
+      "repository": "jd/tenacity",
+      "commit": "32ac68f0941319c0d2f4fb927f96e4ee29bb46c6"
+    }
+  },
+  "budget_hours": 4,
+  "selection_reason": "Three Python pytest projects outside the 35-project development corpus, with available source and practical full-suite CPU execution. Werkzeug was an earlier optional execution candidate but has no imported evidence. No outcome-based replacement.",
+  "dependency_risk": "attrs and tenacity dependencies resolve at setup time and are snapshotted; this is a pinned-source experiment, not a claim of historic dependency equivalence.",
+  "detection": "Passing full baseline required; 12 original + 12 pytest-randomly + 1 reverse; Ubuntu 24.04, Python 3.11.9. Baseline failures, incomplete runs, source exclusions and zero-positive projects retained in audit.",
+  "label": "At least one pass and one failure/error; negatives all-pass after 25 complete observations. Skips, missing, colliding and failure-only identities excluded from binary analysis.",
+  "causal_limit": "Random execution changes order and runtime seeds. Subtypes are provisional; no causal or pure-order assertion.",
+  "models": [
+    "extra_trees_core",
+    "extra_trees_context",
+    "random_forest_core_reference",
+    "random_forest_context_reference"
+  ],
+  "feature_definition": "Frozen v0.2 revised core (30 counts, including two scope-aware reads) versus core + bounded fixture/helper/lifecycle/class state context (96 counts). This is incremental context beyond the scope-aware core.",
+  "extra_trees_grid": [
+    {
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 20,
+      "min_samples_leaf": 5,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "class_weight": null
+    },
+    {
+      "max_depth": 20,
+      "min_samples_leaf": 5,
+      "class_weight": null
+    }
+  ],
+  "selection": "Five fixed development project folds; select largest pooled OOF average precision, first listed tie. No external outcomes used.",
+  "random_forest": {
+    "n_estimators": 100,
+    "class_weight": null,
+    "max_depth": null,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "bootstrap": true,
+    "random_state": 20261013,
+    "n_jobs": 4
+  },
+  "baseline_caveat": "Random Forest family reference inspired by the audited 2024 artifact; Python features, no target labels, no PCA, no sampling, no transfer preprocessing. Not a faithful reproduction or a CANNIER comparison.",
+  "threshold": "Maximum F1 on development OOF scores for selected configuration; highest threshold tie. Also fixed 0.5. Freeze before opening external outcomes.",
+  "primary": "Paired external average precision difference: Extra Trees context minus core. Report pooled and each project; undefined positive metrics stay null.",
+  "secondary": "MCC, precision, recall, F1, false positives per 1000 negatives, and recall at top ceil(10% of each project), stable example_id tie break. Random Forest and trivial references are secondary.",
+  "uncertainty": "Project bootstrap only if at least two eligible positive projects; otherwise descriptive results with insufficient-project warning. Selection and dependency drift limitations disclosed.",
+  "duplication": "Exclude external substantive exact body AST matches to development (>=3 statements and >=20 AST nodes) from primary; retain in audit. Near-clones remain a limitation.",
+  "release": "Original development dataset immutable. All-data final models include development only until confirmation is evaluated. Any later confirmation-inclusive deployment fit has no new evaluation claim.",
+  "inputs": {
+    "dataset\\v0.1\\manifest.json": "49236367c9b9d327868917132e035197cfc106f75da20f8924cc32146f0efc88",
+    "dataset\\development-v0.2\\manifest.json": "ad9c44fe0c7e4d5a1101669502fabd862fe90d5349228048deffff308a9ba419",
+    "scripts\\train_final_confirmation.py": "187ce4b76d2483866288c937da10e26ee4d1e51496a4ab3196bf5d42745232db",
+    "requirements-pilot.txt": "d9497fb5d2774514650a20bb4e07e3eac0255fcc09a601eb8059461745444e7a"
+  },
+  "precollection_correction": {
+    "utc": "2026-10-13T16:17:31.823011+00:00",
+    "reason": "Correct threshold tuple and metric function API before fitting or fresh execution; scientific protocol unchanged.",
+    "previous_script_sha256": "f31bbbfdb6e55fbdc25c4798d2b7261174bea7b315fee4370a89604e9bd7eaf6",
+    "previous_protocol_sha256": "d48452ac3b43337c2fd156ce5e59459efecc1a9216737c07b10c26a266ab233b"
+  }
+}
