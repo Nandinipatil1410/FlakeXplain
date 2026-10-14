@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checks": [
+    "All exported file hashes match the manifest",
+    "Frozen input and extractor hashes match",
+    "All four primary tables have unique, identical example IDs",
+    "Model-ready case count reconciles",
+    "Positive count reconciles",
+    "Included and source-excluded cases reconcile to evidence candidates",
+    "Every label matches complete PASS/FAIL/ERROR observations and configuration counts",
+    "features_body.csv.gz: exact predictor allowlist enforced",
+    "features_body.csv.gz: finite nonnegative integer static features",
+    "features_body.csv.gz: no detection or provenance fields among predictors",
+    "features_context.csv.gz: exact predictor allowlist enforced",
+    "features_context.csv.gz: finite nonnegative integer static features",
+    "features_context.csv.gz: no detection or provenance fields among predictors",
+    "Context IDs are unique and every example joins to context provenance",
+    "Context size bound holds",
+    "Every identity and selected source-file hash matches pinned provenance",
+    "Every selected context source file matches its recorded hash",
+    "Every eligible project has exactly one outer test fold",
+    "All five outer folds are populated",
+    "Exact-duplicate project groups never cross outer folds",
+    "All substantive shared AST families stay in one outer fold",
+    "All four inner folds exclude the outer test projects and preserve duplicate groups",
+    "Every outer test fold and its training complement contain both labels"
+  ],
+  "cases": 96118,
+  "positives": 693,
+  "projects": 35,
+  "source_files_verified": 5375,
+  "manual_review": "See manual_review_queue.csv and any completed static review record; not implied by automated validation"
+}

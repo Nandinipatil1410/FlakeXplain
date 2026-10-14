@@ -1,0 +1,28 @@
+{
+  "cases": 96118,
+  "positives": 693,
+  "negative_cases": 95425,
+  "projects": 35,
+  "best_observed_development_model": "extra_trees_v2_context",
+  "best_development_ap": 0.05515658999798276,
+  "original_body_ap": 0.008395428182896153,
+  "best_minus_original_body_ap": 0.046761161815086605,
+  "primary_v2_context_minus_core_ap": 0.048044986496110345,
+  "primary_conditional_project_interval": [
+    -0.006505485992518507,
+    0.0854537789917489
+  ],
+  "primary_project_ap_improved": 16,
+  "primary_project_ap_regressed": 13,
+  "primary_positive_projects": 29,
+  "error_sample_cases": 100,
+  "source_excerpt_reviews": 12,
+  "validation_checks": 466,
+  "models_replayed": 50,
+  "convergence_warnings": 0,
+  "per_project_top10_budget_cases": 9628,
+  "original_body_per_project_top10_captured": 63,
+  "revised_core_per_project_top10_captured": 103,
+  "revised_context_per_project_top10_captured": 121,
+  "status": "Development evidence after inspected pilot; no independent final or CANNIER-superiority claim"
+}

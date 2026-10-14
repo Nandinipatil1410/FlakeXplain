@@ -1,0 +1,48 @@
+{
+  "repository": "https://github.com/alfcan/crossproject-flaky-test-prediction",
+  "commit": "8fe244f03122706763484dea7b4d98b09fefb923",
+  "code_executed": false,
+  "inspected_files": [
+    {
+      "file": "Flakiness_ML_Experiments_cross_project_experiment.py",
+      "sha256": "8d1add853b5950207a7251b5f6d70e6cb5538ec17844e563acec6b25d2cda0d9"
+    },
+    {
+      "file": "Flakiness_ML_Experiments_experiment_CPFP_Experiment.py",
+      "sha256": "fb8f77bb6d3fa78b30992cecf4567d1fc6efb7c61e62a9612429088185542bc6"
+    },
+    {
+      "file": "Flakiness_ML_Experiments_experiment_crossproject_CPBF_Experiment.py",
+      "sha256": "0fc8eae184348d9f719c98342e446af7386306fd461051cb844b033ae765abe5"
+    },
+    {
+      "file": "Flakiness_ML_Experiments_experiment_crossproject_CPTrAda.py",
+      "sha256": "4fcd87a30a264c4c76d0b421f8ccfa4e828332a0096998b7e5995efa9994bf60"
+    },
+    {
+      "file": "Flakiness_ML_Experiments_experiment_Experiment.py",
+      "sha256": "2c7b53b4fe58411919aa3e40ba94f63a46c72879528c396436217c064335cbfd"
+    },
+    {
+      "file": "Flakiness_ML_Experiments_experiment_GenericExperiment.py",
+      "sha256": "4eba4a395be3994d1c382a113eb05e03e460ec7775ccc87fc170863163aaf18c"
+    },
+    {
+      "file": "Flakiness_ML_Experiments_management_DatasetManager.py",
+      "sha256": "8035622c6e37f702819e0431f31dd0182a5fb2d4caa5979a1108e3bef3f0d0b7"
+    },
+    {
+      "file": "Flakiness_ML_Experiments_preProcessing_TrAdaPreProcessing.py",
+      "sha256": "86a16795b5286b12f2167553fa45866ef9873108f023803b5f086dc4ac346c44"
+    }
+  ],
+  "findings": {
+    "language": "Java metric definitions in authors artifact; our features are Python AST counts",
+    "target": "isFlaky; original dataset provenance differs from freshly observed instability after 25 rounds",
+    "numeric_features_in_artifact": 26,
+    "transfer_target_labels": "CPTrAda.py explicitly trains with labelled target fractions 0.25/0.50/0.75 and tests on the held-out 25% target subset",
+    "transfer_preprocessing": "PCA, RandomUnderSampler, balanced RF, TrAdaBoost with 10 estimators",
+    "our_reference": "100-tree Random Forest on our 30/96 numeric features; no target labels, sampling, PCA or transfer. Family reference only, not reproduction.",
+    "CANNIER": "No compatible faithful hybrid/dynamic baseline reproduced. Cannot claim improvement over complete CANNIER detector."
+  }
+}

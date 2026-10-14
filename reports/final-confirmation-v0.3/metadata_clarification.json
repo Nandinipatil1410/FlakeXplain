@@ -1,0 +1,14 @@
+{
+  "affected_files": [
+    "external_results.json",
+    "external_project_summary.csv"
+  ],
+  "field": "candidate_binary_cases",
+  "correction": "This field was populated from the audit eligible_tests count, which also contains skip-only identities. For attrs it reads 1412; the binary count is 1401 and the remaining 11 are skip-only. Model cohort, labels, features, scores, metrics and source exclusions are correct and unchanged.",
+  "authoritative_binary_counts": {
+    "attrs": 1401,
+    "tenacity": 185,
+    "werkzeug": 1024
+  },
+  "corrected_table": "guide_project_table.csv"
+}

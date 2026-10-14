@@ -1,0 +1,5 @@
+representation,features,cases,unique_feature_vectors,mixed_label_vectors,positive_cases_in_mixed_vectors,negative_cases_in_mixed_vectors,positive_fraction_in_mixed_vectors,unavoidable_training_misclassifications_for_identical_vectors
+v1_body,22,96118,27134,196,379,12563,0.5468975468975469,370
+v1_context,55,96118,38822,75,132,294,0.19047619047619047,116
+v2_body,30,96118,31585,141,277,6954,0.3997113997113997,274
+v2_context,96,96118,40558,73,123,207,0.1774891774891775,110

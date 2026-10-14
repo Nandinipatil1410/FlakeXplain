@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "protocol_sha256": "e3948ef01a4fd2f1abbc94b8dfc6fd48d88d099a247ded010cc28a401f61df3f",
+  "files": {
+    "feature_importance.csv": "b595c1c2174f390ca0b90031c606ca4f6443206d5a059163e82489f446831242",
+    "metrics_by_fold.csv": "bc18f0e491ee524feadf0af709724b52d12bfb9ba8bc55d850dbefaeaf25c114",
+    "metrics_by_project.csv": "3b3619167c508c0c12d9b4cc901345ec71668e0a35f7b1d47bd65f9a2fb2ebd7",
+    "metrics_pooled.csv": "a8118936361911469d464fee67005377a2a9daaefc7a7d0e8d9b79510b1cd2ce",
+    "metrics_source_family_weighted.csv": "3dd474d86771af5796c753ff7676eaab21ea485e701ee7069db13d05b31d1ab1",
+    "oof_predictions.csv.gz": "1f74baaec869ba5d75a670c8b28bae3265afe0ea2b018f1be81b7da4aae5ec59",
+    "protocol.json": "e3948ef01a4fd2f1abbc94b8dfc6fd48d88d099a247ded010cc28a401f61df3f",
+    "results.json": "3bad8c193baa63fe82f8bae21e15125501bd551ba6df2337aae1ff704c422415",
+    "threshold_selection.csv": "354c55e6b84c30b8b2a7546dc662bef35fb8f1b2cebdd5446aef640b9a7a593d"
+  },
+  "implementation_sha256": "92698a8db1f79784e726a05c3cadb7181ecc9c64be9693ce02084b804a4c7ad3",
+  "dataset_manifest_sha256": "49236367c9b9d327868917132e035197cfc106f75da20f8924cc32146f0efc88"
+}

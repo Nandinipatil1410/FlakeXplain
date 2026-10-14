@@ -1,0 +1,6 @@
+# Keep checksummed research artifacts and implementation bytes reproducible.
+dataset/** -text
+reports/** -text
+scripts/*.py -text
+requirements-pilot.txt -text
+*.pdf binary

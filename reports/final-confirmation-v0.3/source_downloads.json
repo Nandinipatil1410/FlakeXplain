@@ -1,0 +1,20 @@
+[
+  {
+    "project": "werkzeug",
+    "commit": "f97c305673ba121a1dae6764c37e8be48907a1d1",
+    "sha256": "5288200a9dd312ee6da84a1f7f0c08a20bd4c254a989c8984d08dcedd630527a",
+    "source": "local-evidence\\confirmation-sources\\werkzeug"
+  },
+  {
+    "project": "attrs",
+    "commit": "ee66e7274852438cc23d4240a1a9cd632fda8b52",
+    "sha256": "5ca66860a4fcf33f9f30fc9ddf0d813cefc404f48893bb9c18aa82342a8b35f3",
+    "source": "local-evidence\\confirmation-sources\\attrs"
+  },
+  {
+    "project": "tenacity",
+    "commit": "32ac68f0941319c0d2f4fb927f96e4ee29bb46c6",
+    "sha256": "21e5f6195252e65d6cbaad3f32480ffa3a86360f6b3624e7c92d7422fcfe0ddd",
+    "source": "local-evidence\\confirmation-sources\\tenacity"
+  }
+]

@@ -1,0 +1,3 @@
+model,projects,positive_projects,macro_average_precision_positive_projects,macro_recall_positive_projects,macro_f1_all_projects,macro_false_positives_per_1000_negative
+extra_trees_body,35,29,0.02991975251755654,0.13383239934964072,0.014973294629029658,152.95466878416352
+extra_trees_context,35,29,0.014753042835502828,0.5475705329153605,0.015797858031191308,552.6650984337136

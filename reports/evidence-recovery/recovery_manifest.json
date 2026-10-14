@@ -1,0 +1,59 @@
+{
+  "graphene_artifact_id": 11533068947,
+  "graphene_run_id": 37740852914,
+  "graphene_archive_sha256": "665ab40cdbf3fa6e78b62d0984909e14daf3d5f27f0f81e7df2af30c937f9934",
+  "github_digest_match": true,
+  "graphene_archive_provenance": {
+    "GITHUB_REPOSITORY": "Nandinipatil1410/FlakeXplain",
+    "GITHUB_SHA": "f924fcedc05752bd30a3980417486683d0fa8d32",
+    "GITHUB_RUN_ID": "37740852914",
+    "GITHUB_RUN_ATTEMPT": "1",
+    "SUBJECT": "graphene"
+  },
+  "source_archives": [
+    {
+      "project": "cirq",
+      "repository": "quantumlib/Cirq",
+      "commit": "782c14e0cc821794d21e82f30df8e6998f4b9992",
+      "url": "https://codeload.github.com/quantumlib/Cirq/tar.gz/782c14e0cc821794d21e82f30df8e6998f4b9992",
+      "archive": "local-evidence\\recovery-2026-10-12\\pinned-sources\\cirq-782c14e0cc821794d21e82f30df8e6998f4b9992.tar.gz",
+      "sha256": "7cc4a77c217ba04c99d9b93d84a9aa09bf2bf3525f9bd5a7766a2e4aa5d619af",
+      "source": "local-evidence\\recovery-2026-10-12\\pinned-sources\\cirq"
+    },
+    {
+      "project": "hypothesis",
+      "repository": "HypothesisWorks/hypothesis",
+      "commit": "ccac4364979effc2b22e2f943176b2b1f025c448",
+      "url": "https://codeload.github.com/HypothesisWorks/hypothesis/tar.gz/ccac4364979effc2b22e2f943176b2b1f025c448",
+      "archive": "local-evidence\\recovery-2026-10-12\\pinned-sources\\hypothesis-ccac4364979effc2b22e2f943176b2b1f025c448.tar.gz",
+      "sha256": "327b0e5c039bfb24bc6402a7b98f016938150be56fa14243d2df595d199f5651",
+      "source": "local-evidence\\recovery-2026-10-12\\pinned-sources\\hypothesis"
+    },
+    {
+      "project": "setuptools",
+      "repository": "pypa/setuptools",
+      "commit": "4d64156de17596dae33f2b12aaaea1d6c9327fd9",
+      "url": "https://codeload.github.com/pypa/setuptools/tar.gz/4d64156de17596dae33f2b12aaaea1d6c9327fd9",
+      "archive": "local-evidence\\recovery-2026-10-12\\pinned-sources\\setuptools-4d64156de17596dae33f2b12aaaea1d6c9327fd9.tar.gz",
+      "sha256": "d81ffaedecfc2791a78852d29817c22af2ecc7b3f89fdeca9aa3d341c03f3e6a",
+      "source": "local-evidence\\recovery-2026-10-12\\pinned-sources\\setuptools"
+    },
+    {
+      "package": "pytest-checkdocs",
+      "version": "2.7.1",
+      "url": "https://files.pythonhosted.org/packages/92/f1/60b41c1e8f868e126efe7e9a6db46aef4eb9042c06f354f7f0c2ff90520a/pytest_checkdocs-2.7.1-py3-none-any.whl",
+      "sha256": "294898c64c9ce1a178edc6660e48da23c7543bfd5a1cea7f0ca4c167745d8461"
+    },
+    {
+      "project": "xonsh",
+      "repository": "xonsh/xonsh",
+      "commit": "e9b12c8b701a75b5ecb8d20f3aad7d3e5aca64bf",
+      "url": "https://codeload.github.com/xonsh/xonsh/tar.gz/e9b12c8b701a75b5ecb8d20f3aad7d3e5aca64bf",
+      "archive": "local-evidence\\recovery-2026-10-12\\pinned-sources\\xonsh-e9b12c8b701a75b5ecb8d20f3aad7d3e5aca64bf.tar.gz",
+      "sha256": "9f69afcddd9036d2f4bc9a437d7bb8f29905f4d6e5b9b95853b8517acaaaf8a6",
+      "source": "local-evidence\\recovery-2026-10-12\\pinned-sources\\xonsh"
+    }
+  ],
+  "import_manifest": "local-evidence/recovery-2026-10-12/recovery-import-manifest.json",
+  "identity_rules_sha256": "f4556bc059cfe009f9f8cf34288cd9b7b2dd9bab69d3d4e92e88c908c0567bb1"
+}

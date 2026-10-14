@@ -1,0 +1,4688 @@
+[
+  {
+    "example_id": "0d516c6394729acaa3941e69898baaaa8dca995a15a9fabdad77d9255bcf481c",
+    "project": "attrs",
+    "junit_name": "test_asdict",
+    "score": 0.017674876011272204,
+    "base": 0.0072098878461890415,
+    "reconstruction_error": 2.7755575615628914e-17,
+    "method": "Exact mean tree-path probability decomposition, not SHAP; correlated features and allocation are not causal diagnosis.",
+    "source": {
+      "source_path": "tests/test_hooks.py",
+      "source_qualname": "TestAsDictHook.test_asdict",
+      "source_file_sha256": "7a557402fc72bdcd9890e682397e7def040320105a80b210e581db7b29b7ea0b",
+      "body_ast_sha256": "a3a5d1aa20885c8ac44bb78f8b7624dcd86fd11286caf5bd49bf0811bbd77256",
+      "body_statements": 16,
+      "body_ast_nodes": 198,
+      "unresolved_fixture_count": 0,
+      "context_bounded": false,
+      "context_sources": []
+    },
+    "contributions": [
+      {
+        "feature": "body_time_calls",
+        "value": 4.0,
+        "contribution": 0.011905065729396013
+      },
+      {
+        "feature": "fixture_mean_lines",
+        "value": 0.0,
+        "contribution": 0.0006366970865917638
+      },
+      {
+        "feature": "fixture_mean_calls",
+        "value": 0.0,
+        "contribution": -0.0005427739434457652
+      },
+      {
+        "feature": "fixture_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.0004303898582024937
+      },
+      {
+        "feature": "fixture_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 0.00037412435664477495
+      },
+      {
+        "feature": "fixture_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.00037129271322521647
+      },
+      {
+        "feature": "lifecycle_count",
+        "value": 0.0,
+        "contribution": -0.000364709744384128
+      },
+      {
+        "feature": "fixture_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -0.0003562997237571536
+      },
+      {
+        "feature": "fixture_count",
+        "value": 0.0,
+        "contribution": 0.00034880844390988524
+      },
+      {
+        "feature": "lifecycle_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -0.00032240102986100315
+      },
+      {
+        "feature": "fixture_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0002782931308824144
+      },
+      {
+        "feature": "body_lines",
+        "value": 37.0,
+        "contribution": -0.0002282713282434537
+      },
+      {
+        "feature": "fixture_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.0002151845960755274
+      },
+      {
+        "feature": "fixture_autouse_count",
+        "value": 0.0,
+        "contribution": 0.0001901697600412678
+      },
+      {
+        "feature": "helper_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00018721688609624242
+      },
+      {
+        "feature": "lifecycle_mean_lines",
+        "value": 0.0,
+        "contribution": -0.00017636779741816422
+      },
+      {
+        "feature": "helper_count",
+        "value": 0.0,
+        "contribution": 0.00014304247086836667
+      },
+      {
+        "feature": "helper_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.0001250237459980429
+      },
+      {
+        "feature": "body_statements",
+        "value": 16.0,
+        "contribution": 0.00011768716624011672
+      },
+      {
+        "feature": "class_state_assignments",
+        "value": 0.0,
+        "contribution": -0.0001048491437659307
+      },
+      {
+        "feature": "helper_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.00010256456740851602
+      },
+      {
+        "feature": "fixture_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -9.586147560902765e-05
+      },
+      {
+        "feature": "body_process_calls",
+        "value": 0.0,
+        "contribution": -8.709600480785788e-05
+      },
+      {
+        "feature": "helper_mean_calls",
+        "value": 0.0,
+        "contribution": 8.110433360269434e-05
+      },
+      {
+        "feature": "helper_mean_asserts",
+        "value": 0.0,
+        "contribution": 7.909928202248792e-05
+      },
+      {
+        "feature": "body_mutable_literals",
+        "value": 16.0,
+        "contribution": -6.979426302313797e-05
+      },
+      {
+        "feature": "lifecycle_mean_process_calls",
+        "value": 0.0,
+        "contribution": 6.147304226526937e-05
+      },
+      {
+        "feature": "lifecycle_mean_calls",
+        "value": 0.0,
+        "contribution": 5.970620949968478e-05
+      },
+      {
+        "feature": "body_with_blocks",
+        "value": 0.0,
+        "contribution": -5.3330027192754795e-05
+      },
+      {
+        "feature": "helper_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": 5.26304802107959e-05
+      },
+      {
+        "feature": "body_blocking_calls",
+        "value": 0.0,
+        "contribution": 5.0292536293898856e-05
+      },
+      {
+        "feature": "fixture_scope_session",
+        "value": 0.0,
+        "contribution": 4.886814890022235e-05
+      },
+      {
+        "feature": "helper_mean_lines",
+        "value": 0.0,
+        "contribution": 4.221894918443945e-05
+      },
+      {
+        "feature": "fixture_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -3.510014687202804e-05
+      },
+      {
+        "feature": "body_asserts",
+        "value": 1.0,
+        "contribution": -3.228339335698258e-05
+      },
+      {
+        "feature": "body_calls",
+        "value": 11.0,
+        "contribution": -2.866593807241481e-05
+      },
+      {
+        "feature": "fixture_scope_module",
+        "value": 0.0,
+        "contribution": -2.4676540398761454e-05
+      },
+      {
+        "feature": "fixture_scope_function",
+        "value": 0.0,
+        "contribution": 2.400001114170462e-05
+      },
+      {
+        "feature": "helper_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 2.0800398739093167e-05
+      },
+      {
+        "feature": "helper_mean_time_calls",
+        "value": 0.0,
+        "contribution": -1.9095911100834463e-05
+      },
+      {
+        "feature": "fixture_mean_asserts",
+        "value": 0.0,
+        "contribution": 1.6549000970148102e-05
+      },
+      {
+        "feature": "body_cleanup_calls",
+        "value": 0.0,
+        "contribution": -1.5455372303355558e-05
+      },
+      {
+        "feature": "lifecycle_mean_random_calls",
+        "value": 0.0,
+        "contribution": -1.5420880102482644e-05
+      },
+      {
+        "feature": "body_branches",
+        "value": 1.0,
+        "contribution": -1.4835482783505718e-05
+      },
+      {
+        "feature": "body_raises",
+        "value": 0.0,
+        "contribution": -1.0576881556399309e-05
+      },
+      {
+        "feature": "fixture_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -1.031022285538974e-05
+      },
+      {
+        "feature": "lifecycle_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -9.97551688434076e-06
+      },
+      {
+        "feature": "helper_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -9.837170580148516e-06
+      },
+      {
+        "feature": "body_imports",
+        "value": 0.0,
+        "contribution": 9.752087209942953e-06
+      },
+      {
+        "feature": "fixture_mean_time_calls",
+        "value": 0.0,
+        "contribution": -9.746929326474371e-06
+      },
+      {
+        "feature": "helper_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": 8.209084510508928e-06
+      },
+      {
+        "feature": "class_state_mutable_literals",
+        "value": 0.0,
+        "contribution": -7.695173851452748e-06
+      },
+      {
+        "feature": "lifecycle_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -6.022410329066905e-06
+      },
+      {
+        "feature": "body_loops",
+        "value": 0.0,
+        "contribution": 5.942583657814714e-06
+      },
+      {
+        "feature": "lifecycle_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -5.5346200664732865e-06
+      },
+      {
+        "feature": "helper_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": 4.711831691166191e-06
+      },
+      {
+        "feature": "lifecycle_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": -4.657583006598584e-06
+      },
+      {
+        "feature": "fixture_dependency_edges",
+        "value": 0.0,
+        "contribution": 4.126993799856284e-06
+      },
+      {
+        "feature": "body_random_calls",
+        "value": 0.0,
+        "contribution": 3.1989897248884255e-06
+      },
+      {
+        "feature": "body_mutable_ops",
+        "value": 0.0,
+        "contribution": -2.941562738435387e-06
+      },
+      {
+        "feature": "lifecycle_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -2.8440315562062177e-06
+      },
+      {
+        "feature": "body_filesystem_calls",
+        "value": 0.0,
+        "contribution": -1.9988937344889997e-06
+      },
+      {
+        "feature": "class_state_calls",
+        "value": 0.0,
+        "contribution": 1.992964609502992e-06
+      },
+      {
+        "feature": "lifecycle_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -1.9772873549250262e-06
+      },
+      {
+        "feature": "helper_mean_yields",
+        "value": 0.0,
+        "contribution": 1.8893640072623342e-06
+      },
+      {
+        "feature": "fixture_mean_network_calls",
+        "value": 0.0,
+        "contribution": -1.7508484926626681e-06
+      },
+      {
+        "feature": "body_network_calls",
+        "value": 0.0,
+        "contribution": -1.6816672443336316e-06
+      },
+      {
+        "feature": "body_class_shared_reads",
+        "value": 0.0,
+        "contribution": -1.5900544100153506e-06
+      },
+      {
+        "feature": "helper_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.3111566199961121e-06
+      },
+      {
+        "feature": "body_module_shared_reads",
+        "value": 0.0,
+        "contribution": -9.704102102908784e-07
+      },
+      {
+        "feature": "body_attribute_writes",
+        "value": 0.0,
+        "contribution": -9.362337917558396e-07
+      },
+      {
+        "feature": "body_yields",
+        "value": 0.0,
+        "contribution": 9.30423361506557e-07
+      },
+      {
+        "feature": "fixture_mean_random_calls",
+        "value": 0.0,
+        "contribution": 8.948028164459683e-07
+      },
+      {
+        "feature": "fixture_scope_class",
+        "value": 0.0,
+        "contribution": 8.735098887519243e-07
+      },
+      {
+        "feature": "body_unittest_asserts",
+        "value": 0.0,
+        "contribution": 7.873470218695677e-07
+      },
+      {
+        "feature": "lifecycle_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -6.92626956938913e-07
+      },
+      {
+        "feature": "body_subscript_writes",
+        "value": 0.0,
+        "contribution": 4.814217233942713e-07
+      },
+      {
+        "feature": "helper_mean_network_calls",
+        "value": 0.0,
+        "contribution": 4.5759213045919997e-07
+      },
+      {
+        "feature": "body_awaits",
+        "value": 0.0,
+        "contribution": -3.7379767654286867e-07
+      },
+      {
+        "feature": "body_try_blocks",
+        "value": 0.0,
+        "contribution": -3.5571421075263147e-07
+      },
+      {
+        "feature": "class_state_random_calls",
+        "value": 0.0,
+        "contribution": -3.250067406885884e-07
+      },
+      {
+        "feature": "lifecycle_mean_asserts",
+        "value": 0.0,
+        "contribution": 2.464643529267874e-07
+      },
+      {
+        "feature": "body_mock_calls",
+        "value": 0.0,
+        "contribution": 1.1367427303292632e-07
+      },
+      {
+        "feature": "body_comprehensions",
+        "value": 0.0,
+        "contribution": 5.5584988493144396e-08
+      },
+      {
+        "feature": "body_globals",
+        "value": 0.0,
+        "contribution": 4.600084155209782e-08
+      },
+      {
+        "feature": "lifecycle_mean_time_calls",
+        "value": 0.0,
+        "contribution": 3.752252425784364e-08
+      },
+      {
+        "feature": "lifecycle_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.8143103386285106e-08
+      },
+      {
+        "feature": "helper_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 2.5241900238935438e-08
+      },
+      {
+        "feature": "body_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_other",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_package",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "helper_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0
+      }
+    ]
+  },
+  {
+    "example_id": "198f68a651983647166dfb3a2cd63d031a38937fcb67c409a26f2262e0ee4300",
+    "project": "attrs",
+    "junit_name": "test_default",
+    "score": 0.0049753943118836874,
+    "base": 0.0072098878461890415,
+    "reconstruction_error": 1.5612511283791264e-17,
+    "method": "Exact mean tree-path probability decomposition, not SHAP; correlated features and allocation are not causal diagnosis.",
+    "source": {
+      "source_path": "tests/test_validators.py",
+      "source_qualname": "TestDisableValidators.test_default",
+      "source_file_sha256": "7c6f97e23bbf1443608c1bff91a2881849b43b52f4b0f255acfeb669ef4008a0",
+      "body_ast_sha256": "4ab8e8b7201e9b5e66b0582cd8e4c3660c7e68fc97c40a6a913bc2e1a2b0a43a",
+      "body_statements": 2,
+      "body_ast_nodes": 11,
+      "unresolved_fixture_count": 0,
+      "context_bounded": false,
+      "context_sources": [
+        {
+          "source": "tests/test_validators.py::TestDisableValidators._reset_default",
+          "kind": "fixture",
+          "sha256": "7c6f97e23bbf1443608c1bff91a2881849b43b52f4b0f255acfeb669ef4008a0"
+        }
+      ]
+    },
+    "contributions": [
+      {
+        "feature": "fixture_mean_attribute_writes",
+        "value": 1.0,
+        "contribution": 0.000905915986921297
+      },
+      {
+        "feature": "fixture_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -0.0008695000884857462
+      },
+      {
+        "feature": "fixture_mean_calls",
+        "value": 0.0,
+        "contribution": -0.0008144815223168834
+      },
+      {
+        "feature": "fixture_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00048615623305006976
+      },
+      {
+        "feature": "lifecycle_count",
+        "value": 0.0,
+        "contribution": -0.00040632903354586024
+      },
+      {
+        "feature": "fixture_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.0003974459367218203
+      },
+      {
+        "feature": "fixture_mean_lines",
+        "value": 6.0,
+        "contribution": 0.00035207353200934045
+      },
+      {
+        "feature": "fixture_scope_session",
+        "value": 0.0,
+        "contribution": 0.0003061385407862747
+      },
+      {
+        "feature": "lifecycle_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -0.0003022219927088506
+      },
+      {
+        "feature": "fixture_mean_yields",
+        "value": 1.0,
+        "contribution": -0.0002727429137803081
+      },
+      {
+        "feature": "fixture_autouse_count",
+        "value": 1.0,
+        "contribution": 0.00024878123221644215
+      },
+      {
+        "feature": "helper_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00022355594126373114
+      },
+      {
+        "feature": "fixture_scope_function",
+        "value": 1.0,
+        "contribution": 0.00020173907924152435
+      },
+      {
+        "feature": "lifecycle_mean_lines",
+        "value": 0.0,
+        "contribution": -0.00019234151809938678
+      },
+      {
+        "feature": "fixture_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.00017350419963227428
+      },
+      {
+        "feature": "fixture_count",
+        "value": 1.0,
+        "contribution": 0.00010509424542037946
+      },
+      {
+        "feature": "fixture_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -0.00010476320646738256
+      },
+      {
+        "feature": "fixture_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 0.0001009233844869055
+      },
+      {
+        "feature": "helper_mean_calls",
+        "value": 0.0,
+        "contribution": 0.0001004010104187428
+      },
+      {
+        "feature": "helper_mean_asserts",
+        "value": 0.0,
+        "contribution": 9.031690700284163e-05
+      },
+      {
+        "feature": "lifecycle_mean_calls",
+        "value": 0.0,
+        "contribution": -7.759307974923653e-05
+      },
+      {
+        "feature": "class_state_assignments",
+        "value": 0.0,
+        "contribution": -6.17110350354602e-05
+      },
+      {
+        "feature": "class_state_mutable_literals",
+        "value": 0.0,
+        "contribution": -6.03783867281275e-05
+      },
+      {
+        "feature": "helper_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -5.4583664966895e-05
+      },
+      {
+        "feature": "helper_mean_time_calls",
+        "value": 0.0,
+        "contribution": -4.4779101431041476e-05
+      },
+      {
+        "feature": "helper_mean_lines",
+        "value": 0.0,
+        "contribution": 4.213065061673967e-05
+      },
+      {
+        "feature": "helper_count",
+        "value": 0.0,
+        "contribution": 4.127175466239698e-05
+      },
+      {
+        "feature": "body_branches",
+        "value": 0.0,
+        "contribution": 3.844438006835904e-05
+      },
+      {
+        "feature": "lifecycle_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -3.3891258542239136e-05
+      },
+      {
+        "feature": "lifecycle_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -3.199740852520915e-05
+      },
+      {
+        "feature": "body_asserts",
+        "value": 1.0,
+        "contribution": -3.124861117639693e-05
+      },
+      {
+        "feature": "fixture_scope_module",
+        "value": 0.0,
+        "contribution": -2.99523725930598e-05
+      },
+      {
+        "feature": "body_time_calls",
+        "value": 0.0,
+        "contribution": -2.874515143025198e-05
+      },
+      {
+        "feature": "body_process_calls",
+        "value": 0.0,
+        "contribution": -2.597231436044892e-05
+      },
+      {
+        "feature": "helper_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 2.262627178774495e-05
+      },
+      {
+        "feature": "fixture_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -2.1211209750215322e-05
+      },
+      {
+        "feature": "body_cleanup_calls",
+        "value": 0.0,
+        "contribution": -2.0397947110932715e-05
+      },
+      {
+        "feature": "fixture_mean_time_calls",
+        "value": 0.0,
+        "contribution": 2.032011236987296e-05
+      },
+      {
+        "feature": "lifecycle_mean_random_calls",
+        "value": 0.0,
+        "contribution": -1.9291389101781477e-05
+      },
+      {
+        "feature": "body_unittest_asserts",
+        "value": 0.0,
+        "contribution": -1.5883713876656817e-05
+      },
+      {
+        "feature": "class_state_calls",
+        "value": 0.0,
+        "contribution": 1.5295484618674758e-05
+      },
+      {
+        "feature": "body_calls",
+        "value": 0.0,
+        "contribution": -1.401236283626618e-05
+      },
+      {
+        "feature": "body_mutable_literals",
+        "value": 0.0,
+        "contribution": 1.3048841749843951e-05
+      },
+      {
+        "feature": "fixture_mean_asserts",
+        "value": 0.0,
+        "contribution": -1.1237797397907064e-05
+      },
+      {
+        "feature": "helper_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": 1.0751081647390303e-05
+      },
+      {
+        "feature": "lifecycle_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -1.0627822130852083e-05
+      },
+      {
+        "feature": "lifecycle_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": -9.23003974093223e-06
+      },
+      {
+        "feature": "helper_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": 8.60282458548726e-06
+      },
+      {
+        "feature": "body_class_shared_reads",
+        "value": 0.0,
+        "contribution": -7.648351595088522e-06
+      },
+      {
+        "feature": "body_mutable_ops",
+        "value": 0.0,
+        "contribution": -6.9118975739041774e-06
+      },
+      {
+        "feature": "helper_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": 5.694356611044046e-06
+      },
+      {
+        "feature": "body_blocking_calls",
+        "value": 0.0,
+        "contribution": -5.684082249830731e-06
+      },
+      {
+        "feature": "body_lines",
+        "value": 5.0,
+        "contribution": 5.62281366140721e-06
+      },
+      {
+        "feature": "body_random_calls",
+        "value": 0.0,
+        "contribution": 5.1787423441483565e-06
+      },
+      {
+        "feature": "body_imports",
+        "value": 0.0,
+        "contribution": -4.699729197821698e-06
+      },
+      {
+        "feature": "body_loops",
+        "value": 0.0,
+        "contribution": 4.000680775936921e-06
+      },
+      {
+        "feature": "body_filesystem_calls",
+        "value": 0.0,
+        "contribution": -3.7561457408603354e-06
+      },
+      {
+        "feature": "fixture_dependency_edges",
+        "value": 0.0,
+        "contribution": 3.7405020496998306e-06
+      },
+      {
+        "feature": "body_comprehensions",
+        "value": 0.0,
+        "contribution": -2.9009323938949256e-06
+      },
+      {
+        "feature": "lifecycle_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -2.8440315562062177e-06
+      },
+      {
+        "feature": "fixture_mean_network_calls",
+        "value": 0.0,
+        "contribution": -2.8109748748212687e-06
+      },
+      {
+        "feature": "helper_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -2.7401706603163815e-06
+      },
+      {
+        "feature": "helper_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": 2.100718550994208e-06
+      },
+      {
+        "feature": "lifecycle_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -1.8832729693580128e-06
+      },
+      {
+        "feature": "body_try_blocks",
+        "value": 0.0,
+        "contribution": -1.835581925300209e-06
+      },
+      {
+        "feature": "helper_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.6585373720303915e-06
+      },
+      {
+        "feature": "fixture_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.6550610576111463e-06
+      },
+      {
+        "feature": "helper_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 1.4498662902548042e-06
+      },
+      {
+        "feature": "body_subscript_writes",
+        "value": 0.0,
+        "contribution": 1.4485615055264356e-06
+      },
+      {
+        "feature": "lifecycle_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -1.4247814098700698e-06
+      },
+      {
+        "feature": "body_network_calls",
+        "value": 0.0,
+        "contribution": -1.3998148173659618e-06
+      },
+      {
+        "feature": "body_with_blocks",
+        "value": 0.0,
+        "contribution": 1.3902774831519736e-06
+      },
+      {
+        "feature": "body_raises",
+        "value": 0.0,
+        "contribution": -1.3314621200564273e-06
+      },
+      {
+        "feature": "body_module_shared_reads",
+        "value": 0.0,
+        "contribution": -1.1710408112309065e-06
+      },
+      {
+        "feature": "fixture_scope_class",
+        "value": 0.0,
+        "contribution": 8.735098887519243e-07
+      },
+      {
+        "feature": "body_yields",
+        "value": 0.0,
+        "contribution": 8.355277161997567e-07
+      },
+      {
+        "feature": "helper_mean_yields",
+        "value": 0.0,
+        "contribution": 6.636469101576837e-07
+      },
+      {
+        "feature": "body_mock_calls",
+        "value": 0.0,
+        "contribution": -6.453359428012158e-07
+      },
+      {
+        "feature": "helper_mean_network_calls",
+        "value": 0.0,
+        "contribution": 5.46449485962859e-07
+      },
+      {
+        "feature": "body_statements",
+        "value": 2.0,
+        "contribution": 4.336367138014618e-07
+      },
+      {
+        "feature": "body_awaits",
+        "value": 0.0,
+        "contribution": -3.7379767654286867e-07
+      },
+      {
+        "feature": "class_state_random_calls",
+        "value": 0.0,
+        "contribution": -3.250067406885884e-07
+      },
+      {
+        "feature": "lifecycle_mean_process_calls",
+        "value": 0.0,
+        "contribution": 3.1136118036968107e-07
+      },
+      {
+        "feature": "lifecycle_mean_asserts",
+        "value": 0.0,
+        "contribution": 1.1566787982162583e-07
+      },
+      {
+        "feature": "body_globals",
+        "value": 0.0,
+        "contribution": 6.910445459598272e-08
+      },
+      {
+        "feature": "body_attribute_writes",
+        "value": 0.0,
+        "contribution": -4.987966255567337e-08
+      },
+      {
+        "feature": "lifecycle_mean_time_calls",
+        "value": 0.0,
+        "contribution": 3.752252425784364e-08
+      },
+      {
+        "feature": "lifecycle_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.8143103386285106e-08
+      },
+      {
+        "feature": "body_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_other",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_package",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "helper_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0
+      }
+    ]
+  },
+  {
+    "example_id": "490ea4d6579725f826b8d0d4e2e54b2d8bf6c1381a022a065b3ce320e0086fcf",
+    "project": "attrs",
+    "junit_name": "test_disabled[True-False]",
+    "score": 0.004896730902895463,
+    "base": 0.0072098878461890415,
+    "reconstruction_error": 1.474514954580286e-17,
+    "method": "Exact mean tree-path probability decomposition, not SHAP; correlated features and allocation are not causal diagnosis.",
+    "source": {
+      "source_path": "tests/test_validators.py",
+      "source_qualname": "TestDisableValidators.test_disabled",
+      "source_file_sha256": "7c6f97e23bbf1443608c1bff91a2881849b43b52f4b0f255acfeb669ef4008a0",
+      "body_ast_sha256": "1755a086e03f67292e3383d7e33cd63216f2d8e2bbe9489a97fca71d0b6720dd",
+      "body_statements": 3,
+      "body_ast_nodes": 20,
+      "unresolved_fixture_count": 0,
+      "context_bounded": false,
+      "context_sources": [
+        {
+          "source": "src/attr/_config.py::get_run_validators",
+          "kind": "helper",
+          "sha256": "0499fe7dced578eaca08d0eb0a58c2b4293e8d63e39939496d8e5ec52ceafae6"
+        },
+        {
+          "source": "src/attr/validators.py::get_disabled",
+          "kind": "helper",
+          "sha256": "04df88cefdc8a7176b800c5d35df3bcae0a43d9c303362fc15b783cef53517c5"
+        },
+        {
+          "source": "tests/test_validators.py::TestDisableValidators._reset_default",
+          "kind": "fixture",
+          "sha256": "7c6f97e23bbf1443608c1bff91a2881849b43b52f4b0f255acfeb669ef4008a0"
+        }
+      ]
+    },
+    "contributions": [
+      {
+        "feature": "fixture_mean_attribute_writes",
+        "value": 1.0,
+        "contribution": 0.000905915986921297
+      },
+      {
+        "feature": "fixture_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -0.0008602154026193885
+      },
+      {
+        "feature": "fixture_mean_calls",
+        "value": 0.0,
+        "contribution": -0.000826712306496126
+      },
+      {
+        "feature": "fixture_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.0004969997951028693
+      },
+      {
+        "feature": "lifecycle_count",
+        "value": 0.0,
+        "contribution": -0.00041572893889825117
+      },
+      {
+        "feature": "fixture_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.0003951797189180331
+      },
+      {
+        "feature": "fixture_mean_lines",
+        "value": 6.0,
+        "contribution": 0.00035172004297454685
+      },
+      {
+        "feature": "fixture_mean_yields",
+        "value": 1.0,
+        "contribution": -0.0003431725165683864
+      },
+      {
+        "feature": "fixture_scope_session",
+        "value": 0.0,
+        "contribution": 0.0003068625306534057
+      },
+      {
+        "feature": "lifecycle_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -0.00025297579799220276
+      },
+      {
+        "feature": "fixture_autouse_count",
+        "value": 1.0,
+        "contribution": 0.0002509753632443176
+      },
+      {
+        "feature": "helper_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.0002294925316737123
+      },
+      {
+        "feature": "fixture_scope_function",
+        "value": 1.0,
+        "contribution": 0.00020173907924152435
+      },
+      {
+        "feature": "lifecycle_mean_lines",
+        "value": 0.0,
+        "contribution": -0.0001924460613293522
+      },
+      {
+        "feature": "fixture_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.00017005389422164395
+      },
+      {
+        "feature": "fixture_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -0.00010788138224481587
+      },
+      {
+        "feature": "fixture_count",
+        "value": 1.0,
+        "contribution": 0.00010227872338974513
+      },
+      {
+        "feature": "helper_mean_asserts",
+        "value": 0.0,
+        "contribution": 9.749820840584115e-05
+      },
+      {
+        "feature": "helper_mean_calls",
+        "value": 0.5,
+        "contribution": 9.310251809352817e-05
+      },
+      {
+        "feature": "fixture_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 9.157812583621488e-05
+      },
+      {
+        "feature": "lifecycle_mean_calls",
+        "value": 0.0,
+        "contribution": -7.759307974923653e-05
+      },
+      {
+        "feature": "class_state_assignments",
+        "value": 0.0,
+        "contribution": -6.146988920425838e-05
+      },
+      {
+        "feature": "class_state_mutable_literals",
+        "value": 0.0,
+        "contribution": -6.03783867281275e-05
+      },
+      {
+        "feature": "helper_mean_lines",
+        "value": 9.5,
+        "contribution": 5.457485313150856e-05
+      },
+      {
+        "feature": "helper_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -5.4392181792047795e-05
+      },
+      {
+        "feature": "helper_mean_time_calls",
+        "value": 0.0,
+        "contribution": -4.5338292308242544e-05
+      },
+      {
+        "feature": "body_branches",
+        "value": 0.0,
+        "contribution": 3.759047696361774e-05
+      },
+      {
+        "feature": "lifecycle_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -3.3891258542239136e-05
+      },
+      {
+        "feature": "helper_count",
+        "value": 2.0,
+        "contribution": 3.382100982182478e-05
+      },
+      {
+        "feature": "lifecycle_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -3.199740852520915e-05
+      },
+      {
+        "feature": "body_time_calls",
+        "value": 0.0,
+        "contribution": -3.097557354552522e-05
+      },
+      {
+        "feature": "fixture_scope_module",
+        "value": 0.0,
+        "contribution": -3.031969349235909e-05
+      },
+      {
+        "feature": "body_asserts",
+        "value": 1.0,
+        "contribution": -2.925456235142258e-05
+      },
+      {
+        "feature": "body_process_calls",
+        "value": 0.0,
+        "contribution": -2.6190313737565375e-05
+      },
+      {
+        "feature": "helper_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 2.262627178774495e-05
+      },
+      {
+        "feature": "body_cleanup_calls",
+        "value": 0.0,
+        "contribution": -2.068084653079904e-05
+      },
+      {
+        "feature": "fixture_mean_time_calls",
+        "value": 0.0,
+        "contribution": 2.0253694635870804e-05
+      },
+      {
+        "feature": "lifecycle_mean_random_calls",
+        "value": 0.0,
+        "contribution": -1.9291389101781477e-05
+      },
+      {
+        "feature": "body_unittest_asserts",
+        "value": 0.0,
+        "contribution": -1.5883713876656817e-05
+      },
+      {
+        "feature": "class_state_calls",
+        "value": 0.0,
+        "contribution": 1.5295484618674758e-05
+      },
+      {
+        "feature": "body_class_shared_reads",
+        "value": 0.0,
+        "contribution": -1.5257458551403245e-05
+      },
+      {
+        "feature": "body_calls",
+        "value": 1.0,
+        "contribution": -1.401236283626618e-05
+      },
+      {
+        "feature": "body_mutable_literals",
+        "value": 0.0,
+        "contribution": 1.3048841749843951e-05
+      },
+      {
+        "feature": "fixture_mean_asserts",
+        "value": 0.0,
+        "contribution": -1.1773500633396125e-05
+      },
+      {
+        "feature": "lifecycle_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -1.0627822130852083e-05
+      },
+      {
+        "feature": "helper_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -9.466145881212313e-06
+      },
+      {
+        "feature": "lifecycle_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": -8.434310496544069e-06
+      },
+      {
+        "feature": "fixture_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -7.977551504855591e-06
+      },
+      {
+        "feature": "body_mutable_ops",
+        "value": 0.0,
+        "contribution": -6.9118975739041774e-06
+      },
+      {
+        "feature": "body_blocking_calls",
+        "value": 0.0,
+        "contribution": -5.792815542138292e-06
+      },
+      {
+        "feature": "body_random_calls",
+        "value": 0.0,
+        "contribution": 5.212403543934168e-06
+      },
+      {
+        "feature": "body_imports",
+        "value": 0.0,
+        "contribution": -4.700444222719614e-06
+      },
+      {
+        "feature": "helper_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": 4.442517843990869e-06
+      },
+      {
+        "feature": "body_filesystem_calls",
+        "value": 0.0,
+        "contribution": -4.134025170405835e-06
+      },
+      {
+        "feature": "fixture_dependency_edges",
+        "value": 0.0,
+        "contribution": 3.7405020496998306e-06
+      },
+      {
+        "feature": "helper_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": 3.0756852127125133e-06
+      },
+      {
+        "feature": "body_comprehensions",
+        "value": 0.0,
+        "contribution": -2.9009323938949256e-06
+      },
+      {
+        "feature": "body_try_blocks",
+        "value": 0.0,
+        "contribution": -2.876658785523113e-06
+      },
+      {
+        "feature": "lifecycle_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -2.8440315562062177e-06
+      },
+      {
+        "feature": "fixture_mean_network_calls",
+        "value": 0.0,
+        "contribution": -2.8109748748212687e-06
+      },
+      {
+        "feature": "helper_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": 2.7031550026260648e-06
+      },
+      {
+        "feature": "body_lines",
+        "value": 7.0,
+        "contribution": 2.5144564745677837e-06
+      },
+      {
+        "feature": "helper_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": 2.3874590817629536e-06
+      },
+      {
+        "feature": "lifecycle_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -1.8832729693580128e-06
+      },
+      {
+        "feature": "helper_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.6585373720303915e-06
+      },
+      {
+        "feature": "fixture_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.4897796530182581e-06
+      },
+      {
+        "feature": "helper_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 1.4498662902548042e-06
+      },
+      {
+        "feature": "body_subscript_writes",
+        "value": 0.0,
+        "contribution": 1.4485615055264356e-06
+      },
+      {
+        "feature": "lifecycle_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -1.4247814098700698e-06
+      },
+      {
+        "feature": "body_network_calls",
+        "value": 0.0,
+        "contribution": -1.3998148173659618e-06
+      },
+      {
+        "feature": "body_with_blocks",
+        "value": 0.0,
+        "contribution": 1.3902774831519736e-06
+      },
+      {
+        "feature": "body_raises",
+        "value": 0.0,
+        "contribution": -1.3314621200564273e-06
+      },
+      {
+        "feature": "body_module_shared_reads",
+        "value": 0.0,
+        "contribution": -1.1710408112309065e-06
+      },
+      {
+        "feature": "fixture_scope_class",
+        "value": 0.0,
+        "contribution": 8.735098887519243e-07
+      },
+      {
+        "feature": "body_yields",
+        "value": 0.0,
+        "contribution": 8.355277161997567e-07
+      },
+      {
+        "feature": "helper_mean_yields",
+        "value": 0.0,
+        "contribution": 6.636469101576837e-07
+      },
+      {
+        "feature": "body_mock_calls",
+        "value": 0.0,
+        "contribution": -6.453359428012158e-07
+      },
+      {
+        "feature": "helper_mean_network_calls",
+        "value": 0.0,
+        "contribution": 5.46449485962859e-07
+      },
+      {
+        "feature": "body_statements",
+        "value": 3.0,
+        "contribution": 4.336367138014618e-07
+      },
+      {
+        "feature": "body_awaits",
+        "value": 0.0,
+        "contribution": -3.7379767654286867e-07
+      },
+      {
+        "feature": "class_state_random_calls",
+        "value": 0.0,
+        "contribution": -3.250067406885884e-07
+      },
+      {
+        "feature": "lifecycle_mean_process_calls",
+        "value": 0.0,
+        "contribution": 3.1136118036968107e-07
+      },
+      {
+        "feature": "body_loops",
+        "value": 0.0,
+        "contribution": 2.411812072464735e-07
+      },
+      {
+        "feature": "lifecycle_mean_asserts",
+        "value": 0.0,
+        "contribution": 1.1566787982162583e-07
+      },
+      {
+        "feature": "body_attribute_writes",
+        "value": 1.0,
+        "contribution": -7.920462436113659e-08
+      },
+      {
+        "feature": "body_globals",
+        "value": 0.0,
+        "contribution": 6.910445459598272e-08
+      },
+      {
+        "feature": "lifecycle_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.8143103386285106e-08
+      },
+      {
+        "feature": "body_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_other",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_package",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "helper_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_time_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0
+      }
+    ]
+  },
+  {
+    "example_id": "90187aab983151c2c68e4b411b5bab297c183841d8a538503be784a53f0fd79c",
+    "project": "tenacity",
+    "junit_name": "test_02_custom_sec_format",
+    "score": 0.04678112802784893,
+    "base": 0.0072098878461890415,
+    "reconstruction_error": 1.3877787807814457e-17,
+    "method": "Exact mean tree-path probability decomposition, not SHAP; correlated features and allocation are not causal diagnosis.",
+    "source": {
+      "source_path": "tests/test_after.py",
+      "source_qualname": "TestAfterLogFormat.test_02_custom_sec_format",
+      "source_file_sha256": "082d08f27ffedae88e4ad1f294b832440b82fce7744b1f98886b8647bfe9e4b3",
+      "body_ast_sha256": "86afc75654bb17ea0dd7f78bcfd2e6eab6e1b837e972408d35877148d5ff5bf5",
+      "body_statements": 9,
+      "body_ast_nodes": 115,
+      "unresolved_fixture_count": 0,
+      "context_bounded": false,
+      "context_sources": [
+        {
+          "source": "tenacity/_utils.py::find_ordinal",
+          "kind": "helper",
+          "sha256": "6ecccb8012d314f5000d75a5a01a1e3257ab1a3d727a21b457e2c922fbe3e79e"
+        },
+        {
+          "source": "tenacity/_utils.py::to_ordinal",
+          "kind": "helper",
+          "sha256": "6ecccb8012d314f5000d75a5a01a1e3257ab1a3d727a21b457e2c922fbe3e79e"
+        },
+        {
+          "source": "tests/test_after.py::TestAfterLogFormat.setUp",
+          "kind": "lifecycle",
+          "sha256": "082d08f27ffedae88e4ad1f294b832440b82fce7744b1f98886b8647bfe9e4b3"
+        },
+        {
+          "source": "tests/test_tenacity.py::_make_unset_exception",
+          "kind": "helper",
+          "sha256": "6db295bfd2cce3abea8d970e40450dff573a411e1b2b1bdfec272ed7cb20c0d7"
+        },
+        {
+          "source": "tests/test_tenacity.py::_set_delay_since_start",
+          "kind": "helper",
+          "sha256": "6db295bfd2cce3abea8d970e40450dff573a411e1b2b1bdfec272ed7cb20c0d7"
+        },
+        {
+          "source": "tests/test_tenacity.py::make_retry_state",
+          "kind": "helper",
+          "sha256": "6db295bfd2cce3abea8d970e40450dff573a411e1b2b1bdfec272ed7cb20c0d7"
+        }
+      ]
+    },
+    "contributions": [
+      {
+        "feature": "lifecycle_mean_random_calls",
+        "value": 2.0,
+        "contribution": 0.045640487175364036
+      },
+      {
+        "feature": "fixture_autouse_count",
+        "value": 0.0,
+        "contribution": -0.0031416479756781342
+      },
+      {
+        "feature": "lifecycle_count",
+        "value": 1.0,
+        "contribution": 0.0020085560140211582
+      },
+      {
+        "feature": "lifecycle_mean_lines",
+        "value": 11.0,
+        "contribution": 0.001827685253372855
+      },
+      {
+        "feature": "fixture_scope_session",
+        "value": 0.0,
+        "contribution": -0.00151155230274258
+      },
+      {
+        "feature": "fixture_count",
+        "value": 0.0,
+        "contribution": -0.0015056092629516808
+      },
+      {
+        "feature": "lifecycle_mean_attribute_writes",
+        "value": 2.0,
+        "contribution": 0.0010472246067389159
+      },
+      {
+        "feature": "fixture_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -0.0009441254028396425
+      },
+      {
+        "feature": "fixture_mean_lines",
+        "value": 0.0,
+        "contribution": -0.0007373067187477622
+      },
+      {
+        "feature": "fixture_mean_calls",
+        "value": 0.0,
+        "contribution": -0.0007090073126056146
+      },
+      {
+        "feature": "body_mock_calls",
+        "value": 2.0,
+        "contribution": 0.0006827602144867486
+      },
+      {
+        "feature": "fixture_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -0.0006403601077505179
+      },
+      {
+        "feature": "helper_count",
+        "value": 5.0,
+        "contribution": -0.0005871916731448267
+      },
+      {
+        "feature": "helper_mean_asserts",
+        "value": 0.20000000298023224,
+        "contribution": -0.0005088066988908201
+      },
+      {
+        "feature": "fixture_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.00039195543408493145
+      },
+      {
+        "feature": "fixture_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00034454212852878173
+      },
+      {
+        "feature": "helper_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00032456431401490935
+      },
+      {
+        "feature": "class_state_mutable_literals",
+        "value": 0.0,
+        "contribution": -0.0002183730543515752
+      },
+      {
+        "feature": "lifecycle_mean_calls",
+        "value": 2.0,
+        "contribution": 0.00018978011890072817
+      },
+      {
+        "feature": "class_state_assignments",
+        "value": 0.0,
+        "contribution": -0.00018726061993899867
+      },
+      {
+        "feature": "fixture_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.0001615165402911678
+      },
+      {
+        "feature": "lifecycle_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": 0.00015384250191413017
+      },
+      {
+        "feature": "helper_mean_mutable_ops",
+        "value": 0.20000000298023224,
+        "contribution": -0.00013987888142863
+      },
+      {
+        "feature": "helper_mean_attribute_writes",
+        "value": 1.0,
+        "contribution": -0.00013065401124307536
+      },
+      {
+        "feature": "lifecycle_mean_asserts",
+        "value": 0.0,
+        "contribution": 0.0001212935595499548
+      },
+      {
+        "feature": "helper_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": 0.00010389673047499174
+      },
+      {
+        "feature": "fixture_mean_yields",
+        "value": 0.0,
+        "contribution": 9.92890507639226e-05
+      },
+      {
+        "feature": "lifecycle_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -9.898765686039363e-05
+      },
+      {
+        "feature": "helper_mean_lines",
+        "value": 12.600000381469727,
+        "contribution": 8.033198584959624e-05
+      },
+      {
+        "feature": "fixture_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -7.695553479467064e-05
+      },
+      {
+        "feature": "body_with_blocks",
+        "value": 0.0,
+        "contribution": -7.014312471982473e-05
+      },
+      {
+        "feature": "helper_mean_calls",
+        "value": 2.5999999046325684,
+        "contribution": -6.124346754537702e-05
+      },
+      {
+        "feature": "helper_mean_blocking_calls",
+        "value": 0.20000000298023224,
+        "contribution": 4.4975909796625477e-05
+      },
+      {
+        "feature": "body_asserts",
+        "value": 0.0,
+        "contribution": 3.65994356756827e-05
+      },
+      {
+        "feature": "body_time_calls",
+        "value": 0.0,
+        "contribution": -2.1238242820781327e-05
+      },
+      {
+        "feature": "helper_mean_cleanup_calls",
+        "value": 0.20000000298023224,
+        "contribution": 1.9483607094901853e-05
+      },
+      {
+        "feature": "body_process_calls",
+        "value": 0.0,
+        "contribution": -1.870602779711389e-05
+      },
+      {
+        "feature": "helper_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 1.7565071987250347e-05
+      },
+      {
+        "feature": "body_class_shared_reads",
+        "value": 0.0,
+        "contribution": 1.6382183957380006e-05
+      },
+      {
+        "feature": "body_try_blocks",
+        "value": 0.0,
+        "contribution": 1.58615540252271e-05
+      },
+      {
+        "feature": "helper_mean_time_calls",
+        "value": 0.0,
+        "contribution": -1.582406705061299e-05
+      },
+      {
+        "feature": "body_unittest_asserts",
+        "value": 1.0,
+        "contribution": -1.549593898276206e-05
+      },
+      {
+        "feature": "fixture_scope_function",
+        "value": 0.0,
+        "contribution": -1.4457238630175159e-05
+      },
+      {
+        "feature": "body_branches",
+        "value": 0.0,
+        "contribution": 1.4223070055621842e-05
+      },
+      {
+        "feature": "fixture_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 1.3149417090881908e-05
+      },
+      {
+        "feature": "fixture_mean_time_calls",
+        "value": 0.0,
+        "contribution": 1.3076789062799958e-05
+      },
+      {
+        "feature": "fixture_scope_module",
+        "value": 0.0,
+        "contribution": -1.2519729382189036e-05
+      },
+      {
+        "feature": "class_state_calls",
+        "value": 0.0,
+        "contribution": 1.238034004305546e-05
+      },
+      {
+        "feature": "body_attribute_writes",
+        "value": 0.0,
+        "contribution": -1.2088293165915189e-05
+      },
+      {
+        "feature": "body_cleanup_calls",
+        "value": 0.0,
+        "contribution": -1.1211406348030279e-05
+      },
+      {
+        "feature": "helper_mean_network_calls",
+        "value": 0.0,
+        "contribution": 1.0884865873755972e-05
+      },
+      {
+        "feature": "lifecycle_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -1.0196704246147938e-05
+      },
+      {
+        "feature": "lifecycle_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": 9.728157516957308e-06
+      },
+      {
+        "feature": "body_mutable_literals",
+        "value": 0.0,
+        "contribution": 8.768793214592311e-06
+      },
+      {
+        "feature": "body_yields",
+        "value": 0.0,
+        "contribution": 8.177181946800523e-06
+      },
+      {
+        "feature": "fixture_mean_asserts",
+        "value": 0.0,
+        "contribution": -6.973728512087369e-06
+      },
+      {
+        "feature": "body_calls",
+        "value": 8.0,
+        "contribution": 6.858849753875447e-06
+      },
+      {
+        "feature": "helper_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -6.631907874523841e-06
+      },
+      {
+        "feature": "fixture_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": 6.560867975810761e-06
+      },
+      {
+        "feature": "fixture_dependency_edges",
+        "value": 0.0,
+        "contribution": 3.1621903908681165e-06
+      },
+      {
+        "feature": "helper_mean_yields",
+        "value": 0.0,
+        "contribution": 2.9103309604399663e-06
+      },
+      {
+        "feature": "body_filesystem_calls",
+        "value": 0.0,
+        "contribution": -2.6242908653522258e-06
+      },
+      {
+        "feature": "lifecycle_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": -2.5970199073043196e-06
+      },
+      {
+        "feature": "body_random_calls",
+        "value": 0.0,
+        "contribution": 2.187747682477615e-06
+      },
+      {
+        "feature": "body_lines",
+        "value": 19.0,
+        "contribution": -2.127916048598329e-06
+      },
+      {
+        "feature": "body_mutable_ops",
+        "value": 0.0,
+        "contribution": -2.0524672988571685e-06
+      },
+      {
+        "feature": "body_statements",
+        "value": 9.0,
+        "contribution": 1.939366862388588e-06
+      },
+      {
+        "feature": "body_subscript_writes",
+        "value": 0.0,
+        "contribution": -1.644780439204632e-06
+      },
+      {
+        "feature": "helper_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.380256527358868e-06
+      },
+      {
+        "feature": "body_network_calls",
+        "value": 0.0,
+        "contribution": -1.3327711718830724e-06
+      },
+      {
+        "feature": "body_comprehensions",
+        "value": 0.0,
+        "contribution": -1.1234192582651115e-06
+      },
+      {
+        "feature": "body_blocking_calls",
+        "value": 0.0,
+        "contribution": -1.042904325002897e-06
+      },
+      {
+        "feature": "lifecycle_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -9.676844658049193e-07
+      },
+      {
+        "feature": "helper_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 8.740169690405886e-07
+      },
+      {
+        "feature": "body_loops",
+        "value": 0.0,
+        "contribution": 8.529306213798239e-07
+      },
+      {
+        "feature": "fixture_mean_random_calls",
+        "value": 0.0,
+        "contribution": -7.906431491625526e-07
+      },
+      {
+        "feature": "fixture_mean_network_calls",
+        "value": 0.0,
+        "contribution": 6.752468855066498e-07
+      },
+      {
+        "feature": "fixture_scope_class",
+        "value": 0.0,
+        "contribution": 4.979172107942597e-07
+      },
+      {
+        "feature": "body_globals",
+        "value": 0.0,
+        "contribution": 4.571149498761041e-07
+      },
+      {
+        "feature": "body_imports",
+        "value": 0.0,
+        "contribution": 3.930341560805665e-07
+      },
+      {
+        "feature": "body_module_shared_reads",
+        "value": 0.0,
+        "contribution": -3.831200696107951e-07
+      },
+      {
+        "feature": "lifecycle_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -3.7635791733467037e-07
+      },
+      {
+        "feature": "lifecycle_mean_process_calls",
+        "value": 0.0,
+        "contribution": 3.1136118036968107e-07
+      },
+      {
+        "feature": "body_awaits",
+        "value": 0.0,
+        "contribution": -2.753566463333528e-07
+      },
+      {
+        "feature": "body_raises",
+        "value": 0.0,
+        "contribution": 1.1145717861611398e-07
+      },
+      {
+        "feature": "lifecycle_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.8143103386285106e-08
+      },
+      {
+        "feature": "body_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "class_state_random_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_other",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_package",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "helper_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_time_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0
+      }
+    ]
+  },
+  {
+    "example_id": "b1bb1c64a4df32f39df323f77210ec5d9feec928e4d560372312a117c5e6e424",
+    "project": "tenacity",
+    "junit_name": "test_01_default",
+    "score": 0.04678112802784893,
+    "base": 0.0072098878461890415,
+    "reconstruction_error": 1.3877787807814457e-17,
+    "method": "Exact mean tree-path probability decomposition, not SHAP; correlated features and allocation are not causal diagnosis.",
+    "source": {
+      "source_path": "tests/test_after.py",
+      "source_qualname": "TestAfterLogFormat.test_01_default",
+      "source_file_sha256": "082d08f27ffedae88e4ad1f294b832440b82fce7744b1f98886b8647bfe9e4b3",
+      "body_ast_sha256": "72075d67afc117f8a769bb67c3b53db81936b49b7a22403b479ac30b16558392",
+      "body_statements": 9,
+      "body_ast_nodes": 112,
+      "unresolved_fixture_count": 0,
+      "context_bounded": false,
+      "context_sources": [
+        {
+          "source": "tenacity/_utils.py::find_ordinal",
+          "kind": "helper",
+          "sha256": "6ecccb8012d314f5000d75a5a01a1e3257ab1a3d727a21b457e2c922fbe3e79e"
+        },
+        {
+          "source": "tenacity/_utils.py::to_ordinal",
+          "kind": "helper",
+          "sha256": "6ecccb8012d314f5000d75a5a01a1e3257ab1a3d727a21b457e2c922fbe3e79e"
+        },
+        {
+          "source": "tests/test_after.py::TestAfterLogFormat.setUp",
+          "kind": "lifecycle",
+          "sha256": "082d08f27ffedae88e4ad1f294b832440b82fce7744b1f98886b8647bfe9e4b3"
+        },
+        {
+          "source": "tests/test_tenacity.py::_make_unset_exception",
+          "kind": "helper",
+          "sha256": "6db295bfd2cce3abea8d970e40450dff573a411e1b2b1bdfec272ed7cb20c0d7"
+        },
+        {
+          "source": "tests/test_tenacity.py::_set_delay_since_start",
+          "kind": "helper",
+          "sha256": "6db295bfd2cce3abea8d970e40450dff573a411e1b2b1bdfec272ed7cb20c0d7"
+        },
+        {
+          "source": "tests/test_tenacity.py::make_retry_state",
+          "kind": "helper",
+          "sha256": "6db295bfd2cce3abea8d970e40450dff573a411e1b2b1bdfec272ed7cb20c0d7"
+        }
+      ]
+    },
+    "contributions": [
+      {
+        "feature": "lifecycle_mean_random_calls",
+        "value": 2.0,
+        "contribution": 0.045640487175364036
+      },
+      {
+        "feature": "fixture_autouse_count",
+        "value": 0.0,
+        "contribution": -0.0031416479756781342
+      },
+      {
+        "feature": "lifecycle_count",
+        "value": 1.0,
+        "contribution": 0.0020085560140211582
+      },
+      {
+        "feature": "lifecycle_mean_lines",
+        "value": 11.0,
+        "contribution": 0.001827685253372855
+      },
+      {
+        "feature": "fixture_scope_session",
+        "value": 0.0,
+        "contribution": -0.00151155230274258
+      },
+      {
+        "feature": "fixture_count",
+        "value": 0.0,
+        "contribution": -0.0015056092629516808
+      },
+      {
+        "feature": "lifecycle_mean_attribute_writes",
+        "value": 2.0,
+        "contribution": 0.0010472246067389159
+      },
+      {
+        "feature": "fixture_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -0.0009441254028396425
+      },
+      {
+        "feature": "fixture_mean_lines",
+        "value": 0.0,
+        "contribution": -0.0007373067187477622
+      },
+      {
+        "feature": "fixture_mean_calls",
+        "value": 0.0,
+        "contribution": -0.0007090073126056146
+      },
+      {
+        "feature": "body_mock_calls",
+        "value": 2.0,
+        "contribution": 0.0006827602144867486
+      },
+      {
+        "feature": "fixture_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -0.0006403601077505179
+      },
+      {
+        "feature": "helper_count",
+        "value": 5.0,
+        "contribution": -0.0005871916731448267
+      },
+      {
+        "feature": "helper_mean_asserts",
+        "value": 0.20000000298023224,
+        "contribution": -0.0005088066988908201
+      },
+      {
+        "feature": "fixture_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.00039195543408493145
+      },
+      {
+        "feature": "fixture_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00034454212852878173
+      },
+      {
+        "feature": "helper_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00032456431401490935
+      },
+      {
+        "feature": "class_state_mutable_literals",
+        "value": 0.0,
+        "contribution": -0.0002183730543515752
+      },
+      {
+        "feature": "lifecycle_mean_calls",
+        "value": 2.0,
+        "contribution": 0.00018978011890072817
+      },
+      {
+        "feature": "class_state_assignments",
+        "value": 0.0,
+        "contribution": -0.00018726061993899867
+      },
+      {
+        "feature": "fixture_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.0001615165402911678
+      },
+      {
+        "feature": "lifecycle_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": 0.00015384250191413017
+      },
+      {
+        "feature": "helper_mean_mutable_ops",
+        "value": 0.20000000298023224,
+        "contribution": -0.00013987888142863
+      },
+      {
+        "feature": "helper_mean_attribute_writes",
+        "value": 1.0,
+        "contribution": -0.00013065401124307536
+      },
+      {
+        "feature": "lifecycle_mean_asserts",
+        "value": 0.0,
+        "contribution": 0.0001212935595499548
+      },
+      {
+        "feature": "helper_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": 0.00010389673047499174
+      },
+      {
+        "feature": "fixture_mean_yields",
+        "value": 0.0,
+        "contribution": 9.92890507639226e-05
+      },
+      {
+        "feature": "lifecycle_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -9.898765686039363e-05
+      },
+      {
+        "feature": "helper_mean_lines",
+        "value": 12.600000381469727,
+        "contribution": 8.033198584959624e-05
+      },
+      {
+        "feature": "fixture_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -7.695553479467064e-05
+      },
+      {
+        "feature": "body_with_blocks",
+        "value": 0.0,
+        "contribution": -7.014312471982473e-05
+      },
+      {
+        "feature": "helper_mean_calls",
+        "value": 2.5999999046325684,
+        "contribution": -6.124346754537702e-05
+      },
+      {
+        "feature": "helper_mean_blocking_calls",
+        "value": 0.20000000298023224,
+        "contribution": 4.4975909796625477e-05
+      },
+      {
+        "feature": "body_asserts",
+        "value": 0.0,
+        "contribution": 3.65994356756827e-05
+      },
+      {
+        "feature": "body_time_calls",
+        "value": 0.0,
+        "contribution": -2.1238242820781327e-05
+      },
+      {
+        "feature": "helper_mean_cleanup_calls",
+        "value": 0.20000000298023224,
+        "contribution": 1.9483607094901853e-05
+      },
+      {
+        "feature": "body_process_calls",
+        "value": 0.0,
+        "contribution": -1.870602779711389e-05
+      },
+      {
+        "feature": "helper_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 1.7565071987250347e-05
+      },
+      {
+        "feature": "body_class_shared_reads",
+        "value": 0.0,
+        "contribution": 1.6382183957380006e-05
+      },
+      {
+        "feature": "body_try_blocks",
+        "value": 0.0,
+        "contribution": 1.58615540252271e-05
+      },
+      {
+        "feature": "helper_mean_time_calls",
+        "value": 0.0,
+        "contribution": -1.582406705061299e-05
+      },
+      {
+        "feature": "body_unittest_asserts",
+        "value": 1.0,
+        "contribution": -1.549593898276206e-05
+      },
+      {
+        "feature": "fixture_scope_function",
+        "value": 0.0,
+        "contribution": -1.4457238630175159e-05
+      },
+      {
+        "feature": "body_branches",
+        "value": 0.0,
+        "contribution": 1.4223070055621842e-05
+      },
+      {
+        "feature": "fixture_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 1.3149417090881908e-05
+      },
+      {
+        "feature": "fixture_mean_time_calls",
+        "value": 0.0,
+        "contribution": 1.3076789062799958e-05
+      },
+      {
+        "feature": "fixture_scope_module",
+        "value": 0.0,
+        "contribution": -1.2519729382189036e-05
+      },
+      {
+        "feature": "class_state_calls",
+        "value": 0.0,
+        "contribution": 1.238034004305546e-05
+      },
+      {
+        "feature": "body_attribute_writes",
+        "value": 0.0,
+        "contribution": -1.2088293165915189e-05
+      },
+      {
+        "feature": "body_cleanup_calls",
+        "value": 0.0,
+        "contribution": -1.1211406348030279e-05
+      },
+      {
+        "feature": "helper_mean_network_calls",
+        "value": 0.0,
+        "contribution": 1.0884865873755972e-05
+      },
+      {
+        "feature": "lifecycle_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -1.0196704246147938e-05
+      },
+      {
+        "feature": "lifecycle_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": 9.728157516957308e-06
+      },
+      {
+        "feature": "body_mutable_literals",
+        "value": 0.0,
+        "contribution": 8.768793214592311e-06
+      },
+      {
+        "feature": "body_yields",
+        "value": 0.0,
+        "contribution": 8.177181946800523e-06
+      },
+      {
+        "feature": "fixture_mean_asserts",
+        "value": 0.0,
+        "contribution": -6.973728512087369e-06
+      },
+      {
+        "feature": "body_calls",
+        "value": 8.0,
+        "contribution": 6.858849753875447e-06
+      },
+      {
+        "feature": "helper_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -6.631907874523841e-06
+      },
+      {
+        "feature": "fixture_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": 6.560867975810761e-06
+      },
+      {
+        "feature": "fixture_dependency_edges",
+        "value": 0.0,
+        "contribution": 3.1621903908681165e-06
+      },
+      {
+        "feature": "helper_mean_yields",
+        "value": 0.0,
+        "contribution": 2.9103309604399663e-06
+      },
+      {
+        "feature": "body_filesystem_calls",
+        "value": 0.0,
+        "contribution": -2.6242908653522258e-06
+      },
+      {
+        "feature": "lifecycle_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": -2.5970199073043196e-06
+      },
+      {
+        "feature": "body_random_calls",
+        "value": 0.0,
+        "contribution": 2.187747682477615e-06
+      },
+      {
+        "feature": "body_lines",
+        "value": 21.0,
+        "contribution": -2.127916048598329e-06
+      },
+      {
+        "feature": "body_mutable_ops",
+        "value": 0.0,
+        "contribution": -2.0524672988571685e-06
+      },
+      {
+        "feature": "body_statements",
+        "value": 9.0,
+        "contribution": 1.939366862388588e-06
+      },
+      {
+        "feature": "body_subscript_writes",
+        "value": 0.0,
+        "contribution": -1.644780439204632e-06
+      },
+      {
+        "feature": "helper_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.380256527358868e-06
+      },
+      {
+        "feature": "body_network_calls",
+        "value": 0.0,
+        "contribution": -1.3327711718830724e-06
+      },
+      {
+        "feature": "body_comprehensions",
+        "value": 0.0,
+        "contribution": -1.1234192582651115e-06
+      },
+      {
+        "feature": "body_blocking_calls",
+        "value": 0.0,
+        "contribution": -1.042904325002897e-06
+      },
+      {
+        "feature": "lifecycle_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -9.676844658049193e-07
+      },
+      {
+        "feature": "helper_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 8.740169690405886e-07
+      },
+      {
+        "feature": "body_loops",
+        "value": 0.0,
+        "contribution": 8.529306213798239e-07
+      },
+      {
+        "feature": "fixture_mean_random_calls",
+        "value": 0.0,
+        "contribution": -7.906431491625526e-07
+      },
+      {
+        "feature": "fixture_mean_network_calls",
+        "value": 0.0,
+        "contribution": 6.752468855066498e-07
+      },
+      {
+        "feature": "fixture_scope_class",
+        "value": 0.0,
+        "contribution": 4.979172107942597e-07
+      },
+      {
+        "feature": "body_globals",
+        "value": 0.0,
+        "contribution": 4.571149498761041e-07
+      },
+      {
+        "feature": "body_imports",
+        "value": 0.0,
+        "contribution": 3.930341560805665e-07
+      },
+      {
+        "feature": "body_module_shared_reads",
+        "value": 0.0,
+        "contribution": -3.831200696107951e-07
+      },
+      {
+        "feature": "lifecycle_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -3.7635791733467037e-07
+      },
+      {
+        "feature": "lifecycle_mean_process_calls",
+        "value": 0.0,
+        "contribution": 3.1136118036968107e-07
+      },
+      {
+        "feature": "body_awaits",
+        "value": 0.0,
+        "contribution": -2.753566463333528e-07
+      },
+      {
+        "feature": "body_raises",
+        "value": 0.0,
+        "contribution": 1.1145717861611398e-07
+      },
+      {
+        "feature": "lifecycle_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.8143103386285106e-08
+      },
+      {
+        "feature": "body_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "class_state_random_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_other",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_package",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "helper_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_time_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0
+      }
+    ]
+  },
+  {
+    "example_id": "71f3cfda595fd216f21dbbe424d05136ba4c4dd59e34c891b13ef9aaa4faa4af",
+    "project": "tenacity",
+    "junit_name": "test_02_none_seconds_since_start",
+    "score": 0.04662771027049815,
+    "base": 0.0072098878461890415,
+    "reconstruction_error": 1.3877787807814457e-17,
+    "method": "Exact mean tree-path probability decomposition, not SHAP; correlated features and allocation are not causal diagnosis.",
+    "source": {
+      "source_path": "tests/test_after.py",
+      "source_qualname": "TestAfterLogFormat.test_02_none_seconds_since_start",
+      "source_file_sha256": "082d08f27ffedae88e4ad1f294b832440b82fce7744b1f98886b8647bfe9e4b3",
+      "body_ast_sha256": "ad7b3a93bf6d96926e0718e8a9ab9560b1f23b20a7e1af097b26ebbecc3c8995",
+      "body_statements": 9,
+      "body_ast_nodes": 107,
+      "unresolved_fixture_count": 0,
+      "context_bounded": false,
+      "context_sources": [
+        {
+          "source": "tenacity/_utils.py::find_ordinal",
+          "kind": "helper",
+          "sha256": "6ecccb8012d314f5000d75a5a01a1e3257ab1a3d727a21b457e2c922fbe3e79e"
+        },
+        {
+          "source": "tenacity/_utils.py::to_ordinal",
+          "kind": "helper",
+          "sha256": "6ecccb8012d314f5000d75a5a01a1e3257ab1a3d727a21b457e2c922fbe3e79e"
+        },
+        {
+          "source": "tests/test_after.py::TestAfterLogFormat.setUp",
+          "kind": "lifecycle",
+          "sha256": "082d08f27ffedae88e4ad1f294b832440b82fce7744b1f98886b8647bfe9e4b3"
+        },
+        {
+          "source": "tests/test_tenacity.py::_make_unset_exception",
+          "kind": "helper",
+          "sha256": "6db295bfd2cce3abea8d970e40450dff573a411e1b2b1bdfec272ed7cb20c0d7"
+        },
+        {
+          "source": "tests/test_tenacity.py::_set_delay_since_start",
+          "kind": "helper",
+          "sha256": "6db295bfd2cce3abea8d970e40450dff573a411e1b2b1bdfec272ed7cb20c0d7"
+        },
+        {
+          "source": "tests/test_tenacity.py::make_retry_state",
+          "kind": "helper",
+          "sha256": "6db295bfd2cce3abea8d970e40450dff573a411e1b2b1bdfec272ed7cb20c0d7"
+        }
+      ]
+    },
+    "contributions": [
+      {
+        "feature": "lifecycle_mean_random_calls",
+        "value": 2.0,
+        "contribution": 0.045640487175364036
+      },
+      {
+        "feature": "fixture_autouse_count",
+        "value": 0.0,
+        "contribution": -0.003151542171590912
+      },
+      {
+        "feature": "lifecycle_count",
+        "value": 1.0,
+        "contribution": 0.0020085560140211582
+      },
+      {
+        "feature": "lifecycle_mean_lines",
+        "value": 11.0,
+        "contribution": 0.001827685253372855
+      },
+      {
+        "feature": "fixture_scope_session",
+        "value": 0.0,
+        "contribution": -0.00151155230274258
+      },
+      {
+        "feature": "fixture_count",
+        "value": 0.0,
+        "contribution": -0.0015056092629516808
+      },
+      {
+        "feature": "lifecycle_mean_attribute_writes",
+        "value": 2.0,
+        "contribution": 0.0009876112607419248
+      },
+      {
+        "feature": "fixture_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -0.0009440702285385873
+      },
+      {
+        "feature": "fixture_mean_lines",
+        "value": 0.0,
+        "contribution": -0.0007373067187477622
+      },
+      {
+        "feature": "fixture_mean_calls",
+        "value": 0.0,
+        "contribution": -0.0007174936302360721
+      },
+      {
+        "feature": "fixture_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -0.0006403601077505179
+      },
+      {
+        "feature": "body_mock_calls",
+        "value": 2.0,
+        "contribution": 0.000520991467355591
+      },
+      {
+        "feature": "helper_count",
+        "value": 5.0,
+        "contribution": -0.0005189141512951831
+      },
+      {
+        "feature": "helper_mean_asserts",
+        "value": 0.20000000298023224,
+        "contribution": -0.0005088066988908201
+      },
+      {
+        "feature": "fixture_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00034454212852878173
+      },
+      {
+        "feature": "fixture_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.00034375920870183296
+      },
+      {
+        "feature": "helper_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00032456431401490935
+      },
+      {
+        "feature": "class_state_mutable_literals",
+        "value": 0.0,
+        "contribution": -0.0002183730543515752
+      },
+      {
+        "feature": "helper_mean_attribute_writes",
+        "value": 1.0,
+        "contribution": -0.00020232832316968087
+      },
+      {
+        "feature": "lifecycle_mean_calls",
+        "value": 2.0,
+        "contribution": 0.00018978011890072817
+      },
+      {
+        "feature": "fixture_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.0001615165402911678
+      },
+      {
+        "feature": "class_state_assignments",
+        "value": 0.0,
+        "contribution": -0.0001464657546527094
+      },
+      {
+        "feature": "helper_mean_mutable_ops",
+        "value": 0.20000000298023224,
+        "contribution": -0.00013987888142863
+      },
+      {
+        "feature": "lifecycle_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": 0.00013961005534919192
+      },
+      {
+        "feature": "lifecycle_mean_asserts",
+        "value": 0.0,
+        "contribution": 0.0001212935595499548
+      },
+      {
+        "feature": "helper_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": 0.00010389673047499174
+      },
+      {
+        "feature": "fixture_mean_yields",
+        "value": 0.0,
+        "contribution": 9.92890507639226e-05
+      },
+      {
+        "feature": "lifecycle_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -9.898765686039363e-05
+      },
+      {
+        "feature": "helper_mean_lines",
+        "value": 12.600000381469727,
+        "contribution": 8.033198584959624e-05
+      },
+      {
+        "feature": "helper_mean_cleanup_calls",
+        "value": 0.20000000298023224,
+        "contribution": -7.547594977349502e-05
+      },
+      {
+        "feature": "fixture_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -6.568743653960103e-05
+      },
+      {
+        "feature": "helper_mean_calls",
+        "value": 2.5999999046325684,
+        "contribution": -6.3219938272393e-05
+      },
+      {
+        "feature": "body_with_blocks",
+        "value": 0.0,
+        "contribution": 6.190777936822558e-05
+      },
+      {
+        "feature": "helper_mean_blocking_calls",
+        "value": 0.20000000298023224,
+        "contribution": 4.4975909796625477e-05
+      },
+      {
+        "feature": "body_attribute_writes",
+        "value": 1.0,
+        "contribution": 3.609323807276935e-05
+      },
+      {
+        "feature": "body_asserts",
+        "value": 1.0,
+        "contribution": -2.8389565433618464e-05
+      },
+      {
+        "feature": "body_time_calls",
+        "value": 0.0,
+        "contribution": -2.1238242820781327e-05
+      },
+      {
+        "feature": "body_process_calls",
+        "value": 0.0,
+        "contribution": -1.870602779711389e-05
+      },
+      {
+        "feature": "helper_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 1.7565071987250347e-05
+      },
+      {
+        "feature": "body_class_shared_reads",
+        "value": 0.0,
+        "contribution": 1.6382183957380006e-05
+      },
+      {
+        "feature": "body_try_blocks",
+        "value": 0.0,
+        "contribution": 1.58615540252271e-05
+      },
+      {
+        "feature": "helper_mean_time_calls",
+        "value": 0.0,
+        "contribution": -1.582406705061299e-05
+      },
+      {
+        "feature": "body_unittest_asserts",
+        "value": 1.0,
+        "contribution": -1.549593898276206e-05
+      },
+      {
+        "feature": "helper_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -1.4952718232170632e-05
+      },
+      {
+        "feature": "fixture_scope_function",
+        "value": 0.0,
+        "contribution": -1.4457238630175159e-05
+      },
+      {
+        "feature": "body_branches",
+        "value": 0.0,
+        "contribution": 1.4223070055621842e-05
+      },
+      {
+        "feature": "fixture_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 1.3149417090881908e-05
+      },
+      {
+        "feature": "fixture_mean_time_calls",
+        "value": 0.0,
+        "contribution": 1.3076789062799958e-05
+      },
+      {
+        "feature": "fixture_scope_module",
+        "value": 0.0,
+        "contribution": -1.2519729382189036e-05
+      },
+      {
+        "feature": "body_cleanup_calls",
+        "value": 0.0,
+        "contribution": -1.1211406348030279e-05
+      },
+      {
+        "feature": "lifecycle_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -1.0196704246147938e-05
+      },
+      {
+        "feature": "helper_mean_network_calls",
+        "value": 0.0,
+        "contribution": 1.0055360070529804e-05
+      },
+      {
+        "feature": "lifecycle_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": 9.312288069920262e-06
+      },
+      {
+        "feature": "body_mutable_literals",
+        "value": 0.0,
+        "contribution": 8.768793214592311e-06
+      },
+      {
+        "feature": "body_yields",
+        "value": 0.0,
+        "contribution": 8.177181946800523e-06
+      },
+      {
+        "feature": "class_state_calls",
+        "value": 0.0,
+        "contribution": 7.245289899743638e-06
+      },
+      {
+        "feature": "fixture_mean_asserts",
+        "value": 0.0,
+        "contribution": -6.973728512087369e-06
+      },
+      {
+        "feature": "body_calls",
+        "value": 8.0,
+        "contribution": 6.858849753875447e-06
+      },
+      {
+        "feature": "fixture_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": 6.560867975810761e-06
+      },
+      {
+        "feature": "fixture_dependency_edges",
+        "value": 0.0,
+        "contribution": 3.1621903908681165e-06
+      },
+      {
+        "feature": "helper_mean_yields",
+        "value": 0.0,
+        "contribution": 2.9103309604399663e-06
+      },
+      {
+        "feature": "body_filesystem_calls",
+        "value": 0.0,
+        "contribution": -2.6242908653522258e-06
+      },
+      {
+        "feature": "lifecycle_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": -2.5970199073043196e-06
+      },
+      {
+        "feature": "body_random_calls",
+        "value": 0.0,
+        "contribution": 2.187747682477615e-06
+      },
+      {
+        "feature": "body_lines",
+        "value": 17.0,
+        "contribution": -2.127916048598329e-06
+      },
+      {
+        "feature": "body_mutable_ops",
+        "value": 0.0,
+        "contribution": -2.0524672988571685e-06
+      },
+      {
+        "feature": "body_statements",
+        "value": 9.0,
+        "contribution": 1.939366862388588e-06
+      },
+      {
+        "feature": "helper_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.380256527358868e-06
+      },
+      {
+        "feature": "body_network_calls",
+        "value": 0.0,
+        "contribution": -1.3327711718830724e-06
+      },
+      {
+        "feature": "body_comprehensions",
+        "value": 0.0,
+        "contribution": -1.1234192582651115e-06
+      },
+      {
+        "feature": "body_blocking_calls",
+        "value": 0.0,
+        "contribution": -1.042904325002897e-06
+      },
+      {
+        "feature": "body_subscript_writes",
+        "value": 0.0,
+        "contribution": -9.728070046331392e-07
+      },
+      {
+        "feature": "lifecycle_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -9.676844658049193e-07
+      },
+      {
+        "feature": "body_loops",
+        "value": 0.0,
+        "contribution": 8.529306213798239e-07
+      },
+      {
+        "feature": "fixture_mean_random_calls",
+        "value": 0.0,
+        "contribution": -7.906431491625526e-07
+      },
+      {
+        "feature": "fixture_mean_network_calls",
+        "value": 0.0,
+        "contribution": 6.752468855066498e-07
+      },
+      {
+        "feature": "fixture_scope_class",
+        "value": 0.0,
+        "contribution": 4.979172107942597e-07
+      },
+      {
+        "feature": "body_globals",
+        "value": 0.0,
+        "contribution": 4.571149498761041e-07
+      },
+      {
+        "feature": "body_imports",
+        "value": 0.0,
+        "contribution": 3.930341560805665e-07
+      },
+      {
+        "feature": "body_module_shared_reads",
+        "value": 0.0,
+        "contribution": -3.831200696107951e-07
+      },
+      {
+        "feature": "lifecycle_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -3.7635791733467037e-07
+      },
+      {
+        "feature": "lifecycle_mean_process_calls",
+        "value": 0.0,
+        "contribution": 3.1136118036968107e-07
+      },
+      {
+        "feature": "body_awaits",
+        "value": 0.0,
+        "contribution": -2.753566463333528e-07
+      },
+      {
+        "feature": "body_raises",
+        "value": 0.0,
+        "contribution": 2.163569847152202e-07
+      },
+      {
+        "feature": "helper_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 1.5069559456348274e-07
+      },
+      {
+        "feature": "lifecycle_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.8143103386285106e-08
+      },
+      {
+        "feature": "body_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "class_state_random_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_other",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_package",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "helper_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_time_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0
+      }
+    ]
+  },
+  {
+    "example_id": "1fa7ee73b046180b4ecbd936439b93ae2af83f3fb92b1d179359bd96ed5931c8",
+    "project": "werkzeug",
+    "junit_name": "test_is_resource_modified_for_range_requests",
+    "score": 0.0222448879896567,
+    "base": 0.0072098878461890415,
+    "reconstruction_error": 2.0816681711721685e-17,
+    "method": "Exact mean tree-path probability decomposition, not SHAP; correlated features and allocation are not causal diagnosis.",
+    "source": {
+      "source_path": "tests/test_http.py",
+      "source_qualname": "TestHTTPUtility.test_is_resource_modified_for_range_requests",
+      "source_file_sha256": "1839ebb0a04633b2f6082d7b3d421f6a9629dfddf07f515a90c70fde0fbdf5e5",
+      "body_ast_sha256": "56b8953163c5b8c51bd1a9ce99edd904fe40496f592981aa5740d8945c8559cc",
+      "body_statements": 11,
+      "body_ast_nodes": 177,
+      "unresolved_fixture_count": 0,
+      "context_bounded": true,
+      "context_sources": [
+        {
+          "source": "src/werkzeug/_internal.py::_dt_as_utc",
+          "kind": "helper",
+          "sha256": "1206e13d3df81f29255b62f7e42df580070a9797e6f6eb4dde4540b850c9bb97"
+        },
+        {
+          "source": "src/werkzeug/http.py::generate_etag",
+          "kind": "helper",
+          "sha256": "f9cd010c11a7b6071304316a9abb562fa3a72bc0c2325a53afd46ea889551b89"
+        },
+        {
+          "source": "src/werkzeug/http.py::http_date",
+          "kind": "helper",
+          "sha256": "f9cd010c11a7b6071304316a9abb562fa3a72bc0c2325a53afd46ea889551b89"
+        },
+        {
+          "source": "src/werkzeug/http.py::is_resource_modified",
+          "kind": "helper",
+          "sha256": "f9cd010c11a7b6071304316a9abb562fa3a72bc0c2325a53afd46ea889551b89"
+        },
+        {
+          "source": "src/werkzeug/http.py::quote_etag",
+          "kind": "helper",
+          "sha256": "f9cd010c11a7b6071304316a9abb562fa3a72bc0c2325a53afd46ea889551b89"
+        },
+        {
+          "source": "src/werkzeug/sansio/http.py::is_resource_modified",
+          "kind": "helper",
+          "sha256": "e607616570a6d67e0b043af7e4c8aa261b30d7e7e708d242527585437dae57e6"
+        },
+        {
+          "source": "src/werkzeug/test.py::create_environ",
+          "kind": "helper",
+          "sha256": "bbad5c8e4c9dbbf77394dd23eff85f305845d3ee71601c85da1da5812314fbb1"
+        }
+      ]
+    },
+    "contributions": [
+      {
+        "feature": "body_time_calls",
+        "value": 6.0,
+        "contribution": 0.01682677516481852
+      },
+      {
+        "feature": "fixture_mean_calls",
+        "value": 0.0,
+        "contribution": -0.0006983781289563929
+      },
+      {
+        "feature": "fixture_scope_session",
+        "value": 0.0,
+        "contribution": 0.0006041726343701807
+      },
+      {
+        "feature": "fixture_mean_yields",
+        "value": 0.0,
+        "contribution": 0.00046183872590068744
+      },
+      {
+        "feature": "fixture_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00043205985110972013
+      },
+      {
+        "feature": "lifecycle_count",
+        "value": 0.0,
+        "contribution": -0.0003532559084818242
+      },
+      {
+        "feature": "fixture_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.0003460287247014848
+      },
+      {
+        "feature": "fixture_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -0.00033070242833364177
+      },
+      {
+        "feature": "body_subscript_writes",
+        "value": 4.0,
+        "contribution": -0.00028883632902385503
+      },
+      {
+        "feature": "fixture_count",
+        "value": 0.0,
+        "contribution": 0.0002810762169700283
+      },
+      {
+        "feature": "helper_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00023457415557342598
+      },
+      {
+        "feature": "lifecycle_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -0.0002169094892482647
+      },
+      {
+        "feature": "fixture_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.0002155199766394638
+      },
+      {
+        "feature": "helper_count",
+        "value": 7.0,
+        "contribution": -0.00021393737995940382
+      },
+      {
+        "feature": "lifecycle_mean_lines",
+        "value": 0.0,
+        "contribution": -0.00017648260450526946
+      },
+      {
+        "feature": "helper_mean_time_calls",
+        "value": 0.2857142984867096,
+        "contribution": 0.0001629820668008414
+      },
+      {
+        "feature": "helper_mean_calls",
+        "value": 5.4285712242126465,
+        "contribution": -0.00013855838168764278
+      },
+      {
+        "feature": "fixture_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": 0.00013213384587244066
+      },
+      {
+        "feature": "body_statements",
+        "value": 11.0,
+        "contribution": 0.00011768716624011672
+      },
+      {
+        "feature": "fixture_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -0.00010446321238410144
+      },
+      {
+        "feature": "lifecycle_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": 0.00010412787109629792
+      },
+      {
+        "feature": "fixture_mean_lines",
+        "value": 0.0,
+        "contribution": 0.00010349307817874356
+      },
+      {
+        "feature": "class_state_assignments",
+        "value": 0.0,
+        "contribution": -0.00010179102248129828
+      },
+      {
+        "feature": "helper_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -9.988439639660858e-05
+      },
+      {
+        "feature": "helper_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": 9.415192081914061e-05
+      },
+      {
+        "feature": "helper_mean_asserts",
+        "value": 0.0,
+        "contribution": 8.905184970724678e-05
+      },
+      {
+        "feature": "body_process_calls",
+        "value": 0.0,
+        "contribution": -8.29058185720616e-05
+      },
+      {
+        "feature": "fixture_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -8.197849092421124e-05
+      },
+      {
+        "feature": "fixture_autouse_count",
+        "value": 0.0,
+        "contribution": 7.93243893726032e-05
+      },
+      {
+        "feature": "lifecycle_mean_calls",
+        "value": 0.0,
+        "contribution": 7.593687858022328e-05
+      },
+      {
+        "feature": "body_calls",
+        "value": 17.0,
+        "contribution": 7.104122691542581e-05
+      },
+      {
+        "feature": "body_with_blocks",
+        "value": 0.0,
+        "contribution": -6.394875133043875e-05
+      },
+      {
+        "feature": "fixture_scope_function",
+        "value": 0.0,
+        "contribution": 6.388857949098866e-05
+      },
+      {
+        "feature": "helper_mean_lines",
+        "value": 27.571428298950195,
+        "contribution": -5.619217375900906e-05
+      },
+      {
+        "feature": "body_blocking_calls",
+        "value": 0.0,
+        "contribution": 5.091351700119722e-05
+      },
+      {
+        "feature": "helper_mean_yields",
+        "value": 0.0,
+        "contribution": 5.059007383829946e-05
+      },
+      {
+        "feature": "body_asserts",
+        "value": 6.0,
+        "contribution": -2.8416856991826963e-05
+      },
+      {
+        "feature": "body_lines",
+        "value": 31.0,
+        "contribution": 2.6493954737762338e-05
+      },
+      {
+        "feature": "body_cleanup_calls",
+        "value": 0.0,
+        "contribution": -1.8792483585513863e-05
+      },
+      {
+        "feature": "fixture_scope_module",
+        "value": 0.0,
+        "contribution": -1.8781328305036045e-05
+      },
+      {
+        "feature": "fixture_mean_asserts",
+        "value": 0.0,
+        "contribution": 1.8239573351199884e-05
+      },
+      {
+        "feature": "helper_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 1.6192764015591586e-05
+      },
+      {
+        "feature": "lifecycle_mean_random_calls",
+        "value": 0.0,
+        "contribution": -1.542399390006228e-05
+      },
+      {
+        "feature": "helper_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -1.3879287962408495e-05
+      },
+      {
+        "feature": "body_raises",
+        "value": 0.0,
+        "contribution": -1.0643610727534821e-05
+      },
+      {
+        "feature": "body_imports",
+        "value": 0.0,
+        "contribution": 1.0328929080607912e-05
+      },
+      {
+        "feature": "fixture_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -9.75300411594757e-06
+      },
+      {
+        "feature": "lifecycle_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -9.566411808940385e-06
+      },
+      {
+        "feature": "fixture_mean_time_calls",
+        "value": 0.0,
+        "contribution": -9.507000342657257e-06
+      },
+      {
+        "feature": "body_class_shared_reads",
+        "value": 0.0,
+        "contribution": -8.846031676767796e-06
+      },
+      {
+        "feature": "body_mutable_literals",
+        "value": 0.0,
+        "contribution": 8.675139704637745e-06
+      },
+      {
+        "feature": "helper_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -7.986948771770554e-06
+      },
+      {
+        "feature": "class_state_mutable_literals",
+        "value": 0.0,
+        "contribution": -7.737270559465454e-06
+      },
+      {
+        "feature": "helper_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -6.892068472087508e-06
+      },
+      {
+        "feature": "body_mutable_ops",
+        "value": 0.0,
+        "contribution": -5.545226587882299e-06
+      },
+      {
+        "feature": "lifecycle_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -5.5346200664732865e-06
+      },
+      {
+        "feature": "helper_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": 3.851664832705436e-06
+      },
+      {
+        "feature": "body_random_calls",
+        "value": 0.0,
+        "contribution": 3.7667351462804307e-06
+      },
+      {
+        "feature": "lifecycle_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": -3.3143773842808135e-06
+      },
+      {
+        "feature": "lifecycle_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -2.8440315562062177e-06
+      },
+      {
+        "feature": "body_loops",
+        "value": 0.0,
+        "contribution": 2.183084089124267e-06
+      },
+      {
+        "feature": "lifecycle_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -2.129863454773416e-06
+      },
+      {
+        "feature": "class_state_calls",
+        "value": 0.0,
+        "contribution": 2.007501765168175e-06
+      },
+      {
+        "feature": "fixture_mean_network_calls",
+        "value": 0.0,
+        "contribution": -1.989506106227193e-06
+      },
+      {
+        "feature": "body_network_calls",
+        "value": 0.0,
+        "contribution": -1.6033017810525482e-06
+      },
+      {
+        "feature": "helper_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.5791156368429539e-06
+      },
+      {
+        "feature": "body_try_blocks",
+        "value": 0.0,
+        "contribution": -1.3967910709755354e-06
+      },
+      {
+        "feature": "helper_mean_network_calls",
+        "value": 0.0,
+        "contribution": 1.3915405444617344e-06
+      },
+      {
+        "feature": "body_mock_calls",
+        "value": 0.0,
+        "contribution": -1.1742449289619821e-06
+      },
+      {
+        "feature": "body_yields",
+        "value": 0.0,
+        "contribution": 1.001918247411137e-06
+      },
+      {
+        "feature": "fixture_scope_class",
+        "value": 0.0,
+        "contribution": 9.94033234824524e-07
+      },
+      {
+        "feature": "body_module_shared_reads",
+        "value": 0.0,
+        "contribution": -8.446215995606736e-07
+      },
+      {
+        "feature": "body_branches",
+        "value": 0.0,
+        "contribution": -7.927275114125546e-07
+      },
+      {
+        "feature": "lifecycle_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -6.92626956938913e-07
+      },
+      {
+        "feature": "fixture_mean_random_calls",
+        "value": 0.0,
+        "contribution": -6.787025034494004e-07
+      },
+      {
+        "feature": "fixture_dependency_edges",
+        "value": 0.0,
+        "contribution": 6.355851880741047e-07
+      },
+      {
+        "feature": "body_attribute_writes",
+        "value": 0.0,
+        "contribution": -5.635143747964333e-07
+      },
+      {
+        "feature": "body_filesystem_calls",
+        "value": 0.0,
+        "contribution": -5.618299339727626e-07
+      },
+      {
+        "feature": "body_comprehensions",
+        "value": 0.0,
+        "contribution": 4.1801798733246063e-07
+      },
+      {
+        "feature": "body_awaits",
+        "value": 0.0,
+        "contribution": -3.7379767654286867e-07
+      },
+      {
+        "feature": "class_state_random_calls",
+        "value": 0.0,
+        "contribution": -3.250067406885884e-07
+      },
+      {
+        "feature": "body_unittest_asserts",
+        "value": 0.0,
+        "contribution": 3.209518734145525e-07
+      },
+      {
+        "feature": "lifecycle_mean_process_calls",
+        "value": 0.0,
+        "contribution": 3.1136118036968107e-07
+      },
+      {
+        "feature": "lifecycle_mean_asserts",
+        "value": 0.0,
+        "contribution": 2.464643529267874e-07
+      },
+      {
+        "feature": "helper_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 1.0077010331868558e-07
+      },
+      {
+        "feature": "body_globals",
+        "value": 0.0,
+        "contribution": 4.600084155209782e-08
+      },
+      {
+        "feature": "lifecycle_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.8143103386285106e-08
+      },
+      {
+        "feature": "body_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_other",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_package",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "helper_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_time_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0
+      }
+    ]
+  },
+  {
+    "example_id": "d7a5fe4951b507978653552b025043142e263d09d05507ab05638c6634d1fcdc",
+    "project": "werkzeug",
+    "junit_name": "test_basic_local",
+    "score": 0.018697024298186943,
+    "base": 0.0072098878461890415,
+    "reconstruction_error": 1.734723475976807e-17,
+    "method": "Exact mean tree-path probability decomposition, not SHAP; correlated features and allocation are not causal diagnosis.",
+    "source": {
+      "source_path": "tests/test_local.py",
+      "source_qualname": "test_basic_local",
+      "source_file_sha256": "f48b29c458b1f650d05b1de47ae848db84e29b845dcc1d921f13b9350542c7db",
+      "body_ast_sha256": "e6773719ab34b9f1581f8eb6b2c97146e52caeded6826dcce2a6ff1a3ddc94c8",
+      "body_statements": 20,
+      "body_ast_nodes": 161,
+      "unresolved_fixture_count": 0,
+      "context_bounded": false,
+      "context_sources": [
+        {
+          "source": "src/werkzeug/local.py::release_local",
+          "kind": "helper",
+          "sha256": "a38673d5902e351067f2bfa568623109d2978f1c758b4b89ab778dc8a3f2e1c8"
+        },
+        {
+          "source": "tests/test_local.py::reset_context_vars",
+          "kind": "fixture",
+          "sha256": "f48b29c458b1f650d05b1de47ae848db84e29b845dcc1d921f13b9350542c7db"
+        }
+      ]
+    },
+    "contributions": [
+      {
+        "feature": "fixture_mean_cleanup_calls",
+        "value": 2.0,
+        "contribution": 0.010431109360437561
+      },
+      {
+        "feature": "body_process_calls",
+        "value": 3.0,
+        "contribution": 0.00695276338665063
+      },
+      {
+        "feature": "fixture_autouse_count",
+        "value": 1.0,
+        "contribution": 0.0034208127006555207
+      },
+      {
+        "feature": "fixture_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.0013132018109006237
+      },
+      {
+        "feature": "helper_mean_lines",
+        "value": 10.0,
+        "contribution": 0.0011712823529427966
+      },
+      {
+        "feature": "fixture_mean_lines",
+        "value": 6.0,
+        "contribution": -0.001155632290514011
+      },
+      {
+        "feature": "lifecycle_mean_calls",
+        "value": 0.0,
+        "contribution": -0.0011400345626533213
+      },
+      {
+        "feature": "fixture_mean_yields",
+        "value": 1.0,
+        "contribution": -0.001136361421152756
+      },
+      {
+        "feature": "fixture_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -0.0010085800143366142
+      },
+      {
+        "feature": "fixture_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -0.0009194069693125155
+      },
+      {
+        "feature": "body_time_calls",
+        "value": 2.0,
+        "contribution": 0.000818171562340626
+      },
+      {
+        "feature": "helper_mean_calls",
+        "value": 1.0,
+        "contribution": -0.0007079038586337943
+      },
+      {
+        "feature": "lifecycle_count",
+        "value": 0.0,
+        "contribution": -0.0006953326239138375
+      },
+      {
+        "feature": "fixture_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -0.0006097913340403548
+      },
+      {
+        "feature": "body_blocking_calls",
+        "value": 3.0,
+        "contribution": -0.0005578564743609557
+      },
+      {
+        "feature": "helper_count",
+        "value": 1.0,
+        "contribution": -0.0004881112487362405
+      },
+      {
+        "feature": "lifecycle_mean_lines",
+        "value": 0.0,
+        "contribution": -0.00047489461789907995
+      },
+      {
+        "feature": "body_attribute_writes",
+        "value": 2.0,
+        "contribution": 0.00041884144965815575
+      },
+      {
+        "feature": "helper_mean_yields",
+        "value": 0.0,
+        "contribution": -0.00038439643397565984
+      },
+      {
+        "feature": "fixture_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.0003290442080124201
+      },
+      {
+        "feature": "body_statements",
+        "value": 20.0,
+        "contribution": 0.00029940160001051184
+      },
+      {
+        "feature": "helper_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.0002731567838872361
+      },
+      {
+        "feature": "fixture_mean_calls",
+        "value": 4.0,
+        "contribution": -0.0002551990014125154
+      },
+      {
+        "feature": "helper_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -0.0002487218735677673
+      },
+      {
+        "feature": "helper_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.00021689594275297924
+      },
+      {
+        "feature": "fixture_scope_session",
+        "value": 0.0,
+        "contribution": -0.00017481570200873534
+      },
+      {
+        "feature": "body_cleanup_calls",
+        "value": 1.0,
+        "contribution": 0.00017430562709879705
+      },
+      {
+        "feature": "body_branches",
+        "value": 0.0,
+        "contribution": -0.00016926547293152054
+      },
+      {
+        "feature": "body_filesystem_calls",
+        "value": 0.0,
+        "contribution": 0.00016778952804262834
+      },
+      {
+        "feature": "lifecycle_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -0.00014325528710190514
+      },
+      {
+        "feature": "body_loops",
+        "value": 2.0,
+        "contribution": 0.00013899246391753655
+      },
+      {
+        "feature": "helper_mean_process_calls",
+        "value": 0.0,
+        "contribution": 9.612483050632013e-05
+      },
+      {
+        "feature": "lifecycle_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -9.299863045758484e-05
+      },
+      {
+        "feature": "class_state_assignments",
+        "value": 0.0,
+        "contribution": -8.962157512842594e-05
+      },
+      {
+        "feature": "body_mutable_ops",
+        "value": 1.0,
+        "contribution": 8.880975795085206e-05
+      },
+      {
+        "feature": "fixture_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 8.56989126091811e-05
+      },
+      {
+        "feature": "helper_mean_asserts",
+        "value": 0.0,
+        "contribution": 7.577290691212723e-05
+      },
+      {
+        "feature": "body_try_blocks",
+        "value": 0.0,
+        "contribution": -6.771008775343073e-05
+      },
+      {
+        "feature": "lifecycle_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": 6.479454294867963e-05
+      },
+      {
+        "feature": "body_raises",
+        "value": 0.0,
+        "contribution": -6.15951651377544e-05
+      },
+      {
+        "feature": "fixture_dependency_edges",
+        "value": 0.0,
+        "contribution": 5.675331278028415e-05
+      },
+      {
+        "feature": "body_calls",
+        "value": 12.0,
+        "contribution": -5.10699577540716e-05
+      },
+      {
+        "feature": "body_subscript_writes",
+        "value": 0.0,
+        "contribution": 4.563088971672433e-05
+      },
+      {
+        "feature": "body_mock_calls",
+        "value": 0.0,
+        "contribution": -4.5617082970152945e-05
+      },
+      {
+        "feature": "fixture_mean_random_calls",
+        "value": 0.0,
+        "contribution": -4.502381910101663e-05
+      },
+      {
+        "feature": "body_module_shared_reads",
+        "value": 1.0,
+        "contribution": -4.39145870610378e-05
+      },
+      {
+        "feature": "fixture_mean_asserts",
+        "value": 0.0,
+        "contribution": -4.187248224335868e-05
+      },
+      {
+        "feature": "fixture_scope_module",
+        "value": 0.0,
+        "contribution": -4.0246071971101246e-05
+      },
+      {
+        "feature": "body_lines",
+        "value": 26.0,
+        "contribution": 3.472577834038322e-05
+      },
+      {
+        "feature": "body_imports",
+        "value": 0.0,
+        "contribution": -3.278965732565177e-05
+      },
+      {
+        "feature": "fixture_scope_function",
+        "value": 1.0,
+        "contribution": 2.6997075383356542e-05
+      },
+      {
+        "feature": "body_mutable_literals",
+        "value": 3.0,
+        "contribution": -2.623236160457126e-05
+      },
+      {
+        "feature": "helper_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -2.398077389929392e-05
+      },
+      {
+        "feature": "helper_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": 2.2317055604255636e-05
+      },
+      {
+        "feature": "helper_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": 2.106774242710253e-05
+      },
+      {
+        "feature": "body_comprehensions",
+        "value": 1.0,
+        "contribution": 1.8993541057354135e-05
+      },
+      {
+        "feature": "body_asserts",
+        "value": 1.0,
+        "contribution": 1.867413037404596e-05
+      },
+      {
+        "feature": "fixture_count",
+        "value": 1.0,
+        "contribution": -1.737069289917426e-05
+      },
+      {
+        "feature": "body_unittest_asserts",
+        "value": 0.0,
+        "contribution": -1.6110278771222974e-05
+      },
+      {
+        "feature": "lifecycle_mean_random_calls",
+        "value": 0.0,
+        "contribution": -1.5175833418732528e-05
+      },
+      {
+        "feature": "body_with_blocks",
+        "value": 0.0,
+        "contribution": 1.4384049514638476e-05
+      },
+      {
+        "feature": "lifecycle_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -1.3757071188525002e-05
+      },
+      {
+        "feature": "helper_mean_time_calls",
+        "value": 0.0,
+        "contribution": -1.2507409274914517e-05
+      },
+      {
+        "feature": "fixture_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -1.0307929883996265e-05
+      },
+      {
+        "feature": "lifecycle_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -9.728059794441448e-06
+      },
+      {
+        "feature": "lifecycle_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -9.488393205005293e-06
+      },
+      {
+        "feature": "class_state_calls",
+        "value": 0.0,
+        "contribution": 9.46589927473489e-06
+      },
+      {
+        "feature": "body_awaits",
+        "value": 0.0,
+        "contribution": -9.145278528311747e-06
+      },
+      {
+        "feature": "class_state_mutable_literals",
+        "value": 0.0,
+        "contribution": -9.004490533931634e-06
+      },
+      {
+        "feature": "helper_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 7.3546763833954065e-06
+      },
+      {
+        "feature": "fixture_mean_time_calls",
+        "value": 0.0,
+        "contribution": -7.1780480830668535e-06
+      },
+      {
+        "feature": "body_random_calls",
+        "value": 0.0,
+        "contribution": 5.979226135696965e-06
+      },
+      {
+        "feature": "fixture_mean_network_calls",
+        "value": 0.0,
+        "contribution": -3.439440202051672e-06
+      },
+      {
+        "feature": "body_class_shared_reads",
+        "value": 0.0,
+        "contribution": -3.230183290195912e-06
+      },
+      {
+        "feature": "lifecycle_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": -1.8216715716604834e-06
+      },
+      {
+        "feature": "lifecycle_mean_process_calls",
+        "value": 0.0,
+        "contribution": 1.4337824956786702e-06
+      },
+      {
+        "feature": "body_yields",
+        "value": 0.0,
+        "contribution": 9.550646511522535e-07
+      },
+      {
+        "feature": "helper_mean_random_calls",
+        "value": 0.0,
+        "contribution": 8.520749298865054e-07
+      },
+      {
+        "feature": "fixture_scope_class",
+        "value": 0.0,
+        "contribution": 5.455010380091461e-07
+      },
+      {
+        "feature": "lifecycle_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -4.696020595800893e-07
+      },
+      {
+        "feature": "helper_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -2.826475207195537e-07
+      },
+      {
+        "feature": "body_network_calls",
+        "value": 0.0,
+        "contribution": -2.662479365387048e-07
+      },
+      {
+        "feature": "class_state_random_calls",
+        "value": 0.0,
+        "contribution": -2.149720130747842e-07
+      },
+      {
+        "feature": "helper_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.051643202080977e-07
+      },
+      {
+        "feature": "lifecycle_mean_asserts",
+        "value": 0.0,
+        "contribution": 1.3079647310516157e-07
+      },
+      {
+        "feature": "lifecycle_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.8143103386285106e-08
+      },
+      {
+        "feature": "body_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "body_globals",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_other",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_package",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "helper_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_time_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0
+      }
+    ]
+  },
+  {
+    "example_id": "8b04f9096aa7078cae8291d272ec91828ef49a6c2786fc97a24b95134b5f26bd",
+    "project": "werkzeug",
+    "junit_name": "test_get_machine_id",
+    "score": 0.017469677197921835,
+    "base": 0.0072098878461890415,
+    "reconstruction_error": 1.3877787807814457e-17,
+    "method": "Exact mean tree-path probability decomposition, not SHAP; correlated features and allocation are not causal diagnosis.",
+    "source": {
+      "source_path": "tests/test_debug.py",
+      "source_qualname": "test_get_machine_id",
+      "source_file_sha256": "9c61b7e33aa97c39d81ee8ae4b88fbf8c661ee714f36cf631058804676838b74",
+      "body_ast_sha256": "0fe20d77201e3c464b281821fb60986126d0df0350d9922ca4a5f97e46023a5e",
+      "body_statements": 2,
+      "body_ast_nodes": 15,
+      "unresolved_fixture_count": 0,
+      "context_bounded": false,
+      "context_sources": [
+        {
+          "source": "src/werkzeug/debug/__init__.py::get_machine_id",
+          "kind": "helper",
+          "sha256": "67f97b956281432245e8d2ca6f928131ee290caca895afa3290f5bbe09366a65"
+        }
+      ]
+    },
+    "contributions": [
+      {
+        "feature": "helper_mean_process_calls",
+        "value": 1.0,
+        "contribution": 0.011002935831821383
+      },
+      {
+        "feature": "helper_mean_calls",
+        "value": 14.0,
+        "contribution": -0.0010865632894294728
+      },
+      {
+        "feature": "helper_mean_asserts",
+        "value": 0.0,
+        "contribution": 0.0007418049518613143
+      },
+      {
+        "feature": "helper_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -0.0006689288153383544
+      },
+      {
+        "feature": "helper_mean_blocking_calls",
+        "value": 1.0,
+        "contribution": 0.0005953896087024582
+      },
+      {
+        "feature": "body_calls",
+        "value": 2.0,
+        "contribution": 0.0005835460053985512
+      },
+      {
+        "feature": "fixture_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -0.0005358627657887737
+      },
+      {
+        "feature": "body_mutable_literals",
+        "value": 0.0,
+        "contribution": 0.0004582524835066525
+      },
+      {
+        "feature": "fixture_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -0.0004339597407420099
+      },
+      {
+        "feature": "fixture_mean_process_calls",
+        "value": 0.0,
+        "contribution": -0.00040929310629836505
+      },
+      {
+        "feature": "fixture_mean_calls",
+        "value": 0.0,
+        "contribution": -0.00036154745943217523
+      },
+      {
+        "feature": "fixture_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -0.0003603160611095112
+      },
+      {
+        "feature": "lifecycle_count",
+        "value": 0.0,
+        "contribution": -0.0003416376483633645
+      },
+      {
+        "feature": "body_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0003261180299606183
+      },
+      {
+        "feature": "helper_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": 0.0003127250757633003
+      },
+      {
+        "feature": "helper_count",
+        "value": 1.0,
+        "contribution": 0.0002421943643802266
+      },
+      {
+        "feature": "helper_mean_yields",
+        "value": 0.0,
+        "contribution": 0.00021955660039247972
+      },
+      {
+        "feature": "lifecycle_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -0.00021850718771617415
+      },
+      {
+        "feature": "helper_mean_lines",
+        "value": 72.0,
+        "contribution": -0.0002130879381526901
+      },
+      {
+        "feature": "fixture_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -0.0001922838626664255
+      },
+      {
+        "feature": "body_statements",
+        "value": 2.0,
+        "contribution": 0.00018269525204950607
+      },
+      {
+        "feature": "fixture_dependency_edges",
+        "value": 0.0,
+        "contribution": 0.0001818172377926485
+      },
+      {
+        "feature": "helper_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.00016337239478588753
+      },
+      {
+        "feature": "fixture_scope_function",
+        "value": 0.0,
+        "contribution": 0.00014575801217555512
+      },
+      {
+        "feature": "lifecycle_mean_lines",
+        "value": 0.0,
+        "contribution": -0.00014303724299836258
+      },
+      {
+        "feature": "fixture_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0001408683629192339
+      },
+      {
+        "feature": "body_lines",
+        "value": 3.0,
+        "contribution": 0.00013915030973196533
+      },
+      {
+        "feature": "fixture_count",
+        "value": 0.0,
+        "contribution": -0.0001379569768941159
+      },
+      {
+        "feature": "helper_mean_filesystem_calls",
+        "value": 2.0,
+        "contribution": 0.00011020473793826212
+      },
+      {
+        "feature": "helper_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": 0.00010767314524363767
+      },
+      {
+        "feature": "fixture_autouse_count",
+        "value": 0.0,
+        "contribution": 9.900627149384164e-05
+      },
+      {
+        "feature": "lifecycle_mean_calls",
+        "value": 0.0,
+        "contribution": -7.906561388513385e-05
+      },
+      {
+        "feature": "fixture_mean_lines",
+        "value": 0.0,
+        "contribution": -6.667838783523376e-05
+      },
+      {
+        "feature": "fixture_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": -5.8846034824660515e-05
+      },
+      {
+        "feature": "helper_mean_attribute_writes",
+        "value": 0.0,
+        "contribution": 5.419177354032808e-05
+      },
+      {
+        "feature": "body_time_calls",
+        "value": 0.0,
+        "contribution": -4.847278707458122e-05
+      },
+      {
+        "feature": "body_with_blocks",
+        "value": 0.0,
+        "contribution": 4.812732043899155e-05
+      },
+      {
+        "feature": "fixture_mean_asserts",
+        "value": 0.0,
+        "contribution": -4.611703790865944e-05
+      },
+      {
+        "feature": "body_asserts",
+        "value": 1.0,
+        "contribution": -4.331039829414552e-05
+      },
+      {
+        "feature": "body_subscript_writes",
+        "value": 0.0,
+        "contribution": 3.107102562403431e-05
+      },
+      {
+        "feature": "fixture_mean_random_calls",
+        "value": 0.0,
+        "contribution": 2.732330943415902e-05
+      },
+      {
+        "feature": "body_process_calls",
+        "value": 0.0,
+        "contribution": -2.5583169105665694e-05
+      },
+      {
+        "feature": "body_branches",
+        "value": 0.0,
+        "contribution": -2.4575408499112186e-05
+      },
+      {
+        "feature": "body_blocking_calls",
+        "value": 0.0,
+        "contribution": -2.4221711638679026e-05
+      },
+      {
+        "feature": "fixture_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 2.3633598673749767e-05
+      },
+      {
+        "feature": "body_try_blocks",
+        "value": 0.0,
+        "contribution": -2.3369679712177716e-05
+      },
+      {
+        "feature": "body_cleanup_calls",
+        "value": 0.0,
+        "contribution": -1.9209716329228958e-05
+      },
+      {
+        "feature": "lifecycle_mean_blocking_calls",
+        "value": 0.0,
+        "contribution": -1.8698010285912587e-05
+      },
+      {
+        "feature": "fixture_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -1.6880717392457577e-05
+      },
+      {
+        "feature": "lifecycle_mean_random_calls",
+        "value": 0.0,
+        "contribution": -1.5093686920115688e-05
+      },
+      {
+        "feature": "fixture_scope_module",
+        "value": 0.0,
+        "contribution": -1.4608435796767427e-05
+      },
+      {
+        "feature": "helper_mean_time_calls",
+        "value": 0.0,
+        "contribution": -1.4180122382590102e-05
+      },
+      {
+        "feature": "lifecycle_mean_process_calls",
+        "value": 0.0,
+        "contribution": -1.2367122919343329e-05
+      },
+      {
+        "feature": "fixture_mean_time_calls",
+        "value": 0.0,
+        "contribution": 1.1567553134948231e-05
+      },
+      {
+        "feature": "class_state_assignments",
+        "value": 0.0,
+        "contribution": -1.0634083051994149e-05
+      },
+      {
+        "feature": "lifecycle_mean_cleanup_calls",
+        "value": 0.0,
+        "contribution": -8.410564569221431e-06
+      },
+      {
+        "feature": "class_state_mutable_literals",
+        "value": 0.0,
+        "contribution": -7.946077574917147e-06
+      },
+      {
+        "feature": "body_mutable_ops",
+        "value": 0.0,
+        "contribution": -5.545226587882299e-06
+      },
+      {
+        "feature": "lifecycle_mean_mock_calls",
+        "value": 0.0,
+        "contribution": -5.400564435463482e-06
+      },
+      {
+        "feature": "body_class_shared_reads",
+        "value": 0.0,
+        "contribution": -4.508823162766823e-06
+      },
+      {
+        "feature": "body_attribute_writes",
+        "value": 0.0,
+        "contribution": 3.507315658345693e-06
+      },
+      {
+        "feature": "body_random_calls",
+        "value": 0.0,
+        "contribution": 3.4784833285479332e-06
+      },
+      {
+        "feature": "lifecycle_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": -2.8566699533669472e-06
+      },
+      {
+        "feature": "lifecycle_mean_filesystem_calls",
+        "value": 0.0,
+        "contribution": -2.7506687135231395e-06
+      },
+      {
+        "feature": "lifecycle_mean_network_calls",
+        "value": 0.0,
+        "contribution": 2.6563071793191275e-06
+      },
+      {
+        "feature": "lifecycle_mean_time_calls",
+        "value": 0.0,
+        "contribution": 2.5753177604087736e-06
+      },
+      {
+        "feature": "class_state_calls",
+        "value": 0.0,
+        "contribution": 2.380580744986752e-06
+      },
+      {
+        "feature": "lifecycle_mean_mutable_ops",
+        "value": 0.0,
+        "contribution": -1.9722052972257127e-06
+      },
+      {
+        "feature": "body_loops",
+        "value": 0.0,
+        "contribution": 1.6121103425983337e-06
+      },
+      {
+        "feature": "helper_mean_mock_calls",
+        "value": 0.0,
+        "contribution": 1.603365644269736e-06
+      },
+      {
+        "feature": "fixture_mean_network_calls",
+        "value": 0.0,
+        "contribution": -1.525935720431565e-06
+      },
+      {
+        "feature": "helper_mean_random_calls",
+        "value": 0.0,
+        "contribution": 1.5235356555264015e-06
+      },
+      {
+        "feature": "lifecycle_mean_subscript_writes",
+        "value": 0.0,
+        "contribution": -1.4247814098700698e-06
+      },
+      {
+        "feature": "fixture_scope_session",
+        "value": 0.0,
+        "contribution": -9.679840367332823e-07
+      },
+      {
+        "feature": "body_module_shared_reads",
+        "value": 0.0,
+        "contribution": -8.843821703388105e-07
+      },
+      {
+        "feature": "body_imports",
+        "value": 0.0,
+        "contribution": -8.369543333429027e-07
+      },
+      {
+        "feature": "body_comprehensions",
+        "value": 0.0,
+        "contribution": -8.054589886529134e-07
+      },
+      {
+        "feature": "fixture_scope_class",
+        "value": 0.0,
+        "contribution": 7.364598594725849e-07
+      },
+      {
+        "feature": "body_yields",
+        "value": 0.0,
+        "contribution": 6.596334838870155e-07
+      },
+      {
+        "feature": "helper_mean_network_calls",
+        "value": 0.0,
+        "contribution": 4.5759213045919997e-07
+      },
+      {
+        "feature": "body_network_calls",
+        "value": 0.0,
+        "contribution": -3.3590432141186844e-07
+      },
+      {
+        "feature": "body_filesystem_calls",
+        "value": 0.0,
+        "contribution": 3.069399952781079e-07
+      },
+      {
+        "feature": "lifecycle_mean_asserts",
+        "value": 0.0,
+        "contribution": 2.7623523744085674e-07
+      },
+      {
+        "feature": "class_state_random_calls",
+        "value": 0.0,
+        "contribution": -2.043267369363046e-07
+      },
+      {
+        "feature": "body_raises",
+        "value": 0.0,
+        "contribution": 1.4962781357970787e-07
+      },
+      {
+        "feature": "body_globals",
+        "value": 0.0,
+        "contribution": 9.620475581215935e-08
+      },
+      {
+        "feature": "body_mock_calls",
+        "value": 0.0,
+        "contribution": 9.006341710847396e-08
+      },
+      {
+        "feature": "body_awaits",
+        "value": 0.0,
+        "contribution": -3.2931239656096116e-08
+      },
+      {
+        "feature": "body_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_mean_unittest_asserts",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_other",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "fixture_scope_package",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "helper_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_finalizer_calls",
+        "value": 0.0,
+        "contribution": 0.0
+      },
+      {
+        "feature": "lifecycle_mean_yields",
+        "value": 0.0,
+        "contribution": 0.0
+      }
+    ]
+  }
+]

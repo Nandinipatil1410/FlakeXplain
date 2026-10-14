@@ -1,0 +1,36 @@
+{
+  "cases": 2610,
+  "positives": 0,
+  "projects": {
+    "werkzeug": {
+      "repository": "pallets/werkzeug",
+      "commit": "f97c305673ba121a1dae6764c37e8be48907a1d1"
+    },
+    "attrs": {
+      "repository": "python-attrs/attrs",
+      "commit": "ee66e7274852438cc23d4240a1a9cd632fda8b52"
+    },
+    "tenacity": {
+      "repository": "jd/tenacity",
+      "commit": "32ac68f0941319c0d2f4fb927f96e4ee29bb46c6"
+    }
+  },
+  "role": "Prospective external confirmation; now also used by separate deployment fit",
+  "combined_deployment_cases": 98728,
+  "combined_deployment_positives": 693,
+  "combined_deployment_projects": 38,
+  "development_labels_manifest_sha256": "49236367c9b9d327868917132e035197cfc106f75da20f8924cc32146f0efc88",
+  "development_features_manifest_sha256": "ad9c44fe0c7e4d5a1101669502fabd862fe90d5349228048deffff308a9ba419",
+  "external_results_sha256": "23af089bab3c08ae6ad3cab12b8dd84ca70f7e9aab4d025bf79ff21dfebec1ba",
+  "extractor_sha256": "d64d4286b905c1a69422b0e8668f1c48650b74f95334f9534446a3b9835ee5b0",
+  "evidence_audit_manifest_sha256": "b86acc38fecd0382a328019709c87ecc415fa7610b16019d0172c6e1f212808c",
+  "artifact_provenance_sha256": "b73606759621b487222ede4e2ea8a9c443522cbfeafaea3a10190a7cb5342ccd",
+  "files": {
+    "DATASET_CARD.md": "aee2e6ca9eadc68e3066793cab2fc57a0a606740aed0873c58a99f1bd9a488ab",
+    "features_context.csv.gz": "2d34c893ddbdfb5c50696f890ead79b9e8952d82f775c106e1ca5717f653ebcf",
+    "features_core.csv.gz": "9e070818ec40b24c9951eb284ba2f217697fdea09d801a066834bcd5b8e3d47f",
+    "labels.csv.gz": "00ec1221758289459564c883addfceebf980443e13a3368069f13eda8b192f73",
+    "metadata.csv.gz": "572c9d5850b024c18a7aba2fbd0c65cc8c40688de7f2d991c74fe662c3df250a",
+    "schema.json": "78848403c3e12655dba0a17734338ce0ef152665f8c941ba294267c4709496e5"
+  }
+}

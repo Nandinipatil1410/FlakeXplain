@@ -1,0 +1,36 @@
+project,commit,membership,python,platform,rounds_original,rounds_random,rounds_reverse,candidate_cases,model_cases,observed_flaky,not_observed_flaky,source_excluded,source_excluded_positive,with_context,unresolved_fixture_cases,bounded_cases,source_parse_errors
+airflow,c743b95a02ba1ec04013635a56ad042ce98823d2,CANNIER same revision,Python 3.8.7,Linux,12,12,1,3774,3225,300,2925,549,13,3225,1418,261,0
+celery,552e067b40198429cd7c866a397069366ac8e530,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,2332,2332,7,2325,0,0,2332,2332,2332,0
+cirq,782c14e0cc821794d21e82f30df8e6998f4b9992,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,12189,12189,16,12173,0,0,4012,17,78,0
+conan,d524074945e840f9c9f1d4d6eba462bf6a1dc608,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,3687,3047,24,3023,640,0,3047,38,1139,0
+dask,d5bbad0b1f32b3c904abc4fd020bef9c5092d2a3,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,8526,8526,1,8525,0,0,7210,138,6592,0
+djangorestframework,0323d6f8955f987771269506ca5da461e2e7a248,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,1,1402,1402,1,1401,0,0,921,0,16,0
+electrum,d8d2c180aafaec1ae9bc68c27a7d780df8de4348,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,542,542,0,542,0,0,542,66,234,0
+filelock,82f66d7b0aaa83755f8d71d0b0da88408b58ec4a,additional,Python 3.11.9,Windows-10-10.0.26200-SP0,12,12,1,1106,1106,2,1104,0,0,1106,1035,3,0
+flexget,4fb250844d59e73304b7d306457ad61e070e1261,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,1330,1330,4,1326,0,0,1330,1330,1330,0
+fonttools,f3a903093a4600f3d757bf9b22f387a561fcb584,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,1,3806,3448,0,3448,358,0,3448,826,839,0
+freezegun,b46da782a7a051081fd51577749cfc0074db0cc6,additional,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,3,103,103,15,88,0,0,33,2,0,0
+graphene,7d2af3104e3c01ce4f9a1580faf40d8179079008,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,1,346,346,1,345,0,0,83,35,15,0
+hydra,69d31ebf79a93f0a8378d896a359fb47b09f5074,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,1538,1538,18,1520,0,0,858,401,42,0
+hypothesis,ccac4364979effc2b22e2f943176b2b1f025c448,CANNIER same revision,Python 3.8.18,Linux,12,12,1,4493,4335,2,4333,158,0,4334,4335,1220,0
+ipython,95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,3,808,801,35,766,7,0,801,1,62,0
+kombu,2aeb73248b4a0bf8ad3de81a0f40733e7cd42255,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,1,785,785,20,765,0,0,785,785,27,0
+libcloud,449b315ea47ba85f79b4062b1d398e94e545d273,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,9809,8227,132,8095,1582,0,7570,32,8,0
+loguru,f31e97142adc1156693a26ecaf47208d3765a6e3,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,3,1359,1359,20,1339,0,0,1359,482,0,0
+mitmproxy,4511ea7c24a3d62373d6fa6d221ac96212ce11e4,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,1232,1232,2,1230,0,0,971,119,316,1
+pillow,92933b86574b9c80764bf52c357ed29e1ef53382,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,2596,2596,0,2596,0,0,2472,267,1614,0
+prefect,6b59d989dec33aad8c62ea2476fee519c32f5c63,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,7046,7046,12,7034,0,0,6234,5471,111,0
+pygithub,31538337faaa61e104afede75a5fac802c9a1ab3,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,1,711,711,0,711,0,0,703,1,17,0
+pyramid,7b182045ee77cdfb38fda5e55ccbdcd8ed1c9468,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,1,2633,2629,1,2628,4,0,2483,0,115,1
+pytest,a315b97ce61f158bef9957152c8415fe743aa553,additional,Python 3.11.9,Linux-6.17.0-1022-azure-x86_64-with-glibc2.39,12,12,1,4593,4592,37,4555,1,0,4592,4592,542,0
+reframe,576eb3f1dcc015d1e6d7a10602c748d4f810da68,additional,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,3,639,639,9,630,0,0,597,231,92,1
+requests,a1a6a549a0143d9b32717dbe3d75cd543ae5a4f6,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,548,537,0,537,11,0,420,239,69,0
+rich,9d8f9a372cc5916fd4781fec207ced7ddac2f08f,additional,Python 3.11.9,Linux-6.17.0-1022-azure-x86_64-with-glibc2.39,12,12,1,957,957,5,952,0,0,957,957,145,0
+salt,bac2d1e6aeea8f12dd1712207b87ea2695f35b7c,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,2674,2674,3,2671,0,0,2674,236,1074,4
+scikit_image,8fbbb5169b8da6fb26b107a0a8c6de46a93f37cc,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,6275,6261,1,6260,14,0,1337,5,543,0
+seaborn,703259f2dca711205f81d2d8f9e3fa45774eb0da,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,1025,1025,2,1023,0,0,1025,0,107,0
+setuptools,4d64156de17596dae33f2b12aaaea1d6c9327fd9,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,709,698,7,691,11,0,592,428,148,0
+sunpy,b071259098e9ff1dbd9e66071999f60fdf9b0fd7,CANNIER changed/unknown revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,2055,1885,1,1884,170,1,1885,148,159,0
+tornado,2047e7ae3c825bf52dad10cc8402d09e11091bc1,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.34,12,12,1,1103,1103,0,1103,0,0,1022,0,542,0
+urllib3,a5d70ebfd6a30ceba0e9cc322089a6497dcd643e,CANNIER changed/unknown revision,Python 3.11.9,Linux-6.17.0-1022-azure-x86_64-with-glibc2.39,12,12,1,2341,2113,4,2109,228,0,2113,126,732,0
+xonsh,e9b12c8b701a75b5ecb8d20f3aad7d3e5aca64bf,CANNIER same revision,Python 3.8.18,Linux-6.17.0-1022-azure-x86_64-with-glibc2.2.5,12,12,1,4789,4779,11,4768,10,8,4639,2899,1332,0

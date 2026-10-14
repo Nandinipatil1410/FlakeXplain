@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "pages": 4,
+  "visual_inspection": "All four latest Poppler-rendered pages inspected: readable tables, no clipping/overlap or missing glyphs.",
+  "renderer": "Poppler pdftoppm at 120 dpi",
+  "render_warnings": "Unused Symbol/ArialUnicode display-font warnings; rendered Helvetica content verified.",
+  "pdf_sha256": "27d03dc387ce6c794e188d11c0b2eb59b42d889865c5254ce9203923ac22d83e"
+}

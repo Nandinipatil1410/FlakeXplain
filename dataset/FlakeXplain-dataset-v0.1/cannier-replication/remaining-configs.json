@@ -1,0 +1,734 @@
+{
+  "airflow": {
+    "url": "https://github.com/apache/airflow.git",
+    "commit": "c743b95a02ba1ec04013635a56ad042ce98823d2",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.7",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
+    ],
+    "snapshot_path": "cannier-replication/subjects/airflow/requirements.txt",
+    "verify_pkgs": [
+      "apache-airflow",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [
+      "tests",
+      "--with-db-init"
+    ],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
+    "snapshot_additions": [
+      "argparse==1.4.0"
+    ],
+    "pytest_dependency_paths_first": true,
+    "runtime_fixtures": {
+      "system_site_packages_bridge": true,
+      "python2": "2.7",
+      "container_init": true
+    },
+    "pytest_env": {
+      "AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS__VISIBILITY_TIMEOUT": "21600",
+      "AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS___TEST_ONLY_BOOL": "True",
+      "AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS___TEST_ONLY_FLOAT": "12.0",
+      "AIRFLOW__CELERY_BROKER_TRANSPORT_OPTIONS___TEST_ONLY_STRING": "this is a test"
+    }
+  },
+  "celery": {
+    "url": "https://github.com/celery/celery.git",
+    "commit": "552e067b40198429cd7c866a397069366ac8e530",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/celery/requirements.txt",
+    "verify_pkgs": [
+      "celery",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
+    "snapshot_additions": [
+      "argparse==1.4.0"
+    ]
+  },
+  "cirq": {
+    "url": "https://github.com/quantumlib/Cirq.git",
+    "commit": "782c14e0cc821794d21e82f30df8e6998f4b9992",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": "cirq-core",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
+    ],
+    "snapshot_path": "cannier-replication/subjects/Cirq/requirements.txt",
+    "verify_pkgs": [
+      "cirq-core",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [
+      "cirq-core"
+    ],
+    "snapshot_overrides": {
+      "typing-extensions": "typing-extensions==3.10.0.2",
+      "typed-ast": "typed-ast==1.4.3",
+      "filelock": "filelock==3.4.1",
+      "matplotlib": "matplotlib==3.5.2"
+    },
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "conan": {
+    "external_service_fixture_note": "A real localhost FTP fixture using pyftpdlib==1.5.6 replaces the changing Rebex demo service, retaining its historical 530/550 reply text and an authentic downloaded readme. All pinned tests and assertions remain unchanged. Results describe a controlled-service environment, not an exact live-service replication.",
+    "url": "https://github.com/conan-io/conan.git",
+    "commit": "d524074945e840f9c9f1d4d6eba462bf6a1dc608",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/conan/requirements.txt",
+    "pytest_unset_env": [
+      "PKG_CONFIG_PATH"
+    ],
+    "snapshot_additions": [
+      "cmake==3.18.4.post1"
+    ],
+    "verify_pkgs": [
+      "conan",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "external_service_fixture_note": "A real localhost FTP fixture using pyftpdlib==1.5.6 replaces the changing Rebex demo service, retaining its historical 530/550 reply text and an authentic downloaded readme. All pinned tests and assertions remain unchanged. Results describe a controlled-service environment, not an exact live-service replication.",
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
+    "snapshot_overrides": {
+      "six": "six==1.15.0"
+    }
+  },
+  "dask": {
+    "url": "https://github.com/dask/dask.git",
+    "commit": "d5bbad0b1f32b3c904abc4fd020bef9c5092d2a3",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/dask/requirements.txt",
+    "dask_multiprocessing_method": "forkserver",
+    "verify_pkgs": [
+      "dask",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "electrum": {
+    "url": "https://github.com/spesmilo/electrum.git",
+    "commit": "d8d2c180aafaec1ae9bc68c27a7d780df8de4348",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/electrum/requirements.txt",
+    "snapshot_additions": [
+      "pycryptodomex==3.10.1"
+    ],
+    "verify_pkgs": [
+      "electrum",
+      "pycryptodomex",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "flexget": {
+    "url": "https://github.com/Flexget/Flexget.git",
+    "commit": "4fb250844d59e73304b7d306457ad61e070e1261",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
+    ],
+    "snapshot_path": "cannier-replication/subjects/Flexget/requirements.txt",
+    "test_fixtures": [
+      {
+        "source": "cannier-replication/subjects/Flexget/test_urlrewriting.TestURLRewriters.test_rutracker",
+        "destination": "flexget/tests/cassettes/test_urlrewriting.TestURLRewriters.test_rutracker",
+        "sha256": "47013c4c5ad1a5c37a31449c622da9b80efef8e7d8996ef7f547200f512f5f8f",
+        "upstream_url": "https://raw.githubusercontent.com/Flexget/Flexget/dabf5803ff8863b6be0f387d4ed54629230cd24a/flexget/tests/cassettes/test_urlrewriting.TestURLRewriters.test_rutracker",
+        "note": "Authentic upstream recording restored in 2022; supplements the historical fixture set. Not an untouched-checkout replication."
+      }
+    ],
+    "snapshot_overrides": {
+      "six": "six==1.15.0"
+    },
+    "verify_pkgs": [
+      "FlexGet",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "hydra": {
+    "url": "https://github.com/facebookresearch/hydra.git",
+    "commit": "69d31ebf79a93f0a8378d896a359fb47b09f5074",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
+    ],
+    "snapshot_path": "cannier-replication/subjects/hydra/requirements.txt",
+    "verify_pkgs": [
+      "hydra-core",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "hypothesis": {
+    "url": "https://github.com/HypothesisWorks/hypothesis.git",
+    "commit": "ccac4364979effc2b22e2f943176b2b1f025c448",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": "hypothesis-python",
+    "isolate_entrypoint_example": true,
+    "editable_test_targets": [
+      "hypothesis-python/examples/example_hypothesis_entrypoint"
+    ],
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0",
+      "pytest-xdist==2.3.0",
+      "pytest-forked==1.3.0",
+      "execnet==1.9.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
+    ],
+    "snapshot_path": "cannier-replication/subjects/hypothesis/requirements.txt",
+    "pytest_unset_env": [
+      "PYTEST_ADDOPTS"
+    ],
+    "pytest_env": {
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "PYTEST_PLUGINS": "flakexplain_hypothesis_plugins"
+    },
+    "verify_pkgs": [
+      "hypothesis",
+      "pytest",
+      "pytest-randomly",
+      "pytest-xdist",
+      "pytest-forked",
+      "execnet"
+    ],
+    "random_pytest_args": [
+      "--randomly-dont-reset-seed"
+    ],
+    "pytest_args": [
+      "hypothesis-python"
+    ],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "libcloud": {
+    "url": "https://github.com/apache/libcloud.git",
+    "commit": "449b315ea47ba85f79b4062b1d398e94e545d273",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/libcloud/requirements.txt",
+    "snapshot_additions": [
+      "toml==0.10.2"
+    ],
+    "snapshot_exclusions": {
+      "codecov": "The pinned codecov==2.1.10 is unavailable from the package index; this coverage uploader is not used by the direct pytest experiment."
+    },
+    "verify_pkgs": [
+      "apache-libcloud",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [
+      "libcloud"
+    ],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
+    "prepare_copy": [
+      "libcloud/test/secrets.py-dist",
+      "libcloud/test/secrets.py"
+    ]
+  },
+  "mitmproxy": {
+    "url": "https://github.com/mitmproxy/mitmproxy.git",
+    "commit": "4511ea7c24a3d62373d6fa6d221ac96212ce11e4",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/mitmproxy/requirements.txt",
+    "pytest_env": {
+      "PYTHONINTMAXSTRDIGITS": "0"
+    },
+    "verify_pkgs": [
+      "mitmproxy",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "pillow": {
+    "url": "https://github.com/python-pillow/Pillow.git",
+    "commit": "92933b86574b9c80764bf52c357ed29e1ef53382",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/Pillow/requirements.txt",
+    "test_fixtures": [
+      {
+        "source": "cannier-replication/fixtures/pillow/crash-81154a65438ba5aaeca73fd502fa4850fbde60f8.tif",
+        "destination": "Tests/images/crash-81154a65438ba5aaeca73fd502fa4850fbde60f8.tif",
+        "sha256": "13b76234bb194c93a9a94653b4dd850ba5498f66f5f64e48e4109e7120cedc71",
+        "upstream_url": "https://raw.githubusercontent.com/python-pillow/pillow-depends/1c6d24bde58dda66cdc2e37ffbad50ab267ab732/test_images/crash-81154a65438ba5aaeca73fd502fa4850fbde60f8.tif",
+        "note": "Historical extra TIFF fixture installed separately by upstream CI; test code unchanged."
+      },
+      {
+        "source": "cannier-replication/fixtures/pillow/crash_1.tif",
+        "destination": "Tests/images/crash_1.tif",
+        "sha256": "c7753a4ba2e83f87f26fc7485b668645c8f19b9abf10f5a919f75ce00dd01152",
+        "upstream_url": "https://raw.githubusercontent.com/python-pillow/pillow-depends/1c6d24bde58dda66cdc2e37ffbad50ab267ab732/test_images/crash_1.tif",
+        "note": "Historical extra TIFF fixture installed separately by upstream CI; test code unchanged."
+      },
+      {
+        "source": "cannier-replication/fixtures/pillow/crash_2.tif",
+        "destination": "Tests/images/crash_2.tif",
+        "sha256": "da410dc3b7631619f5915e176af0683650d66e3f756f37e0a7528030e4080c70",
+        "upstream_url": "https://raw.githubusercontent.com/python-pillow/pillow-depends/1c6d24bde58dda66cdc2e37ffbad50ab267ab732/test_images/crash_2.tif",
+        "note": "Historical extra TIFF fixture installed separately by upstream CI; test code unchanged."
+      },
+      {
+        "source": "cannier-replication/fixtures/pillow/string_dimension.tiff",
+        "destination": "Tests/images/string_dimension.tiff",
+        "sha256": "8b28fc4501318b960ada06b2fff15b3fd1b198b4d99ae9c9c3daa5a3c6a01453",
+        "upstream_url": "https://raw.githubusercontent.com/python-pillow/pillow-depends/1c6d24bde58dda66cdc2e37ffbad50ab267ab732/test_images/string_dimension.tiff",
+        "note": "Historical extra TIFF fixture installed separately by upstream CI; test code unchanged."
+      }
+    ],
+    "pytest_env": {
+      "DISPLAY": ":99"
+    },
+    "verify_pkgs": [
+      "Pillow",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "prefect": {
+    "url": "https://github.com/PrefectHQ/prefect.git",
+    "commit": "6b59d989dec33aad8c62ea2476fee519c32f5c63",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
+    ],
+    "snapshot_path": "cannier-replication/subjects/prefect/requirements.txt",
+    "snapshot_overrides": {
+      "boto3": "boto3==1.17.106",
+      "botocore": "botocore==1.20.106",
+      "s3transfer": "s3transfer==0.4.2",
+      "great-expectations": "great-expectations==0.12.9",
+      "ruamel.yaml": "ruamel.yaml==0.15.89",
+      "requests": "requests==2.23.0",
+      "chardet": "chardet==3.0.4",
+      "urllib3": "urllib3==1.25.11",
+      "soda-sql": "soda-sql-core==2.1.0b1"
+    },
+    "verify_pkgs": [
+      "prefect",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": ["-p", "no:flaky", "--tb=line", "-o", "faulthandler_timeout=180"],
+    "internal_reruns": "Disabled pytest flaky plugin so each collected test executes once per planned round; observed failures are retained without retry-generated JUnit duplicates.",
+    "failure_reporting": "Use one-line tracebacks so failure reporting does not inspect all imported modules while heartbeat threads spin through mocked time.sleep; preserve failed outcomes and normal fixture teardown.",
+    "preload_test_modules": ["zmq.utils.jsonapi"],
+    "expiry_clock_fixture": {
+      "node": "tests/cli/test_auth.py::test_create_key",
+      "pendulum_now": "2021-07-01T00:00:00Z",
+      "reason": "Pinned 2021 tests use fixed 2025 expiration dates; only these cases need their historical clock."
+    },
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "requests": {
+    "url": "https://github.com/psf/requests.git",
+    "commit": "a1a6a549a0143d9b32717dbe3d75cd543ae5a4f6",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/requests/requirements.txt",
+    "verify_pkgs": [
+      "requests",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "salt": {
+    "url": "https://github.com/saltstack/salt.git",
+    "commit": "bac2d1e6aeea8f12dd1712207b87ea2695f35b7c",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/salt/requirements.txt",
+    "verify_pkgs": [
+      "salt",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [
+      "tests/pytests/unit",
+      "--capture=sys"
+    ],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "scikit_image": {
+    "url": "https://github.com/scikit-image/scikit-image.git",
+    "commit": "8fbbb5169b8da6fb26b107a0a8c6de46a93f37cc",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/scikit-image/requirements.txt",
+    "dataset_revision": "f7d93a21a2642aa9ea3b6e40d3c2638fc2e40cf1",
+    "verify_pkgs": [
+      "scikit-image",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [
+      "skimage",
+      "-k",
+      "not test_reproducibility"
+    ],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "seaborn": {
+    "url": "https://github.com/mwaskom/seaborn.git",
+    "commit": "703259f2dca711205f81d2d8f9e3fa45774eb0da",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/seaborn/requirements.txt",
+    "verify_pkgs": [
+      "seaborn",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "setuptools": {
+    "url": "https://github.com/pypa/setuptools.git",
+    "commit": "4d64156de17596dae33f2b12aaaea1d6c9327fd9",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24"
+    ],
+    "snapshot_path": "cannier-replication/subjects/setuptools/requirements.txt",
+    "package_test_fixtures": [
+      {
+        "filename": "pbr-5.6.0-py2.py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/18/e0/1d4702dd81121d04a477c272d47ee5b6bc970d1a0990b11befa275c55cf2/pbr-5.6.0-py2.py3-none-any.whl",
+        "sha256": "c68c661ac5cc81058ac94247278eeda6d2e6aecb3e227b0387c30d277e7ef8d4",
+        "note": "Authentic 2021 pbr wheel supplied through easy_install find_links for integration tests; tests perform the installation and retain all assertions."
+      }
+    ],
+    "test_parameter_sources": [
+      {
+        "module": "setuptools.tests.test_virtualenv",
+        "parameter": "pip_version",
+        "original": "https://github.com/pypa/pip/archive/main.zip",
+        "pinned": "https://github.com/pypa/pip/archive/76cd70ac42cbbe6a51d83bd100f500ac4c21f26b.zip",
+        "note": "Last pip commit before the pinned Setuptools snapshot (2021-07-19); pip main now requires Python >=3.10."
+      }
+    ],
+    "prepare_egg_info": true,
+    "git_test_fixtures": [
+      {
+        "name": "sampleproject",
+        "url": "https://github.com/pypa/sampleproject",
+        "commit": "90d44abe361688aba5a189e661423863b34f5208",
+        "note": "Historical sample project for unmodified test_editable_prefix; current upstream uses incompatible modern packaging metadata."
+      }
+    ],
+    "verify_pkgs": [
+      "setuptools",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": ["-p", "no:xdist", "-p", "flakexplain_package_sources", "--ignore=conftest_reverse.py"],
+    "pytest_collection_note": "The generated reverse-order runner plugin is loaded explicitly with -p; exclude it from upstream lint-test collection to keep baseline and detection test counts identical.",
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "sunpy": {
+    "url": "https://github.com/sunpy/sunpy.git",
+    "commit": "b071259098e9ff1dbd9e66071999f60fdf9b0fd7",
+    "original_cannier_commit": "7c6e51e85410f3647af81e601a4bb4c9073a50c8",
+    "source_revision_note": "Updated-source experiment using upstream v3.0.3. The original CANNIER commit deterministically fails ASDF coordinate-schema validation; upstream fixes include 61da21263b834b02642fbd5e66f4d8e9c2b4a21b. This is not an exact replication of the original source revision. No local test or schema patches are applied.",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2",
+      "extension-helpers==0.1"
+    ],
+    "snapshot_path": "cannier-replication/subjects/sunpy/requirements.txt",
+    "verify_pkgs": [
+      "sunpy",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  },
+  "xonsh": {
+    "url": "https://github.com/xonsh/xonsh.git",
+    "commit": "e9b12c8b701a75b5ecb8d20f3aad7d3e5aca64bf",
+    "supported_platforms": [
+      "linux"
+    ],
+    "python_version": "3.8.18",
+    "installer": "cannier_snapshot",
+    "install_target": ".",
+    "extra_pkgs": [
+      "pytest-randomly==3.5.0"
+    ],
+    "bootstrap_pkgs": [
+      "pip==23.3.2",
+      "setuptools==57.5.0",
+      "wheel==0.37.1",
+      "Cython==0.29.24",
+      "setuptools-scm==5.0.2"
+    ],
+    "snapshot_path": "cannier-replication/subjects/xonsh/requirements.txt",
+    "verify_pkgs": [
+      "xonsh",
+      "pytest",
+      "pytest-randomly"
+    ],
+    "pytest_args": [],
+    "source_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728"
+  }
+}

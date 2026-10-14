@@ -1,5 +1,6 @@
 repos/
 .venv/
+.venv-pilot/
 **/.venv/
 __pycache__/
 **/__pycache__/
@@ -15,6 +16,11 @@ __pycache__/
 # Disposable debugging files and local research evidence (never blanket-ignore fixtures).
 /.tmp-*
 /local-evidence/
+/output/*.zip
+/output/*.zip.sha256
+/dataset/*.zip
+/dataset/*.zip.sha256
+/tmp/pdfs/
 /airflow-evidence/
 /dask-evidence/
 /*.backup.md

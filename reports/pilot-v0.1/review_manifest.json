@@ -1,0 +1,23 @@
+{
+  "status": "verified",
+  "files": {
+    "error_samples.csv": "04c06a2cf2c5c3e38a0e0f532a64b54fff08e1dc87a3aa0859ff473488bacbda",
+    "feature_importance.csv": "b595c1c2174f390ca0b90031c606ca4f6443206d5a059163e82489f446831242",
+    "generalization_diagnostics.csv": "be53708af57feb709c6bd26408d1d8b545af31846c1cf671e10b5538bca59118",
+    "metrics_by_fold.csv": "bc18f0e491ee524feadf0af709724b52d12bfb9ba8bc55d850dbefaeaf25c114",
+    "metrics_by_project.csv": "3b3619167c508c0c12d9b4cc901345ec71668e0a35f7b1d47bd65f9a2fb2ebd7",
+    "metrics_pooled.csv": "a8118936361911469d464fee67005377a2a9daaefc7a7d0e8d9b79510b1cd2ce",
+    "metrics_project_macro.csv": "f120f0e85a97a6973243aa350f4350c4e86fcff0538582f7d7d545f2793c0118",
+    "metrics_source_family_weighted.csv": "3dd474d86771af5796c753ff7676eaab21ea485e701ee7069db13d05b31d1ab1",
+    "oof_predictions.csv.gz": "1f74baaec869ba5d75a670c8b28bae3265afe0ea2b018f1be81b7da4aae5ec59",
+    "PILOT_RESULTS_REPORT.md": "32a87beaa072c4e4eb5caa026c484d120ed8fceff48e701fd2ebe811353ba857",
+    "precision_recall_curve.csv.gz": "cdcede1a84cea9389a2dcac4d6a593d27fd9b7af6bed36a1c176b73557bcbf2d",
+    "protocol.json": "e3948ef01a4fd2f1abbc94b8dfc6fd48d88d099a247ded010cc28a401f61df3f",
+    "results.json": "3bad8c193baa63fe82f8bae21e15125501bd551ba6df2337aae1ff704c422415",
+    "run_manifest.json": "0784d0423ecd0227392eff7703b2349501ddbfa733ac43b141d484d8e6ecbe28",
+    "threshold_selection.csv": "354c55e6b84c30b8b2a7546dc662bef35fb8f1b2cebdd5446aef640b9a7a593d",
+    "validation.json": "2da48e4ca78448c2be8465bef2d7e01dde8fce52faf00472c17b08be247439da"
+  },
+  "report_script_sha256": "042465d5eaab48c35cdd03957d99b38e8be008483c9ea53e4a402bab896ddd04",
+  "validator_sha256": "97a61fc994a5f6dc6879e8553b13470b37663928b2ba73bc7f017ba0ae344f02"
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "model": "extra_trees_core",
+    "candidate": 0,
+    "parameters": {
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "class_weight": "balanced"
+    },
+    "threshold": 0.5195219461404478,
+    "development_oof_ap": 0.01097217806584912
+  },
+  {
+    "model": "extra_trees_context",
+    "candidate": 2,
+    "parameters": {
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "class_weight": null
+    },
+    "threshold": 0.036106380133428144,
+    "development_oof_ap": 0.026762127728822634
+  },
+  {
+    "model": "random_forest_core_reference",
+    "candidate": 0,
+    "parameters": {
+      "n_estimators": 100,
+      "class_weight": null,
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt",
+      "bootstrap": true,
+      "random_state": 20261013,
+      "n_jobs": 4
+    },
+    "threshold": 0.14,
+    "development_oof_ap": 0.009040567947547002
+  },
+  {
+    "model": "random_forest_context_reference",
+    "candidate": 0,
+    "parameters": {
+      "n_estimators": 100,
+      "class_weight": null,
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt",
+      "bootstrap": true,
+      "random_state": 20261013,
+      "n_jobs": 4
+    },
+    "threshold": 0.0875,
+    "development_oof_ap": 0.014585018256126011
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "sample_cases": 100,
+  "projects": 35,
+  "rule": "Up to 50 context-model false positives and 50 false negatives; round-robin sorted projects and distinct source families per error type; extreme scores within project.",
+  "purpose": "Development error audit after original pilot, not an unbiased population sample or causal-label confirmation",
+  "pilot_predictions_sha256": "1f74baaec869ba5d75a670c8b28bae3265afe0ea2b018f1be81b7da4aae5ec59",
+  "sample_sha256": "42108b05dec303c98dc7cc269c42bc6eed1cc5f538e6cf88c38bbdf7130504a0"
+}

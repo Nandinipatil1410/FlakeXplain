@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "pages": 4,
+  "pdf_sha256": "903d74a54db699b32f871f7050c30bc2258347c4af02595f4f7d2163700f0338",
+  "inspection": "Rendered all four final pages at 100 dpi and visually inspected. Header contrast corrected; no clipping, overlap, missing glyphs or overflow observed.",
+  "authoring_script_sha256": "7460590480e94928c007b6a8f8278432ebc5056423e5bb4fe3aaa5cf7376c349"
+}

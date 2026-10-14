@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "stage": "development revision after inspected pilot; not untouched confirmation",
+  "cases": 96118,
+  "contexts": 56694,
+  "source_files_checked": 5379,
+  "dataset_manifest_sha256": "49236367c9b9d327868917132e035197cfc106f75da20f8924cc32146f0efc88",
+  "source_documents": "local-evidence\\development-v0.2\\source_documents.jsonl.gz",
+  "source_documents_sha256": "290148f611859beb4e8bc94464d2db6eaa9fd82e81485d93852581eba4b5ea5d",
+  "extractor_sha256": "602dc85a96245da415014654bb53e1d62d508162648033093bfd1be8a870650c",
+  "files": {
+    "extraction_audit.csv.gz": "4bb071b823dab5cba49825831c72faa3a4057250d7c5f7426118baac5432a353",
+    "features_body.csv.gz": "63097f141b93781077b207d21b9a936f1ff29bf27f356b9737967205b01dd343",
+    "features_context.csv.gz": "df22b65d8c7213785bd13bbf4ddbd44231a8aebb14d14a140b48cc874ce16c42",
+    "schema.json": "5df3a3fd96b07f93c88a435c180b8c427ba4f1c64bda91180ef09e317e372742"
+  },
+  "class_state_contexts": 9472
+}

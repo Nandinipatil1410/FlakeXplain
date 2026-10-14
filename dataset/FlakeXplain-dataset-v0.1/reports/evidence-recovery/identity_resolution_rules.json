@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "selection_rule": "Exclude identity-ambiguous groups independent of outcomes; preserve all raw observations and original identities. Do not normalize changing inputs into one parameterized case.",
+  "projects": {
+    "cirq": {
+      "commit": "782c14e0cc821794d21e82f30df8e6998f4b9992",
+      "excluded_functions": [
+        {
+          "classname": "cirq.circuits.circuit_test",
+          "function": "test_findall_operations_until_blocked_docstring_examples",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/circuits/circuit_test.py",
+          "line": 1562
+        },
+        {
+          "classname": "cirq.contrib.acquaintance.gates_test",
+          "function": "test_swap_network_permutation",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/contrib/acquaintance/gates_test.py",
+          "line": 243
+        },
+        {
+          "classname": "cirq.contrib.acquaintance.gates_test",
+          "function": "test_swap_network_repr",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/contrib/acquaintance/gates_test.py",
+          "line": 252
+        },
+        {
+          "classname": "cirq.contrib.acquaintance.permutation_test",
+          "function": "test_linear_permutation_gate",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/contrib/acquaintance/permutation_test.py",
+          "line": 109
+        },
+        {
+          "classname": "cirq.contrib.routing.initialization_test",
+          "function": "test_initialization_reproducible_with_seed",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/contrib/routing/initialization_test.py",
+          "line": 33
+        },
+        {
+          "classname": "cirq.contrib.routing.initialization_test",
+          "function": "test_initialization_with_no_seed",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/contrib/routing/initialization_test.py",
+          "line": 43
+        },
+        {
+          "classname": "cirq.contrib.routing.router_test",
+          "function": "test_route_circuit",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/contrib/routing/router_test.py",
+          "line": 36
+        },
+        {
+          "classname": "cirq.contrib.routing.router_test",
+          "function": "test_route_circuit_reproducible_with_seed",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/contrib/routing/router_test.py",
+          "line": 53
+        },
+        {
+          "classname": "cirq.contrib.routing.router_test",
+          "function": "test_route_circuit_via_unitaries",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/contrib/routing/router_test.py",
+          "line": 107
+        },
+        {
+          "classname": "cirq.linalg.decompositions_test",
+          "function": "test_kak_canonicalize_vector",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/linalg/decompositions_test.py",
+          "line": 222
+        },
+        {
+          "classname": "cirq.ops.common_gates_test",
+          "function": "test_rxyz_exponent",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/ops/common_gates_test.py",
+          "line": 1051
+        },
+        {
+          "classname": "cirq.optimizers.decompositions_test",
+          "function": "test_single_qubit_matrix_to_gates_fuzz_half_turns_merge_z_gates",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/optimizers/decompositions_test.py",
+          "line": 121
+        },
+        {
+          "classname": "cirq.optimizers.decompositions_test",
+          "function": "test_single_qubit_matrix_to_phased_x_z_fuzz_half_turns_always_one_gate",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/optimizers/decompositions_test.py",
+          "line": 236
+        },
+        {
+          "classname": "cirq.optimizers.decompositions_test",
+          "function": "test_single_qubit_matrix_to_phxz_fuzz_half_turns_always_one_gate",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/optimizers/decompositions_test.py",
+          "line": 309
+        },
+        {
+          "classname": "cirq.protocols.json_serialization_test",
+          "function": "test_json_test_data_coverage",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/protocols/json_serialization_test.py",
+          "line": 483
+        },
+        {
+          "classname": "cirq.testing.random_circuit_test",
+          "function": "test_random_circuit",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/testing/random_circuit_test.py",
+          "line": 75
+        },
+        {
+          "classname": "cirq.testing.random_circuit_test",
+          "function": "test_random_circuit_reproducible_with_seed",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "cirq/cirq-core/cirq/testing/random_circuit_test.py",
+          "line": 96
+        }
+      ],
+      "excluded_identities": [],
+      "source_evidence": [
+        {
+          "path": "cirq/cirq-core/cirq/circuits/circuit_test.py",
+          "sha256": "a10496e565fbfc2b883c4f1b71c64675998af2e5e3a41a01783c5ba05dbdc9f8"
+        },
+        {
+          "path": "cirq/cirq-core/cirq/contrib/acquaintance/gates_test.py",
+          "sha256": "d773983c3ad81b4e97ba13a5237b132a5b76489b9345e6a1a346caccb03f6923"
+        },
+        {
+          "path": "cirq/cirq-core/cirq/contrib/acquaintance/permutation_test.py",
+          "sha256": "758a2528da540ef48a6604bac77ae1998201c7998cf2d18f47781172d05fdcb1"
+        },
+        {
+          "path": "cirq/cirq-core/cirq/contrib/routing/initialization_test.py",
+          "sha256": "c8a89d9293046022aaf8b88fb9e3f27366f05bab2e43b0af463d62ae3cf49b14"
+        },
+        {
+          "path": "cirq/cirq-core/cirq/contrib/routing/router_test.py",
+          "sha256": "7964ef0377c673838323c67154e7e2f1cedb60c7fc676e1624a1b14c66c2a3a4"
+        },
+        {
+          "path": "cirq/cirq-core/cirq/linalg/decompositions_test.py",
+          "sha256": "999ce4cb16ca999010c8ac95866faddbbeb6e0bd331d96016171b6e02331bdf3"
+        },
+        {
+          "path": "cirq/cirq-core/cirq/ops/common_gates_test.py",
+          "sha256": "35a320977c754c4c6fa27487bf7286a803bc381b06a168e496adb17dcadd22d2"
+        },
+        {
+          "path": "cirq/cirq-core/cirq/optimizers/decompositions_test.py",
+          "sha256": "901b4b3a3bdb16d460a17eb23c845dc7921cd0c513725b2384df548271eba9d3"
+        },
+        {
+          "path": "cirq/cirq-core/cirq/protocols/json_serialization_test.py",
+          "sha256": "62a8af84a1c30cdbc133dcba17dab95ae3195251cb94cb52cc14c7a3fbd6d93d"
+        },
+        {
+          "path": "cirq/cirq-core/cirq/testing/random_circuit_test.py",
+          "sha256": "781586e0144ac7bce001ba054d28b9098067425737320a1857fbc08c96606cc2"
+        }
+      ]
+    },
+    "xonsh": {
+      "commit": "e9b12c8b701a75b5ecb8d20f3aad7d3e5aca64bf",
+      "excluded_functions": [
+        {
+          "classname": "tests.test_history_json",
+          "function": "test__xhj_gc_xx_to_rmfiles",
+          "reason": "Source family has inconsistent parameterized identities across detection rounds; exact case/input correspondence cannot be verified.",
+          "source_path": "xonsh/tests/test_history_json.py",
+          "line": 496
+        }
+      ],
+      "excluded_identities": [],
+      "source_evidence": [
+        {
+          "path": "xonsh/tests/test_history_json.py",
+          "sha256": "629f532e6a05ab52bd59e66d8c7c2d0394a2e9adaa681d645a4e02782e9739ba"
+        }
+      ]
+    },
+    "hypothesis": {
+      "commit": "ccac4364979effc2b22e2f943176b2b1f025c448",
+      "excluded_functions": [],
+      "excluded_identities": [
+        {
+          "identity": [
+            "",
+            "hypothesis-python.tests.nocover.test_simple_numbers",
+            "test_minimizes_int_down_to_boundary[10]"
+          ],
+          "reason": "Pinned source has duplicate parameter values; pytest-generated parameter IDs collide. Original repeated rows cannot be assigned reliably under reordered execution."
+        },
+        {
+          "identity": [
+            "",
+            "hypothesis-python.tests.nocover.test_simple_numbers",
+            "test_minimizes_int_down_to_boundary[31]"
+          ],
+          "reason": "Pinned source has duplicate parameter values; pytest-generated parameter IDs collide. Original repeated rows cannot be assigned reliably under reordered execution."
+        },
+        {
+          "identity": [
+            "",
+            "hypothesis-python.tests.nocover.test_simple_numbers",
+            "test_minimizes_int_up_to_boundary[10]"
+          ],
+          "reason": "Pinned source has duplicate parameter values; pytest-generated parameter IDs collide. Original repeated rows cannot be assigned reliably under reordered execution."
+        },
+        {
+          "identity": [
+            "",
+            "hypothesis-python.tests.nocover.test_simple_numbers",
+            "test_minimizes_int_up_to_boundary[31]"
+          ],
+          "reason": "Pinned source has duplicate parameter values; pytest-generated parameter IDs collide. Original repeated rows cannot be assigned reliably under reordered execution."
+        },
+        {
+          "identity": [
+            "",
+            "hypothesis-python.tests.nocover.test_simple_numbers",
+            "test_minimizes_ints_from_down_to_boundary[10]"
+          ],
+          "reason": "Pinned source has duplicate parameter values; pytest-generated parameter IDs collide. Original repeated rows cannot be assigned reliably under reordered execution."
+        },
+        {
+          "identity": [
+            "",
+            "hypothesis-python.tests.nocover.test_simple_numbers",
+            "test_minimizes_ints_from_down_to_boundary[31]"
+          ],
+          "reason": "Pinned source has duplicate parameter values; pytest-generated parameter IDs collide. Original repeated rows cannot be assigned reliably under reordered execution."
+        },
+        {
+          "identity": [
+            "",
+            "hypothesis-python.tests.nocover.test_simple_numbers",
+            "test_minimizes_integer_range_to_boundary[10]"
+          ],
+          "reason": "Pinned source has duplicate parameter values; pytest-generated parameter IDs collide. Original repeated rows cannot be assigned reliably under reordered execution."
+        },
+        {
+          "identity": [
+            "",
+            "hypothesis-python.tests.nocover.test_simple_numbers",
+            "test_minimizes_integer_range_to_boundary[31]"
+          ],
+          "reason": "Pinned source has duplicate parameter values; pytest-generated parameter IDs collide. Original repeated rows cannot be assigned reliably under reordered execution."
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "hypothesis/hypothesis-python/tests/nocover/test_simple_numbers.py",
+          "sha256": "d9a2ffb06fb99724ae77b29d2cb333a86894df994311ea83a3a86a84bf1208b5"
+        }
+      ]
+    },
+    "setuptools": {
+      "commit": "4d64156de17596dae33f2b12aaaea1d6c9327fd9",
+      "excluded_functions": [],
+      "excluded_identities": [
+        {
+          "identity": [
+            "",
+            "",
+            "project"
+          ],
+          "reason": "pytest-checkdocs==2.7.1 CheckdocsItem named project is a package documentation check, not a source test function."
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "setuptools-plugin/pytest_checkdocs/__init__.py",
+          "sha256": "f5e4c52b9c93e83d0bbb82a09c5944253a7b7cb6f0f12d8519786140f20e9793"
+        }
+      ]
+    }
+  }
+}

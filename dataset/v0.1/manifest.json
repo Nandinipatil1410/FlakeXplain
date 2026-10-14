@@ -1,0 +1,111 @@
+{
+  "version": "0.1.0",
+  "candidate_cases": 99861,
+  "model_cases": 96118,
+  "observed_flaky": 693,
+  "projects": 35,
+  "source_families": 51370,
+  "contexts": 56694,
+  "source_exclusions": 3743,
+  "cross_project_duplicate_bodies": 0,
+  "folds": [
+    {
+      "fold": 0,
+      "projects": [
+        "airflow",
+        "dask",
+        "hypothesis",
+        "pygithub",
+        "salt",
+        "urllib3"
+      ],
+      "cases": 21584,
+      "positives": 310
+    },
+    {
+      "fold": 1,
+      "projects": [
+        "celery",
+        "filelock",
+        "flexget",
+        "fonttools",
+        "libcloud",
+        "pyramid",
+        "requests"
+      ],
+      "cases": 19609,
+      "positives": 146
+    },
+    {
+      "fold": 2,
+      "projects": [
+        "electrum",
+        "hydra",
+        "mitmproxy",
+        "pytest",
+        "reframe",
+        "scikit_image",
+        "xonsh"
+      ],
+      "cases": 19583,
+      "positives": 78
+    },
+    {
+      "fold": 3,
+      "projects": [
+        "cirq",
+        "graphene",
+        "ipython",
+        "kombu",
+        "setuptools",
+        "sunpy",
+        "tornado"
+      ],
+      "cases": 17807,
+      "positives": 80
+    },
+    {
+      "fold": 4,
+      "projects": [
+        "conan",
+        "djangorestframework",
+        "freezegun",
+        "loguru",
+        "pillow",
+        "prefect",
+        "rich",
+        "seaborn"
+      ],
+      "cases": 17535,
+      "positives": 79
+    }
+  ],
+  "inputs": {
+    "reports\\workflow-audit\\audit.json": "d3e2d3d2bbcae5ad31ed3cf3a31639e76a6553565e9990d7a2e31523d8ee5acc",
+    "reports\\workflow-audit\\test_details.csv.gz": "2166ff2a8a54612cfaebe2fb08f6aba5b21079c5a6b8843b175a53bb0b21989b",
+    "reports\\workflow-audit\\evidence_hashes.csv": "d77f092e68a1371074af6506fa06082fa70263bf77300ca50cbb577b3c133869",
+    "reports\\evidence-recovery\\identity_resolution_rules.json": "f4556bc059cfe009f9f8cf34288cd9b7b2dd9bab69d3d4e92e88c908c0567bb1",
+    "reports\\evidence-recovery\\dataset_freeze_verification.json": "523085dbb91ba0be229b46c2f634f52dcd26b7e8fafe1e68d9e57524c256d62b",
+    "scripts\\verify_frozen_evidence.py": "bda49ea8655e241187192a6f6f0bc87bf1ed1ccc166eec4a7e657a2cc9c2bfe7",
+    "scripts\\dataset_static.py": "0826ae9b5a4bf453e048035f0daa84ec6c7dfe94e7e7b03347c6db62dc444398",
+    "scripts\\prepare_dataset.py": "ab5af267ad3e26f8001b3448e7992a9ffb73db0f6d28707e63772c44df2fc63f",
+    "scripts\\fetch_dataset_sources.py": "f97a8435d6b27098bf4e1eef89ef9eed1e500f6ca1fe90c1b4736274c0a00ad6",
+    "scripts\\validate_dataset.py": "e76a3cb81ee3c3c8e5a9aaa8e31a73cd805140bcd7a6e0b86d1bdea8a6f395c5"
+  },
+  "files": {
+    "contexts.jsonl.gz": "6c8fabd12e1f5225118b24429d536e56a1d4c60135b8b5cdb3906f1e42f555af",
+    "cross_project_exact_duplicates.csv": "3954e5772baab259a82c423ff92e565066773ab072693f444e3442749cb49965",
+    "features_body.csv.gz": "ba7763a2504e2f726285deed47efe9dba27d75461e5c5411bfdcd8ab30ed3a1e",
+    "features_context.csv.gz": "c7ff7f2a988e35080101c79f22ab5cf0ce7bcf9d5798182ba59cd4edbd438126",
+    "labels.csv.gz": "ba345b4cce4e4d36d57fdcd899a07dc2bada67c46f3586af5f8ab3e35d518568",
+    "manual_review_queue.csv": "9815349a0dfb37ce685e5af8a233731260eabb481210c87174783910a6967d25",
+    "metadata.csv.gz": "ac36634b05c78c1bcb7bb9a370dfc2aedf47502663d9f1ce09885d9e11b26d99",
+    "project_summary.csv": "c6742429dadb878f7bd487be9f53a24fbec2c2129828da3f84da38f491f8fe40",
+    "schema.json": "702be12aceda0d04cd9c7b832231a0f901f56c76a5cc7dae9c6fc264e45e92f1",
+    "source_exclusions.csv.gz": "8f57058413ae9a972a1b25f9965d2b0a7f9efb4639978735ccca51c484fe8d27",
+    "source_manifest.json": "2f7c47e4c5667cf16b06eb26bb6642543da9efbfbbf062f2b1ccbda57aa7b511",
+    "source_parse_errors.csv": "9eb278c920150226e428ad948407cdd37776f287b8fd3bc5d58a159d563d9eb6",
+    "splits_inner.csv": "988e968d1fd88cc6d78f143a5f03142f322cd0544c8b57dcb43f133e0c42fda7",
+    "splits_outer.csv": "45d98356bd8c56033a47edd94f6a208f6ff12a35a4fdf2dc800e6357dee60d67"
+  }
+}

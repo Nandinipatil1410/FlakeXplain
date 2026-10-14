@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "files": {
+    "error_audit_sample.csv": "42108b05dec303c98dc7cc269c42bc6eed1cc5f538e6cf88c38bbdf7130504a0",
+    "error_audit_selection.json": "3b15dceffcf88c7f7a8fb031c96be2cf40f638ecc6d5ac1edf2d1e21ef271153",
+    "feature_collision_audit.csv": "62cc1a02787132e0c5c7a0daab2310efa9a2c7fc8b4d748a18b3228ec466a417",
+    "feature_collision_audit_note.json": "be3d47b4f00fdd53ceb0ba1c60d91f78aef1adcb19a2bd97f95fe6888ce01930",
+    "inner_candidate_search.csv": "5b8b2ce2c0135e107b8ece6d096c372da32d6e710a82d88161a44eed20717165",
+    "manual_error_review.json": "093d88f1f5f9e8e7484841af5c4531a271ccb9bce4cafe28499729e17311e62e",
+    "metrics_by_fold.csv": "c667ffc64f909277806fc5b4e9c9e16f1bb6b8ec1409775637aea3065e47ef70",
+    "metrics_by_project.csv": "3c4d13e216fbeb23e4ce8d0fe60502a6fc60180e84b02dec5ee26e620fadab45",
+    "metrics_family_weighted.csv": "2148b4aea2dce9a94a1925335f05b9c4ce347de4b6b40e678a18b2914b36765c",
+    "metrics_pooled.csv": "a33c238d4e6cf6ff400ca385e95cf103cd5aca38f8f0239aa241e2f1376e74f2",
+    "oof_predictions.csv.gz": "5f734ade9f125d01af4f87e043b5dc180074ab82e6eca965dd9e2f822bfc6409",
+    "protocol.json": "76261e097baef5840b82c66f5ced9b4c2f4450c9c2d0f23e28652b4e47ab1d83",
+    "results.json": "381b273cef4c69d3d6f63a3c199d2968c1b416c880f1bae601591edf05bf211b",
+    "selected_configurations.csv": "874a6d8f7252861048995bce17baa21ace7548be8d79b5bf9a1937240a404353"
+  },
+  "implementation_sha256": "05b479d33b1f34bb9aea9b2dcb4b76f8c6c668a84b6b69c5f4ac5fa523c9e8a0",
+  "protocol_sha256": "76261e097baef5840b82c66f5ced9b4c2f4450c9c2d0f23e28652b4e47ab1d83"
+}

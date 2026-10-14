@@ -1,0 +1,113 @@
+{
+  "evaluated_utc": "2026-10-14T04:41:49.839395+00:00",
+  "protocol_sha256": "0530f89552f23f612f205b7bc133ff3899ddff9e2e7ca4d0704cf0ffb9995e40",
+  "model_manifest_sha256": "574adc6e13c8eb1439d203b43eccb10c6130cae575c56f4d8e24f9d1d72c5c59",
+  "cases": 2610,
+  "positives": 0,
+  "positive_projects": 0,
+  "project_summary": [
+    {
+      "project": "werkzeug",
+      "status": "protocol_complete_local_checks",
+      "candidate_binary_cases": 1024,
+      "model_cases": 1024,
+      "observed_flaky": 0,
+      "not_observed_flaky": 1024,
+      "source_exclusions": 0,
+      "parse_errors": 0,
+      "unresolved_fixture_cases": 66
+    },
+    {
+      "project": "attrs",
+      "status": "protocol_complete_local_checks",
+      "candidate_binary_cases": 1412,
+      "model_cases": 1401,
+      "observed_flaky": 0,
+      "not_observed_flaky": 1401,
+      "source_exclusions": 0,
+      "parse_errors": 0,
+      "unresolved_fixture_cases": 50
+    },
+    {
+      "project": "tenacity",
+      "status": "protocol_complete_local_checks",
+      "candidate_binary_cases": 185,
+      "model_cases": 185,
+      "observed_flaky": 0,
+      "not_observed_flaky": 185,
+      "source_exclusions": 0,
+      "parse_errors": 0,
+      "unresolved_fixture_cases": 2
+    }
+  ],
+  "primary": [
+    {
+      "project": "ALL",
+      "cases": 2610,
+      "positives": 0,
+      "core_ap": null,
+      "context_ap": null,
+      "ap_difference": null,
+      "core_fp": 111.0,
+      "context_fp": 3.0
+    },
+    {
+      "project": "attrs",
+      "cases": 1401,
+      "positives": 0,
+      "core_ap": null,
+      "context_ap": null,
+      "ap_difference": null,
+      "core_fp": 45.0,
+      "context_fp": 0.0
+    },
+    {
+      "project": "tenacity",
+      "cases": 185,
+      "positives": 0,
+      "core_ap": null,
+      "context_ap": null,
+      "ap_difference": null,
+      "core_fp": 47.0,
+      "context_fp": 3.0
+    },
+    {
+      "project": "werkzeug",
+      "cases": 1024,
+      "positives": 0,
+      "core_ap": null,
+      "context_ap": null,
+      "ap_difference": null,
+      "core_fp": 19.0,
+      "context_fp": 0.0
+    }
+  ],
+  "uncertainty": {
+    "status": "not_estimated",
+    "reason": "Fewer than two independent positive confirmation projects; no meaningful project-bootstrap positive metric interval."
+  },
+  "source_trees": [
+    {
+      "project": "werkzeug",
+      "python_tree_sha256": "06d4248db9c7ef29baa0fdb0673843b83bcfb767eefae175a35c00579cb4e44d",
+      "python_files": 138
+    },
+    {
+      "project": "attrs",
+      "python_tree_sha256": "9a56e24547740929ffb00d0478fd343b64a2292fd85706d7573d233f2896d1ba",
+      "python_files": 56
+    },
+    {
+      "project": "tenacity",
+      "python_tree_sha256": "00ba8991ecdb0fcb9531381ec0c93549e25ca89d06799d8abcbc23231da2d06a",
+      "python_files": 20
+    }
+  ],
+  "interpretation": "No positive confirmation cases: evaluate false alarms only; recall, average precision and improvement remain unestablished.",
+  "inputs": {
+    "scripts\\evaluate_confirmation.py": "f1af161430662a91aceb90f26ac3c6a9010418911cfcf9d4014b90c04144c049",
+    "scripts\\confirmation_features.py": "d64d4286b905c1a69422b0e8668f1c48650b74f95334f9534446a3b9835ee5b0",
+    "reports\\final-confirmation-v0.3\\evidence-audit\\audit.json": "b86acc38fecd0382a328019709c87ecc415fa7610b16019d0172c6e1f212808c",
+    "reports\\final-confirmation-v0.3\\feature_replay_validation.json": "e9659338a5c959ee2af21b7e3856dd27c7e32f3e794ba14045518c2405324179"
+  }
+}

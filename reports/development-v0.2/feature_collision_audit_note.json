@@ -1,0 +1,4 @@
+{
+  "purpose": "Descriptive development audit only; full-corpus labels used to measure collisions, never to generate predictors or evaluate a trained oracle.",
+  "meaning": "Identical numeric feature vectors with opposite observed labels cannot be perfectly separated using these representations. This does not establish causes, future outcomes or independent generalization."
+}
