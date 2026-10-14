@@ -1,0 +1,9 @@
+task,variant,positive_projects,macro_positive_project_ap,macro_defined_project_mcc
+NOD-vs-Rest,natural_baseline,17,0.032133984632705725,
+NOD-vs-Rest,natural_context,17,0.08480767580932021,
+NOD-vs-Rest,author_smote_sensitivity_baseline,17,0.01969278474888587,-0.001826836450745131
+NOD-vs-Rest,author_smote_sensitivity_context,17,0.0508088479878065,-0.010692376827969996
+Victim-vs-Rest,natural_baseline,29,0.02836859737523664,-0.00426802943143509
+Victim-vs-Rest,natural_context,29,0.03220271041536351,
+Victim-vs-Rest,author_smote_sensitivity_baseline,29,0.03479330592760651,0.006038735547163607
+Victim-vs-Rest,author_smote_sensitivity_context,29,0.03934706559466723,0.024419225199923334

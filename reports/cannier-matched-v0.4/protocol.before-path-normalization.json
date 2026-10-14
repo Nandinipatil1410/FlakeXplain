@@ -1,0 +1,56 @@
+{
+  "created_utc": "2026-10-14T05:09:26.710082+00:00",
+  "stage": "Retrospective matched baseline ablation on authors released corpus; same projects influenced earlier development, not untouched external confirmation",
+  "authors_archive_sha256": "07d714a7e0f57863070d1ba6631191aa6e856fac1ad3ffc92765d6c1fc56f9f1",
+  "authors_archive_bytes": 354333950,
+  "authors_revision": "b96d6ed02e98d514eb6a92ca264a082234cb9728",
+  "framework_revision": "89c74c27847474248b581b428aed2b417141296e",
+  "plugin_revision": "2d58145c2786477a721c754e3a05639017c080d4",
+  "tasks": [
+    "NOD-vs-Rest",
+    "Victim-vs-Rest"
+  ],
+  "task_status": "Both tasks prespecified; report both, no choosing a winner after results",
+  "baseline": "Actual released 18 static/dynamic features, first stored feature measurement per case chosen independently of outcomes. Original author NOD and victim targets preserved.",
+  "extension": "Same 18 measurements plus frozen v0.2 66 additional context counts. No revised core/body features added. Existing source-only extractor unchanged.",
+  "matching": "Read-only SQLite item IDs and nodeids; verify every original item array row and all 30 feature measurements against SQLite. Only unique exact source/class method matches; audit all exclusions and original labels.",
+  "cohort": "Identical source-mapped finite-feature examples for baseline and context. Retain zero-positive projects. Do not merge author labels with our 25-round labels.",
+  "primary_balance": "Natural observed imbalance; no synthetic cases, undersampling or class weighting.",
+  "sensitivity_balance": "Separately labelled author-SMOTE replication sensitivity, training partitions only, default k_neighbors=5, natural held-out cases. This is an explicitly analysed experimental variable, not primary rebalance.",
+  "classifiers": {
+    "NOD-vs-Rest": {
+      "family": "ExtraTrees",
+      "n_estimators": 100
+    },
+    "Victim-vs-Rest": {
+      "family": "ExtraTrees",
+      "n_estimators": 75
+    }
+  },
+  "common_parameters": {
+    "max_depth": null,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "bootstrap": false,
+    "class_weight": null,
+    "n_jobs": 4
+  },
+  "random_seed": 20261014,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "splits": "Project-disjoint five folds; join projects sharing substantive exact body ASTs (>=3 statements and >=20 AST nodes); allocate on union NOD/victim counts. Four inner project folds for thresholds only; no hyperparameter search.",
+  "primary_metrics": "Signed MCC at fixed 0.5 and average precision; paired context-minus-baseline differences for both tasks. Project-level uncertainty, no selective winner or paper-superiority claim.",
+  "secondary_metrics": "Inner-OOF maximum signed-MCC thresholds (highest threshold tie), precision/recall/F1/false positives per 1000 negatives, separately ranked per-project top-10% budget, family weighting.",
+  "software": "New isolated pinned scikit-learn 1.7.2 environment; authors used 1.0.2. Protocol and software adaptations disclosed; original released predictions evaluated separately without refitting.",
+  "original_reference": "Recompute signed MCC and AP from the authors 30 released predictions at feature sample size 1 on their full original task domains. Derived AP is not a score printed in the paper.",
+  "metric_correction": "Authors get_mcc returns absolute MCC. New analyses use signed sklearn MCC; export both for released-score verification, do not hide negative correlation.",
+  "feature_name_correction": "SQLite/plugin put External Modules at index12 and Assertions at index13; framework FEATURE_NAMES reverses these labels. Preserve numeric order and use SQLite column names; neither column is exchanged.",
+  "incomplete_claims": "No new independent positive projects, faithful full hybrid detector rerun, causal confirmation or measured rerun savings supplied by this retrospective comparison.",
+  "source_inputs": {
+    "scripts\\prepare_cannier_matched.py": "c28184086cbf7af52ae350112e3a0788ad0bdda3ae23410175634836ee93f539",
+    "scripts\\confirmation_features.py": "d64d4286b905c1a69422b0e8668f1c48650b74f95334f9534446a3b9835ee5b0",
+    "scripts\\dataset_static.py": "0826ae9b5a4bf453e048035f0daa84ec6c7dfe94e7e7b03347c6db62dc444398",
+    "scripts\\prepare_development_features.py": "602dc85a96245da415014654bb53e1d62d508162648033093bfd1be8a870650c",
+    "cannier-replication\\subjects.json": "37a1a0591a924f8fd5b110c5013057297b13754b106c6a480b107fcc4928bf80"
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "status": "trained",
+  "elapsed_seconds": 1540.5724186000007,
+  "models": [
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 0,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_0.joblib",
+      "sha256": "512406c94f4608f3f84ea200ec7774934fe862775e56d9c57e9e09d66b566a2d",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_0_inner.npz",
+      "inner_sha256": "293357588afccc78e72e8fd4ff95adf55440ef3217be0f0b4225ce0156715b5e"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 1,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_1.joblib",
+      "sha256": "f38438dd6629aeab3d763c9f1cf7b042bd2426ac08fad6a1bfe5555a477ae102",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_1_inner.npz",
+      "inner_sha256": "4b0eca45670ada0614ad5fc5d5cd5fe3c2175edb52be13416a49e316e76df28d"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 2,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_2.joblib",
+      "sha256": "1461a7e3aeb9b46a49f8e92db40d403fe827ffb54cce5bd20f82be6545e87c2a",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_2_inner.npz",
+      "inner_sha256": "dfbad54633f44d27bcd052b3fc43b0e18674a2fb6f27b45b57ed7cc988d17ee7"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 3,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_3.joblib",
+      "sha256": "00e3d09279b75632ee6863e7ab65a00a632267f32b9a57b6e459d59c71415f57",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_3_inner.npz",
+      "inner_sha256": "193856ac75f3e5582ed33305c3230d432703cf4ebc1a2a9a241b94e28a7070d1"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 4,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_4.joblib",
+      "sha256": "28b97b6b28000be7ed97de3e463b35f9a5dd5614979c65ff8140cb7bf624ecb7",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_baseline_4_inner.npz",
+      "inner_sha256": "d4a6bd9a9797682dbcb4201e23930d3e17c88a2e82d28b1fdf1f2fb5165eccea"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 0,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_0.joblib",
+      "sha256": "c3fe05761a27f36df40f0ad02e02cdf280a4d4585bbe2f5af0dbaa3e6103b781",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_0_inner.npz",
+      "inner_sha256": "b8eeecb983367aa7bed3d53a8e367bf8afe318a42c236a369b0e924050d5ed03"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 1,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_1.joblib",
+      "sha256": "b67db53d14a74979e02d182d6c81a870d1671b5ff0bd1460b862449469c46512",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_1_inner.npz",
+      "inner_sha256": "0e658441ccd3cd8bcd9f1f4ff2ed4a839239f14d22bc190fd15fa2f2b91a8b12"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 2,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_2.joblib",
+      "sha256": "e741d7aceb6d57d5967c3d0560b8a8c0877a13c7ad0b615aca7489fb3c564ee9",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_2_inner.npz",
+      "inner_sha256": "286dd994e76bbb5452b5bdda82986f56eb22bc97a7daa5ccca379cda9213af8c"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 3,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_3.joblib",
+      "sha256": "df87e3b4e228a2a6d7204f2aaafcd5b05bbcb545e0b863e76d113759e220bdf3",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_3_inner.npz",
+      "inner_sha256": "c4c9fb6e97cd78e4203409e756247e6a733186b101d05ed0132c3a4474fcc984"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 4,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_4.joblib",
+      "sha256": "730c04a2c86824b181166b7a2f75b7825cbf245dcb0ac50d4eefde5bd740353d",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_natural_context_4_inner.npz",
+      "inner_sha256": "36cc7dc63255d344188950eb92ae61ba56422030024fa9e7d22d470d7777ef3d"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 0,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_0.joblib",
+      "sha256": "4d6a6fd649d5161f60fcb5f4edecdb1bb889aeffd306949994d35f4c09384de5",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_0_inner.npz",
+      "inner_sha256": "e715cfd46943c8dd797033255622d670e54260afed173eef563d2d8a33db2a2a"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 1,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_1.joblib",
+      "sha256": "0fba1725f4f21bdac9440accea8669259ade134cf81656e30173e7ccb2349089",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_1_inner.npz",
+      "inner_sha256": "333d757dc7afd3825265101ed963332de58d4db0af7447f378cc1a6fd92808d0"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 2,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_2.joblib",
+      "sha256": "88218ff2f37f92b5f2a032d9e9415227d23904c6766d6a1305cc3cf1f4a0dc6a",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_2_inner.npz",
+      "inner_sha256": "bb4e10dcb266ce66f7073792e55fc0ce18ca454a178ecee089926cba5d048f1b"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 3,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_3.joblib",
+      "sha256": "f80a3b657be5b3c21b651753369b02caeaf1d8c9815cf75eaef252533b08f00e",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_3_inner.npz",
+      "inner_sha256": "6f713090c27782a992cb96cd119a6dee1a89d1e5eb0375dc6f9a886d14f31cb6"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 4,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_4.joblib",
+      "sha256": "a1e16bb68f3ac2024fd741ecc45f698086a74746ae59d4800b5b58b08c24997b",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_baseline_4_inner.npz",
+      "inner_sha256": "da44f2bcf19794a1d67b632d47b0c49475d284351f737fdcfa291251140bef89"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 0,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_0.joblib",
+      "sha256": "b935d503f0e11f9d04e4174bd1b21954902056c7a70777fe813199d035dd6125",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_0_inner.npz",
+      "inner_sha256": "e9a38c2e17a0790a3d0cfc83ce9f307aac8c0e6743d757c20bbd95c1c950b69d"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 1,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_1.joblib",
+      "sha256": "85d3870664981f824b5d1f42f2ffab65c50e0a9e58a1d9b6c794a852168b851c",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_1_inner.npz",
+      "inner_sha256": "e4162e0a74cd92c2ee6ec019a3654831fcdbd3a821a3891a43f022a1738e488e"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 2,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_2.joblib",
+      "sha256": "ac3c73b95afce9bd470be6d668732ad8b58a15beb5f42cc93363c55b6468670f",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_2_inner.npz",
+      "inner_sha256": "b0a972fa7a134bc36e2a4931a65162a38a9fbe368442fe10346b688c700ea4b1"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 3,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_3.joblib",
+      "sha256": "17ff46568e1dd12204c29efdfbce89c28f04c64f4f2233fc98c3505cd9acbf25",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_3_inner.npz",
+      "inner_sha256": "478bafe9c8b14ccd5d444ed4f950cd5433e4230e4804af46c5210d340e326aa9"
+    },
+    {
+      "task": "NOD-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 4,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_4.joblib",
+      "sha256": "41b09f9287aa484e012d95515ab53aee68cf5cddc92239f603b7d01f82821fba",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\NOD-vs-Rest_author_smote_sensitivity_context_4_inner.npz",
+      "inner_sha256": "895ae5890470a9be3f1d01323f01b61d86fcd53883894a427109ffa7cc71f0de"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 0,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_0.joblib",
+      "sha256": "1d80c35ee6b82b2d529a7bb76d3f77beb17ec666cf22e4d4f81483af3bda4077",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_0_inner.npz",
+      "inner_sha256": "6aa4b78ee281faf9cba30047f699d8be0423c36ca7f696ebbf973a8cea6f6ed1"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 1,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_1.joblib",
+      "sha256": "a9c3f0fa55801b1006755f9f2408c14e6cddf84d159e0021ea18dcc345b6ccf2",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_1_inner.npz",
+      "inner_sha256": "8c7f783f786805a283939b14d9b50d040ce0e436a1304800e219694c09a3c93a"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 2,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_2.joblib",
+      "sha256": "274d7c29cac8d8c63e9ea8a97c2be6659d9e453bf0207aab0c08ce8969b063a6",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_2_inner.npz",
+      "inner_sha256": "3555de3e5e3e6e163d5c22e7d51e2513c3c0aac783aa99d2aaa3b03985543b72"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 3,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_3.joblib",
+      "sha256": "9d324d8ad19352914b2c2f3cbdb516d19c70116d205b49ba177ff9313e7d87b2",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_3_inner.npz",
+      "inner_sha256": "b0c91e37d2fd5a8086a688a95337184693cabac0145ea8ceecc912ee582bea64"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_baseline",
+      "outer_fold": 4,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_4.joblib",
+      "sha256": "192f000243e347576f052011cf53bf25de45db9f7ef412335b7aebe5963a5195",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_baseline_4_inner.npz",
+      "inner_sha256": "38665e2d1a82b4937688c4a09b1172e5f222778963ffc8c4b2257a9b67cfa999"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 0,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_0.joblib",
+      "sha256": "edd1e764732d01ba74aef79db47c03117e4044c26c2c8d957f410c3cb8dd99c4",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_0_inner.npz",
+      "inner_sha256": "d00969214a494223d9a22de331ab191ecf490354035b890ec6e48536a73791a6"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 1,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_1.joblib",
+      "sha256": "656ea581bf309559b9292b8d12bf584a34a7bc98a6eab12e865e7c352088b80b",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_1_inner.npz",
+      "inner_sha256": "86ca09595ab837c1f55a75bc2eb64193d76d6a3399b3d1a1e31dd0b69551bc01"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 2,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_2.joblib",
+      "sha256": "94917515e008e1494fa02d673bb022c0163aa99a58656ef6f83b4a7124dbfef2",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_2_inner.npz",
+      "inner_sha256": "423eb0e30bf22f9424d618f1c3f2b1b82ee1e8ccf3d97000712431c8bc644c77"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 3,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_3.joblib",
+      "sha256": "fd30881b091bbb91da3648af6a2cb2771e6b56361e4f948ce90105295bd1ae4e",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_3_inner.npz",
+      "inner_sha256": "dc42b581e62972852eadcef674e44eee93a81eb7d190bf335bcaad7d5691d10b"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "natural_context",
+      "outer_fold": 4,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_4.joblib",
+      "sha256": "2659146ec4125113304bfdd1300423e4ecd55fe12acf43645ad79486aa801e47",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_natural_context_4_inner.npz",
+      "inner_sha256": "60b5e5e41521f9b2f905e78e02458c03a025f97c673964e783fb2dd902635602"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 0,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_0.joblib",
+      "sha256": "4d84192707d7edc6f6c906ccad9f4dce20b649b866730360f9cf03395db4f396",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_0_inner.npz",
+      "inner_sha256": "9e2a54396082c2f960d950f2906d3b0033d0586c20a0d13e3484772fdcdff72a"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 1,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_1.joblib",
+      "sha256": "322aede7b466ee071f5db1d23c5184644abe6cbbe88e5d41f682f48e20159bfd",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_1_inner.npz",
+      "inner_sha256": "bdd0e013afb61a7ab22016153d75e4e686bfacbd805b07729e31987f933510bf"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 2,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_2.joblib",
+      "sha256": "5df119c606f8aa9c7dee9e96cabd6097b26d17a909a4a8b59f623d91d08a4e08",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_2_inner.npz",
+      "inner_sha256": "695bfde72e81713bdf91e5a2c06220cdf4d51f66da8497bbe3c9b8963e9cc295"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 3,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_3.joblib",
+      "sha256": "98938f15af0c9ecbc09033c51e3cc63ce466829ec3e2991fa7f5d518f77c3cf0",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_3_inner.npz",
+      "inner_sha256": "6cb456d5846c7c7ac064f965f65dff13cb9deb1db9d326dcac1a5030cbe1faac"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_baseline",
+      "outer_fold": 4,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_4.joblib",
+      "sha256": "4ae707687c26d68b5c61d2b535a17cfcb04aa9ad2750896815a95fdb0ef7473b",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_baseline_4_inner.npz",
+      "inner_sha256": "1421b7e419165fabbe8fe827ecea20881d853a6294597aa7e020b7e30939f70b"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 0,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_0.joblib",
+      "sha256": "bf85c8e9d68567efcc1350d4c96d4daf4a29156861f87ac40af71d37d689e3ee",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_0_inner.npz",
+      "inner_sha256": "98a7592f81780e5aa8a59f9118ec15880f933616e502fec0e70c03102f371a32"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 1,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_1.joblib",
+      "sha256": "e6d4a1c6f58d91b67d7d0578e5f3f53eeaaf76890e9ba401817a1578939e7a06",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_1_inner.npz",
+      "inner_sha256": "305685482b05af12bc7024520afc016dbc50713b3ded68d13503ee962971e5a8"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 2,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_2.joblib",
+      "sha256": "89affe35875d062a8e591525cba964f09f8515b6ffa1751629be081dd439777f",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_2_inner.npz",
+      "inner_sha256": "af008c37368d1297d5ebb1715a0018e643899cabc11ba74324d1b0ab8fff4346"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 3,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_3.joblib",
+      "sha256": "3957f764fe9939a1a1708c18f6ccc06a18eb63262fb27fb11383371ce60cc45f",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_3_inner.npz",
+      "inner_sha256": "123dbaada338b83aae5f622830a209153c0649cee61821598af3d4187b372873"
+    },
+    {
+      "task": "Victim-vs-Rest",
+      "variant": "author_smote_sensitivity_context",
+      "outer_fold": 4,
+      "path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_4.joblib",
+      "sha256": "bd509f9166fb1c5dad382847d6567a8bf5bc2185f6ac481be29810442dc9e1c2",
+      "inner_path": "local-evidence\\cannier-matched-v0.4\\models\\Victim-vs-Rest_author_smote_sensitivity_context_4_inner.npz",
+      "inner_sha256": "593c1433eeee368e5fcbe58c70e6e4db98585b4de69ad874f984ce9aec54b6bf"
+    }
+  ],
+  "fit_count": 200,
+  "protocol_sha256": "9082a49450d89d066423dfdccd1902ecc99c55b1a9502775fef7ff73e9a1f478",
+  "training_protocol_sha256": "95727e4b8dbc973ef5b4a148607e80d1ff2b25a5a7d42079bb402c7e336d68af",
+  "dataset_manifest_sha256": "fb1f3fde9a15386fb995b243ebc833cd346dc0a03fabf20481a201612cb00d5a",
+  "files": {
+    "authors_released_predictions_metrics.csv": "3435144c60844d59b447cd2f1d251726df6fe81fd33444a89f44436e80ddd3cd",
+    "authors_released_predictions_summary.csv": "b59535b7f90696493f2c6327e183c99f76d5f1758fd40f71bd748edf91ddc940",
+    "authors_source_provenance.json": "2f8124e56983ce575d8a9e2969a70a293414de7a6fef4fcbbaadf79740b9aa17",
+    "environment.json": "35fc6c8bbf7b2abccd3bb5fb68ab70e7e44292109a0ab67673163577cf00e786",
+    "metrics_by_project.csv": "570d24baaa8cb2b807cd77ede98ab838a420cd0da9541bd2eb927326850961f6",
+    "metrics_pooled.csv": "a335b7289781d180d75e3b8bab90680b67098f4da350dc83e643a85073e7ba4c",
+    "per_project_top10_budget.csv": "1e18b7509a85118bcc9438fa2af5506ed8c2550be20d5c6c6c3247aa5aae6a13",
+    "protocol.before-path-normalization.json": "d413323ebec7b7317a9ea7ab7c64801b6aa5573227dbfd66fe5009791af9363c",
+    "protocol.json": "9082a49450d89d066423dfdccd1902ecc99c55b1a9502775fef7ff73e9a1f478",
+    "REPRODUCTION.md": "5dc9f8f34fce4f3e54dbf39c8b0fe2f80fecbed5f160726cff41a887125e56ce",
+    "training_partitions.csv": "a577fc114133683db94bb4177981f34728325cc6349d3586a2ac1d123b77ab2d",
+    "training_protocol.json": "95727e4b8dbc973ef5b4a148607e80d1ff2b25a5a7d42079bb402c7e336d68af",
+    "unit_test_results.json": "d5c597d8c90490f8018f8563eb01b01aa6ad78e2dc6e0b85952418d59aaf1867",
+    "NOD-vs-Rest/oof_predictions.csv.gz": "6446f0ed923cf26756dc9a2fa0317fbc859c7ae0a9c62932003b7e8323b89a7a",
+    "Victim-vs-Rest/oof_predictions.csv.gz": "2b235d232f74003684c4d82d91192e714bb91a6fe4a139641a5c4dd136e931ef"
+  }
+}

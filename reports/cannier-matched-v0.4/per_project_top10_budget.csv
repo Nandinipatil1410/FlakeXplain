@@ -1,0 +1,9 @@
+task,variant,selected_cases,positives_recovered,positives,recall
+NOD-vs-Rest,natural_baseline,8691,26,157,0.16560509554140126
+NOD-vs-Rest,natural_context,8691,51,157,0.3248407643312102
+NOD-vs-Rest,author_smote_sensitivity_baseline,8691,38,157,0.24203821656050956
+NOD-vs-Rest,author_smote_sensitivity_context,8691,53,157,0.3375796178343949
+Victim-vs-Rest,natural_baseline,8691,118,1001,0.11788211788211789
+Victim-vs-Rest,natural_context,8691,177,1001,0.17682317682317683
+Victim-vs-Rest,author_smote_sensitivity_baseline,8691,152,1001,0.15184815184815184
+Victim-vs-Rest,author_smote_sensitivity_context,8691,189,1001,0.1888111888111888

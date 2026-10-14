@@ -1,0 +1,207 @@
+{
+  "status": "prepared",
+  "cases": 86781,
+  "released_cases": 89668,
+  "nod": 157,
+  "victim": 1001,
+  "projects": 30,
+  "protocol_sha256": "9082a49450d89d066423dfdccd1902ecc99c55b1a9502775fef7ff73e9a1f478",
+  "source_checks": [
+    {
+      "project": "airflow",
+      "commit": "c743b95a02ba1ec04013635a56ad042ce98823d2",
+      "tree_sha256": "720e24153b9d3414a25a31a6772d36aa22b3d72733fef131a09f8195c3f3a58a",
+      "files": 1215
+    },
+    {
+      "project": "celery",
+      "commit": "552e067b40198429cd7c866a397069366ac8e530",
+      "tree_sha256": "9567bb5c55c04ebecfb5dd560285cae0ddc75966aad7562f91dad3b1a87f678e",
+      "files": 326
+    },
+    {
+      "project": "cirq",
+      "commit": "782c14e0cc821794d21e82f30df8e6998f4b9992",
+      "tree_sha256": "3810ce1c34e0c52a11dc2bf2458052d4a481f0f56c3b48e86014457f2f54c938",
+      "files": 978
+    },
+    {
+      "project": "conan",
+      "commit": "d524074945e840f9c9f1d4d6eba462bf6a1dc608",
+      "tree_sha256": "bbb753508b2fb652718f1bb826b7ac51f5b5cc93a345624af7fafd488b5bd2e9",
+      "files": 1090
+    },
+    {
+      "project": "dask",
+      "commit": "d5bbad0b1f32b3c904abc4fd020bef9c5092d2a3",
+      "tree_sha256": "530df258d41a3cc25477b653a02440ec366e6865ac5d0024bc53c1e2902a9d6d",
+      "files": 241
+    },
+    {
+      "project": "django_rest_framework",
+      "commit": "0323d6f8955f987771269506ca5da461e2e7a248",
+      "tree_sha256": "d73bf7b0eb1b0c375a4e62035dfcf86ecf279dd173a072610c52cc1c7bce76bb",
+      "files": 156
+    },
+    {
+      "project": "electrum",
+      "commit": "d8d2c180aafaec1ae9bc68c27a7d780df8de4348",
+      "tree_sha256": "15599c13b9a884a8cf57360ef942824d233f7ee3f57cf9114aacd4b04d1deac0",
+      "files": 285
+    },
+    {
+      "project": "flexget",
+      "commit": "4fb250844d59e73304b7d306457ad61e070e1261",
+      "tree_sha256": "e5cdcfc53564d810cdd5e40cf1103c03b67f6f1c32df822e0e44c97a7d34a5fd",
+      "files": 627
+    },
+    {
+      "project": "fonttools",
+      "commit": "f3a903093a4600f3d757bf9b22f387a561fcb584",
+      "tree_sha256": "93f569a166e0cc4103e51857ac50b01be38a0cd406c775689ca876663a2493dc",
+      "files": 419
+    },
+    {
+      "project": "graphene",
+      "commit": "7d2af3104e3c01ce4f9a1580faf40d8179079008",
+      "tree_sha256": "9ab7206fe94292e2608314b0b021ee7acd5514f1b04d7063fb4063a050731965",
+      "files": 136
+    },
+    {
+      "project": "hydra",
+      "commit": "69d31ebf79a93f0a8378d896a359fb47b09f5074",
+      "tree_sha256": "0b10e699021a2e1a7f8ccb195657f055960ec6120a63f4b093303ba7c309f542",
+      "files": 324
+    },
+    {
+      "project": "hypothesis",
+      "commit": "ccac4364979effc2b22e2f943176b2b1f025c448",
+      "tree_sha256": "33835f5197d9b12bdfb358c6c396f47fd12d1f0c169221f01e1dce601d2f52f3",
+      "files": 383
+    },
+    {
+      "project": "ipython",
+      "commit": "95d2b79a2bd889da7a29e7c3cf5f49c1d25ff43d",
+      "tree_sha256": "dcff51e3f374d50debd66622b81713b1b4cad10c74094785161d810e14788b2c",
+      "files": 353
+    },
+    {
+      "project": "kombu",
+      "commit": "2aeb73248b4a0bf8ad3de81a0f40733e7cd42255",
+      "tree_sha256": "f13c25b2850267a1b0b6e2169d9931ce26186c42af12c88af90240ce52e3eb5a",
+      "files": 169
+    },
+    {
+      "project": "libcloud",
+      "commit": "449b315ea47ba85f79b4062b1d398e94e545d273",
+      "tree_sha256": "87d5a80967e1566195637ecbe436e2269054d9c1e36c763905d8f3ccbf55649d",
+      "files": 754
+    },
+    {
+      "project": "loguru",
+      "commit": "f31e97142adc1156693a26ecaf47208d3765a6e3",
+      "tree_sha256": "2c8676f83bb795135e47e02a8684e66017eea5111c6bbc65aad12d8b45b1edfc",
+      "files": 142
+    },
+    {
+      "project": "mitmproxy",
+      "commit": "4511ea7c24a3d62373d6fa6d221ac96212ce11e4",
+      "tree_sha256": "8e9da7a668d1a23fd392240a5cf5a893316a684d22f1b7400052c87f29fdd57a",
+      "files": 485
+    },
+    {
+      "project": "pillow",
+      "commit": "92933b86574b9c80764bf52c357ed29e1ef53382",
+      "tree_sha256": "f7142d94b94e4c64147b9ef78c9dc1bf41757099fd3a5b35c8c9e2712297d7de",
+      "files": 275
+    },
+    {
+      "project": "prefect",
+      "commit": "6b59d989dec33aad8c62ea2476fee519c32f5c63",
+      "tree_sha256": "556bb1bf7ac8f1c73ccddf8d17a3b911309a1b91689428c5eb4d013ab7f464e3",
+      "files": 552
+    },
+    {
+      "project": "pygithub",
+      "commit": "31538337faaa61e104afede75a5fac802c9a1ab3",
+      "tree_sha256": "1f91de528bd46e514a14a3bfdbf4aba248c364c541149f7e61b15c018a57a711",
+      "files": 224
+    },
+    {
+      "project": "pyramid",
+      "commit": "7b182045ee77cdfb38fda5e55ccbdcd8ed1c9468",
+      "tree_sha256": "d7802dbe74ac436d267d5e448b539e87b6e709b98958afeacf37458d3a94215d",
+      "files": 555
+    },
+    {
+      "project": "requests",
+      "commit": "a1a6a549a0143d9b32717dbe3d75cd543ae5a4f6",
+      "tree_sha256": "ddeb1c34aac593953a34c6260372059dac817043861ef90ea7a197e5585b61c4",
+      "files": 35
+    },
+    {
+      "project": "salt",
+      "commit": "bac2d1e6aeea8f12dd1712207b87ea2695f35b7c",
+      "tree_sha256": "8e261ce88ad2218a9e83583a1e7c93c461131c478f78397b4b605f7cab0ea683",
+      "files": 3199
+    },
+    {
+      "project": "scikit_image",
+      "commit": "8fbbb5169b8da6fb26b107a0a8c6de46a93f37cc",
+      "tree_sha256": "137470d8b552c7137103d2dec9740b700f377bd40d3e9473f73cf35abb55a5d6",
+      "files": 564
+    },
+    {
+      "project": "seaborn",
+      "commit": "703259f2dca711205f81d2d8f9e3fa45774eb0da",
+      "tree_sha256": "8afa59d777f7ebb5b48a8a8ef5b434d57df24d16cc96a449ebad53fe9ebb7890",
+      "files": 99
+    },
+    {
+      "project": "setuptools",
+      "commit": "4d64156de17596dae33f2b12aaaea1d6c9327fd9",
+      "tree_sha256": "42b2ba99940d3f2ad37fbd15c78213c3ac25d8b09c0fea624c9cbb2d3389e629",
+      "files": 247
+    },
+    {
+      "project": "sunpy",
+      "commit": "7c6e51e85410f3647af81e601a4bb4c9073a50c8",
+      "tree_sha256": "6e961042f566e978e400353e040fba9dab1ead9109547951bc52b01ac6cbebdb",
+      "files": 433
+    },
+    {
+      "project": "tornado",
+      "commit": "2047e7ae3c825bf52dad10cc8402d09e11091bc1",
+      "tree_sha256": "9fd95ed283be1641a9d58fc395038ab0653d49925c7034e9bbb22c86bd220214",
+      "files": 108
+    },
+    {
+      "project": "urllib3",
+      "commit": "ba95e9eac73452d3bccfb5413b00d9a4fe3e4c31",
+      "tree_sha256": "f9bf6a6704190ee343b5b050efc45db346f8195f2de39d8c2de34e7ce6c1a23c",
+      "files": 88
+    },
+    {
+      "project": "xonsh",
+      "commit": "e9b12c8b701a75b5ecb8d20f3aad7d3e5aca64bf",
+      "tree_sha256": "ee66cc1327b3e2a9c1c72d36e0562c312fb7f3b5e3a98b7529613808107983f1",
+      "files": 239
+    }
+  ],
+  "author_archive_sha256": "07d714a7e0f57863070d1ba6631191aa6e856fac1ad3ffc92765d6c1fc56f9f1",
+  "extractor_sha256": "311574b9f91e346dc097883bf41c12e4ae2619e916af41e765da82a4cc7eb33a",
+  "files": {
+    "cross_project_exact_duplicates.csv": "3954e5772baab259a82c423ff92e565066773ab072693f444e3442749cb49965",
+    "DATASET_CARD.md": "a3e4c17166576a9759b648b0b1d2881debde733f93229791ba20ddf9d0e4b118",
+    "features_baseline.csv.gz": "938fc7a24e28e54d0e346778e21f80323a40b9e97fe82d8d8e22e1b76f4267ca",
+    "features_context.csv.gz": "ddc643df33040fbadedb960a64c5c78a119c29bc9e27cdfec020c109be7f0ec5",
+    "labels.csv.gz": "4d30c178039e6274aba6eb2ecac2e82287a8f0d07c3b5dc3d0be0456287bb514",
+    "metadata.csv.gz": "a3e9c2e60853226b1c813e020688ebc523a475cd0ca616fbbf68fcf9582fdb70",
+    "project_summary.csv": "1a869a41e49df290f6a760787c418cdc1ffd7a89a4182b2cda95fc6bb21194e8",
+    "schema.json": "9aa12b402507f64b1da1c7a8a5040400d05203f0f9843e9ad69aa0c1f5e27fe9",
+    "source_exclusions.csv.gz": "67067378a4d9f4431ebab43f095b1aa849dbb7a49d2b20dffa261702b21b1ce8",
+    "splits_inner.csv": "836ec9163541c35ab3f439f1fee59e0190b1e79d5ba0392eb1a700ddca7cc184",
+    "splits_outer.csv": "319bc2c0217fa1e75faf375804e13da5b0e99d869db05e42650570c0d50404e7",
+    "THIRD_PARTY_LICENSE.txt": "5b734c82cd6133d51d7b2701d95956101137d2aeebcec30c5681860d9f59051a"
+  }
+}

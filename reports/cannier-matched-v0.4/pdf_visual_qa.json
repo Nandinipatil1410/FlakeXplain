@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "pages": 3,
+  "sha256": "90e22a7e514d00250efd5c25743a3c42e549d6279f9827d9c7cad478b149054c",
+  "inspection": "All three final pages rendered at 100 dpi and visually inspected: no clipping, overlaps, missing glyphs or table overflow.",
+  "authoring_script_sha256": "3035b70b385492ef95b3e75c5ca93af76f6f17d083ce5e9b6ecf43c30c310389"
+}

@@ -1,5 +1,11 @@
 # FlakeXplain research results
 
+## Latest: matched CANNIER comparison
+
+See `reports/cannier-matched-v0.4/RESULTS_AT_A_GLANCE.md` and `output/pdf/CANNIER_Matched_Comparison_Addendum.pdf`. This separately reuses the authors' genuine features/labels on 86,781 source-mapped cases from 30 projects, comparing 18 original features with 18+66 context features on identical project-held-out folds. It does not replace the earlier generic-instability dataset or deployment model.
+
+Primary AP results are mixed and uncertain: NOD 0.004641 to 0.006960; victim 0.017761 to 0.017277. A narrower exploratory per-project top-10% victim-ranking result improves from 118/1001 to 177/1001 recovered cases, with a positive conditional project-bootstrap interval. Overall classifier/hybrid-detector superiority remains unestablished. The matched experiment completed 200 fits and 1,774 verification checks.
+
 Current guide report: `output/pdf/FlakeXplain_Final_Study_Report.pdf`.
 Start with `reports/final-confirmation-v0.3/GUIDE_FINAL_BRIEF.md`, then `FINAL_STUDY_REPORT.md` in the same directory.
 

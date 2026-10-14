@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-10-14T05:19:58.131372+00:00",
+  "protocol_sha256": "9082a49450d89d066423dfdccd1902ecc99c55b1a9502775fef7ff73e9a1f478",
+  "dataset_manifest_sha256": "fb1f3fde9a15386fb995b243ebc833cd346dc0a03fabf20481a201612cb00d5a",
+  "implementation_sha256": "530ecf49818df597576e241f99593213ebedfc7838e004094ec6e928373008e0",
+  "requirements_sha256": "46e27dc87d52716559519ed52cbd97977f652eaf82ecbb4d5632b8a0ff21c9f4",
+  "sklearn": "1.7.2",
+  "imbalanced_learn": "0.14.0",
+  "variants": [
+    [
+      "natural",
+      "baseline"
+    ],
+    [
+      "natural",
+      "context"
+    ],
+    [
+      "author_smote_sensitivity",
+      "baseline"
+    ],
+    [
+      "author_smote_sensitivity",
+      "context"
+    ]
+  ],
+  "seed": 20261014
+}

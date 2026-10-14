@@ -1,0 +1,211 @@
+{
+  "reference_files": [
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "README.rst",
+      "sha256": "30445c5cf44496f1b442e00cd8c60888546a2a39a10ad8731dcc93c1373109b4"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "requirements.txt",
+      "sha256": "cbd427d96fee03a73ff2261b2cc5b793ab342f138b65dee3a24c2e9e263d9864"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "setup.py",
+      "sha256": "39e776477c0ec552de760361d4bc87057ad6fe2cb9d263b63a0cd2af99159afa"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/collate.py",
+      "sha256": "a6016e8c1d61e1ecae4f3e0b60762a736c77c2a0c9fd5444cfbe0add4f074897"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/container.py",
+      "sha256": "6badf3486eb5933037a2f0093f7cde0c163d837d41e52d24daf53b235521992d"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/figures.py",
+      "sha256": "473c6800d28afe8970bfdd2f44d10ac08890501fa6cbae1b768882bd40f60f29"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/globals.py",
+      "sha256": "b726f8770bd448ffb8fd3185f508a790d0a6c53d03000e762c5cfc43650010ac"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/image.py",
+      "sha256": "2fb6feab66d48baac0848cf91ff5e670c0ddd1b4b5bd30988a61f550532d7429"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/main.py",
+      "sha256": "b7f52dd16060ce9acdf016204103ea53b532cc34fa7b6f643bc8d7b451038d99"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/model.py",
+      "sha256": "0e6ba0b96d06bf8e7415a7094b239be70565a639549e8919d0a81a2d114e1b8c"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/technique.py",
+      "sha256": "561bff3ce8355ae6b9b3e48d973da8986246a5d41f460072d404bf5dc2bbb7c7"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/utils.py",
+      "sha256": "e696c9b72f13f033a3ae64c461d8e78607b028d8f5d7418ff94288c584f1a551"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "cannier_framework/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "tests/conftest.py",
+      "sha256": "1dbdd1317bd83eeefec00673af30c7af2bcc1aff9d0efa6161f978262925e958"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "tests/test_collate.py",
+      "sha256": "a825fb57e23ba81a1312e2758c6abd2842c9df1d4dc6488f7edb12befce59212"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "tests/test_container.py",
+      "sha256": "0f9e9e05f3192c88e665323862c4b45f2bf54e58e3af654f795e89a87a5fbda6"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "tests/test_model.py",
+      "sha256": "8afc2cb05005e29fa9abe33cdec90e843305a373fdf2bfe2c4c2c9f687c6948f"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "tests/test_technique.py",
+      "sha256": "2d7399c40d54d57647b8402c7b5afa4074879cf92de96a58566e8b9fe0ad4fc5"
+    },
+    {
+      "repository": "flake-it/cannier-framework",
+      "revision": "89c74c27847474248b581b428aed2b417141296e",
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "README.rst",
+      "sha256": "30a2247149d92ac427e10b69299bd84d4d1c9ed9e5f9c9ace979c30aebe38dc6"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "requirements.txt",
+      "sha256": "e8dfaeb32d6c7873d11c8d69277ec1110a2e225e9aea0d02e8a8efe2e9cb371f"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "setup.py",
+      "sha256": "140e4daf5ba56c8bec4df458e28991b57435df62252b2983725cb00ea2ce2cab"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "pytest_cannier/base.py",
+      "sha256": "44dc419fe48619b518eb671a932ad1b10705b466771239159c7de31cbf04a8ed"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "pytest_cannier/churn.py",
+      "sha256": "8d8ce53cce390d3784fd4dedb2a6482b0636abc28edc70340e7013a24bd43388"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "pytest_cannier/features.py",
+      "sha256": "ef2280cb4a016e84b2cf7a6845287f1ace496351c19966a71e7eb2566239f439"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "pytest_cannier/rerun.py",
+      "sha256": "85ae204fa1f30abeb3f2f22f819b7973d5bccf119bf593577238167ac9739ec4"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "pytest_cannier/victim.py",
+      "sha256": "668981c8ea2f1db5c0c6abf33f479c144243b3803bf5dd0cb3dc53ded60b4266"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "pytest_cannier/__init__.py",
+      "sha256": "c961b467b2b9aef11a37c4b154812c468a3794234c08b0200d07a05079b2a799"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "tests/conftest.py",
+      "sha256": "9486ef6581c156504c85fd031dbcf82dbb705b81700734577e9829ebd1e7ff32"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "tests/test_churn.py",
+      "sha256": "8b9c554738bd6dcc74d292d626548a1a95aadebca673ac21ca50214d025bcd0e"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "tests/test_features.py",
+      "sha256": "d4044be9d3f9a4c74bbb0ec07d5def321898835dcc916de208957824f63dff87"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "tests/test_rerun.py",
+      "sha256": "3f64dfd38b2f2f5bfc8606b7902d83d19c14db488b5db9b5e56f96d098b96ec3"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "tests/test_victim.py",
+      "sha256": "eaaef869ed954f371faa7394ef1142b27fbe2e19c001f6f5c7105bc017d3d5e2"
+    },
+    {
+      "repository": "flake-it/pytest-cannier",
+      "revision": "2d58145c2786477a721c754e3a05639017c080d4",
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "upstream_code_executed": false,
+  "pickle_loaded": false,
+  "original_archive_sha256": "07d714a7e0f57863070d1ba6631191aa6e856fac1ad3ffc92765d6c1fc56f9f1"
+}

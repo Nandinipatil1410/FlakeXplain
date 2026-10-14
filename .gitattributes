@@ -3,4 +3,5 @@ dataset/** -text
 reports/** -text
 scripts/*.py -text
 requirements-pilot.txt -text
+requirements-cannier-matched.txt -text
 *.pdf binary

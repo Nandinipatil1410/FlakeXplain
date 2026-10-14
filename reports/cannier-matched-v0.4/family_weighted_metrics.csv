@@ -1,0 +1,9 @@
+task,variant,source_families,family_weighted_ap
+NOD-vs-Rest,natural_baseline,45508,0.0061111175265394285
+NOD-vs-Rest,natural_context,45508,0.011339496749562394
+NOD-vs-Rest,author_smote_sensitivity_baseline,45508,0.0077278449885552275
+NOD-vs-Rest,author_smote_sensitivity_context,45508,0.007980846049861755
+Victim-vs-Rest,natural_baseline,45508,0.02492191045533693
+Victim-vs-Rest,natural_context,45508,0.02584812726672431
+Victim-vs-Rest,author_smote_sensitivity_baseline,45508,0.035338274679319034
+Victim-vs-Rest,author_smote_sensitivity_context,45508,0.03765770619902615

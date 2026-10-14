@@ -1,6 +1,7 @@
 repos/
 .venv/
 .venv-pilot/
+.venv-cannier/
 **/.venv/
 __pycache__/
 **/__pycache__/
