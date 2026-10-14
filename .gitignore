@@ -20,6 +20,7 @@ __pycache__/
 /output/*.zip.sha256
 /dataset/*.zip
 /dataset/*.zip.sha256
+/dataset/FlakeXplain-dataset-v0.1/
 /tmp/pdfs/
 /airflow-evidence/
 /dask-evidence/

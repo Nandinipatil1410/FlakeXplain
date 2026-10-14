@@ -1,8 +1,0 @@
-project,path,reason
-mitmproxy,test/mitmproxy/data/addonscripts/recorder/error.py,SyntaxError
-pyramid,docs/coversizing.py,SyntaxError
-reframe,unittests/resources/checks_unlisted/invalid_syntax_check.py,SyntaxError
-salt,templates/module/salt/modules/{{module_name}}.py,SyntaxError
-salt,templates/state/salt/states/{{module_name}}.py,SyntaxError
-salt,templates/test_module/tests/unit/modules/test_{{module_name}}.py,SyntaxError
-salt,templates/test_state/tests/unit/states/test_{{module_name}}.py,SyntaxError
