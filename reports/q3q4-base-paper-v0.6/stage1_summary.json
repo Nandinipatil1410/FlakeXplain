@@ -1,0 +1,363 @@
+{
+ "gate_G1": null,
+ "commits": 211,
+ "commits_unavailable": [
+  {
+   "project": "incubator-superset",
+   "commit": "04662b333eef6082742422bba9b5f7ce5e3596f5"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "066b61e796166812f22384968cb0b9f109e30c34"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "06c4eea58f1ea52f07f1b948eb71cee08ba162ab"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "0b182704d4d8d1fd4feac1324fef308919dfa003"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "0bc3746af92d66af439e1a63bc99c4414f47930c"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "0ccf0e8c26a683c478cec7be3e5c386e687e6cc8"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "0fbd9c160e8493ccc0f3857c633026fc25c2a984"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "10966c9bf7051600222d504ed5d5a1f1a42a9c87"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "1186e7232093ea8a1b9929d2e8e716633b42e4bc"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "128289ab22b9d1e80fc37e429e93765662603d3a"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "1620ca5ed2ce573ae4e39569adbebf6865d1e7ed"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "17534ae33d12eec4a4fc3ca372b6c431cb3d9f09"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "1788f50353f9184fc784e3978f3611d84c6fcbcb"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "1a41261a4bfaf87bae11378d1e384b95b27a5bc8"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "1af8580f2d7e422a97d411e2d3174b64f79ffc63"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "1dbdb2974a705c1217a43c81ebc7260fcca4babb"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "235f1232546d45908a14964bfeab7768217ca469"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "283b26909af34dd228bc600cf8b57cab62a03446"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "298eda3f99eaded53c50df6b858608098a80010d"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "2bcfbe1ce3827d564d340a31cf762148743a83e9"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "2e770e3a3b4e5106746acfed4117de358bcb4d41"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "302f3d22677c4c76a6200f44e681d238f09389e2"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "32814385e891193bf464eb663a3fb29985408e3c"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "349994c59ad2b268980927b9194af8b17cf6318c"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "36ec0b7fb84cd16631a92e87059ba979cdd99e5a"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "38651efaae9d11ad33aed4523105126fdda4b555"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "3fc454f9c236d18b26744c83a839c5573bda2046"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "40af5abf42ea7f4b4211dd908022377dccb618d1"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "41f75c4d5aa6c6e09ba91730fbcb395e5b36b0b3"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "45770da38021f1600db129c0ad25ed0ce444899c"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "483ce08f76dfc77a26f97df1f392bc4b67ddaf23"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "4fd38cdb9eae6f998ccdb6298482c7594583840f"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "50571d5d46ce05b4f7002fd7a9fb241d6058171f"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "51296e8c971b9802719d87a5bc7ee56ebc7997da"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "518643a5279ca339e0b130fbbbabc36c38cd547b"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "5187388e895ed16e501cc8cc6932d48229b3b28a"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "52022e4d6a1d67158caff898230c4899780c9ebe"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "547430b0ec3956c0d3463ffa5e1e1d9a30a7da29"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "56ce25d2d5abfd109de1a84c6bad9e486a3b3c4e"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "5799c9c61abf47a1b4eaf1346248ff7b984fc449"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "58c706e354dd1a02a3e8fc0cf6feaa4d689b4136"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "6084a17666399074083f2b022e162acd13917014"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "66971d44c6abb3afd38ba510df351fc1097275ac"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "73e2a776d7ac3656eabb8e91478620d7c06d8237"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "743976bfcb879de1b757473ff1d9f082c4561e74"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "7517372ba568b906f951fd7153438b6554ffe5ab"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "779eca9888a0d2f741b0277aa85e9bf248df2f13"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "81c9f8dac9af6c53f08e1a44e16a1d30dfec8f0c"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "827a69930ab9dfe5004000ce38a372f0c0a5c0de"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "88044adfe0675a9653e8fd6224a14b70aa112958"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "8c5a4c69138a7a12d24544d6de6602680285ff8a"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "8e2756107e6c92bbe9dd648b00b2214d1a75b8b1"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "95721e2d31d8ef3ab37ef8a5d7f530ccbc5df2e9"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "98910f00952e31e925eb055638ffe21bf2189857"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "993e5dd235417994d7e1bb1abbf74498716221a1"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "9b9dfb5c49ee7fe1d118a62966117f47ef686cc5"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "9cbfbe480f43e37ec9c5c155393c3f9f956805de"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "9e3bcb816c99bf5a4a2553fe10aa1e580d919ad6"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "a06e2eda0a1530d7ffdb3c8bce83c3ca3e2ccbc2"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "a0adf775aa988b8c416b9b605d09e1cf07c71e44"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "a6bf60f7769c89bdc9157e3ad202c982835c7a61"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "a88205cf8b6c678226cd2bc214b62263b6ab4f9c"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "ac0c9e34d8212dd7b8dd93ed9f890af4ceb2657d"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "ac690e7e240e97effef6e8bb93a4baff3de60679"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "ae80d6018de322a5285a1293fcfd4e31b2a7b4ea"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "b0036aef52ea3cefb133aec0d08972495586760b"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "b288fb2414d1247a9ba7cd404d8c9135b8c3bfa2"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "bdb2dd1eccd1b5f8afe20096961d9e66520464e5"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "bfc8acaea29d44afd03c76d1441f1636feb0f9ed"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "c8efc4ed27898d3b79e6937fff7ed482a6a56bd8"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "caeaa76abc4a559193af93ab758c55b4311bf98c"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "d406a60295d004ddde0c92ba23d031a85e95f7a3"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "d4c3ec63db2df1d16579813797e8d9619f4a8a70"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "d6dc73daba2919c6f6a32c5bd6341efd7f1425af"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "db1a5cc2439054f71c90444bc84ae3ef1de4306d"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "e2a40f8e66454d3913172a8fed47508e2f03e8d9"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "e6581ba30e28861ec675deacb1df70919616401a"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "e7a0ab9e8472b7b303572bd4b05c2652118353fb"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "f24033173387ecdf2435462a42659b8e9ffd8030"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "f357582bb6c873bf443d25ae234052e16a11d68b"
+  },
+  {
+   "project": "incubator-superset",
+   "commit": "f4139a9ab0f8d0d8b2783d0e2521f2d489ff3b9b"
+  }
+ ],
+ "resolution": {
+  "commit_unavailable": 527,
+  "path": 646,
+  "unique_name_search": 897,
+  "ambiguous_name": 37,
+  "unresolved": 23,
+  "ambiguous_in_file": 21
+ },
+ "location_source": {
+  "none": 1484,
+  "failed_info": 667
+ },
+ "by_project": {
+  "spaCy": {
+   "rows": 1080,
+   "mapped": 1035
+  },
+  "django-rest-framework": {
+   "rows": 536,
+   "mapped": 500
+  },
+  "incubator-superset": {
+   "rows": 535,
+   "mapped": 8
+  }
+ },
+ "distinct_groups": 481,
+ "files": {
+  "metadata.csv.gz": "f9a5311fece98950d8f5fe9f8d52b0db758192a2c70c8fddd2025864c36d8ba3",
+  "features_context.csv.gz": "f6e29244c7cd4b8b8856895f9e79052faa0724b9ef99583740fbf0e693c0fb86"
+ },
+ "extractor_sha256": "d64d4286b905c1a69422b0e8668f1c48650b74f95334f9534446a3b9835ee5b0",
+ "script_sha256": "0960c91facd175cba1cf04fa9f2bb3119f3665e495e8c20b33a0fff062ece7bc"
+}
