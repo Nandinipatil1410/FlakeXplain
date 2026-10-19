@@ -1,0 +1,34 @@
+{
+ "amendment": "A1",
+ "date": "2026-10-19",
+ "before_stage": 1,
+ "amendment_markdown_sha256": "9f62d40d4be56a3f349033b531176ac0c6681c7d5d06426cfe032b2e0fa31d21",
+ "protocol_json_sha256_unchanged": "d83c64b1ee7775635e51ba632a6010a9a9e5597ca6bd3767d0decdb76ef48e1e",
+ "paper_repo": {
+  "url": "https://github.com/SoftwareImpacts/SIMPAC-2025-241",
+  "commit": "5b63f3a96b999b13c709a367d161708a4bcea9b9",
+  "sha256": {
+   "F_Detector/dataset.csv": "bb2e13db1082ee47a53078c3408c55920a3a2999530fb1bff356aaaeda756f21",
+   "F_Detector/dataset_django_rest_framework.csv": "97a506ea92c7c36f3a45572aebb5c0789dda679084d9648c9ae0a9a52afbfe31",
+   "F_Detector/dataset_incubator_superset.csv": "66de300eb1a5d160dc636d09d47fdc1ccee083e812a4295da665c09c599fba7c",
+   "F_Detector/dataset_spaCy.csv": "60834056a7d2e5aa4e72a9ed4311de331a85c1b0332f5cd35f9ced4716fa8fc5",
+   "F_Detector/django-rest-framework_build_history.json": "8b0ea4e0591f6fbc0ec9a6bb79ccd6e801a94023c89de75371352cf060568e13",
+   "F_Detector/incubator-superset_build_history.json": "52f1ed2e567515f542bf8caa1a05a0d37d2b83948a701246abf32a8632b510bf",
+   "F_Detector/spaCy_build_history.json": "025060c990b76ffca0cb6025436f21fa5ff39810248ad72650a82973e5a5b682",
+   "F_Detector/mysql_handler.py": "6f384506192a20fb65ff0c7aecb0534146b5cb62a8eed5eb7566b7d9b6bac43b",
+   "output/csv/results/Results_2020-11-28_01-39-46.csv": "f96f0bc4c81e0ea908662d0353efe0bc6d2bb19585c4dad2a2ddc28aebd510c1"
+  }
+ },
+ "comparator_candidates": [
+  "MDF-paper-int",
+  "MDF-paper-float",
+  "KNN8-int",
+  "KNN8-float"
+ ],
+ "MDF-paper": "previous_state==0: flaky iff traceback_coverage==0; else KNeighborsClassifier(10,p=1) flaky iff P>0.7",
+ "G2a": {
+  "min_agreement": 0.9,
+  "join": "(Build ID, Test Method) unique"
+ },
+ "G2b": "released Results decisions vs labels, in-sample reference, reported only"
+}

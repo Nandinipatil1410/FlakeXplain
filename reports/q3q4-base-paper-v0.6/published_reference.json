@@ -1,0 +1,21 @@
+{
+ "paper": "Ahmad, MDFlaker, Software Impacts 26 (2025) 100794, doi:10.1016/j.simpa.2025.100794",
+ "read_in_full_on": "2026-10-19",
+ "pages": 4,
+ "precision": "not reported",
+ "recall": "not reported",
+ "f1": "not reported",
+ "accuracy": "not reported",
+ "only_quantitative_result": {
+  "source": "Fig. 2(a) Detection Results Distribution, p.3",
+  "TC_flaky": 234,
+  "TC_non_flaky": 374,
+  "MF_flaky": 447,
+  "MF_non_flaky": 867,
+  "Missing": 44,
+  "note": "unlabelled detection counts, no ground-truth comparison"
+ },
+ "method_as_described": "Sec. 2.3: Scenario 1 (previous state passed) traceback rule; Scenario 2 KNN on four factors",
+ "code_link_in_paper": "https://github.com/SoftwareImpacts/SIMPAC-2025-241 (commit 5b63f3a96b999b13c709a367d161708a4bcea9b9)",
+ "apsec_2021_paper": "not obtained (institutional login unavailable)"
+}
