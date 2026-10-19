@@ -1,0 +1,15 @@
+{
+ "amendment": "A2",
+ "date": "2026-10-19",
+ "before": "gate G1 evaluation; no stage-1 label read, no model fit",
+ "amendment_markdown_sha256": "16e2f7b299bc6a7d461884cda01a37e6201b46b7bd2f334bfb6b901996844551",
+ "primary_population": [
+  "spaCy",
+  "django-rest-framework"
+ ],
+ "primary_rows": 1616,
+ "excluded_project": "incubator-superset (81/84 build commits unretrievable; whole project excluded)",
+ "robust_qualifier": "ET-BC > B* MCC in both projects",
+ "S2": "2-fold leave-one-project-out",
+ "S7": "baseline-only arms on all 2,151 rows"
+}
