@@ -1,0 +1,21 @@
+{
+ "version": "v0.7",
+ "frozen_utc": "2026-10-19T16:53:56+00:00",
+ "git_head": "509d09c8b81dbcfd8c9a01ed17886a62b3a6bcb9",
+ "protocol_markdown_sha256": "34f59b0dd6ce703b8cdb6c5c4858caa9d11b9cb64fba8b08afcaa4f7a53ec033",
+ "population": [
+  "spaCy",
+  "django-rest-framework"
+ ],
+ "rows": 1616,
+ "seed": 20261020,
+ "repeats": 30,
+ "primary_ours_arm": "ET-BF",
+ "rule": {
+  "P1_vs_comparator": ">=0.05 MCC, CI excl 0",
+  "P1_vs_ET-B": ">=0.02 MCC, CI excl 0",
+  "P2": "beats P2 comparator in both projects, mean dMCC>=0.05"
+ },
+ "context_claim": "P1 ET-BFC-ET-BF>=0.02 CI excl 0 and P2 no project worse by >0.02",
+ "cost": ">=10% fewer reruns than P1 comparator at 95% flaky recall"
+}
