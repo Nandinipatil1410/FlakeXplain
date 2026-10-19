@@ -1,0 +1,86 @@
+{
+ "created_utc": "2026-10-19T15:20:16+00:00",
+ "git_head": "3f45929fc44709b240330f5652582a49e42f1ed1",
+ "branch": "research/q3q4-base-paper",
+ "protocol_markdown_sha256": "d557a6d7f622be5ad2e72985eaaa26e2b5edf6f4eb92d137de57ba9604512f23",
+ "base_paper": {
+  "citation": "Ahmad, MDFlaker: A tool for multi-factor detection and root cause analysis of flaky tests, Software Impacts, 2025",
+  "doi": "10.1016/j.simpa.2025.100794",
+  "scimago": "Software Impacts, Software category Q3 2022-2025",
+  "method_origin_doi": "10.1109/APSEC53868.2021.00041"
+ },
+ "upstream": {
+  "repo": "https://github.com/azeem59/MDFlakerForPaperUpdated",
+  "commit": "618dc04739f2f93512e341e1a9dcce3ad6afb37d",
+  "license": "Apache-2.0",
+  "sha256": {
+   "F_Detector/dataset.csv": "bb2e13db1082ee47a53078c3408c55920a3a2999530fb1bff356aaaeda756f21",
+   "F_Detector/dataset_django_rest_framework.csv": "97a506ea92c7c36f3a45572aebb5c0789dda679084d9648c9ae0a9a52afbfe31",
+   "F_Detector/dataset_incubator_superset.csv": "66de300eb1a5d160dc636d09d47fdc1ccee083e812a4295da665c09c599fba7c",
+   "F_Detector/dataset_spaCy.csv": "60834056a7d2e5aa4e72a9ed4311de331a85c1b0332f5cd35f9ced4716fa8fc5",
+   "F_Detector/django-rest-framework_build_history.json": "8b0ea4e0591f6fbc0ec9a6bb79ccd6e801a94023c89de75371352cf060568e13"
+  }
+ },
+ "pre_freeze_observations": {
+  "rows": 2151,
+  "flaky": 1372,
+  "not_flaky": 779,
+  "distinct_test_names": 448,
+  "builds": 212,
+  "rows_with_repeated_test_name": 1991,
+  "drf_builds_found_in_history": "62/62"
+ },
+ "label": "Flaky or Not (authors' 30-rerun label)",
+ "features_B": [
+  "Flaky Frequency",
+  "Traceback Coverage",
+  "Test Smells",
+  "Previous State",
+  "Test Size"
+ ],
+ "context_extractor": "scripts/confirmation_features.py::extract (unchanged; same 66 columns as dataset/cannier-matched-v0.4/features_context.csv.gz) + context_available",
+ "gates": {
+  "G1": {
+   "min_mapped_fraction": 0.85,
+   "max_mapped_rate_gap_by_label_pp": 10
+  },
+  "G2": {
+   "split": "permutation; train all but last 200, test last 80",
+   "permutations": 1000,
+   "f1_tolerance": 0.05,
+   "reference_file": "published_reference.json (must be committed before stage 3)",
+   "fallback": "exact prediction equivalence with evaluate.py on 20 fixed permutations"
+  }
+ },
+ "comparator_selection": "B* = higher mean primary MCC of B-released (int cast) and B-described (float), chosen before any context arm",
+ "arms": {
+  "KNN-B*": "KNeighborsClassifier(n_neighbors=8, p=1), unscaled",
+  "ET-B": "ExtraTreesClassifier(n_estimators=100) defaults, features B float",
+  "ET-BC": "same ET, B + 66 context + context_available"
+ },
+ "primary_protocol": {
+  "cv": "StratifiedGroupKFold(n_splits=10, shuffle=True)",
+  "group": "project+test_file+test_class+test_name (fallback project+test_name)",
+  "repeats": 30,
+  "seed": "20261020 + r (split and classifiers)",
+  "metric": "signed MCC on pooled out-of-fold predictions per repeat, mean over repeats",
+  "threshold": "0.5 / KNN majority",
+  "balancing": "none"
+ },
+ "rule": {
+  "C1": "ET-BC vs KNN-B*: mean dMCC >= 0.05, paired 95% t-interval excludes 0, mean dF1 >= 0",
+  "C2": "ET-BC vs ET-B: mean dMCC >= 0.02, interval excludes 0",
+  "no_degradation": "no project with ET-BC MCC <= KNN-B* MCC - 0.05",
+  "headline": "G1 and G2 pass and C1 and C2 and no_degradation",
+  "robust_qualifier": "ET-BC > KNN-B* MCC in >= 2 of 3 projects"
+ },
+ "secondary": [
+  "S1 row-level StratifiedKFold(10) 30 repeats",
+  "S2 leave-one-project-out",
+  "S3 both baseline variants",
+  "S4 static-only (smells, size, context)",
+  "S5 transfer prior from development-v0.2 corpus, DRF cases removed",
+  "S6 RandomForest(100)"
+ ],
+ "untouched": "reports/cannier-protocol-v0.5/ (fallback base paper result)"
+}

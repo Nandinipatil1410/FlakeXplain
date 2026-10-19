@@ -1,0 +1,19 @@
+{
+  "checked_on": "2026-10-19",
+  "source": "https://www.scimagojr.com/journalsearch.php?q=<sourceid>&tip=sid (quartile table, years 2022-2025)",
+  "journals": {
+    "Software Impacts": {"sid": "21101060167", "issn": "2665-9638", "Software": {"2022": "Q3", "2023": "Q3", "2024": "Q3", "2025": "Q3"}},
+    "International Journal of Software Engineering and Knowledge Engineering": {"sid": "19270", "issn": "0218-1940", "Artificial Intelligence": {"2022": "Q4", "2023": "Q4", "2024": "Q4", "2025": "Q3"}, "Computer Graphics and Computer-Aided Design": {"2022": "Q3", "2023": "Q3", "2024": "Q3", "2025": "Q3"}, "Computer Networks and Communications": {"2022": "Q3", "2023": "Q3", "2024": "Q4", "2025": "Q3"}, "Software": {"2022": "Q4", "2023": "Q4", "2024": "Q4", "2025": "Q3"}},
+    "Science of Computer Programming": {"sid": "28416", "issn": "0167-6423", "Computational Theory and Mathematics": {"2022": "Q2", "2023": "Q3", "2024": "Q3", "2025": "Q3"}, "Information Systems": {"2022": "Q2", "2023": "Q2", "2024": "Q3", "2025": "Q3"}, "Modeling and Simulation": {"2022": "Q2", "2023": "Q2", "2024": "Q3", "2025": "Q3"}, "Software": {"2022": "Q3", "2023": "Q3", "2024": "Q3", "2025": "Q3"}},
+    "Journal of Web Engineering": {"sid": "18400156714", "issn": "1540-9589", "Computer Networks and Communications": {"2022": "Q4", "2023": "Q3", "2024": "Q3", "2025": "Q3"}, "Information Systems": {"2022": "Q4", "2023": "Q3", "2024": "Q3", "2025": "Q3"}, "Software": {"2022": "Q4", "2023": "Q4", "2024": "Q3", "2025": "Q3"}},
+    "Journal of Computer Science and Technology (Argentina)": {"sid": "21101044836", "issn": "1666-6038", "Software": {"2022": "Q4", "2023": "Q3", "2024": "Q4", "2025": "Q4"}, "Computer Science (miscellaneous)": {"2022": "Q4", "2023": "Q3", "2024": "Q4", "2025": "Q3"}},
+    "International Journal of Computational and Experimental Science and Engineering": {"sid": "21101210635", "issn": "2149-9144", "Engineering (miscellaneous)": {"2024": "Q3", "2025": "Q3"}},
+    "Computers (MDPI)": {"sid": "21100886391", "issn": "2073-431X", "Computer Networks and Communications": {"2022": "Q2", "2023": "Q2", "2024": "Q2", "2025": "Q1"}, "Human-Computer Interaction": {"2022": "Q3", "2023": "Q3", "2024": "Q2", "2025": "Q2"}},
+    "IEEE Access": {"sid": "21100374601", "issn": "2169-3536", "Computer Science (miscellaneous)": {"2022": "Q1", "2023": "Q1", "2024": "Q1", "2025": "Q1"}, "Engineering (miscellaneous)": {"2022": "Q1", "2023": "Q1", "2024": "Q1", "2025": "Q1"}, "Materials Science (miscellaneous)": {"2022": "Q1", "2023": "Q1", "2024": "Q2", "2025": "Q1"}},
+    "Empirical Software Engineering": {"sid": "18650", "issn": "1382-3256", "Software": {"2022": "Q1", "2023": "Q1", "2024": "Q1", "2025": "Q1"}},
+    "Journal of Systems and Software": {"sid": "19309", "issn": "0164-1212", "Software": {"2022": "Q1", "2023": "Q1", "2024": "Q1", "2025": "Q1"}},
+    "Software Testing Verification and Reliability": {"sid": "20432", "issn": "0960-0833", "Software": {"2022": "Q3", "2023": "Q3", "2024": "Q3", "2025": "Q2"}, "Safety, Risk, Reliability and Quality": {"2022": "Q2", "2023": "Q2", "2024": "Q2", "2025": "Q2"}},
+    "Software - Practice and Experience": {"sid": "20007", "issn": "0038-0644", "Software": {"2022": "Q2", "2023": "Q2", "2024": "Q2", "2025": "Q2"}},
+    "International Journal of Computer Applications": {"issn": "0975-8887", "status": "not indexed in SCImago"}
+  }
+}
