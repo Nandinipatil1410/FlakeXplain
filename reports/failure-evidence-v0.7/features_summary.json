@@ -1,0 +1,29 @@
+{
+ "rows": 1616,
+ "builds": 128,
+ "notes": {
+  "diff_ok": 128
+ },
+ "coverage": {
+  "build_failed_tests": 1616,
+  "same_file_cofailures": 549,
+  "build_duration_s": 1616,
+  "pr_build": 993,
+  "changed_files": 1529,
+  "changed_py_files": 1321,
+  "changed_test_py_files": 738,
+  "nonpy_only_change": 295,
+  "changed_lines": 1321,
+  "own_test_file_changed": 131,
+  "path_overlap_depth": 1030,
+  "has_own_traceback": 661,
+  "traceback_frames": 661,
+  "frames_in_changed_files": 338,
+  "last_frame_in_test_file": 155,
+  "frames_outside_repo": 209,
+  "min_line_distance_to_change": 1353,
+  "diff_available": 1616
+ },
+ "sha256": "5c20a53d1b061c9b49b5b47aecf7f07e8268f8bb532d263463eda6d6b3483e72",
+ "script_sha256": "bca6ceffe90a18d22b4195201d0995fd9822db83eb31fe4ef6bed45f1a48af30"
+}
