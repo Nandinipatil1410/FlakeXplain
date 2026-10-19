@@ -15,7 +15,7 @@ LOCAL=ROOT/'local-evidence/mdflaker-v0.6';UP=LOCAL/'upstream/simpac';OUT=ROOT/'r
 PROJECTS={'spaCy':('dataset_spaCy.csv','spacy.git','spaCy/'),
     'django-rest-framework':('dataset_django_rest_framework.csv','drf.git','django-rest-framework/'),
     'incubator-superset':('dataset_incubator_superset.csv','superset.git','incubator-superset/')}
-CONTEXT=json.loads((ROOT/'dataset/development-v0.2/schema.json').read_text())['context_columns']
+SCHEMA=json.loads((ROOT/'dataset/development-v0.2/schema.json').read_text());CONTEXT=SCHEMA['context_columns'];BODY=SCHEMA['body_columns']
 
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
@@ -65,7 +65,7 @@ def main():
     for i,x in enumerate(rows):
         project=member[(x['Build ID'],x['Test Case Name'])];b=hist[project][x['Build ID']]
         plan[(project,b['commit_sha'])].append((i,x,b))
-    meta=[None]*len(rows);ctx=[None]*len(rows);commits_missing=[]
+    meta=[None]*len(rows);ctx=[None]*len(rows);body=[None]*len(rows);commits_missing=[]
     for (project,commit),items in sorted(plan.items()):
         _,clone,prefix=PROJECTS[project]
         try:root=export(clone,commit)
@@ -91,11 +91,13 @@ def main():
                 key=(fn.key,c,p)
                 if key not in cache:cache[key]=extract(index,fn,c,p)[1]
                 ctx[i]=dict(row=i,**{k:cache[key][k] for k in CONTEXT},context_available=1)
-            else:ctx[i]=dict(row=i,**{k:0 for k in CONTEXT},context_available=0)
+                body[i]=dict(row=i,**{k:cache[key][k] for k in BODY})  # S5 transfer prior only
+            else:
+                ctx[i]=dict(row=i,**{k:0 for k in CONTEXT},context_available=0);body[i]=dict(row=i,**{k:0 for k in BODY})
         del index;import gc;gc.collect()
         print(project,commit[:8],len(items),sum(meta[i]['mapped'] for i,_,_ in items),flush=True)
     data=LOCAL/'stage1';data.mkdir(parents=True,exist_ok=True)
-    for name,table in [('metadata.csv.gz',meta),('features_context.csv.gz',ctx)]:
+    for name,table in [('metadata.csv.gz',meta),('features_context.csv.gz',ctx),('features_body.csv.gz',body)]:
         with gzip.open(data/name,'wt',newline='',encoding='utf-8') as f:
             w=csv.DictWriter(f,list(table[0]));w.writeheader();w.writerows(table)
     g1=None
@@ -110,7 +112,7 @@ def main():
         resolution=Counter(m['resolution'] for m in meta),location_source=Counter(m['location_source'] for m in meta),
         by_project={p:dict(rows=sum(m['project']==p for m in meta),mapped=sum(m['mapped'] for m in meta if m['project']==p)) for p in PROJECTS},
         distinct_groups=len({m['group_id'] for m in meta}),
-        files={n:sha(data/n) for n in ('metadata.csv.gz','features_context.csv.gz')},extractor_sha256=sha(ROOT/'scripts/confirmation_features.py'),script_sha256=sha(__file__))
+        files={n:sha(data/n) for n in ('metadata.csv.gz','features_context.csv.gz','features_body.csv.gz')},extractor_sha256=sha(ROOT/'scripts/confirmation_features.py'),script_sha256=sha(__file__))
     (OUT/'stage1_summary.json').write_text(json.dumps(summary,indent=1)+'\n');print(json.dumps(dict(gate_G1=g1,by_project=summary["by_project"],resolution=summary["resolution"]),indent=1))
 
 if __name__=='__main__':main()

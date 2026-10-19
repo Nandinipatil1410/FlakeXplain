@@ -355,9 +355,10 @@
  },
  "distinct_groups": 481,
  "files": {
-  "metadata.csv.gz": "f9a5311fece98950d8f5fe9f8d52b0db758192a2c70c8fddd2025864c36d8ba3",
-  "features_context.csv.gz": "f6e29244c7cd4b8b8856895f9e79052faa0724b9ef99583740fbf0e693c0fb86"
+  "metadata.csv.gz": "b4c378702f83128ac5017d5ff7840c3d3bbeac109ee763f47b0c5482bc81f704",
+  "features_context.csv.gz": "10203ac40d870dbf0c5f212aaffd7cc6141ebe483c512f7a19fcf2ad3faa37b5",
+  "features_body.csv.gz": "ddf68a37395fc660991200577a6a3e7153107060a5885eaf2eeea833af92d7bf"
  },
  "extractor_sha256": "d64d4286b905c1a69422b0e8668f1c48650b74f95334f9534446a3b9835ee5b0",
- "script_sha256": "0960c91facd175cba1cf04fa9f2bb3119f3665e495e8c20b33a0fff062ece7bc"
+ "script_sha256": "79c2bc70fef567684957881c2993dc86fd3bbeaa909731658f400db68df92542"
 }
