@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-10-19T07:58:23.751975+00:00",
+  "git_head": "5220c16c1b812cb0d21c44531c879198aa3ead52",
+  "protocol_markdown_sha256": "3b99befad327453a191143508c152d8996ce0cc7de6f1b45ee66364a0d32916b",
+  "base_paper": "doi:10.1007/s10664-023-10307-w",
+  "authors_archive_sha256": "07d714a7e0f57863070d1ba6631191aa6e856fac1ad3ffc92765d6c1fc56f9f1",
+  "context_table_sha256": "ddc643df33040fbadedb960a64c5c78a119c29bc9e27cdfec020c109be7f0ec5",
+  "metadata_sha256": "a3e9c2e60853226b1c813e020688ebc523a475cd0ca616fbbf68fcf9582fdb70",
+  "tasks": {
+    "NOD-vs-Rest": {
+      "domain_column": null,
+      "label_column": 3,
+      "classifier": "ExtraTreesClassifier",
+      "n_estimators": 100,
+      "sampling": "SMOTE"
+    },
+    "NOD-vs-Victim": {
+      "domain_column": 5,
+      "label_column": 3,
+      "classifier": "RandomForestClassifier",
+      "n_estimators": 75,
+      "sampling": "SMOTE"
+    },
+    "Victim-vs-Rest": {
+      "domain_column": null,
+      "label_column": 4,
+      "classifier": "ExtraTreesClassifier",
+      "n_estimators": 75,
+      "sampling": "SMOTE"
+    },
+    "Polluter-vs-Rest": {
+      "domain_column": null,
+      "label_column": 6,
+      "classifier": "RandomForestClassifier",
+      "n_estimators": 100,
+      "sampling": "SMOTE"
+    }
+  },
+  "analyses": {
+    "primary": 30,
+    "mapped_only": 10,
+    "family_grouped": 10
+  },
+  "arms": [
+    "baseline",
+    "context"
+  ],
+  "seed": 20261019,
+  "n_feature_samples": 1,
+  "folds": 10,
+  "rule": {
+    "min_gain": 0.05,
+    "degrade": -0.02,
+    "reproduction_tolerance": 0.03,
+    "cost_saving": 0.2,
+    "bootstrap": 2000,
+    "reference_abs_mcc": {
+      "NOD-vs-Rest": 0.532094,
+      "NOD-vs-Victim": 0.692611,
+      "Victim-vs-Rest": 0.519517,
+      "Polluter-vs-Rest": 0.945824
+    }
+  },
+  "software": {
+    "sklearn": "1.7.2",
+    "imbalanced_learn": "0.14.0",
+    "numpy": "2.2.6"
+  }
+}

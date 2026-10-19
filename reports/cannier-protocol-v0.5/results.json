@@ -1,0 +1,107 @@
+{
+  "created_utc": "2026-10-19T14:47:52.965192+00:00",
+  "protocol_sha256": "f87ddaa13d0108fbab2a7f933ad41e678420d769af546539bebaa8f77cc38780",
+  "implementation_sha256": "71dee48f466afd96a3937aa27f3d8c5e4e09ad2be994ed083e82be753af8f860",
+  "per_task": {
+    "NOD-vs-Rest": {
+      "reproduced": true,
+      "improved": false,
+      "degraded": false,
+      "strong": false
+    },
+    "NOD-vs-Victim": {
+      "reproduced": true,
+      "improved": false,
+      "degraded": false,
+      "strong": false
+    },
+    "Victim-vs-Rest": {
+      "reproduced": true,
+      "improved": true,
+      "degraded": false,
+      "strong": true
+    },
+    "Polluter-vs-Rest": {
+      "reproduced": true,
+      "improved": false,
+      "degraded": false,
+      "strong": false
+    }
+  },
+  "classification_claim": {
+    "rule_met": false,
+    "improved_tasks": [
+      "Victim-vs-Rest"
+    ],
+    "strength": "not met"
+  },
+  "cost": {
+    "Rerun": {
+      "baseline_knee": {
+        "perf": 0.9141958288938302,
+        "cost": 6055993.941192958,
+        "params": [
+          0.06,
+          1.01,
+          1.0
+        ]
+      },
+      "context_knee": {
+        "perf": 0.9263645505812462,
+        "cost": 5969331.7111471435,
+        "params": [
+          0.02,
+          1.01,
+          1.0
+        ]
+      },
+      "context_cost_at_baseline_knee_perf": 4306452.667681513,
+      "relative_saving": 0.28889415849825073
+    },
+    "iDFlakies": {
+      "baseline_knee": {
+        "perf": 0.9618746384743353,
+        "cost": 16241313.291165208,
+        "params": [
+          0.18,
+          1.01,
+          1.0
+        ]
+      },
+      "context_knee": {
+        "perf": 0.9749188878035435,
+        "cost": 14984365.03055908,
+        "params": [
+          0.14,
+          1.01,
+          1.0
+        ]
+      },
+      "context_cost_at_baseline_knee_perf": 13134935.56521176,
+      "relative_saving": 0.19126394955038672
+    },
+    "Pairwise": {
+      "baseline_knee": {
+        "perf": 0.9240970154498596,
+        "cost": 14206894.722888323,
+        "params": [
+          0.06,
+          0.08,
+          1.0
+        ]
+      },
+      "context_knee": {
+        "perf": 0.9757025974894193,
+        "cost": 7196540.859679292,
+        "params": [
+          0.02,
+          0.16,
+          1.0
+        ]
+      },
+      "context_cost_at_baseline_knee_perf": 3306146.9591392023,
+      "relative_saving": 0.767285742336588
+    },
+    "rule_met": true
+  }
+}

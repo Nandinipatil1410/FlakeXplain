@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "techniques": {
+    "Rerun": {
+      "released_points_nF_le_1": 176,
+      "reproduced": 176,
+      "front_points": 269
+    },
+    "iDFlakies": {
+      "released_points_nF_le_1": 5,
+      "reproduced": 5,
+      "front_points": 176
+    },
+    "Pairwise": {
+      "released_points_nF_le_1": 733,
+      "reproduced": 733,
+      "front_points": 1231
+    }
+  },
+  "dependency_pairs": 194457
+}
