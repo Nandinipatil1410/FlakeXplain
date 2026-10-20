@@ -80,7 +80,10 @@ def main():
     if not present:rec.update(status='excluded',stage='nodeids',detail='no candidate file in tree');save();return
     cwd=workdir(target,env['nodeids']);rec['workdir']=str(cwd.relative_to(target))
     setup_cwd=cwd if env.get('setup_cwd')=='workdir' else target  # most recipes install from the repository root
-    rc,log,dt=sh(env['setup'],setup_cwd,SETUP_TIMEOUT);rec['setup_seconds']=round(dt)
+    # {first:a|b} -> the first of the listed paths that exists (renamed package directories).
+    setup=re.sub(r'\{first:([^}]*)\}',lambda m:next((x for x in m.group(1).split('|') if (setup_cwd/x).exists()),m.group(1).split('|')[0]),env['setup'])
+    rec['setup_command']=setup
+    rc,log,dt=sh(setup,setup_cwd,SETUP_TIMEOUT);rec['setup_seconds']=round(dt)
     (out/f"{env['env_id']}_setup.log").write_text(log[-20000:],encoding='utf-8')
     if rc!=0:rec.update(status='setup_failed',stage='install',detail=str(rc));save();return
     files=sorted({n.split('::')[0] for n in env['nodeids']})

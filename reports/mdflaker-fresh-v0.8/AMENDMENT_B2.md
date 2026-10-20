@@ -78,3 +78,12 @@ Pilot run 39383404814 (check-only): 12 of 15 valid; both hypothesis environments
    `hypothesis/tests/`). The recipe becomes `pip install -r requirements/test.txt -e .`.
 5. Harness bug: the working-directory finder fell back to the repository root. It now strips the
    node ID's relative path from each matching file to find the directory the ID is relative to.
+
+## Pilot 3 recipe fix (20 Oct 2026, setup logs only)
+
+Pilot run 39384062095: 12 of 15 valid; hypothesis still failed. The repository-root
+`pyproject.toml` holds only tooling settings; the package lives in `hypothesis/` (formerly
+`hypothesis-python/`).
+6. The recipe becomes `pip install -r requirements/test.txt -e {first:hypothesis-python|hypothesis}`.
+   `{first:a|b}` resolves to the first existing path. Checked locally on e0004 in check-only mode:
+   16 of 16 other tests pass, with the candidate deselected.

@@ -2,9 +2,9 @@
  "amendment": "B2",
  "date": "2026-10-20",
  "before": "any rerun or label",
- "amendment_markdown_sha256": "717a7d2e92946bacc6653e13afbbaa3156386a18d4c1f03bed41ddba786daf47",
- "harness_sha256": "7433506a180bfe8028700ecdd0e0a2d5fdc5fee3fb6f55c40af8a53741b661f4",
- "planner_sha256": "770e11079e2f116dc51843d9886df48c7ee1ba6b5bfa5448c1fd51feefff3df7",
+ "amendment_markdown_sha256": "5f66ffba49153d76ad16921255d43d9061af3878528afbedca12abc119898ed2",
+ "harness_sha256": "acff5004fafc4c825b1b83427863e6b323552c1744e2752449e13a09bdf6e4d5",
+ "planner_sha256": "ac61e34795b31873575e2788f75768af98d26d791761106969419ef0d42c9ced",
  "workflow_sha256": "c44bb44230919d2517999c1c0c5c95dd18d0ad30fbae677e3faa97240fc6fd4d",
  "plan_sha256": "77be00d13223e93cc93abab5fb6d36191840c5c90f2834559bcb2cb9dfbb5321",
  "env_valid_threshold": 0.8,
@@ -13,5 +13,7 @@
  "pilot1_run": 39382651000,
  "pilot1_valid": "12/15",
  "pilot2_run": 39383404814,
- "pilot2_valid": "12/15"
+ "pilot2_valid": "12/15",
+ "pilot3_run": 39384062095,
+ "pilot3_valid": "12/15"
 }
