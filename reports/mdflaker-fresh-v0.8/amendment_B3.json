@@ -6,8 +6,10 @@
   39386823153,
   39386840500
  ],
- "amendment_markdown_sha256": "04990774a001563172693224327ca945f9d999bffab4b19844c3c3592d9e5753",
+ "amendment_markdown_sha256": "de493d2dbb261c259303664c148b880d79c5d70a20f3485b4c7f90daf2098be9",
  "harness_sha256": "87d0c57d52c61319df1fe7e4d663a0416c737350220327a4cb3df5c7394cf168",
  "restart_branches": "rerun/v0.8-r2-batchNN",
- "collection_pilot1_run": 39389082524
+ "collection_pilot1_run": 39389082524,
+ "collection_pilot2_run": 39391064985,
+ "accepted": true
 }

@@ -46,3 +46,10 @@ The rule now uses only pytest's exit code, its "N collected" count (N must be at
 IDs) and the absence of not-found or collection errors. It is applied first to all candidates
 together and then to each one separately. Checked locally: e0003 keeps its 3 real tests and drops
 the garbled ID; e0001 (needs `hypothesistooling`) is excluded.
+
+## Collection pilot 2 (20 Oct 2026): accepted
+
+Run 39391064985 (check-only, 20 environments): 15 valid, 4 hypothesis environments excluded as not
+collectable (they need internal `hypothesistooling`), and prefect e0144 invalid as before. The
+garbled ID in e0003 is excluded while its 3 real tests are kept. The full batches restart on
+`rerun/v0.8-r2-batchNN` with harness `f28849b`.
