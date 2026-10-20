@@ -709,7 +709,9 @@ which is deliberately conservative).
 guards against this only partly. v0.9 reports per-project results as well (v0.9 PROTOCOL §6), and
 we will discuss them alongside the rule outcome. The rule itself is unchanged.
 
-**Results: TBD after collection on 24 November 2026.**
+**Results: TBD after collection on 24 November 2026.** Replacement text for this section, the
+abstract's final sentence and the conclusion was written for every possible outcome before any v0.9
+data were collected (`paper/V09_OUTCOME_TEXT.md`).
 
 | | n | Flaky | ET-BF MCC | C\* | C\* MCC | Δ [95% CI] | Met |
 |---|---:|---:|---:|---|---:|---|---|
