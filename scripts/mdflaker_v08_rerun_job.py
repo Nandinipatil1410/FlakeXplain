@@ -100,13 +100,16 @@ def main():
     (out/f"{env['env_id']}_envcheck.log").write_text(log[-20000:],encoding='utf-8')
     # Collection check (B3): pytest aborts a whole session if any argument cannot be collected, so
     # candidates are collected (never executed) first; uncollectable ones are excluded, label-blind.
-    def collected(nodeids):
+    # Output formats differ (tox/nox wrappers may add -v), so the decision uses only pytest's exit code,
+    # its "N collected" count and its not-found/collection errors, never the listing of IDs.
+    def collectable(nodeids):
         rc,log,_=sh(env['test'].replace('{args}',quote(nodeids)+' --collect-only -q '+env['pytest_args']),cwd,ROUND_TIMEOUT)
-        found={match(re.sub(r'\x1b\[[0-9;]*m','',l).strip(),nodeids) for l in log.splitlines()}
-        return rc,found-{None},log
-    rc,ok,log=collected(env['nodeids'])
-    if rc!=0 or len(ok)<len(env['nodeids']):
-        ok={n for n in env['nodeids'] if n in collected([n])[1]}
+        text=re.sub(r'\x1b\[[0-9;]*m','',log)
+        counts=[int(x) for x in re.findall(r'collected (\d+) items?',text)+re.findall(r'(\d+) tests? collected',text)]
+        bad=re.search(r'ERROR: (not found|found no collectors)|errors? during collection|\d+ errors? in ',text)
+        return str(rc)=='0' and bool(counts) and max(counts)>=len(nodeids) and not bad,log
+    good,log=collectable(env['nodeids'])
+    ok=set(env['nodeids']) if good else {n for n in env['nodeids'] if collectable([n])[0]}
     rec['not_collectable']=[n for n in env['nodeids'] if n not in ok];env['nodeids']=[n for n in env['nodeids'] if n in ok];rec['nodeids']=env['nodeids']
     (out/f"{env['env_id']}_collect.log").write_text(log[-20000:],encoding='utf-8')
     if not env['nodeids']:rec.update(status='excluded',stage='collect',detail='no candidate collectable');save();return

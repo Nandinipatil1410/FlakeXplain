@@ -32,3 +32,17 @@ Two mechanics bugs were found:
 The fix is verified with a check-only pilot (`rerun/v0.8/pilot_collect.json`: the original pilot
 plus the five affected hypothesis environments). After that, **all six batches restart** on new
 branches (`rerun/v0.8-r2-batchNN`), and only their results are used.
+
+## Collection pilot 1 fix (20 Oct 2026; collection and env-check logs only)
+
+Run 39389082524 (check-only) showed two problems with the first collection rule, which parsed node
+IDs out of the collection output:
+- A suffix match also hit pytest's own error lines ("ERROR: not found: .../<id>"), so a garbled ID
+  counted as collectable.
+- urllib3's nox session adds `-v`, so collection printed a tree rather than ID lines, and valid IDs
+  were rejected.
+
+The rule now uses only pytest's exit code, its "N collected" count (N must be at least the number of
+IDs) and the absence of not-found or collection errors. It is applied first to all candidates
+together and then to each one separately. Checked locally: e0003 keeps its 3 real tests and drops
+the garbled ID; e0001 (needs `hypothesistooling`) is excluded.
