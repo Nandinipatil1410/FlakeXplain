@@ -1,0 +1,27 @@
+{
+ "version": "v0.8",
+ "frozen_utc": "2026-10-20T06:36:31+00:00",
+ "git_head": "4a07e0c5acd5899961765e7cfd55d2e7ccad2158",
+ "protocol_markdown_sha256": "865bdbd14cb78a0e19d0a4af1fa22a07ef387d4adbf507453704d6679844bfbb",
+ "candidates_csv_sha256": "ac9d45eaa9e99d1fd1674826dcc4661eb118a3b7d310837ec1b1e593197c51f5",
+ "candidates": 1659,
+ "projects": [
+  "encode/django-rest-framework",
+  "urllib3/urllib3",
+  "pytest-dev/pytest",
+  "HypothesisWorks/hypothesis",
+  "quantumlib/Cirq",
+  "conan-io/conan",
+  "PrefectHQ/prefect",
+  "pypa/setuptools"
+ ],
+ "reruns": 30,
+ "label": "flaky if >=1 pass in 30 reruns; not flaky if 30/30 fail; setup failures excluded",
+ "seed": 20261020,
+ "rule": {
+  "headline": "ET-BF beats comparator by >=0.05 MCC in E1 (time-ordered) and E2 (leave-one-project-out), project-bootstrap 95% CI excl 0; and ET-BF beats ET-B by >=0.02 in E1",
+  "context": "ET-BFC - ET-BF >= 0.02 in E1 and no worse in E2",
+  "minimum_sample": "60 flaky and 60 not flaky across >=4 projects, else descriptive only",
+  "excluded_feature": "has_own_traceback"
+ }
+}
