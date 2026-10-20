@@ -87,3 +87,9 @@ Pilot run 39384062095: 12 of 15 valid; hypothesis still failed. The repository-r
 6. The recipe becomes `pip install -r requirements/test.txt -e {first:hypothesis-python|hypothesis}`.
    `{first:a|b}` resolves to the first existing path. Checked locally on e0004 in check-only mode:
    16 of 16 other tests pass, with the candidate deselected.
+
+## Pilot 4 (20 Oct 2026): recipes accepted
+
+Run 39385024852 (check-only): **14 of 15 environments valid**. All 8 projects have at least one
+valid environment. The only invalid one is prefect e0144 (source `SyntaxError` under Python 3.11),
+which stays excluded under the validity rule. No further recipe changes before the full batches.

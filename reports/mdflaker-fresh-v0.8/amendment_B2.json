@@ -2,7 +2,7 @@
  "amendment": "B2",
  "date": "2026-10-20",
  "before": "any rerun or label",
- "amendment_markdown_sha256": "5f66ffba49153d76ad16921255d43d9061af3878528afbedca12abc119898ed2",
+ "amendment_markdown_sha256": "9073aa5e3db3d8b8fba6e556d364a703724da832b507b5764d5be2c80fe65a95",
  "harness_sha256": "acff5004fafc4c825b1b83427863e6b323552c1744e2752449e13a09bdf6e4d5",
  "planner_sha256": "ac61e34795b31873575e2788f75768af98d26d791761106969419ef0d42c9ced",
  "workflow_sha256": "c44bb44230919d2517999c1c0c5c95dd18d0ad30fbae677e3faa97240fc6fd4d",
@@ -15,5 +15,8 @@
  "pilot2_run": 39383404814,
  "pilot2_valid": "12/15",
  "pilot3_run": 39384062095,
- "pilot3_valid": "12/15"
+ "pilot3_valid": "12/15",
+ "pilot4_run": 39385024852,
+ "pilot4_valid": "14/15",
+ "recipes_frozen": true
 }
