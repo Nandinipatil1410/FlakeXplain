@@ -8,7 +8,7 @@ Sources: candidates.csv, the original CI job logs, local git clones (tested tree
 `git merge-tree` of the PR head into its base) and run metadata from the GitHub API. Re-run outcomes
 and labels are never read.
 """
-import csv,gzip,json,os,re,subprocess,sys,hashlib,datetime
+import csv,gzip,json,os,re,subprocess,sys,hashlib,datetime,shutil
 from collections import defaultdict
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).parent))
@@ -70,7 +70,7 @@ def export(repo,tree):
     """Write the tree's .py files: blobs prefetched in chunks, then checked out into a scratch work tree."""
     dest=SRC/repo.split('/')[1]/tree
     if (dest/'.complete').exists():return dest
-    prefetch(repo,py_blobs(repo,tree))
+    shutil.rmtree(dest,ignore_errors=True);prefetch(repo,py_blobs(repo,tree))
     dest.mkdir(parents=True,exist_ok=True);idx=dest.parent/(tree+'.index')
     env=dict(os.environ,GIT_INDEX_FILE=str(idx),GIT_NO_LAZY_FETCH='1')
     p=subprocess.run(['git','--git-dir',str(clone(repo)),'--work-tree',str(dest),'-c','core.bare=false','-c','gc.auto=0','checkout',tree,'--',':(glob)**/*.py'],capture_output=True,env=env)
@@ -203,7 +203,9 @@ def main():
         if tree:
             root=export(repo,tree)
             if root:
-                if idx[0]!=root:idx=(root,SourceIndex(root))
+                if idx[0]!=root:
+                    if idx[0] is not None:shutil.rmtree(idx[0],ignore_errors=True)  # keep one exported tree on disk at a time
+                    idx=(root,SourceIndex(root));ctx_cache={}
                 fn,cls,path=resolve(idx[1],node)
         key=(repo,base,tree)
         if key not in diff_cache:diff_cache[key]=diff(repo,base,tree)
@@ -236,6 +238,7 @@ def main():
         for col in CONTEXT:row[col]=src[col] if src else 0
         row['context_available']=int(bool(src));rows.append(row)
         if k%100==0:print(k,repo,flush=True)
+    if idx[0] is not None:shutil.rmtree(idx[0],ignore_errors=True)
     rows.sort(key=lambda r:r['candidate']);byjob=defaultdict(list)
     for c,r in zip(cands,rows):byjob[c['job_id']].append((c,r))
     for job,items in byjob.items():
