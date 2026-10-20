@@ -9,6 +9,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    727,
    728
@@ -29,6 +30,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    731,
    732
@@ -49,6 +51,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    733,
    734
@@ -69,6 +72,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    735
   ],
@@ -87,6 +91,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    736
   ],
@@ -105,6 +110,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    737
   ],
@@ -123,6 +129,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    738
   ],
@@ -141,6 +148,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    739
   ],
@@ -159,6 +167,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    740
   ],
@@ -177,6 +186,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    741
   ],
@@ -195,6 +205,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    742
   ],
@@ -213,6 +224,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    743
   ],
@@ -231,6 +243,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    744
   ],
@@ -249,6 +262,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    745
   ],
@@ -267,6 +281,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    746
   ],
@@ -285,6 +300,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    748
   ],
@@ -303,6 +319,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    749,
    750
@@ -323,6 +340,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    751
   ],
@@ -341,6 +359,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    752
   ],
@@ -359,6 +378,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    753
   ],
@@ -377,6 +397,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    755
   ],
@@ -395,6 +416,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    756
   ],
@@ -413,6 +435,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    758
   ],
@@ -431,6 +454,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    759
   ],
@@ -449,6 +473,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    761
   ],
@@ -467,6 +492,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    762
   ],
@@ -485,6 +511,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    767,
    768,
@@ -511,6 +538,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    772
   ],
@@ -529,6 +557,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    773
   ],
@@ -547,6 +576,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    774
   ],
@@ -565,6 +595,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    775
   ],
@@ -583,6 +614,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    777
   ],
@@ -601,6 +633,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    778
   ],
@@ -619,6 +652,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    779
   ],
@@ -637,6 +671,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    780
   ],
@@ -655,6 +690,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    781
   ],
@@ -673,6 +709,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    783
   ],
@@ -691,6 +728,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    788
   ],
@@ -709,6 +747,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    789
   ],
@@ -727,6 +766,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    790
   ],
@@ -745,6 +785,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    791
   ],
@@ -763,6 +804,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    792,
    793
@@ -783,6 +825,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    794,
    795
@@ -803,6 +846,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    796,
    797
@@ -823,6 +867,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    798,
    799
@@ -843,6 +888,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    800,
    801
@@ -863,6 +909,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    802,
    803
@@ -883,6 +930,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    804,
    805
@@ -903,6 +951,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    806,
    807
@@ -923,6 +972,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    808,
    809
@@ -943,6 +993,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    810,
    811
@@ -963,6 +1014,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    812,
    813
@@ -983,6 +1035,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    814,
    815
@@ -1003,6 +1056,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    816,
    817
@@ -1023,6 +1077,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    818,
    819
@@ -1043,6 +1098,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    820,
    821
@@ -1063,6 +1119,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    822,
    823,
@@ -1085,6 +1142,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    825,
    826
@@ -1105,6 +1163,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    827,
    828
@@ -1125,6 +1184,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    829,
    830
@@ -1145,6 +1205,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    831,
    832
@@ -1165,6 +1226,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    833,
    834
@@ -1185,6 +1247,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    835
   ],
@@ -1203,6 +1266,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    836
   ],
@@ -1221,6 +1285,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    837
   ],
@@ -1239,6 +1304,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    838
   ],
@@ -1257,6 +1323,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    839
   ],
@@ -1275,6 +1342,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    840
   ],
@@ -1293,6 +1361,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    841
   ],
@@ -1311,6 +1380,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    842
   ],
@@ -1329,6 +1399,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    843
   ],
@@ -1347,6 +1418,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    844
   ],
@@ -1365,6 +1437,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    845
   ],
@@ -1383,6 +1456,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    846
   ],
@@ -1401,6 +1475,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    847,
    848
@@ -1421,6 +1496,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    849
   ],
@@ -1439,6 +1515,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    850
   ],
@@ -1457,6 +1534,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    851
   ],
@@ -1475,6 +1553,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    852
   ],
@@ -1493,6 +1572,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    853
   ],
@@ -1511,6 +1591,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    854
   ],
@@ -1529,6 +1610,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    855
   ],
@@ -1547,6 +1629,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    856
   ],
@@ -1565,6 +1648,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    857
   ],
@@ -1583,6 +1667,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    858
   ],
@@ -1601,6 +1686,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    859
   ],
@@ -1619,6 +1705,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    860
   ],
@@ -1637,6 +1724,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    861
   ],
@@ -1655,6 +1743,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    862
   ],
@@ -1673,6 +1762,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    863
   ],
@@ -1691,6 +1781,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    864
   ],
@@ -1709,6 +1800,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    865
   ],
@@ -1727,6 +1819,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    866
   ],
@@ -1745,6 +1838,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    867
   ],
@@ -1763,6 +1857,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    868
   ],
@@ -1781,6 +1876,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    869,
    870
@@ -1801,6 +1897,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    871
   ],
@@ -1819,6 +1916,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    872
   ],
@@ -1837,6 +1935,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    873
   ],
@@ -1855,6 +1954,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    874
   ],
@@ -1873,6 +1973,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    875
   ],
@@ -1891,6 +1992,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    876
   ],
@@ -1909,6 +2011,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    877
   ],
@@ -1927,6 +2030,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    878
   ],
@@ -1945,6 +2049,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    879
   ],
@@ -1963,6 +2068,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    880
   ],
@@ -1981,6 +2087,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    881
   ],
@@ -1999,6 +2106,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    882
   ],
@@ -2017,6 +2125,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    883
   ],
@@ -2035,6 +2144,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    884
   ],
@@ -2053,6 +2163,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    885
   ],
@@ -2071,6 +2182,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    886
   ],
@@ -2089,6 +2201,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    887
   ],
@@ -2107,6 +2220,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    888
   ],
@@ -2125,6 +2239,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    889
   ],
@@ -2143,6 +2258,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    890
   ],
@@ -2161,6 +2277,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    891
   ],
@@ -2179,6 +2296,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    892
   ],
@@ -2197,6 +2315,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    893
   ],
@@ -2215,6 +2334,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    894
   ],
@@ -2233,6 +2353,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    895
   ],
@@ -2251,6 +2372,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    896
   ],
@@ -2269,6 +2391,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    897
   ],
@@ -2287,6 +2410,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    898
   ],
@@ -2305,6 +2429,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    899
   ],
@@ -2323,6 +2448,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    900
   ],
@@ -2341,6 +2467,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    901
   ],
@@ -2359,6 +2486,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    902
   ],
@@ -2377,6 +2505,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    903
   ],
@@ -2395,6 +2524,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    904
   ],
@@ -2413,6 +2543,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    905
   ],
@@ -2431,6 +2562,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    906
   ],
@@ -2449,6 +2581,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    907
   ],
@@ -2467,6 +2600,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    908
   ],
@@ -2485,6 +2619,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    909
   ],
@@ -2503,6 +2638,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    910
   ],
@@ -2521,6 +2657,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    911
   ],
@@ -2539,6 +2676,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    912
   ],
@@ -2557,6 +2695,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    913
   ],
@@ -2575,6 +2714,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    914
   ],
@@ -2593,6 +2733,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    915
   ],
@@ -2611,6 +2752,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    916
   ],
@@ -2629,6 +2771,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    917,
    918
@@ -2649,6 +2792,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    919,
    925
@@ -2668,6 +2812,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    920,
    924
@@ -2687,6 +2832,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    921
   ],
@@ -2705,6 +2851,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    922,
    923
@@ -2725,6 +2872,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    926
   ],
@@ -2743,6 +2891,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    927
   ],
@@ -2761,6 +2910,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    928
   ],
@@ -2779,6 +2929,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    929
   ],
@@ -2797,6 +2948,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    930
   ],
@@ -2815,6 +2967,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    931
   ],
@@ -2833,6 +2986,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    932,
    933
@@ -2853,6 +3007,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    934
   ],
@@ -2871,6 +3026,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    935
   ],
@@ -2889,6 +3045,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    936,
    937
@@ -2909,6 +3066,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    938
   ],
@@ -2927,6 +3085,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    939,
    940
@@ -2947,6 +3106,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    941,
    942
@@ -2967,6 +3127,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    943,
    944
@@ -2987,6 +3148,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    945,
    946
@@ -3007,6 +3169,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    947,
    948
@@ -3027,6 +3190,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    949
   ],
@@ -3045,6 +3209,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    950
   ],
@@ -3063,6 +3228,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    951,
    952
@@ -3083,6 +3249,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    953
   ],
@@ -3101,6 +3268,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    954
   ],
@@ -3119,6 +3287,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    955
   ],
@@ -3137,6 +3306,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    956,
    957
@@ -3157,6 +3327,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    958
   ],
@@ -3175,6 +3346,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    959
   ],
@@ -3193,6 +3365,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    960
   ],
@@ -3211,6 +3384,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    961
   ],
@@ -3229,6 +3403,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    962
   ],
@@ -3247,6 +3422,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    963
   ],
@@ -3265,6 +3441,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    964
   ],
@@ -3283,6 +3460,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    965
   ],
@@ -3301,6 +3479,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    966
   ],
@@ -3319,6 +3498,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    967
   ],
@@ -3337,6 +3517,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    968
   ],
@@ -3355,6 +3536,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    969
   ],
@@ -3373,6 +3555,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    970
   ],
@@ -3391,6 +3574,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    971
   ],
@@ -3409,6 +3593,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    972
   ],
@@ -3427,6 +3612,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    973
   ],
@@ -3445,6 +3631,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    974
   ],
@@ -3463,6 +3650,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    975
   ],
@@ -3481,6 +3669,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    976
   ],
@@ -3499,6 +3688,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    977
   ],
@@ -3517,6 +3707,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    978
   ],
@@ -3535,6 +3726,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    979
   ],
@@ -3553,6 +3745,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py315-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    980
   ],
@@ -3571,6 +3764,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    981
   ],
@@ -3589,6 +3783,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py312-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    982
   ],
@@ -3607,6 +3802,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    983
   ],
@@ -3625,6 +3821,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    984
   ],
@@ -3643,6 +3840,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    985
   ],
@@ -3661,6 +3859,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    986
   ],
@@ -3679,6 +3878,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    987
   ],

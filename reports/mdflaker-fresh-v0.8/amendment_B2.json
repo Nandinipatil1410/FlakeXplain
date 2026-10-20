@@ -2,12 +2,14 @@
  "amendment": "B2",
  "date": "2026-10-20",
  "before": "any rerun or label",
- "amendment_markdown_sha256": "b891e137e349529561adf1b1daacff4866f58c4a88344ca5f1d384825609a3f3",
- "harness_sha256": "15aa9918b860be513d6d7a1e3011aaa2d67c604da3f2bd5729018e76203e5e36",
- "planner_sha256": "1948404918f477cbcc2bbae601a7fd8f25b501724456bacec7641f468b2e55d0",
+ "amendment_markdown_sha256": "33d6480935b11b21db8469fc3d6cf8ae765eed91946a80602a788a33e6e1c397",
+ "harness_sha256": "1ca5c9852a0e487cd1d7a676cc9d4fb19d3b635fc1fa2def275ecddbb9dcdf47",
+ "planner_sha256": "766b720e4a0d19ef7f3ff8f9336e74712c159399f9f168fedadd59c5c178b740",
  "workflow_sha256": "c44bb44230919d2517999c1c0c5c95dd18d0ad30fbae677e3faa97240fc6fd4d",
  "plan_sha256": "77be00d13223e93cc93abab5fb6d36191840c5c90f2834559bcb2cb9dfbb5321",
  "env_valid_threshold": 0.8,
  "environments": 1026,
- "candidates_planned": 1641
+ "candidates_planned": 1641,
+ "pilot1_run": 39382651000,
+ "pilot1_valid": "12/15"
 }

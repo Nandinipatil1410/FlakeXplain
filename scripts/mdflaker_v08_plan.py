@@ -69,7 +69,7 @@ def main():
         sha=c['head_sha'];base=c['merge_base'] if c['checkout']=='pr_merge' else ''
         key=(c['repo'],sha,base,runner(c['image']),python_spec(c,variant),variant)
         e=envs.setdefault(key,dict(repo=c['repo'],head_sha=sha,merge_base=base,runner=key[3],python=key[4],variant=variant,
-            setup=setup,test=test,pytest_args=PYTEST_ARGS,candidates=[],nodeids=[]))
+            setup=setup,test=test,pytest_args=PYTEST_ARGS,setup_cwd='workdir' if c['repo']=='PrefectHQ/prefect' else 'root',candidates=[],nodeids=[]))
         e['candidates'].append(i)
         if c['nodeid'] not in e['nodeids']:e['nodeids'].append(c['nodeid'])
     items=list(envs.values())

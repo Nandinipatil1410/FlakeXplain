@@ -56,3 +56,17 @@ with a date before the full run.
 A manual `workflow_dispatch` only works when the workflow file is on the default branch. The
 workflow therefore also runs when a `rerun/v0.8-*` branch is pushed; the batch and mode then come
 from `rerun/v0.8/RUN.json`. This changes how runs start, not what they do.
+
+## Pilot 1 recipe fixes (20 Oct 2026, from setup and env-check logs only; no candidate outcome exists)
+
+Pilot run 39382651000 (check-only): 12 of 15 environments were valid.
+1. **hypothesis install failed (e0000).** Setup ran in the test directory, so relative
+   requirement paths broke. Setup now runs from the repository root (`setup_cwd=root`); prefect keeps
+   `workdir`, because its integration packages are synced in their own directory.
+2. **hypothesis Windows node ID not found (e0004).** The log printed backslash paths. The file part of
+   each node ID is now normalized to `/`.
+3. **prefect e0144: environment check invalid (0/3).** prefect's source raised a `SyntaxError` under
+   the job's Python 3.11. This is left unfixed, and the environment stays excluded under the B2
+   validity rule.
+
+The pilot is repeated in check-only mode to confirm these fixes before any full batch.

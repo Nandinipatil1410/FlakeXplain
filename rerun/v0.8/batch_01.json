@@ -9,6 +9,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    315
   ],
@@ -27,6 +28,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    316,
    317,
@@ -55,6 +57,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    322
   ],
@@ -73,6 +76,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    323
   ],
@@ -91,6 +95,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    324,
    325
@@ -111,6 +116,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    326,
    332
@@ -130,6 +136,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    327,
    330
@@ -149,6 +156,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    328,
    331
@@ -168,6 +176,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    329,
    333
@@ -187,6 +196,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    334
   ],
@@ -205,6 +215,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    335
   ],
@@ -223,6 +234,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    336
   ],
@@ -241,6 +253,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    337
   ],
@@ -259,6 +272,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    338
   ],
@@ -277,6 +291,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    339,
    340,
@@ -310,6 +325,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    344,
    345,
@@ -340,6 +356,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    357,
    358,
@@ -373,6 +390,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    367,
    368,
@@ -403,6 +421,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    379
   ],
@@ -421,6 +440,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    380
   ],
@@ -439,6 +459,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    381
   ],
@@ -457,6 +478,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    382,
    383,
@@ -577,6 +599,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    434,
    435
@@ -597,6 +620,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    436,
    437
@@ -617,6 +641,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    438,
    439
@@ -637,6 +662,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    440
   ],
@@ -655,6 +681,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    441
   ],
@@ -673,6 +700,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    442
   ],
@@ -691,6 +719,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    443,
    444
@@ -711,6 +740,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    445,
    446
@@ -731,6 +761,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    447,
    448
@@ -751,6 +782,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    449,
    450,
@@ -773,6 +805,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    452,
    453
@@ -793,6 +826,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    454,
    455
@@ -813,6 +847,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    456,
    457
@@ -833,6 +868,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    458,
    459
@@ -853,6 +889,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    460,
    461
@@ -873,6 +910,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    462,
    463
@@ -893,6 +931,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    464,
    465
@@ -913,6 +952,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    466,
    467
@@ -933,6 +973,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    468,
    469
@@ -953,6 +994,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    470,
    471
@@ -973,6 +1015,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    472,
    473
@@ -993,6 +1036,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    474
   ],
@@ -1011,6 +1055,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    475
   ],
@@ -1029,6 +1074,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    476
   ],
@@ -1047,6 +1093,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    477
   ],
@@ -1065,6 +1112,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    478
   ],
@@ -1083,6 +1131,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    479
   ],
@@ -1101,6 +1150,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    480
   ],
@@ -1119,6 +1169,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    481
   ],
@@ -1137,6 +1188,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    482,
    483,
@@ -1161,6 +1213,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    486,
    487,
@@ -1183,6 +1236,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    489,
    490
@@ -1203,6 +1257,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    491,
    492
@@ -1223,6 +1278,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    493
   ],
@@ -1241,6 +1297,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    494
   ],
@@ -1259,6 +1316,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    495
   ],
@@ -1277,6 +1335,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    496
   ],
@@ -1295,6 +1354,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    497
   ],
@@ -1313,6 +1373,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    498
   ],
@@ -1331,6 +1392,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    499
   ],
@@ -1349,6 +1411,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    500
   ],
@@ -1367,6 +1430,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    501
   ],
@@ -1385,6 +1449,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    502
   ],
@@ -1403,6 +1468,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    503
   ],
@@ -1421,6 +1487,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    504
   ],
@@ -1439,6 +1506,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    505
   ],
@@ -1457,6 +1525,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    506,
    507
@@ -1477,6 +1546,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    508
   ],
@@ -1495,6 +1565,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    509
   ],
@@ -1513,6 +1584,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    510
   ],
@@ -1531,6 +1603,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    511
   ],
@@ -1549,6 +1622,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    512
   ],
@@ -1567,6 +1641,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    513
   ],
@@ -1585,6 +1660,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    514
   ],
@@ -1603,6 +1679,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    515
   ],
@@ -1621,6 +1698,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    516
   ],
@@ -1639,6 +1717,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    517
   ],
@@ -1657,6 +1736,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    518
   ],
@@ -1675,6 +1755,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    519
   ],
@@ -1693,6 +1774,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    520
   ],
@@ -1711,6 +1793,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    521
   ],
@@ -1729,6 +1812,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    522,
    523,
@@ -1751,6 +1835,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    524,
    527
@@ -1770,6 +1855,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    528
   ],
@@ -1788,6 +1874,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    529
   ],
@@ -1806,6 +1893,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    530
   ],
@@ -1824,6 +1912,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    531
   ],
@@ -1842,6 +1931,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    532
   ],
@@ -1860,6 +1950,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    533
   ],
@@ -1878,6 +1969,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    534,
    535
@@ -1898,6 +1990,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    536
   ],
@@ -1916,6 +2009,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    537,
    538
@@ -1936,6 +2030,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    539
   ],
@@ -1954,6 +2049,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    540,
    541,
@@ -1976,6 +2072,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    543
   ],
@@ -1994,6 +2091,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    544
   ],
@@ -2012,6 +2110,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    545
   ],
@@ -2030,6 +2129,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    546,
    547,
@@ -2054,6 +2154,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    550,
    551,
@@ -2078,6 +2179,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    554
   ],
@@ -2096,6 +2198,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    555,
    556,
@@ -2120,6 +2223,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    559,
    560,
@@ -2144,6 +2248,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    563,
    564,
@@ -2168,6 +2273,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    567,
    568,
@@ -2192,6 +2298,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    571
   ],
@@ -2210,6 +2317,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    572
   ],
@@ -2228,6 +2336,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    573
   ],
@@ -2246,6 +2355,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    574
   ],
@@ -2264,6 +2374,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    575
   ],
@@ -2282,6 +2393,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    576
   ],
@@ -2300,6 +2412,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    577,
    578,
@@ -2324,6 +2437,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    581,
    582,
@@ -2348,6 +2462,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    585,
    586,
@@ -2372,6 +2487,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    589
   ],
@@ -2390,6 +2506,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    590
   ],
@@ -2408,6 +2525,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    591
   ],
@@ -2426,6 +2544,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    592
   ],
@@ -2444,6 +2563,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    593
   ],
@@ -2462,6 +2582,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    594
   ],
@@ -2480,6 +2601,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    595
   ],
@@ -2498,6 +2620,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    596
   ],
@@ -2516,6 +2639,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    597
   ],
@@ -2534,6 +2658,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    598
   ],
@@ -2552,6 +2677,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    599
   ],
@@ -2570,6 +2696,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    600,
    601
@@ -2590,6 +2717,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    602
   ],
@@ -2608,6 +2736,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    603
   ],
@@ -2626,6 +2755,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    604,
    605,
@@ -2650,6 +2780,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    608,
    609,
@@ -2676,6 +2807,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    613,
    614,
@@ -2700,6 +2832,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    617
   ],
@@ -2718,6 +2851,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    618,
    619
@@ -2738,6 +2872,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    620,
    621
@@ -2758,6 +2893,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    622,
    623
@@ -2778,6 +2914,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    624
   ],
@@ -2796,6 +2933,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    625
   ],
@@ -2814,6 +2952,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    626
   ],
@@ -2832,6 +2971,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    627,
    628
@@ -2852,6 +2992,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    629,
    630
@@ -2872,6 +3013,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    631,
    632
@@ -2892,6 +3034,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    633,
    634,
@@ -2916,6 +3059,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    637,
    638,
@@ -2940,6 +3084,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    641,
    642,
@@ -2964,6 +3109,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    645
   ],
@@ -2982,6 +3128,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    646
   ],
@@ -3000,6 +3147,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    647
   ],
@@ -3018,6 +3166,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    648,
    649
@@ -3038,6 +3187,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    650,
    651
@@ -3058,6 +3208,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    652,
    653
@@ -3078,6 +3229,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    654,
    655
@@ -3098,6 +3250,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    656
   ],
@@ -3116,6 +3269,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    657
   ],
@@ -3134,6 +3288,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    658
   ],
@@ -3152,6 +3307,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    659,
    660
@@ -3172,6 +3328,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    661,
    662
@@ -3192,6 +3349,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    663,
    664
@@ -3212,6 +3370,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    665,
    666,
@@ -3236,6 +3395,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    669
   ],
@@ -3254,6 +3414,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    670
   ],
@@ -3272,6 +3433,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    671
   ],
@@ -3290,6 +3452,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    672
   ],
@@ -3308,6 +3471,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    673
   ],
@@ -3326,6 +3490,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    674,
    675
@@ -3346,6 +3511,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    676,
    677
@@ -3366,6 +3532,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    678
   ],
@@ -3384,6 +3551,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    679
   ],
@@ -3402,6 +3570,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    680
   ],
@@ -3420,6 +3589,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    681
   ],
@@ -3438,6 +3608,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    682
   ],
@@ -3456,6 +3627,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    683,
    684
@@ -3476,6 +3648,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    685,
    686
@@ -3496,6 +3669,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    687,
    688,
@@ -3518,6 +3692,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    690
   ],
@@ -3536,6 +3711,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    691
   ],
@@ -3554,6 +3730,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    692
   ],
@@ -3572,6 +3749,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    693
   ],
@@ -3590,6 +3768,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    694
   ],
@@ -3608,6 +3787,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    695
   ],
@@ -3626,6 +3806,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    696,
    697,
@@ -3648,6 +3829,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    699
   ],
@@ -3666,6 +3848,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    700
   ],
@@ -3684,6 +3867,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    701
   ],
@@ -3702,6 +3886,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    702
   ],
@@ -3720,6 +3905,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py313 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    703
   ],
@@ -3738,6 +3924,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    704
   ],
@@ -3756,6 +3943,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    705,
    706,
@@ -3780,6 +3968,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    709
   ],
@@ -3798,6 +3987,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    710
   ],
@@ -3816,6 +4006,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    711,
    712,
@@ -3840,6 +4031,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    715
   ],
@@ -3858,6 +4050,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    716
   ],
@@ -3876,6 +4069,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    717
   ],
@@ -3894,6 +4088,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    718
   ],
@@ -3912,6 +4107,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    719
   ],
@@ -3930,6 +4126,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    720
   ],
@@ -3948,6 +4145,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    721
   ],
@@ -3966,6 +4164,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py310-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    722
   ],
@@ -3984,6 +4183,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    725,
    726

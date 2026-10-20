@@ -71,11 +71,14 @@ def main():
     if err:rec.update(status='setup_failed',stage='checkout',detail=err);save();return
     # Node IDs whose file is absent from the tested tree are log-parsing artifacts (e.g. nested pytester
     # output); they are excluded objectively, before any outcome is seen.
+    # Windows job logs can print node IDs with backslashes; normalize the file part (label-blind).
+    env['nodeids']=[n.split('::',1)[0].replace(chr(92),'/')+('::'+n.split('::',1)[1] if '::' in n else '') for n in env['nodeids']]
     present=[n for n in env['nodeids'] if any(p.as_posix().endswith(n.split('::')[0]) for p in target.rglob(Path(n.split('::')[0]).name))]
     rec['invalid_nodeids']=[n for n in env['nodeids'] if n not in present];env['nodeids']=present;rec['nodeids']=present
     if not present:rec.update(status='excluded',stage='nodeids',detail='no candidate file in tree');save();return
     cwd=workdir(target,env['nodeids']);rec['workdir']=str(cwd.relative_to(target))
-    rc,log,dt=sh(env['setup'],cwd,SETUP_TIMEOUT);rec['setup_seconds']=round(dt)
+    setup_cwd=cwd if env.get('setup_cwd')=='workdir' else target  # most recipes install from the repository root
+    rc,log,dt=sh(env['setup'],setup_cwd,SETUP_TIMEOUT);rec['setup_seconds']=round(dt)
     (out/f"{env['env_id']}_setup.log").write_text(log[-20000:],encoding='utf-8')
     if rc!=0:rec.update(status='setup_failed',stage='install',detail=str(rc));save();return
     files=sorted({n.split('::')[0] for n in env['nodeids']})

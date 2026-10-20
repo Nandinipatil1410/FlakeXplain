@@ -9,6 +9,7 @@
   "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    0
   ],
@@ -27,6 +28,7 @@
   "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    7
   ],
@@ -45,6 +47,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    221,
    222
@@ -65,6 +68,7 @@
   "setup": "python -m pip install uv && uv sync",
   "test": "uv run pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
   "candidates": [
    334
   ],
@@ -83,6 +87,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    434,
    435
@@ -103,6 +108,7 @@
   "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    436,
    437
@@ -123,6 +129,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py311-django52 -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    696,
    697,
@@ -145,6 +152,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    725,
    726
@@ -165,6 +173,7 @@
   "setup": "python -m pip install tox",
   "test": "tox -e py -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    727,
    728
@@ -185,6 +194,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e py314-coverage -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    788
   ],
@@ -203,6 +213,7 @@
   "setup": "python -m pip install tox",
   "test": "tox run -e pypy3-xdist -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    791
   ],
@@ -221,6 +232,7 @@
   "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1155,
    1156,
@@ -243,6 +255,7 @@
   "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
   "test": "python -m pytest {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1157
   ],
@@ -261,6 +274,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1440,
    1441
@@ -281,6 +295,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1442,
    1443

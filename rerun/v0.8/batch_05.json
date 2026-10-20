@@ -9,6 +9,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1630
   ],
@@ -27,6 +28,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1631
   ],
@@ -45,6 +47,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1632
   ],
@@ -63,6 +66,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1633
   ],
@@ -81,6 +85,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1634
   ],
@@ -99,6 +104,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1635
   ],
@@ -117,6 +123,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1636
   ],
@@ -135,6 +142,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1637
   ],
@@ -153,6 +161,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1638
   ],
@@ -171,6 +180,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1639
   ],
@@ -189,6 +199,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1640,
    1641,
@@ -210,6 +221,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1643,
    1644
@@ -230,6 +242,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.15 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1645
   ],
@@ -248,6 +261,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1646
   ],
@@ -266,6 +280,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1647
   ],
@@ -284,6 +299,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1648
   ],
@@ -302,6 +318,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1649
   ],
@@ -320,6 +337,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1650
   ],
@@ -338,6 +356,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1651
   ],
@@ -356,6 +375,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.15 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1652
   ],
@@ -374,6 +394,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1653
   ],
@@ -392,6 +413,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1654
   ],
@@ -410,6 +432,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1655
   ],
@@ -428,6 +451,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1656
   ],
@@ -446,6 +470,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1657
   ],
@@ -464,6 +489,7 @@
   "setup": "python -m pip install nox",
   "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
   "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
   "candidates": [
    1658
   ],
