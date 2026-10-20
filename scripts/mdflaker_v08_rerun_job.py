@@ -37,6 +37,10 @@ def outcomes(text):
         if m:res[m.group(2).split(' - ')[0]]=m.group(1)
     return res
 
+def match(key,nodeids):
+    """pytest may print IDs relative to its rootdir (a parent of our workdir): match exact or '/'-suffix."""
+    return next((n for n in nodeids if key==n or key.endswith('/'+n)),None)
+
 def quote(nodeids):
     return ' '.join(shlex.quote(n) if os.name!='nt' else '"'+n.replace('"','\\"')+'"' for n in nodeids)
 
@@ -89,15 +93,29 @@ def main():
     files=sorted({n.split('::')[0] for n in env['nodeids']})
     deselect=' '.join('--deselect '+quote([n]) for n in env['nodeids'])  # candidates never run in the check
     rc,log,dt=sh(env['test'].replace('{args}',quote(files)+' '+deselect+' '+env['pytest_args']),cwd,ROUND_TIMEOUT*2)
-    res=outcomes(log);others={k:v for k,v in res.items() if k.split('[')[0] not in {n.split('[')[0] for n in env['nodeids']} and k not in env['nodeids']}
+    res=outcomes(log);base={n.split('[')[0] for n in env['nodeids']}
+    others={k:v for k,v in res.items() if match(k.split('[')[0],list(base)) is None}
     rec['env_check']=dict(returncode=str(rc),seconds=round(dt),other_tests=len(others),other_passed=sum(v in ('PASSED','XFAIL','SKIPPED') for v in others.values()),
         other_failed=sum(v in ('FAILED','ERROR') for v in others.values()))
     (out/f"{env['env_id']}_envcheck.log").write_text(log[-20000:],encoding='utf-8')
+    # Collection check (B3): pytest aborts a whole session if any argument cannot be collected, so
+    # candidates are collected (never executed) first; uncollectable ones are excluded, label-blind.
+    def collected(nodeids):
+        rc,log,_=sh(env['test'].replace('{args}',quote(nodeids)+' --collect-only -q '+env['pytest_args']),cwd,ROUND_TIMEOUT)
+        found={match(re.sub(r'\x1b\[[0-9;]*m','',l).strip(),nodeids) for l in log.splitlines()}
+        return rc,found-{None},log
+    rc,ok,log=collected(env['nodeids'])
+    if rc!=0 or len(ok)<len(env['nodeids']):
+        ok={n for n in env['nodeids'] if n in collected([n])[1]}
+    rec['not_collectable']=[n for n in env['nodeids'] if n not in ok];env['nodeids']=[n for n in env['nodeids'] if n in ok];rec['nodeids']=env['nodeids']
+    (out/f"{env['env_id']}_collect.log").write_text(log[-20000:],encoding='utf-8')
+    if not env['nodeids']:rec.update(status='excluded',stage='collect',detail='no candidate collectable');save();return
     if a.check_only:rec['status']='check_only';save();return
     rounds=[]
     for i in range(ROUNDS):
         rc,log,dt=sh(env['test'].replace('{args}',quote(env['nodeids'])+' '+env['pytest_args']),cwd,ROUND_TIMEOUT)
-        res=outcomes(log);rounds.append(dict(returncode=str(rc),seconds=round(dt,1),outcomes={n:res.get(n,'MISSING') for n in env['nodeids']}))
+        res={};[res.setdefault(match(k,env['nodeids']),v) for k,v in outcomes(log).items()]
+        rounds.append(dict(returncode=str(rc),seconds=round(dt,1),outcomes={n:res.get(n,'MISSING') for n in env['nodeids']}))
         if i==0:(out/f"{env['env_id']}_round0.log").write_text(log[-20000:],encoding='utf-8')
         rec['rounds']=rounds;save()
     rec['status']='done';save()

@@ -1,0 +1,410 @@
+[
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "f7e5f86247f74f940c5be09ffb8985fcbfcb6eee",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e {first:hypothesis-python|hypothesis}",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   0
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0000"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "1a296883b44603ce958903e50378a33fed9601fb",
+  "merge_base": "61cb14ac6a37c470ae4930892a459f805b73347e",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e {first:hypothesis-python|hypothesis}",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   7
+  ],
+  "nodeids": [
+   "tests\\conjecture\\test_inquisitor.py::test_inquisitor_no_misleading_comment_for_eq_args"
+  ],
+  "env_id": "e0004"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "fb4b7cf8a4267009cc499d197c4b7d1ccab2b39f",
+  "merge_base": "3a9b40f635a2d53730f7311e2f2eb520245e76bb",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
+  "candidates": [
+   221,
+   222
+  ],
+  "nodeids": [
+   "integration-tests/test_flow_pauses.py::test_flow_pauses",
+   "integration-tests/test_automation_assessments.py::test_compound_automation"
+  ],
+  "env_id": "e0144"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "1eb0617c55cdad55685bcdb8eabbf79806e2fe0a",
+  "merge_base": "87b5243845e733ed938b21cf7b9aeda6d6a4e194",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "workdir",
+  "candidates": [
+   334
+  ],
+  "nodeids": [
+   "tests/test_futures.py::TestPrefectFutureList::test_result_with_zero_timeout_preserves_enclosing_timeout"
+  ],
+  "env_id": "e0209"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "merge_base": "",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   434,
+   435
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0222"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   436,
+   437
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0223"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "2c5d41e73d658280e34d766191ea428c7f1d3dd4",
+  "merge_base": "65066b326dc358aba87d7fba1101a94fc2dbf004",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   696,
+   697,
+   698
+  ],
+  "nodeids": [
+   "tests/test_throttling.py::XffUniqueMachinesTest::test_unique_clients_are_counted_independently_with_one_proxy",
+   "tests/test_throttling.py::XffUniqueMachinesTest::test_unique_clients_are_counted_independently_with_two_proxies",
+   "tests/test_urlpatterns.py::FormatSuffixTests::test_format_suffix_django2_args"
+  ],
+  "env_id": "e0380"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "a9f0d07125be8b0aa428f1706a0601af828633ac",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   725,
+   726
+  ],
+  "nodeids": [
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags0-INFO]",
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags1-DEBUG]"
+  ],
+  "env_id": "e0399"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "a9f0d07125be8b0aa428f1706a0601af828633ac",
+  "merge_base": "",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   727,
+   728
+  ],
+  "nodeids": [
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags0-INFO]",
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags1-DEBUG]"
+  ],
+  "env_id": "e0400"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "b5812a7458451c4441075bb65502ada1cb56a937",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   788
+  ],
+  "nodeids": [
+   "testing/test_session.py::TestNewSession::test_syntax_error_module"
+  ],
+  "env_id": "e0437"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "239b0927ae03a44e20995f8c97b282db21f2f252",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   791
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0440"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "43e450b344fd82752cad15aef7b31ea19d9c2b30",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   1155,
+   1156,
+   1159
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_run_name_and_device_config_name_succeeds[--1]",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_without_job_id",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_run_name_and_device_config_name_succeeds[--0]"
+  ],
+  "env_id": "e0684"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "43e450b344fd82752cad15aef7b31ea19d9c2b30",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   1157
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_run_name_and_device_config_name_succeeds[--0]"
+  ],
+  "env_id": "e0685"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   1440,
+   1441
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_exceptions.py::TestPickle::test_exceptions[exception11]"
+  ],
+  "env_id": "e0824"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   1442,
+   1443
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_exceptions.py::TestPickle::test_exceptions[exception11]"
+  ],
+  "env_id": "e0825"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d18e36d63aebc7c3a596dabfc74be476c823c6c5",
+  "merge_base": "f58678b123bb2b0fe985fb31de8cf72f783999bb",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e {first:hypothesis-python|hypothesis}",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   1
+  ],
+  "nodeids": [
+   "whole_repo_tests/types/test_hypothesis.py::test_mypy_passes_on_hypothesis"
+  ],
+  "env_id": "e0001"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7e4334ac6f6521af36297173b332ce85fe7b4105",
+  "merge_base": "61cb14ac6a37c470ae4930892a459f805b73347e",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e {first:hypothesis-python|hypothesis}",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   3,
+   4,
+   5,
+   6
+  ],
+  "nodeids": [
+   "tests/snapshots/test_tracebacks.py::test_traceback_framesultiple_failures]",
+   "tests/pytest/test_reporting.py::test_no_missing_reports[auto]",
+   "tests/pytest/test_reporting.py::test_no_missing_reports[long]",
+   "tests/pytest/test_reporting.py::test_no_missing_reports[short]"
+  ],
+  "env_id": "e0003"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b7d806935d0f24d9a3173d075c57cce8a62cbaff",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e {first:hypothesis-python|hypothesis}",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   19
+  ],
+  "nodeids": [
+   "tests/ghostwriter/test_ghostwriter_cli.py::test_write_command_reports_syntax_highlighting_errors"
+  ],
+  "env_id": "e0011"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c817315f19c2924b7ca328db27ada0c87f3fbdb7",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e {first:hypothesis-python|hypothesis}",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   20
+  ],
+  "nodeids": [
+   "tests/ghostwriter/test_ghostwriter_cli.py::test_write_command_reports_syntax_highlighting_errors"
+  ],
+  "env_id": "e0012"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "4213058e8e7839bf3fe84d615c810c4d41d7d0b6",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e {first:hypothesis-python|hypothesis}",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "setup_cwd": "root",
+  "candidates": [
+   23
+  ],
+  "nodeids": [
+   "tests/pandas/test_series.py::test_tz_aware_series_from_naive_datetime_elements"
+  ],
+  "env_id": "e0015"
+ }
+]

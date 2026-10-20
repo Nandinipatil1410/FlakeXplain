@@ -1,0 +1,12 @@
+{
+ "amendment": "B3",
+ "date": "2026-10-20",
+ "before": "any label computed",
+ "discarded_runs": [
+  39386823153,
+  39386840500
+ ],
+ "amendment_markdown_sha256": "05d606288e52d2eab9e62c899d5d2bed870092095f154affe642361819876cd6",
+ "harness_sha256": "d9951f2132e255a3f01e2d573018234a4731382e4516d7e521ad23e05d14b954",
+ "restart_branches": "rerun/v0.8-r2-batchNN"
+}
