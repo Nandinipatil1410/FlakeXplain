@@ -31,6 +31,14 @@ def main():
                 elif any(o in ('PASSED','XPASS') for o in outs):label[i]=1;why[i]=env
                 elif all(o in ('FAILED','ERROR') for o in outs):label[i]=0;why[i]=env
                 else:label[i]=None;why[i]='mixed_skip_or_missing'
+    # candidates planned but without any artifact (job failed before upload, e.g. unavailable Python) are reported, not dropped
+    planned=json.loads((ROOT/'rerun/v0.8/plan.json').read_text())
+    for b in range(planned['batches']):
+        for e in json.loads((ROOT/f'rerun/v0.8/batch_{b:02d}.json').read_text()):
+            for i in e['candidates']:
+                if i not in label:label[i]=None;why[i]='no_artifact'
+    for x in planned['excluded']:
+        if x['candidate'] not in label:label[x['candidate']]=None;why[x['candidate']]='planner_excluded:'+x['reason']
     out=ROOT/'local-evidence/mdflaker-fresh-v0.8/labels.csv'
     with open(out,'w',newline='',encoding='utf-8') as f:
         w=csv.writer(f);w.writerow(['candidate','repo','label','status'])
