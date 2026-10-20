@@ -281,5 +281,5 @@ evidence is not disturbed.
 
 ## Licence and archiving
 
-- Licence: to be chosen by the team; see `LICENSE_OPTIONS.md`.
+- Licence (decided 21 October 2026): code under **MIT** (`../LICENSE`), derived data under **CC-BY-4.0** (`LICENSE-DATA.md`). Third-party material is listed in `../LICENSES.md`.
 - Archive metadata: `.zenodo.json` holds the draft Zenodo metadata, for when release is approved.

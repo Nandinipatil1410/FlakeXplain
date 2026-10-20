@@ -1,7 +1,8 @@
 # Licence options for the v0.8 replication package (draft for the team)
 
-Status: **Proposed.** No licence has been chosen, and there is no `LICENSE` file. The team picks one
-option for the code and one for the data. The guide approves the data release.
+Status: **Decided, 21 October 2026.** The team chose the suggestions below: **MIT** for code
+(`../LICENSE`) and **CC-BY-4.0** for data (`LICENSE-DATA.md`). Third-party material is listed in
+`../LICENSES.md`. The data release itself still needs the guide's approval.
 
 ## Code (scripts, workflow, export script)
 
