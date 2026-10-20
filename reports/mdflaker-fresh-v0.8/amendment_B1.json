@@ -2,7 +2,9 @@
  "amendment": "B1",
  "date": "2026-10-20",
  "before": "any rerun or label",
- "amendment_markdown_sha256": "4b31dee5a74b947142f09dc9f53ed0ecac77d90354cd6f1c12b8cb397006d815",
+ "amendment_markdown_sha256": "9d2149f2795d40ddb71efb2dceb311a6feccbe16130e9f3eedee6b1eea830abb",
  "candidates_csv_sha256": "3b22aebf2c4035f1e1327fca2d717f856955c36351435e8eb9d6742dbddaaede",
- "protocol_json_sha256_unchanged": "32dbd9bbb59aa5fd110b095d97f754054878378c1c64606c1fdb5aa3ac1c9604"
+ "protocol_json_sha256_unchanged": "32dbd9bbb59aa5fd110b095d97f754054878378c1c64606c1fdb5aa3ac1c9604",
+ "pr_candidates": 1544,
+ "push_candidates": 115
 }

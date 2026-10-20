@@ -18,4 +18,4 @@ tested":
 
 **Data.** `candidates.csv` gains two label-blind columns, `checkout` and `merge_base`. The rows are
 unchanged (1,659), and each row's other fields are identical. The new file's SHA-256 is in
-`amendment_B1.json`. All 1,629 PR candidates have a parsed merge line; 30 candidates are push runs.
+`amendment_B1.json`. All 1,544 PR candidates have a parsed merge line; 115 candidates are push runs. (An earlier version of this sentence stated 1,629 and 30 by mistake; corrected before any re-run.)
