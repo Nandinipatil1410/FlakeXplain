@@ -1,33 +1,47 @@
 name: MDFlaker v0.8 reruns
 # Re-runs each frozen candidate failure 30 times in a matching environment (reports/mdflaker-fresh-v0.8).
 on:
+  push:
+    branches: ['rerun/v0.8-**']   # pushing a rerun/v0.8-* branch starts the batch named in rerun/v0.8/RUN.json
   workflow_dispatch:
     inputs:
       batch:
         description: Batch file under rerun/v0.8 (e.g. batch_00.json, or pilot.json)
-        required: true
-        default: pilot.json
+        required: false
       mode:
         description: check-only (setup + environment check, no candidate reruns) or full (30 reruns)
-        required: true
-        default: check-only
+        required: false
         type: choice
         options: [check-only, full]
 permissions:
   contents: read
 concurrency:
-  group: mdflaker-v08-${{ inputs.batch }}-${{ inputs.mode }}
+  group: mdflaker-v08-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   plan:
     runs-on: ubuntu-24.04
     outputs:
       matrix: ${{ steps.m.outputs.matrix }}
+      batch: ${{ steps.m.outputs.batch }}
+      mode: ${{ steps.m.outputs.mode }}
     steps:
       - uses: actions/checkout@v4
       - id: m
+        env:
+          IN_BATCH: ${{ inputs.batch }}
+          IN_MODE: ${{ inputs.mode }}
         run: |
-          python3 -c "import json,sys; b=json.load(open('rerun/v0.8/${{ inputs.batch }}')); print('matrix='+json.dumps({'include':[{'env':e['env_id'],'runner':e['runner'],'python':e['python']} for e in b]}))" >> "$GITHUB_OUTPUT"
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          run = json.load(open('rerun/v0.8/RUN.json'))
+          batch = os.environ.get('IN_BATCH') or run['batch']
+          mode = os.environ.get('IN_MODE') or run['mode']
+          assert mode in ('check-only', 'full') and '/' not in batch
+          envs = json.load(open('rerun/v0.8/' + batch))
+          print('batch=' + batch); print('mode=' + mode)
+          print('matrix=' + json.dumps({'include': [{'env': e['env_id'], 'runner': e['runner'], 'python': e['python']} for e in envs]}))
+          PY
   rerun:
     needs: plan
     strategy:
@@ -50,7 +64,7 @@ jobs:
         shell: bash
         env:
           PYTHONIOENCODING: utf-8
-        run: python flakexplain/scripts/mdflaker_v08_rerun_job.py --batch "flakexplain/rerun/v0.8/${{ inputs.batch }}" --env "${{ matrix.env }}" --out results ${{ inputs.mode == 'check-only' && '--check-only' || '' }}
+        run: python flakexplain/scripts/mdflaker_v08_rerun_job.py --batch "flakexplain/rerun/v0.8/${{ needs.plan.outputs.batch }}" --env "${{ matrix.env }}" --out results ${{ needs.plan.outputs.mode == 'check-only' && '--check-only' || '' }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
