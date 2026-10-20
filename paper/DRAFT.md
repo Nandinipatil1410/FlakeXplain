@@ -3,8 +3,8 @@
 **Draft v2, 20 October 2026. Not for submission.** Section 11 is completed after the v0.9
 collection (T1 = 24 November 2026).
 Authors: Nandini Patil, Bhumika Mane, Trusha Kulkarni, Pranavi Baad (author order and affiliations TBD).
-Target: a Q3 journal. Software Impacts, the base paper's journal, publishes only short software
-articles, so the full paper needs another Q3 venue (see "Team decisions" at the end).
+Target: *Science of Computer Programming* (Elsevier, Q3), Research Papers Track. A short
+Software Impacts tool article follows later (see "Team decisions", item 1).
 
 Status conventions used in this draft (from `AGENTS.md`): every result is tagged as **frozen rule**
 (decided before the data were labelled), **post hoc** (computed after the frozen results were
@@ -749,11 +749,18 @@ Decisions (20 October 2026):
    already been used in published research, with mandatory open code and a fixed template
    ([Elsevier journal page](https://shop.elsevier.com/journals/software-impacts/2665-9638),
    [SIMPAC template](https://legacyfileshare.elsevier.com/promis_misc/SIMPAC_Article_Template.pdf)).
-   This full paper does not fit that format. **Proposal:** submit the full paper to another Q3
-   journal. *Science of Computer Programming* (Elsevier, SCImago Q3 in Software 2022–2025, and it
-   published the flaky-test paper JS-TOD [R15]) is the best fit; IJSEKE (Q3 in 2025) is a fallback
-   [v0.6 BASE_PAPER_SEARCH]. Later, once that paper is published, a short Software Impacts article
-   can describe the FlakeXplain tool. **Needs the team's choice.**
+   This full paper does not fit that format. **Decided (20 October 2026):**
+   - **First:** this research paper goes to *Science of Computer Programming* (SCP), Research
+     Papers Track. SCP is Elsevier, SCImago Q3 in Software for 2022–2025, and has published the
+     flaky-test paper JS-TOD [R15] [v0.6 BASE_PAPER_SEARCH]. It is a subscription journal with an
+     optional gold open-access fee.
+   - **Second, after SCP acceptance:** a short Software Impacts article on the FlakeXplain
+     software (CI-log collector, 30-rerun harness, feature extraction, classifier). It cites the SCP
+     paper as the research that used the software and does not repeat its results. This needs the
+     code under an OSI-approved licence and a clean, runnable release.
+   - **Fallback journal:** IJSEKE (Q3 in 2025).
+   - **To confirm:** the guide accepts that a paper in SCP improving on a Software Impacts base paper
+     meets the Q3 requirement; both journals' current Guides for Authors before submission.
 2. **Timing.** We will not submit before v0.9. The paper is made ready now, and Section 11 (plus the
    abstract and conclusion) is completed after collection on 24 November 2026, or on 22 December if
    the window is extended.
@@ -786,7 +793,7 @@ Decisions (20 October 2026):
     contribution list already follow this order.
 
 Still open:
-- the target journal (decision 1);
+- the guide's confirmation of the journal plan (decision 1);
 - the data-release approval (decision 8);
 - author order and affiliations.
 
