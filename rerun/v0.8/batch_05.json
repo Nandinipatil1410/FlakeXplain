@@ -1,0 +1,475 @@
+[
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1630
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e1000"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1631
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e1001"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1632
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e1002"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1633
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e1003"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1634
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e1004"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1635
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e1005"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1636
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e1006"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1637
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e1007"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "36a413ee5a4686eb48a33bf395b5c2f8246ad274",
+  "merge_base": "",
+  "runner": "macos-15",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1638
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestSSL::test_ssl_load_default_certs_when_empty"
+  ],
+  "env_id": "e1008"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "5734c4e89adb1f3e41a9e6f3f9803a07f72db9b0",
+  "merge_base": "5ebe9bf9f691646dcabdb259ffabfc6108ded5e8",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1639
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestSSL::test_ssl_failed_fingerprint_verification"
+  ],
+  "env_id": "e1009"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "d2d6908b628a2d6e1972018191ca97a3281297b2",
+  "merge_base": "5ebe9bf9f691646dcabdb259ffabfc6108ded5e8",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1640,
+   1641,
+   1642
+  ],
+  "nodeids": [
+   "test/contrib/test_pyopenssl.py::TestSocketSSL::test_ssl_failed_fingerprint_verification",
+   "test/with_dummyserver/test_socketlevel.py::TestSSL::test_ssl_failed_fingerprint_verification"
+  ],
+  "env_id": "e1010"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "b066a98bb505d197b201a3caa76921ffef58d382",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1643,
+   1644
+  ],
+  "nodeids": [
+   "test/contrib/test_pyopenssl.py::TestSocketSSL::test_ssl_failed_fingerprint_verification",
+   "test/with_dummyserver/test_socketlevel.py::TestSSL::test_ssl_failed_fingerprint_verification"
+  ],
+  "env_id": "e1011"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ecaeaf132466ffab176ca87ecbe1bc690bb411b3",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "test-3.15",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.15 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1645
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1012"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ecaeaf132466ffab176ca87ecbe1bc690bb411b3",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1646
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1013"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ecaeaf132466ffab176ca87ecbe1bc690bb411b3",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "test-3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1647
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1014"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ecaeaf132466ffab176ca87ecbe1bc690bb411b3",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1648
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1015"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ecaeaf132466ffab176ca87ecbe1bc690bb411b3",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1649
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1016"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ecaeaf132466ffab176ca87ecbe1bc690bb411b3",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1650
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1017"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ecaeaf132466ffab176ca87ecbe1bc690bb411b3",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1651
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1018"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "294b68c79609eafbb57abc0905e6ae3ea4fecb28",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "test-3.15",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.15 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1652
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1019"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "294b68c79609eafbb57abc0905e6ae3ea4fecb28",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1653
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1020"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "294b68c79609eafbb57abc0905e6ae3ea4fecb28",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1654
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1021"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "294b68c79609eafbb57abc0905e6ae3ea4fecb28",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "test-3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1655
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1022"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "294b68c79609eafbb57abc0905e6ae3ea4fecb28",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1656
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1023"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "294b68c79609eafbb57abc0905e6ae3ea4fecb28",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1657
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1024"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "294b68c79609eafbb57abc0905e6ae3ea4fecb28",
+  "merge_base": "a37bc93b65d6bcf00d3dc43d966bab6bd130ecd8",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1658
+  ],
+  "nodeids": [
+   "test/test_wait.py::test_wait_for_read_timeout_too_large"
+  ],
+  "env_id": "e1025"
+ }
+]

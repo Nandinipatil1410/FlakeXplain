@@ -1,0 +1,3997 @@
+[
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "b2327dbbb1756f72cb3be12da764b4b9ca3c06aa",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   315
+  ],
+  "nodeids": [
+   "tests/cli/deploy/test_schedule_config.py::TestIntervalScheduleFormats::test_interval_schedule_accepts_various_formats[PT10M-600]"
+  ],
+  "env_id": "e0200"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "b2327dbbb1756f72cb3be12da764b4b9ca3c06aa",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   316,
+   317,
+   318,
+   319,
+   320,
+   321
+  ],
+  "nodeids": [
+   "tests/cli/deploy/test_schedule_config.py::TestIntervalScheduleFormats::test_interval_schedule_accepts_various_formats[P1D-86400]",
+   "tests/cli/deploy/test_schedule_config.py::TestIntervalScheduleFormats::test_interval_schedule_accepts_various_formats[PT1H-3600]",
+   "tests/cli/deploy/test_schedule_config.py::TestIntervalScheduleFormats::test_interval_schedule_accepts_various_formats[PT1H30M-5400]",
+   "tests/cli/test_deploy.py::TestSchedules::test_interval_schedule_deployment_yaml",
+   "tests/cli/test_deploy.py::TestSchedules::test_can_provide_multiple_schedules_via_yaml",
+   "tests/cli/deploy/test_schedule_config.py::TestIntervalScheduleFormats::test_interval_schedule_accepts_various_formats[PT10M-600]"
+  ],
+  "env_id": "e0201"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "df5b008eac972d9bdad65130823c8d3b26d8861c",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   322
+  ],
+  "nodeids": [
+   "tests/test_futures.py::TestPrefectFutureList::test_results_with_timeout"
+  ],
+  "env_id": "e0202"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "f4064858cbce165227373b7575ae89f8a5bd0063",
+  "merge_base": "a3febfa76870e066c29ed7c2c5a7b804e06713eb",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   323
+  ],
+  "nodeids": [
+   "tests/cli/deployment/test_deployment_cli.py::test_list_schedules_displays_calendar_interval"
+  ],
+  "env_id": "e0203"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "f4064858cbce165227373b7575ae89f8a5bd0063",
+  "merge_base": "a3febfa76870e066c29ed7c2c5a7b804e06713eb",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   324,
+   325
+  ],
+  "nodeids": [
+   "tests/cli/deployment/test_deployment_cli.py::test_list_schedules_displays_calendar_interval",
+   "tests/cli/test_start_server.py::TestUvicornSignalForwarding::test_sigint_shutsdown_cleanly"
+  ],
+  "env_id": "e0204"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "02c67484df62932ae8f48bdbc938f6dff1a1d305",
+  "merge_base": "e29ee8a50c54aa3b41c1566827f6223997e7153c",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   326,
+   332
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0205"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "02c67484df62932ae8f48bdbc938f6dff1a1d305",
+  "merge_base": "e29ee8a50c54aa3b41c1566827f6223997e7153c",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   327,
+   330
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0206"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "02c67484df62932ae8f48bdbc938f6dff1a1d305",
+  "merge_base": "e29ee8a50c54aa3b41c1566827f6223997e7153c",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   328,
+   331
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0207"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "02c67484df62932ae8f48bdbc938f6dff1a1d305",
+  "merge_base": "e29ee8a50c54aa3b41c1566827f6223997e7153c",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   329,
+   333
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0208"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "1eb0617c55cdad55685bcdb8eabbf79806e2fe0a",
+  "merge_base": "87b5243845e733ed938b21cf7b9aeda6d6a4e194",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   334
+  ],
+  "nodeids": [
+   "tests/test_futures.py::TestPrefectFutureList::test_result_with_zero_timeout_preserves_enclosing_timeout"
+  ],
+  "env_id": "e0209"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "b38f014c1b6c19d05cb953aec4dbf80a737bb763",
+  "merge_base": "87b5243845e733ed938b21cf7b9aeda6d6a4e194",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   335
+  ],
+  "nodeids": [
+   "tests/runner/test_control_channel_e2e.py::test_first_terminal_message_wins_real_process_race[receipt-recorded-first-False-relinquish]"
+  ],
+  "env_id": "e0210"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "afe904f43fc9afdf6f619a7438bf0172912001b6",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   336
+  ],
+  "nodeids": [
+   "tests/server/utilities/test_database.py::TestDateFunctions::test_date_diff_seconds_from_now_column"
+  ],
+  "env_id": "e0211"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "e79a711b745707a47e350ee0f2154915541e6ed6",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   337
+  ],
+  "nodeids": [
+   "tests/workers/test_base_worker.py::TestWorkerChannelClient::test_unhealthy_channel_reconnects_with_rest_fallback_active"
+  ],
+  "env_id": "e0212"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "c3a5d5906b4dbb65eecc7133617de730fea58053",
+  "merge_base": "e79a711b745707a47e350ee0f2154915541e6ed6",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   338
+  ],
+  "nodeids": [
+   "tests/events/client/test_events_client.py::test_background_checkpoint_reconnects_after_connection_loss[PrefectCloudEventsClient]"
+  ],
+  "env_id": "e0213"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "bb4f72475978eb935cb96172d23b7d8a970090a2",
+  "merge_base": "960d278105861fd1d6a656f420a205d7b3863935",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   339,
+   340,
+   341,
+   342,
+   343,
+   352,
+   353,
+   354,
+   355,
+   356,
+   372
+  ],
+  "nodeids": [
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_rrule_schedule_preserves_and_localizes_exdates",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_rrule_schedule_preserves_and_localizes_rdates",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_keeps_second_occurrence_of_repeated_hour[rdate]",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_preserves_rdate_and_exdate_in_another_timezone",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_preserves_rrules_rdates_exrules_exdates",
+   "tests/client/schemas/test_schedules.py::TestRRuleScheduleFromRRule::test_rruleset_keeps_rdate_and_exdate_instants_in_another_timezone"
+  ],
+  "env_id": "e0214"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "bb4f72475978eb935cb96172d23b7d8a970090a2",
+  "merge_base": "960d278105861fd1d6a656f420a205d7b3863935",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   344,
+   345,
+   346,
+   347,
+   348,
+   349,
+   350,
+   351,
+   371
+  ],
+  "nodeids": [
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_rrule_schedule_preserves_and_localizes_exdates",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_rrule_schedule_preserves_and_localizes_rdates",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_preserves_rdate_and_exdate_in_another_timezone",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_preserves_rrules_rdates_exrules_exdates",
+   "tests/client/schemas/test_schedules.py::TestRRuleScheduleFromRRule::test_rruleset_keeps_rdate_and_exdate_instants_in_another_timezone"
+  ],
+  "env_id": "e0215"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "bb4f72475978eb935cb96172d23b7d8a970090a2",
+  "merge_base": "960d278105861fd1d6a656f420a205d7b3863935",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   357,
+   358,
+   359,
+   360,
+   361,
+   362,
+   363,
+   364,
+   365,
+   366,
+   373
+  ],
+  "nodeids": [
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_rrule_schedule_preserves_and_localizes_exdates",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_rrule_schedule_preserves_and_localizes_rdates",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_keeps_second_occurrence_of_repeated_hour[rdate]",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_preserves_rdate_and_exdate_in_another_timezone",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_preserves_rrules_rdates_exrules_exdates",
+   "tests/client/schemas/test_schedules.py::TestRRuleScheduleFromRRule::test_rruleset_keeps_rdate_and_exdate_instants_in_another_timezone"
+  ],
+  "env_id": "e0216"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "bb4f72475978eb935cb96172d23b7d8a970090a2",
+  "merge_base": "960d278105861fd1d6a656f420a205d7b3863935",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   367,
+   368,
+   369,
+   370,
+   374,
+   375,
+   376,
+   377,
+   378
+  ],
+  "nodeids": [
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_rrule_schedule_preserves_and_localizes_exdates",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_rrule_schedule_preserves_and_localizes_rdates",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_preserves_rdate_and_exdate_in_another_timezone",
+   "tests/server/schemas/test_schedules.py::TestRRuleSchedule::test_serialization_preserves_rrules_rdates_exrules_exdates",
+   "tests/client/schemas/test_schedules.py::TestRRuleScheduleFromRRule::test_rruleset_keeps_rdate_and_exdate_instants_in_another_timezone"
+  ],
+  "env_id": "e0217"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "230c1928ccf8b1c1f93dac7b595bbd17a84cafa6",
+  "merge_base": "189bf69608210e0276017976dad2326718fce7c5",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   379
+  ],
+  "nodeids": [
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_flow_raises_a_base_exception[sync]"
+  ],
+  "env_id": "e0218"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "230c1928ccf8b1c1f93dac7b595bbd17a84cafa6",
+  "merge_base": "189bf69608210e0276017976dad2326718fce7c5",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   380
+  ],
+  "nodeids": [
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_flow_ends_in_failed[sync]"
+  ],
+  "env_id": "e0219"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "230c1928ccf8b1c1f93dac7b595bbd17a84cafa6",
+  "merge_base": "189bf69608210e0276017976dad2326718fce7c5",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   381
+  ],
+  "nodeids": [
+   "tests/_experimental/bundles/test_execute.py::test_execute_bundle_preserves_failed_outcome"
+  ],
+  "env_id": "e0220"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "230c1928ccf8b1c1f93dac7b595bbd17a84cafa6",
+  "merge_base": "189bf69608210e0276017976dad2326718fce7c5",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   382,
+   383,
+   384,
+   385,
+   386,
+   387,
+   388,
+   389,
+   390,
+   391,
+   392,
+   393,
+   394,
+   395,
+   396,
+   397,
+   398,
+   399,
+   400,
+   401,
+   402,
+   403,
+   404,
+   405,
+   406,
+   407,
+   408,
+   409,
+   410,
+   411,
+   412,
+   413,
+   414,
+   415,
+   416,
+   417,
+   418,
+   419,
+   420,
+   421,
+   422,
+   423,
+   424,
+   425,
+   426,
+   427,
+   428,
+   429,
+   430,
+   431,
+   432,
+   433
+  ],
+  "nodeids": [
+   "tests/runner/test_runner.py::TestResolveStarter::test_add_flow_preserves_direct_subprocess_crash_fallback",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_with_provided_flow_run[sync]",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_submit_with_wait_for",
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_with_parameters[sync]",
+   "tests/server/concurrency/test_filesystem_lease_storage.py::TestFilesystemConcurrencyLeaseStorage::test_processes_preserve_expiration_index[operations0]",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_flow_process_is_killed[sync]",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_map_sync_task_with_context",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_task_raises_exception",
+   "tests/_experimental/bundles/test_execute.py::test_execute_bundle_preserves_failed_outcome",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_flow_is_aborted[sync]",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_basic[sync]",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_with_provided_context[sync]",
+   "tests/test_subprocess_logging.py::TestWithContextProcessPoolExecutor::test_get_run_logger_works_in_executor",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_handles_recursively_submitted_tasks",
+   "tests/runner/test_runner.py::TestResolveStarter::test_add_flow_preserves_failed_direct_subprocess_outcome",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_flow_is_aborted[async]",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_cached_context_cleared_on_cancel_all",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_cached_context_cleared_on_exit",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_map_async_task_with_context",
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_flow_process_is_killed[async]",
+   "tests/test_infrastructure_bound_flow.py::TestInfrastructureBoundFlow::test_submit_with_error",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_cached_context_populated_after_submit",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_subprocess_events_are_forwarded_with_related_resources",
+   "tests/test_infrastructure_bound_flow.py::TestInfrastructureBoundFlow::test_basic_call",
+   "tests/test_infrastructure_bound_flow.py::TestInfrastructureBoundFlow::test_retry_existing_flow_run",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_submit_sync_task",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_flow_process_is_killed[async]",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_map_sync_task",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_async_task_raises_exception",
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_flow_raises_a_base_exception[async]",
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_with_provided_context[sync]",
+   "tests/runner/test_runner.py::test_runner_runs_on_cancellation_hooks_for_instance_method_flows",
+   "tests/test_locking.py::TestMemoryLockManager::test_manager_has_no_lock_information_when_deserialized_in_new_process",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_submit_with_wait_for_upstream_failure",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_flow_ends_in_failed[sync]",
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_basic[async]",
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_flow_is_aborted[async]",
+   "tests/test_infrastructure_bound_flow.py::TestInfrastructureBoundFlow::test_call_with_job_variables",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_submit_async_task_receives_context",
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_with_provided_context[async]",
+   "tests/runner/test_runner.py::test_runner_can_execute_instance_method_flow",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_with_params[sync]",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_submit_sync_task_receives_context",
+   "tests/test_flow_engine.py::TestRunFlowInSubprocess::test_flow_raises_a_base_exception[sync]",
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_flow_raises_a_base_exception[sync]",
+   "tests/test_subprocess_logging.py::TestWithContextPoolMap::test_get_run_logger_works_in_pool_worker",
+   "tests/experimental/test_bundles.py::TestExecuteBundleInSubprocess::test_flow_process_is_killed[sync]",
+   "tests/runner/test_runner.py::TestRunner::TestRunnerBundleExecution::test_failed_flow",
+   "tests/server/concurrency/test_filesystem_lease_storage.py::TestFilesystemConcurrencyLeaseStorage::test_processes_preserve_expiration_index[operations2]",
+   "tests/test_infrastructure_bound_flow.py::TestInfrastructureBoundFlow::test_call_with_return_state",
+   "tests/test_infrastructure_bound_flow.py::TestInfrastructureBoundFlow::test_submit",
+   "tests/test_task_runners.py::TestProcessPoolTaskRunner::test_submit_remains_non_blocking"
+  ],
+  "env_id": "e0221"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "merge_base": "",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   434,
+   435
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0222"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   436,
+   437
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0223"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "merge_base": "",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   438,
+   439
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0224"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "942980c9001900ca2ab01fd1fc91b32597e0a7af",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   440
+  ],
+  "nodeids": [
+   "test/unittests/model/version/test_version_range.py::test_range_prereleases_conf[-True-versions_in25-versions_out25]"
+  ],
+  "env_id": "e0225"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "942980c9001900ca2ab01fd1fc91b32597e0a7af",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   441
+  ],
+  "nodeids": [
+   "test/unittests/model/version/test_version_range.py::test_range_prereleases_conf[-False-versions_in24-versions_out24]"
+  ],
+  "env_id": "e0226"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "942980c9001900ca2ab01fd1fc91b32597e0a7af",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   442
+  ],
+  "nodeids": [
+   "test/unittests/model/version/test_version_range_intersection.py::test_range_intersection[-->=0.0.0]"
+  ],
+  "env_id": "e0227"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "355b6d1af8006c86e8da8131229350d3c3e57343",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   443,
+   444
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0228"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "355b6d1af8006c86e8da8131229350d3c3e57343",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   445,
+   446
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0229"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "355b6d1af8006c86e8da8131229350d3c3e57343",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   447,
+   448
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0230"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "42fa9dadebe26e7af6ba08d5f1f6dffeafcf80e4",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   449,
+   450,
+   451
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/command/install/install_parallel_test.py::TestInstallParallel::test_basic_parallel_install",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0231"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "42fa9dadebe26e7af6ba08d5f1f6dffeafcf80e4",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   452,
+   453
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0232"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "42fa9dadebe26e7af6ba08d5f1f6dffeafcf80e4",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   454,
+   455
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0233"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "96e9f84e96546431fdfc0b0dfbc558c52abe0b32",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   456,
+   457
+  ],
+  "nodeids": [
+   "test/integration/graph/core/test_version_ranges.py::TestVersionRanges::test_transitive_local_conditions",
+   "test/integration/graph/core/test_version_ranges.py::test_remote_version_ranges"
+  ],
+  "env_id": "e0234"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "96e9f84e96546431fdfc0b0dfbc558c52abe0b32",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   458,
+   459
+  ],
+  "nodeids": [
+   "test/integration/graph/core/test_version_ranges.py::TestVersionRanges::test_transitive_local_conditions",
+   "test/integration/graph/core/test_version_ranges.py::test_remote_version_ranges"
+  ],
+  "env_id": "e0235"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "96e9f84e96546431fdfc0b0dfbc558c52abe0b32",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   460,
+   461
+  ],
+  "nodeids": [
+   "test/integration/graph/core/test_version_ranges.py::TestVersionRanges::test_transitive_local_conditions",
+   "test/integration/graph/core/test_version_ranges.py::test_remote_version_ranges"
+  ],
+  "env_id": "e0236"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "3aad6cc5a234653161964e8b1990348e695a4c17",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   462,
+   463
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0237"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "3aad6cc5a234653161964e8b1990348e695a4c17",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   464,
+   465
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0238"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "3aad6cc5a234653161964e8b1990348e695a4c17",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   466,
+   467
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0239"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "70fcb3c799779b52ddcd22bcce76bb4f34c3dd13",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   468,
+   469
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0240"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "70fcb3c799779b52ddcd22bcce76bb4f34c3dd13",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   470,
+   471
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0241"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "70fcb3c799779b52ddcd22bcce76bb4f34c3dd13",
+  "merge_base": "638dbef19a0ac8f7627ad8e8cba411e60624e19d",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   472,
+   473
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_deprecated_build_order_version_check",
+   "test/integration/graph/core/test_version_ranges.py::test_deprecated_empty_version_ranger"
+  ],
+  "env_id": "e0242"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "876babf32b824c75ef028a79b3ce64c2fc75cac6",
+  "merge_base": "2f42555355d9f2df844f93c18cd63efddf181a1d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   474
+  ],
+  "nodeids": [
+   "test/integration/command/test_run.py::test_run[False-host-build]"
+  ],
+  "env_id": "e0243"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "876babf32b824c75ef028a79b3ce64c2fc75cac6",
+  "merge_base": "2f42555355d9f2df844f93c18cd63efddf181a1d",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   475
+  ],
+  "nodeids": [
+   "test/integration/command/test_run.py::test_run[False-build-host]"
+  ],
+  "env_id": "e0244"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c2bbb4d1be08f1c30e2da2e9f55f49b09ffbcbfd",
+  "merge_base": "",
+  "runner": "windows-2025",
+  "python": "3.7",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   476
+  ],
+  "nodeids": [
+   "test/unittests/tools/files/test_tool_copy.py::TestToolCopy::test_multiple_patterns_single_scan"
+  ],
+  "env_id": "e0245"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c2bbb4d1be08f1c30e2da2e9f55f49b09ffbcbfd",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.7",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   477
+  ],
+  "nodeids": [
+   "test/unittests/tools/files/test_tool_copy.py::TestToolCopy::test_multiple_patterns_single_scan"
+  ],
+  "env_id": "e0246"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c2bbb4d1be08f1c30e2da2e9f55f49b09ffbcbfd",
+  "merge_base": "",
+  "runner": "macos-latest",
+  "python": "3.8",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   478
+  ],
+  "nodeids": [
+   "test/unittests/tools/files/test_tool_copy.py::TestToolCopy::test_multiple_patterns_single_scan"
+  ],
+  "env_id": "e0247"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "12e0cf9e71ca10044eec16dabecff86b6b11057a",
+  "merge_base": "",
+  "runner": "windows-2025",
+  "python": "3.7",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   479
+  ],
+  "nodeids": [
+   "test/unittests/tools/files/test_tool_copy.py::TestToolCopy::test_multiple_patterns_single_scan"
+  ],
+  "env_id": "e0248"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "12e0cf9e71ca10044eec16dabecff86b6b11057a",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.7",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   480
+  ],
+  "nodeids": [
+   "test/unittests/tools/files/test_tool_copy.py::TestToolCopy::test_multiple_patterns_single_scan"
+  ],
+  "env_id": "e0249"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "12e0cf9e71ca10044eec16dabecff86b6b11057a",
+  "merge_base": "",
+  "runner": "macos-latest",
+  "python": "3.8",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   481
+  ],
+  "nodeids": [
+   "test/unittests/tools/files/test_tool_copy.py::TestToolCopy::test_multiple_patterns_single_scan"
+  ],
+  "env_id": "e0250"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "7139b6d13b12db90494208d52b6db4ebb567e6e4",
+  "merge_base": "12e0cf9e71ca10044eec16dabecff86b6b11057a",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   482,
+   483,
+   484,
+   485
+  ],
+  "nodeids": [
+   "test/integration/toolchains/zig/test_zigdeps.py::test_zigdeps_cpp_detected_from_libcxx_when_languages_unset",
+   "test/integration/toolchains/zig/test_zigdeps.py::test_zigdeps_frameworks_and_package_framework",
+   "test/functional/toolchains/test_zig.py::test_zigdeps_cmake_deps",
+   "test/functional/toolchains/test_zig.py::test_zigdeps_static_shared_static_chain_cmake_deps"
+  ],
+  "env_id": "e0251"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "f38b52fa73580ec5d71306dfa5c4a17e924012f4",
+  "merge_base": "ef344560dbef88844b104c6e11b8bc456e37a1fc",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   486,
+   487,
+   488
+  ],
+  "nodeids": [
+   "test/functional/toolchains/test_zig.py::test_zigdeps_cmake_deps",
+   "test/functional/toolchains/test_zig.py::test_zigdeps_shared_chain_cmake_deps",
+   "test/functional/toolchains/test_zig.py::test_zigdeps_static_shared_static_chain_cmake_deps"
+  ],
+  "env_id": "e0252"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "7d304bb6d29263c60f27ffc0c7d82c95009cb6e9",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   489,
+   490
+  ],
+  "nodeids": [
+   "test/integration/graph/test_runtime_artifacts.py::test_runtime_artifacts[True]",
+   "test/integration/graph/test_runtime_artifacts.py::test_runtime_artifacts_transitive[True]"
+  ],
+  "env_id": "e0253"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "93faab00a809e1a21e8d7999c38b638b088afbe9",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   491,
+   492
+  ],
+  "nodeids": [
+   "test/integration/command/list/test_list_lru.py::TestLRU::test_update_lru_when_used_as_dependency",
+   "test/integration/command/remote/test_remote_users.py::TestRemoteAuth::test_remote_auth_server_expire_token"
+  ],
+  "env_id": "e0254"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "2ce2c63e705e3006c5220a026a836ae158660dbd",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   493
+  ],
+  "nodeids": [
+   "test/functional/layout/test_editable_msbuild.py::test_editable_msbuild"
+  ],
+  "env_id": "e0255"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "567997574b2e472abac0eb3938254e14a9d7891a",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   494
+  ],
+  "nodeids": [
+   "test/unittests/tools/intel/test_intel_cc.py::test_intel_cc_classic_removed_since_2024[2025.2-Windows]"
+  ],
+  "env_id": "e0256"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "567997574b2e472abac0eb3938254e14a9d7891a",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   495
+  ],
+  "nodeids": [
+   "test/unittests/tools/intel/test_intel_cc.py::test_intel_cc_classic_removed_since_2024[2024.0-Windows]"
+  ],
+  "env_id": "e0257"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "567997574b2e472abac0eb3938254e14a9d7891a",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   496
+  ],
+  "nodeids": [
+   "test/unittests/tools/intel/test_intel_cc.py::test_intel_cc_classic_removed_since_2024[2024.1-Windows]"
+  ],
+  "env_id": "e0258"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "edeebf3e311b89b2a872b1f72b526034b948a7b5",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   497
+  ],
+  "nodeids": [
+   "test/unittests/tools/intel/test_intel_cc.py::test_intel_cc_classic_removed_since_2024[2024.0-Windows]"
+  ],
+  "env_id": "e0259"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "edeebf3e311b89b2a872b1f72b526034b948a7b5",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   498
+  ],
+  "nodeids": [
+   "test/unittests/tools/intel/test_intel_cc.py::test_intel_cc_classic_removed_since_2024[2026.0-Linux]"
+  ],
+  "env_id": "e0260"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "edeebf3e311b89b2a872b1f72b526034b948a7b5",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   499
+  ],
+  "nodeids": [
+   "test/unittests/tools/intel/test_intel_cc.py::test_intel_cc_classic_removed_since_2024[2024.1-Windows]"
+  ],
+  "env_id": "e0261"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "2f8117a8a8f8bcb1219e6b5a275ed877982b43d1",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   500
+  ],
+  "nodeids": [
+   "test/functional/layout/test_editable_msbuild.py::test_editable_msbuild"
+  ],
+  "env_id": "e0262"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "2f8117a8a8f8bcb1219e6b5a275ed877982b43d1",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   501
+  ],
+  "nodeids": [
+   "test/functional/tools/scm/test_git.py::TestGitMonorepoSCMFlow::test_full_scm"
+  ],
+  "env_id": "e0263"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "2f8117a8a8f8bcb1219e6b5a275ed877982b43d1",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   502
+  ],
+  "nodeids": [
+   "test/functional/tools/test_files.py::test_export_conandata_patches_extra_origin[True]"
+  ],
+  "env_id": "e0264"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "8fd58738c4344aefa3c97efe719da7f5e7764bdd",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   503
+  ],
+  "nodeids": [
+   "test/functional/toolchains/microsoft/test_msbuilddeps.py::test_msbuild_generator"
+  ],
+  "env_id": "e0265"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "8fd58738c4344aefa3c97efe719da7f5e7764bdd",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   504
+  ],
+  "nodeids": [
+   "test/functional/layout/test_exports_sources.py::test_exports_sources_patch"
+  ],
+  "env_id": "e0266"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "8fd58738c4344aefa3c97efe719da7f5e7764bdd",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   505
+  ],
+  "nodeids": [
+   "test/functional/layout/test_exports_sources.py::test_exports_sources_patch"
+  ],
+  "env_id": "e0267"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "82ee11b5cdcdbd3db012ce5f53a853d3dfcda67c",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   506,
+   507
+  ],
+  "nodeids": [
+   "test/integration/command/list/test_list_lru.py::TestLRU::test_update_lru_when_used_as_dependency",
+   "test/functional/toolchains/microsoft/test_msbuildtoolchain.py::test_msbuildtoolchain_props_with_extra_flags"
+  ],
+  "env_id": "e0268"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "23103f26cf49aced3f5b1e6b8d9922cc956fa95b",
+  "merge_base": "478f44fb26763654672871606c26a5200afc19e4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   508
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/test_shared_cmake.py::test_virtualrunenv_win_copy_folder"
+  ],
+  "env_id": "e0269"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "0076d4b1e3ea2e226831a9484ad99971bccb0b47",
+  "merge_base": "",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   509
+  ],
+  "nodeids": [
+   "test/functional/toolchains/microsoft/test_v2_msbuild_template.py::test_msbuild_lib_template"
+  ],
+  "env_id": "e0270"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "f4b673593f491b66fdfbe38ad695f3ef352a864e",
+  "merge_base": "8fc592758974872e3b3d6d0f9920d97ee82db533",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   510
+  ],
+  "nodeids": [
+   "test/functional/toolchains/microsoft/test_msbuilddeps_components.py::test_msbuild_deps_components"
+  ],
+  "env_id": "e0271"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "2831014b92c083811f1b75c091c49a6fb7fb6447",
+  "merge_base": "0076d4b1e3ea2e226831a9484ad99971bccb0b47",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   511
+  ],
+  "nodeids": [
+   "test/functional/toolchains/microsoft/test_v2_msbuild_template.py::test_msbuild_exe_template"
+  ],
+  "env_id": "e0272"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "38f3a8149b525f5a8511b0d01b7a1f04e690e20b",
+  "merge_base": "0076d4b1e3ea2e226831a9484ad99971bccb0b47",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   512
+  ],
+  "nodeids": [
+   "test/functional/toolchains/microsoft/test_msbuilddeps.py::test_build_vs_project_with_a_vs2017"
+  ],
+  "env_id": "e0273"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "3cedd12f404713a018bab91142f56ed652072fe9",
+  "merge_base": "0076d4b1e3ea2e226831a9484ad99971bccb0b47",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   513
+  ],
+  "nodeids": [
+   "test/functional/layout/test_editable_msbuild.py::test_editable_msbuild"
+  ],
+  "env_id": "e0274"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "2e4d0d33dee2540f6bf987dea1891bbc7285dad2",
+  "merge_base": "",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   514
+  ],
+  "nodeids": [
+   "test/functional/toolchains/microsoft/test_v2_msbuild_template.py::test_msbuild_lib_template"
+  ],
+  "env_id": "e0275"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "827823e27f92ccd37406e19ba6d7111b43a20cb2",
+  "merge_base": "36298a030ae13b1f9fad067480f2ca81ca8b78a4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   515
+  ],
+  "nodeids": [
+   "test/functional/toolchains/env/test_virtualenv_powershell.py::test_pwsh_support_empty_variables[powershell.exe]"
+  ],
+  "env_id": "e0276"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "ef9994426f9921e62c85574bbc7dc96315428889",
+  "merge_base": "36298a030ae13b1f9fad067480f2ca81ca8b78a4",
+  "runner": "windows-2022",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   516
+  ],
+  "nodeids": [
+   "test/functional/toolchains/microsoft/test_msbuildtoolchain.py::test_msbuildtoolchain_props_with_extra_flags"
+  ],
+  "env_id": "e0277"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "af024510c8269e4089b547c0a8b7ac590b97ac31",
+  "merge_base": "3ede9c3184ace846b9609c1052837f8a1ad1e0b3",
+  "runner": "windows-2022",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   517
+  ],
+  "nodeids": [
+   "test/functional/command/test_config_install_pkg.py::TestConfigInstallPkg::test_package_id_effect"
+  ],
+  "env_id": "e0278"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "af024510c8269e4089b547c0a8b7ac590b97ac31",
+  "merge_base": "3ede9c3184ace846b9609c1052837f8a1ad1e0b3",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   518
+  ],
+  "nodeids": [
+   "test/functional/command/test_config_install_pkg.py::TestConfigInstallPkg::test_package_id_effect"
+  ],
+  "env_id": "e0279"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "af024510c8269e4089b547c0a8b7ac590b97ac31",
+  "merge_base": "3ede9c3184ace846b9609c1052837f8a1ad1e0b3",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   519
+  ],
+  "nodeids": [
+   "test/functional/command/test_config_install_pkg.py::TestConfigInstallPkg::test_package_id_effect"
+  ],
+  "env_id": "e0280"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "7399e8e212090754e798143d24079063a8c1d589",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   520
+  ],
+  "nodeids": [
+   "test/integration/command/test_command_log.py::test_command_log_captures_subprocess_output"
+  ],
+  "env_id": "e0281"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "7399e8e212090754e798143d24079063a8c1d589",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   521
+  ],
+  "nodeids": [
+   "test/functional/toolchains/meson/test_cross_compilation.py::test_linker_script"
+  ],
+  "env_id": "e0282"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "1f68e5dbf4e0f6fbe14ef48b528e420a39efa510",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   522,
+   523,
+   525,
+   526
+  ],
+  "nodeids": [
+   "test/integration/command/test_command_log.py::test_command_log_captures_subprocess_output",
+   "test/integration/command/test_command_log.py::test_command_log_records_error_exit_code"
+  ],
+  "env_id": "e0283"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "1f68e5dbf4e0f6fbe14ef48b528e420a39efa510",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   524,
+   527
+  ],
+  "nodeids": [
+   "test/functional/toolchains/meson/test_cross_compilation.py::test_linker_script"
+  ],
+  "env_id": "e0284"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "d216172d0b27b9d31cc89bc3cc06e8645b051aaa",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   528
+  ],
+  "nodeids": [
+   "test/functional/toolchains/meson/test_cross_compilation.py::test_linker_script"
+  ],
+  "env_id": "e0285"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "410ac0b9918c0208a65514cf36ebcf1074206bdf",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   529
+  ],
+  "nodeids": [
+   "test/integration/command/test_command_log.py::test_command_log_captures_subprocess_output"
+  ],
+  "env_id": "e0286"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "410ac0b9918c0208a65514cf36ebcf1074206bdf",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   530
+  ],
+  "nodeids": [
+   "test/functional/toolchains/meson/test_cross_compilation.py::test_linker_script"
+  ],
+  "env_id": "e0287"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "6087b7607b6e490f104adbdd8dd9d078a8a8597a",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   531
+  ],
+  "nodeids": [
+   "test/functional/toolchains/meson/test_cross_compilation.py::test_linker_script"
+  ],
+  "env_id": "e0288"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "db6d6de00389ef3d9065f698fd9836a2cc773a76",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   532
+  ],
+  "nodeids": [
+   "test/functional/toolchains/meson/test_cross_compilation.py::test_linker_script"
+  ],
+  "env_id": "e0289"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "a500266031be6e4055971cb34a25cc3698eb1e4d",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   533
+  ],
+  "nodeids": [
+   "test/functional/toolchains/meson/test_cross_compilation.py::test_linker_script"
+  ],
+  "env_id": "e0290"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "48ede4f7bf8acd4d9e3da548d447927009e483d0",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   534,
+   535
+  ],
+  "nodeids": [
+   "test/integration/command/test_command_log.py::test_command_log_captures_subprocess_output",
+   "test/integration/command/test_command_log.py::test_command_log_records_error_exit_code"
+  ],
+  "env_id": "e0291"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "48ede4f7bf8acd4d9e3da548d447927009e483d0",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   536
+  ],
+  "nodeids": [
+   "test/functional/toolchains/meson/test_cross_compilation.py::test_linker_script"
+  ],
+  "env_id": "e0292"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "01896247d08f6cdc0980f11255c9b5cad5844703",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   537,
+   538
+  ],
+  "nodeids": [
+   "test/integration/command/test_command_log.py::test_command_log_captures_subprocess_output",
+   "test/integration/command/test_command_log.py::test_command_log_records_error_exit_code"
+  ],
+  "env_id": "e0293"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "01896247d08f6cdc0980f11255c9b5cad5844703",
+  "merge_base": "7cfe71b6bdcc28d25289c6b445ab36a84677b435",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   539
+  ],
+  "nodeids": [
+   "test/functional/toolchains/meson/test_cross_compilation.py::test_linker_script"
+  ],
+  "env_id": "e0294"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "d63e077999febf1df6755cc087dec9daf2423037",
+  "merge_base": "31d43558c1b964e0c9fb31c12bd36c4136b7ca66",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   540,
+   541,
+   542
+  ],
+  "nodeids": [
+   "test/integration/command/list/test_list_lru.py::TestLRU::test_update_lru_when_used_as_dependency",
+   "test/integration/command/test_command_log.py::test_command_log_captures_subprocess_output",
+   "test/integration/command/test_command_log.py::test_command_log_records_error_exit_code"
+  ],
+  "env_id": "e0295"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c64ecfdff5b0ebaa4daec8dbcbf61784f616ac9d",
+  "merge_base": "a2d73ee2aac4fc7323592fa6a1031853460f03d8",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   543
+  ],
+  "nodeids": [
+   "test/integration/lockfile/test_lock_pyrequires.py::test_source_should_respect_lockfile_pyrequires"
+  ],
+  "env_id": "e0296"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c64ecfdff5b0ebaa4daec8dbcbf61784f616ac9d",
+  "merge_base": "a2d73ee2aac4fc7323592fa6a1031853460f03d8",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   544
+  ],
+  "nodeids": [
+   "test/integration/lockfile/test_lock_pyrequires.py::test_source_should_respect_lockfile_pyrequires"
+  ],
+  "env_id": "e0297"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c64ecfdff5b0ebaa4daec8dbcbf61784f616ac9d",
+  "merge_base": "a2d73ee2aac4fc7323592fa6a1031853460f03d8",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   545
+  ],
+  "nodeids": [
+   "test/integration/lockfile/test_lock_pyrequires.py::test_source_should_respect_lockfile_pyrequires"
+  ],
+  "env_id": "e0298"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "fc2931f4fe8c6868af9217666414274388f454b7",
+  "merge_base": "a2e01c7b711f58485f06842cf34e90e9be51326b",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   546,
+   547,
+   548,
+   549
+  ],
+  "nodeids": [
+   "test/integration/command/test_command_log.py::test_command_log_captures_subprocess_output",
+   "test/unittests/cli/test_win_conpty.py::test_child_sees_a_real_console",
+   "test/unittests/cli/test_win_conpty.py::test_propagates_nonzero_exit_code",
+   "test/unittests/cli/test_win_conpty.py::test_respects_cwd"
+  ],
+  "env_id": "e0299"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "4078be3b9dfcdf98d6bc7045b6b250462be50dc5",
+  "merge_base": "a2e01c7b711f58485f06842cf34e90e9be51326b",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   550,
+   551,
+   552,
+   553
+  ],
+  "nodeids": [
+   "test/integration/command/test_command_log.py::test_command_log_captures_subprocess_output",
+   "test/unittests/cli/test_win_conpty.py::test_child_sees_a_real_console",
+   "test/unittests/cli/test_win_conpty.py::test_propagates_nonzero_exit_code",
+   "test/unittests/cli/test_win_conpty.py::test_respects_cwd"
+  ],
+  "env_id": "e0300"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "40b6cbb4fb7f992f8c31debc4726fb27716fa8ec",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   554
+  ],
+  "nodeids": [
+   "test/integration/command/remote/test_remote_users.py::TestRemoteAuth::test_remote_auth_server_expire_token"
+  ],
+  "env_id": "e0301"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "40b6cbb4fb7f992f8c31debc4726fb27716fa8ec",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   555,
+   556,
+   557,
+   558
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new.py::TestLibs::test_multilevel[True]",
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new.py::TestLibsLinkageTraits::test_transitive_headers[True]",
+   "test/functional/toolchains/cmake/test_cmake_and_no_soname_flag.py::test_no_soname_flag[True]",
+   "test/functional/toolchains/cmake/test_cmake_transitive_rpath.py::test_cmake_sysroot_transitive_rpath[True]"
+  ],
+  "env_id": "e0302"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "767ea21cbfc4610d159929eac69a967cef8f1242",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   559,
+   560,
+   561,
+   562
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-True]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-True]"
+  ],
+  "env_id": "e0303"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "767ea21cbfc4610d159929eac69a967cef8f1242",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   563,
+   564,
+   565,
+   566
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-True]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-True]"
+  ],
+  "env_id": "e0304"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "767ea21cbfc4610d159929eac69a967cef8f1242",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   567,
+   568,
+   569,
+   570
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-True]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-True]"
+  ],
+  "env_id": "e0305"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "6e02c70490acdac817d676293099e32c686ae7eb",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   571
+  ],
+  "nodeids": [
+   "test/integration/command/cache/test_cache_save_restore.py::test_cache_restore_rejects_outside_paths"
+  ],
+  "env_id": "e0306"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "6e02c70490acdac817d676293099e32c686ae7eb",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   572
+  ],
+  "nodeids": [
+   "test/integration/command/cache/test_cache_save_restore.py::test_cache_restore_rejects_outside_paths"
+  ],
+  "env_id": "e0307"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "6e02c70490acdac817d676293099e32c686ae7eb",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   573
+  ],
+  "nodeids": [
+   "test/integration/command/cache/test_cache_save_restore.py::test_cache_restore_rejects_outside_paths"
+  ],
+  "env_id": "e0308"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "363a59f0ddc738a212d324dad7f9963a9932653f",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   574
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_visible_downstream_propagation"
+  ],
+  "env_id": "e0309"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "363a59f0ddc738a212d324dad7f9963a9932653f",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   575
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_visible_downstream_propagation"
+  ],
+  "env_id": "e0310"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "363a59f0ddc738a212d324dad7f9963a9932653f",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   576
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_visible_downstream_propagation"
+  ],
+  "env_id": "e0311"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "80854182f39e80ae30edf2cf89552edc02c01100",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   577,
+   578,
+   579,
+   580
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-True]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-True]"
+  ],
+  "env_id": "e0312"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "80854182f39e80ae30edf2cf89552edc02c01100",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   581,
+   582,
+   583,
+   584
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-True]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-True]"
+  ],
+  "env_id": "e0313"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "80854182f39e80ae30edf2cf89552edc02c01100",
+  "merge_base": "0789d17f29928faed8239bba955bb523320c244a",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   585,
+   586,
+   587,
+   588
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[False-True]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestConsistentTrait::test_platform_requires_consistent[True-True]"
+  ],
+  "env_id": "e0314"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "28ea3a180b3f338ea0e7b196093abcb79179d4fa",
+  "merge_base": "bff8217466b790e4797dc3535c2dfc0e0b05a7f6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   589
+  ],
+  "nodeids": [
+   "test/integration/command/remove_test.py::test_remove_package_with_readonly_folder"
+  ],
+  "env_id": "e0315"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "28ea3a180b3f338ea0e7b196093abcb79179d4fa",
+  "merge_base": "bff8217466b790e4797dc3535c2dfc0e0b05a7f6",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   590
+  ],
+  "nodeids": [
+   "test/integration/command/remove_test.py::test_remove_package_with_readonly_folder"
+  ],
+  "env_id": "e0316"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "9a89136cafe91f44a92410c0cd89c992370704c7",
+  "merge_base": "226b40a85f02add8d97c68d3971a7c6ac4ed75d7",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   591
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new.py::TestLibsIntegration::test_custom_file_targetname"
+  ],
+  "env_id": "e0317"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "9a89136cafe91f44a92410c0cd89c992370704c7",
+  "merge_base": "226b40a85f02add8d97c68d3971a7c6ac4ed75d7",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   592
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new.py::TestLibsIntegration::test_custom_file_targetname"
+  ],
+  "env_id": "e0318"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "9a89136cafe91f44a92410c0cd89c992370704c7",
+  "merge_base": "226b40a85f02add8d97c68d3971a7c6ac4ed75d7",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   593
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new.py::TestLibsIntegration::test_custom_file_targetname"
+  ],
+  "env_id": "e0319"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "00ab13a0bfb0473333d1eee0a27e0f2e90ee9729",
+  "merge_base": "226b40a85f02add8d97c68d3971a7c6ac4ed75d7",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   594
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_sources.py::test_cpp_info_sources"
+  ],
+  "env_id": "e0320"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "00ab13a0bfb0473333d1eee0a27e0f2e90ee9729",
+  "merge_base": "226b40a85f02add8d97c68d3971a7c6ac4ed75d7",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   595
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_sources.py::test_cpp_info_sources"
+  ],
+  "env_id": "e0321"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "ff007b69a3e744b14fbc47d49fed3390f9eb8334",
+  "merge_base": "226b40a85f02add8d97c68d3971a7c6ac4ed75d7",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   596
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new_cpp_linkage.py::test_inter_component_vis"
+  ],
+  "env_id": "e0322"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "ff007b69a3e744b14fbc47d49fed3390f9eb8334",
+  "merge_base": "226b40a85f02add8d97c68d3971a7c6ac4ed75d7",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   597
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new_cpp_linkage.py::test_inter_component_vis"
+  ],
+  "env_id": "e0323"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "ff007b69a3e744b14fbc47d49fed3390f9eb8334",
+  "merge_base": "226b40a85f02add8d97c68d3971a7c6ac4ed75d7",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   598
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new_cpp_linkage.py::test_inter_component_vis"
+  ],
+  "env_id": "e0324"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "470b7662763abf56e725341d20198503c4b7dfa3",
+  "merge_base": "5a782d989d4b3240751b047f0e65bb4c7059b15e",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   599
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_sources.py::test_cpp_info_sources"
+  ],
+  "env_id": "e0325"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "9397518da0db2ce3d7f078e7659e42d8aaff8b92",
+  "merge_base": "e42971dc2952c83b7f5ab17cdf6bc49ac12b7c97",
+  "runner": "windows-2022",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   600,
+   601
+  ],
+  "nodeids": [
+   "test/functional/toolchains/microsoft/test_msbuildtoolchain.py::test_msbuildtoolchain_winsdk_version",
+   "test/functional/toolchains/microsoft/test_v2_msbuild_template.py::test_msbuild_lib_2022"
+  ],
+  "env_id": "e0326"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "321fcd1decd861fbf865d6bdce93e5fc487422e0",
+  "merge_base": "e42971dc2952c83b7f5ab17cdf6bc49ac12b7c97",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   602
+  ],
+  "nodeids": [
+   "test/integration/command/remote/test_remote_users.py::TestRemoteAuth::test_remote_auth_server_expire_token"
+  ],
+  "env_id": "e0327"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "f9281f43a9995b967ad00f470ce2e72652ef9e4a",
+  "merge_base": "326d8c1e9f4ec2d48d4c94140514f005a334f003",
+  "runner": "windows-2022",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   603
+  ],
+  "nodeids": [
+   "test/functional/toolchains/microsoft/test_msbuildtoolchain.py::test_msbuildtoolchain_winsdk_version"
+  ],
+  "env_id": "e0328"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "a8626c19208d7e328bc34c9575d006c9b918abfa",
+  "merge_base": "22d18a3e4f478f4def5cba238c320dc5ddf1193d",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   604,
+   605,
+   606,
+   607
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py::test_do_not_mix_cflags_cxxflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_exelinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_sharedlinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_system_libs"
+  ],
+  "env_id": "e0329"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "a8626c19208d7e328bc34c9575d006c9b918abfa",
+  "merge_base": "22d18a3e4f478f4def5cba238c320dc5ddf1193d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   608,
+   609,
+   610,
+   611,
+   612
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py::test_do_not_mix_cflags_cxxflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_and_linker_flags.py::test_shared_link_flags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_exelinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_sharedlinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_system_libs"
+  ],
+  "env_id": "e0330"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "a8626c19208d7e328bc34c9575d006c9b918abfa",
+  "merge_base": "22d18a3e4f478f4def5cba238c320dc5ddf1193d",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   613,
+   614,
+   615,
+   616
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py::test_do_not_mix_cflags_cxxflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_exelinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_sharedlinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_system_libs"
+  ],
+  "env_id": "e0331"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "191e203b511cd3e9e0ca1e0c5397fc2504acc3dc",
+  "merge_base": "22d18a3e4f478f4def5cba238c320dc5ddf1193d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   617
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_sources.py::test_cpp_info_sources_only_package"
+  ],
+  "env_id": "e0332"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "29e8a5cc41dc7c0eebdccd718c909d30d1ce6fef",
+  "merge_base": "5aeb7e01bff378d6da41e28920e96d90fe8ce6c4",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   618,
+   619
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_options_diamond_precedence",
+   "test/integration/command/info/test_info_build_order.py::test_build_order_options_diamond_unaware"
+  ],
+  "env_id": "e0333"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "29e8a5cc41dc7c0eebdccd718c909d30d1ce6fef",
+  "merge_base": "5aeb7e01bff378d6da41e28920e96d90fe8ce6c4",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   620,
+   621
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_options_diamond_precedence",
+   "test/integration/command/info/test_info_build_order.py::test_build_order_options_diamond_unaware"
+  ],
+  "env_id": "e0334"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "29e8a5cc41dc7c0eebdccd718c909d30d1ce6fef",
+  "merge_base": "5aeb7e01bff378d6da41e28920e96d90fe8ce6c4",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   622,
+   623
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::test_build_order_options_diamond_precedence",
+   "test/integration/command/info/test_info_build_order.py::test_build_order_options_diamond_unaware"
+  ],
+  "env_id": "e0335"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "2714a34effd7236a0f812cd91e3e14a43e65bf2a",
+  "merge_base": "b7a50659a3dc2a7753d9f33f860bfa2a04a13f56",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   624
+  ],
+  "nodeids": [
+   "test/integration/workspace/test_workspace.py::TestWorkspaceBuild::test_workspace_build_missing_with_options"
+  ],
+  "env_id": "e0336"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "2714a34effd7236a0f812cd91e3e14a43e65bf2a",
+  "merge_base": "b7a50659a3dc2a7753d9f33f860bfa2a04a13f56",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   625
+  ],
+  "nodeids": [
+   "test/integration/workspace/test_workspace.py::TestWorkspaceBuild::test_workspace_build_missing_with_options"
+  ],
+  "env_id": "e0337"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "2714a34effd7236a0f812cd91e3e14a43e65bf2a",
+  "merge_base": "b7a50659a3dc2a7753d9f33f860bfa2a04a13f56",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   626
+  ],
+  "nodeids": [
+   "test/integration/workspace/test_workspace.py::TestWorkspaceBuild::test_workspace_build_missing_with_options"
+  ],
+  "env_id": "e0338"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "af91c3843d8c3d05ec71f744bb7aba80ad2deb8e",
+  "merge_base": "20ed741a2b2c07fd8b42160eda1f85a6ac51ded2",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   627,
+   628
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-True]"
+  ],
+  "env_id": "e0339"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "af91c3843d8c3d05ec71f744bb7aba80ad2deb8e",
+  "merge_base": "20ed741a2b2c07fd8b42160eda1f85a6ac51ded2",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   629,
+   630
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-True]"
+  ],
+  "env_id": "e0340"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "af91c3843d8c3d05ec71f744bb7aba80ad2deb8e",
+  "merge_base": "20ed741a2b2c07fd8b42160eda1f85a6ac51ded2",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   631,
+   632
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-True]"
+  ],
+  "env_id": "e0341"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "df0ee0e1a54b66fcd589ef60d0976a8f246a1554",
+  "merge_base": "20ed741a2b2c07fd8b42160eda1f85a6ac51ded2",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   633,
+   634,
+   635,
+   636
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py::test_do_not_mix_cflags_cxxflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_exelinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_sharedlinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_system_libs"
+  ],
+  "env_id": "e0342"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "df0ee0e1a54b66fcd589ef60d0976a8f246a1554",
+  "merge_base": "20ed741a2b2c07fd8b42160eda1f85a6ac51ded2",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   637,
+   638,
+   639,
+   640
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py::test_do_not_mix_cflags_cxxflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_exelinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_sharedlinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_system_libs"
+  ],
+  "env_id": "e0343"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "df0ee0e1a54b66fcd589ef60d0976a8f246a1554",
+  "merge_base": "20ed741a2b2c07fd8b42160eda1f85a6ac51ded2",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   641,
+   642,
+   643,
+   644
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py::test_do_not_mix_cflags_cxxflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_exelinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_sharedlinkflags",
+   "test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py::test_components_system_libs"
+  ],
+  "env_id": "e0344"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c94c450f5e8b930065b613879139b23547f470ce",
+  "merge_base": "12cf45ebc66d8443ffd6715cf31f68962e108150",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   645
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::TestBuildOrderReduce::test_error_different_orders"
+  ],
+  "env_id": "e0345"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c94c450f5e8b930065b613879139b23547f470ce",
+  "merge_base": "12cf45ebc66d8443ffd6715cf31f68962e108150",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   646
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::TestBuildOrderReduce::test_merge_missing_error"
+  ],
+  "env_id": "e0346"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c94c450f5e8b930065b613879139b23547f470ce",
+  "merge_base": "12cf45ebc66d8443ffd6715cf31f68962e108150",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   647
+  ],
+  "nodeids": [
+   "test/integration/command/info/test_info_build_order.py::TestBuildOrderReduce::test_merge_missing_error"
+  ],
+  "env_id": "e0347"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c0f2fb1b3882a0ec95d3b9ef3f99268ae294f117",
+  "merge_base": "12cf45ebc66d8443ffd6715cf31f68962e108150",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   648,
+   649
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-True]"
+  ],
+  "env_id": "e0348"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c0f2fb1b3882a0ec95d3b9ef3f99268ae294f117",
+  "merge_base": "12cf45ebc66d8443ffd6715cf31f68962e108150",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   650,
+   651
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-True]"
+  ],
+  "env_id": "e0349"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "c0f2fb1b3882a0ec95d3b9ef3f99268ae294f117",
+  "merge_base": "12cf45ebc66d8443ffd6715cf31f68962e108150",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   652,
+   653
+  ],
+  "nodeids": [
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-False]",
+   "test/integration/graph/conflict_diamond_test.py::TestErrorVisibleFalse::test_transitive_version_range_no_conflict_second_level[True-True]"
+  ],
+  "env_id": "e0350"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "e659d49b9ed452a5c8966921de2141f058f989f7",
+  "merge_base": "39898afdfbdad8266d2176b36ca2cd27e0abcc23",
+  "runner": "windows-2022",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   654,
+   655
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/test_cmake_toolchain.py::test_cmaketoolchain_conf_from_tool_require",
+   "test/functional/toolchains/gnu/autotools/test_win_bash.py::test_conf_inherited_in_test_package"
+  ],
+  "env_id": "e0351"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "e659d49b9ed452a5c8966921de2141f058f989f7",
+  "merge_base": "39898afdfbdad8266d2176b36ca2cd27e0abcc23",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   656
+  ],
+  "nodeids": [
+   "test/integration/command/export_pkg_test.py::test_remote_none"
+  ],
+  "env_id": "e0352"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "e659d49b9ed452a5c8966921de2141f058f989f7",
+  "merge_base": "39898afdfbdad8266d2176b36ca2cd27e0abcc23",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   657
+  ],
+  "nodeids": [
+   "test/integration/command/create_test.py::test_create_package_requires"
+  ],
+  "env_id": "e0353"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "e659d49b9ed452a5c8966921de2141f058f989f7",
+  "merge_base": "39898afdfbdad8266d2176b36ca2cd27e0abcc23",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   658
+  ],
+  "nodeids": [
+   "test/integration/command/test_package_test.py::TestPackageBuild::test_build_missing"
+  ],
+  "env_id": "e0354"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "7733adced0ad743a6506883e3e5b594b9b2adadb",
+  "merge_base": "39898afdfbdad8266d2176b36ca2cd27e0abcc23",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   659,
+   660
+  ],
+  "nodeids": [
+   "test/integration/build_requires/build_requires_test.py::test",
+   "test/integration/graph/core/graph_manager_test.py::TestLinearFiveLevelsHeaders::test_visible_build_transitivity"
+  ],
+  "env_id": "e0355"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "7733adced0ad743a6506883e3e5b594b9b2adadb",
+  "merge_base": "39898afdfbdad8266d2176b36ca2cd27e0abcc23",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   661,
+   662
+  ],
+  "nodeids": [
+   "test/integration/build_requires/build_requires_test.py::test",
+   "test/integration/graph/core/graph_manager_test.py::TestLinearFiveLevelsHeaders::test_visible_build_transitivity"
+  ],
+  "env_id": "e0356"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "7733adced0ad743a6506883e3e5b594b9b2adadb",
+  "merge_base": "39898afdfbdad8266d2176b36ca2cd27e0abcc23",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   663,
+   664
+  ],
+  "nodeids": [
+   "test/integration/build_requires/build_requires_test.py::test",
+   "test/integration/graph/core/graph_manager_test.py::TestLinearFiveLevelsHeaders::test_visible_build_transitivity"
+  ],
+  "env_id": "e0357"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "d7a420d5baa3ded13c8e68a1b2c828d80b0b57b3",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   665,
+   666,
+   667,
+   668
+  ],
+  "nodeids": [
+   "test/functional/toolchains/emscripten/test_emcc.py::test_autotools_emscripten",
+   "test/functional/toolchains/emscripten/test_emcc.py::test_cmake_emscripten",
+   "test/functional/toolchains/emscripten/test_emcc.py::test_meson_emscripten",
+   "test/functional/toolchains/emscripten/test_emcc.py::test_premake_emscripten"
+  ],
+  "env_id": "e0358"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "d2f764d4e99799002dd1ab0e0e0f77dd715d3706",
+  "merge_base": "87a02bb57776e397858dae28481f372b4b911b45",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   669
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/test_cps.py::test_cps_components_requires[shared_private]"
+  ],
+  "env_id": "e0359"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "a7ec7b381a3ebb4a90dadc14f75b3e6be7aa6fd6",
+  "merge_base": "",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   670
+  ],
+  "nodeids": [
+   "test/functional/toolchains/google/test_bazel.py::test_empty_bazel_query"
+  ],
+  "env_id": "e0360"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "f43959dbdd425193c4f4f5d150352c7ebecb4c9a",
+  "merge_base": "",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   671
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/test_cps.py::test_cps_components[False]"
+  ],
+  "env_id": "e0361"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "e55f42cd8f29458f674413a3ff3316377bc1d4c7",
+  "merge_base": "e85a86e84b75a8bc80ba17e19be8df7e5c6df1fa",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   672
+  ],
+  "nodeids": [
+   "test/integration/command/upload/test_upload_parallel.py::test_upload_parallel_success"
+  ],
+  "env_id": "e0362"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "4ad50468bcc98a42f49c13719fedffad65a2a2e8",
+  "merge_base": "93424d1d41b559ea81d10a8bb6dc5196406550c0",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   673
+  ],
+  "nodeids": [
+   "test/functional/toolchains/gnu/test_pkg_config.py::test_pkg_config_external_path"
+  ],
+  "env_id": "e0363"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "4ad50468bcc98a42f49c13719fedffad65a2a2e8",
+  "merge_base": "93424d1d41b559ea81d10a8bb6dc5196406550c0",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   674,
+   675
+  ],
+  "nodeids": [
+   "test/functional/toolchains/google/test_bazel.py::test_basic_lib",
+   "test/functional/toolchains/google/test_bazel.py::test_basic_lib_9x"
+  ],
+  "env_id": "e0364"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "4ad50468bcc98a42f49c13719fedffad65a2a2e8",
+  "merge_base": "93424d1d41b559ea81d10a8bb6dc5196406550c0",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   676,
+   677
+  ],
+  "nodeids": [
+   "test/functional/toolchains/google/test_bazel.py::test_basic_lib",
+   "test/functional/toolchains/google/test_bazel.py::test_basic_lib_9x"
+  ],
+  "env_id": "e0365"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "47d23b6dcfd945de5ae2755ef898ba8387de92d9",
+  "merge_base": "3b86714b595c852c33618e9c7ea14ab2cdbaa58d",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   678
+  ],
+  "nodeids": [
+   "test/integration/command/upload/test_upload_parallel.py::test_upload_parallel_loader_not_created_in_threads"
+  ],
+  "env_id": "e0366"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "40f44360753076e3d86ed32564029e64c4b5b51c",
+  "merge_base": "7ef643385b26ccd323db502880d95fc5b3a433bf",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   679
+  ],
+  "nodeids": [
+   "test/unittests/tools/sbom/test_spdx_expression.py::test_license_field[MIT-id]"
+  ],
+  "env_id": "e0367"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "40f44360753076e3d86ed32564029e64c4b5b51c",
+  "merge_base": "7ef643385b26ccd323db502880d95fc5b3a433bf",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   680
+  ],
+  "nodeids": [
+   "test/unittests/tools/sbom/test_spdx_expression.py::test_license_field[MIT-id]"
+  ],
+  "env_id": "e0368"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "40f44360753076e3d86ed32564029e64c4b5b51c",
+  "merge_base": "7ef643385b26ccd323db502880d95fc5b3a433bf",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   681
+  ],
+  "nodeids": [
+   "test/unittests/tools/sbom/test_spdx_expression.py::test_license_field[MIT-id]"
+  ],
+  "env_id": "e0369"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "657fc7c5e85ebbf182bca7a87e15a35c54e8ec11",
+  "merge_base": "0a25d924ff36ad13010575c659f0682c6eb74cd5",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   682
+  ],
+  "nodeids": [
+   "test/functional/toolchains/google/test_bazel.py::test_transitive_libs_consuming_6x[True]"
+  ],
+  "env_id": "e0370"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "db9ef9372d3fb198bd814e380518be9da16be7f7",
+  "merge_base": "0a25d924ff36ad13010575c659f0682c6eb74cd5",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   683,
+   684
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/test_cmake_toolchain_win_clang.py::TestMsysClang::test_clang_pure_c",
+   "test/functional/toolchains/cmake/test_cmake_toolchain_win_clang.py::TestMsysClang::test_msys2_clang"
+  ],
+  "env_id": "e0371"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "39338c3bcdf779e5cd0ea597ca4627bb108e3e66",
+  "merge_base": "0a25d924ff36ad13010575c659f0682c6eb74cd5",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   685,
+   686
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/test_cmake_toolchain_win_clang.py::TestMsysClang::test_clang_pure_c",
+   "test/functional/toolchains/cmake/test_cmake_toolchain_win_clang.py::TestMsysClang::test_msys2_clang"
+  ],
+  "env_id": "e0372"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "0222f7cf1147096af8be70dea411680d2b277bb1",
+  "merge_base": "",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   687,
+   688,
+   689
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/test_cmake_toolchain_win_clang.py::TestMsysClang::test_clang_pure_c",
+   "test/functional/toolchains/cmake/test_cmake_toolchain_win_clang.py::TestMsysClang::test_msys2_clang",
+   "test/functional/toolchains/cmake/test_cmake_toolchain_win_clang.py::TestMsysClang::test_msys2_clang_mingw"
+  ],
+  "env_id": "e0373"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "485c28f2c00658db1774ea2204fc3ec3eb400769",
+  "merge_base": "4f6a04ebcea4daab51fc0e2841f247ea9be322a6",
+  "runner": "windows-2022",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   690
+  ],
+  "nodeids": [
+   "test/functional/toolchains/gnu/test_pkgconfigdeps.py::test_pkgconfigdeps_bindir_and_meson"
+  ],
+  "env_id": "e0374"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "09347fb43b113347b82f32c678f4de78e098bb58",
+  "merge_base": "4f6a04ebcea4daab51fc0e2841f247ea9be322a6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   691
+  ],
+  "nodeids": [
+   "test/integration/toolchains/google/test_bazeltoolchain.py::test_default_bazel_toolchain"
+  ],
+  "env_id": "e0375"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "4ef38d2691388854e2086796ee4e7969249058e7",
+  "merge_base": "5bdeba27c9722bc66a473e1170c2bf3256f200da",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   692
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new.py::test_find_package_casing_non_fallback"
+  ],
+  "env_id": "e0376"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "4ef38d2691388854e2086796ee4e7969249058e7",
+  "merge_base": "5bdeba27c9722bc66a473e1170c2bf3256f200da",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   693
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new.py::test_find_package_casing_non_fallback"
+  ],
+  "env_id": "e0377"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "4ef38d2691388854e2086796ee4e7969249058e7",
+  "merge_base": "5bdeba27c9722bc66a473e1170c2bf3256f200da",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   694
+  ],
+  "nodeids": [
+   "test/functional/toolchains/cmake/cmakeconfigdeps/test_cmakeconfigdeps_new.py::test_find_package_casing_non_fallback"
+  ],
+  "env_id": "e0378"
+ },
+ {
+  "repo": "conan-io/conan",
+  "head_sha": "cdf63934d0ba6d0bf6e0167a42bc4e82ef289acd",
+  "merge_base": "5bdeba27c9722bc66a473e1170c2bf3256f200da",
+  "runner": "windows-2022",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r conans/requirements.txt -r conans/requirements_server.txt -r conans/requirements_dev.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   695
+  ],
+  "nodeids": [
+   "test/functional/toolchains/gnu/test_pkg_config.py::TestPkgConfig::test_negative"
+  ],
+  "env_id": "e0379"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "2c5d41e73d658280e34d766191ea428c7f1d3dd4",
+  "merge_base": "65066b326dc358aba87d7fba1101a94fc2dbf004",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   696,
+   697,
+   698
+  ],
+  "nodeids": [
+   "tests/test_throttling.py::XffUniqueMachinesTest::test_unique_clients_are_counted_independently_with_one_proxy",
+   "tests/test_throttling.py::XffUniqueMachinesTest::test_unique_clients_are_counted_independently_with_two_proxies",
+   "tests/test_urlpatterns.py::FormatSuffixTests::test_format_suffix_django2_args"
+  ],
+  "env_id": "e0380"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "95e6d3aa1fe9fb196fabd43267b0561c329089d9",
+  "merge_base": "65066b326dc358aba87d7fba1101a94fc2dbf004",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   699
+  ],
+  "nodeids": [
+   "tests/test_htmlrenderer.py::TemplateHTMLRendererTests::test_get_template_context_wraps_list_under_results_key"
+  ],
+  "env_id": "e0381"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "79a5c26b1c27ccddd168ab1843166d28cbe8f8d1",
+  "merge_base": "751a19fe1b237beca9af7d587fce55d3e09d3741",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   700
+  ],
+  "nodeids": [
+   "tests/test_description.py::TestViewNamesAndDescriptions::test_markdown"
+  ],
+  "env_id": "e0382"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "c69cbb56ff7fbb5499cb0f94019e34c26f28c461",
+  "merge_base": "751a19fe1b237beca9af7d587fce55d3e09d3741",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   701
+  ],
+  "nodeids": [
+   "tests/test_serializer_lists.py::TestListSerializerErrorBehavior::test_listserializer_list_error_format_by_default"
+  ],
+  "env_id": "e0383"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "ae1c0c60363a7a9c26c695b4a8003b68dc2a9c0c",
+  "merge_base": "ae9fd0c75d6ea25c8152452ef396318624bc8239",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   702
+  ],
+  "nodeids": [
+   "tests/test_description.py::TestViewNamesAndDescriptions::test_markdown"
+  ],
+  "env_id": "e0384"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "c88747eb56456ac3b60aa49e198980efd09d7e6a",
+  "merge_base": "5668281ee6a95730c9bf366c529b9fa64c042305",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   703
+  ],
+  "nodeids": [
+   "tests/schemas/test_view_inspector.py::TestViewInspectorDescriptor::test_schema_shared_via_mixin_action_is_not_shared_between_viewsets"
+  ],
+  "env_id": "e0385"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "2f2ea7d87dd331ac0460d270b7c3292fa006e838",
+  "merge_base": "4f774289a486a41fe3c7f26531c10bf256e268f8",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   704
+  ],
+  "nodeids": [
+   "tests/test_description.py::TestViewNamesAndDescriptions::test_markdown"
+  ],
+  "env_id": "e0386"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "cf426aaea632b32406eb585df32685f5f2cad051",
+  "merge_base": "8c92e8960a51379522e68be2be6abdbc4b05b596",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   705,
+   706,
+   707,
+   708
+  ],
+  "nodeids": [
+   "tests/test_htmlrenderer.py::TemplateHTMLRendererTests::test_get_template_context_wraps_list_under_results_key",
+   "tests/test_htmlrenderer.py::TemplateHTMLRendererTests::test_list_view_with_deprecated_details_variable",
+   "tests/test_htmlrenderer.py::TemplateHTMLRendererTests::test_list_view_with_template_html_renderer",
+   "tests/test_htmlrenderer.py::TemplateHTMLRendererTests::test_validation_error_html_view"
+  ],
+  "env_id": "e0387"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "11b77713e32236abbb0729f6b8889ad24273b8bc",
+  "merge_base": "858f1fc203affc19c8be3cdffb9bcabb136ddec4",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   709
+  ],
+  "nodeids": [
+   "tests/test_validators.py::TestUniquenessTogetherValidation::test_default_validator_with_multiple_fields_with_same_source"
+  ],
+  "env_id": "e0388"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "5d8abbff5437c1aab8e95b007da7f2a5aa08d845",
+  "merge_base": "858f1fc203affc19c8be3cdffb9bcabb136ddec4",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   710
+  ],
+  "nodeids": [
+   "tests/test_model_serializer.py::TestRelationalFieldMappings::test_source_with_to_many_raises_improperly_configured"
+  ],
+  "env_id": "e0389"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "1100bb0fec68fa99b8b86b17c0319c0c8966f124",
+  "merge_base": "858f1fc203affc19c8be3cdffb9bcabb136ddec4",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   711,
+   712,
+   713,
+   714
+  ],
+  "nodeids": [
+   "tests/test_htmlrenderer.py::TemplateHTMLRendererTests::test_get_template_context_wraps_list_under_results_key",
+   "tests/test_htmlrenderer.py::TemplateHTMLRendererTests::test_list_view_with_deprecated_details_variable",
+   "tests/test_htmlrenderer.py::TemplateHTMLRendererTests::test_list_view_with_template_html_renderer",
+   "tests/test_htmlrenderer.py::TemplateHTMLRendererTests::test_validation_error_html_view"
+  ],
+  "env_id": "e0390"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "e32a2508815b269c4d1c228195ec25904809ce84",
+  "merge_base": "858f1fc203affc19c8be3cdffb9bcabb136ddec4",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   715
+  ],
+  "nodeids": [
+   "tests/test_validators.py::TestUniquenessValidation::test_many_update_with_child_instance"
+  ],
+  "env_id": "e0391"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "52f9bf0e893f4f67ca546a4f665e1a950bc7e627",
+  "merge_base": "858f1fc203affc19c8be3cdffb9bcabb136ddec4",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   716
+  ],
+  "nodeids": [
+   "tests/test_serializer_lists.py::TestListSerializerInstanceMatching::test_unsupported_instance_type_preserves_original_behavior"
+  ],
+  "env_id": "e0392"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "5edca0c1b9fa1c1c1cc4ee533e752d958880464f",
+  "merge_base": "cf187a90734f0d93531b2daf600007bada03f75d",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   717
+  ],
+  "nodeids": [
+   "tests/test_renderers.py::TestHiddenFieldHTMLFormRenderer::test_hidden_field_rendering"
+  ],
+  "env_id": "e0393"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "ac99b787baa78ad76fd692cc38d0bba36c12a5af",
+  "merge_base": "d6c45646edc9c6644ea159f7f786da598bc1ab66",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   718
+  ],
+  "nodeids": [
+   "tests/test_parsers.py::TestFileUploadParser::test_get_encoded_filename"
+  ],
+  "env_id": "e0394"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "5bcd4d696d7d862a4f861fc71f2b1d6609ef7be6",
+  "merge_base": "d6c45646edc9c6644ea159f7f786da598bc1ab66",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   719
+  ],
+  "nodeids": [
+   "tests/test_parsers.py::TestFileUploadParser::test_get_encoded_filename"
+  ],
+  "env_id": "e0395"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "e61eef473ad5651923ab977cea4cb457a5351f99",
+  "merge_base": "d6c45646edc9c6644ea159f7f786da598bc1ab66",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   720
+  ],
+  "nodeids": [
+   "tests/test_parsers.py::TestFileUploadParser::test_get_encoded_filename"
+  ],
+  "env_id": "e0396"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "faaafd7e7bb86b9b19906b319575df43c4c67f50",
+  "merge_base": "d6c45646edc9c6644ea159f7f786da598bc1ab66",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   721
+  ],
+  "nodeids": [
+   "tests/test_parsers.py::TestFileUploadParser::test_get_encoded_filename"
+  ],
+  "env_id": "e0397"
+ },
+ {
+  "repo": "encode/django-rest-framework",
+  "head_sha": "2832c2ed2ee18d2da429d0b1db03f2f6573fbbfb",
+  "merge_base": "1af5b55758ac514c492ed3a5fc1a6fb244cdb257",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-django52",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-django52 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   722
+  ],
+  "nodeids": [
+   "tests/test_fields.py::TestIsSimpleCallable::test_4602_regression"
+  ],
+  "env_id": "e0398"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "a9f0d07125be8b0aa428f1706a0601af828633ac",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   725,
+   726
+  ],
+  "nodeids": [
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags0-INFO]",
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags1-DEBUG]"
+  ],
+  "env_id": "e0399"
+ }
+]

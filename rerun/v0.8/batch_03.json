@@ -1,0 +1,3974 @@
+[
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   988
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0600"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   989
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0601"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   990
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0602"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   991
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0603"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   992
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0604"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.13",
+  "variant": "py313-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   993
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0605"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.15",
+  "variant": "py315-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   994
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0606"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-lsof-numpy-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   995
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0607"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "py315",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   996
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0608"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   997
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0609"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   998
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0610"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   999
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0611"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1000
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0612"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1001
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0613"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "py312",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1002
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0614"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1003
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0615"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1004
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0616"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1005
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0617"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1006
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0618"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "py315-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1007
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0619"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1008
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0620"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.12",
+  "variant": "py312-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1009
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0621"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "py312-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1010
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0622"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1011
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0623"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1012
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0624"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.15",
+  "variant": "py315-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1013
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0625"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py314-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1014
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0626"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41ec311a330bd2a36a17b3ac4793d50faa3a1fbe",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.13",
+  "variant": "py313-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1015
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0627"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2950bc2392f521fc0fd5e889a6a9857bc9d3ffe8",
+  "merge_base": "",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1016
+  ],
+  "nodeids": [
+   "testing/test_terminal.py::TestProgressOutputStyle::test_times"
+  ],
+  "env_id": "e0628"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2950bc2392f521fc0fd5e889a6a9857bc9d3ffe8",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1017
+  ],
+  "nodeids": [
+   "testing/test_debugging.py::TestPDB::test_pdb_unittest_postmortem"
+  ],
+  "env_id": "e0629"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "f45dd1973982d92e97d48565d4ecf66de73e4736",
+  "merge_base": "59200df778adf8079df6125d60662908ac0a0646",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1018
+  ],
+  "nodeids": [
+   "testing/test_terminal.py::TestTerminal::test_console_output_style_times_slow_teardown_does_not_leak"
+  ],
+  "env_id": "e0630"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1019,
+   1020
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0631"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1021,
+   1022
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0632"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "py315",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1023,
+   1024
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0633"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "py312",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1025,
+   1026
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0634"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1027,
+   1028
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0635"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1029,
+   1030
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0636"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1031,
+   1032
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0637"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1033,
+   1034
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0638"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1035,
+   1036
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0639"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-lsof-numpy-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1037,
+   1038
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0640"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1039,
+   1040
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0641"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1041,
+   1042
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0642"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "py315-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1043,
+   1044
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0643"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "macos-latest",
+  "python": "3.13",
+  "variant": "py313-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1045,
+   1046
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0644"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "macos-latest",
+  "python": "3.15",
+  "variant": "py315-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1047,
+   1048
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0645"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1049,
+   1050
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0646"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "macos-latest",
+  "python": "3.12",
+  "variant": "py312-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1051,
+   1052
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0647"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1053,
+   1054
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0648"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1055,
+   1056
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0649"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "py312-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1057,
+   1058
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0650"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "33803099f6ecb795bb8f3a74df918cd0111bd461",
+  "merge_base": "e4f7f174bc4a1686b31639d29a3e211941390979",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py314-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1059,
+   1060
+  ],
+  "nodeids": [
+   "test_reprentries_serialization_170.py::test_repr_entry",
+   "testing/test_reports.py::TestReportSerialization::test_reprentries_serialization_170"
+  ],
+  "env_id": "e0651"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "dcffeba1f266629e7a1859ad92880cfbf7c5ccf0",
+  "merge_base": "4fa645fe43855630b4492fc3fdec13050152f4ef",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1061
+  ],
+  "nodeids": [
+   "testing/test_parseopt.py::test_informational_action_from_argument_file"
+  ],
+  "env_id": "e0652"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "dcffeba1f266629e7a1859ad92880cfbf7c5ccf0",
+  "merge_base": "4fa645fe43855630b4492fc3fdec13050152f4ef",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1062
+  ],
+  "nodeids": [
+   "testing/test_parseopt.py::test_informational_action_from_argument_file"
+  ],
+  "env_id": "e0653"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "dcffeba1f266629e7a1859ad92880cfbf7c5ccf0",
+  "merge_base": "4fa645fe43855630b4492fc3fdec13050152f4ef",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1063
+  ],
+  "nodeids": [
+   "testing/test_parseopt.py::test_informational_action_from_argument_file"
+  ],
+  "env_id": "e0654"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "dcffeba1f266629e7a1859ad92880cfbf7c5ccf0",
+  "merge_base": "4fa645fe43855630b4492fc3fdec13050152f4ef",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-lsof-numpy-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1064
+  ],
+  "nodeids": [
+   "testing/test_parseopt.py::test_informational_action_from_argument_file"
+  ],
+  "env_id": "e0655"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "dcffeba1f266629e7a1859ad92880cfbf7c5ccf0",
+  "merge_base": "4fa645fe43855630b4492fc3fdec13050152f4ef",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1065
+  ],
+  "nodeids": [
+   "testing/test_parseopt.py::test_informational_action_from_argument_file"
+  ],
+  "env_id": "e0656"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "dcffeba1f266629e7a1859ad92880cfbf7c5ccf0",
+  "merge_base": "4fa645fe43855630b4492fc3fdec13050152f4ef",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1066
+  ],
+  "nodeids": [
+   "testing/test_parseopt.py::test_informational_action_from_argument_file"
+  ],
+  "env_id": "e0657"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "dcffeba1f266629e7a1859ad92880cfbf7c5ccf0",
+  "merge_base": "4fa645fe43855630b4492fc3fdec13050152f4ef",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1067
+  ],
+  "nodeids": [
+   "testing/test_parseopt.py::test_informational_action_from_argument_file"
+  ],
+  "env_id": "e0658"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "aa69b908edfda6b6bf56e496b1200756779b6a17",
+  "merge_base": "587ebc501ba292539202a1aac3a7f5b0112a08ec",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1068
+  ],
+  "nodeids": [
+   "testing/test_debugging.py::TestPDB::test_pdb_unittest_postmortem"
+  ],
+  "env_id": "e0659"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "a47df4e6270a964ea92e231ff5e318b87213308d",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1069
+  ],
+  "nodeids": [
+   "testing/test_debugging.py::TestPDB::test_pdb_unittest_postmortem"
+  ],
+  "env_id": "e0660"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "210e94d5cfe3e8b2305c56b8263c4b3bcf5b8dcf",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1070
+  ],
+  "nodeids": [
+   "testing/test_faulthandler.py::test_timeout_dumps_after_test_failure"
+  ],
+  "env_id": "e0661"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1071,
+   1072,
+   1073,
+   1074
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0662"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1075,
+   1076,
+   1077,
+   1078
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0663"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1079,
+   1080,
+   1081,
+   1082
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0664"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-lsof-numpy-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1083,
+   1084,
+   1085,
+   1086
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0665"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "py312-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1087,
+   1088,
+   1089,
+   1090
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0666"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1091,
+   1092,
+   1093,
+   1094
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0667"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1095,
+   1096,
+   1097,
+   1098
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0668"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1099,
+   1100,
+   1101
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter"
+  ],
+  "env_id": "e0669"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1102,
+   1103,
+   1104,
+   1105
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0670"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1106,
+   1107,
+   1108,
+   1109
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0671"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1110,
+   1111,
+   1112,
+   1113
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0672"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "py315",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1114,
+   1115,
+   1116,
+   1117
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0673"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1118,
+   1119,
+   1120,
+   1121
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0674"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1122,
+   1123,
+   1124,
+   1125
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0675"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1126,
+   1127,
+   1128,
+   1129
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0676"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py314-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1130,
+   1131,
+   1132,
+   1133
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0677"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "py315-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1134,
+   1135,
+   1136,
+   1137
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0678"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "py312",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1138,
+   1139,
+   1140,
+   1141
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0679"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "macos-latest",
+  "python": "3.12",
+  "variant": "py312-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1142,
+   1143,
+   1144,
+   1145
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0680"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "macos-latest",
+  "python": "3.15",
+  "variant": "py315-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1146,
+   1147,
+   1148,
+   1149
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0681"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "24a89e52f2e79132c65e7f9acef8a3157e7c8e1c",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "macos-latest",
+  "python": "3.13",
+  "variant": "py313-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1150,
+   1151,
+   1152,
+   1153
+  ],
+  "nodeids": [
+   "testing/test_threadexception.py::test_unhandled_thread_exception_after_teardown",
+   "testing/test_unraisableexception.py::test_create_task_raises_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_refcycle_unraisable_warning_filter",
+   "testing/test_unraisableexception.py::test_unraisable_decouples_from_cleanup_stack_order"
+  ],
+  "env_id": "e0682"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "b220629b3d6d9799f010f769df3fbb00ffd915d5",
+  "merge_base": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1154
+  ],
+  "nodeids": [
+   "testing/python/raises.py::TestRaises::test_raises_cyclic_reference[with]"
+  ],
+  "env_id": "e0683"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "43e450b344fd82752cad15aef7b31ea19d9c2b30",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1155,
+   1156,
+   1159
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_run_name_and_device_config_name_succeeds[--1]",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_without_job_id",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_run_name_and_device_config_name_succeeds[--0]"
+  ],
+  "env_id": "e0684"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "43e450b344fd82752cad15aef7b31ea19d9c2b30",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1157
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_run_name_and_device_config_name_succeeds[--0]"
+  ],
+  "env_id": "e0685"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "43e450b344fd82752cad15aef7b31ea19d9c2b30",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1158
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_device"
+  ],
+  "env_id": "e0686"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "efe5a8632fa750ecc6401f1c77d3b1db18c8b3db",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1160,
+   1163
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_without_description",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_run_name_and_device_config_name_succeeds[--0]"
+  ],
+  "env_id": "e0687"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "efe5a8632fa750ecc6401f1c77d3b1db18c8b3db",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "ubuntu-22.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1161
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_all_parameters"
+  ],
+  "env_id": "e0688"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "efe5a8632fa750ecc6401f1c77d3b1db18c8b3db",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1162
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_without_job_id"
+  ],
+  "env_id": "e0689"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "efe5a8632fa750ecc6401f1c77d3b1db18c8b3db",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1164
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_without_labels"
+  ],
+  "env_id": "e0690"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "862672c06a4b32a65b001b93f5b8e51448d50c70",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1165,
+   1166,
+   1167,
+   1168
+  ],
+  "nodeids": [
+   "cirq-core/cirq/transformers/merge_single_qubit_gates_test.py::test_unitary_of_single_qubit_circuit_op",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0691"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "862672c06a4b32a65b001b93f5b8e51448d50c70",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "macos-15",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1169
+  ],
+  "nodeids": [
+   "cirq-core/cirq/transformers/merge_single_qubit_gates_test.py::test_unitary_of_single_qubit_circuit_op"
+  ],
+  "env_id": "e0692"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "862672c06a4b32a65b001b93f5b8e51448d50c70",
+  "merge_base": "1cde9c969a8c96d6f7f92483668ddf08a92c0324",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1170
+  ],
+  "nodeids": [
+   "cirq-core/cirq/transformers/merge_single_qubit_gates_test.py::test_unitary_of_single_qubit_circuit_op"
+  ],
+  "env_id": "e0693"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "371960052c2199be5f3c3148e6150e21747860e2",
+  "merge_base": "a0a55a9191b71eeed8b384b063f07c3587ece7ca",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1171,
+   1172,
+   1173,
+   1174,
+   1180,
+   1181,
+   1182
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_get_quantum_processor_config_not_found",
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-google]"
+  ],
+  "env_id": "e0694"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "371960052c2199be5f3c3148e6150e21747860e2",
+  "merge_base": "a0a55a9191b71eeed8b384b063f07c3587ece7ca",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1175,
+   1176,
+   1177,
+   1178,
+   1179
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit_with_stim_circuit_object",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_get_quantum_processor_config_not_found",
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit",
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default"
+  ],
+  "env_id": "e0695"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "371960052c2199be5f3c3148e6150e21747860e2",
+  "merge_base": "a0a55a9191b71eeed8b384b063f07c3587ece7ca",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1183,
+   1184,
+   1185,
+   1186,
+   1187
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit_with_stim_circuit_object",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_get_quantum_processor_config_not_found",
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit",
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default"
+  ],
+  "env_id": "e0696"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "371960052c2199be5f3c3148e6150e21747860e2",
+  "merge_base": "a0a55a9191b71eeed8b384b063f07c3587ece7ca",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1188,
+   1189,
+   1190,
+   1191,
+   1192
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit_with_stim_circuit_object",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_get_quantum_processor_config_not_found",
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit",
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default"
+  ],
+  "env_id": "e0697"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2843a5a510b127e586971d79ae351e390f1ec952",
+  "merge_base": "dc468e2457db1c0d8c8879c65394985534944987",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1193,
+   1194,
+   1195,
+   1200,
+   1201,
+   1202,
+   1203,
+   1204,
+   1205
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit",
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-google]",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit_with_stim_circuit_object",
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit"
+  ],
+  "env_id": "e0698"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2843a5a510b127e586971d79ae351e390f1ec952",
+  "merge_base": "dc468e2457db1c0d8c8879c65394985534944987",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1196,
+   1197,
+   1198,
+   1199
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit_with_stim_circuit_object",
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit",
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default"
+  ],
+  "env_id": "e0699"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2843a5a510b127e586971d79ae351e390f1ec952",
+  "merge_base": "dc468e2457db1c0d8c8879c65394985534944987",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1206,
+   1207,
+   1208,
+   1209
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit_with_stim_circuit_object",
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit",
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default"
+  ],
+  "env_id": "e0700"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "d5b25f5343d5c77aaa0ed8df9a0cb5111e32a502",
+  "merge_base": "dc468e2457db1c0d8c8879c65394985534944987",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1210
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit"
+  ],
+  "env_id": "e0701"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "d5b25f5343d5c77aaa0ed8df9a0cb5111e32a502",
+  "merge_base": "dc468e2457db1c0d8c8879c65394985534944987",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1211,
+   1213,
+   1214
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_run_job_over_stream_invalid_device_config_raises[--device_config1-Cannot",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_invalid_processor_and_device_config_arguments_throws[processor0-RUN_NAME---Cannot",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_all_parameters"
+  ],
+  "env_id": "e0702"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "d5b25f5343d5c77aaa0ed8df9a0cb5111e32a502",
+  "merge_base": "dc468e2457db1c0d8c8879c65394985534944987",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1212
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_run_name_and_device_config_name_succeeds[--0]"
+  ],
+  "env_id": "e0703"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "994c52eb2c86d3d780a0fbab4a82ca6a5d51fbf3",
+  "merge_base": "676417fc0ebe61dc8e9fee1932f780ec0d6b9f00",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1215,
+   1218,
+   1219,
+   1220,
+   1221
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default",
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-google]"
+  ],
+  "env_id": "e0704"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "994c52eb2c86d3d780a0fbab4a82ca6a5d51fbf3",
+  "merge_base": "676417fc0ebe61dc8e9fee1932f780ec0d6b9f00",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1216,
+   1217
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit",
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default"
+  ],
+  "env_id": "e0705"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "994c52eb2c86d3d780a0fbab4a82ca6a5d51fbf3",
+  "merge_base": "676417fc0ebe61dc8e9fee1932f780ec0d6b9f00",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1222,
+   1223
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit",
+   "cirq-google/cirq_google/engine/engine_test.py::test_list_processor_configs_from_run_default"
+  ],
+  "env_id": "e0706"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "bcbb3e8b34779cd080c108cb0eee80cdebceac4e",
+  "merge_base": "85e384401d1e0e4370628ce5089bb61bee5eab5b",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1224,
+   1225,
+   1226,
+   1227,
+   1228
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_sycamore_devices[device0-88-",
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_sycamore_devices[device1-32-",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-google]"
+  ],
+  "env_id": "e0707"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "bcbb3e8b34779cd080c108cb0eee80cdebceac4e",
+  "merge_base": "85e384401d1e0e4370628ce5089bb61bee5eab5b",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1229,
+   1230
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_sycamore_devices[device0-88-",
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_sycamore_devices[device1-32-"
+  ],
+  "env_id": "e0708"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "bcbb3e8b34779cd080c108cb0eee80cdebceac4e",
+  "merge_base": "85e384401d1e0e4370628ce5089bb61bee5eab5b",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1231,
+   1232
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_sycamore_devices[device0-88-",
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_sycamore_devices[device1-32-"
+  ],
+  "env_id": "e0709"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "735cd6b9f59430d8aaa721d48cb5aa6658f884ae",
+  "merge_base": "85e384401d1e0e4370628ce5089bb61bee5eab5b",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1233
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/simulate/quantum_virtual_machine.ipynb]"
+  ],
+  "env_id": "e0710"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "6c0a9f2fe74bcadb9ae302ca0e08f03818bdfbb1",
+  "merge_base": "726eed6fff56620abcf6a9a886e4b2af5a0bce79",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1234
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/stream_manager_test.py::TestStreamManager::test_stop_cancels_existing_sends"
+  ],
+  "env_id": "e0711"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "6547e6ef4fe0bf9443000c02d1a4fdb0f1251d91",
+  "merge_base": "",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1235
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/single_qubit_readout_calibration_test.py::test_estimate_parallel_readout_errors_no_noise"
+  ],
+  "env_id": "e0712"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2b2e75a52b2bf5cd9e752d48e19c64a45260704e",
+  "merge_base": "5652c01a33533358d0f9cdcc274f58deddc82831",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1236,
+   1237,
+   1238,
+   1239
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_willow_devices[device0-182-",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-google]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_test_data_coverageod_spec259-Willow-GridDevice]"
+  ],
+  "env_id": "e0713"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2b2e75a52b2bf5cd9e752d48e19c64a45260704e",
+  "merge_base": "5652c01a33533358d0f9cdcc274f58deddc82831",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1240,
+   1241
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_test_data_coverageod_spec259-Willow-GridDevice]",
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_willow_devices[device0-182-"
+  ],
+  "env_id": "e0714"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2b2e75a52b2bf5cd9e752d48e19c64a45260704e",
+  "merge_base": "5652c01a33533358d0f9cdcc274f58deddc82831",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1242,
+   1243
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_test_data_coverageod_spec259-Willow-GridDevice]",
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_willow_devices[device0-182-"
+  ],
+  "env_id": "e0715"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2b2e75a52b2bf5cd9e752d48e19c64a45260704e",
+  "merge_base": "5652c01a33533358d0f9cdcc274f58deddc82831",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1244,
+   1245
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_test_data_coverageod_spec259-Willow-GridDevice]",
+   "cirq-google/cirq_google/devices/known_devices_test.py::test_willow_devices[device0-182-"
+  ],
+  "env_id": "e0716"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "18f62235edfe2fe75e602d981820269e95663fac",
+  "merge_base": "",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1246
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_ideal_target"
+  ],
+  "env_id": "e0717"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "95ae53174e636d6a3bc30b9720eb39be633bc158",
+  "merge_base": "",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1247,
+   1248
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb[pairs1-target2]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0718"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "0159b410108248b176f76dd69c8defdc5a02e64f",
+  "merge_base": "5539290c459696f14043a973dfab11df48a69867",
+  "runner": "ubuntu-22.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1249
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/stream_manager_test.py::TestStreamManager::test_submit_cancel_future_expects_engine_cancellation_rpc_call"
+  ],
+  "env_id": "e0719"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2efa001e998d0a0b42a729ef907c229ba247c1a3",
+  "merge_base": "804712cba455ac0bc6f2ce5e5c722a8af489e9ed",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1250
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[google/specification.md]"
+  ],
+  "env_id": "e0720"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2efa001e998d0a0b42a729ef907c229ba247c1a3",
+  "merge_base": "804712cba455ac0bc6f2ce5e5c722a8af489e9ed",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1251
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[google/specification.md]"
+  ],
+  "env_id": "e0721"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2efa001e998d0a0b42a729ef907c229ba247c1a3",
+  "merge_base": "804712cba455ac0bc6f2ce5e5c722a8af489e9ed",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1252
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[google/specification.md]"
+  ],
+  "env_id": "e0722"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "5cfbb2aecf0182f77e1fd90aeb23799e57d290be",
+  "merge_base": "804712cba455ac0bc6f2ce5e5c722a8af489e9ed",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1253
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[google/specification.md]"
+  ],
+  "env_id": "e0723"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "5cfbb2aecf0182f77e1fd90aeb23799e57d290be",
+  "merge_base": "804712cba455ac0bc6f2ce5e5c722a8af489e9ed",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1254
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[google/specification.md]"
+  ],
+  "env_id": "e0724"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "5cfbb2aecf0182f77e1fd90aeb23799e57d290be",
+  "merge_base": "804712cba455ac0bc6f2ce5e5c722a8af489e9ed",
+  "runner": "ubuntu-22.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1255
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[google/specification.md]"
+  ],
+  "env_id": "e0725"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "6a87844e4e76061cf66468442b6f073ec4cac023",
+  "merge_base": "cf8433466a91104d1382e4262d09753a3817fdd8",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1256
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_device"
+  ],
+  "env_id": "e0726"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "de3117c1b091caf876fc61b4e94725187a0d7cc1",
+  "merge_base": "061991bb6e4dff59ba775f8357cedcdd73089565",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1257
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_device"
+  ],
+  "env_id": "e0727"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "57a24d6fe817d312eee181e6f189fbbe29c6ee3d",
+  "merge_base": "9e53613b0ca8e65fbbbb2c8157a0a5e07e497707",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1258,
+   1259,
+   1260
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/simulate/quantum_virtual_machine.ipynb]",
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/simulate/qvm_basic_example.ipynb]",
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/simulate/virtual_engine_interface.ipynb]"
+  ],
+  "env_id": "e0728"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "91b658424ac38aaeee9a7fde550f26255a13969e",
+  "merge_base": "9e53613b0ca8e65fbbbb2c8157a0a5e07e497707",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1261,
+   1262,
+   1263
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/simulate/quantum_virtual_machine.ipynb]",
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/simulate/qvm_basic_example.ipynb]",
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/simulate/virtual_engine_interface.ipynb]"
+  ],
+  "env_id": "e0729"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "35acc58b358e77027b48ba8252246cb87228f436",
+  "merge_base": "9e53613b0ca8e65fbbbb2c8157a0a5e07e497707",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1264,
+   1265
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/isolated_notebook_test.py::test_ensure_unreleased_notebooks_install_cirq_pre[docs/simulate/virtual_engine_interface.ipynb]"
+  ],
+  "env_id": "e0730"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "35acc58b358e77027b48ba8252246cb87228f436",
+  "merge_base": "9e53613b0ca8e65fbbbb2c8157a0a5e07e497707",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1266
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/isolated_notebook_test.py::test_ensure_unreleased_notebooks_install_cirq_pre[docs/simulate/virtual_engine_interface.ipynb]"
+  ],
+  "env_id": "e0731"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "35acc58b358e77027b48ba8252246cb87228f436",
+  "merge_base": "9e53613b0ca8e65fbbbb2c8157a0a5e07e497707",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1267,
+   1268
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_device",
+   "dev_tools/notebooks/isolated_notebook_test.py::test_ensure_unreleased_notebooks_install_cirq_pre[docs/simulate/virtual_engine_interface.ipynb]"
+  ],
+  "env_id": "e0732"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "45f1208b5143b6179d3cb87eedaad8fd6c632e0c",
+  "merge_base": "9e53613b0ca8e65fbbbb2c8157a0a5e07e497707",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1269,
+   1272
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/isolated_notebook_test.py::test_ensure_unreleased_notebooks_install_cirq_pre[docs/simulate/virtual_engine_interface.ipynb]"
+  ],
+  "env_id": "e0733"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "45f1208b5143b6179d3cb87eedaad8fd6c632e0c",
+  "merge_base": "9e53613b0ca8e65fbbbb2c8157a0a5e07e497707",
+  "runner": "windows-2022",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1270
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/isolated_notebook_test.py::test_ensure_unreleased_notebooks_install_cirq_pre[docs/simulate/virtual_engine_interface.ipynb]"
+  ],
+  "env_id": "e0734"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "45f1208b5143b6179d3cb87eedaad8fd6c632e0c",
+  "merge_base": "9e53613b0ca8e65fbbbb2c8157a0a5e07e497707",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1271
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/isolated_notebook_test.py::test_ensure_unreleased_notebooks_install_cirq_pre[docs/simulate/virtual_engine_interface.ipynb]"
+  ],
+  "env_id": "e0735"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "e78098aaeb1ec12f69405bfc19a377e764739e66",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1273
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/single_qubit_readout_calibration_test.py::test_estimate_single_qubit_readout_errors_with_noise"
+  ],
+  "env_id": "e0736"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "e78098aaeb1ec12f69405bfc19a377e764739e66",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1274
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/t1_decay_experiment_test.py::test_plot_does_not_raise_error"
+  ],
+  "env_id": "e0737"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "e78098aaeb1ec12f69405bfc19a377e764739e66",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1275
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/t1_decay_experiment_test.py::test_noise_model_continous[500.0]"
+  ],
+  "env_id": "e0738"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "e78098aaeb1ec12f69405bfc19a377e764739e66",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1276
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/t1_decay_experiment_test.py::test_sudden_decay_results"
+  ],
+  "env_id": "e0739"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "1982fd7feced59a1186b7b8cc5bc77e0638fc68b",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1277
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/single_qubit_readout_calibration_test.py::test_estimate_single_qubit_readout_errors_with_noise"
+  ],
+  "env_id": "e0740"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "1982fd7feced59a1186b7b8cc5bc77e0638fc68b",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1278
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/single_qubit_readout_calibration_test.py::test_estimate_single_qubit_readout_errors_with_noise"
+  ],
+  "env_id": "e0741"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "1982fd7feced59a1186b7b8cc5bc77e0638fc68b",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1279,
+   1280
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/single_qubit_readout_calibration_test.py::test_estimate_single_qubit_readout_errors_with_noise",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0742"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "1982fd7feced59a1186b7b8cc5bc77e0638fc68b",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1281,
+   1282
+  ],
+  "nodeids": [
+   "cirq-core/cirq/contrib/paulistring/pauli_string_measurement_with_readout_mitigation_test.py::test_many_circuits_mixed_mitigation_types[True]",
+   "cirq-core/cirq/experiments/single_qubit_readout_calibration_test.py::test_estimate_single_qubit_readout_errors_with_noise"
+  ],
+  "env_id": "e0743"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "ff56fb8f2de3e2c6a1ea35ff5bbd258a8a1f8aec",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "ubuntu-22.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1283
+  ],
+  "nodeids": [
+   "cirq-core/cirq/contrib/paulistring/pauli_string_measurement_with_readout_mitigation_test.py::test_group_pauli_string_measurement_errors_with_noise[True]"
+  ],
+  "env_id": "e0744"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "ff56fb8f2de3e2c6a1ea35ff5bbd258a8a1f8aec",
+  "merge_base": "4c2bc35939e49108a002f54fb4a24927b15b2758",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1284
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/stream_manager_test.py::TestStreamManager::test_submit_job_does_not_exist_expects_create_quantum_job_request"
+  ],
+  "env_id": "e0745"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "575109cc1a1d9517332486d06ba76f5f57248320",
+  "merge_base": "4a34e0fd59bc9aa08233c6d1efa2345a4276e280",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1285,
+   1290,
+   1291,
+   1292,
+   1293,
+   1294,
+   1295,
+   1296,
+   1297,
+   1298
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/devices/grid_device_test.py::test_grid_device_validate_operations_negative",
+   "cirq-google/cirq_google/engine/virtual_engine_factory_test.py::test_create_default_noisy_quantum_virtual_machine[rainbow-0]",
+   "cirq-google/cirq_google/engine/virtual_engine_factory_test.py::test_create_default_noisy_quantum_virtual_machine[weber-0]",
+   "cirq-google/cirq_google/engine/virtual_engine_factory_test.py::test_create_default_noisy_quantum_virtual_machine[willow_pink-1]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-google]"
+  ],
+  "env_id": "e0746"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "575109cc1a1d9517332486d06ba76f5f57248320",
+  "merge_base": "4a34e0fd59bc9aa08233c6d1efa2345a4276e280",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1286,
+   1287,
+   1288,
+   1289
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/devices/grid_device_test.py::test_grid_device_validate_operations_negative",
+   "cirq-google/cirq_google/engine/virtual_engine_factory_test.py::test_create_default_noisy_quantum_virtual_machine[rainbow-0]",
+   "cirq-google/cirq_google/engine/virtual_engine_factory_test.py::test_create_default_noisy_quantum_virtual_machine[weber-0]",
+   "cirq-google/cirq_google/engine/virtual_engine_factory_test.py::test_create_default_noisy_quantum_virtual_machine[willow_pink-1]"
+  ],
+  "env_id": "e0747"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "575109cc1a1d9517332486d06ba76f5f57248320",
+  "merge_base": "4a34e0fd59bc9aa08233c6d1efa2345a4276e280",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1299,
+   1300,
+   1301,
+   1302
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/devices/grid_device_test.py::test_grid_device_validate_operations_negative",
+   "cirq-google/cirq_google/engine/virtual_engine_factory_test.py::test_create_default_noisy_quantum_virtual_machine[rainbow-0]",
+   "cirq-google/cirq_google/engine/virtual_engine_factory_test.py::test_create_default_noisy_quantum_virtual_machine[weber-0]",
+   "cirq-google/cirq_google/engine/virtual_engine_factory_test.py::test_create_default_noisy_quantum_virtual_machine[willow_pink-1]"
+  ],
+  "env_id": "e0748"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2b828dbc31372392ebcd41fdc538bec38867384f",
+  "merge_base": "d133c7c368756f7ac94366f8f738ef9bc68681df",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1303,
+   1304,
+   1306
+  ],
+  "nodeids": [
+   "cirq-core/cirq/sim/mux_test.py::test_final_density_matrix_param_resolver",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0749"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2b828dbc31372392ebcd41fdc538bec38867384f",
+  "merge_base": "d133c7c368756f7ac94366f8f738ef9bc68681df",
+  "runner": "windows-2022",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1305
+  ],
+  "nodeids": [
+   "cirq-core/cirq/sim/mux_test.py::test_final_density_matrix_param_resolver"
+  ],
+  "env_id": "e0750"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2b828dbc31372392ebcd41fdc538bec38867384f",
+  "merge_base": "d133c7c368756f7ac94366f8f738ef9bc68681df",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1307
+  ],
+  "nodeids": [
+   "cirq-core/cirq/sim/mux_test.py::test_final_density_matrix_param_resolver"
+  ],
+  "env_id": "e0751"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "1c37eb1fb8123173fc69120c2694f41a2b2a60a1",
+  "merge_base": "53f45a4323eeb81b21fd0046f3ac4cdc914dde39",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1308,
+   1309,
+   1311
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/TwoQubitNumericalCompiler.json]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0752"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "1c37eb1fb8123173fc69120c2694f41a2b2a60a1",
+  "merge_base": "53f45a4323eeb81b21fd0046f3ac4cdc914dde39",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1310
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[C:\\\\a\\\\Cirq\\\\Cirq\\\\cirq-core\\\\cirq\\\\protocols\\\\json_test_data\\\\TwoQubitNumericalCompiler.json]"
+  ],
+  "env_id": "e0753"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "1c37eb1fb8123173fc69120c2694f41a2b2a60a1",
+  "merge_base": "53f45a4323eeb81b21fd0046f3ac4cdc914dde39",
+  "runner": "macos-15",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1312
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[/Users/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/TwoQubitNumericalCompiler.json]"
+  ],
+  "env_id": "e0754"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "e1673c13622e50661d4c35ef019fcbdffb2da8bb",
+  "merge_base": "53f45a4323eeb81b21fd0046f3ac4cdc914dde39",
+  "runner": "ubuntu-22.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1313
+  ],
+  "nodeids": [
+   "cirq-core/cirq/transformers/analytical_decompositions/quantum_shannon_decomposition_test.py::test_qft5"
+  ],
+  "env_id": "e0755"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "4c9fe12a25180c6e85ea30ac33a6fab1e0a5fecd",
+  "merge_base": "53f45a4323eeb81b21fd0046f3ac4cdc914dde39",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1314,
+   1315,
+   1318,
+   1319,
+   1320,
+   1323,
+   1324
+  ],
+  "nodeids": [
+   "cirq-core/cirq/ops/variable_qid_test.py::test_variable_grid_qid_simulation",
+   "cirq-core/cirq/ops/variable_qid_test.py::test_variable_line_qid_simulation",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0756"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "4c9fe12a25180c6e85ea30ac33a6fab1e0a5fecd",
+  "merge_base": "53f45a4323eeb81b21fd0046f3ac4cdc914dde39",
+  "runner": "macos-15",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1316,
+   1317
+  ],
+  "nodeids": [
+   "cirq-core/cirq/ops/variable_qid_test.py::test_variable_grid_qid_simulation",
+   "cirq-core/cirq/ops/variable_qid_test.py::test_variable_line_qid_simulation"
+  ],
+  "env_id": "e0757"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "4c9fe12a25180c6e85ea30ac33a6fab1e0a5fecd",
+  "merge_base": "53f45a4323eeb81b21fd0046f3ac4cdc914dde39",
+  "runner": "windows-2022",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1321,
+   1322
+  ],
+  "nodeids": [
+   "cirq-core/cirq/ops/variable_qid_test.py::test_variable_grid_qid_simulation",
+   "cirq-core/cirq/ops/variable_qid_test.py::test_variable_line_qid_simulation"
+  ],
+  "env_id": "e0758"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "471d38d1c5e15c25f09b12273f61ae8f5a97c1ef",
+  "merge_base": "",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1325
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/named_topologies.ipynb]"
+  ],
+  "env_id": "e0759"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "4bca977414fabca1a06c59f31ebed259e5ea037b",
+  "merge_base": "e0b54ff0e1534c12f094c79f852739d67ffbb172",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1326
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_device"
+  ],
+  "env_id": "e0760"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "864c3750b7e2287b351994fd6fe709a35074c4d2",
+  "merge_base": "18c6587002a9c5acff22c88c3bfe1930de1227bd",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1327
+  ],
+  "nodeids": [
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-web]"
+  ],
+  "env_id": "e0761"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "4e101b238d0271d15108dd513df96ce9091260e6",
+  "merge_base": "18c6587002a9c5acff22c88c3bfe1930de1227bd",
+  "runner": "ubuntu-22.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1328
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/stream_manager_test.py::TestStreamManager::test_submit_after_stream_breakage"
+  ],
+  "env_id": "e0762"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "0cbf84ab0793f03a2feea5fee6867b93d6148d7d",
+  "merge_base": "9eb109c73f2cade0e3dc4c0eb2a3f32f09e5f9c4",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1329,
+   1330
+  ],
+  "nodeids": [
+   "cirq-core/cirq/transformers/analytical_decompositions/quantum_shannon_decomposition_test.py::test_random_qsd_n_qubit[5]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0763"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "c3426aa59a60c7c7970dc00383d51daecd80cca8",
+  "merge_base": "729c329ce5b4f0753d885251d97c40666c001b04",
+  "runner": "macos-15",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1331
+  ],
+  "nodeids": [
+   "examples/examples_test.py::test_example_shor_quantum_order_finder[2-7]"
+  ],
+  "env_id": "e0764"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "60f7c0ae2393906692aa9d8797171109b0eb271a",
+  "merge_base": "70c20c3eccada5350f3d2c6de093b0eea4a03069",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1332,
+   1335,
+   1336
+  ],
+  "nodeids": [
+   "cirq-core/cirq/ops/common_channels_test.py::test_probability_channels_accept_numpy_scalars[depolarize-float32]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0765"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "60f7c0ae2393906692aa9d8797171109b0eb271a",
+  "merge_base": "70c20c3eccada5350f3d2c6de093b0eea4a03069",
+  "runner": "ubuntu-22.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1333
+  ],
+  "nodeids": [
+   "cirq-core/cirq/ops/common_channels_test.py::test_probability_channels_accept_numpy_scalars[depolarize-float32]"
+  ],
+  "env_id": "e0766"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "60f7c0ae2393906692aa9d8797171109b0eb271a",
+  "merge_base": "70c20c3eccada5350f3d2c6de093b0eea4a03069",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1334
+  ],
+  "nodeids": [
+   "cirq-core/cirq/ops/common_channels_test.py::test_probability_channels_accept_numpy_scalars[depolarize-float32]"
+  ],
+  "env_id": "e0767"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "60f7c0ae2393906692aa9d8797171109b0eb271a",
+  "merge_base": "70c20c3eccada5350f3d2c6de093b0eea4a03069",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1337
+  ],
+  "nodeids": [
+   "cirq-core/cirq/ops/common_channels_test.py::test_probability_channels_accept_numpy_scalars[depolarize-float32]"
+  ],
+  "env_id": "e0768"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "60340917b67fd161ff969b293549489eb77741d2",
+  "merge_base": "cfa8a846f9960b4ad24eadfcde40be33d0b98596",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1338,
+   1339,
+   1340,
+   1341,
+   1342,
+   1343
+  ],
+  "nodeids": [
+   "cirq-core/cirq/contrib/qasm_import/_parser_test.py::test_zero_to_a_negative_power[(1-1)^-1]",
+   "cirq-core/cirq/contrib/qasm_import/_parser_test.py::test_zero_to_a_negative_power[0^-1]",
+   "cirq-core/cirq/contrib/qasm_import/_parser_test.py::test_zero_to_a_negative_power[0^-2]"
+  ],
+  "env_id": "e0769"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "5ac881516278af89b71b014979f205d43a70cf77",
+  "merge_base": "43f6849325d9b18372d75875df37c86b4e34fe5d",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1344
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/stream_manager_test.py::TestStreamManager::test_submit_program_already_exists_but_job_does_not_exist_expects_create_job_request"
+  ],
+  "env_id": "e0770"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "13b21bdae8d85c2a6a21bbb626844a2a309c13b7",
+  "merge_base": "43f6849325d9b18372d75875df37c86b4e34fe5d",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1345,
+   1348
+  ],
+  "nodeids": [
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/start/intro.ipynb]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-google]"
+  ],
+  "env_id": "e0771"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "13b21bdae8d85c2a6a21bbb626844a2a309c13b7",
+  "merge_base": "43f6849325d9b18372d75875df37c86b4e34fe5d",
+  "runner": "windows-2022",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1346
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[dev/versions.md]"
+  ],
+  "env_id": "e0772"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "13b21bdae8d85c2a6a21bbb626844a2a309c13b7",
+  "merge_base": "43f6849325d9b18372d75875df37c86b4e34fe5d",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1347
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[dev/rfc_process.md]"
+  ],
+  "env_id": "e0773"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "13b21bdae8d85c2a6a21bbb626844a2a309c13b7",
+  "merge_base": "43f6849325d9b18372d75875df37c86b4e34fe5d",
+  "runner": "ubuntu-22.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1349
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[hardware/ionq/jobs.md]"
+  ],
+  "env_id": "e0774"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "71aed44162acf47fe50df768fb3dd6c77807dfa6",
+  "merge_base": "43f6849325d9b18372d75875df37c86b4e34fe5d",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1350
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[hardware/ionq/service.md]"
+  ],
+  "env_id": "e0775"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "71aed44162acf47fe50df768fb3dd6c77807dfa6",
+  "merge_base": "43f6849325d9b18372d75875df37c86b4e34fe5d",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1351,
+   1352,
+   1353
+  ],
+  "nodeids": [
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-google]",
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[dev/notebooks.md]",
+   "dev_tools/notebooks/notebook_test.py::test_notebooks_against_cirq_head[/home/runner/work/Cirq/Cirq/docs/start/intro.ipynb]"
+  ],
+  "env_id": "e0776"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "71aed44162acf47fe50df768fb3dd6c77807dfa6",
+  "merge_base": "43f6849325d9b18372d75875df37c86b4e34fe5d",
+  "runner": "macos-15",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1354
+  ],
+  "nodeids": [
+   "dev_tools/snippets_test.py::test_can_run_docs_code_snippets[start/best_practices.md]"
+  ],
+  "env_id": "e0777"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "431b30558b032eddb9c347e10f6dd3965ba1f20f",
+  "merge_base": "8122be01fa4a2d226efd7c35e7d63aadbc94a38d",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1355
+  ],
+  "nodeids": [
+   "cirq-core/cirq/contrib/paulistring/pauli_string_measurement_with_readout_mitigation_test.py::test_pauli_string_measurement_errors_with_noise[False]"
+  ],
+  "env_id": "e0778"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "5a3725d98462a6a461dfe8d08fb5ff9a258f5542",
+  "merge_base": "8122be01fa4a2d226efd7c35e7d63aadbc94a38d",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1356
+  ],
+  "nodeids": [
+   "conftest_test.py::test_get_available_cpu_count_affinity_oserror"
+  ],
+  "env_id": "e0779"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "1083e154034c8ef958a690a29ec3945418f85185",
+  "merge_base": "",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1357
+  ],
+  "nodeids": [
+   "cirq-core/cirq/contrib/paulistring/pauli_string_measurement_with_readout_mitigation_test.py::test_group_pauli_string_measurement_errors_with_noise[True]"
+  ],
+  "env_id": "e0780"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "712fbc350cc5f7174a845b4b568f37c9721a5941",
+  "merge_base": "1f6f2e0c5f50098fb5c1ff402d56f094458a9c72",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1358,
+   1361
+  ],
+  "nodeids": [
+   "dev_tools/path_area_labeler_test.py::test_main_requires_github_repository_for_issue_number"
+  ],
+  "env_id": "e0781"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "712fbc350cc5f7174a845b4b568f37c9721a5941",
+  "merge_base": "1f6f2e0c5f50098fb5c1ff402d56f094458a9c72",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1359
+  ],
+  "nodeids": [
+   "dev_tools/path_area_labeler_test.py::test_main_requires_github_repository_for_issue_number"
+  ],
+  "env_id": "e0782"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "712fbc350cc5f7174a845b4b568f37c9721a5941",
+  "merge_base": "1f6f2e0c5f50098fb5c1ff402d56f094458a9c72",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1360
+  ],
+  "nodeids": [
+   "dev_tools/path_area_labeler_test.py::test_main_requires_github_repository_for_issue_number"
+  ],
+  "env_id": "e0783"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "512a5f2e5c18ef8ac166a94ed3a1acc15936fefe",
+  "merge_base": "14a2359d44acf5d60df89344995b6121c913c163",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1362,
+   1363,
+   1364
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/qubit_characterizations_test.py::test_parallel_single_qubit_parallel_single_qubit_randomized_benchmarking",
+   "cirq-core/cirq/experiments/qubit_characterizations_test.py::test_parallel_single_qubit_randomized_benchmarking_with_noise",
+   "cirq-core/cirq/experiments/qubit_characterizations_test.py::test_single_qubit_randomized_benchmarking"
+  ],
+  "env_id": "e0784"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "512a5f2e5c18ef8ac166a94ed3a1acc15936fefe",
+  "merge_base": "14a2359d44acf5d60df89344995b6121c913c163",
+  "runner": "windows-2022",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1365,
+   1366,
+   1367
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/qubit_characterizations_test.py::test_parallel_single_qubit_parallel_single_qubit_randomized_benchmarking",
+   "cirq-core/cirq/experiments/qubit_characterizations_test.py::test_parallel_single_qubit_randomized_benchmarking_with_noise",
+   "cirq-core/cirq/experiments/qubit_characterizations_test.py::test_single_qubit_randomized_benchmarking"
+  ],
+  "env_id": "e0785"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "512a5f2e5c18ef8ac166a94ed3a1acc15936fefe",
+  "merge_base": "14a2359d44acf5d60df89344995b6121c913c163",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1368,
+   1369,
+   1370,
+   1371,
+   1372,
+   1373,
+   1374,
+   1375
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/qubit_characterizations_test.py::test_parallel_single_qubit_parallel_single_qubit_randomized_benchmarking",
+   "cirq-core/cirq/experiments/qubit_characterizations_test.py::test_parallel_single_qubit_randomized_benchmarking_with_noise",
+   "cirq-core/cirq/experiments/qubit_characterizations_test.py::test_single_qubit_randomized_benchmarking",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]",
+   "cirq-core/cirq/contrib/shuffle_circuits/shuffle_circuits_with_readout_benchmarking_test.py::test_deprecated_run_shuffled_with_readout_benchmarking"
+  ],
+  "env_id": "e0786"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "7e8f89de050ce42ae186da2f0467aaa696ddc4ee",
+  "merge_base": "4adcfb9fa6ccf7d2fe247caceafa5c5eda6473b5",
+  "runner": "ubuntu-22.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1376
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/stream_manager_test.py::TestStreamManager::test_broken_stream_stops_request_iterator"
+  ],
+  "env_id": "e0787"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "277b7f2afb3070c92f0cbc27253c703181d4b982",
+  "merge_base": "e1fa91b61d46437c63953b259c18a0c9d3b8ddad",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1377,
+   1378,
+   1379
+  ],
+  "nodeids": [
+   "cirq-core/cirq/transformers/heuristic_decompositions/two_qubit_numerical_optimization_test.py::test_numerical_compiler_cache_tolerates_numerical_noise",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0788"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "277b7f2afb3070c92f0cbc27253c703181d4b982",
+  "merge_base": "e1fa91b61d46437c63953b259c18a0c9d3b8ddad",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1380
+  ],
+  "nodeids": [
+   "cirq-core/cirq/transformers/heuristic_decompositions/two_qubit_numerical_optimization_test.py::test_numerical_compiler_cache_tolerates_numerical_noise"
+  ],
+  "env_id": "e0789"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "1da826576ed555f294e9fff7f12938154d4e3ae7",
+  "merge_base": "5f03f6bb4ec049bb353cea84c2c48278331a8d6e",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1381
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_device"
+  ],
+  "env_id": "e0790"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "e6e4f811cc4df0771f2b672b2d2e1fedc78f9f94",
+  "merge_base": "5f03f6bb4ec049bb353cea84c2c48278331a8d6e",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1382
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/stream_manager_test.py::TestStreamManager::test_submit_cancel_future_expects_engine_cancellation_rpc_call"
+  ],
+  "env_id": "e0791"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "47164e70b4a6d6ab6eea9bb302fac49f64896ae8",
+  "merge_base": "da3f2cd9d87834500d49c745145f90d7afa2a7f3",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1383
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit"
+  ],
+  "env_id": "e0792"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "47164e70b4a6d6ab6eea9bb302fac49f64896ae8",
+  "merge_base": "da3f2cd9d87834500d49c745145f90d7afa2a7f3",
+  "runner": "windows-2022",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1384
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_test.py::test_engine_compile_circuit_with_stim_circuit"
+  ],
+  "env_id": "e0793"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "47164e70b4a6d6ab6eea9bb302fac49f64896ae8",
+  "merge_base": "da3f2cd9d87834500d49c745145f90d7afa2a7f3",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1385
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_compile_circuit_with_stim_circuit_object"
+  ],
+  "env_id": "e0794"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "47164e70b4a6d6ab6eea9bb302fac49f64896ae8",
+  "merge_base": "da3f2cd9d87834500d49c745145f90d7afa2a7f3",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1386,
+   1387
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_without_job_id",
+   "cirq-google/cirq_google/engine/engine_client_test.py::test_create_job_with_run_name_and_device_config_name_succeeds[--1]"
+  ],
+  "env_id": "e0795"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "af272e23e78c02d07d8e78f4446fbabeaafba014",
+  "merge_base": "48f0c722847e5cc05c56fecc672557f2d343791c",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1388
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/simulated_local_job_test.py::test_run_async"
+  ],
+  "env_id": "e0796"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "b0ceb0205dd558ae875369f56a68d2505d310c63",
+  "merge_base": "48f0c722847e5cc05c56fecc672557f2d343791c",
+  "runner": "ubuntu-22.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1389
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/stream_manager_test.py::TestStreamManager::test_submit_cancel_future_expects_engine_cancellation_rpc_call"
+  ],
+  "env_id": "e0797"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "956b48e11972191c74a69fe829421c63a73fd7d0",
+  "merge_base": "c211d962c5a9b5a1fc76b586310fb34b3a61b2d6",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1390
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/simulated_local_job_test.py::test_run_async"
+  ],
+  "env_id": "e0798"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "2975bbb013ce0ee0694e6fb8b36184205da7ff17",
+  "merge_base": "1403830e59df5835ffc3f09e53cefedc81840a56",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1391
+  ],
+  "nodeids": [
+   "cirq-core/cirq/transformers/measurement_transformers_test.py::test_multi_qubit_confusion_map"
+  ],
+  "env_id": "e0799"
+ }
+]

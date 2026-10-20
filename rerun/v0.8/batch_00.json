@@ -1,0 +1,3820 @@
+[
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "f7e5f86247f74f940c5be09ffb8985fcbfcb6eee",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   0
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0000"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d18e36d63aebc7c3a596dabfc74be476c823c6c5",
+  "merge_base": "f58678b123bb2b0fe985fb31de8cf72f783999bb",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1
+  ],
+  "nodeids": [
+   "whole_repo_tests/types/test_hypothesis.py::test_mypy_passes_on_hypothesis"
+  ],
+  "env_id": "e0001"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "61cb14ac6a37c470ae4930892a459f805b73347e",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   2
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0002"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7e4334ac6f6521af36297173b332ce85fe7b4105",
+  "merge_base": "61cb14ac6a37c470ae4930892a459f805b73347e",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   3,
+   4,
+   5,
+   6
+  ],
+  "nodeids": [
+   "tests/snapshots/test_tracebacks.py::test_traceback_framesultiple_failures]",
+   "tests/pytest/test_reporting.py::test_no_missing_reports[auto]",
+   "tests/pytest/test_reporting.py::test_no_missing_reports[long]",
+   "tests/pytest/test_reporting.py::test_no_missing_reports[short]"
+  ],
+  "env_id": "e0003"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "1a296883b44603ce958903e50378a33fed9601fb",
+  "merge_base": "61cb14ac6a37c470ae4930892a459f805b73347e",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   7
+  ],
+  "nodeids": [
+   "tests\\conjecture\\test_inquisitor.py::test_inquisitor_no_misleading_comment_for_eq_args"
+  ],
+  "env_id": "e0004"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b44ba405f7bbb0e63e3b6d5b4c48c8054d806a68",
+  "merge_base": "61cb14ac6a37c470ae4930892a459f805b73347e",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   8,
+   9,
+   10,
+   11
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/pytest/test_reporting.py::test_no_missing_reports[auto]",
+   "tests/pytest/test_reporting.py::test_no_missing_reports[long]",
+   "tests/pytest/test_reporting.py::test_no_missing_reports[short]"
+  ],
+  "env_id": "e0005"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "1b3db2d7b5271a0957ebfd1c75a1b5d3d0216f8d",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   12
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0006"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d92a798f4d8dabba29111e0cc726a92ea0a47937",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   13
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0007"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b7d806935d0f24d9a3173d075c57cce8a62cbaff",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   14,
+   15,
+   17
+  ],
+  "nodeids": [
+   "tests\\codemods\\test_codemod_cli.py::test_refactor_reports_missing_file",
+   "tests\\conjecture\\test_inquisitor.py::test_inquisitor_no_misleading_comment_for_eq_args"
+  ],
+  "env_id": "e0008"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b7d806935d0f24d9a3173d075c57cce8a62cbaff",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   16
+  ],
+  "nodeids": [
+   "tests\\codemods\\test_codemod_cli.py::test_refactor_reports_missing_file"
+  ],
+  "env_id": "e0009"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b7d806935d0f24d9a3173d075c57cce8a62cbaff",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   18
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0010"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b7d806935d0f24d9a3173d075c57cce8a62cbaff",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   19
+  ],
+  "nodeids": [
+   "tests/ghostwriter/test_ghostwriter_cli.py::test_write_command_reports_syntax_highlighting_errors"
+  ],
+  "env_id": "e0011"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c817315f19c2924b7ca328db27ada0c87f3fbdb7",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   20
+  ],
+  "nodeids": [
+   "tests/ghostwriter/test_ghostwriter_cli.py::test_write_command_reports_syntax_highlighting_errors"
+  ],
+  "env_id": "e0012"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c817315f19c2924b7ca328db27ada0c87f3fbdb7",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   21
+  ],
+  "nodeids": [
+   "tests/cover/test_seed_printing.py::test_prints_seed_on_very_slow_shrinking[False]"
+  ],
+  "env_id": "e0013"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "4213058e8e7839bf3fe84d615c810c4d41d7d0b6",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   22
+  ],
+  "nodeids": [
+   "tests/conjecture/test_inquisitor.py::test_inquisitor_no_misleading_comment_for_eq_args"
+  ],
+  "env_id": "e0014"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "4213058e8e7839bf3fe84d615c810c4d41d7d0b6",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   23
+  ],
+  "nodeids": [
+   "tests/pandas/test_series.py::test_tz_aware_series_from_naive_datetime_elements"
+  ],
+  "env_id": "e0015"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "8aacab9beb68519bbabe60566eae41d32c7b1e2a",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   24
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0016"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "9495e0d1c8a01e661e39059f47806f1e8e655723",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   25,
+   26,
+   27
+  ],
+  "nodeids": [
+   "hypothesis/tests/cover/test_custom_reprs.py::test_reprs_as_created",
+   "hypothesis/tests/cover/test_regex.py::test_regex_output_should_print_as_string[True]",
+   "hypothesis/tests/cover/test_stateful.py::test_steps_printed_despite_pytest_fail"
+  ],
+  "env_id": "e0017"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "f3b6dfe50f132ce59ab4e534905e8caf665be733",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   28
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0018"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "65022c44e4f0d84ee865630fa3c8905e60653d18",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   29,
+   31
+  ],
+  "nodeids": [
+   "tests\\array_api\\test_scalar_dtypes.py::test_numeric_dtypes_excludes_complex_before_2022_12ock]"
+  ],
+  "env_id": "e0019"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "65022c44e4f0d84ee865630fa3c8905e60653d18",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "macos-latest",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   30
+  ],
+  "nodeids": [
+   "tests/array_api/test_scalar_dtypes.py::test_numeric_dtypes_excludes_complex_before_2022_12ock]"
+  ],
+  "env_id": "e0020"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "cef8c21c7a5feaf2bfa741131308ee1fff56d1b3",
+  "merge_base": "793e92df4baa95a10f7f7f63751d88517fbd4bfb",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   32
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0021"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d50a92b85675b72b96c121000623bccd964be979",
+  "merge_base": "4b8467b2e33864d3a71fa297d5f9be3e8fc9120d",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   33
+  ],
+  "nodeids": [
+   "whole_repo_tests/types/test_hypothesis.py::test_mypy_passes_on_hypothesis"
+  ],
+  "env_id": "e0022"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "629b3a4451d0a16c2b77e6bbd971b36082c4378c",
+  "merge_base": "4b8467b2e33864d3a71fa297d5f9be3e8fc9120d",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   34
+  ],
+  "nodeids": [
+   "whole_repo_tests/types/test_hypothesis.py::test_mypy_passes_on_hypothesis"
+  ],
+  "env_id": "e0023"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "f08fd78e56e4ab04956415787ad08b954bb543db",
+  "merge_base": "4b8467b2e33864d3a71fa297d5f9be3e8fc9120d",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   35
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0024"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "6482dc86e20175586df60634915c3cec09f1148e",
+  "merge_base": "f94aae1fac202d56d396465382efdc12740741a8",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   36
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0025"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "1f0291801a453cd97c570e9dbd0a36d9fc73f2af",
+  "merge_base": "ce7ef4a9683e4b1fce948ee76cd5e5649ea4fa74",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   37,
+   38,
+   39
+  ],
+  "nodeids": [
+   "tests/cover/test_stateful.py::test_multiple_common_targets",
+   "tests/cover/test_stateful.py::test_multiple_targets",
+   "tests/cover/test_stateful.py::test_single_target_multiple"
+  ],
+  "env_id": "e0026"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "72bfab7e2a6b5453a490e6673ac393ebd5e0f784",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   40
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0027"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "bf3d691d5a4e843ecf6da17cc497c39ab8c28d6d",
+  "merge_base": "a11e4b46c6c245ffee92912d86a07d4988142d2b",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   41
+  ],
+  "nodeids": [
+   "whole_repo_tests/whole_repo/test_requirements.py::test_requirements"
+  ],
+  "env_id": "e0028"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b4f2e92291d0b8c0049f49a3b0c213cbb8e6a75a",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   42
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0029"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "97c8eb7adb3fd958212cc57baf8568eceb0f5b56",
+  "merge_base": "5b20755eb605a3907d2abf411a866ba963f278b2",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   43
+  ],
+  "nodeids": [
+   "whole_repo_tests/types/test_hypothesis.py::test_mypy_passes_on_hypothesis"
+  ],
+  "env_id": "e0030"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "342569f99f34fa7f521be0ff7561f434c98f0a09",
+  "merge_base": "5b20755eb605a3907d2abf411a866ba963f278b2",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   44
+  ],
+  "nodeids": [
+   "tests/cover/test_invert.py::test_failed_inversion_notes_the_path_to_the_failure"
+  ],
+  "env_id": "e0031"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "342569f99f34fa7f521be0ff7561f434c98f0a09",
+  "merge_base": "5b20755eb605a3907d2abf411a866ba963f278b2",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   45
+  ],
+  "nodeids": [
+   "tests/cover/test_stateful.py::test_can_explicitly_call_functions_when_precondition_not_satisfied"
+  ],
+  "env_id": "e0032"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "5681407b6b23ad22a0857ebc45103a671fae5a1d",
+  "merge_base": "5b20755eb605a3907d2abf411a866ba963f278b2",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   46
+  ],
+  "nodeids": [
+   "tests/cover/test_invert.py::test_nested_nan_in_other_containers_is_not_matched"
+  ],
+  "env_id": "e0033"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c555e58c37bf456fd5e7b7ea40a80cf41d172146",
+  "merge_base": "5b20755eb605a3907d2abf411a866ba963f278b2",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   47
+  ],
+  "nodeids": [
+   "tests/nocover/test_unusual_settings_configs.py::test_hard_to_find_single_example"
+  ],
+  "env_id": "e0034"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d139e32f8c64334b2aea6480181e771d095bb850",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   48
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0035"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "3de0c4bbddd01489eded50f51f108a2c972f3455",
+  "merge_base": "d139e32f8c64334b2aea6480181e771d095bb850",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   49,
+   50,
+   51
+  ],
+  "nodeids": [
+   "hypothesis/tests/cover/test_lambda_formatting.py::test_modifying_lambda_source_code_returns_unknown[False]",
+   "tests/cover/test_lambda_formatting.py::test_modifying_lambda_source_code_returns_unknown[False]"
+  ],
+  "env_id": "e0036"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "3e9196588a269691f6cd0e3fe2f70a916650665a",
+  "merge_base": "d139e32f8c64334b2aea6480181e771d095bb850",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   52,
+   53
+  ],
+  "nodeids": [
+   "whole_repo_tests/whole_repo/test_ci_config.py::test_python_versions_are_in_trove_classifiers",
+   "whole_repo_tests/whole_repo/test_requirements.py::test_requirements"
+  ],
+  "env_id": "e0037"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "5520d9e5ed12340f05f9d84faed34771c6ab23f4",
+  "merge_base": "d139e32f8c64334b2aea6480181e771d095bb850",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   54
+  ],
+  "nodeids": [
+   "whole_repo_tests/whole_repo/test_release_files.py::test_release_file_exists_and_is_valid"
+  ],
+  "env_id": "e0038"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "1b028df3f254f62037a4ec4c62ebb59bd9bf74b6",
+  "merge_base": "d139e32f8c64334b2aea6480181e771d095bb850",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   55,
+   56,
+   57
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "whole_repo_tests/documentation/test_documentation.py::test_documentation",
+   "whole_repo_tests/documentation/test_documentation.py::test_documents_all_exported_strategies"
+  ],
+  "env_id": "e0039"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ebb7b7b6e90a6490a334518ba5b110828cde0f1c",
+  "merge_base": "6ec2e311f8e419e1e0685f2397d99f6e3244b78a",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   58
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0040"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "3f9491236a2ffa319c02338d5276417e1e26031a",
+  "merge_base": "a15954b165af42884b655dcf7e9338cb107711da",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   59
+  ],
+  "nodeids": [
+   "tests/conjecture/test_provider.py::test_on_observation_no_override"
+  ],
+  "env_id": "e0041"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "16f24b76015dbaabca40608eb9e73b46ac64e249",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   60
+  ],
+  "nodeids": [
+   "tests/conjecture/test_provider.py::test_on_observation_no_override"
+  ],
+  "env_id": "e0042"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "5fbf5c0b03ec52398ac786f43a9bca76b7aece6b",
+  "merge_base": "16f24b76015dbaabca40608eb9e73b46ac64e249",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   61,
+   62
+  ],
+  "nodeids": [
+   "tests/conjecture/test_provider.py::test_on_observation_no_override"
+  ],
+  "env_id": "e0043"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "0a4bd950f62ff7dd6295d5da85f36f4109f4257a",
+  "merge_base": "49a797bdfdd98b4f393b538c6c5aabf90ec59ffd",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   63,
+   64,
+   65
+  ],
+  "nodeids": [
+   "tests/cover/test_filter_rewriting.py::test_aware_datetimes_with_naive_bound_error_at_draw_time",
+   "tests/cover/test_filter_rewriting.py::test_aware_mode_datetimes_with_naive_bound_error_at_draw_time",
+   "tests/cover/test_filter_rewriting.py::test_naive_datetimes_with_aware_bound_error_at_draw_time"
+  ],
+  "env_id": "e0044"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b18a938bd8c7ff20f47cf0a3649dac9aed3bccc4",
+  "merge_base": "49a797bdfdd98b4f393b538c6c5aabf90ec59ffd",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   66,
+   67,
+   68
+  ],
+  "nodeids": [
+   "tests/cover/test_filter_rewriting.py::test_aware_datetimes_with_naive_bound_error_at_draw_time",
+   "tests/cover/test_filter_rewriting.py::test_aware_mode_datetimes_with_naive_bound_error_at_draw_time",
+   "tests/cover/test_filter_rewriting.py::test_naive_datetimes_with_aware_bound_error_at_draw_time"
+  ],
+  "env_id": "e0045"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b7c4d596ff60c35b32ddce8be580356bab782680",
+  "merge_base": "49a797bdfdd98b4f393b538c6c5aabf90ec59ffd",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   69
+  ],
+  "nodeids": [
+   "tests/cover/test_lookup.py::test_supportsop_types_support_protocol[SupportsRound]"
+  ],
+  "env_id": "e0046"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "2ea0696bfb6234098f0b2a1a8b1628f69279249c",
+  "merge_base": "49a797bdfdd98b4f393b538c6c5aabf90ec59ffd",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   70
+  ],
+  "nodeids": [
+   "tests/pandas/test_argument_validation.py::test_timestamp_as_datetime_bounds"
+  ],
+  "env_id": "e0047"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "435112717631e3482be8a6de4bd363830788e822",
+  "merge_base": "49a797bdfdd98b4f393b538c6c5aabf90ec59ffd",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   71
+  ],
+  "nodeids": [
+   "whole_repo_tests/types/test_hypothesis.py::test_mypy_passes_on_hypothesis"
+  ],
+  "env_id": "e0048"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "4a2cd9e509da50a78657a6eb461ad4e664c344fc",
+  "merge_base": "49a797bdfdd98b4f393b538c6c5aabf90ec59ffd",
+  "runner": "macos-latest",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   72
+  ],
+  "nodeids": [
+   "tests/crosshair/test_conformance.py::test_provider_conformance_crosshair"
+  ],
+  "env_id": "e0049"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "4a2cd9e509da50a78657a6eb461ad4e664c344fc",
+  "merge_base": "49a797bdfdd98b4f393b538c6c5aabf90ec59ffd",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   73,
+   74,
+   75
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/nocover/test_provider_conformance.py::test_provider_conformance[HypothesisProvider]",
+   "tests/nocover/test_provider_conformance.py::test_provider_conformance[ObservingHypothesisProvider]"
+  ],
+  "env_id": "e0050"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "4a2cd9e509da50a78657a6eb461ad4e664c344fc",
+  "merge_base": "49a797bdfdd98b4f393b538c6c5aabf90ec59ffd",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   76
+  ],
+  "nodeids": [
+   "tests/crosshair/test_conformance.py::test_provider_conformance_crosshair[1-2]"
+  ],
+  "env_id": "e0051"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "4a2cd9e509da50a78657a6eb461ad4e664c344fc",
+  "merge_base": "49a797bdfdd98b4f393b538c6c5aabf90ec59ffd",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   77
+  ],
+  "nodeids": [
+   "tests/crosshair/test_conformance.py::test_provider_conformance_crosshair[2-2]"
+  ],
+  "env_id": "e0052"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "f78e7c512de3398d53aec496884d4354cd22a564",
+  "merge_base": "4d02f3be194974b9a5369ecce73a550ce5556271",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   78,
+   79,
+   80
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/nocover/test_provider_conformance.py::test_provider_conformance[HypothesisProvider]",
+   "tests/nocover/test_provider_conformance.py::test_provider_conformance[ObservingHypothesisProvider]"
+  ],
+  "env_id": "e0053"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "5ae7be96f7cbb715f6b698b1fdfdb2bcdedb799e",
+  "merge_base": "b60095aa1f32f182b9b60a5e7282a9d3b27308ce",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   81
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0054"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "dacaf8cd505e3a28ffceb195b174f7c322ee5367",
+  "merge_base": "1bcbae8503b7e989f8a96cf52ba37c5790f86105",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   82
+  ],
+  "nodeids": [
+   "whole_repo_tests/types/test_hypothesis.py::test_mypy_passes_on_hypothesis"
+  ],
+  "env_id": "e0055"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "a0a7dfcb59df861a061384917203e6fe5d10703c",
+  "merge_base": "1bcbae8503b7e989f8a96cf52ba37c5790f86105",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   83
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0056"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "06bfa69f95374c300cea7063f41e2c72c8e9eca3",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   84
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0057"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "df39994ae507fb440c044d3e225afa647887af3d",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   85
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0058"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c862b6fbc6d73e596e53531ca0063d0b33b6edfc",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   86
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0059"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "138473e47895f23d72628040d582e00ac8dbdc46",
+  "merge_base": "a8dcd7422a325926693b5464f73349e361562b7c",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   87
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0060"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ce4569b12fc409aff46da1090177e909c53b708c",
+  "merge_base": "a8dcd7422a325926693b5464f73349e361562b7c",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   88,
+   89,
+   90
+  ],
+  "nodeids": [
+   "tests/nocover/test_provider_conformance.py::test_provider_conformance[HypothesisProvider]",
+   "tests/nocover/test_provider_conformance.py::test_provider_conformance[ObservingHypothesisProvider]",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0061"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "0959ac7022ea7d0ef13bdf60a9742c127c44fc3e",
+  "merge_base": "a8dcd7422a325926693b5464f73349e361562b7c",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   91
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0062"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "07f6d702c63c9d9132cd7425985061283431ba59",
+  "merge_base": "a8dcd7422a325926693b5464f73349e361562b7c",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   92
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0063"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ecaed93ac8009a9927b78413d2d90d27ec8d6431",
+  "merge_base": "a8dcd7422a325926693b5464f73349e361562b7c",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   93
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0064"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "67e5c04721dc8689d64ee831b0996b1b05ca9f82",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   94
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0065"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "a60dc77a404039c4afa93155e42138921e1c0975",
+  "merge_base": "67e5c04721dc8689d64ee831b0996b1b05ca9f82",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   95,
+   96
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0066"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "3187fb9804692357b773de8177af3c0e06dc6060",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   97
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0067"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ee9e4980bbef22d3ae08f0f507b3c9fce234f71b",
+  "merge_base": "cd434f23be1a3598085cf096e28e6738c63b29b3",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   98
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0068"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "0f5652d4f5c1b0e5a6536b3841c6391330c1714c",
+  "merge_base": "cd434f23be1a3598085cf096e28e6738c63b29b3",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   99,
+   100,
+   101
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "whole_repo_tests/documentation/test_documentation.py::test_documentation",
+   "whole_repo_tests/documentation/test_documentation.py::test_documents_all_exported_strategies"
+  ],
+  "env_id": "e0069"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "26a51606dbdd53b2944bb2c148fd11c5b54120e6",
+  "merge_base": "cd434f23be1a3598085cf096e28e6738c63b29b3",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   102
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0070"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "2eaac5f53e6f00550f3346fffc99f73f09ca2ea1",
+  "merge_base": "cd434f23be1a3598085cf096e28e6738c63b29b3",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   103
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0071"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "6f1810c37f973e396f0a11ca3cd0e6425a9355ce",
+  "merge_base": "cd434f23be1a3598085cf096e28e6738c63b29b3",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   104
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0072"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "37da03cdc24aad6cea16f5f89ca04368f81220c6",
+  "merge_base": "cd434f23be1a3598085cf096e28e6738c63b29b3",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   105
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0073"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ed283d20c9f7b28ca8879aa04f7de5d13b1a0ab3",
+  "merge_base": "cd434f23be1a3598085cf096e28e6738c63b29b3",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   106
+  ],
+  "nodeids": [
+   "tests/nocover/test_subnormal_floats.py::test_does_not_generate_subnormals_when_disallowed[16-None-None]"
+  ],
+  "env_id": "e0074"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "0b551782e21be968268b34edb6f7f43afb2d2c98",
+  "merge_base": "cd434f23be1a3598085cf096e28e6738c63b29b3",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   107
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0075"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d97fdf38bd22459291e854d95548a60433d51505",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   108
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0076"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "6c028567868140c9b25d5e111b676c9f74b29729",
+  "merge_base": "6cee8ceb8635f82d1dc1e63fabd40801c3cf08e9",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   109
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0077"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "9c55f97e507eae21677457e84737b386fd06e271",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   110,
+   111
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0078"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c8981a0f1d0b84a5bd5ede0f7ae1aef768715177",
+  "merge_base": "9c55f97e507eae21677457e84737b386fd06e271",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   112
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0079"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c8981a0f1d0b84a5bd5ede0f7ae1aef768715177",
+  "merge_base": "9c55f97e507eae21677457e84737b386fd06e271",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   113
+  ],
+  "nodeids": [
+   "tests/cover/test_constants_ast.py::test_cache_file_is_written_via_a_temporary_file"
+  ],
+  "env_id": "e0080"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b8ced1c03191646c6f78e7e9896baee82ac5801f",
+  "merge_base": "9c55f97e507eae21677457e84737b386fd06e271",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   114
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0081"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "e57fd12bc0c4242bedf4163497542b2a9aee00f3",
+  "merge_base": "9c55f97e507eae21677457e84737b386fd06e271",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   115
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0082"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b545990c0fcc07f404d834caec9aa000c8c86a34",
+  "merge_base": "9c55f97e507eae21677457e84737b386fd06e271",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   116
+  ],
+  "nodeids": [
+   "whole_repo_tests/whole_repo/test_ci_config.py::test_python_versions_are_tested_in_ci[pypy3.12]"
+  ],
+  "env_id": "e0083"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ff7e800971bacfabe4f498bc883c3fafc16c797f",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   117
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0084"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "28edcc0293b8a13a6f0ec11a7ee1167c7fb6545a",
+  "merge_base": "32ebeb29374b1b2274e42eea2ae703a6cdcdc4ec",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   118,
+   119
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0085"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7fabb948190bcf220ae577f0b9a9826fd1d5c7a3",
+  "merge_base": "32ebeb29374b1b2274e42eea2ae703a6cdcdc4ec",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   120
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0086"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "f3f4a294e9de0ddc1d5fbda23275bdfe57d78981",
+  "merge_base": "32ebeb29374b1b2274e42eea2ae703a6cdcdc4ec",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   121
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0087"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "aeaafb590194c03e30d0fbbfe11d29061204d756",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   122
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0088"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "80323b6b607c39e0070bb9045fb7388148a376fb",
+  "merge_base": "44b82b24cb40c72afd1f6e10c2af7a5d82c6539a",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   123
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0089"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d34808e53beab0022eea37dd6d86951df72c2a5f",
+  "merge_base": "44b82b24cb40c72afd1f6e10c2af7a5d82c6539a",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   124
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0090"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "f92f61c2d2f3c8aabd4946ae6cc2ddaf6941a011",
+  "merge_base": "44b82b24cb40c72afd1f6e10c2af7a5d82c6539a",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   125,
+   126
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0091"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "9ee265d9e7523351ab30c337c78b022e03e14e21",
+  "merge_base": "44b82b24cb40c72afd1f6e10c2af7a5d82c6539a",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   127
+  ],
+  "nodeids": [
+   "whole_repo_tests/whole_repo/test_ci_config.py::test_python_versions_are_tested_in_ci[pypy3.12]"
+  ],
+  "env_id": "e0092"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "8a808891a388e538b41ae758e6c4a100bf4c6379",
+  "merge_base": "44b82b24cb40c72afd1f6e10c2af7a5d82c6539a",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   128
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0093"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "de4ec1c1bae27e5f1364b32b21295274c12b3e6f",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   129
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0094"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "e3e5fea000e2ad0032332a51cc4f2b462eafb31f",
+  "merge_base": "d8625019d00324ac8d7571db26d6180ebcd0b2eb",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   130,
+   131
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0095"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c1c9957de83aad3facea6610b0bccecf141632f6",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   132,
+   133
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds"
+  ],
+  "env_id": "e0096"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "1484f6dd4c0a220f68e2698afed29e2a16a3f654",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   134,
+   135
+  ],
+  "nodeids": [
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0097"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d3d42e9b2b153141a4e3ff5b293842006f589588",
+  "merge_base": "1484f6dd4c0a220f68e2698afed29e2a16a3f654",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   136,
+   137
+  ],
+  "nodeids": [
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0098"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "730453b788fe6d9b83b031f5673245983fa75c0f",
+  "merge_base": "1484f6dd4c0a220f68e2698afed29e2a16a3f654",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   138,
+   139,
+   140
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0099"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "4d42db9a0a15a6dbf6820c09b2208cde56adea81",
+  "merge_base": "1484f6dd4c0a220f68e2698afed29e2a16a3f654",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   141
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0100"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "4f7ef96b165569427553bbb9303abcdf15fad227",
+  "merge_base": "1484f6dd4c0a220f68e2698afed29e2a16a3f654",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   142,
+   143
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds"
+  ],
+  "env_id": "e0101"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "0116655b33188ec4f32c80e43b2da34afd3deceb",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   144,
+   145
+  ],
+  "nodeids": [
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0102"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "473bc1338e9c665fc3bb17df0ca581a283e64d2d",
+  "merge_base": "82fa40ada6bc83480a746890a40bb3d708ba8f03",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   146
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0103"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c48893454557267eea902b2f218584ecd9ab17b0",
+  "merge_base": "82fa40ada6bc83480a746890a40bb3d708ba8f03",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   147,
+   148
+  ],
+  "nodeids": [
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0104"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "da4f5d07dff4bf12bd464849632177bac71820f3",
+  "merge_base": "82fa40ada6bc83480a746890a40bb3d708ba8f03",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   149,
+   150
+  ],
+  "nodeids": [
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0105"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b3cfe2a2a98144b7ccb743cd61e4949989573266",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   151,
+   152
+  ],
+  "nodeids": [
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0106"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ff0cc3e7493cffdef0a7d1d7f99c1fd296c0aafa",
+  "merge_base": "b3cfe2a2a98144b7ccb743cd61e4949989573266",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   153,
+   154,
+   155
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0107"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d0065701aa48a6f4bbc3131f981e73efb0dd9a28",
+  "merge_base": "b3cfe2a2a98144b7ccb743cd61e4949989573266",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   156,
+   157
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds"
+  ],
+  "env_id": "e0108"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "386a9299988f7198efebc5ff755bc47fc864f783",
+  "merge_base": "b3cfe2a2a98144b7ccb743cd61e4949989573266",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   158
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0109"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7b3b9db12d58434c23f4bbc27bdacb77f9829c28",
+  "merge_base": "b94375310c9d9724ca5177d08314dc5a79db4a78",
+  "runner": "macos-latest",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   159
+  ],
+  "nodeids": [
+   "tests/conjecture/test_provider.py::test_conformance_checks_realized_draws"
+  ],
+  "env_id": "e0110"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7b3b9db12d58434c23f4bbc27bdacb77f9829c28",
+  "merge_base": "b94375310c9d9724ca5177d08314dc5a79db4a78",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   160
+  ],
+  "nodeids": [
+   "tests/conjecture/test_provider.py::test_conformance_checks_realized_draws"
+  ],
+  "env_id": "e0111"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7b3b9db12d58434c23f4bbc27bdacb77f9829c28",
+  "merge_base": "b94375310c9d9724ca5177d08314dc5a79db4a78",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   161
+  ],
+  "nodeids": [
+   "tests\\conjecture\\test_provider.py::test_conformance_checks_realized_draws"
+  ],
+  "env_id": "e0112"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7b3b9db12d58434c23f4bbc27bdacb77f9829c28",
+  "merge_base": "b94375310c9d9724ca5177d08314dc5a79db4a78",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   162,
+   163,
+   164,
+   165,
+   166,
+   167
+  ],
+  "nodeids": [
+   "tests/nocover/test_provider_conformance.py::test_provider_conformance[HypothesisProvider]",
+   "tests/nocover/test_provider_conformance.py::test_provider_conformance[ObservingHypothesisProvider]",
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/conjecture/test_provider.py::test_conformance_checks_realized_draws"
+  ],
+  "env_id": "e0113"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "29a1dc0da1c339de3908e4df335ed057abd23e50",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   168
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0114"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "37c64201b5b708828bda91b0a5ec418efadcaf2f",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   169,
+   170
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds"
+  ],
+  "env_id": "e0115"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c3705d257fdde89324cdaca53390011cc116324a",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   171
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0116"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7219a20cac605838a9bd7d74e9f43113f0078594",
+  "merge_base": "e7c0eb9cc13f75ed6799396064f16a55edd3a398",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   172,
+   173
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds"
+  ],
+  "env_id": "e0117"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "a03eb1bd2a501677515e494c6d7824a6ce9db390",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   174,
+   175
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds"
+  ],
+  "env_id": "e0118"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "1ad039f4ead3a91721bb8adde8da6c46979d549c",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   176,
+   177,
+   178
+  ],
+  "nodeids": [
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0119"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7fbbaf3d9754b5d692a86a04fe3fb918d7e259db",
+  "merge_base": "ba6c3e39cf741c226412194acc21ab719a35f6e7",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   179,
+   180
+  ],
+  "nodeids": [
+   "tests/cover/test_exceptiongroup.py::test_discard_frozen",
+   "tests/cover/test_exceptiongroup.py::test_discard_multiple_frozen"
+  ],
+  "env_id": "e0120"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "49b0639e1e0409b987123deddccbf994bb1e962f",
+  "merge_base": "ba6c3e39cf741c226412194acc21ab719a35f6e7",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   181
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0121"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "7bdbbce508976c738e1769800f227ef9a1cbcc68",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   182
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0122"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ebebb51736b64a67a4c403658b540faa729d2e2d",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   183,
+   184
+  ],
+  "nodeids": [
+   "tests/cover/test_exceptiongroup.py::test_discard_frozen",
+   "tests/cover/test_exceptiongroup.py::test_discard_multiple_frozen"
+  ],
+  "env_id": "e0123"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "718d2c1b2dbe2f91c5c9d13539e87f4c23d3efb1",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   185
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0124"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "b3af0ecfa54a76530dcc324df84834bf682560e3",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   186,
+   187,
+   188
+  ],
+  "nodeids": [
+   "whole_repo_tests/whole_repo/test_ci_config.py::test_python_versions_are_in_trove_classifiers",
+   "whole_repo_tests/whole_repo/test_ci_config.py::test_python_versions_are_tested_in_ci[3.16]",
+   "whole_repo_tests/whole_repo/test_ci_config.py::test_python_versions_are_tested_in_ci[3.16t]"
+  ],
+  "env_id": "e0125"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ab54437f319e9ffef601091d93e890f872c0e012",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   189,
+   190
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds"
+  ],
+  "env_id": "e0126"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "325a98650befcd65a5accae7b4a76331e4cf734e",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   191
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0127"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "a4cbaa951b8a8e9b571feb3624cf8cd4a956ebc6",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   192
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0128"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "be59425013f55266039c06a1ce61e5a7d2c1d311",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   193,
+   194
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_regressions.py::test_shrinking_mixed_alphabet_one_of_does_not_crash"
+  ],
+  "env_id": "e0129"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "e783c53aba1767a62c5358b1b635cee320bd587e",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   195,
+   196
+  ],
+  "nodeids": [
+   "whole_repo_tests/whole_repo/test_ci_config.py::test_python_versions_are_tested_in_ci[3.16]",
+   "whole_repo_tests/whole_repo/test_ci_config.py::test_python_versions_are_tested_in_ci[3.16t]"
+  ],
+  "env_id": "e0130"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d19a0a1e28f6d37fe27036bf5456918a457298a4",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   197,
+   198
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds"
+  ],
+  "env_id": "e0131"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "1520429a50535de8b745a87a6d23f110ccb75045",
+  "merge_base": "718686d1e392968eb0953c043ef249c5d9d11a59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   199
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0132"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "6a536f7f5eeba94cb3eaacbb8800ace70c469fbc",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   200
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0133"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "9078c4ae54ea0f304b66f78d4eafcfc2f4089200",
+  "merge_base": "1555011e7eee2dec00cfcbfd802e921bd4262ed1",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   201,
+   202,
+   203
+  ],
+  "nodeids": [
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0134"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "c30780f9f8d2905e52ee802e85d70307687b8513",
+  "merge_base": "1555011e7eee2dec00cfcbfd802e921bd4262ed1",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   204,
+   205
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds"
+  ],
+  "env_id": "e0135"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d7be47590a866a2ca8401a8d8c58f9afc8608217",
+  "merge_base": "1555011e7eee2dec00cfcbfd802e921bd4262ed1",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   206
+  ],
+  "nodeids": [
+   "whole_repo_tests/types/test_hypothesis.py::test_mypy_passes_on_hypothesis"
+  ],
+  "env_id": "e0136"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "9634e0429af794f614514099432ddc67301b901a",
+  "merge_base": "1555011e7eee2dec00cfcbfd802e921bd4262ed1",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   207,
+   208,
+   209,
+   210
+  ],
+  "nodeids": [
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason",
+   "tests/cover/test_regressions.py::test_shrinking_mixed_alphabet_one_of_does_not_crash",
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals"
+  ],
+  "env_id": "e0137"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "cafbf4e93257ab1ab73e2bd24deb89797b659734",
+  "merge_base": "1555011e7eee2dec00cfcbfd802e921bd4262ed1",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   211
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0138"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "efb0a6d88980f6d06ceddaee4ae3aee8d6853236",
+  "merge_base": "2e26f0b46086bed166a665b756f5a52fb01777c7",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   212
+  ],
+  "nodeids": [
+   "whole_repo_tests/types/test_hypothesis.py::test_mypy_passes_on_hypothesis"
+  ],
+  "env_id": "e0139"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "74a79060feadf7723e9ce160bb6ecbbf16209cb9",
+  "merge_base": "5378001ed4e5bd6471c102d9d4e30fa495eb34a0",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   213,
+   214,
+   215
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0140"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "ccb592eebb527799507b62d75734770587515bb2",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   216
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0141"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "d5af8b46eac69be1ec1aec6eb1eca2657b110018",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   217
+  ],
+  "nodeids": [
+   "tests/cover/test_observability.py::test_assume_has_status_reason"
+  ],
+  "env_id": "e0142"
+ },
+ {
+  "repo": "HypothesisWorks/hypothesis",
+  "head_sha": "2efd0094308b09319f35ee51f6bde0de4155a6fd",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r requirements/test.txt -e hypothesis-python/",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   218,
+   219,
+   220
+  ],
+  "nodeids": [
+   "tests/cover/test_intervalset.py::test_subtraction_of_intervals",
+   "tests/cover/test_datetimes.py::test_datetimes_stay_within_aware_bounds",
+   "tests/cover/test_regressions.py::test_shrinking_mixed_alphabet_one_of_does_not_crash"
+  ],
+  "env_id": "e0143"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "fb4b7cf8a4267009cc499d197c4b7d1ccab2b39f",
+  "merge_base": "3a9b40f635a2d53730f7311e2f2eb520245e76bb",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   221,
+   222
+  ],
+  "nodeids": [
+   "integration-tests/test_flow_pauses.py::test_flow_pauses",
+   "integration-tests/test_automation_assessments.py::test_compound_automation"
+  ],
+  "env_id": "e0144"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "8658d4005c14a85e8f03db3c8f1ece78891211b7",
+  "merge_base": "3a9b40f635a2d53730f7311e2f2eb520245e76bb",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   223,
+   224
+  ],
+  "nodeids": [
+   "integration-tests/test_automation_assessments.py::test_compound_automation",
+   "integration-tests/test_hello_tasks.py::test_hello_tasks"
+  ],
+  "env_id": "e0145"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "dd06236c828f75a93a95092dd68fcd383b882ead",
+  "merge_base": "3a9b40f635a2d53730f7311e2f2eb520245e76bb",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   225
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0146"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "dd06236c828f75a93a95092dd68fcd383b882ead",
+  "merge_base": "3a9b40f635a2d53730f7311e2f2eb520245e76bb",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   226
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0147"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "dd06236c828f75a93a95092dd68fcd383b882ead",
+  "merge_base": "3a9b40f635a2d53730f7311e2f2eb520245e76bb",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   227
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0148"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "d4381d00281693b01442fdc3f47d97e0ee2d6322",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   228,
+   229,
+   230,
+   231,
+   232,
+   233,
+   234,
+   235,
+   237,
+   238,
+   240
+  ],
+  "nodeids": [
+   "tests/events/server/test_events_counts.py::test_counting_by_time_per_week",
+   "tests/server/schemas/test_schedules.py::TestIntervalScheduleDateTimeDelta::test_datetimedelta_calendar_days_match_timedelta_days",
+   "tests/server/schemas/test_schedules.py::TestIntervalScheduleDateTimeDelta::test_hours_48_differs_from_days_2_across_spring_forward",
+   "tests/server/schemas/test_schedules.py::TestIntervalScheduleDateTimeDelta::test_hours_72_differs_from_days_3_across_fall_back",
+   "tests/test_datetime.py::TestEndOfPeriod::test_full_datetime[week-expected4]",
+   "tests/test_locking.py::TestMemoryLockManager::test_manager_has_lock_information_when_deserialized_in_new_process_with_fork",
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0149"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "d4381d00281693b01442fdc3f47d97e0ee2d6322",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   236
+  ],
+  "nodeids": [
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0150"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "d4381d00281693b01442fdc3f47d97e0ee2d6322",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   239
+  ],
+  "nodeids": [
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0151"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "d4381d00281693b01442fdc3f47d97e0ee2d6322",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   241
+  ],
+  "nodeids": [
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0152"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "d4381d00281693b01442fdc3f47d97e0ee2d6322",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   242
+  ],
+  "nodeids": [
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0153"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "f9f2ab8bc60529e72fd804791fb88a87627bd8c3",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   243,
+   244,
+   245,
+   246,
+   247,
+   248,
+   250
+  ],
+  "nodeids": [
+   "tests/server/schemas/test_schedules.py::TestIntervalScheduleDateTimeDelta::test_datetimedelta_calendar_days_match_timedelta_days",
+   "tests/server/schemas/test_schedules.py::TestIntervalScheduleDateTimeDelta::test_hours_48_differs_from_days_2_across_spring_forward",
+   "tests/server/schemas/test_schedules.py::TestIntervalScheduleDateTimeDelta::test_hours_72_differs_from_days_3_across_fall_back",
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0154"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "f9f2ab8bc60529e72fd804791fb88a87627bd8c3",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   249
+  ],
+  "nodeids": [
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0155"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "f9f2ab8bc60529e72fd804791fb88a87627bd8c3",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   251
+  ],
+  "nodeids": [
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0156"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "f9f2ab8bc60529e72fd804791fb88a87627bd8c3",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   252
+  ],
+  "nodeids": [
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0157"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "f9f2ab8bc60529e72fd804791fb88a87627bd8c3",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   253
+  ],
+  "nodeids": [
+   "tests/runner/test_runner.py::TestRunnerDeployment::test_applied_deployment_preserves_temporal_parameter_encoding"
+  ],
+  "env_id": "e0158"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "be4003464e8d19037821d9c27e9987227b4c7281",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   254
+  ],
+  "nodeids": [
+   "tests/server/models/test_filters.py::TestCountFlowsModels::test_models_read[kwargs0-4]"
+  ],
+  "env_id": "e0159"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "c4e5ccbb4d748d71c6dcf21e562350c6fed52ef9",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   255
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0160"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "c4e5ccbb4d748d71c6dcf21e562350c6fed52ef9",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   256
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0161"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "c4e5ccbb4d748d71c6dcf21e562350c6fed52ef9",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   257
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0162"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "18fc42b4a399c4b633f51b4f31881dfd2a79ce90",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   258,
+   259
+  ],
+  "nodeids": [
+   "tests/test_flow_engine.py::TestFlowRetries::test_flow_retry_with_error_in_flow_and_successful_task",
+   "tests/test_flows.py::TestFlowRetries::test_flow_retry_with_error_in_flow_and_successful_task"
+  ],
+  "env_id": "e0163"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "18fc42b4a399c4b633f51b4f31881dfd2a79ce90",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   260,
+   261
+  ],
+  "nodeids": [
+   "tests/test_flow_engine.py::TestFlowRetries::test_flow_retry_with_error_in_flow_and_successful_task",
+   "tests/test_flows.py::TestFlowRetries::test_flow_retry_with_error_in_flow_and_successful_task"
+  ],
+  "env_id": "e0164"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "18fc42b4a399c4b633f51b4f31881dfd2a79ce90",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   262,
+   263
+  ],
+  "nodeids": [
+   "tests/test_flow_engine.py::TestFlowRetries::test_flow_retry_with_error_in_flow_and_successful_task",
+   "tests/test_flows.py::TestFlowRetries::test_flow_retry_with_error_in_flow_and_successful_task"
+  ],
+  "env_id": "e0165"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "18fc42b4a399c4b633f51b4f31881dfd2a79ce90",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   264,
+   265
+  ],
+  "nodeids": [
+   "tests/test_flows.py::TestFlowRetries::test_flow_retry_with_error_in_flow_and_successful_task",
+   "tests/test_flow_engine.py::TestFlowRetries::test_flow_retry_with_error_in_flow_and_successful_task"
+  ],
+  "env_id": "e0166"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "56634c1b272d73cde3ea3f9c200dd8a5b0f79dd3",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   266
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0167"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "56634c1b272d73cde3ea3f9c200dd8a5b0f79dd3",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   267
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0168"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "56634c1b272d73cde3ea3f9c200dd8a5b0f79dd3",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   268
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0169"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "c0befdbe1a4e568fba9ca1a27873dc205117b9da",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   269
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0170"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "c0befdbe1a4e568fba9ca1a27873dc205117b9da",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   270
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0171"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "c0befdbe1a4e568fba9ca1a27873dc205117b9da",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   271
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0172"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "00817b694a1758a9a56fb267a041f45db68bc25a",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   272
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0173"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "00817b694a1758a9a56fb267a041f45db68bc25a",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   273
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0174"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "00817b694a1758a9a56fb267a041f45db68bc25a",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   274
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0175"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "a25beaa1e01d06d85b74a327d9b70ea6e91a110a",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   275,
+   276
+  ],
+  "nodeids": [
+   "tests/cli/test_flow_run.py::TestFlowRunRetryIntegration::test_retry_local_execution_preserves_parameters",
+   "tests/cli/test_flow_run.py::TestFlowRunRetryIntegration::test_retry_local_execution_with_entrypoint"
+  ],
+  "env_id": "e0176"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "a25beaa1e01d06d85b74a327d9b70ea6e91a110a",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   277,
+   278
+  ],
+  "nodeids": [
+   "tests/cli/test_flow_run.py::TestFlowRunRetryIntegration::test_retry_local_execution_preserves_parameters",
+   "tests/cli/test_flow_run.py::TestFlowRunRetryIntegration::test_retry_local_execution_with_entrypoint"
+  ],
+  "env_id": "e0177"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "a25beaa1e01d06d85b74a327d9b70ea6e91a110a",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   279,
+   280
+  ],
+  "nodeids": [
+   "tests/cli/test_flow_run.py::TestFlowRunRetryIntegration::test_retry_local_execution_preserves_parameters",
+   "tests/cli/test_flow_run.py::TestFlowRunRetryIntegration::test_retry_local_execution_with_entrypoint"
+  ],
+  "env_id": "e0178"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "a25beaa1e01d06d85b74a327d9b70ea6e91a110a",
+  "merge_base": "302beb37eb79cd6ba37fcaa9fa002c4429b45702",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   281,
+   282
+  ],
+  "nodeids": [
+   "tests/cli/test_flow_run.py::TestFlowRunRetryIntegration::test_retry_local_execution_with_entrypoint",
+   "tests/cli/test_flow_run.py::TestFlowRunRetryIntegration::test_retry_local_execution_preserves_parameters"
+  ],
+  "env_id": "e0179"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "b57cd3ab15920ac3d624ba4a2fb99f78e92b70f5",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   283
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0180"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "b57cd3ab15920ac3d624ba4a2fb99f78e92b70f5",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   284
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0181"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "b57cd3ab15920ac3d624ba4a2fb99f78e92b70f5",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   285
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0182"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "b57cd3ab15920ac3d624ba4a2fb99f78e92b70f5",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   286
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0183"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "484f8d85b94a0592e7ddcc9bb881d7822907a51a",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   287
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0184"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "484f8d85b94a0592e7ddcc9bb881d7822907a51a",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   288
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0185"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "484f8d85b94a0592e7ddcc9bb881d7822907a51a",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   289
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0186"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "484f8d85b94a0592e7ddcc9bb881d7822907a51a",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   290
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0187"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "229ae32741406d3272c1372ee73339cc40dbabac",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   291
+  ],
+  "nodeids": [
+   "tests/cli/deployment/test_deployment_run.py::test_start_in_option_displays_scheduled_start_time[2"
+  ],
+  "env_id": "e0188"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "229ae32741406d3272c1372ee73339cc40dbabac",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   292,
+   293,
+   294,
+   295,
+   296,
+   297,
+   298,
+   299
+  ],
+  "nodeids": [
+   "tests/cli/deployment/test_deployment_run.py::test_start_in_option_displays_scheduled_start_time[2",
+   "tests/cli/deployment/test_deployment_run.py::test_start_in_option_displays_scheduled_start_time[5",
+   "tests/cli/deployment/test_deployment_run.py::test_start_in_option_displays_scheduled_start_time[3",
+   "tests/cli/deployment/test_deployment_run.py::test_start_in_option_displays_scheduled_start_time[27",
+   "tests/cli/deployment/test_deployment_run.py::test_start_in_option_displays_scheduled_start_time[20",
+   "tests/cli/deployment/test_deployment_run.py::test_start_in_option_displays_scheduled_start_time[1",
+   "tests/cli/test_artifact.py::test_listing_artifacts_after_creating_artifacts_with_null_fields",
+   "tests/cli/test_artifact.py::test_listing_artifacts_after_creating_artifacts"
+  ],
+  "env_id": "e0189"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "6c9bfb9739fdc7e641b5a98d793318696dce6727",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   300
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0190"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "6c9bfb9739fdc7e641b5a98d793318696dce6727",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   301
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0191"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "6c9bfb9739fdc7e641b5a98d793318696dce6727",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   302
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0192"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "6c9bfb9739fdc7e641b5a98d793318696dce6727",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   303
+  ],
+  "nodeids": [
+   "tests/workers/test_ecs_worker.py::test_default"
+  ],
+  "env_id": "e0193"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "60569975b03d05b6cba370f8a015a69aa4de8458",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   304
+  ],
+  "nodeids": [
+   "tests/cli/test_deploy.py::TestSchedules::test_interval_schedule_deployment_yaml"
+  ],
+  "env_id": "e0194"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "60569975b03d05b6cba370f8a015a69aa4de8458",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   305
+  ],
+  "nodeids": [
+   "tests/cli/test_deploy.py::TestSchedules::test_interval_schedule_deployment_yaml"
+  ],
+  "env_id": "e0195"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "60569975b03d05b6cba370f8a015a69aa4de8458",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   306
+  ],
+  "nodeids": [
+   "tests/cli/test_deploy.py::TestSchedules::test_interval_schedule_deployment_yaml"
+  ],
+  "env_id": "e0196"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "60569975b03d05b6cba370f8a015a69aa4de8458",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   307,
+   308,
+   309,
+   310,
+   311,
+   312
+  ],
+  "nodeids": [
+   "tests/cli/deploy/test_schedule_config.py::TestIntervalScheduleFormats::test_interval_schedule_accepts_various_formats[PT1H-3600]",
+   "tests/cli/deploy/test_schedule_config.py::TestIntervalScheduleFormats::test_interval_schedule_accepts_various_formats[PT10M-600]",
+   "tests/cli/test_deploy.py::TestSchedules::test_can_provide_multiple_schedules_via_yaml",
+   "tests/cli/test_deploy.py::TestSchedules::test_interval_schedule_deployment_yaml",
+   "tests/cli/deploy/test_schedule_config.py::TestIntervalScheduleFormats::test_interval_schedule_accepts_various_formats[PT1H30M-5400]",
+   "tests/cli/deploy/test_schedule_config.py::TestIntervalScheduleFormats::test_interval_schedule_accepts_various_formats[P1D-86400]"
+  ],
+  "env_id": "e0197"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "b2327dbbb1756f72cb3be12da764b4b9ca3c06aa",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   313
+  ],
+  "nodeids": [
+   "tests/cli/test_deploy.py::TestSchedules::test_can_provide_multiple_schedules_via_yaml"
+  ],
+  "env_id": "e0198"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "head_sha": "b2327dbbb1756f72cb3be12da764b4b9ca3c06aa",
+  "merge_base": "d8c84c2acfff796ba0698977ab09a09690b0ac39",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "uv",
+  "setup": "python -m pip install uv && uv sync",
+  "test": "uv run pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   314
+  ],
+  "nodeids": [
+   "tests/cli/test_deploy.py::TestSchedules::test_can_provide_multiple_schedules_via_yaml"
+  ],
+  "env_id": "e0199"
+ }
+]

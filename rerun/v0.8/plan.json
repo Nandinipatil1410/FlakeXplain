@@ -1,0 +1,157 @@
+{
+ "environments": 1026,
+ "candidates_planned": 1641,
+ "excluded": [
+  {
+   "candidate": 723,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_logging.py::test_verbosity_level[flags0-INFO]",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 724,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_logging.py::test_verbosity_level[flags1-DEBUG]",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 729,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_logging.py::test_verbosity_level[flags0-INFO]",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 730,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_logging.py::test_verbosity_level[flags1-DEBUG]",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 747,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_setuptools.py::TestDistro::testIncludeExclude",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 754,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_setuptools.py::TestDistro::testIncludeExclude",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 757,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_sdist.py::mypy",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 760,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_setuptools.py::TestDistro::testIncludeExclude",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 763,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/command/build_ext.py::mypy",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 764,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/command/install.py::mypy",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 765,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/config/setupcfg.py::mypy",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 766,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/discovery.py::mypy",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 776,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_build_ext.py::TestBuildExt::test_ext_suffix_override",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 782,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_build_ext.py::TestBuildExt::test_ext_suffix_override",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 784,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_bdist_wheel.py::test_limited_api[False]",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 785,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_bdist_wheel.py::test_limited_api[True]",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 786,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_bdist_wheel.py::test_version_specific_abi[False]",
+   "reason": "cygwin environment"
+  },
+  {
+   "candidate": 787,
+   "repo": "pypa/setuptools",
+   "nodeid": "setuptools/tests/test_bdist_wheel.py::test_version_specific_abi[True]",
+   "reason": "cygwin environment"
+  }
+ ],
+ "batches": 6,
+ "by_repo": {
+  "HypothesisWorks/hypothesis": {
+   "environments": 144,
+   "candidates": 221
+  },
+  "PrefectHQ/prefect": {
+   "environments": 78,
+   "candidates": 213
+  },
+  "conan-io/conan": {
+   "environments": 158,
+   "candidates": 262
+  },
+  "encode/django-rest-framework": {
+   "environments": 19,
+   "candidates": 27
+  },
+  "pypa/setuptools": {
+   "environments": 38,
+   "candidates": 47
+  },
+  "pytest-dev/pytest": {
+   "environments": 247,
+   "candidates": 367
+  },
+  "quantumlib/Cirq": {
+   "environments": 140,
+   "candidates": 285
+  },
+  "urllib3/urllib3": {
+   "environments": 202,
+   "candidates": 219
+  }
+ },
+ "runners": {
+  "macos-15": 78,
+  "macos-latest": 89,
+  "ubuntu-22.04": 66,
+  "ubuntu-24.04": 558,
+  "windows-2022": 45,
+  "windows-2025": 190
+ }
+}

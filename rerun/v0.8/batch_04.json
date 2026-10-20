@@ -1,0 +1,3672 @@
+[
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "b440201f85cd0670b8de6d1daf32daf94c64c109",
+  "merge_base": "1403830e59df5835ffc3f09e53cefedc81840a56",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1392
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_device"
+  ],
+  "env_id": "e0800"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "67ed0ae9a736226fa4e5c33676ac395837e58f73",
+  "merge_base": "1403830e59df5835ffc3f09e53cefedc81840a56",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1393,
+   1394,
+   1395,
+   1396,
+   1397,
+   1400,
+   1401
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_test_data_coverageod_spec117-PauliRotation-PauliRotation]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_type_serializationod_spec117-PauliRotation-PauliRotation]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0801"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "67ed0ae9a736226fa4e5c33676ac395837e58f73",
+  "merge_base": "1403830e59df5835ffc3f09e53cefedc81840a56",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1398,
+   1399
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_test_data_coverageod_spec117-PauliRotation-PauliRotation]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_type_serializationod_spec117-PauliRotation-PauliRotation]"
+  ],
+  "env_id": "e0802"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "67ed0ae9a736226fa4e5c33676ac395837e58f73",
+  "merge_base": "1403830e59df5835ffc3f09e53cefedc81840a56",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1402,
+   1403
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_test_data_coverageod_spec117-PauliRotation-PauliRotation]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_type_serializationod_spec117-PauliRotation-PauliRotation]"
+  ],
+  "env_id": "e0803"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "adf45f494a369e4bf1d94c4f564fe90406038909",
+  "merge_base": "f2ee71a2b4faed2192b065d6b6695dd501a25c34",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1404
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_test_data_coverageod_spec113-OrCondition-OrCondition]"
+  ],
+  "env_id": "e0804"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "adf45f494a369e4bf1d94c4f564fe90406038909",
+  "merge_base": "f2ee71a2b4faed2192b065d6b6695dd501a25c34",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1405,
+   1406,
+   1407
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_type_serializationod_spec31-Case-Case]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_type_serializationod_spec175-Switch-Switch]"
+  ],
+  "env_id": "e0805"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "adf45f494a369e4bf1d94c4f564fe90406038909",
+  "merge_base": "f2ee71a2b4faed2192b065d6b6695dd501a25c34",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1408
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_test_data_coverageod_spec113-OrCondition-OrCondition]"
+  ],
+  "env_id": "e0806"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "deb666cb0d2b8f236ef08dddfef233e52f6d0bbb",
+  "merge_base": "",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1409
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_dict_target_and_pool"
+  ],
+  "env_id": "e0807"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "c17a19521d068f493a33d1d3e332c78e9a495537",
+  "merge_base": "10c15949eb509043aa3b6c4cb0bf21e123557551",
+  "runner": "ubuntu-22.04",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1410,
+   1411
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/OrCondition.json]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec173-/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/OrCondition]"
+  ],
+  "env_id": "e0808"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "c17a19521d068f493a33d1d3e332c78e9a495537",
+  "merge_base": "10c15949eb509043aa3b6c4cb0bf21e123557551",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1412,
+   1413,
+   1414,
+   1415
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec173-/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/OrCondition]",
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/OrCondition.json]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec112-/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/OrCondition]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0809"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "c17a19521d068f493a33d1d3e332c78e9a495537",
+  "merge_base": "10c15949eb509043aa3b6c4cb0bf21e123557551",
+  "runner": "windows-2022",
+  "python": "3.13",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1416,
+   1417
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[C:\\\\a\\\\Cirq\\\\Cirq\\\\cirq-core\\\\cirq\\\\protocols\\\\json_test_data\\\\OrCondition.json]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec173-C:\\\\a\\\\Cirq\\\\Cirq\\\\cirq-core\\\\cirq\\\\protocols\\\\json_test_data\\\\OrCondition]"
+  ],
+  "env_id": "e0810"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "c17a19521d068f493a33d1d3e332c78e9a495537",
+  "merge_base": "10c15949eb509043aa3b6c4cb0bf21e123557551",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1418,
+   1419
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[/Users/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/OrCondition.json]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec173-/Users/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/OrCondition]"
+  ],
+  "env_id": "e0811"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "0b61c4a90b4f2466213bd66b488681cb3d60a8c1",
+  "merge_base": "10c15949eb509043aa3b6c4cb0bf21e123557551",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1420,
+   1421
+  ],
+  "nodeids": [
+   "cirq-core/cirq/value/condition_test.py::test_or_condition_simulation[0_1-1_0]",
+   "cirq-core/cirq/value/condition_test.py::test_or_condition_inverted_simulation"
+  ],
+  "env_id": "e0812"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "0b61c4a90b4f2466213bd66b488681cb3d60a8c1",
+  "merge_base": "10c15949eb509043aa3b6c4cb0bf21e123557551",
+  "runner": "ubuntu-22.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1422
+  ],
+  "nodeids": [
+   "cirq-core/cirq/value/condition_test.py::test_or_condition_simulation[0_0-1_1]"
+  ],
+  "env_id": "e0813"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "0b61c4a90b4f2466213bd66b488681cb3d60a8c1",
+  "merge_base": "10c15949eb509043aa3b6c4cb0bf21e123557551",
+  "runner": "macos-15",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1423
+  ],
+  "nodeids": [
+   "cirq-core/cirq/value/condition_test.py::test_or_condition_inverted_simulation"
+  ],
+  "env_id": "e0814"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "0b61c4a90b4f2466213bd66b488681cb3d60a8c1",
+  "merge_base": "10c15949eb509043aa3b6c4cb0bf21e123557551",
+  "runner": "windows-2022",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1424
+  ],
+  "nodeids": [
+   "cirq-core/cirq/value/condition_test.py::test_or_condition_simulation[0_0-1_1]"
+  ],
+  "env_id": "e0815"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "8d23576d37822f66efda24371af6e21443393e50",
+  "merge_base": "95c253547e379e8ad9ef1c8b159b99e7ebe941e9",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1425,
+   1426
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_test.py::test_run_circuit_with_unary_rpcs[True]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-google]"
+  ],
+  "env_id": "e0816"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "609eb87b687371d4983afe8dc71594784372f966",
+  "merge_base": "cfe22fc6ef5dd1fe54f4354b50cb5bfd7d2cc963",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1427,
+   1430,
+   1431,
+   1432
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec223-/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/Switch]",
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/Switch.json]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec162-/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/Switch]",
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0817"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "609eb87b687371d4983afe8dc71594784372f966",
+  "merge_base": "cfe22fc6ef5dd1fe54f4354b50cb5bfd7d2cc963",
+  "runner": "windows-2022",
+  "python": "3.14",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1428,
+   1429
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[C:\\\\a\\\\Cirq\\\\Cirq\\\\cirq-core\\\\cirq\\\\protocols\\\\json_test_data\\\\Switch.json]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec223-C:\\\\a\\\\Cirq\\\\Cirq\\\\cirq-core\\\\cirq\\\\protocols\\\\json_test_data\\\\Switch]"
+  ],
+  "env_id": "e0818"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "609eb87b687371d4983afe8dc71594784372f966",
+  "merge_base": "cfe22fc6ef5dd1fe54f4354b50cb5bfd7d2cc963",
+  "runner": "ubuntu-22.04",
+  "python": "3.12",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1433,
+   1434
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/Switch.json]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec223-/home/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/Switch]"
+  ],
+  "env_id": "e0819"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "609eb87b687371d4983afe8dc71594784372f966",
+  "merge_base": "cfe22fc6ef5dd1fe54f4354b50cb5bfd7d2cc963",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1435,
+   1436
+  ],
+  "nodeids": [
+   "cirq-core/cirq/protocols/hash_from_pickle_test.py::test_hash_from_pickle[/Users/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/Switch.json]",
+   "cirq-core/cirq/protocols/json_serialization_test.py::test_json_and_repr_dataod_spec223-/Users/runner/work/Cirq/Cirq/cirq-core/cirq/protocols/json_test_data/Switch]"
+  ],
+  "env_id": "e0820"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "91f31b662e340f505a7c11ba2c63142d0937418d",
+  "merge_base": "cfe22fc6ef5dd1fe54f4354b50cb5bfd7d2cc963",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1437
+  ],
+  "nodeids": [
+   "dev_tools/packaging/isolated_packages_test.py::test_isolated_packages[cirq-core]"
+  ],
+  "env_id": "e0821"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "9b62909952f54fe324e570a05096869e11511117",
+  "merge_base": "cfe22fc6ef5dd1fe54f4354b50cb5bfd7d2cc963",
+  "runner": "ubuntu-22.04",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1438
+  ],
+  "nodeids": [
+   "cirq-core/cirq/experiments/benchmarking/parallel_xeb_test.py::test_parallel_two_qubit_xeb_with_device"
+  ],
+  "env_id": "e0822"
+ },
+ {
+  "repo": "quantumlib/Cirq",
+  "head_sha": "88fa8e73f1ea8bf373c3f2c818a870b5afb24725",
+  "merge_base": "",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "pytest",
+  "setup": "python -m pip install -r dev_tools/requirements/dev.env.txt",
+  "test": "python -m pytest {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1439
+  ],
+  "nodeids": [
+   "cirq-google/cirq_google/engine/engine_test.py::test_run_circuit_with_unary_rpcs[True]"
+  ],
+  "env_id": "e0823"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1440,
+   1441
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_exceptions.py::TestPickle::test_exceptions[exception11]"
+  ],
+  "env_id": "e0824"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1442,
+   1443
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_exceptions.py::TestPickle::test_exceptions[exception11]"
+  ],
+  "env_id": "e0825"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1444,
+   1445
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_exceptions.py::TestPickle::test_exceptions[exception6]"
+  ],
+  "env_id": "e0826"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1446,
+   1447
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_fields.py::TestRequestField::test_guess_content_type[notsure-content_types1]"
+  ],
+  "env_id": "e0827"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "macos-15",
+  "python": "3.11",
+  "variant": "test-3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1448,
+   1449
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_exceptions.py::TestPickle::test_exceptions[exception9]"
+  ],
+  "env_id": "e0828"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "test-3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1450,
+   1451
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_fields.py::TestRequestField::test_guess_content_type[image.jpg-content_types0]"
+  ],
+  "env_id": "e0829"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1452,
+   1453
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_http2_connection.py::TestHTTP2Connection::test_send_str"
+  ],
+  "env_id": "e0830"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1454,
+   1455
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_poolmanager.py::TestPoolManager::test_thread_safty"
+  ],
+  "env_id": "e0831"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1456,
+   1457
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_exceptions.py::TestPickle::test_exceptions[exception13]"
+  ],
+  "env_id": "e0832"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "macos-15",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1458,
+   1459
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_exceptions.py::TestPickle::test_exceptions[exception8]"
+  ],
+  "env_id": "e0833"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1460,
+   1461
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_http2_connection.py::TestHTTP2Connection::test_send_str"
+  ],
+  "env_id": "e0834"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ac8706c6144c6c166a337888e79de35ca0dd5248",
+  "merge_base": "546f5d2419ee1331cc2a22cdf80e6bad46e92dbc",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1462,
+   1463
+  ],
+  "nodeids": [
+   "test/test_connectionpool.py::TestRetryWarningIncludesHost::test_retry_warning_includes_host",
+   "test/test_poolmanager.py::TestPoolManager::test_thread_safty"
+  ],
+  "env_id": "e0835"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "bb7a3d4169d42e33243ef26b745c0280dfd4bfcb",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1464
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_https.py::TestHTTPS_Hostname::test_assert_hostname_invalid_san"
+  ],
+  "env_id": "e0836"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ec2b22a846e59dd1f507ad31056346281fcf5e37",
+  "merge_base": "26fceebd6b66ea06f37cec55486a0859dc65d937",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1465
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestProxyManager::test_tunnel_sets_http_11_alpn"
+  ],
+  "env_id": "e0837"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "46ab811ed595633c2c4dfdf08bc71088dbd543de",
+  "merge_base": "7a802a49bb7880624b5fa0053dd7cc77b94966c2",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1466
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_connectionpool.py::TestRetryPoolSize::test_pool_size_retry"
+  ],
+  "env_id": "e0838"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "a280299a51aa4b5cd44ca9dba1d2dd83ae851206",
+  "merge_base": "278d98d7bf6cbafbccc924e7aa73dbbe06474dc2",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1467
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestProxyManager::test_tunnel_sets_http_11_alpn"
+  ],
+  "env_id": "e0839"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "6f4159cbfc15d71b00f6cac88b64dfec9262dd5f",
+  "merge_base": "278d98d7bf6cbafbccc924e7aa73dbbe06474dc2",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1468
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestProxyManager::test_tunnel_sets_http_11_alpn"
+  ],
+  "env_id": "e0840"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "d8d2f9e3f74d3782237f4df3af3c62e6eaf457fb",
+  "merge_base": "a5d70ebfd6a30ceba0e9cc322089a6497dcd643e",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1469
+  ],
+  "nodeids": [
+   "tests/test_requests.py::TestRequests::test_can_send_objects_with_files[files2]"
+  ],
+  "env_id": "e0841"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "d481c24f855705b09fc812be5857f2216fc11382",
+  "merge_base": "a5d70ebfd6a30ceba0e9cc322089a6497dcd643e",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1470
+  ],
+  "nodeids": [
+   "test/contrib/test_pyopenssl.py::TestSocketSSL::test_ssl_failed_fingerprint_verification"
+  ],
+  "env_id": "e0842"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "44a33f4a6e3840afeca7da166c1ece7f01d130fc",
+  "merge_base": "a5d70ebfd6a30ceba0e9cc322089a6497dcd643e",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1471
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestProxyManager::test_tunnel_sets_http_11_alpn"
+  ],
+  "env_id": "e0843"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "a9f6c42f0dca51ed84b3ea6aa1f21b66c3700e62",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1472
+  ],
+  "nodeids": [
+   "tests/test_requests.py::TestRequests::test_can_send_objects_with_files[files2]"
+  ],
+  "env_id": "e0844"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "a9f6c42f0dca51ed84b3ea6aa1f21b66c3700e62",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1473
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_connectionpool.py::TestFileBodiesOnRetryOrRedirect::test_status_retry_streaming_multipart"
+  ],
+  "env_id": "e0845"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "a9f6c42f0dca51ed84b3ea6aa1f21b66c3700e62",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "test-3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1474
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_connectionpool.py::TestFileBodiesOnRetryOrRedirect::test_status_retry_streaming_multipart"
+  ],
+  "env_id": "e0846"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "a9f6c42f0dca51ed84b3ea6aa1f21b66c3700e62",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1475,
+   1476
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_connectionpool.py::TestFileBodiesOnRetryOrRedirect::test_status_retry_streaming_multipart"
+  ],
+  "env_id": "e0847"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "a9f6c42f0dca51ed84b3ea6aa1f21b66c3700e62",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1477
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_connectionpool.py::TestFileBodiesOnRetryOrRedirect::test_status_retry_streaming_multipart"
+  ],
+  "env_id": "e0848"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "6715612ae58343abc5a43603411c0aee2609b482",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1478
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestProxyManager::test_tunnel_sets_http_11_alpn"
+  ],
+  "env_id": "e0849"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "c0e1a33801669a192ee204b47a12ebbe7521c14b",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1479
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_proxy_poolmanager.py::TestHTTPSProxyVerification::test_https_proxy_assert_hostname_non_matching[localhost-False]"
+  ],
+  "env_id": "e0850"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "0991814cd30844633e80ff603b8e615dc64aee46",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1480
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestProxyManager::test_tunnel_sets_http_11_alpn"
+  ],
+  "env_id": "e0851"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "7fa15ade9a57d6fc56362ca5addb7cc65dc300a4",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1481
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestProxyManager::test_tunnel_sets_http_11_alpn"
+  ],
+  "env_id": "e0852"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "5f9d64f2b736595e8d9edd2f954de83a71d6eb9c",
+  "merge_base": "3f587c61a1a6c72c71c76193e5b863fb0c1180a1",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1482
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_socketlevel.py::TestSocketClosing::test_connection_cleanup_on_read_timeout"
+  ],
+  "env_id": "e0853"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "1e4d9e49aa11605de7a22acf950aa7fa945c13ea",
+  "merge_base": "5f2a6a843d0100d1351c3f94d58581ca98d17267",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1483
+  ],
+  "nodeids": [
+   "test/contrib/test_pyopenssl.py::TestSocketSSL::test_ssl_custom_validation_failure_terminates"
+  ],
+  "env_id": "e0854"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "26ae8a849100de6036e9cad61da9929475d3fcfe",
+  "merge_base": "43c68c8b43a9dcb44ed2cf4ec91384ca0d46b37d",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1484
+  ],
+  "nodeids": [
+   "test/contrib/test_pyopenssl.py::TestSocketSSL::test_ssl_custom_validation_failure_terminates"
+  ],
+  "env_id": "e0855"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "ea2ad7b21a80da3632f80016526a18864586077f",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1485
+  ],
+  "nodeids": [
+   "test/test_response.py::TestResponse::test_read_chunked_with_trailing_data_does_not_hang[brotli]"
+  ],
+  "env_id": "e0856"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "cd770b059b543be29298ea5c52afb0b1b090f5ed",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1486
+  ],
+  "nodeids": [
+   "test/test_response.py::TestResponse::test_read_chunked_with_trailing_data_does_not_hang[brotli]"
+  ],
+  "env_id": "e0857"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "299b635191931da91cd8374dd5d575932178b5e8",
+  "merge_base": "cd770b059b543be29298ea5c52afb0b1b090f5ed",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1487
+  ],
+  "nodeids": [
+   "test/test_response.py::TestResponse::test_read_chunked_with_trailing_data_does_not_hang[brotli]"
+  ],
+  "env_id": "e0858"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "9101f581a8b3659af23b6ff335ae77200ca33533",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1488
+  ],
+  "nodeids": [
+   "test/test_response.py::TestResponse::test_read_chunked_with_trailing_data_does_not_hang[brotli]"
+  ],
+  "env_id": "e0859"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "7ea80085f84ded4437ac37e3166ba85c55568cc5",
+  "merge_base": "57a4c073260462a7b09f169314ffa42ad5af08fe",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1489
+  ],
+  "nodeids": [
+   "tests/test_requests.py::TestRequests::test_generic_cookiejar_works"
+  ],
+  "env_id": "e0860"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "911bc94d227519483c82e516e2bf10860396afd5",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1490
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0861"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "b4418f73707a4ceb16c816a6ae5e7d87284f8ce8",
+  "merge_base": "911bc94d227519483c82e516e2bf10860396afd5",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1491
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0862"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "b60b38c9aa2693ab3a7e3af42ad2b3c838d3bdf1",
+  "merge_base": "911bc94d227519483c82e516e2bf10860396afd5",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1492
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0863"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "f2743d3390304f7ce862bb7ae812f3ef94d53a00",
+  "merge_base": "911bc94d227519483c82e516e2bf10860396afd5",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1493
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0864"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "f56c19e99334530e47cb0e5b07304c7fff56d3ad",
+  "merge_base": "911bc94d227519483c82e516e2bf10860396afd5",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1494,
+   1495
+  ],
+  "nodeids": [
+   "tests/test_requests.py::TestTimeout::test_none_timeout[None]",
+   "functional/test_auth_config.py::test_sigv4a_signing_region_set_config_from_environment[client_config0-bar-baz-foo]"
+  ],
+  "env_id": "e0865"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "5734c4e89adb1f3e41a9e6f3f9803a07f72db9b0",
+  "merge_base": "911bc94d227519483c82e516e2bf10860396afd5",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1496
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0866"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "544daa71ec59e940853bf46b5f8de518e40a04b7",
+  "merge_base": "911bc94d227519483c82e516e2bf10860396afd5",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1497
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0867"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "6073388331c8a23061e962e1acb5534d03470a32",
+  "merge_base": "911bc94d227519483c82e516e2bf10860396afd5",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1498
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0868"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "d3d03a929cf82f1770fb6911a5ad647b03795806",
+  "merge_base": "911bc94d227519483c82e516e2bf10860396afd5",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1499
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0869"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "5f8094c9918f5ccec92798d9326e3b7d9ee30cd8",
+  "merge_base": "911bc94d227519483c82e516e2bf10860396afd5",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1500
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0870"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e05899a66391166442866f12dbdd4ff715166de6",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1501
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0871"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "aa8f1ebeedb01755a67a971a2255b4170f131d58",
+  "merge_base": "e05899a66391166442866f12dbdd4ff715166de6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1502
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0872"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "eff0a6398cdad0214076359ef29cfc6644535f5d",
+  "merge_base": "e05899a66391166442866f12dbdd4ff715166de6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1503
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0873"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "789758b1b253da4d6de216f4058ba421db4a258c",
+  "merge_base": "e05899a66391166442866f12dbdd4ff715166de6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1504
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0874"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "d88ce72733e523970fa224b1cf2da2ac1338f3f9",
+  "merge_base": "e05899a66391166442866f12dbdd4ff715166de6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1505
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0875"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "7206099adc7c4a1dad7dcc449a1eeb4f7738957f",
+  "merge_base": "e05899a66391166442866f12dbdd4ff715166de6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "test-pypy3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-pypy3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1506
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::TlsInTlsTestCase::test_tls_in_tls_makefile_rw_text"
+  ],
+  "env_id": "e0876"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "2c8f936c89e9713a56c97f613426c2d24f3e71c7",
+  "merge_base": "8b05e57c47f7f2d17eaea0b9ada1fc1b85255550",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1507
+  ],
+  "nodeids": [
+   "test/with_dummyserver/test_connectionpool.py::TestConnectionPoolTimeouts::test_timeout_float"
+  ],
+  "env_id": "e0877"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1508
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0878"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1509
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0879"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1510
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0880"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1511
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0881"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1512
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0882"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1513
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0883"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1514
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0884"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1515
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0885"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "emscripten(chrome)",
+  "setup": "python -m pip install nox",
+  "test": "nox -s emscripten(chrome) --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1516
+  ],
+  "nodeids": [
+   "test/contrib/emscripten/test_emscripten.py::test_streaming_bad_method[chrome-False]"
+  ],
+  "env_id": "e0886"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1517
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0887"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1518
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0888"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "239aa6cf2c85ee99bd971589375cb8571bef58f3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1519
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0889"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1520
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0890"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1521
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0891"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1522
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0892"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1523
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0893"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1524
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0894"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1525
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0895"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1526
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0896"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1527
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0897"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1528
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0898"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1529
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0899"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "809d806ab06840e0c4a45e1e1a98291f177a622a",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1530
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0900"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1531
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0901"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1532
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0902"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1533
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0903"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1534
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0904"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1535
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0905"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1536
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0906"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1537
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0907"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1538
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0908"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1539
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0909"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1540
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0910"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "17f51286d6a6fe40ff3ee718eb9a30ca7f1bdfc2",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1541
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0911"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1542
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0912"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1543
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0913"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1544
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0914"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1545
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0915"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1546
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0916"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1547
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0917"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1548
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0918"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1549
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0919"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1550
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0920"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1551
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0921"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "e98ab9979818c20c3fe72c2fc9a306419c75b607",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1552
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0922"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1553
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0923"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1554
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0924"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1555
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0925"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1556
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0926"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1557
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0927"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1558
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0928"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1559
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0929"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1560
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0930"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1561
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0931"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1562
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0932"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "319bd1eb735c1b501d178cdc3ca7200a6406e7b0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1563
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0933"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1564
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0934"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1565
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0935"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1566
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0936"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1567
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0937"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1568
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0938"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1569
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0939"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1570
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0940"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1571
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0941"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1572
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0942"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1573
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0943"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "129e1e7554f6b42e7ff58b9132929e9ddcdc0cf3",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1574
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0944"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1575
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0945"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1576
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0946"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1577
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0947"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1578
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0948"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1579
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0949"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1580
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0950"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1581
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0951"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1582
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0952"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1583
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0953"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1584
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0954"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "8342764182e24028771741a8698a16e03f39cff4",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1585
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0955"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1586
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0956"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "test-3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1587
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0957"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1588
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0958"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1589
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0959"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1590
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0960"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1591
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0961"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1592
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0962"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1593
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0963"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1594
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0964"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1595
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0965"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1596
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0966"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1597
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0967"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "4ffe5f39f37630ba37af600a2d262b5f5f16be5d",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1598
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0968"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1599
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0969"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1600
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0970"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1601
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0971"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1602
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0972"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1603
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0973"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "test-3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1604
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0974"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1605
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0975"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1606
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0976"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1607
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0977"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1608
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0978"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1609
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0979"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1610
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0980"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "33bd269c5c9c13f49f83e4f21b348c9c1ce7a685",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1611
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0981"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1612
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0982"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1613
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0983"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test_brotlipy",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test_brotlipy --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1614
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0984"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1615
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0985"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "test-3.12",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.12 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1616
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0986"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1617
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0987"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1618
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0988"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1619
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0989"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1620
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0990"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1621
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0991"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1622
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0992"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "macos-15",
+  "python": "3.14t",
+  "variant": "test-3.14t",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14t --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1623
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0993"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "723ec6c05e878cbdce2368a3c5a6bcc4ddf744fe",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "test-3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1624
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0994"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "test-3.11",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.11 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1625
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0995"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "test-3.14",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.14 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1626
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0996"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "test-3.10",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.10 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1627
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0997"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1628
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0998"
+ },
+ {
+  "repo": "urllib3/urllib3",
+  "head_sha": "12908a8cda999b237b262ef3939a0aab636ddfb0",
+  "merge_base": "796d200d3070ead69ec3a5d848fecf52a2249b59",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "test-3.13",
+  "setup": "python -m pip install nox",
+  "test": "nox -s test-3.13 --reuse-existing-virtualenvs -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   1629
+  ],
+  "nodeids": [
+   "test/test_ssltransport.py::SingleTLSLayerTestCase::test_start_closed_socket"
+  ],
+  "env_id": "e0999"
+ }
+]

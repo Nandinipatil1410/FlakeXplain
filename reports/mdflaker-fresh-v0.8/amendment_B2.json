@@ -1,0 +1,13 @@
+{
+ "amendment": "B2",
+ "date": "2026-10-20",
+ "before": "any rerun or label",
+ "amendment_markdown_sha256": "63f47bffb25fc557c423900cc33d01c435b0a75c7e062ba9d30028ee069da76f",
+ "harness_sha256": "15aa9918b860be513d6d7a1e3011aaa2d67c604da3f2bd5729018e76203e5e36",
+ "planner_sha256": "1948404918f477cbcc2bbae601a7fd8f25b501724456bacec7641f468b2e55d0",
+ "workflow_sha256": "61287653b8d487775a0a35ee5e947a82d320f4c9e21663e908774ad4e039e06e",
+ "plan_sha256": "77be00d13223e93cc93abab5fb6d36191840c5c90f2834559bcb2cb9dfbb5321",
+ "env_valid_threshold": 0.8,
+ "environments": 1026,
+ "candidates_planned": 1641
+}

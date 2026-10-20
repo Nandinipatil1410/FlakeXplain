@@ -1,0 +1,3690 @@
+[
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "a9f0d07125be8b0aa428f1706a0601af828633ac",
+  "merge_base": "",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   727,
+   728
+  ],
+  "nodeids": [
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags0-INFO]",
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags1-DEBUG]"
+  ],
+  "env_id": "e0400"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "e99d43cee82bb13d12977fe46ed63adbf088cd0a",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   731,
+   732
+  ],
+  "nodeids": [
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags0-INFO]",
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags1-DEBUG]"
+  ],
+  "env_id": "e0401"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "e99d43cee82bb13d12977fe46ed63adbf088cd0a",
+  "merge_base": "",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   733,
+   734
+  ],
+  "nodeids": [
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags0-INFO]",
+   "setuptools/tests/test_logging.py::test_verbosity_level[flags1-DEBUG]"
+  ],
+  "env_id": "e0402"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "3a4fd917740b9c5785caaadb96cfcef5607e8ac5",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   735
+  ],
+  "nodeids": [
+   "setuptools/command/install.py::ruff"
+  ],
+  "env_id": "e0403"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "3a4fd917740b9c5785caaadb96cfcef5607e8ac5",
+  "merge_base": "",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   736
+  ],
+  "nodeids": [
+   "setuptools/launch.py::ruff"
+  ],
+  "env_id": "e0404"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "cb3f8d2570aa60ade25bfb10c3324663bc68f3f6",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   737
+  ],
+  "nodeids": [
+   "setup.py::ruff"
+  ],
+  "env_id": "e0405"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "cb3f8d2570aa60ade25bfb10c3324663bc68f3f6",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   738
+  ],
+  "nodeids": [
+   "setuptools/tests/test_bdist_deprecations.py::ruff"
+  ],
+  "env_id": "e0406"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "d3c5189760ea58a6750c70f71fc0a361517bbd7f",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   739
+  ],
+  "nodeids": [
+   "setuptools/command/sdist.py::mypy"
+  ],
+  "env_id": "e0407"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "8fc2c84965a23cfcbf677739dcb102128392ebf4",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   740
+  ],
+  "nodeids": [
+   "setuptools/command/sdist.py::mypy"
+  ],
+  "env_id": "e0408"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "63ad5a99cfd9e54dc6190b098692578b88a4b927",
+  "merge_base": "e9904b0c7e5e249b535832b88efa847ee097de3a",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   741
+  ],
+  "nodeids": [
+   "setuptools/tests/test_bdist_wheel.py::test_no_scripts"
+  ],
+  "env_id": "e0409"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "54e5b945401fed10bd0edbaa9f3320e9c34315a0",
+  "merge_base": "e9904b0c7e5e249b535832b88efa847ee097de3a",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   742
+  ],
+  "nodeids": [
+   "setuptools/tests/test_bdist_wheel.py::test_limited_abi"
+  ],
+  "env_id": "e0410"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "5efdab07535cf0ff748ea3c09f38aaac97ecd06d",
+  "merge_base": "e9904b0c7e5e249b535832b88efa847ee097de3a",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   743
+  ],
+  "nodeids": [
+   "setuptools/tests/test_build_meta.py::TestBuildMetaLegacyBackend::test_build_wheel[build_backend4]"
+  ],
+  "env_id": "e0411"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "ec73c446ba5794c862d6f8d4c3da1141a0dcf61b",
+  "merge_base": "e9904b0c7e5e249b535832b88efa847ee097de3a",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   744
+  ],
+  "nodeids": [
+   "setuptools/tests/test_build_meta.py::TestBuildMetaBackend::test_build_wheel[build_backend3]"
+  ],
+  "env_id": "e0412"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "bb1b38189eed960bdb4f4789926472d05e43d335",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   745
+  ],
+  "nodeids": [
+   "setuptools/tests/test_build_meta.py::TestBuildMetaLegacyBackend::test_build_wheel[build_backend5]"
+  ],
+  "env_id": "e0413"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "bb1b38189eed960bdb4f4789926472d05e43d335",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   746
+  ],
+  "nodeids": [
+   "setuptools/tests/integration/test_pip_install_sdist.py::test_install_sdist[pip-v.LATEST]"
+  ],
+  "env_id": "e0414"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "71d787816ac82824390b18e1b057cb5fbc5b0767",
+  "merge_base": "7d531288b7c8708d4cc186213da93eaf5d11833d",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   748
+  ],
+  "nodeids": [
+   "setuptools/extension.py::ruff::format"
+  ],
+  "env_id": "e0415"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "71d787816ac82824390b18e1b057cb5fbc5b0767",
+  "merge_base": "7d531288b7c8708d4cc186213da93eaf5d11833d",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   749,
+   750
+  ],
+  "nodeids": [
+   "setuptools/extension.py::ruff::format",
+   "setuptools/tests/test_setuptools.py::TestDistro::testIncludeExclude"
+  ],
+  "env_id": "e0416"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "72974110e29d53080dcf23cfa52d9c17299dbae4",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   751
+  ],
+  "nodeids": [
+   "setuptools/tests/test_build_meta.py::TestBuildMetaBackend::test_build_wheel[build_backend3]"
+  ],
+  "env_id": "e0417"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "72974110e29d53080dcf23cfa52d9c17299dbae4",
+  "merge_base": "7d531288b7c8708d4cc186213da93eaf5d11833d",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   752
+  ],
+  "nodeids": [
+   "setuptools/tests/test_build_meta.py::TestBuildMetaBackend::test_build_with_pyproject_config[__import__('setuptools').setup()]"
+  ],
+  "env_id": "e0418"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "164ae9628dea9b2f417ec96a0753eec8361ab96f",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   753
+  ],
+  "nodeids": [
+   "setuptools/tests/config/test_setupcfg.py::TestOptions::test_basic"
+  ],
+  "env_id": "e0419"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "5c8160b10091ed5da851f86bfab6e871051794f2",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   755
+  ],
+  "nodeids": [
+   "setuptools/extension.py::ruff::format"
+  ],
+  "env_id": "e0420"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "5c8160b10091ed5da851f86bfab6e871051794f2",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   756
+  ],
+  "nodeids": [
+   "setuptools/extension.py::ruff::format"
+  ],
+  "env_id": "e0421"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "393240d759e26794f988c9d90c0b3c67dca8d8b6",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   758
+  ],
+  "nodeids": [
+   "setuptools/command/editable_wheel.py::mypy"
+  ],
+  "env_id": "e0422"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "393240d759e26794f988c9d90c0b3c67dca8d8b6",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   759
+  ],
+  "nodeids": [
+   "setuptools/config/setupcfg.py::mypy"
+  ],
+  "env_id": "e0423"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "72d44174cdd033c7896f3632d5cda2c33ea4ef1d",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   761
+  ],
+  "nodeids": [
+   "setuptools/tests/test_setuptools.py::TestDistro::testIncludeExclude"
+  ],
+  "env_id": "e0424"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "6a73dc3459c6908b89ffeeaba1848b8c0385f4ef",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   762
+  ],
+  "nodeids": [
+   "setuptools/tests/config/test_setupcfg.py::TestOptions::test_data_files"
+  ],
+  "env_id": "e0425"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "afb4c8d02e7b9c194f393e4bcc632caa535ba2b3",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   767,
+   768,
+   769,
+   770,
+   771
+  ],
+  "nodeids": [
+   "setuptools/command/build_ext.py::mypy",
+   "setuptools/command/build_ext.py::ruff",
+   "setuptools/command/install.py::mypy",
+   "setuptools/config/setupcfg.py::mypy",
+   "setuptools/discovery.py::mypy"
+  ],
+  "env_id": "e0426"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "c838613e549299bbaa1267bce907f91323f4f644",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   772
+  ],
+  "nodeids": [
+   "setuptools/tests/test_editable_install.py::TestCustomBuildExt::test_distutils_leave_inplace_files"
+  ],
+  "env_id": "e0427"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "6f1112b0b47d6a560147d0bbb1f6632a7383d2ab",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   773
+  ],
+  "nodeids": [
+   "setuptools/tests/config/test_setupcfg.py::TestOptions::test_multiline"
+  ],
+  "env_id": "e0428"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "dfd04e8525f8990478fe8867ba0b9b8ebc49613e",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   774
+  ],
+  "nodeids": [
+   "setuptools/warnings.py::ruff"
+  ],
+  "env_id": "e0429"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "dfd04e8525f8990478fe8867ba0b9b8ebc49613e",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   775
+  ],
+  "nodeids": [
+   "setuptools/warnings.py::ruff"
+  ],
+  "env_id": "e0430"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "3c3a334155042bd0d7728ddfa9d00b0d6165add5",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   777
+  ],
+  "nodeids": [
+   "setuptools/warnings.py::ruff"
+  ],
+  "env_id": "e0431"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "3c3a334155042bd0d7728ddfa9d00b0d6165add5",
+  "merge_base": "4e612f9e44ecfad130d0b2a27a2dce0740599b4b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   778
+  ],
+  "nodeids": [
+   "setuptools/warnings.py::ruff"
+  ],
+  "env_id": "e0432"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "33c7ab11a9a568643ae63ad44aedd39b4baf640b",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   779
+  ],
+  "nodeids": [
+   "setuptools/warnings.py::ruff"
+  ],
+  "env_id": "e0433"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "33c7ab11a9a568643ae63ad44aedd39b4baf640b",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   780
+  ],
+  "nodeids": [
+   "setuptools/warnings.py::ruff"
+  ],
+  "env_id": "e0434"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "4b0293987b195aa9f7a7222148fdba0d15d461f2",
+  "merge_base": "e66004c64eaf6cf2f8c53ccdfac75cf7abce7ccf",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   781
+  ],
+  "nodeids": [
+   "setuptools/tests/config/test_setupcfg.py::TestOptions::test_requirements_file"
+  ],
+  "env_id": "e0435"
+ },
+ {
+  "repo": "pypa/setuptools",
+  "head_sha": "28b1988d62e714461dd97efb335d5bedf4465edc",
+  "merge_base": "e66004c64eaf6cf2f8c53ccdfac75cf7abce7ccf",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "py",
+  "setup": "python -m pip install tox",
+  "test": "tox -e py -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   783
+  ],
+  "nodeids": [
+   "setuptools/tests/config/test_setupcfg.py::TestOptions::test_packages"
+  ],
+  "env_id": "e0436"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "b5812a7458451c4441075bb65502ada1cb56a937",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   788
+  ],
+  "nodeids": [
+   "testing/test_session.py::TestNewSession::test_syntax_error_module"
+  ],
+  "env_id": "e0437"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "b5812a7458451c4441075bb65502ada1cb56a937",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   789
+  ],
+  "nodeids": [
+   "testing/test_session.py::TestNewSession::test_syntax_error_module"
+  ],
+  "env_id": "e0438"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "b5812a7458451c4441075bb65502ada1cb56a937",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   790
+  ],
+  "nodeids": [
+   "testing/test_session.py::TestNewSession::test_syntax_error_module"
+  ],
+  "env_id": "e0439"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "239b0927ae03a44e20995f8c97b282db21f2f252",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   791
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0440"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   792,
+   793
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0441"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   794,
+   795
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0442"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   796,
+   797
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0443"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   798,
+   799
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0444"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "py312-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   800,
+   801
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0445"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.13",
+  "variant": "py313-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   802,
+   803
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0446"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   804,
+   805
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0447"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "py315-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   806,
+   807
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0448"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   808,
+   809
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0449"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   810,
+   811
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0450"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   812,
+   813
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0451"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   814,
+   815
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0452"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py314-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   816,
+   817
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0453"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-lsof-numpy-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   818,
+   819
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0454"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "py315",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   820,
+   821
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0455"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   822,
+   823,
+   824
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0456"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   825,
+   826
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0457"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   827,
+   828
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0458"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "py312",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   829,
+   830
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0459"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.12",
+  "variant": "py312-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   831,
+   832
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0460"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6229b1ea3c000bcc9e3600f0d97bfe5dbb52df99",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.15",
+  "variant": "py315-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   833,
+   834
+  ],
+  "nodeids": [
+   "test_escaped_setup_teardown_error.py::test_esc",
+   "testing/test_junitxml.py::test_escaped_setup_teardown_error"
+  ],
+  "env_id": "e0461"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "7bbc9ba7821374d1e3c6b082dcbe55893a002f5c",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   835
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0462"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "e8b7d6e19e308d540a5cf04a2e3a8c5bf71835e6",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   836
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0463"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   837
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0464"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "py312",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   838
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0465"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   839
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0466"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   840
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0467"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-lsof-numpy-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   841
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0468"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   842
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0469"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "py315",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   843
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0470"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   844
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0471"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   845
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0472"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "py315-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   846
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0473"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   847,
+   848
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis",
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0474"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   849
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0475"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   850
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0476"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.13",
+  "variant": "py313-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   851
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0477"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "py312-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   852
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0478"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py314-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   853
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0479"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   854
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0480"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   855
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0481"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.12",
+  "variant": "py312-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   856
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0482"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   857
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0483"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "56a8f16ef01ef4c0f7c8900e3af3a92814194709",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.15",
+  "variant": "py315-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   858
+  ],
+  "nodeids": [
+   "testing/test_warnings.py::TestMaxWarnings::test_max_warnings_toml_option[\"1\"]"
+  ],
+  "env_id": "e0484"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   859
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0485"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   860
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0486"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   861
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0487"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   862
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0488"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   863
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0489"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "py312-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   864
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0490"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-lsof-numpy-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   865
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0491"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "py315",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   866
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0492"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   867
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0493"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "py315-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   868
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0494"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   869,
+   870
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis",
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0495"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   871
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0496"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   872
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0497"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py314-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   873
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0498"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "py312",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   874
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0499"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   875
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0500"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.13",
+  "variant": "py313-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   876
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0501"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.12",
+  "variant": "py312-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   877
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0502"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   878
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0503"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "macos-latest",
+  "python": "3.15",
+  "variant": "py315-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   879
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0504"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "bd0222ba933aaffc35010acc450bddca7be7cf0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   880
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0505"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "12e099b83f6adfd1b7fc1618e27cfdc4a25f19fa",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   881
+  ],
+  "nodeids": [
+   "testing/test_faulthandler.py::test_timeout_and_exit[True]"
+  ],
+  "env_id": "e0506"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "12e099b83f6adfd1b7fc1618e27cfdc4a25f19fa",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   882
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0507"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6b51841a8237d9e0d6ae8a205d57a8a09de609af",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   883
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0508"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "32ef7a66ce87ef722023461259f53e66fa812a28",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   884
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0509"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "70aad3048a9420e2b0a22253b79d513b70218914",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   885
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0510"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "884932cf60c37a3c83c6a1c8a5704b59916d200c",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   886
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0511"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "b02ea98a7627832945fd98349ee1e96e0d4691ef",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   887
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0512"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "4b43fe89fcfb899d29a5b05bbebd7f81822f791f",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   888
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0513"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "054992a1f0036dbb973f7c3d635b0c88c9a637b0",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   889
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0514"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "c694bb9e148721258ffcd29dc5a6d5722a464e8e",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   890
+  ],
+  "nodeids": [
+   "testing/test_terminal.py::TestProgressOutputStyle::test_verbose_times"
+  ],
+  "env_id": "e0515"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "c694bb9e148721258ffcd29dc5a6d5722a464e8e",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   891
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0516"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "6af8e1ec4806885063fc8bf2abce20a83a8b9cb8",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   892
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0517"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "d77f78ba0a8db1cfe1ae234c341fd1b316b337b2",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   893
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0518"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "7cc8e216b1ec2b85079f0b9764acaf4e5ec96460",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   894
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0519"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0ded403127460e1bbede7c55cfc45a4b316141c6",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   895
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0520"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "8511b5fd2d7e073883d2ec0ab43019e5601402fb",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   896
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0521"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "461daa331708b74719499ce2daf3d5ff3abb19ff",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   897
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0522"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "4523cda72ae881306bf157e744ea7a630599efc7",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   898
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0523"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "c56edbd74b3d03a26635d03fafd8e27bdc5b82ee",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   899
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0524"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "d95adaf368e8a5e974db1af1d7411f7fd48ffaf5",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   900
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0525"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "d974ca3a6b472a7a95dd8089c7fb3b0186c3e915",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   901
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0526"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "7c19583c0993efb61e03c1aa423b0d99e3166e0a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   902
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0527"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "52431021687f80b02efefc69b514822de584bc52",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   903
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0528"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "a925a4c5a547c1457c2338135a4277f92cbe5f68",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   904
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0529"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "d6ac73df165a91d2c6f44528f88a68b9e9988f0f",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   905
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0530"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "88df20ac5f3845f21f56b88c5ff7b1922a627f2a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   906
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0531"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "1f3f7d53ef6a0e72e4a59f64b102fd48feee79f3",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   907
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0532"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "5e842e93596295474dae99c54248676f5ff30a51",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   908
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0533"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "1001c8ebec5b8aa2719fb8008b00039882545c57",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   909
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0534"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "b78d468a5a522e21cae1a320cbeb73717023527a",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   910
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0535"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "204717fa6aae687c7d5dd935173e117a0721cfa1",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   911
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0536"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "3f056ca6325fa773d26f389612a8c1de8b7146b9",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   912
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0537"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "ede7c315ee05f8cb3630042e59972bfa945bb687",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   913
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0538"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "f5fce6da9c6fcd68b3bb1356b7e4c50020fef1c6",
+  "merge_base": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   914
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0539"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "merge_base": "",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   915
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0540"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "41644e4a0c7f1b2872d7c95646faf5da4bb74a4b",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   916
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0541"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "130f6dd642ff02dfe6b9a8d8c3073e492dfe6f58",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   917,
+   918
+  ],
+  "nodeids": [
+   "testing/code/test_excinfo.py::TestExceptionInfoFormatter::test_syntax_error_collection_omits_redundant_file_block",
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0542"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "061c33ff0aafd39d69cd1d0e729fff7b14c66299",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   919,
+   925
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0543"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "d90ced5c60040c844c4c5f6e9c7951a6c9ece322",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   920,
+   924
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0544"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "9a062debece434f03ae4f723aa5566e648454423",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   921
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0545"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "f4f528644725fb44ba5e4991b4d444e6c45595d8",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   922,
+   923
+  ],
+  "nodeids": [
+   "testing/code/test_excinfo.py::TestExceptionInfoFormatter::test_syntax_error_collection_omits_redundant_file_block",
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0546"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "768ba39719d2a615bc72217cbad8c3288b94da43",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   926
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0547"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "d54c3ac94517824547c3275756398429bcde7681",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   927
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0548"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "744f18b999c17fff56b99cd151759873cbd9d6d1",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   928
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0549"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "49344608a588009e4a4a9fd05b5a04c255918b2e",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   929
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0550"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "9d19a5f485a7b51a7feca8e441c79eaf3624672b",
+  "merge_base": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   930
+  ],
+  "nodeids": [
+   "testing/python/metafunc.py::TestMetafunc::test_idval_hypothesis"
+  ],
+  "env_id": "e0551"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "299136ac7d237a50d49167795df56c7368adddf1",
+  "merge_base": "8721173580390a9d297e5af06cac3f0b6841f425",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   931
+  ],
+  "nodeids": [
+   "testing/test_debugging.py::TestPDB::test_pdb_unittest_postmortem"
+  ],
+  "env_id": "e0552"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   932,
+   933
+  ],
+  "nodeids": [
+   "test_report_capture_replacement_record_on_non_propagating_logger.py::test_replacement",
+   "testing/logging/test_reporting.py::test_report_capture_replacement_record_on_non_propagating_logger"
+  ],
+  "env_id": "e0553"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "py315",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   934
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0554"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   935
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0555"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-lsof-numpy-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   936,
+   937
+  ],
+  "nodeids": [
+   "test_report_capture_replacement_record_on_non_propagating_logger.py::test_replacement",
+   "testing/logging/test_reporting.py::test_report_capture_replacement_record_on_non_propagating_logger"
+  ],
+  "env_id": "e0556"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   938
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0557"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.11",
+  "variant": "py311-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   939,
+   940
+  ],
+  "nodeids": [
+   "test_report_capture_replacement_record_on_non_propagating_logger.py::test_replacement",
+   "testing/logging/test_reporting.py::test_report_capture_replacement_record_on_non_propagating_logger"
+  ],
+  "env_id": "e0558"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "macos-latest",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   941,
+   942
+  ],
+  "nodeids": [
+   "test_report_capture_replacement_record_on_non_propagating_logger.py::test_replacement",
+   "testing/logging/test_reporting.py::test_report_capture_replacement_record_on_non_propagating_logger"
+  ],
+  "env_id": "e0559"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   943,
+   944
+  ],
+  "nodeids": [
+   "test_report_capture_replacement_record_on_non_propagating_logger.py::test_replacement",
+   "testing/logging/test_reporting.py::test_report_capture_replacement_record_on_non_propagating_logger"
+  ],
+  "env_id": "e0560"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   945,
+   946
+  ],
+  "nodeids": [
+   "test_report_capture_replacement_record_on_non_propagating_logger.py::test_replacement",
+   "testing/logging/test_reporting.py::test_report_capture_replacement_record_on_non_propagating_logger"
+  ],
+  "env_id": "e0561"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   947,
+   948
+  ],
+  "nodeids": [
+   "test_report_capture_replacement_record_on_non_propagating_logger.py::test_replacement",
+   "testing/logging/test_reporting.py::test_report_capture_replacement_record_on_non_propagating_logger"
+  ],
+  "env_id": "e0562"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "py315-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   949
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0563"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "macos-latest",
+  "python": "3.15",
+  "variant": "py315-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   950
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0564"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   951,
+   952
+  ],
+  "nodeids": [
+   "test_report_capture_replacement_record_on_non_propagating_logger.py::test_replacement",
+   "testing/logging/test_reporting.py::test_report_capture_replacement_record_on_non_propagating_logger"
+  ],
+  "env_id": "e0565"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   953
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0566"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py314-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   954
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0567"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   955
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0568"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   956,
+   957
+  ],
+  "nodeids": [
+   "test_report_capture_replacement_record_on_non_propagating_logger.py::test_replacement",
+   "testing/logging/test_reporting.py::test_report_capture_replacement_record_on_non_propagating_logger"
+  ],
+  "env_id": "e0569"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "0a2a9d209dec9996e94d73dab46bd452b908fb09",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "macos-latest",
+  "python": "3.13",
+  "variant": "py313-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   958
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0570"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   959
+  ],
+  "nodeids": [
+   "testing/test_debugging.py::TestPDB::test_pdb_unittest_postmortem"
+  ],
+  "env_id": "e0571"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "windows-2025",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   960
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0572"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   961
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0573"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.13",
+  "variant": "py313-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   962
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0574"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "macos-latest",
+  "python": "3.15",
+  "variant": "py315-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   963
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0575"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   964
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0576"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py314-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   965
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0577"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "py315-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   966
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0578"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "py315",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   967
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0579"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "554aa38442057329e46d3e1a7f612c8a7f64d7ff",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "macos-latest",
+  "python": "3.13",
+  "variant": "py313-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   968
+  ],
+  "nodeids": [
+   "testing/logging/test_bound_proxy.py::test_proxy_does_not_deadlock_with_real_handler_across_threads"
+  ],
+  "env_id": "e0580"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "3ce8477f1ce27fee41545d2f3b0df219cc69e3ac",
+  "merge_base": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   969
+  ],
+  "nodeids": [
+   "testing/test_debugging.py::TestPDB::test_pdb_unittest_postmortem"
+  ],
+  "env_id": "e0581"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "f6886cdd3bd71daa2757020d9726751134166b37",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "pypy3.11",
+  "variant": "pypy3-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e pypy3-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   970
+  ],
+  "nodeids": [
+   "testing/python/raises.py::TestRaises::test_raises_cyclic_reference[function_match]"
+  ],
+  "env_id": "e0582"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "451d273d818c25b869849e033ce891a3b2a5773a",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   971
+  ],
+  "nodeids": [
+   "testing/test_debugging.py::TestPDB::test_pdb_and_capsys"
+  ],
+  "env_id": "e0583"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "d93f705d84e1e78a1e0549ec789c2c1a58242049",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   972
+  ],
+  "nodeids": [
+   "testing/test_terminal.py::TestProgressOutputStyle::test_verbose_times"
+  ],
+  "env_id": "e0584"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "7e2b7bb9822eca4bbab7ee8be51bd377009c82a9",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   973
+  ],
+  "nodeids": [
+   "testing/test_debugging.py::TestPDB::test_pdb_unittest_postmortem"
+  ],
+  "env_id": "e0585"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   974
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0586"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.12",
+  "variant": "py312",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   975
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0587"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.11",
+  "variant": "py311",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py311 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   976
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0588"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   977
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0589"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.15",
+  "variant": "py315",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   978
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0590"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.12",
+  "variant": "py312-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   979
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0591"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.15",
+  "variant": "py315-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py315-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   980
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0592"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "windows-2025",
+  "python": "3.13",
+  "variant": "py313",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py313 -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   981
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0593"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.12",
+  "variant": "py312-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py312-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   982
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0594"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-pluggymain-pylib-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-pluggymain-pylib-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   983
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0595"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "macos-latest",
+  "python": "3.14",
+  "variant": "py314-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   984
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0596"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-lsof-numpy-pexpect-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-lsof-numpy-pexpect-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   985
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0597"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.10",
+  "variant": "py310-xdist",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py310-xdist -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   986
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0598"
+ },
+ {
+  "repo": "pytest-dev/pytest",
+  "head_sha": "2d1464f7a11fcfe7ff906ed564fd6e97ff616d2c",
+  "merge_base": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+  "runner": "ubuntu-24.04",
+  "python": "3.14",
+  "variant": "py314-coverage",
+  "setup": "python -m pip install tox",
+  "test": "tox run -e py314-coverage -- {args}",
+  "pytest_args": "-rA -p no:randomly -p no:cacheprovider",
+  "candidates": [
+   987
+  ],
+  "nodeids": [
+   "testing/test_skipping.py::test_skipped_folding"
+  ],
+  "env_id": "e0599"
+ }
+]

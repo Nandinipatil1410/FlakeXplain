@@ -1,0 +1,59 @@
+name: MDFlaker v0.8 reruns
+# Re-runs each frozen candidate failure 30 times in a matching environment (reports/mdflaker-fresh-v0.8).
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: Batch file under rerun/v0.8 (e.g. batch_00.json, or pilot.json)
+        required: true
+        default: pilot.json
+      mode:
+        description: check-only (setup + environment check, no candidate reruns) or full (30 reruns)
+        required: true
+        default: check-only
+        type: choice
+        options: [check-only, full]
+permissions:
+  contents: read
+concurrency:
+  group: mdflaker-v08-${{ inputs.batch }}-${{ inputs.mode }}
+  cancel-in-progress: false
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: |
+          python3 -c "import json,sys; b=json.load(open('rerun/v0.8/${{ inputs.batch }}')); print('matrix='+json.dumps({'include':[{'env':e['env_id'],'runner':e['runner'],'python':e['python']} for e in b]}))" >> "$GITHUB_OUTPUT"
+  rerun:
+    needs: plan
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 240
+    name: ${{ matrix.env }} (${{ matrix.runner }}, py${{ matrix.python }})
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: flakexplain
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          allow-prereleases: true
+      - uses: astral-sh/setup-uv@v6
+      - name: Rerun candidates
+        shell: bash
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python flakexplain/scripts/mdflaker_v08_rerun_job.py --batch "flakexplain/rerun/v0.8/${{ inputs.batch }}" --env "${{ matrix.env }}" --out results ${{ inputs.mode == 'check-only' && '--check-only' || '' }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rerun-${{ matrix.env }}
+          path: results/
+          retention-days: 90
