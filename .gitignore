@@ -26,3 +26,4 @@ __pycache__/
 /airflow-evidence/
 /dask-evidence/
 /*.backup.md
+/replication/data/

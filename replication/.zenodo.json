@@ -1,0 +1,20 @@
+{
+  "title": "FlakeXplain v0.8 replication package: MDFlaker on fresh GitHub Actions test failures",
+  "upload_type": "dataset",
+  "description": "<p>Replication package for the FlakeXplain v0.8 study. It contains 1,659 failed pytest executions from recent GitHub Actions runs of 8 Python projects, each re-run 30 times in a matching environment. That produced 1,292 labelled failures: 409 flaky and 883 not flaky. The package compares MDFlaker's reimplemented classifier with an ExtraTrees model on failure-evidence features.</p><p>Contents: collection, rerun, labelling, feature and analysis scripts; the GitHub Actions rerun workflow; derived data (candidates, label-blind features, labels, per-candidate rerun outcome summaries and the parsed CI failure history) with SHA-256 manifest. Raw CI logs are not included.</p>",
+  "creators": [
+    {"name": "Patil, Nandini"},
+    {"name": "Mane, Bhumika"},
+    {"name": "Kulkarni, Trusha"},
+    {"name": "Baad, Pranavi"}
+  ],
+  "keywords": ["flaky tests", "continuous integration", "GitHub Actions", "pytest", "MDFlaker", "machine learning", "replication package"],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "version": "v0.8",
+  "notes": "DRAFT, not yet published. Data release pending guide approval. The licence is a placeholder until the team chooses one (see LICENSE_OPTIONS.md). If code and data take different licences, name the code licence here. Add affiliations, ORCIDs and the related paper DOI before upload.",
+  "related_identifiers": [
+    {"identifier": "https://github.com/Nandinipatil1410/FlakeXplain", "relation": "isSupplementTo", "scheme": "url"}
+  ]
+}
