@@ -287,3 +287,44 @@ Without hypothesis the project prior is constant (not flaky everywhere), so its 
 - **`flaky_frequency_strict`** uses earlier runs' logs keyed by run creation time. An earlier run
   that was still running at prediction time is counted. This is a residual timing gap; its size has
   not been measured.
+
+## 8. Same-run failures across the E1 split (post hoc; `posthoc_runsplit.json`, `scripts/mdflaker_v08_posthoc_runsplit.py`)
+
+Added on 21 October 2026, after the related-work search raised that flaky failures from one CI run
+often share a cause (Parry et al., EASE 2025). E1 splits each project by failure time, so one run can
+fall on both sides of the 60/40 boundary. The script reproduces the §6.1 and §7 numbers exactly for
+the unchanged split. Each interval uses its own generator seeded with 20261020.
+
+### 8.1 How often it happens
+
+- **Runs:** 6 workflow runs, one at the boundary in each of 6 projects (prefect, conan, DRF, pytest,
+  Cirq and urllib3), have failures in both E1 training and test.
+- **Test failures sharing a run with training:** 50 of the 516. All 50 are **not flaky**.
+- **Commits:** grouping by commit instead gives 7 commits and 51 test failures, 1 of them flaky.
+
+### 8.2 Effect (MCC; strict history)
+
+There are two corrections:
+- **drop:** the same models, scored without the shared test failures;
+- **regroup:** a group-respecting split, refitted. Whole runs or commits go to training until it holds
+  at least 60% of each project's failures.
+
+| Variant | E1 n | ET-BF E1 | MDFlaker E1 | Unseen n | ET-BF unseen | MDFlaker unseen | ET-BF − MDFlaker, unseen | ET-BF − prior, unseen |
+|---|---:|---:|---:|---:|---:|---:|---|---|
+| As in §6.1 / §7 | 516 | 0.679 | 0.033 | 321 | 0.469 | −0.160 | +0.63 [0.14, 0.94] | +0.32 [−0.29, 0.61] |
+| Drop shared run | 466 | 0.663 | 0.133 | 312 | 0.464 | −0.134 | +0.60 [0.14, 0.86] | +0.32 [−0.29, 0.61] |
+| Regroup by run | 466 | 0.687 | 0.164 | 312 | 0.537 | −0.103 | +0.64 [0.17, 0.89] | +0.39 [−0.25, 0.68] |
+| Drop shared commit | 465 | 0.661 | 0.135 | 311 | 0.459 | −0.132 | +0.59 [0.14, 0.86] | +0.31 [−0.30, 0.60] |
+| Regroup by commit | 465 | 0.628 | 0.135 | 309 | 0.399 | −0.155 | +0.55 [0.15, 0.80] | +0.25 [−0.32, 0.52] |
+
+**Reading.**
+- **The leak is small and runs the other way.** The shared failures are almost all not flaky, so they
+  helped neither side much. MDFlaker's E1 MCC rises from 0.03 to about 0.13–0.16 without them; it had
+  misclassified many of them.
+- **The unseen-tests result holds.** ET-BF is 0.40–0.54 on unseen tests across the four corrections,
+  and its margin over MDFlaker stays positive, with intervals excluding 0 in every variant.
+- **The margin over the project prior is still not significant** in any variant.
+- **The pooled E1 margin over MDFlaker shrinks** (from +0.65 to +0.49–0.53) because MDFlaker improves,
+  but it stays clearly positive.
+
+The v0.9 confirmation is not affected: it tests only on failures from runs created after the freeze.
