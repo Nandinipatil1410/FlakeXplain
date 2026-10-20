@@ -26,6 +26,10 @@ F_COLS=['build_failed_tests','same_file_cofailures','job_duration_s','pr_build',
     'nonpy_only_change','changed_lines','own_test_file_changed','path_overlap_depth','traceback_frames','frames_in_changed_files',
     'last_frame_in_test_file','frames_outside_repo','min_line_distance_to_change','diff_available']
 
+def rmtree(p):
+    """Remove a tree, using the extended-length prefix so deep paths on Windows are deleted too."""
+    p=str(Path(p).resolve());shutil.rmtree('\\\\?\\'+p if os.name=='nt' else p,ignore_errors=True)
+
 def clone(repo):return CLONES/(repo.split('/')[1]+'.git')
 
 def git(repo,*a,stdin=None,lazy=False):
@@ -70,7 +74,7 @@ def export(repo,tree):
     """Write the tree's .py files: blobs prefetched in chunks, then checked out into a scratch work tree."""
     dest=SRC/repo.split('/')[1]/tree
     if (dest/'.complete').exists():return dest
-    shutil.rmtree(dest,ignore_errors=True);prefetch(repo,py_blobs(repo,tree))
+    rmtree(dest);prefetch(repo,py_blobs(repo,tree))
     dest.mkdir(parents=True,exist_ok=True);idx=dest.parent/(tree+'.index')
     env=dict(os.environ,GIT_INDEX_FILE=str(idx),GIT_NO_LAZY_FETCH='1')
     p=subprocess.run(['git','--git-dir',str(clone(repo)),'--work-tree',str(dest),'-c','core.bare=false','-c','gc.auto=0','checkout',tree,'--',':(glob)**/*.py'],capture_output=True,env=env)
@@ -204,7 +208,7 @@ def main():
             root=export(repo,tree)
             if root:
                 if idx[0]!=root:
-                    if idx[0] is not None:shutil.rmtree(idx[0],ignore_errors=True)  # keep one exported tree on disk at a time
+                    if idx[0] is not None:rmtree(idx[0])  # keep one exported tree on disk at a time
                     idx=(root,SourceIndex(root));ctx_cache={}
                 fn,cls,path=resolve(idx[1],node)
         key=(repo,base,tree)
@@ -238,7 +242,7 @@ def main():
         for col in CONTEXT:row[col]=src[col] if src else 0
         row['context_available']=int(bool(src));rows.append(row)
         if k%100==0:print(k,repo,flush=True)
-    if idx[0] is not None:shutil.rmtree(idx[0],ignore_errors=True)
+    if idx[0] is not None:rmtree(idx[0])
     rows.sort(key=lambda r:r['candidate']);byjob=defaultdict(list)
     for c,r in zip(cands,rows):byjob[c['job_id']].append((c,r))
     for job,items in byjob.items():
