@@ -46,7 +46,7 @@ def recipe(c,lines):
     if repo=='pypa/setuptools':
         return 'py','python -m pip install tox','tox -e py -- {args}'
     if repo=='HypothesisWorks/hypothesis':
-        return 'pytest','python -m pip install -r requirements/test.txt -e hypothesis-python/','python -m pytest {args}'
+        return 'pytest','python -m pip install -r requirements/test.txt -e .','python -m pytest {args}'
     if repo=='quantumlib/Cirq':
         return 'pytest','python -m pip install -r dev_tools/requirements/dev.env.txt','python -m pytest {args}'
     if repo=='conan-io/conan':

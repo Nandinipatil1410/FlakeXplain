@@ -70,3 +70,11 @@ Pilot run 39382651000 (check-only): 12 of 15 environments were valid.
    validity rule.
 
 The pilot is repeated in check-only mode to confirm these fixes before any full batch.
+
+## Pilot 2 recipe fixes (20 Oct 2026, setup logs only)
+
+Pilot run 39383404814 (check-only): 12 of 15 valid; both hypothesis environments failed to install.
+4. hypothesis now has its package at the repository root (`pyproject.toml`; tests under
+   `hypothesis/tests/`). The recipe becomes `pip install -r requirements/test.txt -e .`.
+5. Harness bug: the working-directory finder fell back to the repository root. It now strips the
+   node ID's relative path from each matching file to find the directory the ID is relative to.

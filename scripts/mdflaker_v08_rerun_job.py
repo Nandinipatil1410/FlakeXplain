@@ -54,11 +54,13 @@ def checkout(env,target):
     return ''
 
 def workdir(target,nodeids):
-    """Shallowest directory under the repo where the node IDs' files exist (rootdir-relative IDs)."""
-    files=[n.split('::')[0] for n in nodeids];cands=[target]+sorted({p.parent for f in files for p in target.rglob(Path(f).name)},key=lambda p:len(p.parts))
-    for d in cands:
-        if all((d/f).exists() for f in files):return d
-    return target
+    """Shallowest directory D under the repo such that D/<file> exists for every node ID (rootdir-relative IDs)."""
+    files=[n.split('::')[0] for n in nodeids];bases=None
+    for f in files:
+        k=len(Path(f).parts)
+        found={Path(*p.parts[:len(p.parts)-k]) for p in target.rglob(Path(f).name) if p.as_posix().endswith(f)}
+        bases=found if bases is None else bases&found
+    return min(bases,key=lambda d:len(d.parts)) if bases else target
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--batch',required=True);ap.add_argument('--env',required=True);ap.add_argument('--out',required=True);ap.add_argument('--check-only',action='store_true',help='local validation: stop after the environment check')
