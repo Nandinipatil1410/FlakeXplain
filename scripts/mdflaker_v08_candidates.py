@@ -6,7 +6,7 @@ Environment (runner image, Python, pytest rootdir) and the job's run steps come 
 import csv,json,random,re,sys,hashlib
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).parent))
-from mdflaker_v08_probe import parse,STAMP,ANSI
+from mdflaker_v08_probe import parse,STAMP,ANSI,read_log
 
 ROOT=Path(__file__).resolve().parents[1];LOGS=ROOT/'local-evidence/mdflaker-fresh-v0.8/logs';OUT=ROOT/'reports/mdflaker-fresh-v0.8'
 PROJECTS=json.loads((OUT/'projects_proposed.json').read_text())['projects']
@@ -26,8 +26,8 @@ def main():
     rng=random.Random(SEED);out=[];envs={}
     for p in PROJECTS:
         d=LOGS/p['repo'].replace('/','__')
-        for t in sorted(d.glob('*.txt'),key=lambda x:int(x.stem)):
-            m=json.loads(t.with_suffix('.json').read_text());log=t.read_text(encoding='utf-8',errors='replace')
+        for t in sorted(d.glob('*.txt*'),key=lambda x:int(x.name.split('.')[0])):
+            m=json.loads((d/(t.name.split('.')[0]+'.json')).read_text());log=read_log(t)
             failed=sorted(parse(log))
             if not failed:continue
             e=env(log);envs[m['job_id']]=e

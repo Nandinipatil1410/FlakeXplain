@@ -7,7 +7,7 @@ import csv,json,re,sys
 from collections import OrderedDict
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).parent))
-from mdflaker_v08_probe import STAMP,ANSI
+from mdflaker_v08_probe import STAMP,ANSI,read_log
 
 ROOT=Path(__file__).resolve().parents[1];LOGS=ROOT/'local-evidence/mdflaker-fresh-v0.8/logs'
 CAND=ROOT/'reports/mdflaker-fresh-v0.8/candidates.csv';DEST=ROOT/'rerun/v0.8';BATCH=200
@@ -15,7 +15,7 @@ PYTEST_ARGS='-rA -p no:randomly -p no:cacheprovider'
 
 def log_lines(repo,job):
     t=LOGS/repo.replace('/','__')/f'{job}.txt'
-    return [ANSI.sub('',STAMP.sub('',l)) for l in t.read_text(encoding='utf-8',errors='replace').splitlines()]
+    return [ANSI.sub('',STAMP.sub('',l)) for l in read_log(t).splitlines()]
 
 def runner(image):
     if image.startswith('ubuntu-22.04'):return 'ubuntu-22.04'

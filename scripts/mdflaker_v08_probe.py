@@ -58,6 +58,13 @@ def api(url,raw=False):
         except Exception:time.sleep(5*(attempt+1))  # network resets, truncated reads, bad JSON
     return None
 
+def read_log(path):
+    """Read a saved job log; logs are stored gzip-compressed (<job>.txt.gz) after 20 Oct 2026."""
+    import gzip
+    path=Path(path);gz=path.with_name(path.name+'.gz') if path.suffix=='.txt' else path
+    if path.suffix=='.txt' and path.exists():return path.read_text(encoding='utf-8',errors='replace')
+    return gzip.open(gz,'rt',encoding='utf-8',errors='replace').read()
+
 def parse(log):
     tests=set()
     for line in log.splitlines():
@@ -84,7 +91,7 @@ def main():
                 jobs_failed+=1
                 if logs>=MAX_LOGS:continue
                 path=LOCAL/'logs'/repo.replace('/','__')/f"{job['id']}.txt"
-                if path.exists():log=path.read_text(encoding='utf-8',errors='replace')
+                if path.exists() or path.with_name(path.name+'.gz').exists():log=read_log(path)
                 else:
                     log=api(f"https://api.github.com/repos/{repo}/actions/jobs/{job['id']}/logs",raw=True)
                     if log is None:continue
