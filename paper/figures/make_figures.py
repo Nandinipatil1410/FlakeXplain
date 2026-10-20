@@ -168,38 +168,40 @@ def fig_pipeline(labels, results, posthoc, draw=True):
     box(0.1, 6.9, 4.4, 1.6, "30 reruns per failure\non the commit CI tested", data_c)
     box(0.1, 4.2, 4.4, 2.1,
         f"Labels\nflaky {flaky:,} | not flaky {not_flaky:,}\n"
-        f"unlabelled {unlabelled:,} (reported)", data_c)
+        f"unlabelled {unlabelled:,}\n(excluded, reported)", data_c, fs=6.2)
     arrow(2.3, 11.3, 2.3, 10.7)
     arrow(2.3, 9.1, 2.3, 8.5)
     arrow(2.3, 6.9, 2.3, 6.3)
 
     # Right column: features and models
-    box(5.5, 11.3, 4.4, 1.4, "Features at failure time\nB: MDFlaker's factors\n"
+    box(5.5, 9.1, 4.4, 3.6, "Features at failure time\n\nB: MDFlaker's factors\n"
         "F: failure evidence", light, fs=6.2)
-    box(5.5, 9.4, 4.4, 1.3, "C: static test context\n(ET-BFC arm only)", light,
+    box(5.5, 6.9, 4.4, 1.6, "C: static test context\n(ET-BFC arm only)", light,
         ls="--", fs=6.2)
-    box(5.5, 6.6, 4.4, 2.2,
+    box(5.5, 4.2, 4.4, 2.1,
         "Models\nMDFlaker (B, rule + KNN)\nKNN8 (B)\nET-B, ET-BF (ours), ET-BFC",
         model_c, fs=6.2)
-    arrow(7.7, 11.3, 7.7, 10.7)
-    arrow(7.7, 9.4, 7.7, 8.8)
-    arrow(4.5, 5.25, 5.5, 7.0)
+    arrow(7.7, 9.1, 7.7, 8.5)
+    arrow(7.7, 6.9, 7.7, 6.3)
+    arrow(4.5, 5.25, 5.5, 5.25)
 
     # Bottom: evaluations
-    box(0.1, 0.4, 3.1, 2.9,
+    box(0.1, 0.8, 3.1, 2.6,
         f"E1\ntime-ordered\nwithin project\ntest n = {e1['n']:,}\n"
         f"({e1['positives']} flaky)", eval_c, fs=6.0)
-    box(3.45, 0.4, 3.1, 2.9,
+    box(3.45, 0.8, 3.1, 2.6,
         f"E2\nleave-one-\nproject-out\nn = {e2['n']:,}\n({e2['positives']} flaky)",
         eval_c, fs=6.0)
-    box(6.8, 0.4, 3.1, 2.9,
+    box(6.8, 0.8, 3.1, 2.6,
         f"Unseen tests\n(post hoc)\nE1 tests not in\ntraining, n = {unseen['n']}\n"
         f"({unseen['flaky']} flaky)", eval_c, ls="--", fs=6.0)
-    arrow(7.7, 6.6, 1.65, 3.3)
-    arrow(7.7, 6.6, 5.0, 3.3)
-    arrow(7.7, 6.6, 8.35, 3.3)
+    # Models fan out to the three evaluations.
+    ax.plot([7.7, 7.7], [4.2, 3.8], color=OI["black"], lw=0.7)
+    ax.plot([1.65, 8.35], [3.8, 3.8], color=OI["black"], lw=0.7)
+    for x in (1.65, 5.0, 8.35):
+        arrow(x, 3.8, x, 3.4)
 
-    ax.text(5.0, 3.75, "original and strict (post hoc) flaky-frequency history",
+    ax.text(5.0, 0.35, "each evaluated with original and strict (post hoc) history",
             ha="center", va="center", fontsize=5.8, style="italic")
 
     save(fig, "fig1_pipeline")
@@ -272,7 +274,7 @@ def fig_original_vs_strict(robust, results, posthoc, draw=True):
             ax.scatter([o], [ypos], s=22, marker=marker, facecolor="white",
                        edgecolor=colour, lw=1.0, zorder=2)
             ax.scatter([s], [ypos], s=22, marker=marker, color=colour, zorder=3)
-            ax.text(1.0, ypos, f"{fmt(o)} → {fmt(s)}", va="center", ha="right",
+            ax.text(1.5, ypos, f"{fmt(o)} → {fmt(s)}", va="center", ha="right",
                     fontsize=6.0, color=OI["black"])
             labels.append(name)
             rows.append(ypos)
@@ -285,8 +287,10 @@ def fig_original_vs_strict(robust, results, posthoc, draw=True):
     ax.set_yticks(rows)
     ax.set_yticklabels(labels)
     ax.set_ylim(ypos - 0.7, -1.4)
-    ax.set_xlim(-0.5, 1.0)
-    ax.set_xlabel("MCC")
+    ax.set_xlim(-0.5, 1.5)
+    ax.set_xticks([-0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1.0])
+    ax.spines["bottom"].set_bounds(-0.5, 1.0)
+    ax.set_xlabel("MCC", x=0.375)
     from matplotlib.lines import Line2D
 
     handles = [
@@ -311,7 +315,7 @@ def fig_unseen_per_project(posthoc, draw=True):
     if not draw:
         return pp
     fig, ax = plt.subplots(figsize=(SINGLE_COL, 2.9))
-    offsets = {"MDF-paper-int": -0.22, "KNN8-float": 0.0, "ET-BF": 0.22}
+    offsets = {"MDF-paper-int": -0.26, "KNN8-float": 0.0, "ET-BF": 0.26}
     for i, repo in enumerate(repos):
         if i % 2 == 0:
             ax.axhspan(i - 0.5, i + 0.5, color="#F4F4F4", zorder=0, lw=0)
@@ -395,7 +399,7 @@ def write_captions(f1, f2, f3, pp, shap, diagnostics):
         f"{f1['e1_flaky']} flaky), leave-one-project-out (E2, n = {f1['e2_n']:,}, "
         f"{f1['e2_flaky']} flaky) and on unseen tests (E1 test failures whose test is not in "
         f"training, n = {f1['unseen_n']}, {f1['unseen_flaky']} flaky). The unseen-test subset and "
-        "the strict-history variant are post hoc (dashed and italic). "
+        "the strict-history variant are post hoc (dashed box and italic note). "
         f"Source: `labels_summary.json`, `results.json`, `posthoc_extra.json`.",
         "",
         "**Figure 2.** Labelled test failures per project (light) and the flaky failures among "
