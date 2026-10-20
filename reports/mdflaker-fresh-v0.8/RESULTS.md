@@ -137,3 +137,87 @@ Limitations:
 - 22% of candidates are unlabelled;
 - hypothesis dominates the flaky class;
 - the diagnostics are post hoc.
+
+## 6. Post-hoc robustness (not part of the rule; `robustness.json`, `scripts/mdflaker_v08_robustness.py`)
+
+These analyses were added after the results above. They do not change the frozen rule or `results.json`.
+The script reproduces the original numbers exactly before swapping the feature. It recomputes
+`flaky_frequency` from the logs and matches the stored value on 1,292/1,292 rows, and its original
+MCCs equal §4.
+
+### 6.1 Strict history
+
+`flaky_frequency_strict` counts only failures of the test in **earlier workflow runs**: a different
+`run_id`, with the log's `created_at` before the failure's own. This excludes sibling jobs of the same
+run, which may not have finished at prediction time. The original value is never 0, because it always
+counts the failure itself. The strict value is 0 for 646 of the 1,292 rows and differs from the
+original on 1,193 rows. Its mean is 0.23 for flaky rows and 0.06 for not-flaky rows; the original
+means are 0.33 and 0.12.
+
+MCC with the strict feature replacing the original (the same splits, labels and models):
+
+| Evaluation | Model | Original | Strict |
+|---|---|---:|---:|
+| E1 time-ordered (n = 516, 171 flaky) | MDFlaker | 0.033 | 0.033 |
+| | KNN8 | 0.239 | 0.225 |
+| | ET-BF | 0.755 | 0.679 |
+| E2 leave-one-project-out (n = 1,292, 409 flaky) | MDFlaker | −0.054 | −0.054 |
+| | KNN8 | −0.044 | −0.126 |
+| | ET-BF | 0.357 | **0.100** |
+| Unseen tests, E1 (n = 321, 91 flaky) | MDFlaker | −0.160 | −0.160 |
+| | KNN8 | −0.084 | −0.128 |
+| | ET-BF | 0.568 | 0.469 |
+
+ET-BF minus KNN8 (project bootstrap 95% CI):
+
+| Evaluation | Original | Strict |
+|---|---|---|
+| E1 | +0.52 [0.22, 0.92] | +0.45 [0.21, 0.78] |
+| E2 | +0.40 [0.16, 0.64] | +0.23 [−0.03, 0.48] |
+| Unseen tests | +0.65 [0.25, 1.04] | +0.60 [0.14, 0.86] |
+
+ET-BF minus MDFlaker is +0.65 [0.39, 0.93] for E1 and +0.15 [−0.11, 0.45] for E2.
+
+MDFlaker is unchanged because it uses integer factors: `trunc(flaky_frequency)` is 0 for both
+variants.
+
+**Reading:**
+- Within-project results (E1 and unseen tests) survive strict history, though they are smaller.
+- The E2 advantage does **not** survive: ET-BF falls to 0.10 MCC and both CIs include 0.
+- Much of the cross-project signal came from same-run sibling failures, which are not available at
+  prediction time. Claims about unseen projects should use the strict numbers.
+
+### 6.2 SHAP explanations (ET-BF, E1)
+
+ET-BF was trained on the E1 training part and explained with `shap.TreeExplainer` (shap 0.51.0)
+on the E1 test part. In that part there are 129 true positives, 332 true negatives, 13 false
+positives and 42 false negatives. The base value is P(flaky) = 0.307, and SHAP values add up to
+the predicted probability (maximum error < 1e-13).
+
+Global ranking by mean |SHAP| (original feature; the full list and the strict-feature ranking are in
+the JSON):
+
+1. `flaky_frequency` 0.090
+2. `last_frame_in_test_file` 0.068
+3. `own_test_file_changed` 0.060
+4. `traceback_frames` 0.036
+5. `job_duration_s` 0.031
+6. `frames_outside_repo` 0.031
+
+With the strict feature, `flaky_frequency` drops to 4th (0.031). `own_test_file_changed` (0.076) and
+`last_frame_in_test_file` (0.074) lead the strict ranking.
+
+Local examples (the most confident case of each kind). Contributions are changes in P(flaky):
+
+| Case | Test | P(flaky) | Largest contributions |
+|---|---|---:|---|
+| True positive (flaky) | hypothesis `test_observability.py::test_assume_has_status_reason` | 1.00 | `last_frame_in_test_file` = 1: +0.25; `flaky_frequency` = 0.51: +0.19; `job_duration_s` = 3618: +0.11 |
+| True negative (not flaky) | prefect `test_schedules.py::…::test_rrule_schedule_preserves_and_localizes_rdates` | 0.00 | `own_test_file_changed` = 1: −0.08; `same_file_cofailures` = 4: −0.07; `last_frame_in_test_file` = 0: −0.05 |
+| False positive | hypothesis `test_exceptiongroup.py::test_discard_multiple_frozen` | 0.86 | `last_frame_in_test_file` = 1: +0.27; `flaky_frequency` = 0.50: +0.17; `same_file_cofailures` = 1: −0.07 |
+
+The negative example is what a real regression looks like: the test's own file changed and several
+tests in the same file failed together. The false positive has the same profile as the
+hypothesis true positive.
+
+SHAP explains what the model uses, not what causes flakiness. These are post hoc and were not part
+of the frozen protocol.
