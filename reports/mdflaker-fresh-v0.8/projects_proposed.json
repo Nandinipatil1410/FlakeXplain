@@ -1,0 +1,63 @@
+{
+ "status": "proposed (not frozen)",
+ "rule": "preference order of PROTOCOL_DRAFT section 3, >=20 parseable failed executions in the 90-day window, max 8",
+ "excluded_by_rule": {
+  "explosion/spaCy": "1 candidate",
+  "sunpy/sunpy": "16",
+  "dask/dask": "18",
+  "PyGithub/PyGithub": "over cap (preference order)",
+  "xonsh/xonsh": "over cap",
+  "fonttools/fonttools": "over cap"
+ },
+ "projects": [
+  {
+   "repo": "encode/django-rest-framework",
+   "isolated_failures": 24,
+   "mass_jobs_sampled_one_each": 3,
+   "candidates": 27
+  },
+  {
+   "repo": "urllib3/urllib3",
+   "isolated_failures": 67,
+   "mass_jobs_sampled_one_each": 3,
+   "candidates": 70
+  },
+  {
+   "repo": "pytest-dev/pytest",
+   "isolated_failures": 86,
+   "mass_jobs_sampled_one_each": 0,
+   "candidates": 86
+  },
+  {
+   "repo": "HypothesisWorks/hypothesis",
+   "isolated_failures": 209,
+   "mass_jobs_sampled_one_each": 4,
+   "candidates": 213
+  },
+  {
+   "repo": "quantumlib/Cirq",
+   "isolated_failures": 121,
+   "mass_jobs_sampled_one_each": 42,
+   "candidates": 163
+  },
+  {
+   "repo": "conan-io/conan",
+   "isolated_failures": 126,
+   "mass_jobs_sampled_one_each": 36,
+   "candidates": 162
+  },
+  {
+   "repo": "PrefectHQ/prefect",
+   "isolated_failures": 104,
+   "mass_jobs_sampled_one_each": 21,
+   "candidates": 125
+  },
+  {
+   "repo": "pypa/setuptools",
+   "isolated_failures": 31,
+   "mass_jobs_sampled_one_each": 15,
+   "candidates": 46
+  }
+ ],
+ "total_candidates": 892
+}

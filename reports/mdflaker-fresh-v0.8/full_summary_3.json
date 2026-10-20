@@ -1,0 +1,32 @@
+{
+ "since": "2026-07-23",
+ "max_runs": 400,
+ "max_logs": 400,
+ "api_calls": 1076,
+ "repos": {
+  "quantumlib/Cirq": {
+   "failed_runs_seen": 218,
+   "failed_test_jobs": 203,
+   "logs_parsed": 203,
+   "failed_executions": 879,
+   "distinct_tests": 180,
+   "commits": 67
+  },
+  "pytest-dev/pytest": {
+   "failed_runs_seen": 179,
+   "failed_test_jobs": 1341,
+   "logs_parsed": 400,
+   "failed_executions": 367,
+   "distinct_tests": 26,
+   "commits": 70
+  },
+  "xonsh/xonsh": {
+   "failed_runs_seen": 74,
+   "failed_test_jobs": 113,
+   "logs_parsed": 113,
+   "failed_executions": 52,
+   "distinct_tests": 11,
+   "commits": 32
+  }
+ }
+}

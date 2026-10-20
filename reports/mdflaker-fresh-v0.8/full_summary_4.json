@@ -1,0 +1,32 @@
+{
+ "since": "2026-07-23",
+ "max_runs": 400,
+ "max_logs": 400,
+ "api_calls": 767,
+ "repos": {
+  "fonttools/fonttools": {
+   "failed_runs_seen": 39,
+   "failed_test_jobs": 45,
+   "logs_parsed": 44,
+   "failed_executions": 116,
+   "distinct_tests": 34,
+   "commits": 7
+  },
+  "encode/django-rest-framework": {
+   "failed_runs_seen": 41,
+   "failed_test_jobs": 30,
+   "logs_parsed": 30,
+   "failed_executions": 2120,
+   "distinct_tests": 1070,
+   "commits": 19
+  },
+  "urllib3/urllib3": {
+   "failed_runs_seen": 312,
+   "failed_test_jobs": 600,
+   "logs_parsed": 400,
+   "failed_executions": 537,
+   "distinct_tests": 218,
+   "commits": 55
+  }
+ }
+}

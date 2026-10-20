@@ -1,0 +1,32 @@
+{
+ "since": "2026-07-23",
+ "max_runs": 400,
+ "max_logs": 400,
+ "api_calls": 1427,
+ "repos": {
+  "conan-io/conan": {
+   "failed_runs_seen": 105,
+   "failed_test_jobs": 174,
+   "logs_parsed": 174,
+   "failed_executions": 1270,
+   "distinct_tests": 574,
+   "commits": 82
+  },
+  "PyGithub/PyGithub": {
+   "failed_runs_seen": 147,
+   "failed_test_jobs": 308,
+   "logs_parsed": 308,
+   "failed_executions": 17851,
+   "distinct_tests": 1040,
+   "commits": 18
+  },
+  "PrefectHQ/prefect": {
+   "failed_runs_seen": 400,
+   "failed_test_jobs": 2129,
+   "logs_parsed": 400,
+   "failed_executions": 452,
+   "distinct_tests": 174,
+   "commits": 28
+  }
+ }
+}

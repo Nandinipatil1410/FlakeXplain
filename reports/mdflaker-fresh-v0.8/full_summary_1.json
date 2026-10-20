@@ -1,0 +1,32 @@
+{
+ "since": "2026-07-23",
+ "max_runs": 400,
+ "max_logs": 400,
+ "api_calls": 717,
+ "repos": {
+  "HypothesisWorks/hypothesis": {
+   "failed_runs_seen": 176,
+   "failed_test_jobs": 391,
+   "logs_parsed": 390,
+   "failed_executions": 243,
+   "distinct_tests": 70,
+   "commits": 130
+  },
+  "pypa/setuptools": {
+   "failed_runs_seen": 127,
+   "failed_test_jobs": 91,
+   "logs_parsed": 91,
+   "failed_executions": 790,
+   "distinct_tests": 170,
+   "commits": 28
+  },
+  "Delgan/loguru": {
+   "failed_runs_seen": 28,
+   "failed_test_jobs": 52,
+   "logs_parsed": 52,
+   "failed_executions": 18,
+   "distinct_tests": 5,
+   "commits": 6
+  }
+ }
+}
