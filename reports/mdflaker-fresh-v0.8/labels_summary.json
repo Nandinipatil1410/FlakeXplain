@@ -1,0 +1,80 @@
+{
+ "runs": [
+  "39391984769",
+  "39392001716",
+  "39400858694",
+  "39416723189",
+  "39432208752",
+  "39432222851"
+ ],
+ "candidates_with_results": 1659,
+ "total": {
+  "flaky": 409,
+  "unlabelled:invalid_nodeids": 88,
+  "unlabelled:invalid_nodeid": 87,
+  "unlabelled:mixed_skip_or_missing": 35,
+  "not_flaky": 883,
+  "unlabelled:invalid_env": 86,
+  "unlabelled:incomplete": 11,
+  "unlabelled:no_artifact": 4,
+  "unlabelled:planner_excluded:cygwin environment": 18,
+  "unlabelled:setup_failed": 38
+ },
+ "by_repo": {
+  "HypothesisWorks/hypothesis": {
+   "flaky": 161,
+   "unlabelled:invalid_nodeids": 36,
+   "unlabelled:invalid_nodeid": 5,
+   "unlabelled:mixed_skip_or_missing": 3,
+   "not_flaky": 16
+  },
+  "PrefectHQ/prefect": {
+   "unlabelled:invalid_env": 4,
+   "not_flaky": 129,
+   "unlabelled:incomplete": 11,
+   "flaky": 62,
+   "unlabelled:invalid_nodeids": 1,
+   "unlabelled:invalid_nodeid": 6
+  },
+  "conan-io/conan": {
+   "not_flaky": 164,
+   "flaky": 17,
+   "unlabelled:invalid_env": 79,
+   "unlabelled:no_artifact": 2
+  },
+  "encode/django-rest-framework": {
+   "not_flaky": 22,
+   "flaky": 5
+  },
+  "pypa/setuptools": {
+   "not_flaky": 19,
+   "unlabelled:mixed_skip_or_missing": 11,
+   "unlabelled:invalid_nodeids": 4,
+   "flaky": 11,
+   "unlabelled:invalid_nodeid": 1,
+   "unlabelled:no_artifact": 1,
+   "unlabelled:planner_excluded:cygwin environment": 18
+  },
+  "pytest-dev/pytest": {
+   "not_flaky": 248,
+   "flaky": 68,
+   "unlabelled:invalid_nodeid": 51
+  },
+  "quantumlib/Cirq": {
+   "not_flaky": 136,
+   "flaky": 22,
+   "unlabelled:mixed_skip_or_missing": 21,
+   "unlabelled:invalid_nodeid": 24,
+   "unlabelled:invalid_nodeids": 41,
+   "unlabelled:setup_failed": 38,
+   "unlabelled:invalid_env": 3
+  },
+  "urllib3/urllib3": {
+   "not_flaky": 149,
+   "flaky": 63,
+   "unlabelled:invalid_nodeids": 6,
+   "unlabelled:no_artifact": 1
+  }
+ },
+ "projects_with_both_classes": 8
+}
