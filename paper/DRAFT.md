@@ -1,14 +1,17 @@
 # Is This CI Failure Flaky? Revisiting MDFlaker on Fresh, Rerun-Labelled Failures
 
-**Draft v1, 20 October 2026. Not for submission.**
+**Draft v2, 20 October 2026. Not for submission.** Section 11 is completed after the v0.9
+collection (T1 = 24 November 2026).
 Authors: Nandini Patil, Bhumika Mane, Trusha Kulkarni, Pranavi Baad (author order and affiliations TBD).
+Target: a Q3 journal. Software Impacts, the base paper's journal, publishes only short software
+articles, so the full paper needs another Q3 venue (see "Team decisions" at the end).
 
 Status conventions used in this draft (from `AGENTS.md`): every result is tagged as **frozen rule**
 (decided before the data were labelled), **post hoc** (computed after the frozen results were
 known) or **planned** (v0.9, not yet collected). Every number is taken from a report or JSON file in
 this repository; the source is given in brackets, for example [v0.8 RESULTS §6.1]. Paths are relative
-to the repository root. Citations whose details are not in the repository are marked
-**[CITE NEEDED]**.
+to the repository root. Literature references are numbered [R1]–[R20] (list at the end). Entries
+still missing details are marked **[CITE NEEDED]**.
 
 Source abbreviations:
 - **v0.6** = `reports/q3q4-base-paper-v0.6/` (PROTOCOL, AMENDMENT_A1/A2, STAGE1_2_RESULTS, STAGE3_RESULTS, BASE_PAPER_SEARCH*, `published_reference.json`)
@@ -35,10 +38,12 @@ content and traceback-to-change relations) to MDFlaker's factors and train an Ex
 (ET-BF). Under a success rule frozen before labelling, ET-BF beats the best MDFlaker-style baseline in
 both a time-ordered within-project evaluation (MCC 0.755 vs 0.239) and leave-one-project-out
 (0.357 vs −0.014). Post-hoc checks show that these headline numbers are inflated by project base rates,
-by repeated tests, and by a history feature that counts concurrent sibling jobs. With a strict,
-prediction-time-safe history feature and only on failures of tests never seen in training, ET-BF
-reaches MCC 0.469 against −0.160 for our reimplementation of MDFlaker; the cross-project advantage
-does not survive (MCC 0.100, interval includes 0). Static test-code context features do not help in
+by repeated tests, and by a history feature that counts concurrent sibling jobs. With a strict history feature, which counts only earlier workflow runs, and only on failures of
+tests never seen in training, ET-BF reaches MCC 0.469 against −0.160 for our reimplementation of
+MDFlaker (difference +0.63, 95% project-bootstrap interval [0.14, 0.94]). Even this result needs
+care: ET-BF's margin over a per-project base-rate predictor is not significant (+0.32 [−0.29,
+0.61]), and per project its median MCC is 0.25. The cross-project advantage does not survive
+strict history (MCC 0.100, interval includes 0). Static test-code context features do not help in
 any experiment. A prospective confirmation on failures occurring after 20 October 2026 is frozen and
 will be reported after collection on 24 November 2026.
 
@@ -52,7 +57,7 @@ every failure many times is expensive, and ignoring failures hides real bugs. A 
 predicts, for one failed execution, whether it is flaky can rank failures for rerunning or
 investigation.
 
-MDFlaker [Ahmad 2025; Ahmad et al. 2021] is, to our knowledge, the only flaky-test *classifier* with
+MDFlaker [R1, R2] is, to our knowledge, the only flaky-test *classifier* with
 public data published in a Q3/Q4 journal. Our search covered 743 Q3/Q4 computer-science journals in
 SCImago's 2025 rankings [v0.6 BASE_PAPER_SEARCH_ROUND2]. MDFlaker's task is failure-level: given one
 failed execution, predict whether it would pass in at least one of 30 reruns. Its released data cover
@@ -86,30 +91,26 @@ numbers as context.
 
 ### 3.1 Flaky tests and rerun-based detection
 
-Flaky tests have been studied extensively [CITE NEEDED: survey of flaky-test research, e.g. a
-general survey or empirical study]. The standard way to observe flakiness is rerunning. iDFlakies
-[Lam et al., ICST 2019; CITE NEEDED: full reference] reruns test suites in the original order and in
+Flaky tests have been studied extensively; Parry et al. [R12] survey their causes, costs,
+detection and mitigation. The standard way to observe flakiness is rerunning. iDFlakies [R8] reruns test suites in the original order and in
 modified orders and separates order-dependent (OD) from non-order-dependent (NOD) flaky tests. Our
 earlier FlakeXplain work ported this methodology to pytest (`AGENTS.md`). The present paper uses the
 simpler rerun label that MDFlaker uses (Section 5.3), not iDFlakies reordering.
 
 ### 3.2 Combining reruns and machine learning: CANNIER
 
-CANNIER [Parry, Kapfhammer, Hilton and McMinn, *Empirical Software Engineering* 28, 2023,
-doi:10.1007/s10664-023-10307-w] combines rerun-based detection with machine-learning models, using
-model predictions to decide which tests to rerun and so reduce detection cost. In our earlier v0.5
-experiment (`reports/cannier-protocol-v0.5/RESULTS.md`), adding 66 static context features to
-CANNIER's 18 features under CANNIER's own protocol gave consistent but mostly small gains (absolute
-MCC +0.029 to +0.096 across four tasks; only victim detection cleared the pre-set +0.05 threshold).
-CANNIER is test-level and is published in a Q1 journal, so it is related work here rather than the
-base paper.
+CANNIER [R3] combines rerun-based detection with machine-learning models, using model predictions
+to decide which tests to rerun and so reduce detection cost. In our earlier v0.5 experiment
+(`reports/cannier-protocol-v0.5/RESULTS.md`), adding 66 static context features to CANNIER's 18
+features under CANNIER's own protocol gave consistent but mostly small gains (absolute MCC +0.029 to
++0.096 across four tasks; only victim detection cleared the pre-set +0.05 threshold). CANNIER is
+test-level and is published in a Q1 journal, so it is related work here rather than the base paper.
 
 ### 3.3 MDFlaker
 
-MDFlaker [A. Ahmad, "MDFlaker: A tool for multi-factor detection and root cause analysis of flaky
-tests", *Software Impacts* 26 (2025) 100794, doi:10.1016/j.simpa.2025.100794] is a tool paper. The
-method and its evaluation originate in Ahmad, Gomes, Shi, Sandahl and Leifler, APSEC 2021,
-doi:10.1109/APSEC53868.2021.00041 [v0.6 PROTOCOL]. The tool uses five factors per failed execution:
+MDFlaker [R1] is a tool paper in *Software Impacts*. The method and its evaluation come from an
+earlier conference paper, APSEC 2021 [R2] [v0.6 PROTOCOL]. The tool uses five factors per failed
+execution:
 
 - **Traceback coverage:** whether the failure's traceback covers the recent code changes;
 - **Flaky frequency:** the test's past flakiness from build history;
@@ -125,28 +126,27 @@ As described in Section 2.3 of the paper and implemented in the released code
   P(flaky) > 0.7.
 
 The released `evaluate.py` instead uses KNN with k = 8 on a single 80-row hold-out [v0.6
-BASE_PAPER_SEARCH]. The Software Impacts article reports no precision, recall, F1 or accuracy; its
+BASE_PAPER_SEARCH]. The Software Impacts article reports no precision, recall, F1 or accuracy. Its
 only quantitative result is a figure of unlabelled detection counts [v0.6 `published_reference.json`].
-We could not obtain the APSEC 2021 paper. We therefore compare against **our reimplementation of the
-described method**, never against MDFlaker's reported numbers.
+We have not read the APSEC 2021 paper. We do not need it to make our comparison, because we compare
+against **our reimplementation of the described method** and never quote MDFlaker's reported numbers.
 
 ### 3.4 Other flaky-test prediction work
 
-- **Static and vocabulary-based prediction:** FLAST [Verdecchia et al., 2021], cross-project flaky
-  test prediction [Afeltra et al., 2024], linguistic diversity [Ahmad et al., 2025], LLMs for
-  cross-language detection [Ahmad and Sun, 2025], all in *IEEE Access*; and Pontillo et al. [2022,
-  *Empirical Software Engineering*] [v0.6 BASE_PAPER_SEARCH; CITE NEEDED: full references]. These
-  predict test-level flakiness from test code, which is closest to our static context features (C).
-  Other well-known static predictors such as FlakeFlagger and Flakify [CITE NEEDED] belong here too.
-- **CI-artifact models:** HgtFlaky [Dai et al., *Computers* (MDPI), 2026, doi:10.3390/computers15060372]
-  uses a graph transformer on CI runtime artifacts for Java benchmarks.
+- **Static and vocabulary-based prediction:** FLAST [R4], cross-project flaky test prediction [R5],
+  static flakiness prediction [R6], FlakeFlagger [R7], Flakify [R9], linguistic diversity [R19] and
+  LLMs for cross-language detection [R20]. FlakeFlagger also uses features of each test's behaviour,
+  such as execution time and coverage. These methods predict test-level flakiness, mostly from test
+  code, which is closest to our static context features (C).
+- **CI-artifact models:** HgtFlaky [R17] uses a graph transformer on CI runtime artifacts for Java
+  benchmarks.
 - **Other Q3/Q4-journal flaky-test papers**, none a classifier with public data [v0.6
-  BASE_PAPER_SEARCH, BASE_PAPER_SEARCH_ROUND2]: adaptive latest-position execution for Android
-  [Zhang, Wang and Zhao, IJSEKE 2024, doi:10.1142/s0218194024500232]; JS-TOD for Jest order dependency
-  [Hashemi et al., *Science of Computer Programming* 2026, doi:10.1016/j.scico.2026.103462]; FlakyLoc
-  [*Journal of Web Engineering* 2020, doi:10.13052/jwe1540-9589.1927]; and an industrial ML detector
-  without public data [Elgazzar et al., LNNS 2026; CITE NEEDED: full reference].
-- **Explanations:** we use SHAP [CITE NEEDED: Lundberg and Lee] with TreeExplainer [CITE NEEDED].
+  BASE_PAPER_SEARCH, BASE_PAPER_SEARCH_ROUND2]:
+  - adaptive latest-position execution for Android [R14];
+  - JS-TOD, for order dependency in Jest [R15];
+  - FlakyLoc [R16];
+  - an industrial ML detector without public data [R18].
+- **Explanations:** we use SHAP [R11] with TreeExplainer [R13].
 
 **Positioning.** Most prediction work is test-level: is this test flaky? MDFlaker and this paper are
 failure-level: is *this failure* flaky? The distinction matters because failure-level evidence
@@ -337,7 +337,7 @@ failure.
 
 All configurations were frozen in v0.7 and reused unchanged [v0.8 PROTOCOL §6]. Each forest is
 `ExtraTreesClassifier(n_estimators=100)` with scikit-learn defaults, threshold 0.5 and no class
-balancing [v0.7 PROTOCOL §4; CITE NEEDED: Extra Trees].
+balancing [v0.7 PROTOCOL §4; Extra Trees: R10].
 
 | Arm | Features | Classifier |
 |---|---|---|
@@ -386,6 +386,11 @@ The main metric is Matthews correlation coefficient (MCC), which stays informati
 imbalance and is 0 for a constant or random predictor. F1, precision and recall are also reported.
 Differences in MCC are given with 95% **project-bootstrap** intervals: 2,000 resamples of projects,
 with predictions fixed (`scripts/mdflaker_v08_analyze.py`). With 8 projects these intervals are wide.
+Interval bounds also vary by a few hundredths between bootstrap draws. For example, strict ET-BF −
+KNN8 on unseen tests is [0.14, 0.86] in `robustness.json` and [0.10, 0.85] in `posthoc_extra.json`,
+which draws each interval with its own generator [v0.8 RESULTS §7]. Frozen-rule intervals come from
+`results.json`. Post-hoc intervals for E2 and for the original-versus-strict comparison come from
+`robustness.json`. All other post-hoc intervals come from `posthoc_extra.json`.
 
 ### 7.4 The frozen success rule
 
@@ -426,19 +431,49 @@ at prediction time. Same splits, labels and models as the frozen analysis [v0.8 
 | | KNN8 | 0.225 | 0.409 | 0.544 | 0.327 |
 | | **ET-BF** | **0.679** | **0.779** | **0.819** | **0.743** |
 
-MCC differences (95% project-bootstrap interval) [v0.8 RESULTS §6.1]:
-- unseen tests, ET-BF − KNN8: **+0.60 [0.14, 0.86]**;
-- E1, ET-BF − KNN8: +0.45 [0.21, 0.78];
-- E1, ET-BF − MDFlaker: +0.65 [0.39, 0.93].
+MCC differences, strict history (95% project-bootstrap interval) [v0.8 RESULTS §7.1,
+`posthoc_extra.json`]:
+
+| Subset | ET-BF − MDFlaker | ET-BF − KNN8 | ET-BF − project prior |
+|---|---|---|---|
+| Unseen tests | **+0.63 [0.14, 0.94]** | +0.60 [0.10, 0.85] | +0.32 [−0.29, 0.61] |
+| E1 | +0.65 [0.38, 0.97] | +0.45 [0.17, 0.79] | +0.16 [−0.09, 0.71] |
+
+The project prior predicts each project's E1 training-majority class. It scores MCC 0.52 in E1 and
+0.15 on unseen tests.
 
 MDFlaker's numbers do not change under strict history, because it casts features to integers and
 `trunc(flaky_frequency)` is 0 for both variants.
 
-On failures of tests the model has never seen, in projects it has seen, ET-BF has a clearly positive
-MCC, while both MDFlaker-style classifiers are below 0. This is our main claim. Its limits:
-- it is post hoc on v0.8, which is why v0.9 exists;
-- per-project results vary (Section 8.3);
-- the interval is wide.
+**Per project** (unseen tests, strict history) [v0.8 RESULTS §7.2]:
+
+| Project | n | Flaky | MDFlaker | KNN8 | ET-BF |
+|---|---:|---:|---:|---:|---:|
+| hypothesis | 11 | 7 | −0.418 | −0.810 | −0.828 |
+| prefect | 59 | 55 | −1.000 | 0.000 | 0.294 |
+| conan | 52 | 2 | 0.039 | −0.049 | 0.214 |
+| django-rest-framework | 8 | 2 | −0.149 | 0.447 | 0.000 |
+| setuptools | 11 | 6 | 0.430 | 0.289 | 0.430 |
+| pytest | 114 | 3 | 0.000 | 0.000 | 0.000 |
+| Cirq | 48 | 12 | −0.348 | −0.320 | 0.364 |
+| urllib3 | 18 | 4 | 0.209 | −0.426 | 1.000 |
+
+**Without hypothesis** (the same fitted models, scored on the other 7 projects), ET-BF reaches 0.521
+on unseen tests (n = 310, 84 flaky) against −0.146 for MDFlaker: +0.67 [0.19, 0.99]. Here the
+project prior is constant, so its MCC is 0 [v0.8 RESULTS §7.3].
+
+**What we claim.** On failures of tests the model has never seen, in projects it has seen, ET-BF has
+a positive pooled MCC, and both MDFlaker-style classifiers are below 0. The difference from
+MDFlaker's classifier has an interval that excludes 0. The limits:
+- **Post hoc.** The subset and the strict feature were defined after the frozen results were known.
+  This is why v0.9 exists.
+- **Not clearly better than base rates.** Against a per-project base-rate predictor, ET-BF's margin
+  is not significant. Pooled MCC also rewards separating projects with different flaky rates (55 of
+  prefect's 59 unseen failures are flaky), not only discriminating within a project.
+- **Smaller per project.** ET-BF's per-project median is 0.25. It beats MDFlaker in 5 projects, ties
+  in 2 and loses in 1 (hypothesis). Several subsets contain only 2–4 flaky failures.
+- **Wide intervals.** With 8 projects, the bounds also move by a few hundredths depending on the
+  bootstrap draw (Section 7.3).
 
 ### 8.2 Frozen-rule results
 
@@ -550,7 +585,7 @@ small gains (Section 3.2).
 ## 9. Explanations (post hoc)
 
 ET-BF was trained on the E1 training part (776 failures) and explained with `shap.TreeExplainer`
-(shap 0.51.0) on the E1 test part (516) [v0.8 RESULTS §6.2, `robustness.json` R2]. On that part the
+(shap 0.51.0) on the E1 test part (516) [v0.8 RESULTS §6.2, `robustness.json` R2_shap_E1]. On that part the
 model has 129 true positives, 332 true negatives, 13 false positives and 42 false negatives. The base
 value is P(flaky) = 0.307, and SHAP values sum to the predicted probability (maximum error < 1e-13).
 
@@ -605,8 +640,15 @@ uses, not what causes flakiness, and the explanations were not validated with de
   analysis; v0.9 tests it prospectively.
 - *History window.* Test history comes from a 90-day window, and only from runs whose logs list
   outcomes; failures early in the window have less history.
-- *Same-run leakage.* Section 7.5 removes the sibling-job leak we found in `flaky_frequency`; we
-  have not audited every F feature for similar timing issues [see open questions].
+- *Timing leaks.* Section 7.5 removes the sibling-job leak we found in `flaky_frequency`. A code
+  review of the feature extraction found no similar leak in F: job-log, traceback and change
+  features are all available when the failed job finishes [v0.8 RESULTS §7.4]. Two small residual
+  gaps remain unmeasured:
+  - `previous_state` uses the final conclusion of the latest earlier run of the same workflow,
+    which may still have been running, or may have been rerun later;
+  - strict history counts earlier runs that may not have finished yet.
+- *Sampling artifact.* `same_file_cofailures` counts sampled candidates, so it is 0 for
+  mass-failure jobs, where only one test is sampled.
 
 **External validity.**
 - 8 Python projects on GitHub Actions in one 90-day window; hypothesis dominates the flaky class
@@ -618,9 +660,11 @@ uses, not what causes flakiness, and the explanations were not validated with de
 **Conclusion validity.**
 - MCC values near 0 are unstable on small subsets; several per-project MCCs rest on fewer than 10
   flaky failures.
-- Two bootstrap computations for the unseen-tests difference give slightly different intervals
-  (diagnostics [0.22, 1.07]; robustness [0.25, 1.04]); we report the robustness numbers in the strict
-  comparison.
+- Bootstrap bounds vary by a few hundredths between draws. For example, the original-history
+  unseen-tests interval for ET-BF − KNN8 is [0.22, 1.07] in `diagnostics.json` and [0.25, 1.04] in
+  `robustness.json`. Conclusions that hinge on a bound near 0 are worded cautiously.
+- Pooled MCC across projects with different base rates rewards separating projects as well as
+  discriminating within them (Section 8.1).
 
 ---
 
@@ -660,6 +704,11 @@ which is deliberately conservative).
 - If the rule is not met, this paper will report the v0.8 within-project result as **not
   confirmed**. Results are published whether or not the rule is met.
 
+**A caution known in advance (post hoc, from v0.8).** The v0.9 rule uses pooled MCC on P. Section
+8.1 shows that pooled MCC partly rewards differences between projects. The project-prior comparator
+guards against this only partly. v0.9 reports per-project results as well (v0.9 PROTOCOL §6), and
+we will discuss them alongside the rule outcome. The rule itself is unchanged.
+
 **Results: TBD after collection on 24 November 2026.**
 
 | | n | Flaky | ET-BF MCC | C\* | C\* MCC | Δ [95% CI] | Met |
@@ -676,9 +725,10 @@ label proxy, build fingerprints and heavy test repetition, and across its two us
 MDFlaker's simple rule beats every learned model we tried. On 1,292 newly collected, rerun-labelled
 GitHub Actions failures from 8 Python projects, adding failure-evidence features to MDFlaker's
 factors met a success rule frozen before labelling. Post-hoc checks narrow what can be claimed. The
-gain that survives a prediction-time-safe history feature is within-project: on failures of tests
-never seen in training, ET-BF reaches MCC 0.469 against −0.160 for our reimplementation of MDFlaker.
-The cross-project gain does not survive. Static test-code context does not help on this
+gain that survives a strict history feature is within-project. On failures of tests never seen in
+training, ET-BF reaches MCC 0.469 against −0.160 for our reimplementation of MDFlaker (+0.63 [0.14,
+0.94]). Its margin over a per-project base-rate predictor, however, is not significant, and per
+project the gains are smaller (median 0.25). The cross-project gain does not survive. Static test-code context does not help on this
 failure-level task in any of our experiments. The most useful signals are about the failure itself:
 whether the test's own file changed, where the traceback ends, and what else failed alongside it.
 Whether the within-project result holds on future failures is the question of the frozen v0.9 study,
@@ -686,40 +736,81 @@ to be reported after 24 November 2026.
 
 **Data and artifacts.** Protocols, amendments, results and scripts are in the repository. The label
 file (`local-evidence/mdflaker-fresh-v0.8/labels.csv`, SHA-256 `3d856bde…b4c2`) is not yet
-committed [see open questions].
+public. It is planned for an archived release at submission (see Team decisions, item 8).
 
 ---
 
-## Open questions for the team
+## Team decisions and remaining questions
 
-1. **Venue and framing.** Is a Software Impacts tool paper acceptable to the guide as the Q3 base
-   paper (v0.6 BASE_PAPER_SEARCH risk 1)? Which target journal, and what length and template?
-2. **Main result is post hoc.** Are we comfortable submitting before v0.9 results exist
-   (after 24 November 2026, possibly 22 December), or should submission wait? If v0.9 fails, the
-   paper becomes mainly a dataset-and-negative-results paper; do we want a framing that works either
-   way?
-3. **APSEC 2021 paper.** We have not read it. Can someone with library access get it, check whether
-   it reports precision/recall/F1, and confirm the factor definitions? `RESULTS.md` §4 says "the F1
-   values in the MDFlaker paper", while `published_reference.json` says the Software Impacts article
-   reports none; this sentence needs fixing.
-4. **Missing statistics.** No bootstrap interval exists for ET-BF − MDFlaker on unseen tests under
-   strict history, or for strict ET-BF against the project prior (0.52) in E1. Should we compute
-   these (post hoc) before submission?
-5. **Two intervals for one difference.** The unseen-tests ET-BF − KNN8 (original) interval is
-   [0.22, 1.07] in `diagnostics.json` and [0.25, 1.04] in `robustness.json`. Which do we report, and
-   should both scripts share a bootstrap seed?
-6. **Timing audit of F.** Strict history fixed `flaky_frequency`. Do any F features (for example
-   `build_failed_tests` or `same_file_cofailures`) also depend on information that is only complete
-   after sibling jobs finish? This should be checked before v0.9 results, without changing v0.9.
-7. **Hypothesis dominance.** ET-BF is −0.07 on hypothesis. Should we report a results table without
-   hypothesis (post hoc), or per-project tables only?
-8. **Data release.** May we commit or archive `labels.csv` and the candidate list (licensing of CI
-   logs, project consent)? This affects the reproducibility statement.
-9. **Citations.** Full references are needed for iDFlakies, FLAST, Afeltra et al., Pontillo et al.,
-   the Ahmad et al. IEEE Access papers, Elgazzar et al., SHAP, Extra Trees, and a flaky-test survey;
-   FlakeFlagger and Flakify are not in the repository at all.
-10. **v0.9 PROTOCOL.md header.** The file still reads "DRAFT … awaiting team approval", although
-    `protocol.json` records it as frozen and approved. Editing it would change its SHA-256. Should we
-    add a separate note instead?
-11. **Title and contribution order.** Lead with the dataset and evaluation lessons, or with the
-    within-project improvement?
+Decisions (20 October 2026):
+
+1. **Venue.** The target is a Q3 journal, ideally the base paper's own journal, Software Impacts.
+   Software Impacts, however, publishes only short (about 3-page) articles about software that has
+   already been used in published research, with mandatory open code and a fixed template
+   ([Elsevier journal page](https://shop.elsevier.com/journals/software-impacts/2665-9638),
+   [SIMPAC template](https://legacyfileshare.elsevier.com/promis_misc/SIMPAC_Article_Template.pdf)).
+   This full paper does not fit that format. **Proposal:** submit the full paper to another Q3
+   journal. *Science of Computer Programming* (Elsevier, SCImago Q3 in Software 2022–2025, and it
+   published the flaky-test paper JS-TOD [R15]) is the best fit; IJSEKE (Q3 in 2025) is a fallback
+   [v0.6 BASE_PAPER_SEARCH]. Later, once that paper is published, a short Software Impacts article
+   can describe the FlakeXplain tool. **Needs the team's choice.**
+2. **Timing.** We will not submit before v0.9. The paper is made ready now, and Section 11 (plus the
+   abstract and conclusion) is completed after collection on 24 November 2026, or on 22 December if
+   the window is extended.
+3. **APSEC 2021 paper.** Not required. We compare only against our reimplementation of the method
+   described in the Software Impacts paper and the released code, and we never quote MDFlaker's
+   numbers. It stays cited as the method's origin [R2]. Reading it would still be useful, to check
+   factor definitions and whether it reports metrics, but nothing in the paper depends on it. The
+   sentence in v0.8 `RESULTS.md` §4 that implied MDFlaker reports F1 values has been corrected.
+4. **Missing statistics.** Computed post hoc (`scripts/mdflaker_v08_posthoc_extra.py`,
+   `posthoc_extra.json`; v0.8 RESULTS §7) and added to Section 8.1. Result: ET-BF's margin over
+   MDFlaker on unseen tests holds, but its margin over the project prior does not.
+5. **Two intervals for one difference.** Explained: both scripts draw all their intervals from one
+   generator stream, so each interval depends on the ones before it. This is Monte Carlo variation.
+   The new script uses a fresh generator for each interval. Section 7.3 states which file each
+   interval comes from.
+6. **Timing audit of the features.** Done by code review (v0.8 RESULTS §7.4; Section 10). No new leak
+   was found in F. `previous_state`, and runs still in progress for strict history, are possible
+   small residual leaks, reported as threats.
+7. **Hypothesis.** Reported per project and without hypothesis (Section 8.1).
+8. **Data release.** Proposal: at submission, archive the derived data (candidate list, features,
+   labels and rerun summaries) with a DOI, for example on Zenodo, under an open licence. Raw CI logs
+   are not redistributed; the run and job IDs let others re-download them while GitHub retains them.
+   **Confirm with the guide.**
+9. **Citations.** Filled in [R1]–[R20]. Details were checked online on 20 October 2026, except
+   where marked [CITE NEEDED].
+10. **v0.9 protocol header.** `PROTOCOL.md` was left unchanged, so its SHA-256 still matches. A
+    separate `reports/mdflaker-confirm-v0.9/FREEZE_NOTE.md` records that it is frozen.
+11. **Title and order.** Lead with the evaluation lessons and the new dataset, and present the
+    within-project improvement as a qualified, to-be-confirmed finding. The current title and
+    contribution list already follow this order.
+
+Still open:
+- the target journal (decision 1);
+- the data-release approval (decision 8);
+- author order and affiliations.
+
+---
+
+## References
+
+- [R1] A. Ahmad, "MDFlaker: A tool for multi-factor detection and root cause analysis of flaky tests," *Software Impacts*, vol. 26, 100794, 2025. doi:10.1016/j.simpa.2025.100794.
+- [R2] Ahmad, Gomes, Shi, Sandahl, Leifler, in *Proc. Asia-Pacific Software Engineering Conference (APSEC)*, 2021. doi:10.1109/APSEC53868.2021.00041. [CITE NEEDED: title, first names; only the surnames and the DOI are in the repo.]
+- [R3] O. Parry, G. M. Kapfhammer, M. Hilton, P. McMinn, "Empirically evaluating flaky test detection techniques combining test case rerunning and machine learning models," *Empirical Software Engineering*, vol. 28, 2023. doi:10.1007/s10664-023-10307-w.
+- [R4] R. Verdecchia, E. Cruciani, B. Miranda, A. Bertolino, "Know you neighbor: Fast static prediction of test flakiness," *IEEE Access*, vol. 9, pp. 76119–76134, 2021. doi:10.1109/ACCESS.2021.3082424.
+- [R5] A. Afeltra, A. Cannavale, F. Pecorelli, V. Pontillo, F. Palomba, "A large-scale empirical investigation into cross-project flaky test prediction," *IEEE Access*, vol. 12, pp. 131255–131265, 2024. doi:10.1109/ACCESS.2024.3458184.
+- [R6] V. Pontillo, F. Palomba, F. Ferrucci, "Static test flakiness prediction: How far can we go?," *Empirical Software Engineering*, 2022. doi:10.1007/s10664-022-10227-1.
+- [R7] A. Alshammari, C. Morris, M. Hilton, J. Bell, "FlakeFlagger: Predicting flakiness without rerunning tests," in *Proc. 43rd IEEE/ACM Int. Conf. on Software Engineering (ICSE)*, 2021, pp. 1572–1584. doi:10.1109/ICSE43902.2021.00140.
+- [R8] W. Lam, R. Oei, A. Shi, D. Marinov, T. Xie, "iDFlakies: A framework for detecting and partially classifying flaky tests," in *Proc. 12th IEEE Int. Conf. on Software Testing, Verification and Validation (ICST)*, 2019, pp. 312–322. [CITE NEEDED: DOI.]
+- [R9] S. Fatima, T. A. Ghaleb, L. Briand, "Flakify: A black-box, language model-based predictor for flaky tests," *IEEE Transactions on Software Engineering*, 2022. doi:10.1109/TSE.2022.3201209. [CITE NEEDED: volume and issue.]
+- [R10] P. Geurts, D. Ernst, L. Wehenkel, "Extremely randomized trees," *Machine Learning*, vol. 63, pp. 3–42, 2006. doi:10.1007/s10994-006-6226-1.
+- [R11] S. M. Lundberg, S.-I. Lee, "A unified approach to interpreting model predictions," in *Advances in Neural Information Processing Systems 30 (NIPS)*, 2017, pp. 4765–4774.
+- [R12] O. Parry, G. M. Kapfhammer, M. Hilton, P. McMinn, "A survey of flaky tests," *ACM Transactions on Software Engineering and Methodology*, vol. 31, no. 1, Art. 17, 2022. doi:10.1145/3476105.
+- [R13] S. M. Lundberg, G. Erion, H. Chen, et al., "From local explanations to global understanding with explainable AI for trees," *Nature Machine Intelligence*, vol. 2, pp. 56–67, 2020. doi:10.1038/s42256-019-0138-9.
+- [R14] Zhang, Wang, Zhao, "Flaky test detection based on adaptive latest position execution for concurrent Android applications," *Int. J. Software Engineering and Knowledge Engineering*, 2024. doi:10.1142/s0218194024500232. [CITE NEEDED: first names, volume.]
+- [R15] Hashemi et al., "JS-TOD: Detecting order-dependent flaky tests in Jest," *Science of Computer Programming*, 2026. doi:10.1016/j.scico.2026.103462. [CITE NEEDED: authors, volume.]
+- [R16] "FlakyLoc: Flakiness localization for reliable test suites in web applications," *Journal of Web Engineering*, 2020. doi:10.13052/jwe1540-9589.1927. [CITE NEEDED: authors.]
+- [R17] Dai et al., "HgtFlaky," *Computers* (MDPI), 2026. doi:10.3390/computers15060372. [CITE NEEDED: full title, authors.]
+- [R18] Elgazzar et al., "A machine learning-based detection of test automation flakiness," *Lecture Notes in Networks and Systems*, 2026. [CITE NEEDED: authors, volume, DOI.]
+- [R19] Ahmad et al., linguistic diversity in flaky-test prediction, *IEEE Access*, 2025. [CITE NEEDED: full reference.]
+- [R20] Ahmad and Sun, LLMs for cross-language flaky-test detection, *IEEE Access*, 2025. [CITE NEEDED: full reference.]

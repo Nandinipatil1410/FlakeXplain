@@ -117,8 +117,10 @@ with the same code as `mdflaker_v08_diagnostics.py`.
 | | KNN8 | **0.283** | **0.541** | 0.465 | **0.648** |
 | | Ours | 0.173 | 0.375 | **0.474** | 0.311 |
 
-The F1 values in the MDFlaker paper come from its own data and split, so they are not comparable
-with these.
+The Software Impacts article reports no precision, recall or F1 (`reports/q3q4-base-paper-v0.6/published_reference.json`).
+Any numbers in the APSEC 2021 paper, which we have not read, would come from its own data and split, so they
+would not be comparable with these. (Corrected 20 October 2026; the earlier sentence wrongly implied that
+the MDFlaker paper reports F1 values.)
 
 ## 5. Reading
 
@@ -221,3 +223,67 @@ hypothesis true positive.
 
 SHAP explains what the model uses, not what causes flakiness. These are post hoc and were not part
 of the frozen protocol.
+
+## 7. Extra post-hoc statistics (not part of the rule; `posthoc_extra.json`, `scripts/mdflaker_v08_posthoc_extra.py`)
+
+Added on 20 October 2026, while drafting the paper, after everything above was known. The script
+reproduces the §6.1 MCCs exactly. Each interval uses its own generator seeded with 20261020, so
+intervals here differ slightly from `robustness.json` and `diagnostics.json`. Those files draw all
+their intervals from one generator stream, so each interval depends on how many came before it. For
+example, strict ET-BF − KNN8 on unseen tests is [0.14, 0.86] in §6.1 and [0.10, 0.85] here. The two
+unseen-tests intervals in §3 and §6.1 ([0.22, 1.07] vs [0.25, 1.04]) differ for the same reason.
+This is Monte Carlo variation, not a different analysis.
+
+### 7.1 Missing intervals (strict history; MCC difference, 95% project bootstrap)
+
+| Subset | ET-BF − MDFlaker | ET-BF − KNN8 | ET-BF − project prior |
+|---|---|---|---|
+| E1 (n = 516, 171 flaky) | +0.65 [0.38, 0.97] | +0.45 [0.17, 0.79] | +0.16 [−0.09, 0.71] |
+| Unseen tests (n = 321, 91 flaky) | **+0.63 [0.14, 0.94]** | +0.60 [0.10, 0.85] | **+0.32 [−0.29, 0.61]** |
+
+The project prior (each project's E1 training-majority class) scores 0.52 in E1 and 0.15 on unseen
+tests. Under strict history, **ET-BF's advantage over the project prior is not significant**, either
+in E1 or on unseen tests.
+
+### 7.2 Unseen tests per project (strict history, MCC)
+
+| Project | n | Flaky | MDFlaker | KNN8 | ET-BF |
+|---|---:|---:|---:|---:|---:|
+| hypothesis | 11 | 7 | −0.418 | −0.810 | −0.828 |
+| prefect | 59 | 55 | −1.000 | 0.000 | 0.294 |
+| conan | 52 | 2 | 0.039 | −0.049 | 0.214 |
+| django-rest-framework | 8 | 2 | −0.149 | 0.447 | 0.000 |
+| setuptools | 11 | 6 | 0.430 | 0.289 | 0.430 |
+| pytest | 114 | 3 | 0.000 | 0.000 | 0.000 |
+| Cirq | 48 | 12 | −0.348 | −0.320 | 0.364 |
+| urllib3 | 18 | 4 | 0.209 | −0.426 | 1.000 |
+
+Per project, ET-BF beats MDFlaker in 5 projects, ties in 2 and loses in 1 (hypothesis). Its median
+is 0.25, against the pooled 0.469. Several subsets have 2–4 flaky failures. **Pooled MCC therefore
+includes differences between projects**: for example, 55 of prefect's 59 unseen failures are flaky.
+It is not only discrimination within projects.
+
+### 7.3 Without hypothesis (same fitted models, scored on the other 7 projects)
+
+| Subset (strict) | n | Flaky | MDFlaker | KNN8 | ET-BF | ET-BF − MDFlaker |
+|---|---:|---:|---:|---:|---:|---|
+| E1 | 445 | 104 | −0.102 | −0.056 | 0.594 | +0.70 [0.30, 1.05] |
+| Unseen tests | 310 | 84 | −0.146 | −0.107 | 0.521 | +0.67 [0.19, 0.99] |
+
+Without hypothesis the project prior is constant (not flaky everywhere), so its MCC is 0.
+
+### 7.4 Timing audit of the features (code review of `scripts/mdflaker_v08_features.py`, no new run)
+
+- **Available when the failed job finishes:** the job-log features (`build_failed_tests`,
+  `same_file_cofailures`, `job_duration_s`, all traceback features), the change features (git diff
+  of the tested tree) and the static features.
+- **`same_file_cofailures`** counts other *candidates* from the same job. For a mass-failure job only
+  1 test is sampled, so it is 0 there even when many tests failed. This is a sampling artifact, not a
+  leak; `build_failed_tests` still gives the job's failure count.
+- **`previous_state`** takes the conclusion, as returned by the API at collection time, of the
+  latest earlier run of the same workflow on the same branch. That run may still have been in
+  progress, or may have been rerun later, when the failure happened. This is a possible small leak,
+  of the same kind as `flaky_frequency`; its size has not been measured.
+- **`flaky_frequency_strict`** uses earlier runs' logs keyed by run creation time. An earlier run
+  that was still running at prediction time is counted. This is a residual timing gap; its size has
+  not been measured.
