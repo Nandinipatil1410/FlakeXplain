@@ -18,7 +18,9 @@ from dataset_static import SourceIndex
 from confirmation_features import extract
 
 ROOT=Path(__file__).resolve().parents[1];V8=ROOT/'local-evidence/mdflaker-fresh-v0.8'
-LOGS=V8/'logs';CLONES=V8/'clones';SRC=V8/'sources';OUT=ROOT/'reports/mdflaker-fresh-v0.8'
+LOGS=V8/'logs';CLONES=V8/'clones'
+SRC=Path(os.environ.get('MDF_SRC',Path.home()/'mdfsrc'))  # short root: deep repo paths exceed Windows MAX_PATH under V8
+OUT=ROOT/'reports/mdflaker-fresh-v0.8'
 CAND=OUT/'candidates.csv';SCHEMA=json.loads((ROOT/'dataset/development-v0.2/schema.json').read_text());CONTEXT=SCHEMA['context_columns']
 CAP=1000;MAX_PY=1_000_000
 B_COLS=['flaky_frequency','traceback_coverage','test_smells','previous_state','test_size']
@@ -77,9 +79,10 @@ def export(repo,tree):
     rmtree(dest);prefetch(repo,py_blobs(repo,tree))
     dest.mkdir(parents=True,exist_ok=True);idx=dest.parent/(tree+'.index')
     env=dict(os.environ,GIT_INDEX_FILE=str(idx),GIT_NO_LAZY_FETCH='1')
-    p=subprocess.run(['git','--git-dir',str(clone(repo)),'--work-tree',str(dest),'-c','core.bare=false','-c','gc.auto=0','checkout',tree,'--',':(glob)**/*.py'],capture_output=True,env=env)
+    p=subprocess.run(['git','--git-dir',str(clone(repo)),'--work-tree',str(dest),'-c','core.bare=false','-c','core.longpaths=true','-c','gc.auto=0','checkout',tree,'--',':(glob)**/*.py'],capture_output=True,env=env)
     idx.unlink(missing_ok=True)
-    if p.returncode:return None
+    if p.returncode:
+        print('export failed',repo,tree,p.stderr.decode(errors='replace')[:200],flush=True);rmtree(dest);return None
     for q in dest.rglob('*.py'):
         if q.stat().st_size>MAX_PY:q.unlink()  # generated data tables, as in v0.6 stage 1
     (dest/'.complete').write_text(tree);return dest
