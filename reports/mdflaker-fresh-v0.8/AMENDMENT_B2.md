@@ -50,3 +50,9 @@ Before the full batches, `rerun/v0.8/pilot.json` (15 environments, 1–2 per pro
 the recipes. Recipe fixes after the pilot are allowed only if they are made **without looking at
 candidate outcomes**: only setup and env-check logs may be inspected. Each fix is recorded here
 with a date before the full run.
+
+## Trigger (20 Oct 2026, before any run)
+
+A manual `workflow_dispatch` only works when the workflow file is on the default branch. The
+workflow therefore also runs when a `rerun/v0.8-*` branch is pushed; the batch and mode then come
+from `rerun/v0.8/RUN.json`. This changes how runs start, not what they do.
