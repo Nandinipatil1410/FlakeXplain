@@ -92,7 +92,35 @@ Status: **Empirically verified, 20 October 2026.** Computed by `scripts/mdflaker
 5. **E3 transfer is weak.** Models trained on MDFlaker's released 2020 Travis data reach at most
    MCC 0.28 (KNN8-float) on the fresh failures. ET-BF reaches 0.17.
 
-## 4. Reading
+## 4. MDFlaker vs ours, all metrics
+
+The same labelled failures, splits and labels are used for every model:
+- **MDFlaker:** the reimplemented rule plus KNN (k = 10, P > 0.7), on integer factors;
+- **KNN8:** MDFlaker's 5 factors with k = 8;
+- **Ours:** ET-BF.
+
+The unseen-tests rows are the E1 test part restricted to tests absent from training (§3.2), computed
+with the same code as `mdflaker_v08_diagnostics.py`.
+
+| Evaluation | Model | MCC | F1 | Precision | Recall |
+|---|---|---:|---:|---:|---:|
+| Unseen tests (n = 321, 91 flaky) | MDFlaker | −0.160 | 0.134 | 0.151 | 0.121 |
+| | KNN8 | −0.084 | 0.141 | 0.196 | 0.110 |
+| | **Ours** | **0.568** | **0.654** | **0.806** | **0.549** |
+| E1 time-ordered (n = 516, 171 flaky) | MDFlaker | 0.033 | 0.325 | 0.357 | 0.298 |
+| | KNN8 | 0.239 | 0.424 | 0.551 | 0.345 |
+| | **Ours** | **0.755** | **0.824** | **0.908** | **0.754** |
+| E2 leave-one-project-out (n = 1,292, 409 flaky) | MDFlaker | −0.054 | 0.247 | 0.274 | 0.225 |
+| | KNN8 | −0.044 | 0.207 | 0.274 | 0.166 |
+| | **Ours** | **0.357** | **0.553** | **0.574** | **0.533** |
+| E3 trained on MDFlaker's 2020 data | MDFlaker | 0.156 | 0.454 | 0.405 | 0.518 |
+| | KNN8 | **0.283** | **0.541** | 0.465 | **0.648** |
+| | Ours | 0.173 | 0.375 | **0.474** | 0.311 |
+
+The F1 values in the MDFlaker paper come from its own data and split, so they are not comparable
+with these.
+
+## 5. Reading
 
 On newly collected failures with 30-rerun labels, adding failure-evidence features (F) to
 MDFlaker's factors improves on MDFlaker's own classifiers under both frozen evaluations. This holds
