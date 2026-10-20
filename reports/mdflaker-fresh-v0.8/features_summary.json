@@ -1,0 +1,87 @@
+{
+ "rows": 1659,
+ "tree_ok": 1615,
+ "source_mapped": 1459,
+ "context_available": 1459,
+ "diff_available": 1609,
+ "with_traceback": 761,
+ "by_repo": {
+  "HypothesisWorks/hypothesis": {
+   "rows": 221,
+   "tree_ok": 221,
+   "source_mapped": 217,
+   "with_traceback": 221
+  },
+  "PrefectHQ/prefect": {
+   "rows": 213,
+   "tree_ok": 213,
+   "source_mapped": 180,
+   "with_traceback": 104
+  },
+  "conan-io/conan": {
+   "rows": 262,
+   "tree_ok": 256,
+   "source_mapped": 256,
+   "with_traceback": 11
+  },
+  "encode/django-rest-framework": {
+   "rows": 27,
+   "tree_ok": 27,
+   "source_mapped": 27,
+   "with_traceback": 14
+  },
+  "pypa/setuptools": {
+   "rows": 65,
+   "tree_ok": 65,
+   "source_mapped": 37,
+   "with_traceback": 11
+  },
+  "pytest-dev/pytest": {
+   "rows": 367,
+   "tree_ok": 367,
+   "source_mapped": 316,
+   "with_traceback": 85
+  },
+  "quantumlib/Cirq": {
+   "rows": 285,
+   "tree_ok": 247,
+   "source_mapped": 218,
+   "with_traceback": 99
+  },
+  "urllib3/urllib3": {
+   "rows": 219,
+   "tree_ok": 219,
+   "source_mapped": 208,
+   "with_traceback": 216
+  }
+ },
+ "sha256": "a4ee46a5802573182e0dd889fa36738b24b1bde7bf5c9730579ca0946a10b862",
+ "script_sha256": "d23c699dcc7da6faf0e5b805e0f87fe0d81bb41f3df7e8125157736a6b701457",
+ "b_columns": [
+  "flaky_frequency",
+  "traceback_coverage",
+  "test_smells",
+  "previous_state",
+  "test_size"
+ ],
+ "f_columns": [
+  "build_failed_tests",
+  "same_file_cofailures",
+  "job_duration_s",
+  "pr_build",
+  "changed_files",
+  "changed_py_files",
+  "changed_test_py_files",
+  "nonpy_only_change",
+  "changed_lines",
+  "own_test_file_changed",
+  "path_overlap_depth",
+  "traceback_frames",
+  "frames_in_changed_files",
+  "last_frame_in_test_file",
+  "frames_outside_repo",
+  "min_line_distance_to_change",
+  "diff_available"
+ ],
+ "context_columns": 66
+}
