@@ -1,0 +1,40 @@
+{
+ "version": "v0.9",
+ "status": "frozen",
+ "approved_by": "Nandini Patil, for the team",
+ "approval_note": "PROTOCOL.md approved unchanged as drafted in commit 5b36fef",
+ "frozen_utc": "2026-10-20T14:48:22Z",
+ "collection_window_start_utc": "2026-10-20T14:48:22Z",
+ "collection_date_T1_utc": "2026-11-24T14:48:22Z",
+ "extension_date_T2_utc": "2026-12-22T14:48:22Z",
+ "protocol_markdown_sha256": "80004e481d09314d6f99d9349397b1a151ef0eb0abb4894852937c0252dba5b2",
+ "git_head_at_freeze": "5b36fefc2b841ab0881980dfaf19a2410143803b",
+ "harness_commit": "f28849b178f4888b586b12eb3ddb4365b54c4887",
+ "strict_feature_commit": "2669a591d2c67ec31a72d6d65a94759c4f9a3248",
+ "training_set": {
+  "source": "v0.8 labelled failures",
+  "rows": 1292,
+  "labels_csv_sha256": "3d856bde14445d9840f4b53e316de79060e7033e106ba6adcaca45c3b7c1b4c2"
+ },
+ "projects": [
+  "encode/django-rest-framework",
+  "urllib3/urllib3",
+  "pytest-dev/pytest",
+  "HypothesisWorks/hypothesis",
+  "quantumlib/Cirq",
+  "conan-io/conan",
+  "PrefectHQ/prefect",
+  "pypa/setuptools"
+ ],
+ "reruns": 30,
+ "seed": 20261020,
+ "per_project_cap": 300,
+ "rule": {
+  "primary_set": "labelled v0.9 failures whose test (repo + node ID, parameters stripped) is absent from the v0.8 labelled set",
+  "headline": "MCC(ET-BF) - MCC(best comparator on primary set) >= +0.10, project-bootstrap 95% CI lower bound > 0",
+  "comparators": ["MDF-paper-int", "MDF-paper-float", "KNN8-int", "KNN8-float", "project prior"],
+  "minimum_sample": "primary set: >=40 flaky, >=40 not flaky, >=4 projects; else descriptive only",
+  "extension": "once, to T2, if fewer than 300 primary-set candidates at T1 (label-blind)",
+  "not_claimed": "leave-one-project-out; ET-BFC vs ET-BF (descriptive only)"
+ }
+}
