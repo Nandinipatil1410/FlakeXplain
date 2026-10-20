@@ -80,6 +80,20 @@ def main():
             d_ETBF_vs_comp=dict(mcc=res['ET-BF']['mcc']-res[comp]['mcc'],ci95=boot(yt,preds['ET-BF'],preds[comp],pt,rng)),
             d_ETBF_vs_ETB=dict(mcc=res['ET-BF']['mcc']-res['ET-B']['mcc'],ci95=boot(yt,preds['ET-BF'],preds['ET-B'],pt,rng)),
             d_ETBFC_vs_ETBF=dict(mcc=res['ET-BFC']['mcc']-res['ET-BF']['mcc'],ci95=boot(yt,preds['ET-BFC'],preds['ET-BF'],pt,rng)))
+    # E3 (secondary, outside the rule): train on MDFlaker's released spaCy+DRF rows, test on all fresh labelled rows.
+    try:
+        V6=ROOT/'local-evidence/mdflaker-v0.6';V7=ROOT/'local-evidence/failure-evidence-v0.7'
+        rel=list(csv.DictReader(open(V6/'upstream/simpac/F_Detector/dataset.csv',encoding='utf-8')))
+        with gzip.open(V7/'features_failure.csv.gz','rt',encoding='utf-8') as f:f7={int(r['row']):r for r in csv.DictReader(f)}
+        with gzip.open(V6/'stage1/features_context.csv.gz','rt',encoding='utf-8') as f:c6={int(r['row']):r for r in csv.DictReader(f)}
+        rid=sorted(i for i in f7 if i in c6)
+        Xr=np.array([[float(rel[i][k]) for k in ('Flaky Frequency','Traceback Coverage','Test Smells','Previous State','Test Size')] for i in rid])
+        Fr=np.array([[float(f7[i]['build_duration_s' if k=='job_duration_s' else k]) for k in F] for i in rid])
+        Cr=np.array([[float(c6[i][k]) for k in ctx] for i in rid]);yr=np.array([int(rel[i]['Flaky or Not']) for i in rid])
+        tr_mats={'MDF-paper-int':(mdf_paper,np.trunc(Xr),Xi),'KNN8-float':(knn8,Xr,X),'ET-B':(et,Xr,X),'ET-BF':(et,np.hstack([Xr,Fr]),XF),'ET-BFC':(et,np.hstack([Xr,Fr,Cr]),XFC)}
+        e3={a:metrics(y,fit(A,yr,Bm)) for a,(fit,A,Bm) in tr_mats.items()}
+        out['E3']=dict(train_rows=len(rid),arms=e3,note='secondary; MDFlaker labels are Travis 30-rerun labels from 2020; feature definitions match except job vs build duration')
+    except Exception as ex:out['E3']=dict(error=str(ex))
     h1=out['E1']['d_ETBF_vs_comp'];h2=out['E2']['d_ETBF_vs_comp'];g=out['E1']['d_ETBF_vs_ETB']
     headline=rep['minimum_sample_met'] and h1['mcc']>=0.05 and h1['ci95'][0]>0 and h2['mcc']>=0.05 and h2['ci95'][0]>0 and g['mcc']>=0.02
     c1=out['E1']['d_ETBFC_vs_ETBF'];c2=out['E2']['d_ETBFC_vs_ETBF']
