@@ -43,8 +43,25 @@ CRediT roles: Conceptualization; Data curation; Formal analysis; Funding acquisi
 Investigation; Methodology; Project administration; Resources; Software; Supervision; Validation;
 Visualization; Writing – original draft; Writing – review & editing.
 
-> **Nandini Patil:** [roles]. **Bhumika Mane:** [roles]. **Trusha Kulkarni:** [roles].
-> **Pranavi Baad:** [roles].
+> **Nandini Patil:** Data curation, Investigation, Methodology, Software, Validation, Visualization,
+> Writing – original draft, Writing – review & editing. **Bhumika Mane:** Conceptualization,
+> Investigation, Project administration, Software, Validation, Visualization, Writing – original
+> draft, Writing – review & editing. **Trusha Kulkarni:** Data curation, Formal analysis,
+> Investigation, Software, Validation, Visualization, Writing – original draft, Writing – review &
+> editing. **Pranavi Baad:** Data curation, Formal analysis, Investigation, Methodology, Software,
+> Visualization, Writing – original draft, Writing – review & editing.
+
+Team assignment (21 October 2026), by work area:
+
+| Author | Work areas | Roles from them |
+|---|---|---|
+| Nandini Patil | Flaky-test detection on 35 projects: pytest port of iDFlakies, workflows, runs, setup fixes, evidence recovery, exclusions | Methodology, Software, Investigation, Data curation, Validation |
+| Bhumika Mane | Idea and planning: topic, literature review, choice of MDFlaker, project selection, coordination; the `flakexplain` CLI and its tests | Conceptualization, Project administration, Software, Validation |
+| Trusha Kulkarni | Dataset and early models: source mapping and static features, pilot and development models, v0.3 confirmation, CANNIER comparisons | Data curation, Formal analysis, Software, Validation |
+| Pranavi Baad | MDFlaker work: reimplementation, data problems, CI failure collection, 30 reruns, labels, ET-BF, frozen protocol, analysis, SHAP | Methodology, Investigation, Data curation, Software, Formal analysis |
+| All | v0.9 confirmation, paper writing and figures, reports, replication package, lab assessment | Investigation, Visualization, Writing – original draft, Writing – review & editing |
+
+Funding acquisition, Resources and Supervision are not used.
 
 ## Declaration of competing interest
 
