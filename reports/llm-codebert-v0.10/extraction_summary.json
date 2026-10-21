@@ -1,0 +1,19 @@
+{
+ "output": "local-evidence/llm-codebert-v0.10/test_sources.jsonl.gz",
+ "output_sha256": "ff0e6d3b6fe8aaf98c74694a593453ff3fe58b4530e1d2302b3f3b4c3e823fd6",
+ "tests": 96118,
+ "positives": 693,
+ "projects": 35,
+ "code_characters": {
+  "median": 380.0,
+  "p90": 1064,
+  "max": 198388
+ },
+ "fields": [
+  "example_id",
+  "project",
+  "outer_fold",
+  "label",
+  "code"
+ ]
+}

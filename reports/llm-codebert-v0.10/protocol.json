@@ -1,0 +1,27 @@
+{
+ "version": "v0.10",
+ "title": "CodeBERT LLM baseline versus explainable Extra Trees on the realistic test-level dataset",
+ "status": "frozen",
+ "approved_by": "Nandini Patil, for the team",
+ "frozen_at": "2026-10-21T17:37:00Z",
+ "parent_commit": "d87c01b",
+ "protocol_sha256": "2cb2a14fa35dce6df9d549c29a4276340bcbbb6b7563672b9e4d37d9acaecc5a",
+ "notebook": "reports/llm-codebert-v0.10/colab_codebert_fold.ipynb",
+ "notebook_sha256": "78d3cfbef128b83531f39a1f4b3f1b787b4e45aa5da58bd39c861901dde5741b",
+ "extraction_script": "scripts/llm_extract_sources.py",
+ "extraction_script_sha256": "21696b7b64f0018b570fd9d52aba142cca55a62c36849b3eba549c1b95003d2a",
+ "extraction_summary_sha256": "84c42d6f56d0c95e93867c17453812b4b5d2382f3a90600ae6b98abf2506fb66",
+ "input_file": "local-evidence/llm-codebert-v0.10/test_sources.jsonl.gz",
+ "input_sha256": "ff0e6d3b6fe8aaf98c74694a593453ff3fe58b4530e1d2302b3f3b4c3e823fd6",
+ "comparator": "extra_trees_v2_context",
+ "comparator_predictions": "reports/development-v0.2/oof_predictions.csv.gz",
+ "comparator_predictions_sha256": "5f734ade9f125d01af4f87e043b5dc180074ab82e6eca965dd9e2f822bfc6409",
+ "folds": "dataset/v0.1/splits_outer.csv",
+ "seed": 20261021,
+ "decision_rule": {
+  "codebert_better": "delta_AP >= +0.01 and 95% project-bootstrap lower bound > 0",
+  "extra_trees_better": "delta_AP <= -0.01 and 95% project-bootstrap upper bound < 0",
+  "otherwise": "no clear difference"
+ },
+ "codebert_scores_computed_before_freeze": false
+}
