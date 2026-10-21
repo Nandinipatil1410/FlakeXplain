@@ -106,6 +106,9 @@ def load_codebert(evidence, protocol, ref, folds):
         files[pred_file.name], files[run_file.name] = sha(pred_file), sha(run_file)
     if set(scores) != set(ref):
         raise ValueError(f'Predictions cover {len(scores)} tests, expected {len(ref)}')
+    gpus = {r.get('gpu') for r in runs}
+    if len(gpus) != 1 or 'A100' not in str(next(iter(gpus))):  # AMENDMENT_1.md
+        raise ValueError(f'All folds must run on one A100 GPU type, found {sorted(map(str, gpus))}')
     return scores, runs, files
 
 
@@ -221,7 +224,8 @@ def fake_from_et(ref, protocol, folds, out, noise):
         threshold = rows[0][1]['et_threshold']
         run = dict(fold=k, smoke=False, input_sha256=protocol['input_sha256'], **FROZEN, test=len(rows),
                    test_projects=sorted(p for p, f in folds.items() if f == k), best_epoch=1,
-                   best_val_ap=None, threshold=threshold, fake_from_et=True, noise=noise)
+                   best_val_ap=None, threshold=threshold, gpu='NVIDIA A100-SXM4-40GB (fake)',
+                   fake_from_et=True, noise=noise)
         json.dump(run, open(out / f'fold_{k}_run.json', 'w', encoding='utf-8'), indent=1)
     print(f'wrote fake fold files (noise {noise}) to {out}')
 
