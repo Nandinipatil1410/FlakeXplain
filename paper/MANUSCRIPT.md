@@ -500,37 +500,71 @@ During the preparation of this work the authors used Claude (Anthropic) in order
 ## References
 
 [1] O. Parry, G. M. Kapfhammer, M. Hilton, P. McMinn, "A survey of flaky tests," *ACM Transactions on Software Engineering and Methodology*, vol. 31, no. 1, Art. 17, 2022. doi:10.1145/3476105.
+
 [2] T. Durieux, C. Le Goues, M. Hilton, R. Abreu, "Empirical study of restarted and flaky builds on Travis CI," in *Proc. 17th Int. Conf. on Mining Software Repositories (MSR)*, 2020, pp. 254–264. doi:10.1145/3379597.3387460.
+
 [3] F. Leinen, D. Elsner, A. Pretschner, A. Stahlbauer, M. Sailer, E. Jürgens, "Cost of flaky tests in continuous integration: An industrial case study," in *Proc. IEEE Conf. on Software Testing, Verification and Validation (ICST)*, 2024, pp. 329–340. doi:10.1109/ICST60714.2024.00037.
+
 [4] G. Haben, S. Habchi, J. Micco, M. Harman, M. Papadakis, M. Cordy, Y. Le Traon, "The importance of accounting for execution failures when predicting test flakiness," in *Proc. 39th IEEE/ACM Int. Conf. on Automated Software Engineering (ASE)*, 2024, pp. 1979–1989. doi:10.1145/3691620.3695261.
+
 [5] R. Verdecchia, E. Cruciani, B. Miranda, A. Bertolino, "Know you neighbor: Fast static prediction of test flakiness," *IEEE Access*, vol. 9, pp. 76119–76134, 2021. doi:10.1109/ACCESS.2021.3082424.
+
 [6] A. Afeltra, A. Cannavale, F. Pecorelli, V. Pontillo, F. Palomba, "A large-scale empirical investigation into cross-project flaky test prediction," *IEEE Access*, vol. 12, pp. 131255–131265, 2024. doi:10.1109/ACCESS.2024.3458184.
+
 [7] V. Pontillo, F. Palomba, F. Ferrucci, "Static test flakiness prediction: How far can we go?," *Empirical Software Engineering*, 2022. doi:10.1007/s10664-022-10227-1.
+
 [8] A. Alshammari, C. Morris, M. Hilton, J. Bell, "FlakeFlagger: Predicting flakiness without rerunning tests," in *Proc. 43rd IEEE/ACM Int. Conf. on Software Engineering (ICSE)*, 2021, pp. 1572–1584. doi:10.1109/ICSE43902.2021.00140.
+
 [9] S. Fatima, T. A. Ghaleb, L. Briand, "Flakify: A black-box, language model-based predictor for flaky tests," *IEEE Transactions on Software Engineering*, vol. 49, no. 4, pp. 1912–1927, 2023. doi:10.1109/TSE.2022.3201209.
+
 [10] A. Ahmad, "MDFlaker: A tool for multi-factor detection and root cause analysis of flaky tests," *Software Impacts*, vol. 26, 100794, 2025. doi:10.1016/j.simpa.2025.100794.
+
 [11] A. Ahmad, F. Gomes de Oliveira Neto, Z. Shi, K. Sandahl, O. Leifler, "A multi-factor approach for flaky test detection and automated root cause analysis," in *Proc. 28th Asia-Pacific Software Engineering Conference (APSEC)*, 2021, pp. 338–348. doi:10.1109/APSEC53868.2021.00041.
+
 [12] W. Lam, R. Oei, A. Shi, D. Marinov, T. Xie, "iDFlakies: A framework for detecting and partially classifying flaky tests," in *Proc. 12th IEEE Conf. on Software Testing, Validation and Verification (ICST)*, 2019, pp. 312–322. doi:10.1109/ICST.2019.00038.
+
 [13] W. Lam, S. Winter, A. Astorga, V. Stodden, D. Marinov, "Understanding reproducibility and characteristics of flaky tests through test reruns in Java projects," in *Proc. IEEE 31st Int. Symp. on Software Reliability Engineering (ISSRE)*, 2020, pp. 403–413. doi:10.1109/ISSRE5003.2020.00045.
+
 [14] M. Gruber, S. Lukasczyk, F. Krois, G. Fraser, "An empirical study of flaky tests in Python," in *Proc. 14th IEEE Conf. on Software Testing, Verification and Validation (ICST)*, 2021, pp. 148–158. doi:10.1109/ICST49551.2021.00026.
+
 [15] O. Parry, G. M. Kapfhammer, M. Hilton, P. McMinn, "Empirically evaluating flaky test detection techniques combining test case rerunning and machine learning models," *Empirical Software Engineering*, vol. 28, 2023. doi:10.1007/s10664-023-10307-w.
+
 [16] A. Ahmad, X. Sun, M. R. Naeem, Y. Javed, M. Akour, K. Sandahl, "Understanding flaky tests through linguistic diversity: A cross-language and comparative machine learning study," *IEEE Access*, vol. 13, pp. 54561–54584, 2025. doi:10.1109/ACCESS.2025.3553626.
+
 [17] A. Ahmad, X. Sun, "Base, instruct, and fine-tune: Evaluating LLMs for cross-language flaky test detection," *IEEE Access*, vol. 13, pp. 205254–205277, 2025. doi:10.1109/ACCESS.2025.3639645.
+
 [18] P. Dai, X. Ma, Y. Zhao, Y. Gong, "Heterogeneous graph transformer with multi-view representation learning for flaky test detection," *Computers*, vol. 15, no. 6, Art. 372, 2026. doi:10.3390/computers15060372.
+
 [19] J. Bell, O. Legunsen, M. Hilton, L. Eloussi, T. Yung, D. Marinov, "DeFlaker: Automatically detecting flaky tests," in *Proc. 40th Int. Conf. on Software Engineering (ICSE)*, 2018, pp. 433–444. doi:10.1145/3180155.3180164.
+
 [20] J. Lampel, S. Just, S. Apel, A. Zeller, "When life gives you oranges: Detecting and diagnosing intermittent job failures at Mozilla," in *Proc. 29th ACM Joint European Software Engineering Conf. and Symp. on the Foundations of Software Engineering (ESEC/FSE)*, 2021, pp. 1381–1392. doi:10.1145/3468264.3473931.
+
 [21] D. Olewicki, M. Nayrolles, B. Adams, "Towards language-independent brown build detection," in *Proc. 44th Int. Conf. on Software Engineering (ICSE)*, 2022, pp. 2177–2188. doi:10.1145/3510003.3510122.
+
 [22] A. Alshammari, P. Ammann, M. Hilton, J. Bell, "230,439 test failures later: An empirical evaluation of flaky failure classifiers," in *Proc. IEEE Conf. on Software Testing, Verification and Validation (ICST)*, 2024, pp. 257–268. doi:10.1109/ICST60714.2024.00031.
+
 [23] G. An, J. Yoon, T. Bach, J. Hong, S. Yoo, "Just-in-time flaky test detection via abstracted failure symptom matching," in *Proc. IEEE Int. Conf. on Software Maintenance and Evolution (ICSME)*, 2024, pp. 741–752. doi:10.1109/ICSME58944.2024.00078.
+
 [24] M. Hoang, A. Berding, "Presubmit Rescue: Automatically ignoring flaky test executions," in *Proc. 1st Int. Workshop on Flaky Tests (FTW)*, 2024, pp. 1–2. doi:10.1145/3643656.3643896.
+
 [25] M. H. U. Rehman, P. C. Rigby, "Quantifying no-fault-found test failures to prioritize inspection of flaky tests at Ericsson," in *Proc. 29th ACM Joint European Software Engineering Conf. and Symp. on the Foundations of Software Engineering (ESEC/FSE)*, 2021, pp. 1371–1380. doi:10.1145/3468264.3473930.
+
 [26] E. Kowalczyk, K. Nair, Z. Gao, L. Silberstein, T. Long, A. Memon, "Modeling and ranking flaky tests at Apple," in *Proc. ACM/IEEE 42nd Int. Conf. on Software Engineering: Software Engineering in Practice (ICSE-SEIP)*, 2020, pp. 110–119. doi:10.1145/3377813.3381370.
+
 [27] O. Parry, G. M. Kapfhammer, M. Hilton, P. McMinn, "Systemic flakiness: An empirical analysis of co-occurring flaky test failures," in *Proc. 29th Int. Conf. on Evaluation and Assessment in Software Engineering (EASE)*, 2025, pp. 476–487. doi:10.1145/3756681.3756945.
+
 [28] P. E. Strandberg, T. J. Ostrand, E. J. Weyuker, W. Afzal, D. Sundmark, "Intermittently failing tests in the embedded systems domain," in *Proc. 29th ACM SIGSOFT Int. Symp. on Software Testing and Analysis (ISSTA)*, 2020, pp. 337–348. doi:10.1145/3395363.3397359.
+
 [29] W. Zhang, W. Wang, R. Zhao, "Flaky test detection based on adaptive latest position execution for concurrent Android applications," *Int. J. Software Engineering and Knowledge Engineering*, vol. 34, no. 8, pp. 1313–1338, 2024. doi:10.1142/S0218194024500232.
+
 [30] N. Hashemi, A. Tahir, S. Rasheed, A. Shi, R. Blagojevic, "JS-TOD: Detecting order-dependent flaky tests in Jest," *Science of Computer Programming*, vol. 252, Art. 103462, 2026. doi:10.1016/j.scico.2026.103462.
+
 [31] J. Morán, C. Augusto, A. Bertolino, C. De La Riva, J. Tuya, "FlakyLoc: Flakiness localization for reliable test suites in web applications," *Journal of Web Engineering*, vol. 19, no. 2, pp. 267–296, 2020. doi:10.13052/jwe1540-9589.1927.
+
 [32] M. ElGazzar, E. Hossny, F. A. Omara, "A machine learning-based detection of test automation flakiness," in *Intelligent Systems, Blockchain, and Communication Technologies*, Lecture Notes in Networks and Systems, vol. 1801, Springer, Cham, 2026, pp. 91–102. doi:10.1007/978-3-032-15784-3_8. [CITE NEEDED: book editors and conference name.]
+
 [33] P. Geurts, D. Ernst, L. Wehenkel, "Extremely randomized trees," *Machine Learning*, vol. 63, pp. 3–42, 2006. doi:10.1007/s10994-006-6226-1.
+
 [34] S. M. Lundberg, S.-I. Lee, "A unified approach to interpreting model predictions," in *Advances in Neural Information Processing Systems 30 (NIPS)*, 2017, pp. 4765–4774.
+
 [35] S. M. Lundberg, G. Erion, H. Chen, et al., "From local explanations to global understanding with explainable AI for trees," *Nature Machine Intelligence*, vol. 2, pp. 56–67, 2020. doi:10.1038/s42256-019-0138-9.
