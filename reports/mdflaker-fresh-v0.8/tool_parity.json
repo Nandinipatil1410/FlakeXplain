@@ -1,0 +1,30 @@
+{
+ "failures": 1292,
+ "rows_with_source": 25,
+ "checked": {
+  "flaky_frequency": 1292,
+  "traceback_coverage": 1292,
+  "previous_state": 1292,
+  "build_failed_tests": 1292,
+  "same_file_cofailures": 1292,
+  "job_duration_s": 1292,
+  "pr_build": 1292,
+  "changed_files": 1292,
+  "changed_py_files": 1292,
+  "changed_test_py_files": 1292,
+  "nonpy_only_change": 1292,
+  "changed_lines": 1292,
+  "traceback_frames": 1292,
+  "frames_in_changed_files": 1292,
+  "frames_outside_repo": 1292,
+  "min_line_distance_to_change": 1292,
+  "diff_available": 1292,
+  "test_smells": 25,
+  "test_size": 25,
+  "own_test_file_changed": 25,
+  "path_overlap_depth": 25,
+  "last_frame_in_test_file": 25
+ },
+ "mismatches": {},
+ "examples": {}
+}

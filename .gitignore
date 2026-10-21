@@ -28,7 +28,11 @@ __pycache__/
 /*.backup.md
 /replication/data/
 
-# Unfinished packaged tool and local reference PDFs (kept out of the repository).
-/tool/
+# Local reference PDFs (kept out of the repository).
 /FlakeXplain_Final_Study_Report.pdf
 /MDFlaker--A-tool-for-multi-factor-detection-and-root-cause-_2025_Software-Im.pdf
+
+# flakexplain CLI build and run outputs
+/tool/src/*.egg-info/
+/tool/build/
+.flakexplain/

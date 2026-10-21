@@ -1,0 +1,61 @@
+{
+ "name": "ET-BF v0.8 (frozen v0.9 model)",
+ "file": "etbf-v0.8.joblib",
+ "sha256": "057e022891ad4395576e9aa39faa5470e4c50192cb153fbbd8cc0cde22b90fc5",
+ "fitted_utc": "2026-10-21T09:23:20+00:00",
+ "sklearn": "1.7.2",
+ "estimator": "ExtraTreesClassifier(n_estimators=100, random_state=20261020)",
+ "threshold": 0.5,
+ "columns": [
+  "flaky_frequency",
+  "traceback_coverage",
+  "test_smells",
+  "previous_state",
+  "test_size",
+  "build_failed_tests",
+  "same_file_cofailures",
+  "job_duration_s",
+  "pr_build",
+  "changed_files",
+  "changed_py_files",
+  "changed_test_py_files",
+  "nonpy_only_change",
+  "changed_lines",
+  "own_test_file_changed",
+  "path_overlap_depth",
+  "traceback_frames",
+  "frames_in_changed_files",
+  "last_frame_in_test_file",
+  "frames_outside_repo",
+  "min_line_distance_to_change",
+  "diff_available"
+ ],
+ "training": {
+  "failures": 1292,
+  "flaky": 409,
+  "not_flaky": 883,
+  "projects": [
+   "HypothesisWorks/hypothesis",
+   "PrefectHQ/prefect",
+   "conan-io/conan",
+   "encode/django-rest-framework",
+   "pypa/setuptools",
+   "pytest-dev/pytest",
+   "quantumlib/Cirq",
+   "urllib3/urllib3"
+  ],
+  "label": "flaky = test passed in at least one of 30 reruns of the failing commit",
+  "flaky_frequency": "strict: earlier workflow runs only"
+ },
+ "evidence": {
+  "v08_results": "reports/mdflaker-fresh-v0.8/RESULTS.md",
+  "v09_protocol": "reports/mdflaker-confirm-v0.9/PROTOCOL.md",
+  "note": "v0.8 E1/E2 numbers come from models trained on part of this data; this all-data fit has no held-out score until v0.9."
+ },
+ "inputs": {
+  "reports\\mdflaker-fresh-v0.8\\candidates.csv": "3b22aebf2c4035f1e1327fca2d717f856955c36351435e8eb9d6742dbddaaede",
+  "local-evidence\\mdflaker-fresh-v0.8\\features.csv.gz": "a4ee46a5802573182e0dd889fa36738b24b1bde7bf5c9730579ca0946a10b862",
+  "local-evidence\\mdflaker-fresh-v0.8\\labels.csv": "3d856bde14445d9840f4b53e316de79060e7033e106ba6adcaca45c3b7c1b4c2",
+  "scripts\\fit_tool_model.py": "c2e3a9878ed7ee99212c57d5cec8457077c66be65d87271d1822762deeb6f9ce"
+ }
+}
