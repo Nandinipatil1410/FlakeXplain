@@ -29,6 +29,17 @@ V2 core* includes six new body-operation counts and two scoped-read indicators i
 
 AP is average precision, not accuracy or trapezoidal PR area. Precision/recall/F1 use thresholds chosen inside the training partitions. Best model is identified after development-result inspection and is descriptive, not a confirmed deployment selection. Pooled scores from different models/folds need not be calibrated; retain fold/project/macro results.
 
+### Later Random Forest reference results
+
+Random Forest was added as a reference after the bounded development cycle. These results come from a separate five-project-fold development selection run on the same 96,118 cases, using 100 trees (`max_features="sqrt"`, `bootstrap=True`, no class weighting). The fixed development-selected thresholds below were used for threshold-based metrics.
+
+| Model | AP (0-1) | Threshold | Precision | Recall | F1 | MCC | FP / 1k |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Random Forest: core reference | 0.00904 | 0.1400 | 2.00% | 3.90% | 2.64% | 0.0180 | 13.9 |
+| Random Forest: context reference | 0.01459 | 0.0875 | 2.49% | 23.95% | 4.52% | 0.0572 | 68.0 |
+
+These are development-selection results, not independent confirmation. Their fitting and selection procedure differs from the nested bounded-cycle results above, so compare them as a separate reference rather than treating them as a controlled head-to-head replacement. The Random Forest implementation is an adaptation, not a reproduction of the published study.
+
 ## Primary paired comparison by fold
 
 | Fold | Revised core AP | Revised context AP |
