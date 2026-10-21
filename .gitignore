@@ -27,3 +27,8 @@ __pycache__/
 /dask-evidence/
 /*.backup.md
 /replication/data/
+
+# Unfinished packaged tool and local reference PDFs (kept out of the repository).
+/tool/
+/FlakeXplain_Final_Study_Report.pdf
+/MDFlaker--A-tool-for-multi-factor-detection-and-root-cause-_2025_Software-Im.pdf
