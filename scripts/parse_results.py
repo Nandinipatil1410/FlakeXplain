@@ -34,7 +34,12 @@ def parse_xml_file(xml_path):
             file_attr = tc.get("file", "")
             
             if file_attr:
-                test_id = f"{file_attr}::{name}"
+                # Keep the class from classname so same-named methods in different
+                # classes of one file stay separate tests (pytest node ID form).
+                parts = classname.split(".")
+                stem = Path(file_attr).stem
+                classes = parts[len(parts) - parts[::-1].index(stem):] if stem in parts else []
+                test_id = "::".join([file_attr, *classes, name])
             elif classname:
                 test_id = f"{classname}::{name}"
             else:

@@ -421,6 +421,25 @@ version = "3.0.0"
             self.assertEqual(summary["unlabelled_count"], 2)
             self.assertEqual(summary["observed_flaky_count"], 0)
 
+    def test_same_named_methods_in_different_classes_stay_separate(self):
+        with tempfile.TemporaryDirectory() as folder:
+            xml = Path(folder) / "run.xml"
+            xml.write_text(
+                '<testsuites><testsuite>'
+                '<testcase classname="t.unit.test_simple.test_SimpleQueue" name="test_clear"'
+                ' file="t/unit/test_simple.py"/>'
+                '<testcase classname="t.unit.test_simple.test_SimpleBuffer" name="test_clear"'
+                ' file="t/unit/test_simple.py"><failure/></testcase>'
+                '<testcase classname="t.unit.test_simple" name="test_module_level"'
+                ' file="t/unit/test_simple.py"/>'
+                '</testsuite></testsuites>')
+            outcomes = parse_results.parse_xml_file(xml)
+        self.assertEqual(outcomes, {
+            "t/unit/test_simple.py::test_SimpleQueue::test_clear": "PASS",
+            "t/unit/test_simple.py::test_SimpleBuffer::test_clear": "FAIL",
+            "t/unit/test_simple.py::test_module_level": "PASS",
+        })
+
     def test_report_reads_all_plural_reverse_round_records(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
