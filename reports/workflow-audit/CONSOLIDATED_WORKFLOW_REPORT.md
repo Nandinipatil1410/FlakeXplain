@@ -42,49 +42,51 @@ Strict flaky percentage = `100 × flaky / (flaky + all-pass)`. F:N is the same u
 
 ## Per-project results
 
+Project names in the table below link to their upstream GitHub repositories; the commit column gives the pinned revision that was tested.
+
 Counts below describe all parsed identities, including exclusions and legacy evidence. Headline totals use only retained identities in the two protocol-complete categories. The eligibility table specifies the primary cohort.
 
 | Project | Audit status | CANNIER relation | Commit | JUnit identities (union) | O/R/Rev | Flaky | All-pass | Pass+skip/missing | Skip-only | Fail-only | Duplicate | Flaky % strict | F:N |
 |---|---|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
-| airflow | protocol_complete_local_checks | CANNIER same revision | `c743b95a` | 3,978 | 12/12/1 | 313 | 3,461 | 1 | 203 | 0 | 0 | 8.2936 | 313:3461 |
-| celery | protocol_complete_local_checks | CANNIER same revision | `552e067b` | 2,381 | 12/12/1 | 7 | 2,325 | 0 | 49 | 0 | 0 | 0.3002 | 7:2325 |
-| cirq | protocol_complete_with_exclusions | CANNIER same revision | `782c14e0` | 20,948 | 12/12/1 | 16 | 12,175 | 7,092 | 1,665 | 0 | 0 | 0.1312 | 16:12175 |
-| click | legacy_unverified | additional | `6aabf099` | 2,084 | 12/12/1 | 0 | 1,975 | 0 | 109 | 0 | 0 | 0.0000 | 0:1975 |
-| conan | protocol_complete_local_checks | CANNIER same revision | `d5240749` | 4,083 | 12/12/1 | 24 | 3,663 | 0 | 396 | 0 | 0 | 0.6509 | 24:3663 |
-| dask | protocol_complete_local_checks | CANNIER same revision | `d5bbad0b` | 10,132 | 12/12/1 | 1 | 8,525 | 0 | 1,606 | 0 | 0 | 0.0117 | 1:8525 |
-| djangorestframework | protocol_complete_local_checks | CANNIER same revision | `0323d6f8` | 1,403 | 12/12/1 | 1 | 1,401 | 0 | 1 | 0 | 0 | 0.0713 | 1:1401 |
-| electrum | protocol_complete_local_checks | CANNIER same revision | `d8d2c180` | 545 | 12/12/1 | 0 | 542 | 0 | 3 | 0 | 0 | 0.0000 | 0:542 |
-| filelock | protocol_complete_local_checks | additional | `82f66d7b` | 1,342 | 12/12/1 | 2 | 1,104 | 0 | 236 | 0 | 0 | 0.1808 | 2:1104 |
-| flask | legacy_unverified | additional | `d318b683` | 494 | 12/12/1 | 0 | 494 | 0 | 0 | 0 | 0 | 0.0000 | 0:494 |
-| flexget | protocol_complete_local_checks | CANNIER same revision | `4fb25084` | 1,363 | 12/12/1 | 4 | 1,326 | 1 | 32 | 0 | 0 | 0.3008 | 4:1326 |
-| fonttools | protocol_complete_local_checks | CANNIER same revision | `f3a90309` | 3,818 | 12/12/1 | 0 | 3,806 | 0 | 12 | 0 | 0 | 0.0000 | 0:3806 |
-| freezegun | protocol_complete_local_checks | additional | `b46da782` | 112 | 12/12/3 | 15 | 88 | 3 | 6 | 0 | 0 | 14.5631 | 15:88 |
-| fsspec | legacy_unverified | additional | `13b0bce8` | 1,779 | 12/12/1 | 2 | 1,492 | 0 | 285 | 0 | 0 | 0.1339 | 2:1492 |
-| graphene | protocol_complete_local_checks | CANNIER same revision | `7d2af310` | 350 | 12/12/1 | 1 | 345 | 0 | 4 | 0 | 0 | 0.2890 | 1:345 |
-| httpx | baseline_failed | additional | `b5addb64` | 0 | 0/0/0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | 0:0 |
-| hydra | protocol_complete_local_checks | CANNIER same revision | `69d31ebf` | 1,580 | 12/12/1 | 18 | 1,520 | 0 | 42 | 0 | 0 | 1.1704 | 18:1520 |
-| hypothesis | protocol_complete_with_exclusions | CANNIER same revision | `ccac4364` | 4,546 | 12/12/1 | 2 | 4,491 | 1 | 44 | 0 | 8 | 0.0445 | 2:4491 |
-| ipython | protocol_complete_local_checks | CANNIER same revision | `95d2b79a` | 847 | 12/12/3 | 35 | 773 | 1 | 38 | 0 | 0 | 4.3317 | 35:773 |
-| kombu | protocol_complete_local_checks | CANNIER same revision | `2aeb7324` | 978 | 12/12/1 | 20 | 765 | 0 | 193 | 0 | 0 | 2.5478 | 20:765 |
-| libcloud | protocol_complete_local_checks | CANNIER same revision | `449b315e` | 9,853 | 12/12/1 | 132 | 9,677 | 0 | 44 | 0 | 0 | 1.3457 | 132:9677 |
-| loguru | protocol_complete_local_checks | CANNIER same revision | `f31e9714` | 1,359 | 12/12/3 | 20 | 1,339 | 0 | 0 | 0 | 0 | 1.4717 | 20:1339 |
-| mitmproxy | protocol_complete_local_checks | CANNIER same revision | `4511ea7c` | 1,232 | 12/12/1 | 2 | 1,230 | 0 | 0 | 0 | 0 | 0.1623 | 2:1230 |
-| pillow | protocol_complete_local_checks | CANNIER same revision | `92933b86` | 2,796 | 12/12/1 | 0 | 2,596 | 0 | 200 | 0 | 0 | 0.0000 | 0:2596 |
-| prefect | protocol_complete_local_checks | CANNIER same revision | `6b59d989` | 7,076 | 12/12/1 | 12 | 7,034 | 1 | 29 | 0 | 0 | 0.1703 | 12:7034 |
-| pygithub | protocol_complete_local_checks | CANNIER same revision | `31538337` | 711 | 12/12/1 | 0 | 711 | 0 | 0 | 0 | 0 | 0.0000 | 0:711 |
-| pyramid | protocol_complete_local_checks | CANNIER same revision | `7b182045` | 2,633 | 12/12/1 | 1 | 2,632 | 0 | 0 | 0 | 0 | 0.0380 | 1:2632 |
-| pytest | protocol_complete_local_checks | additional | `a315b97c` | 4,654 | 12/12/1 | 37 | 4,556 | 0 | 61 | 0 | 0 | 0.8056 | 37:4556 |
-| reframe | protocol_complete_local_checks | additional | `576eb3f1` | 736 | 12/12/3 | 9 | 630 | 0 | 97 | 0 | 0 | 1.4085 | 9:630 |
-| requests | protocol_complete_local_checks | CANNIER same revision | `a1a6a549` | 561 | 12/12/1 | 0 | 548 | 0 | 13 | 0 | 0 | 0.0000 | 0:548 |
-| rich | protocol_complete_local_checks | additional | `9d8f9a37` | 981 | 12/12/1 | 5 | 952 | 0 | 24 | 0 | 0 | 0.5225 | 5:952 |
-| salt | protocol_complete_local_checks | CANNIER same revision | `bac2d1e6` | 2,902 | 12/12/1 | 3 | 2,671 | 0 | 228 | 0 | 0 | 0.1122 | 3:2671 |
-| scikit_image | protocol_complete_local_checks | CANNIER same revision | `8fbbb516` | 6,317 | 12/12/1 | 1 | 6,274 | 0 | 42 | 0 | 0 | 0.0159 | 1:6274 |
-| seaborn | protocol_complete_local_checks | CANNIER same revision | `703259f2` | 1,048 | 12/12/1 | 2 | 1,023 | 0 | 23 | 0 | 0 | 0.1951 | 2:1023 |
-| setuptools | protocol_complete_with_exclusions | CANNIER same revision | `4d64156d` | 842 | 12/12/1 | 7 | 703 | 0 | 132 | 0 | 0 | 0.9859 | 7:703 |
-| sunpy | protocol_complete_local_checks | CANNIER changed/unknown revision | `b0712590` | 2,287 | 12/12/1 | 2 | 2,053 | 0 | 232 | 0 | 0 | 0.0973 | 2:2053 |
-| tornado | protocol_complete_local_checks | CANNIER same revision | `2047e7ae` | 1,154 | 12/12/1 | 0 | 1,103 | 0 | 51 | 0 | 0 | 0.0000 | 0:1103 |
-| urllib3 | protocol_complete_local_checks | CANNIER changed/unknown revision | `a5d70ebf` | 2,633 | 12/12/1 | 4 | 2,337 | 0 | 292 | 0 | 0 | 0.1709 | 4:2337 |
-| xonsh | protocol_complete_with_exclusions | CANNIER same revision | `e9b12c8b` | 4,894 | 12/12/1 | 19 | 4,779 | 76 | 20 | 0 | 0 | 0.3960 | 19:4779 |
+| [airflow](https://github.com/apache/airflow) | protocol_complete_local_checks | CANNIER same revision | `c743b95a` | 3,978 | 12/12/1 | 313 | 3,461 | 1 | 203 | 0 | 0 | 8.2936 | 313:3461 |
+| [celery](https://github.com/celery/celery) | protocol_complete_local_checks | CANNIER same revision | `552e067b` | 2,381 | 12/12/1 | 7 | 2,325 | 0 | 49 | 0 | 0 | 0.3002 | 7:2325 |
+| [cirq](https://github.com/quantumlib/Cirq) | protocol_complete_with_exclusions | CANNIER same revision | `782c14e0` | 20,948 | 12/12/1 | 16 | 12,175 | 7,092 | 1,665 | 0 | 0 | 0.1312 | 16:12175 |
+| [click](https://github.com/pallets/click) | legacy_unverified | additional | `6aabf099` | 2,084 | 12/12/1 | 0 | 1,975 | 0 | 109 | 0 | 0 | 0.0000 | 0:1975 |
+| [conan](https://github.com/conan-io/conan) | protocol_complete_local_checks | CANNIER same revision | `d5240749` | 4,083 | 12/12/1 | 24 | 3,663 | 0 | 396 | 0 | 0 | 0.6509 | 24:3663 |
+| [dask](https://github.com/dask/dask) | protocol_complete_local_checks | CANNIER same revision | `d5bbad0b` | 10,132 | 12/12/1 | 1 | 8,525 | 0 | 1,606 | 0 | 0 | 0.0117 | 1:8525 |
+| [djangorestframework](https://github.com/encode/django-rest-framework) | protocol_complete_local_checks | CANNIER same revision | `0323d6f8` | 1,403 | 12/12/1 | 1 | 1,401 | 0 | 1 | 0 | 0 | 0.0713 | 1:1401 |
+| [electrum](https://github.com/spesmilo/electrum) | protocol_complete_local_checks | CANNIER same revision | `d8d2c180` | 545 | 12/12/1 | 0 | 542 | 0 | 3 | 0 | 0 | 0.0000 | 0:542 |
+| [filelock](https://github.com/tox-dev/filelock) | protocol_complete_local_checks | additional | `82f66d7b` | 1,342 | 12/12/1 | 2 | 1,104 | 0 | 236 | 0 | 0 | 0.1808 | 2:1104 |
+| [flask](https://github.com/pallets/flask) | legacy_unverified | additional | `d318b683` | 494 | 12/12/1 | 0 | 494 | 0 | 0 | 0 | 0 | 0.0000 | 0:494 |
+| [flexget](https://github.com/Flexget/Flexget) | protocol_complete_local_checks | CANNIER same revision | `4fb25084` | 1,363 | 12/12/1 | 4 | 1,326 | 1 | 32 | 0 | 0 | 0.3008 | 4:1326 |
+| [fonttools](https://github.com/fonttools/fonttools) | protocol_complete_local_checks | CANNIER same revision | `f3a90309` | 3,818 | 12/12/1 | 0 | 3,806 | 0 | 12 | 0 | 0 | 0.0000 | 0:3806 |
+| [freezegun](https://github.com/spulec/freezegun) | protocol_complete_local_checks | additional | `b46da782` | 112 | 12/12/3 | 15 | 88 | 3 | 6 | 0 | 0 | 14.5631 | 15:88 |
+| [fsspec](https://github.com/fsspec/filesystem_spec) | legacy_unverified | additional | `13b0bce8` | 1,779 | 12/12/1 | 2 | 1,492 | 0 | 285 | 0 | 0 | 0.1339 | 2:1492 |
+| [graphene](https://github.com/graphql-python/graphene) | protocol_complete_local_checks | CANNIER same revision | `7d2af310` | 350 | 12/12/1 | 1 | 345 | 0 | 4 | 0 | 0 | 0.2890 | 1:345 |
+| [httpx](https://github.com/encode/httpx) | baseline_failed | additional | `b5addb64` | 0 | 0/0/0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | 0:0 |
+| [hydra](https://github.com/facebookresearch/hydra) | protocol_complete_local_checks | CANNIER same revision | `69d31ebf` | 1,580 | 12/12/1 | 18 | 1,520 | 0 | 42 | 0 | 0 | 1.1704 | 18:1520 |
+| [hypothesis](https://github.com/HypothesisWorks/hypothesis) | protocol_complete_with_exclusions | CANNIER same revision | `ccac4364` | 4,546 | 12/12/1 | 2 | 4,491 | 1 | 44 | 0 | 8 | 0.0445 | 2:4491 |
+| [ipython](https://github.com/ipython/ipython) | protocol_complete_local_checks | CANNIER same revision | `95d2b79a` | 847 | 12/12/3 | 35 | 773 | 1 | 38 | 0 | 0 | 4.3317 | 35:773 |
+| [kombu](https://github.com/celery/kombu) | protocol_complete_local_checks | CANNIER same revision | `2aeb7324` | 978 | 12/12/1 | 20 | 765 | 0 | 193 | 0 | 0 | 2.5478 | 20:765 |
+| [libcloud](https://github.com/apache/libcloud) | protocol_complete_local_checks | CANNIER same revision | `449b315e` | 9,853 | 12/12/1 | 132 | 9,677 | 0 | 44 | 0 | 0 | 1.3457 | 132:9677 |
+| [loguru](https://github.com/Delgan/loguru) | protocol_complete_local_checks | CANNIER same revision | `f31e9714` | 1,359 | 12/12/3 | 20 | 1,339 | 0 | 0 | 0 | 0 | 1.4717 | 20:1339 |
+| [mitmproxy](https://github.com/mitmproxy/mitmproxy) | protocol_complete_local_checks | CANNIER same revision | `4511ea7c` | 1,232 | 12/12/1 | 2 | 1,230 | 0 | 0 | 0 | 0 | 0.1623 | 2:1230 |
+| [pillow](https://github.com/python-pillow/Pillow) | protocol_complete_local_checks | CANNIER same revision | `92933b86` | 2,796 | 12/12/1 | 0 | 2,596 | 0 | 200 | 0 | 0 | 0.0000 | 0:2596 |
+| [prefect](https://github.com/PrefectHQ/prefect) | protocol_complete_local_checks | CANNIER same revision | `6b59d989` | 7,076 | 12/12/1 | 12 | 7,034 | 1 | 29 | 0 | 0 | 0.1703 | 12:7034 |
+| [pygithub](https://github.com/PyGithub/PyGithub) | protocol_complete_local_checks | CANNIER same revision | `31538337` | 711 | 12/12/1 | 0 | 711 | 0 | 0 | 0 | 0 | 0.0000 | 0:711 |
+| [pyramid](https://github.com/Pylons/pyramid) | protocol_complete_local_checks | CANNIER same revision | `7b182045` | 2,633 | 12/12/1 | 1 | 2,632 | 0 | 0 | 0 | 0 | 0.0380 | 1:2632 |
+| [pytest](https://github.com/pytest-dev/pytest) | protocol_complete_local_checks | additional | `a315b97c` | 4,654 | 12/12/1 | 37 | 4,556 | 0 | 61 | 0 | 0 | 0.8056 | 37:4556 |
+| [reframe](https://github.com/eth-cscs/reframe) | protocol_complete_local_checks | additional | `576eb3f1` | 736 | 12/12/3 | 9 | 630 | 0 | 97 | 0 | 0 | 1.4085 | 9:630 |
+| [requests](https://github.com/psf/requests) | protocol_complete_local_checks | CANNIER same revision | `a1a6a549` | 561 | 12/12/1 | 0 | 548 | 0 | 13 | 0 | 0 | 0.0000 | 0:548 |
+| [rich](https://github.com/Textualize/rich) | protocol_complete_local_checks | additional | `9d8f9a37` | 981 | 12/12/1 | 5 | 952 | 0 | 24 | 0 | 0 | 0.5225 | 5:952 |
+| [salt](https://github.com/saltstack/salt) | protocol_complete_local_checks | CANNIER same revision | `bac2d1e6` | 2,902 | 12/12/1 | 3 | 2,671 | 0 | 228 | 0 | 0 | 0.1122 | 3:2671 |
+| [scikit_image](https://github.com/scikit-image/scikit-image) | protocol_complete_local_checks | CANNIER same revision | `8fbbb516` | 6,317 | 12/12/1 | 1 | 6,274 | 0 | 42 | 0 | 0 | 0.0159 | 1:6274 |
+| [seaborn](https://github.com/mwaskom/seaborn) | protocol_complete_local_checks | CANNIER same revision | `703259f2` | 1,048 | 12/12/1 | 2 | 1,023 | 0 | 23 | 0 | 0 | 0.1951 | 2:1023 |
+| [setuptools](https://github.com/pypa/setuptools) | protocol_complete_with_exclusions | CANNIER same revision | `4d64156d` | 842 | 12/12/1 | 7 | 703 | 0 | 132 | 0 | 0 | 0.9859 | 7:703 |
+| [sunpy](https://github.com/sunpy/sunpy) | protocol_complete_local_checks | CANNIER changed/unknown revision | `b0712590` | 2,287 | 12/12/1 | 2 | 2,053 | 0 | 232 | 0 | 0 | 0.0973 | 2:2053 |
+| [tornado](https://github.com/tornadoweb/tornado) | protocol_complete_local_checks | CANNIER same revision | `2047e7ae` | 1,154 | 12/12/1 | 0 | 1,103 | 0 | 51 | 0 | 0 | 0.0000 | 0:1103 |
+| [urllib3](https://github.com/urllib3/urllib3) | protocol_complete_local_checks | CANNIER changed/unknown revision | `a5d70ebf` | 2,633 | 12/12/1 | 4 | 2,337 | 0 | 292 | 0 | 0 | 0.1709 | 4:2337 |
+| [xonsh](https://github.com/xonsh/xonsh) | protocol_complete_with_exclusions | CANNIER same revision | `e9b12c8b` | 4,894 | 12/12/1 | 19 | 4,779 | 76 | 20 | 0 | 0 | 0.3960 | 19:4779 |
 
 ## Retained identities and primary cohort eligibility
 
